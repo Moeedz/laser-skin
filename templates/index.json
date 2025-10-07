@@ -15,13 +15,13 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "subheading": "Introducing the latest arrivals",
-            "title": "summer'24",
+            "subheading": "",
+            "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 780,
-            "button_1_text": "SHOP NOW",
-            "button_1_link": "shopify://collections/new-collection-moda-mujer",
+            "button_1_text": "",
+            "button_1_link": "",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
