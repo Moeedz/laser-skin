@@ -4709,7 +4709,7 @@ switchPanel_fn = async function(fromPanel, toPanel) {
     Array.from(fromPanel.querySelectorAll("details")).forEach((detail) => detail.open = false);
   }
   toPanel.hidden = false;
-  const listSelector = matchesMediaQuery("md-max") ? ".header-sidebar__back-button, .header-sidebar__linklist li" : ".header-sidebar__linklist li";
+  const listSelector = matchesMediaQuery("md-max") ? ".header-sidebar__back-button, .header-sidebar__linklist li, .mobile-btn" : ".header-sidebar__linklist li, .mobile-btn";
   timeline9([
     [toPanel, { opacity: 1 }, { duration: 0 }],
     [toPanel.querySelectorAll(listSelector), { opacity: [0, 1], transform: ["translateY(8px)", "translateY(0)"] }, { duration: 0.15, at: "-0.15", delay: window.themeVariables.settings.staggerMenuApparition ? stagger3(0.1) : 0 }],
