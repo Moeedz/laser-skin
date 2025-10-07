@@ -90,12 +90,12 @@
       },
       "scheme-83c8f934-b06b-498f-9443-09bcaf9992d7": {
         "settings": {
-          "background": "#c9a236",
+          "background": "#e6b325",
           "background_gradient": "",
           "text_color": "#ffffff",
-          "primary_button_background": "#c9a236",
+          "primary_button_background": "#e6b325",
           "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#c9a236",
+          "circle_button_background": "#e6b325",
           "circle_button_icon": "#ffffff"
         }
       }
