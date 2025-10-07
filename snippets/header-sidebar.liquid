@@ -43,7 +43,7 @@ therefore using a different structure for the Shadow DOM template
   </div>
 </template>
 
-<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--{{ color_scheme.id }}" template="header-sidebar-template" open-from="left">
+<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--{{ color_scheme.id }}" template="header-sidebar-template" open-from="right">
   {%- comment -%}We are using a Shadow DOM where each panel has a slot, so we can directly render each level individually{%- endcomment -%}
 
   {%- comment -%}Panel 1 is the first level{%- endcomment -%}
