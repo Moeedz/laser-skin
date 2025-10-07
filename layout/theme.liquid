@@ -3,7 +3,19 @@
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
     <style>
-
+@media screen and (min-width: 768px) {
+span.desktop-btn a {
+    background: #E6B325 !important;
+    color: white !important;
+    padding: 15px !important;
+    border-radius: 15px !important;
+}
+span.desktop-btn {
+    font-size: var(--text-h6);
+    line-height: 1.7;
+    text-align: -webkit-right !important;
+}
+}
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
