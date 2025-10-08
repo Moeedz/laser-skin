@@ -23,23 +23,23 @@
         "heading_t3rgMC": {
           "type": "heading",
           "settings": {
-            "text": "Image with text",
-            "heading_tag": "h1"
+            "text": "<strong>Laser Hair Removal + Free Hydrofacial</strong>",
+            "heading_tag": "h2"
           }
         },
         "richtext_WcwRDk": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "<p><br/>✅ <strong>Long-lasting smoothness</strong> – Say goodbye to shaving and waxing.<br/></p><p>✅ <strong>Boost your confidence</strong> – Enjoy silky, hair-free skin all year round.<br/></p><p>✅ <strong>Skin rejuvenation included</strong> – Our Express Hydro Facial deeply cleanses, exfoliates, and hydrates for a radiant glow.<br/></p><p>✅ <strong>An additional</strong> <strong>£30 saving</strong> – Your consultation fee comes straight off the course price.<br/><br/>✅ <strong>Exceptional value</strong> – Two premium treatments + consultation fee deduction.</p>"
           }
         },
         "button_qRN96Q": {
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "Button text",
+            "text": "Claim Now",
             "url": "",
-            "background": "",
+            "background": "#e6b325",
             "text_color": ""
           }
         }
@@ -56,13 +56,57 @@
         "image": "shopify://shop_images/image_90c27bb4-53ec-415e-a005-73919ba11b59.png",
         "reveal_on_scroll": true,
         "image_position": "start",
-        "content_width": "sm",
+        "content_width": "md",
+        "remove_vertical_spacing": false
+      }
+    },
+    "image_with_text_VAf3Nw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TnEPE8": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>Laser Hair Removal + Free Hydrofacial</strong>",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext_YeVLhz": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><br/>✅ <strong>Long-lasting smoothness</strong> – Say goodbye to shaving and waxing.<br/></p><p>✅ <strong>Boost your confidence</strong> – Enjoy silky, hair-free skin all year round.<br/></p><p>✅ <strong>Skin rejuvenation included</strong> – Our Express Hydro Facial deeply cleanses, exfoliates, and hydrates for a radiant glow.<br/></p><p>✅ <strong>An additional</strong> <strong>£30 saving</strong> – Your consultation fee comes straight off the course price.<br/><br/>✅ <strong>Exceptional value</strong> – Two premium treatments + consultation fee deduction.</p>"
+          }
+        },
+        "button_wHfAyW": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Claim Now",
+            "url": "",
+            "background": "#e6b325",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_TnEPE8",
+        "richtext_YeVLhz",
+        "button_wHfAyW"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/image_90c27bb4-53ec-415e-a005-73919ba11b59.png",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "md",
         "remove_vertical_spacing": false
       }
     }
   },
   "order": [
     "main",
-    "image_with_text_EPqCHt"
+    "image_with_text_EPqCHt",
+    "image_with_text_VAf3Nw"
   ]
 }
