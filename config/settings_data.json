@@ -45,6 +45,13 @@
     "social_tiktok": "",
     "favicon": "shopify://shop_images/Monogram_Meyme_Black.png",
     "content_for_index": [],
+    "blocks": {
+      "2611479755219051411": {
+        "type": "shopify://apps/appio-google-reviews/blocks/integration/25437a0d-2feb-4f5f-b07d-e313afa21656",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
