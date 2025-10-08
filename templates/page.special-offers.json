@@ -17,128 +17,52 @@
         "page_width": "xs"
       }
     },
-    "ss_image_with_text_9_tA7A9M": {
-      "type": "ss-image-with-text-9",
+    "image_with_text_EPqCHt": {
+      "type": "image-with-text",
       "blocks": {
-        "text_kBWcWP": {
-          "type": "text",
+        "heading_t3rgMC": {
+          "type": "heading",
           "settings": {
-            "text": "<p><strong>Laser Hair Removal + Free Hydrofacial</strong></p>",
-            "text_custom": false,
-            "text_font": "josefin_sans_n4",
-            "text_size": 34,
-            "text_size_mobile": 26,
-            "text_height": 150,
-            "text_mt": 0,
-            "text_align": "left",
-            "text_align_mobile": "left",
-            "text_color": "#2B1A1A"
+            "text": "Image with text",
+            "heading_tag": "h1"
           }
         },
-        "icon_text_9dGiek": {
-          "type": "icon_text",
+        "richtext_WcwRDk": {
+          "type": "richtext",
           "settings": {
-            "icon": "tick",
-            "text": "We select only the finest ingredients for our products."
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         },
-        "icon_text_hfWkgj": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "Our products are sourced from trusted partners."
-          }
-        },
-        "icon_text_BNhVbE": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "Crafted to preserve flavor and nutrition through optimal cooking processes."
-          }
-        },
-        "button_EezrW6": {
+        "button_qRN96Q": {
           "type": "button",
           "settings": {
-            "button": "Claim Now",
-            "button_url": "",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 200,
-            "button_width_mobile": 200,
-            "button_mt": 48,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 16,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#FFFFFF",
-            "button_hover_color": "#FFFFFF",
-            "button_bg_color": "#e6b325",
-            "button_bg_hover_color": "#000000",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
+            "style": "solid",
+            "text": "Button text",
+            "url": "",
+            "background": "",
+            "text_color": ""
           }
         }
       },
       "block_order": [
-        "text_kBWcWP",
-        "icon_text_9dGiek",
-        "icon_text_hfWkgj",
-        "icon_text_BNhVbE",
-        "button_EezrW6"
+        "heading_t3rgMC",
+        "richtext_WcwRDk",
+        "button_qRN96Q"
       ],
-      "name": "SS - Image With Text #9",
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "body_gap": 50,
-        "body_gap_mobile": 0,
-        "image": "shopify://shop_images/Screenshot_2025-09-13_at_10.02.06.png",
-        "image_position": "left",
-        "image_position_mobile": "top",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "content_maxwidth": 550,
-        "content_padding_vertical": 40,
-        "content_padding_vertical_mobile": 20,
-        "content_padding_horizontal": 24,
-        "content_padding_horizontal_mobile": 16,
-        "row_gap": 16,
-        "row_mt": 20,
-        "row_align": "left",
-        "row_align_mobile": "left",
-        "icon_size": 30,
-        "icon_size_mobile": 26,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 18,
-        "text_size_mobile": 16,
-        "text_height": 180,
-        "icon_color": "#e6b325",
-        "text_color": "#2B1A1A",
-        "background_color": "#efefef",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "lazy": true
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/image_90c27bb4-53ec-415e-a005-73919ba11b59.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": false
       }
     }
   },
   "order": [
     "main",
-    "ss_image_with_text_9_tA7A9M"
+    "image_with_text_EPqCHt"
   ]
 }
