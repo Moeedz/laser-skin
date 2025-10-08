@@ -11,6 +11,18 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
+    "sticky_mobile_bottom_bar_LKUdnM": {
+      "type": "sticky-mobile-bottom-bar",
+      "name": "Sticky Mobile Bottom Bar",
+      "settings": {
+        "button_text": "BOOK FREE CONSULTATION",
+        "button_link": "",
+        "button_bg_color": "#1a3a52",
+        "button_text_color": "#ffffff",
+        "whatsapp_number": "923001234567",
+        "whatsapp_bg_color": "#25D366"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -67,6 +79,7 @@
     }
   },
   "order": [
+    "sticky_mobile_bottom_bar_LKUdnM",
     "footer"
   ]
 }
