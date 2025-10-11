@@ -137,7 +137,7 @@
             "text_mt": 0,
             "text_align": "left",
             "text_align_mobile": "left",
-            "text_color": "#2B1A1A"
+            "text_color": "#2b1a1a"
           }
         },
         "icon_text_UxfF9a": {
@@ -225,7 +225,7 @@
         "text_size_mobile": 16,
         "text_height": 180,
         "icon_color": "#000000",
-        "text_color": "#2B1A1A",
+        "text_color": "#2b1a1a",
         "background_color": "#ffffff",
         "border_color": "#000000",
         "margin_top": 0,
@@ -238,6 +238,65 @@
         "content_width": 120,
         "border_thickness": 0,
         "lazy": true
+      }
+    },
+    "treatment_pricing_hjdUCE": {
+      "type": "treatment-pricing",
+      "blocks": {
+        "treatment_NbwzRR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "single_price": "75.00",
+            "course_price": "337.50"
+          }
+        },
+        "treatment_TWcErn": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Lower Face",
+            "single_price": "105.00",
+            "course_price": "472.50"
+          }
+        },
+        "treatment_DGUDpX": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face",
+            "single_price": "175.00",
+            "course_price": "787.50"
+          }
+        },
+        "treatment_LWReLR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Treatment Name",
+            "single_price": "75.00",
+            "course_price": "337.50"
+          }
+        }
+      },
+      "block_order": [
+        "treatment_NbwzRR",
+        "treatment_TWcErn",
+        "treatment_DGUDpX",
+        "treatment_LWReLR"
+      ],
+      "name": "Treatment Pricing",
+      "settings": {
+        "show_two_columns": true,
+        "column1_title": "Treatment (Single Price)",
+        "show_button_column1": true,
+        "button_text_column1": "BOOK NOW",
+        "button_link_column1": "",
+        "column2_title": "Course Of 6",
+        "show_button_column2": true,
+        "button_text_column2": "BOOK NOW",
+        "button_link_column2": "",
+        "header_color": "#c9a86a",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
       }
     },
     "before_after_FYP3MP": {
@@ -372,16 +431,16 @@
         "button_style": "non_outline",
         "image_border_color": "#000000",
         "circle_number_bg_color": "#000000",
-        "number_color": "#FFFFFF",
+        "number_color": "#ffffff",
         "text_color": "#000000",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#000000",
         "button_bg_hover_color": "#000000",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "heading_color": "#000000",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#000000",
         "margin_top": 0,
@@ -471,12 +530,12 @@
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
-        "icon_color": "#fff",
-        "hover_color": "#EFEFEF",
-        "question_color": "#fff",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
         "background_color": "#e6b325",
-        "answer_color": "#000",
-        "answer_bg_color": "#fff",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
         "questions-font-size": 1
       }
     }
@@ -484,6 +543,7 @@
   "order": [
     "main",
     "ss_image_with_text_9_GLgAya",
+    "treatment_pricing_hjdUCE",
     "before_after_FYP3MP",
     "ss_steps_4_LVxgXn",
     "175993612397035c9e",
