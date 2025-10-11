@@ -25,6 +25,7 @@
         },
         "button_PUkJNb": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "link": "",
             "text": "View Pricing",
@@ -46,14 +47,8 @@
         },
         "separator": {
           "type": "separator",
+          "disabled": true,
           "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -67,7 +62,15 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": true,
+            "show_below_gallery": false
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -98,9 +101,9 @@
         "price",
         "payment_terms",
         "separator",
-        "description",
         "variant_picker",
         "quantity_selector",
+        "description",
         "buy_buttons",
         "complementary_products"
       ],
