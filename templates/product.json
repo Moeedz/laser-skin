@@ -122,6 +122,65 @@
         "max_image_zoom_level": 3
       }
     },
+    "treatment_pricing_hjdUCE": {
+      "type": "treatment-pricing",
+      "blocks": {
+        "treatment_NbwzRR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "single_price": "75.00",
+            "course_price": "337.50"
+          }
+        },
+        "treatment_TWcErn": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Lower Face",
+            "single_price": "105.00",
+            "course_price": "472.50"
+          }
+        },
+        "treatment_DGUDpX": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face",
+            "single_price": "175.00",
+            "course_price": "787.50"
+          }
+        },
+        "treatment_LWReLR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Treatment Name",
+            "single_price": "75.00",
+            "course_price": "337.50"
+          }
+        }
+      },
+      "block_order": [
+        "treatment_NbwzRR",
+        "treatment_TWcErn",
+        "treatment_DGUDpX",
+        "treatment_LWReLR"
+      ],
+      "name": "Treatment Pricing",
+      "settings": {
+        "show_two_columns": true,
+        "column1_title": "Treatment (Single Price)",
+        "show_button_column1": true,
+        "button_text_column1": "BOOK NOW",
+        "button_link_column1": "",
+        "column2_title": "Course Of 6",
+        "show_button_column2": true,
+        "button_text_column2": "BOOK NOW",
+        "button_link_column2": "",
+        "header_color": "#c9a86a",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
+      }
+    },
     "ss_image_with_text_9_GLgAya": {
       "type": "ss-image-with-text-9",
       "blocks": {
@@ -238,65 +297,6 @@
         "content_width": 120,
         "border_thickness": 0,
         "lazy": true
-      }
-    },
-    "treatment_pricing_hjdUCE": {
-      "type": "treatment-pricing",
-      "blocks": {
-        "treatment_NbwzRR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Upper Lip Or Chin",
-            "single_price": "75.00",
-            "course_price": "337.50"
-          }
-        },
-        "treatment_TWcErn": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Lower Face",
-            "single_price": "105.00",
-            "course_price": "472.50"
-          }
-        },
-        "treatment_DGUDpX": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Full Face",
-            "single_price": "175.00",
-            "course_price": "787.50"
-          }
-        },
-        "treatment_LWReLR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Treatment Name",
-            "single_price": "75.00",
-            "course_price": "337.50"
-          }
-        }
-      },
-      "block_order": [
-        "treatment_NbwzRR",
-        "treatment_TWcErn",
-        "treatment_DGUDpX",
-        "treatment_LWReLR"
-      ],
-      "name": "Treatment Pricing",
-      "settings": {
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "show_button_column1": true,
-        "button_text_column1": "BOOK NOW",
-        "button_link_column1": "",
-        "column2_title": "Course Of 6",
-        "show_button_column2": true,
-        "button_text_column2": "BOOK NOW",
-        "button_link_column2": "",
-        "header_color": "#c9a86a",
-        "header_text_color": "#ffffff",
-        "button_color": "#c9a86a",
-        "button_text_color": "#ffffff"
       }
     },
     "before_after_FYP3MP": {
@@ -542,8 +542,8 @@
   },
   "order": [
     "main",
-    "ss_image_with_text_9_GLgAya",
     "treatment_pricing_hjdUCE",
+    "ss_image_with_text_9_GLgAya",
     "before_after_FYP3MP",
     "ss_steps_4_LVxgXn",
     "175993612397035c9e",
