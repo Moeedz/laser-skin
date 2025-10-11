@@ -68,7 +68,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "collapse_content": true,
+            "collapse_content": false,
             "show_below_gallery": false
           }
         },
@@ -129,7 +129,9 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "Upper Lip Or Chin",
+            "treatment_name_column1": "",
             "single_price": "75.00",
+            "treatment_name_column2": "",
             "course_price": "337.50"
           }
         },
@@ -137,7 +139,9 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "Lower Face",
+            "treatment_name_column1": "",
             "single_price": "105.00",
+            "treatment_name_column2": "",
             "course_price": "472.50"
           }
         },
@@ -145,7 +149,9 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "Full Face",
+            "treatment_name_column1": "",
             "single_price": "175.00",
+            "treatment_name_column2": "",
             "course_price": "787.50"
           }
         },
@@ -153,7 +159,9 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "Treatment Name",
+            "treatment_name_column1": "",
             "single_price": "75.00",
+            "treatment_name_column2": "",
             "course_price": "337.50"
           }
         }
