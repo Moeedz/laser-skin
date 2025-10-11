@@ -143,7 +143,13 @@
         {% for block in section.blocks %}
           {% if block.type == 'treatment' %}
             <div class="treatment-item">
-              <span class="treatment-name">{{ block.settings.treatment_name }}</span>
+              <span class="treatment-name">
+                {% if block.settings.treatment_name_column1 != blank %}
+                  {{ block.settings.treatment_name_column1 }}
+                {% else %}
+                  {{ block.settings.treatment_name }}
+                {% endif %}
+              </span>
               <span class="treatment-price">£{{ block.settings.single_price }}</span>
             </div>
           {% endif %}
@@ -169,7 +175,13 @@
           {% for block in section.blocks %}
             {% if block.type == 'treatment' %}
               <div class="treatment-item">
-                <span class="treatment-name">{{ block.settings.treatment_name }}</span>
+                <span class="treatment-name">
+                  {% if block.settings.treatment_name_column2 != blank %}
+                    {{ block.settings.treatment_name_column2 }}
+                  {% else %}
+                    {{ block.settings.treatment_name }}
+                  {% endif %}
+                </span>
                 <span class="treatment-price">£{{ block.settings.course_price }}</span>
               </div>
             {% endif %}
@@ -294,19 +306,40 @@
         {
           "type": "text",
           "id": "treatment_name",
-          "label": "Treatment Name",
-          "default": "Treatment Name"
+          "label": "Treatment Name (Default)",
+          "default": "Treatment Name",
+          "info": "This will be used for both columns unless you specify different names below"
+        },
+        {
+          "type": "header",
+          "content": "Column 1 (Single Price)"
+        },
+        {
+          "type": "text",
+          "id": "treatment_name_column1",
+          "label": "Treatment Name for Column 1",
+          "info": "Leave blank to use default treatment name"
         },
         {
           "type": "text",
           "id": "single_price",
-          "label": "Single Price (Column 1)",
+          "label": "Single Price",
           "default": "75.00"
+        },
+        {
+          "type": "header",
+          "content": "Column 2 (Course Price)"
+        },
+        {
+          "type": "text",
+          "id": "treatment_name_column2",
+          "label": "Treatment Name for Column 2",
+          "info": "Leave blank to use default treatment name"
         },
         {
           "type": "text",
           "id": "course_price",
-          "label": "Course Price (Column 2)",
+          "label": "Course Price",
           "default": "337.50"
         }
       ]
