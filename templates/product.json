@@ -157,13 +157,45 @@
             "icon": "tick",
             "text": "Crafted to preserve flavor and nutrition through optimal cooking processes."
           }
+        },
+        "button_HfVK4Q": {
+          "type": "button",
+          "settings": {
+            "button": "Learn More",
+            "button_url": "",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 200,
+            "button_width_mobile": 200,
+            "button_mt": 16,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
         }
       },
       "block_order": [
         "text_zqNDU6",
         "icon_text_UxfF9a",
         "icon_text_LJCxHi",
-        "icon_text_dEUWkb"
+        "icon_text_dEUWkb",
+        "button_HfVK4Q"
       ],
       "name": "SS - Image With Text #9",
       "settings": {
