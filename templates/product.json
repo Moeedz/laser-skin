@@ -108,7 +108,7 @@
         "color_scheme": "scheme-29937063-0e25-4186-be5a-207a30c69b9f",
         "container_size": "full",
         "product_info_size": 35,
-        "show_sticky_add_to_cart": true,
+        "show_sticky_add_to_cart": false,
         "center_basic_info": false,
         "desktop_media_layout": "grid",
         "desktop_media_grid_gap": 30,
@@ -237,6 +237,121 @@
         "lazy": true
       }
     },
+    "ss_steps_4_LVxgXn": {
+      "type": "ss-steps-4",
+      "blocks": {
+        "step_DUek7A": {
+          "type": "step",
+          "settings": {
+            "text": "<p>Start with quick online assessment to identify your pets health problems</p>"
+          }
+        },
+        "step_UQjGrk": {
+          "type": "step",
+          "settings": {
+            "text": "<p>Get personalised treatment plan and insights based on health data</p>"
+          }
+        },
+        "step_HpgpUk": {
+          "type": "step",
+          "settings": {
+            "text": "<p>Track your health score to monitor the progress and stay in control</p>"
+          }
+        },
+        "step_tNGJGT": {
+          "type": "step",
+          "settings": {
+            "text": "<p>Ask our friendly vets or Rio: AI Assistant if you have any questions</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_DUek7A",
+        "step_UQjGrk",
+        "step_HpgpUk",
+        "step_tNGJGT"
+      ],
+      "name": "SS - Steps #4",
+      "settings": {
+        "heading": "<h2>Process Section</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 32,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "body_gap": 64,
+        "body_gap_mobile": 56,
+        "body_mt": 72,
+        "body_mt_mobile": 50,
+        "use_slider": false,
+        "slider_view_mobile": 1.3,
+        "slider_gap_mobile": 20,
+        "image_radius": 16,
+        "image_border_thickness": 2,
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "circle_number_size": 40,
+        "circle_number_size_mobile": 40,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 18,
+        "number_size_mobile": 18,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 18,
+        "text_size_mobile": 18,
+        "text_height": 130,
+        "text_mt": 24,
+        "text_align": "center",
+        "text_align_mobile": "center",
+        "button": "Get started",
+        "button_url": "",
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_width": 200,
+        "button_width_mobile": 200,
+        "button_mt": 70,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 14,
+        "button_padding_vertical_mobile": 14,
+        "button_padding_horizontal": 22,
+        "button_padding_horizontal_mobile": 22,
+        "button_radius": 100,
+        "button_border_thickness": 0,
+        "button_align": "center",
+        "button_align_mobile": "center",
+        "button_style": "non_outline",
+        "image_border_color": "#000000",
+        "circle_number_bg_color": "#000000",
+        "number_color": "#FFFFFF",
+        "text_color": "#000000",
+        "button_color": "#FFFFFF",
+        "button_hover_color": "#FFFFFF",
+        "button_bg_color": "#000000",
+        "button_bg_hover_color": "#000000",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "heading_color": "#000000",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 130,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
     "175993612397035c9e": {
       "type": "apps",
       "blocks": {
@@ -279,28 +394,54 @@
         "remove_horizontal_spacing": false
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_Dpx4Qh": {
+          "type": "text",
+          "settings": {
+            "question": "Do you offer free shipping?",
+            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
+          "settings": {
+            "question": "What is your refund policy?",
+            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+          }
+        },
+        "text_UiGdVT": {
+          "type": "text",
+          "settings": {
+            "question": "How can I create headshots with AI?",
+            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Dpx4Qh",
+        "text_JMUbWR",
+        "text_UiGdVT"
+      ],
+      "name": "SS - FAQ #1",
       "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "recommendations_count": 10,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 1,
-        "subheading": "",
-        "title": "Related products",
-        "content": ""
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#fff",
+        "hover_color": "#EFEFEF",
+        "question_color": "#fff",
+        "background_color": "#D5CAA6",
+        "answer_color": "#000",
+        "answer_bg_color": "#fff",
+        "questions-font-size": 1.5
       }
     }
   },
   "order": [
     "main",
     "ss_image_with_text_9_GLgAya",
+    "ss_steps_4_LVxgXn",
     "175993612397035c9e",
-    "related-products"
+    "ss_simple_faq_jiYFWj"
   ]
 }
