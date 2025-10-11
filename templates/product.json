@@ -237,6 +237,47 @@
         "lazy": true
       }
     },
+    "before_after_FYP3MP": {
+      "type": "before-after",
+      "blocks": {
+        "before_h3jXfm": {
+          "type": "before",
+          "settings": {
+            "color_scheme": "",
+            "text": "Before",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        },
+        "after_PymKJA": {
+          "type": "after",
+          "settings": {
+            "color_scheme": "",
+            "text": "After",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "before_h3jXfm",
+        "after_PymKJA"
+      ],
+      "name": "t:sections.before_after.presets.before_after.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "Before/after",
+        "content": "",
+        "cursor_direction": "horizontal",
+        "cursor_initial_position": 50,
+        "cursor_background": "#ffffff",
+        "cursor_arrows_color": "#000000"
+      }
+    },
     "ss_steps_4_LVxgXn": {
       "type": "ss-steps-4",
       "blocks": {
@@ -440,6 +481,7 @@
   "order": [
     "main",
     "ss_image_with_text_9_GLgAya",
+    "before_after_FYP3MP",
     "ss_steps_4_LVxgXn",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj"
