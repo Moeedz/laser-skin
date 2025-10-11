@@ -1,0 +1,342 @@
+<style>
+  .treatment-pricing-section {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .pricing-container {
+    display: grid;
+    gap: 30px;
+  }
+
+  .pricing-container.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-container.one-column {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .pricing-column {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .pricing-header {
+    background: {{ section.settings.header_color }};
+    color: {{ section.settings.header_text_color }};
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .pricing-body {
+    padding: 30px;
+  }
+
+  .treatment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .treatment-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .treatment-name {
+    position: relative;
+    padding-right: 15px;
+    background: white;
+    z-index: 1;
+    font-size: 16px;
+  }
+
+  .treatment-price {
+    position: relative;
+    padding-left: 15px;
+    background: white;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .treatment-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      #d4a574 0,
+      #d4a574 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  }
+
+  .book-now-btn {
+    display: inline-block;
+    background: {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+    padding: 15px 40px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: opacity 0.3s ease;
+  }
+
+  .book-now-btn:hover {
+    opacity: 0.9;
+  }
+
+  .btn-center {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .pricing-container.two-columns {
+      grid-template-columns: 1fr;
+    }
+    
+    .pricing-header {
+      font-size: 20px;
+      padding: 15px;
+    }
+    
+    .treatment-name,
+    .treatment-price {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="treatment-pricing-section">
+  <div class="pricing-container {% if section.settings.show_two_columns %}two-columns{% else %}one-column{% endif %}">
+    
+    <!-- First Column -->
+    <div class="pricing-column">
+      <div class="pricing-header">
+        {{ section.settings.column1_title }}
+      </div>
+      <div class="pricing-body">
+        {% for block in section.blocks %}
+          {% if block.type == 'treatment' %}
+            <div class="treatment-item">
+              <span class="treatment-name">{{ block.settings.treatment_name }}</span>
+              <span class="treatment-price">£{{ block.settings.single_price }}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+        
+        {% if section.settings.show_button_column1 %}
+          <div class="btn-center">
+            <a href="{{ section.settings.button_link_column1 }}" class="book-now-btn">
+              {{ section.settings.button_text_column1 }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Second Column (only show if two columns enabled) -->
+    {% if section.settings.show_two_columns %}
+      <div class="pricing-column">
+        <div class="pricing-header">
+          {{ section.settings.column2_title }}
+        </div>
+        <div class="pricing-body">
+          {% for block in section.blocks %}
+            {% if block.type == 'treatment' %}
+              <div class="treatment-item">
+                <span class="treatment-name">{{ block.settings.treatment_name }}</span>
+                <span class="treatment-price">£{{ block.settings.course_price }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+          
+          {% if section.settings.show_button_column2 %}
+            <div class="btn-center">
+              <a href="{{ section.settings.button_link_column2 }}" class="book-now-btn">
+                {{ section.settings.button_text_column2 }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+    
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Treatment Pricing",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_two_columns",
+      "label": "Show Two Columns",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Column 1 Settings"
+    },
+    {
+      "type": "text",
+      "id": "column1_title",
+      "label": "Column 1 Title",
+      "default": "Treatment (Single Price)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_column1",
+      "label": "Show Button Column 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text_column1",
+      "label": "Button Text Column 1",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link_column1",
+      "label": "Button Link Column 1"
+    },
+    {
+      "type": "header",
+      "content": "Column 2 Settings"
+    },
+    {
+      "type": "text",
+      "id": "column2_title",
+      "label": "Column 2 Title",
+      "default": "Course Of 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_column2",
+      "label": "Show Button Column 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text_column2",
+      "label": "Button Text Column 2",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link_column2",
+      "label": "Button Link Column 2"
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Background Color",
+      "default": "#c9a86a"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Background Color",
+      "default": "#c9a86a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "treatment",
+      "name": "Treatment",
+      "settings": [
+        {
+          "type": "text",
+          "id": "treatment_name",
+          "label": "Treatment Name",
+          "default": "Treatment Name"
+        },
+        {
+          "type": "text",
+          "id": "single_price",
+          "label": "Single Price (Column 1)",
+          "default": "75.00"
+        },
+        {
+          "type": "text",
+          "id": "course_price",
+          "label": "Course Price (Column 2)",
+          "default": "337.50"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Pricing",
+      "blocks": [
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "single_price": "75.00",
+            "course_price": "337.50"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Lower Face",
+            "single_price": "105.00",
+            "course_price": "472.50"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face",
+            "single_price": "175.00",
+            "course_price": "787.50"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
