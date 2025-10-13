@@ -219,7 +219,7 @@
         "padding_bottom": 36,
         "padding_horizontal": 6,
         "padding_horizontal_mobile": 1,
-        "full_width": true,
+        "full_width": false,
         "content_width": 120,
         "border_thickness": 0,
         "section_radius": 0,
