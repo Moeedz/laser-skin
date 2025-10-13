@@ -133,7 +133,8 @@
             "heading": "<p><strong>{{ product.title }}</strong></p>",
             "text": "",
             "button": "",
-            "button_url": ""
+            "button_url": "",
+            "image": "shopify://shop_images/dna-blog-5.jpg"
           }
         }
       },
@@ -177,7 +178,7 @@
         "button_style": "non_outline",
         "images_position": "left",
         "images_position_mobile": "bottom",
-        "image_ratio": "original",
+        "image_ratio": "square",
         "image_ratio_mobile": "portrait",
         "image_shape": "none",
         "image_radius": 0,
