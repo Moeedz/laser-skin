@@ -200,7 +200,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits Section</h2>",
+            "text": "<h2>Benefits of Laser Hair Removal</h2>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -209,34 +209,41 @@
             "text_mt": 0,
             "text_align": "left",
             "text_align_mobile": "left",
-            "text_color": "#2b1a1a"
+            "text_color": "#e6b325"
           }
         },
         "icon_text_UxfF9a": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "We select only the finest ingredients for our products."
+            "text": "Hair-free skin for months without the need for constant waxing."
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Our products are sourced from trusted partners."
+            "text": "Treatments are fast and effective, even for larger areas like legs or back."
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Crafted to preserve flavor and nutrition through optimal cooking processes."
+            "text": "Targets hair follicles directly without damaging the surrounding skin."
+          }
+        },
+        "icon_text_WwkP3M": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
           }
         },
         "button_HfVK4Q": {
           "type": "button",
           "settings": {
-            "button": "Learn More",
+            "button": "Book Now",
             "button_url": "",
             "button_custom": false,
             "button_font": "josefin_sans_n4",
@@ -245,7 +252,7 @@
             "button_height": 100,
             "button_width": 200,
             "button_width_mobile": 200,
-            "button_mt": 16,
+            "button_mt": 52,
             "button_mt_mobile": 16,
             "button_padding_vertical": 16,
             "button_padding_vertical_mobile": 16,
@@ -270,17 +277,19 @@
         "icon_text_UxfF9a",
         "icon_text_LJCxHi",
         "icon_text_dEUWkb",
+        "icon_text_WwkP3M",
         "button_HfVK4Q"
       ],
       "name": "SS - Image With Text #9",
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
+        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
         "image_ratio_mobile": "square",
-        "content_maxwidth": 550,
+        "content_maxwidth": 700,
         "content_padding_vertical": 40,
         "content_padding_vertical_mobile": 20,
         "content_padding_horizontal": 24,
