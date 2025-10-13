@@ -142,7 +142,8 @@
         "slide_mTH4wq"
       ],
       "custom_css": [
-        ".swiper-fade .swiper-slide-active {align-items: center !important;}"
+        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
       ],
       "name": "SS - Image With Text #12",
       "settings": {
