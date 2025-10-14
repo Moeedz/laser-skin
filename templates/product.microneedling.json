@@ -134,7 +134,7 @@
             "text": "",
             "button": "",
             "button_url": "",
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/034_-_3D_Aesthetics_optimized_250.jpg"
           }
         }
       },
@@ -196,10 +196,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +208,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -234,11 +234,11 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h3><strong>RF Microneedling – The Ultimate Skin Renewal Treatment</strong></h3>",
+            "text": "<h3><strong>Tighten, Smooth & Rejuvenate From Within</strong></h3><p>RF Microneedling is one of the most advanced, results-driven skin treatments available today and it’s now at <strong>Laser Skin Clinics</strong>. Combining <strong>radiofrequency energy</strong> with <strong>precise micro-needling technology</strong>, this treatment stimulates deep collagen remodelling to tighten, lift, and smooth your skin from the inside out.</p><p><br/>Unlike traditional microneedling, the addition of RF energy amplifies your body’s natural healing response — improving tone, texture, and firmness with minimal downtime.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/rf-microneedling-laserskinclinics.jpg"
           }
         }
       },
@@ -301,8 +301,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +313,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -339,41 +339,41 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name": "Radio Frequency Microneedling",
             "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
+            "single_price": "270",
+            "treatment_name_column2": "RFM 3 Sessions",
+            "course_price": "750"
           }
         },
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
+            "treatment_name": "Radio Frequency Microneedling + PRP",
             "treatment_name_column1": "",
-            "single_price": "105.00",
-            "treatment_name_column2": "",
-            "course_price": "472.50"
+            "single_price": "320",
+            "treatment_name_column2": "RFM 5 Sessions",
+            "course_price": "1100"
           }
         },
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "",
             "treatment_name_column1": "",
-            "single_price": "175.00",
-            "treatment_name_column2": "",
-            "course_price": "787.50"
+            "single_price": "",
+            "treatment_name_column2": "RFM+PRP 3 Sessions",
+            "course_price": "900"
           }
         },
         "treatment_LWReLR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Treatment Name",
+            "treatment_name": "",
             "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
+            "single_price": "",
+            "treatment_name_column2": "RFM+PRP 5 Sessions",
+            "course_price": "1400"
           }
         }
       },
@@ -393,8 +393,8 @@
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
-        "column2_title": "Course Of 6",
-        "column2_subtitle": "Save more with packages",
+        "column2_title": "Course Price",
+        "column2_subtitle": "Save more with courses",
         "show_button_column2": true,
         "button_text_column2": "BOOK NOW",
         "button_link_column2": "",
@@ -673,7 +673,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
