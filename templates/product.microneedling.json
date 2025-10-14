@@ -134,7 +134,7 @@
             "text": "",
             "button": "",
             "button_url": "",
-            "image": "shopify://shop_images/034_-_3D_Aesthetics_optimized_250.jpg"
+            "image": "shopify://shop_images/rf-microneedling-laserskinclinics-2.jpg"
           }
         }
       },
@@ -386,7 +386,7 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
+        "section_title": "Treatment Prices",
         "show_two_columns": true,
         "column1_title": "Treatment (Single Price)",
         "column1_subtitle": "Pay as you go",
@@ -495,7 +495,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/MAR-DMF-TRAR-INSTAST-REV01_dmf_stories_treatment_areas.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
