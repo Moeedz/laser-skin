@@ -245,26 +245,76 @@
         "lazy": true
       }
     },
-    "ss_waves_it84RU": {
-      "type": "ss-waves",
-      "name": "SS - Wave",
+    "collection_list_yywqTr": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_t3NT6e": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_eRHTkV": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_UNxjYH": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_t3NT6e",
+        "collection_eRHTkV",
+        "collection_UNxjYH"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
-        "wave_height": 400,
-        "wave_curvature": 390,
-        "wave_style": "less",
-        "wave_side": "0",
-        "animation": true,
-        "animation_duration": 5,
-        "background_color": "#FFFFFF",
-        "wave_color": "#efefef",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Popular Treatments",
+        "content": "<p>Discover our range of advanced aesthetic treatments, each tailored to your unique goal and anatomy for subtle, yet stunning enhancements.</p>"
       }
     }
   },
@@ -272,6 +322,6 @@
     "slideshow",
     "ss_scrolling_images_eTgjpG",
     "ss_image_with_text_12_aRwVQy",
-    "ss_waves_it84RU"
+    "collection_list_yywqTr"
   ]
 }
