@@ -244,11 +244,34 @@
         "section_radius": 0,
         "lazy": true
       }
+    },
+    "ss_waves_it84RU": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": 400,
+        "wave_curvature": 390,
+        "wave_style": "less",
+        "wave_side": "0",
+        "animation": true,
+        "animation_duration": 5,
+        "background_color": "#FFFFFF",
+        "wave_color": "#efefef",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
+      }
     }
   },
   "order": [
     "slideshow",
     "ss_scrolling_images_eTgjpG",
-    "ss_image_with_text_12_aRwVQy"
+    "ss_image_with_text_12_aRwVQy",
+    "ss_waves_it84RU"
   ]
 }
