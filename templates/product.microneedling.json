@@ -411,10 +411,10 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h2>Benefits of RF Microneedling</h2>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
-            "text_size": 34,
+            "text_size": 30,
             "text_size_mobile": 26,
             "text_height": 150,
             "text_mt": 0,
@@ -427,28 +427,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Firmer, lifted skin - Targets sagging and loss of elasticity around the face, neck, and jawline."
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Smoother texture – Refines pores, acne scars, and uneven texture."
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Youthful glow - Encourages fresh collagen and elastin for visibly radiant skin."
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Minimal downtime – Resume your normal routine within 24–48 hours."
           }
         },
         "button_HfVK4Q": {
@@ -495,7 +495,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/MAR-DMF-TRAR-INSTAST-REV01_dmf_stories_treatment_areas.jpg",
+        "image": "shopify://shop_images/image3.png",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -539,7 +539,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
+            "image": "shopify://shop_images/image_7a207107-05a6-4de2-88a1-b2a7c3336ab9.png",
             "text": "Before",
             "link_text": "",
             "link_url": "",
@@ -581,7 +581,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "The Process of RF Microneedling",
             "heading_tag": "h3"
           }
         }
@@ -606,7 +606,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "text": "<p>During your consultation, we’ll discuss your treatment and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
           }
         },
         "step_jiiz8x": {
@@ -614,7 +614,7 @@
           "settings": {
             "step": "STEP 2",
             "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "text": "<p>After a detailed consultation with one of our <strong>skin specialists</strong>, a topical anaesthetic is applied for comfort. Ultra-fine, gold-plated needles create micro-channels in the skin while controlled RF energy heats the deeper layers, triggering collagen production and instant tightening.</p>"
           }
         },
         "step_6jaGgE": {
@@ -622,7 +622,7 @@
           "settings": {
             "step": "STEP 3",
             "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "text": "<p>You may experience mild redness or warmth after treatment, but this quickly settles, revealing firmer, rejuvenated skin that continues improving for weeks.</p>"
           }
         }
       },
@@ -637,11 +637,11 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/image2_69f9861e-3fa5-40cd-8afa-5b89ab183a33.png",
         "image_radius": 0,
         "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
         "steps_custom": false,
         "steps_font": "josefin_sans_n4",
         "steps_size": 12,
