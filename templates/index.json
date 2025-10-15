@@ -52,9 +52,103 @@
         "background": "#000000",
         "controls_color": "#ffffff"
       }
+    },
+    "ss_scrolling_images_eTgjpG": {
+      "type": "ss-scrolling-images",
+      "blocks": {
+        "image_tXG7Xn": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "text": "Sample text"
+          }
+        },
+        "image_q7fBKB": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "text": "Sample text"
+          }
+        },
+        "image_zYPxNz": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "text": "Sample text"
+          }
+        },
+        "image_afVQCQ": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "text": "Sample text"
+          }
+        },
+        "image_m6mezf": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "text": "Sample text"
+          }
+        }
+      },
+      "block_order": [
+        "image_tXG7Xn",
+        "image_q7fBKB",
+        "image_zYPxNz",
+        "image_afVQCQ",
+        "image_m6mezf"
+      ],
+      "custom_css": [
+        ".slide-text-template--25564423717244__ss_scrolling_images_eTgjpG {display: none;}"
+      ],
+      "name": "SS - Scrolling images",
+      "settings": {
+        "heading": "<h2>Treatments Featured In</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 40,
+        "heading_height": 130,
+        "heading_align": "center",
+        "slider_speed": 13,
+        "slider_gap": 10,
+        "slider_gap_mobile": 10,
+        "slider_mt": 50,
+        "slider_direction": "left",
+        "pause_hover": false,
+        "image_width_desktop": 300,
+        "image_width_mobile": 200,
+        "image_height_desktop": 170,
+        "image_height_mobile": 120,
+        "image_radius": 10,
+        "text_custom": false,
+        "text_font": "assistant_n4",
+        "text_size": 14,
+        "text_height": 130,
+        "text_padding": 10,
+        "text_radius": 8,
+        "text_mt": 30,
+        "heading_color": "#000000",
+        "text_color": "#000000",
+        "text_bg": "#FFFFFF",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
     }
   },
   "order": [
-    "slideshow"
+    "slideshow",
+    "ss_scrolling_images_eTgjpG"
   ]
 }
