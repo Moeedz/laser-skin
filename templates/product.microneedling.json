@@ -238,7 +238,7 @@
             "text": "<h3><strong>Tighten, Smooth & Rejuvenate From Within</strong></h3><p>RF Microneedling is one of the most advanced, results-driven skin treatments available today and it’s now at <strong>Laser Skin Clinics</strong>. Combining <strong>radiofrequency energy</strong> with <strong>precise micro-needling technology</strong>, this treatment stimulates deep collagen remodelling to tighten, lift, and smooth your skin from the inside out.</p><p><br/>Unlike traditional microneedling, the addition of RF energy amplifies your body’s natural healing response — improving tone, texture, and firmness with minimal downtime.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
-            "image": "shopify://shop_images/image_13c70060-2527-4c21-b498-e5970590e694.png"
+            "image": "shopify://shop_images/MAR-DMF-INTRO-INSTAST-REV02_dmf_stories_intro.jpg"
           }
         }
       },
@@ -284,8 +284,8 @@
         "button_style": "non_outline",
         "images_position": "right",
         "images_position_mobile": "bottom",
-        "image_ratio": "square",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "image_shape": "none",
         "image_radius": 0,
         "image_border_thickness": 0,
