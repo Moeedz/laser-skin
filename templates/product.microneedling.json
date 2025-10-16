@@ -532,6 +532,24 @@
         "lazy": true
       }
     },
+    "image_with_text_9LhLfX": {
+      "type": "image-with-text",
+      "custom_css": [
+        "image-with-text.image-with-text {display: flex !important; justify-content: center;}",
+        ".prose.text-center.sm\\:text-start {display: none !important;}",
+        "picture {margin: unset !important;}"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/image_7a207107-05a6-4de2-88a1-b2a7c3336ab9.png",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": false
+      }
+    },
     "before_after_FYP3MP": {
       "type": "before-after",
       "blocks": {
@@ -562,6 +580,7 @@
         "before_h3jXfm",
         "after_PymKJA"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.presets.before_after.name",
       "settings": {
         "color_scheme": "",
@@ -782,6 +801,7 @@
     "ss_image_with_text_12_gUF6fh",
     "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
+    "image_with_text_9LhLfX",
     "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
