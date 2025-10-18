@@ -134,7 +134,6 @@
             "text": "",
             "button": "",
             "button_url": "",
-            "video": "shopify://files/videos/05 - 3D HydrO2 Facial.mp4",
             "video_autoplay": true,
             "video_loop": true,
             "video_muted": true,
@@ -243,10 +242,11 @@
             "text": "<p>The Hydrofacial facial is one of the most advanced skin rejuvenation treatments available — a non-invasive, multi-step facial that deeply cleanses, exfoliates, extracts, and hydrates your skin in one seamless session.</p><p>At <strong>Laser Skin Clinics</strong>, we use the latest technology to deliver powerful ingredients such as antioxidants, peptides, and hyaluronic acid deep into the skin — leaving your complexion <strong>instantly glowing, refreshed, and renewed</strong>.</p><p></p><p>Dubbed the ultimate #FiveStarFacial, our HydrO2 facial is a firm favourite with celebrities and is regularly featured in the national press. The seven technologies guarantee a complete, prescriptive approach to all your needs, providing extraordinary results to ensure maximum satisfaction<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video": "shopify://files/videos/05 - 3D HydrO2 Facial.mp4",
             "video_autoplay": true,
             "video_loop": true,
             "video_muted": true,
-            "video_controls": true,
+            "video_controls": false,
             "image": "shopify://shop_images/3D_Brochure_ho2_why_choose.jpg"
           }
         }
