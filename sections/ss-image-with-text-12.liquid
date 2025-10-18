@@ -1,10 +1,7 @@
 {% comment %}
 ---------------------------------------------------------
 Copyright © 2023 Section Store. All rights reserved.
-Unauthorized copying, modification, distribution, or use
-of this code or any portion of it, is strictly prohibited.
-Violators will be prosecuted to the fullest extent of the law.
-For inquiries or permissions, contact daniel@section.store
+Modified to support video content
 ---------------------------------------------------------
 {% endcomment %}
 
@@ -248,7 +245,8 @@ For inquiries or permissions, contact daniel@section.store
   }
 
   .image-text-image-{{ section.id }} img,
-  .image-text-image-{{ section.id }} svg {
+  .image-text-image-{{ section.id }} svg,
+  .image-text-image-{{ section.id }} video {
     display: block;
     width: 100%;
     height: 100%;
@@ -729,7 +727,20 @@ For inquiries or permissions, contact daniel@section.store
                   {% endif %}
                 </div>
                 <div class="image-text-image-{{ section.id }}" style="clip-path: url(#image-shape-{{ section.id }});">
-                  {% if block.settings.image != blank %}
+                  {% if block.settings.video != blank %}
+                    <video 
+                      {% if block.settings.video_autoplay %}autoplay{% endif %}
+                      {% if block.settings.video_loop %}loop{% endif %}
+                      {% if block.settings.video_muted %}muted{% endif %}
+                      {% unless block.settings.video_controls %}controls{% endunless %}
+                      playsinline
+                      {% if lazy %}
+                        loading="lazy"
+                      {% endif %}>
+                      <source src="{{ block.settings.video | file_url }}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  {% elsif block.settings.image != blank %}
                     <img 
                       src="{{ block.settings.image |  image_url }}" 
                       alt="{{ block.settings.image.alt }}" 
@@ -1161,12 +1172,12 @@ For inquiries or permissions, contact daniel@section.store
       },
       {
         "type": "header",
-        "content": "Image Settings"
+        "content": "Media Settings"
       },
       {
         "type": "select",
         "id": "images_position",
-        "label": "Images Position - Desktop",
+        "label": "Media Position - Desktop",
         "default": "right",
         "options": [
           {
@@ -1182,7 +1193,7 @@ For inquiries or permissions, contact daniel@section.store
       {
         "type": "select",
         "id": "images_position_mobile",
-        "label": "Images Position - Mobile",
+        "label": "Media Position - Mobile",
         "default": "top",
         "options": [
           {
@@ -1198,7 +1209,7 @@ For inquiries or permissions, contact daniel@section.store
       {
         "type": "select",
         "id": "image_ratio",
-        "label": "Image Aspect Ratio",
+        "label": "Media Aspect Ratio",
         "default": "square",
         "options": [
           {
@@ -1222,7 +1233,7 @@ For inquiries or permissions, contact daniel@section.store
       {
         "type": "select",
         "id": "image_ratio_mobile",
-        "label": "Image Aspect Ratio - Mobile",
+        "label": "Media Aspect Ratio - Mobile",
         "default": "square",
         "options": [
           {
@@ -1246,7 +1257,7 @@ For inquiries or permissions, contact daniel@section.store
       {
         "type": "select",
         "id": "image_shape",
-        "label": "Image Shape",
+        "label": "Media Shape",
         "default": "1",
         "options": [
           {
@@ -1278,7 +1289,7 @@ For inquiries or permissions, contact daniel@section.store
         "max": 100,
         "step": 2,
         "unit": "px",
-        "label": "Image Roundness",
+        "label": "Media Roundness",
         "default": 0
       },
       {
@@ -1288,7 +1299,7 @@ For inquiries or permissions, contact daniel@section.store
         "max": 10,
         "step": 1,
         "unit": "px",
-        "label": "Image Border Thickness",
+        "label": "Media Border Thickness",
         "default": 0,
         "info": "Does not work on shapes"
       },
@@ -1438,11 +1449,11 @@ For inquiries or permissions, contact daniel@section.store
       },
       {
         "type": "header",
-        "content": "Image Colors"
+        "content": "Media Colors"
       },
       {
         "type": "color",
-        "label": "Image Border Color",
+        "label": "Media Border Color",
         "id": "image_border_color",
         "default": "#000000"
       },
@@ -1644,7 +1655,7 @@ For inquiries or permissions, contact daniel@section.store
         "type": "checkbox",
         "id": "lazy",
         "label": "Lazy load",
-        "info": "Lazy load images for speed optimisation",
+        "info": "Lazy load images/videos for speed optimisation",
         "default": true
       }
     ],
@@ -1663,7 +1674,7 @@ For inquiries or permissions, contact daniel@section.store
             "type": "richtext",
             "id": "text",
             "label": "Text",
-            "default": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
+            "default": "<p>Pair text with an image or video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
           },
           {
             "type": "text",
@@ -1677,50 +1688,72 @@ For inquiries or permissions, contact daniel@section.store
             "label": "Button URL"
           },
           {
+            "type": "header",
+            "content": "Media - Choose either image or video"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video",
+            "info": "Upload a video file. Video takes priority over image."
+          },
+          {
+            "type": "checkbox",
+            "id": "video_autoplay",
+            "label": "Autoplay Video",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "video_loop",
+            "label": "Loop Video",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "video_muted",
+            "label": "Mute Video",
+            "default": true,
+            "info": "Videos must be muted to autoplay on most browsers"
+          },
+          {
+            "type": "checkbox",
+            "id": "video_controls",
+            "label": "Hide Video Controls",
+            "default": true
+          },
+          {
             "type": "image_picker",
             "id": "image",
-            "label": "Image"
+            "label": "Image (Fallback)",
+            "info": "Used if no video is uploaded"
           }
         ]
       }
     ],
     "presets": [
       {
-        "name": "SS - Image With Text #12",
+        "name": "SS - Image/Video With Text #12",
         "blocks": [
           {
             "type": "slide",
             "settings": {
               "heading": "<p><strong>Heading</strong></p>",
-              "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
+              "text": "<p>Pair text with an image or video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
             }
           },
           {
             "type": "slide",
             "settings": {
               "heading": "<p><strong>Heading</strong></p>",
-              "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
+              "text": "<p>Pair text with an image or video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
             }
           },
           {
             "type": "slide",
             "settings": {
               "heading": "<p><strong>Heading</strong></p>",
-              "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
-            }
-          },
-          {
-            "type": "slide",
-            "settings": {
-              "heading": "<p><strong>Heading</strong></p>",
-              "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
-            }
-          },
-          {
-            "type": "slide",
-            "settings": {
-              "heading": "<p><strong>Heading</strong></p>",
-              "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
+              "text": "<p>Pair text with an image or video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>"
             }
           }
         ]
