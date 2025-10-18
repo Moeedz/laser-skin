@@ -134,7 +134,7 @@
             "text": "",
             "button": "",
             "button_url": "",
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws_stories_intro.jpg"
           }
         }
       },
@@ -196,10 +196,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +208,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -234,11 +234,11 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h2><strong>Power Sculpt – Build Muscle. Burn Fat. Transform Your Body.</strong></h2><p></p>",
+            "text": "<h3><strong>The revolutionary body-contouring treatment that tones, lifts and defines.</strong></h3><p>Introducing <strong>Power Sculpt</strong>, the non-invasive body-sculpting treatment that uses advanced <strong>HIFEM (High-Intensity Focused Electromagnetic)</strong> technology to simultaneously <strong>build muscle and burn fat</strong> — all while you relax.</p><p>Each session delivers the equivalent of <strong>20,000 crunches, squats or glute bridges</strong>, triggering deep supramaximal muscle contractions that are impossible to achieve through regular exercise.</p><p>The result? Stronger, more defined muscles and a noticeably tighter, more sculpted physique — without downtime, needles, or recovery.</p><p></p>",
             "button": "Enquire Now",
             "button_url": "",
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws_stories_intro_3.jpg"
           }
         }
       },
@@ -301,8 +301,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +313,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -411,7 +411,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h2>Benefits of Power Sculpt</h2>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -427,28 +427,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Builds lean muscle and burns fat simultaneously"
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Non-invasive and pain-free, no downtime and no needles"
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Clinically proven results with measurable muscle gain"
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Perfect complement to training or fat-reduction programs"
           }
         },
         "button_HfVK4Q": {
@@ -495,7 +495,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/MAR-PWS-WHY-INSTAST-REV01_pws_stories_why_choose.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -539,7 +539,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
+            "image": "shopify://shop_images/MAR-PWS-SHANRES-INSTAST-REV01_pws_stories_shannon_results.jpg",
             "text": "Before",
             "link_text": "",
             "link_url": "",
@@ -604,25 +604,25 @@
         "step_jmRN9F": {
           "type": "step",
           "settings": {
-            "step": "STEP 1",
-            "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "step": "Technology",
+            "title": "How It Works",
+            "text": "<p>Power Sculpt uses focused electromagnetic energy to stimulate thousands of powerful muscle contractions in your chosen treatment area.</p><p>These contractions force the muscle fibres to adapt, strengthen, and grow while also enhancing fat metabolism in the surrounding tissue.</p><p>In short: it tones, tightens, and burns simultaneously.</p>"
           }
         },
         "step_jiiz8x": {
           "type": "step",
           "settings": {
             "step": "STEP 2",
-            "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "title": "Treatment",
+            "text": "<p>During treatment, you’ll feel strong, rhythmic muscle contractions - not pain, as the electromagnetic energy engages the muscles.<br/><br/>There’s no downtime or soreness; you can return to normal activities immediately. Most clients even describe the feeling as an intense workout without breaking a sweat.</p>"
           }
         },
         "step_6jaGgE": {
           "type": "step",
           "settings": {
             "step": "STEP 3",
-            "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "title": "After",
+            "text": "<p>After your Power Sculpt session, you can return to normal activities immediately - there’s no downtime or recovery required. You may feel a mild muscle ache similar to an intense workout, but this simply means your body is already responding and strengthening.</p>"
           }
         }
       },
@@ -637,7 +637,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/MAR-PWS-TRTAREAS1-INSTAST-REV01_pws_stories_treatment_areas_1.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "portrait",
@@ -673,7 +673,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
@@ -739,29 +739,37 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "Who is Power Sculpt suitable for?",
+            "answer": "<p>It’s ideal for men and women looking to tone, lift or define specific body areas without surgery.</p><p>Whether you want to enhance your workouts, sculpt your core, or lift and firm the glutes, Power Sculpt can help achieve those goals safely and effectively.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Does it hurt?",
+            "answer": "<p>No, Power Sculpt is completely non-invasive and pain-free.</p><p>You’ll feel strong but comfortable muscle contractions during the treatment, followed by a slight tingling or tightness. There’s no discomfort and no recovery period needed.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "How soon will I see results?",
+            "answer": "<p>Most clients start to notice increased tone and firmness after two or three sessions, with full results developing over the next few weeks as the muscles strengthen and fat cells are metabolised.</p>"
+          }
+        },
+        "text_MXXKEH": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>We recommend a course of 4 to 6 sessions, usually spaced over 2 to 3 weeks, for the best results.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_MXXKEH"
       ],
       "name": "SS - FAQ #1",
       "settings": {
