@@ -737,7 +737,9 @@ Modified to support video content
                       {% if lazy %}
                         loading="lazy"
                       {% endif %}>
-                      <source src="{{ block.settings.video | file_url }}" type="video/mp4">
+                      {% for source in block.settings.video.sources %}
+                        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                      {% endfor %}
                       Your browser does not support the video tag.
                     </video>
                   {% elsif block.settings.image != blank %}
