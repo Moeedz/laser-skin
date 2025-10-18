@@ -134,7 +134,7 @@
             "text": "",
             "button": "",
             "button_url": "",
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/MAR-HO2-HERO1-INSTAST-REV01_ho2_stories_hero_1.jpg"
           }
         }
       },
@@ -196,10 +196,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +208,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -234,11 +234,11 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h5>HydroFacial – The Ultimate Deep-Cleansing, Glow-Boosting Treatment</h5><p></p>",
+            "text": "<p>The Hydrofacial facial is one of the most advanced skin rejuvenation treatments available — a non-invasive, multi-step facial that deeply cleanses, exfoliates, extracts, and hydrates your skin in one seamless session.</p><p>At <strong>Laser Skin Clinics</strong>, we use the latest technology to deliver powerful ingredients such as antioxidants, peptides, and hyaluronic acid deep into the skin — leaving your complexion <strong>instantly glowing, refreshed, and renewed</strong>.</p><p></p><p>Dubbed the ultimate #FiveStarFacial, our HydrO2 facial is a firm favourite with celebrities and is regularly featured in the national press. The seven technologies guarantee a complete, prescriptive approach to all your needs, providing extraordinary results to ensure maximum satisfaction<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/3D_Brochure_ho2_why_choose.jpg"
           }
         }
       },
@@ -301,8 +301,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +313,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -411,7 +411,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h2>Benefits of HydrO2 Facial</h2>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -427,28 +427,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Deep cleansing and detoxification – Removes congestion, blackheads, and dead skin cells."
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Intense hydration – Infuses moisture and antioxidants for lasting glow."
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "No downtime – Perfect before an event or as a monthly skin maintenance treatment."
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Refined texture and radiance – Smooths fine lines, dullness, and uneven tone."
           }
         },
         "button_HfVK4Q": {
@@ -495,7 +495,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/3D-HydrO2_facial_digital_screens-2_-_MAR-HO2-CPDS-REV01.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -539,7 +539,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
+            "image": "shopify://shop_images/3D_Brochure_ho2_results_1.jpg",
             "text": "Before",
             "link_text": "",
             "link_url": "",
@@ -581,7 +581,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "Three-stage process that transforms your skin step by step:",
             "heading_tag": "h3"
           }
         }
@@ -605,24 +605,24 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "title": "Cleanse & Exfoliate",
+            "text": "<p>A gentle resurfacing step removes makeup, dead skin, and built-up oils. This clears the way for deep penetration of active ingredients and reveals brighter, smoother skin instantly.<br/></p><p><br/></p><p></p>"
           }
         },
         "step_jiiz8x": {
           "type": "step",
           "settings": {
             "step": "STEP 2",
-            "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "title": "Extract + Detoxify",
+            "text": "<p>The suction handpiece painlessly removes blackheads, congestion, and impurities from deep within the pores - far more effectively than manual extractions.<br/></p><p></p>"
           }
         },
         "step_6jaGgE": {
           "type": "step",
           "settings": {
             "step": "STEP 3",
-            "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "title": "Hydrate + Protect",
+            "text": "<p>Finally, your skin is drenched in a blend of antioxidants, peptides, and hyaluronic acid to replenish moisture, soothe inflammation, and boost long-term skin health.<br/><br/>The result is skin that looks fresh, plump, and luminous - the kind of healthy glow that makeup simply can’t replicate.</p>"
           }
         }
       },
@@ -637,7 +637,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2_facial_social_media_graphics_3.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "portrait",
@@ -673,7 +673,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
@@ -739,29 +739,53 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "What makes HydroFacial different from a regular facial?",
+            "answer": "<p>Unlike a traditional facial, HydroFacial delivers consistent, medical-grade results using advanced technology rather than manual extractions.</p><p>It penetrates deeper into the skin to remove debris from pores and replenish essential moisture all with no irritation, no downtime, and visible results after a single treatment.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Who is HydroFacial suitable for?",
+            "answer": "<p>HydroFacial is safe for all skin types and tones — even sensitive skin.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "Is there any downtime?",
+            "answer": "<p>There’s no downtime whatsoever.</p><p>You might notice a slight pink glow for an hour or two, but you can return to your normal activities straight away, it’s even safe to have a HydroFacial on the same day as an event.</p>"
+          }
+        },
+        "text_F4JeBA": {
+          "type": "text",
+          "settings": {
+            "question": "How long does the treatment take?",
+            "answer": "<p>A typical HydroFacial takes 30 to 45 minutes, making it perfect for a lunchtime treatment or quick pick-me-up before a night out.</p>"
+          }
+        },
+        "text_C7wfEW": {
+          "type": "text",
+          "settings": {
+            "question": "How often should I have a HydroFacial?",
+            "answer": "<p>For ongoing skin health and radiance, we recommend a HydroFacial every 4 to 6 weeks.</p>"
+          }
+        },
+        "text_GEizER": {
+          "type": "text",
+          "settings": {
+            "question": "Does it hurt?",
+            "answer": "<p>Not at all. HydroFacial is completely comfortable and non-invasive.</p><p>Most clients describe it as a gentle, cooling sensation with light suction - relaxing and refreshing, rather than painful.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_F4JeBA",
+        "text_C7wfEW",
+        "text_GEizER"
       ],
       "name": "SS - FAQ #1",
       "settings": {
