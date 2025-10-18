@@ -138,7 +138,7 @@
             "video_autoplay": true,
             "video_loop": true,
             "video_muted": true,
-            "video_controls": true,
+            "video_controls": false,
             "image": "shopify://shop_images/MAR-HO2-HERO1-INSTAST-REV01_ho2_stories_hero_1.jpg"
           }
         }
