@@ -134,6 +134,10 @@
             "text": "",
             "button": "",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/dna-blog-5.jpg"
           }
         }
@@ -196,10 +200,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +212,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -234,10 +238,14 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h3><strong>Advanced LED Healing and Skin Renewal with Celluma Light Technology</strong></h3><p></p>",
+            "text": "<p>Red Light Therapy is a soothing, non-invasive treatment that uses low-level light energy to rejuvenate the skin and support natural healing from within.<br/><br/>At Laser Skin Clinics, we use <strong>Celluma</strong>, one of the most advanced and FDA-approved LED systems available.</p><p>Celluma delivers clinically proven wavelengths of red and near-infrared light that penetrate deep into the skin, stimulating collagen production, accelerating cell repair, and reducing inflammation.</p><p>The result is smoother, brighter, and healthier-looking skin with improved tone, texture, and radiance.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/laser-hair-removal.webp"
           }
         }
@@ -301,8 +309,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +321,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -411,7 +419,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h3><strong>Benefits of Red Light Therapy</strong></h3><p></p>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -427,28 +435,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Boosts collagen and elastin for firmer, smoother skin"
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Reduces redness, inflammation, and irritation for a calmer complexion"
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Accelerates healing after aesthetic treatments or breakouts"
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Restores natural glow and even tone using Celluma’s clinically proven LED light"
           }
         },
         "button_HfVK4Q": {
@@ -581,7 +589,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "<strong>The Red Light Therapy 3-Step Process</strong>",
             "heading_tag": "h3"
           }
         }
@@ -605,24 +613,24 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "title": "Consultation and Skin Preparation",
+            "text": "<p>Your treatment begins with a short consultation to assess your skin condition, goals, and any recent procedures.<br/><br/>The skin is gently cleansed to remove makeup, sunscreen, or oils to ensure maximum light absorption.<br/><br/>This preparation ensures your session is safe, effective, and tailored to your skin’s needs.</p>"
           }
         },
         "step_jiiz8x": {
           "type": "step",
           "settings": {
             "step": "STEP 2",
-            "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "title": " Celluma LED Therapy Session",
+            "text": "<p>You will relax comfortably as the Celluma device is positioned above the treatment area.<br/><br/>The panel emits targeted red and near-infrared light wavelengths that penetrate deep into the skin to energise cells and trigger collagen renewal.<br/><br/>The session lasts around 20 to 30 minutes and is completely painless. Most clients describe it as warm, calming, and deeply relaxing.</p>"
           }
         },
         "step_6jaGgE": {
           "type": "step",
           "settings": {
             "step": "STEP 3",
-            "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "title": "Recovery and Maintenance",
+            "text": "<p>After your session, your skin will appear instantly refreshed with a healthy, natural glow.<br/><br/>There is no downtime, and you can return to normal activities straight away.</p>"
           }
         }
       },
@@ -673,7 +681,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
@@ -739,15 +747,15 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "How does Celluma Red Light Therapy work?",
+            "answer": "<p>Celluma’s LED light penetrates deep into the skin, stimulating natural cellular activity.<br/><br/>This enhances collagen and elastin production, reduces inflammation, and accelerates tissue repair for smoother, stronger, and more radiant skin.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Who is Red Light Therapy suitable for?",
+            "answer": "<p>It is suitable for all skin types and ages.<br/><br/>It is ideal for those with dull or dehydrated skin, fine lines, redness, or mild acne, and is also excellent for supporting recovery after advanced aesthetic treatments.</p>"
           }
         },
         "text_UiGdVT": {
