@@ -238,8 +238,8 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h3><strong>Advanced Skin Renewal for Smoother, Firmer, More Youthful Skin</strong></h3>",
+            "text": "<p>CO2 Laser Resurfacing is one of the most effective treatments available for advanced skin renewal.</p><p>It uses concentrated beams of carbon dioxide laser energy to remove damaged skin cells, stimulate collagen production, and trigger the body’s natural healing response.</p><p>The result is smoother, tighter, and more even skin with a visible reduction in fine lines, pigmentation, scarring, and sun damage.</p><p>At Laser Skin Clinics, we offer both <strong>ablative</strong> and <strong>non-ablative</strong> CO2 laser resurfacing.</p><p>Ablative treatments precisely remove the outermost layers of the skin to deliver dramatic results for deeper wrinkles, texture irregularities, and scars.</p><p>Non-ablative treatments gently heat the deeper layers of the skin without removing surface tissue, ideal for those seeking noticeable rejuvenation with minimal downtime.</p><p>Your practitioner will advise which approach best suits your skin type, goals, and recovery preferences.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
             "video": "shopify://files/videos/03 - 3D Vjuve Face.mp4",
@@ -420,7 +420,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h3><strong>Benefits of CO2 Laser Resurfacing</strong></h3>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -436,28 +436,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Refines texture and reduces fine lines, wrinkles, and scarring"
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Improves firmness, elasticity, and overall skin tone"
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Brightens uneven pigmentation and sun damage"
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Stimulates deep collagen renewal for lasting rejuvenation"
           }
         },
         "button_HfVK4Q": {
@@ -590,7 +590,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "<strong>The CO2 Laser 3-Step Process</strong>",
             "heading_tag": "h3"
           }
         }
@@ -615,7 +615,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "text": "<p>Your treatment begins with a detailed consultation with one of our qualified medical professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether ablative or non-ablative resurfacing is most suitable.<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
           }
         },
         "step_jiiz8x": {
@@ -623,7 +623,7 @@
           "settings": {
             "step": "STEP 2",
             "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "text": "<p>During the treatment, targeted pulses of CO2 laser energy penetrate the skin to remove or heat specific layers.<br/><br/>Ablative resurfacing removes damaged cells on the surface, while non-ablative treatment works deeper to remodel collagen without breaking the skin barrier.</p>"
           }
         },
         "step_6jaGgE": {
@@ -631,7 +631,7 @@
           "settings": {
             "step": "STEP 3",
             "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "text": "<p>Following your session, the skin naturally begins its healing process.<br/><br/>With ablative resurfacing, you can expect redness and light peeling for several days as new, fresh skin emerges.<br/><br/>With non-ablative resurfacing, recovery is quicker, with only mild redness for a day or two.<br/><br/>Over the coming weeks, new collagen is produced, improving skin firmness, smoothness, and overall radiance.</p>"
           }
         }
       },
@@ -748,29 +748,53 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "What is the difference between ablative and non-ablative CO2 laser?",
+            "answer": "<p>Ablative CO2 laser resurfacing removes thin layers of damaged skin, producing dramatic results for deep lines and scarring.</p><p>Non-ablative CO2 laser heats the deeper dermal layers without removing surface tissue, providing subtle rejuvenation and shorter recovery time.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Who is CO2 Laser Resurfacing suitable for?",
+            "answer": "<p>It is suitable for those looking to address fine lines, sun damage, scarring, or uneven texture.<br/><br/>Ablative resurfacing is best for moderate to advanced skin concerns, while non-ablative suits those seeking a gentler option with less downtime.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "Is there any downtime?",
+            "answer": "<p>Ablative CO2 resurfacing typically involves 5 to 7 days of recovery, while non-ablative treatments have little to no downtime.</p><p>Your practitioner will advise on post-treatment care and the expected healing period.</p>"
+          }
+        },
+        "text_P8rQpD": {
+          "type": "text",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>You will begin to notice improvements within 1 to 2 weeks for ablative treatments and within days for non-ablative.<br/><br/>Collagen production continues to increase for several months, enhancing firmness and clarity over time.</p>"
+          }
+        },
+        "text_XUDYHP": {
+          "type": "text",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can last several years depending on skin type, age, and lifestyle.<br/><br/>Annual maintenance treatments and good sun protection help prolong results.</p>"
+          }
+        },
+        "text_nPeQJz": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions do I need?",
+            "answer": "<p>Most clients see significant improvement after a single session.<br/><br/>However, a course of 2 to 3 treatments may be recommended for deeper concerns such as acne scars or more advanced signs of ageing.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_P8rQpD",
+        "text_XUDYHP",
+        "text_nPeQJz"
       ],
       "name": "SS - FAQ #1",
       "settings": {
