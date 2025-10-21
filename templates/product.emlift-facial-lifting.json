@@ -761,6 +761,13 @@
         "text_UiGdVT": {
           "type": "text",
           "settings": {
+            "question": "Who is EM Lift suitable for?",
+            "answer": "<p>Emlift is suitable for anyone who wants to improve facial firmness, definition, and contour without surgery.<br/><br/>It’s ideal for people noticing mild to moderate skin laxity, early signs of ageing, or a loss of facial tone around the cheeks, jawline, and lower face.<br/><br/>Emlift is also a great option for those who prefer natural-looking results and want to stimulate collagen and muscle strength without injectables or downtime.</p>"
+          }
+        },
+        "text_JaTnyH": {
+          "type": "text",
+          "settings": {
             "question": "How soon will I see results?",
             "answer": "<p>You may notice a subtle lift and tightening immediately after your first treatment, with results continuing to improve over the following weeks as collagen rebuilds and the muscles strengthen.</p>"
           }
@@ -769,7 +776,8 @@
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_JaTnyH"
       ],
       "name": "SS - FAQ #1",
       "settings": {
