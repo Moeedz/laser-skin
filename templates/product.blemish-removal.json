@@ -134,6 +134,10 @@
             "text": "",
             "button": "",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/dna-blog-5.jpg"
           }
         }
@@ -196,10 +200,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +212,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -234,10 +238,14 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h3><strong>Safe, Precise, and Effective Treatment for Clearer, Healthier Skin</strong></h3>",
+            "text": "<p>Blemish Removal at Laser Skin Clinics is a quick, safe, and highly effective treatment designed to permanently remove unwanted skin imperfections such as <strong>skin tags, milia, warts, spider veins, blood spots, seborrheic keratoses</strong>, and other benign lesions.</p><p>Our advanced techniques allow us to precisely target and remove blemishes with minimal discomfort or downtime, restoring smooth, even skin and renewed confidence.</p><p>Every procedure is performed by a qualified medical professional in a clean, clinical setting.</p><p>We use the latest medical-grade technologies, including <strong>advanced laser and plasma-based systems</strong>, to remove blemishes accurately while protecting surrounding healthy skin.</p><p>Whether you want to clear a single blemish or multiple small imperfections, your treatment is tailored to your individual skin type and concern.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/laser-hair-removal.webp"
           }
         }
@@ -301,8 +309,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +321,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -411,7 +419,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h3><strong>Benefits of Blemish Removal</strong></h3>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -427,28 +435,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Removes skin tags, milia, warts, spider veins, and benign lesions safely and precisely"
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Quick, minimally invasive procedure with immediate visible improvement"
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Restores smooth, even-toned skin with little to no downtime"
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Performed by experienced medical professionals using advanced technology"
           }
         },
         "button_HfVK4Q": {
@@ -581,7 +589,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "<strong>The Blemish Removal 3-Step Process</strong>",
             "heading_tag": "h3"
           }
         }
@@ -605,24 +613,24 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "title": "Consultation and Skin Assessment",
+            "text": "<p>Your treatment begins with a consultation and skin assessment by one of our medical practitioners.<br/><br/>We evaluate your blemish or vein to confirm it is suitable for removal and select the most appropriate method, such as laser or plasma technology.<br/><br/>This ensures complete safety and precision throughout the process.</p>"
           }
         },
         "step_jiiz8x": {
           "type": "step",
           "settings": {
             "step": "STEP 2",
-            "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "title": "Blemish Removal Treatment",
+            "text": "<p>Once the area is cleansed and prepared, the blemish is carefully treated using laser or plasma energy to break down the targeted tissue without damaging the surrounding skin.<br/><br/>A topical numbing cream may be applied for comfort.</p>"
           }
         },
         "step_6jaGgE": {
           "type": "step",
           "settings": {
             "step": "STEP 3",
-            "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "title": "Healing and Recovery",
+            "text": "<p>After treatment, a small scab or redness may appear which heals naturally over several days.<br/><br/>The skin should be kept clean and protected from direct sunlight.<br/><br/>Once healed, the area appears smoother and clearer with minimal risk of scarring.</p>"
           }
         }
       },
@@ -673,7 +681,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
@@ -739,29 +747,61 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "What types of blemishes can be treated?",
+            "answer": "<p>We can safely and effectively remove a wide range of common skin imperfections including:<br/><br/>Skin tags, Milia, Warts, Spider veins and thread veins, Blood spots (cherry angiomas), Seborrheic keratoses and Benign skin lesions</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Is blemish removal safe?",
+            "answer": "<p>Yes, all blemish removal treatments at Laser Skin Clinics are performed by trained medical professionals using advanced, FDA-approved technology.<br/><br/>Each blemish is assessed before treatment to ensure it is benign and suitable for removal.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "How long does it take to heal?",
+            "answer": "<p>Healing takes approximately 5 to 10 days.<br/><br/>Small scabs may form and should be left to fall away naturally to avoid scarring.</p>"
+          }
+        },
+        "text_eXA7zx": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most blemishes are removed in a single session.<br/><br/>Some thicker or more stubborn lesions may require an additional treatment.</p>"
+          }
+        },
+        "text_i4QUjx": {
+          "type": "text",
+          "settings": {
+            "question": "How long does the treatment take?",
+            "answer": "<p>Treatment time varies depending on the number and size of blemishes but usually takes between 15 and 30 minutes.</p>"
+          }
+        },
+        "text_mw67Aq": {
+          "type": "text",
+          "settings": {
+            "question": "Will the blemish come back?",
+            "answer": "<p>Once a blemish is fully removed, it does not usually return.<br/><br/>However, new blemishes can develop naturally over time due to genetics, ageing, or sun exposure.</p>"
+          }
+        },
+        "text_3LXiVp": {
+          "type": "text",
+          "settings": {
+            "question": "Does the treatment hurt?",
+            "answer": "<p>The treatment is quick and well-tolerated.<br/><br/>A numbing cream can be applied before the procedure, and most clients only feel a mild warmth or tingling sensation.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_eXA7zx",
+        "text_i4QUjx",
+        "text_mw67Aq",
+        "text_3LXiVp"
       ],
       "name": "SS - FAQ #1",
       "settings": {
