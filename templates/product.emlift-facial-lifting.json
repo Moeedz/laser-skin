@@ -134,6 +134,10 @@
             "text": "",
             "button": "",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/dna-blog-5.jpg"
           }
         }
@@ -196,10 +200,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +212,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -234,10 +238,14 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<p><strong>Emlift Non-Invasive Facial Lifting & Muscle Toning</strong></p>",
+            "text": "<p>Emlift is a non-invasive facial lifting treatment that uses High-Intensity Focused Electromagnetic energy combined with advanced RF technology to lift, tone, and tighten the face.</p><p>It works by stimulating deep muscle contractions and boosting collagen production – giving the face a naturally lifted, more youthful appearance without needles or downtime.</p><p>Whether you’re looking to define your jawline, lift sagging cheeks, or improve facial symmetry, EMLift offers visible, natural-looking results that strengthen the foundation beneath your skin.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/laser-hair-removal.webp"
           }
         }
@@ -301,8 +309,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +321,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -411,7 +419,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h2>Benefits of EM Lift</h2>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -427,28 +435,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Enhances jawline definition and cheek volume"
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Strengthens and tones facial muscles"
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Improves facial symmetry and skin firmness"
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Quick, painless treatment with no recovery time"
           }
         },
         "button_HfVK4Q": {
@@ -581,7 +589,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "The Process of EM Lift facial lifting",
             "heading_tag": "h3"
           }
         }
@@ -605,8 +613,8 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "title": "WHEN YOU ARRIVE",
+            "text": "<p>Your Emlift journey begins with an assessment of We’ll your facial structure, skin tone, and muscle definition to determine which areas will benefit most from the treatment.<br/><br/>This ensures your Emlift plan is completely tailored to your goals and designed for safe, effective lifting and toning.</p>"
           }
         },
         "step_jiiz8x": {
@@ -614,7 +622,7 @@
           "settings": {
             "step": "STEP 2",
             "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "text": "<p>During your session, HIFEM energy stimulates thousands of deep facial muscle contractions while gentle RF heat boosts collagen production within the skin.<br/><br/>You’ll feel firm but comfortable pulses as the technology works to lift, tighten, and re-define your features.</p><p>Each treatment lasts around 30 to 40 minutes – with no needles, no pain, and no downtime.</p>"
           }
         },
         "step_6jaGgE": {
@@ -622,7 +630,7 @@
           "settings": {
             "step": "STEP 3",
             "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "text": "<p>Following your session, your skin begins its natural regeneration process.<br/><br/>Collagen and elastin production increase over the coming weeks, while facial muscles become stronger and more toned.</p><p></p>"
           }
         }
       },
@@ -673,7 +681,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
@@ -739,22 +747,22 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "Does EM Lift hurt?",
+            "answer": "<p>No – Emlift is a comfortable, non-invasive treatment.<br/><br/>You’ll feel rhythmic muscle contractions along with gentle warmth as the RF energy penetrates the skin. Most clients find it relaxing and even describe it as a “workout for the face.”</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>A typical Emlift course includes 4 to 6 sessions, spaced about a week apart.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "How soon will I see results?",
+            "answer": "<p>You may notice a subtle lift and tightening immediately after your first treatment, with results continuing to improve over the following weeks as collagen rebuilds and the muscles strengthen.</p>"
           }
         }
       },
