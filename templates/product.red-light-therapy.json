@@ -761,15 +761,31 @@
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "How long do results last?",
+            "answer": "<p>Results build gradually over time as collagen production increases.</p><p>Most clients notice a lasting glow and improved skin health for several weeks after a course of treatments.</p>"
+          }
+        },
+        "text_V9xxYU": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>A course of 6 to 8 treatments is recommended to achieve optimal results.</p>"
+          }
+        },
+        "text_aYJRFX": {
+          "type": "text",
+          "settings": {
+            "question": "Does it hurt?",
+            "answer": "<p>No, Red Light Therapy is completely pain-free and relaxing.<br/><br/>You will simply feel a gentle warmth as the light works to rejuvenate the skin.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_V9xxYU",
+        "text_aYJRFX"
       ],
       "name": "SS - FAQ #1",
       "settings": {
