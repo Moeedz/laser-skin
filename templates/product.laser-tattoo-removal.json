@@ -134,6 +134,10 @@
             "text": "",
             "button": "",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/dna-blog-5.jpg"
           }
         }
@@ -196,10 +200,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +212,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -238,6 +242,10 @@
             "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/laser-hair-removal.webp"
           }
         }
@@ -301,8 +309,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +321,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -339,9 +347,9 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name": "Small Tattoo",
             "treatment_name_column1": "",
-            "single_price": "75.00",
+            "single_price": "45",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -349,9 +357,9 @@
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
+            "treatment_name": "Medium Tattoo",
             "treatment_name_column1": "",
-            "single_price": "105.00",
+            "single_price": "60",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
@@ -359,9 +367,9 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "Large Tattoo",
             "treatment_name_column1": "",
-            "single_price": "175.00",
+            "single_price": "90",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -369,9 +377,9 @@
         "treatment_LWReLR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Treatment Name",
+            "treatment_name": "Eyebrow Tattoo - Microblading or Tattoo Removal",
             "treatment_name_column1": "",
-            "single_price": "75.00",
+            "single_price": "50",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -386,10 +394,10 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "section_title": "Pricelist",
+        "show_two_columns": false,
+        "column1_title": "LASER TATTOO REMOVAL",
+        "column1_subtitle": "Aditional Sizes Available On Request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
@@ -673,7 +681,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
