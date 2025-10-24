@@ -368,9 +368,9 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "",
+            "treatment_name": "Radio Frequency Course Of 3",
             "treatment_name_column1": "",
-            "single_price": "",
+            "single_price": "750",
             "treatment_name_column2": "RFM+PRP 3 Sessions",
             "course_price": "900"
           }
@@ -379,8 +379,8 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "",
-            "treatment_name_column1": "",
-            "single_price": "",
+            "treatment_name_column1": "Radio Frequency Microneedling + PRP Course Of 3",
+            "single_price": "900",
             "treatment_name_column2": "RFM+PRP 5 Sessions",
             "course_price": "1400"
           }
@@ -395,10 +395,10 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Treatment Prices",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "section_title": "Price List",
+        "show_two_columns": false,
+        "column1_title": "RF Microneedling",
+        "column1_subtitle": "Alternative Courses Available On Request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
