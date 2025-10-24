@@ -347,9 +347,9 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name": "Small Area ( under eye )",
             "treatment_name_column1": "",
-            "single_price": "75.00",
+            "single_price": "135",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -357,9 +357,9 @@
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
-            "treatment_name_column1": "",
-            "single_price": "105.00",
+            "treatment_name": "",
+            "treatment_name_column1": "Half Face",
+            "single_price": "175",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
@@ -369,13 +369,14 @@
           "settings": {
             "treatment_name": "Full Face",
             "treatment_name_column1": "",
-            "single_price": "175.00",
+            "single_price": "300",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
         },
         "treatment_LWReLR": {
           "type": "treatment",
+          "disabled": true,
           "settings": {
             "treatment_name": "Treatment Name",
             "treatment_name_column1": "",
@@ -394,10 +395,10 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "section_title": "Price List",
+        "show_two_columns": false,
+        "column1_title": "Polynucleotides",
+        "column1_subtitle": "Course prices available on request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
