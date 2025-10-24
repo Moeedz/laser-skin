@@ -348,7 +348,7 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "Upper Lip Or Chin",
-            "treatment_name_column1": "",
+            "treatment_name_column1": "Skin Tags",
             "single_price": "75.00",
             "treatment_name_column2": "",
             "course_price": "337.50"
@@ -357,9 +357,9 @@
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
+            "treatment_name": "Spider Veins",
             "treatment_name_column1": "",
-            "single_price": "105.00",
+            "single_price": "75",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
@@ -367,9 +367,9 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "Warts",
             "treatment_name_column1": "",
-            "single_price": "175.00",
+            "single_price": "75",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -378,7 +378,7 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "Treatment Name",
-            "treatment_name_column1": "",
+            "treatment_name_column1": "Haemongiomata/Milia/Seborrhoeic Keratosis",
             "single_price": "75.00",
             "treatment_name_column2": "",
             "course_price": "337.50"
@@ -394,10 +394,10 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "section_title": "Pricelist",
+        "show_two_columns": false,
+        "column1_title": "blemish removal",
+        "column1_subtitle": "Alternative Areas Available On Request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
