@@ -348,9 +348,9 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "Half Face",
             "treatment_name_column1": "",
-            "single_price": "300",
+            "single_price": "175",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -358,9 +358,9 @@
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Half Face",
+            "treatment_name": "Full Face",
             "treatment_name_column1": "",
-            "single_price": "175",
+            "single_price": "300",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
