@@ -359,121 +359,123 @@
     <div class="contact-form-wrapper-{{ section.id }}">
       <h3 class="contact-form-heading-{{ section.id }}">{{ section.settings.form_heading }}</h3>
       
-      {%- form 'contact', class: 'contact-form-' | append: section.id -%}
-        {%- if form.posted_successfully? -%}
-          <div class="form-message success">
-            {{ section.settings.success_message | default: 'Thank you for contacting us. We will get back to you soon!' }}
-          </div>
-        {%- endif -%}
-
-        {%- if form.errors -%}
-          <div class="form-message error">
-            {{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}
-          </div>
-        {%- endif -%}
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contact-first-name-{{ section.id }}">First name</label>
-            <input 
-              type="text" 
-              id="contact-first-name-{{ section.id }}"
-              name="contact[{{ section.settings.first_name_label }}]" 
-              placeholder="{{ section.settings.first_name_placeholder }}"
-              {% if section.settings.first_name_required %}required{% endif %}
-              autocomplete="given-name"
-            >
-          </div>
-          
-          <div class="form-group">
-            <label for="contact-surname-{{ section.id }}">Surname</label>
-            <input 
-              type="text" 
-              id="contact-surname-{{ section.id }}"
-              name="contact[{{ section.settings.surname_label }}]" 
-              placeholder="{{ section.settings.surname_placeholder }}"
-              {% if section.settings.surname_required %}required{% endif %}
-              autocomplete="family-name"
-            >
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contact-phone-{{ section.id }}">Telephone</label>
-            <input 
-              type="tel" 
-              id="contact-phone-{{ section.id }}"
-              name="contact[{{ section.settings.phone_label }}]" 
-              placeholder="{{ section.settings.phone_placeholder }}"
-              {% if section.settings.phone_required %}required{% endif %}
-              autocomplete="tel"
-            >
-          </div>
-          
-          <div class="form-group">
-            <label for="contact-email-{{ section.id }}">Email</label>
-            <input 
-              type="email" 
-              id="contact-email-{{ section.id }}"
-              name="contact[email]" 
-              placeholder="{{ section.settings.email_placeholder }}"
-              value="{{ customer.email }}"
-              required
-              autocomplete="email"
-            >
-          </div>
-        </div>
-
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'custom_field' -%}
-            {%- assign field_title = block.settings.title -%}
-            {%- if field_title == blank -%}
-              {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
-            {%- endif -%}
-
-            <div class="form-group full-width" {{ block.shopify_attributes }}>
-              {%- if block.settings.field_type == 'text' -%}
-                <label for="contact-{{ field_title | handleize }}-{{ section.id }}">{{ field_title }}</label>
-                <input 
-                  type="text" 
-                  id="contact-{{ field_title | handleize }}-{{ section.id }}"
-                  name="contact[{{ field_title | escape }}]"
-                  placeholder="{{ block.settings.placeholder }}"
-                  {% if block.settings.required %}required{% endif %}
-                >
-              {%- elsif block.settings.field_type == 'dropdown' and block.settings.dropdown_values != blank -%}
-                {%- assign values = block.settings.dropdown_values | split: ',' -%}
-                <label for="contact-{{ field_title | handleize }}-{{ section.id }}">{{ field_title }}</label>
-                <select 
-                  id="contact-{{ field_title | handleize }}-{{ section.id }}"
-                  name="contact[{{ field_title | escape }}]"
-                  {% if block.settings.required %}required{% endif %}
-                >
-                  <option value="">{{ block.settings.placeholder | default: 'Select an option' }}</option>
-                  {%- for value in values -%}
-                    <option value="{{ value | strip }}">{{ value | strip }}</option>
-                  {%- endfor -%}
-                </select>
-              {%- endif -%}
+      <div class="contact-form-{{ section.id }}">
+        {%- form 'contact' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="form-message success">
+              {{ section.settings.success_message | default: 'Thank you for contacting us. We will get back to you soon!' }}
             </div>
           {%- endif -%}
-        {%- endfor -%}
 
-        <div class="form-group">
-          <label for="contact-message-{{ section.id }}">Message</label>
-          <textarea 
-            id="contact-message-{{ section.id }}"
-            name="contact[body]" 
-            placeholder="{{ section.settings.message_placeholder }}"
-            required
-          ></textarea>
-        </div>
+          {%- if form.errors -%}
+            <div class="form-message error">
+              {{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}
+            </div>
+          {%- endif -%}
 
-        <button type="submit" class="submit-button">
-          {{ section.settings.submit_button_text }}
-        </button>
-      {%- endform -%}
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-first-name-{{ section.id }}">First name</label>
+              <input 
+                type="text" 
+                id="contact-first-name-{{ section.id }}"
+                name="contact[{{ section.settings.first_name_label }}]" 
+                placeholder="{{ section.settings.first_name_placeholder }}"
+                {% if section.settings.first_name_required %}required{% endif %}
+                autocomplete="given-name"
+              >
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-surname-{{ section.id }}">Surname</label>
+              <input 
+                type="text" 
+                id="contact-surname-{{ section.id }}"
+                name="contact[{{ section.settings.surname_label }}]" 
+                placeholder="{{ section.settings.surname_placeholder }}"
+                {% if section.settings.surname_required %}required{% endif %}
+                autocomplete="family-name"
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-phone-{{ section.id }}">Telephone</label>
+              <input 
+                type="tel" 
+                id="contact-phone-{{ section.id }}"
+                name="contact[{{ section.settings.phone_label }}]" 
+                placeholder="{{ section.settings.phone_placeholder }}"
+                {% if section.settings.phone_required %}required{% endif %}
+                autocomplete="tel"
+              >
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-email-{{ section.id }}">Email</label>
+              <input 
+                type="email" 
+                id="contact-email-{{ section.id }}"
+                name="contact[email]" 
+                placeholder="{{ section.settings.email_placeholder }}"
+                value="{{ customer.email }}"
+                required
+                autocomplete="email"
+              >
+            </div>
+          </div>
+
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'custom_field' -%}
+              {%- assign field_title = block.settings.title -%}
+              {%- if field_title == blank -%}
+                {%- capture field_title -%}Custom field {% increment custom_field %}{%- endcapture -%}
+              {%- endif -%}
+
+              <div class="form-group full-width" {{ block.shopify_attributes }}>
+                {%- if block.settings.field_type == 'text' -%}
+                  <label for="contact-{{ field_title | handleize }}-{{ section.id }}">{{ field_title }}</label>
+                  <input 
+                    type="text" 
+                    id="contact-{{ field_title | handleize }}-{{ section.id }}"
+                    name="contact[{{ field_title | escape }}]"
+                    placeholder="{{ block.settings.placeholder }}"
+                    {% if block.settings.required %}required{% endif %}
+                  >
+                {%- elsif block.settings.field_type == 'dropdown' and block.settings.dropdown_values != blank -%}
+                  {%- assign values = block.settings.dropdown_values | split: ',' -%}
+                  <label for="contact-{{ field_title | handleize }}-{{ section.id }}">{{ field_title }}</label>
+                  <select 
+                    id="contact-{{ field_title | handleize }}-{{ section.id }}"
+                    name="contact[{{ field_title | escape }}]"
+                    {% if block.settings.required %}required{% endif %}
+                  >
+                    <option value="">{{ block.settings.placeholder | default: 'Select an option' }}</option>
+                    {%- for value in values -%}
+                      <option value="{{ value | strip }}">{{ value | strip }}</option>
+                    {%- endfor -%}
+                  </select>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+
+          <div class="form-group">
+            <label for="contact-message-{{ section.id }}">Message</label>
+            <textarea 
+              id="contact-message-{{ section.id }}"
+              name="contact[body]" 
+              placeholder="{{ section.settings.message_placeholder }}"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">
+            {{ section.settings.submit_button_text }}
+          </button>
+        {%- endform -%}
+      </div>
     </div>
 
   </div>

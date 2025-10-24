@@ -428,8 +428,8 @@
             "title_type": "h2",
             "show_callout_layout": true,
             "card_background_color": "#f8f8f8",
-            "card_text_color": "rgb(116, 113, 113)",
-            "star_color": "#FBBC05",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
             "max_line_review_content": 4,
             "auto_scroll": true,
             "slide_delay": 3,
@@ -444,10 +444,10 @@
             "show_business_summary_rating": true,
             "show_business_summary_total_review": true,
             "show_business_summary_summary_rating": true,
-            "business_summary_color": "#3A454F",
+            "business_summary_color": "#3a454f",
             "show_leave_review_button": true,
-            "button_color": "#FFFFFF",
-            "button_background": "#4285F4"
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
           }
         }
       },
@@ -460,6 +460,156 @@
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
       }
+    },
+    "contact_info_form_heNtLy": {
+      "type": "contact-info-form",
+      "blocks": {
+        "opening_hour_EYBDAK": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Monday",
+            "hours": "Closed"
+          }
+        },
+        "opening_hour_E9WwLE": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Tuesday",
+            "hours": "10AM - 6PM"
+          }
+        },
+        "opening_hour_WFc3xV": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Wednesday",
+            "hours": "10AM - 6PM"
+          }
+        },
+        "opening_hour_AwzwM7": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Thursday",
+            "hours": "10AM - 8PM"
+          }
+        },
+        "opening_hour_X44EHe": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Friday",
+            "hours": "10AM - 6PM"
+          }
+        },
+        "opening_hour_eVV7db": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Saturday",
+            "hours": "10AM - 3PM"
+          }
+        },
+        "opening_hour_WY46aA": {
+          "type": "opening_hour",
+          "settings": {
+            "day": "Sunday",
+            "hours": "Closed"
+          }
+        }
+      },
+      "block_order": [
+        "opening_hour_EYBDAK",
+        "opening_hour_E9WwLE",
+        "opening_hour_WFc3xV",
+        "opening_hour_AwzwM7",
+        "opening_hour_X44EHe",
+        "opening_hour_eVV7db",
+        "opening_hour_WY46aA"
+      ],
+      "name": "Contact with Info & Form",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "background_color": "#f5f5f0",
+        "container_width": 1300,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "column_gap": 60,
+        "info_heading": "Send Us Your Enquiries",
+        "heading_size": 32,
+        "heading_weight": "600",
+        "heading_color": "#000000",
+        "heading_spacing": 20,
+        "info_description": "Ready to restore and revive your youthful beauty? Feel free to contact us to help us design and discuss your personalised aesthetic treatment plan.",
+        "description_size": 15,
+        "description_color": "#333333",
+        "info_section_spacing": 30,
+        "section_title_size": 18,
+        "section_title_weight": "600",
+        "section_title_color": "#000000",
+        "section_title_spacing": 15,
+        "info_text_size": 15,
+        "info_text_color": "#333333",
+        "link_color": "#b8985f",
+        "link_hover_color": "#a07d42",
+        "show_address": true,
+        "address_title": "Address",
+        "address_line1": "25 Highfield Road,",
+        "address_line2": "Edgbaston",
+        "address_line3": "Birmingham",
+        "address_line4": "B15 3DP",
+        "show_contact_methods": true,
+        "contact_methods_title": "Email Or Call Us",
+        "phone": "0121 461 6260",
+        "email": "info@ihyaaesthetics.co.uk",
+        "show_social_icons": true,
+        "instagram_url": "",
+        "whatsapp_number": "+441214616260",
+        "social_icon_bg": "#000000",
+        "social_icon_color": "#ffffff",
+        "social_icon_hover_bg": "#333333",
+        "social_icon_hover_color": "#ffffff",
+        "show_opening_hours": true,
+        "opening_hours_title": "Opening Hours",
+        "form_heading": "Contact us",
+        "form_heading_size": 28,
+        "form_heading_weight": "600",
+        "form_heading_color": "#000000",
+        "form_heading_spacing": 25,
+        "form_bg_color": "#e8dcc8",
+        "form_padding": 40,
+        "form_border_radius": 8,
+        "form_shadow": "0 4px 20px rgba(0,0,0,0.12)",
+        "first_name_label": "First name",
+        "first_name_placeholder": "First name *",
+        "first_name_required": true,
+        "surname_label": "Surname",
+        "surname_placeholder": "Surname *",
+        "surname_required": true,
+        "phone_label": "Telephone",
+        "phone_placeholder": "Telephone *",
+        "phone_required": true,
+        "email_placeholder": "Email *",
+        "message_placeholder": "Message *",
+        "field_gap": 15,
+        "input_padding": 14,
+        "input_text_size": 15,
+        "input_text_color": "#000000",
+        "input_bg_color": "#ffffff",
+        "input_border_width": 1,
+        "input_border_color": "#cccccc",
+        "input_focus_border_color": "#b8985f",
+        "input_border_radius": 4,
+        "placeholder_color": "#999999",
+        "submit_button_text": "Submit",
+        "button_text_size": 16,
+        "button_text_weight": "600",
+        "button_padding_vertical": 14,
+        "button_padding_horizontal": 40,
+        "button_border_radius": 6,
+        "button_bg_color": "#3d2317",
+        "button_text_color": "#ffffff",
+        "button_hover_bg_color": "#2a1810",
+        "button_hover_text_color": "#ffffff",
+        "success_message": "Thank you for contacting us. We will get back to you soon!"
+      }
     }
   },
   "order": [
@@ -468,6 +618,7 @@
     "ss_image_with_text_12_aRwVQy",
     "collection_list_yywqTr",
     "feature_cards_JKUWqd",
-    "176123897800c69b3c"
+    "176123897800c69b3c",
+    "contact_info_form_heNtLy"
   ]
 }
