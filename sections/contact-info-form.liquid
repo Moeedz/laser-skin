@@ -7,22 +7,24 @@
 
 <style>
   .contact-section-{{ section.id }} {
-    padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     background-color: {{ section.settings.background_color }};
   }
 
   .contact-container-{{ section.id }} {
     max-width: {{ section.settings.container_width }}px;
     margin: 0 auto;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.3fr;
     gap: {{ section.settings.column_gap }}px;
-    align-items: start;
+    align-items: stretch;
   }
 
   /* Left Column - Contact Info */
   .contact-info-{{ section.id }} {
-    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-info-heading-{{ section.id }} {
@@ -43,7 +45,8 @@
   .contact-info-content-{{ section.id }} {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px 40px;
+    margin-top: 10px;
   }
 
   .contact-info-section-{{ section.id }} {
@@ -52,7 +55,6 @@
 
   .contact-info-section-{{ section.id }}.full-width {
     grid-column: 1 / -1;
-    margin-top: {{ section.settings.info_section_spacing }}px;
   }
 
   .contact-info-section-title-{{ section.id }} {
@@ -65,8 +67,8 @@
   .contact-info-text-{{ section.id }} {
     font-size: {{ section.settings.info_text_size }}px;
     color: {{ section.settings.info_text_color }};
-    line-height: 1.6;
-    margin: 0 0 5px 0;
+    line-height: 1.8;
+    margin: 0 0 8px 0;
   }
 
   .contact-info-link-{{ section.id }} {
@@ -119,8 +121,8 @@
   .opening-hours-item-{{ section.id }} {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin-bottom: 10px;
     font-size: {{ section.settings.info_text_size }}px;
     color: {{ section.settings.info_text_color }};
   }
@@ -133,7 +135,7 @@
 
   .opening-hours-day-{{ section.id }} {
     font-weight: 600;
-    min-width: 90px;
+    min-width: 95px;
   }
 
   /* Right Column - Form */
@@ -142,6 +144,9 @@
     padding: {{ section.settings.form_padding }}px;
     border-radius: {{ section.settings.form_border_radius }}px;
     box-shadow: {{ section.settings.form_shadow }};
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .contact-form-heading-{{ section.id }} {
@@ -149,6 +154,12 @@
     font-weight: {{ section.settings.form_heading_weight }};
     color: {{ section.settings.form_heading_color }};
     margin: 0 0 {{ section.settings.form_heading_spacing }}px 0;
+  }
+
+  .contact-form-{{ section.id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-form-{{ section.id }} .form-row {
@@ -164,6 +175,12 @@
 
   .contact-form-{{ section.id }} .form-group.full-width {
     grid-column: 1 / -1;
+  }
+
+  .contact-form-{{ section.id }} .form-group:has(textarea) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-form-{{ section.id }} label {
@@ -200,7 +217,8 @@
 
   .contact-form-{{ section.id }} textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 150px;
+    flex: 1;
   }
 
   .contact-form-{{ section.id }} .submit-button {
@@ -214,6 +232,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    margin-top: auto;
   }
 
   .contact-form-{{ section.id }} .submit-button:hover {
@@ -248,17 +267,9 @@
       gap: 40px;
     }
 
-    .contact-info-{{ section.id }} {
-      padding-right: 0;
-    }
-
     .contact-info-content-{{ section.id }} {
       grid-template-columns: 1fr;
       gap: 30px;
-    }
-
-    .contact-info-section-{{ section.id }}.full-width {
-      margin-top: 0;
     }
 
     .contact-info-heading-{{ section.id }} {
@@ -267,6 +278,10 @@
 
     .contact-form-heading-{{ section.id }} {
       font-size: {{ section.settings.form_heading_size | minus: 4 }}px;
+    }
+
+    .contact-form-wrapper-{{ section.id }} {
+      height: auto;
     }
   }
 
