@@ -134,6 +134,10 @@
             "text": "",
             "button": "",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws_stories_intro.jpg"
           }
         }
@@ -238,6 +242,10 @@
             "text": "<h3><strong>The revolutionary body-contouring treatment that tones, lifts and defines.</strong></h3><p>Introducing <strong>Power Sculpt</strong>, the non-invasive body-sculpting treatment that uses advanced <strong>HIFEM (High-Intensity Focused Electromagnetic)</strong> technology to simultaneously <strong>build muscle and burn fat</strong> — all while you relax.</p><p>Each session delivers the equivalent of <strong>20,000 crunches, squats or glute bridges</strong>, triggering deep supramaximal muscle contractions that are impossible to achieve through regular exercise.</p><p>The result? Stronger, more defined muscles and a noticeably tighter, more sculpted physique — without downtime, needles, or recovery.</p><p></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws_stories_intro_3.jpg"
           }
         }
@@ -339,9 +347,9 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name": "Powersculpt Single Session",
             "treatment_name_column1": "",
-            "single_price": "75.00",
+            "single_price": "60",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -349,9 +357,9 @@
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
-            "treatment_name_column1": "",
-            "single_price": "105.00",
+            "treatment_name": "Powersculpt",
+            "treatment_name_column1": "Course Of 3",
+            "single_price": "160",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
@@ -359,15 +367,16 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "Course of 6",
             "treatment_name_column1": "",
-            "single_price": "175.00",
+            "single_price": "300",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
         },
         "treatment_LWReLR": {
           "type": "treatment",
+          "disabled": true,
           "settings": {
             "treatment_name": "Treatment Name",
             "treatment_name_column1": "",
@@ -386,10 +395,10 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "section_title": "Pricelist",
+        "show_two_columns": false,
+        "column1_title": "Powersculpt",
+        "column1_subtitle": "Longer courses available on request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
