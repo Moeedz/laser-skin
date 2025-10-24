@@ -420,39 +420,27 @@
               <input 
                 type="text" 
                 id="contact-first-name-{{ section.id }}"
-                name="contact[{{ section.settings.first_name_label }}]" 
+                name="contact[First name]" 
                 placeholder="{{ section.settings.first_name_placeholder }}"
-                {% if section.settings.first_name_required %}required{% endif %}
+                required
                 autocomplete="given-name"
               >
             </div>
             
             <div class="form-group">
-              <label for="contact-surname-{{ section.id }}">Surname</label>
+              <label for="contact-last-name-{{ section.id }}">Last name</label>
               <input 
                 type="text" 
-                id="contact-surname-{{ section.id }}"
-                name="contact[{{ section.settings.surname_label }}]" 
-                placeholder="{{ section.settings.surname_placeholder }}"
-                {% if section.settings.surname_required %}required{% endif %}
+                id="contact-last-name-{{ section.id }}"
+                name="contact[Last name]" 
+                placeholder="{{ section.settings.last_name_placeholder }}"
+                required
                 autocomplete="family-name"
               >
             </div>
           </div>
 
           <div class="form-row">
-            <div class="form-group">
-              <label for="contact-phone-{{ section.id }}">Telephone</label>
-              <input 
-                type="tel" 
-                id="contact-phone-{{ section.id }}"
-                name="contact[{{ section.settings.phone_label }}]" 
-                placeholder="{{ section.settings.phone_placeholder }}"
-                {% if section.settings.phone_required %}required{% endif %}
-                autocomplete="tel"
-              >
-            </div>
-            
             <div class="form-group">
               <label for="contact-email-{{ section.id }}">Email</label>
               <input 
@@ -464,6 +452,58 @@
                 required
                 autocomplete="email"
               >
+            </div>
+
+            <div class="form-group">
+              <label for="contact-phone-{{ section.id }}">Phone</label>
+              <input 
+                type="tel" 
+                id="contact-phone-{{ section.id }}"
+                name="contact[Phone]" 
+                placeholder="{{ section.settings.phone_placeholder }}"
+                required
+                autocomplete="tel"
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-best-time-{{ section.id }}">Best time to call</label>
+              <select 
+                id="contact-best-time-{{ section.id }}"
+                name="contact[Best time to call]"
+                required
+              >
+                <option value="">{{ section.settings.best_time_placeholder }}</option>
+                <option value="Morning (9am - 12pm)">Morning (9am - 12pm)</option>
+                <option value="Afternoon (12pm - 5pm)">Afternoon (12pm - 5pm)</option>
+                <option value="Evening (5pm - 8pm)">Evening (5pm - 8pm)</option>
+                <option value="Anytime">Anytime</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-treatment-{{ section.id }}">Treatment interested in</label>
+              <select 
+                id="contact-treatment-{{ section.id }}"
+                name="contact[Treatment interested in]"
+                required
+              >
+                <option value="">{{ section.settings.treatment_placeholder }}</option>
+                {% if section.settings.treatment_options != blank %}
+                  {%- assign treatments = section.settings.treatment_options | split: ',' -%}
+                  {%- for treatment in treatments -%}
+                    <option value="{{ treatment | strip }}">{{ treatment | strip }}</option>
+                  {%- endfor -%}
+                {% else %}
+                  <option value="Botox">Botox</option>
+                  <option value="Dermal Fillers">Dermal Fillers</option>
+                  <option value="Skin Treatments">Skin Treatments</option>
+                  <option value="Lip Fillers">Lip Fillers</option>
+                  <option value="Other">Other</option>
+                {% endif %}
+              </select>
             </div>
           </div>
 
@@ -1004,63 +1044,46 @@
     },
     {
       "type": "text",
-      "id": "first_name_label",
-      "label": "First name field label",
-      "default": "First name"
-    },
-    {
-      "type": "text",
       "id": "first_name_placeholder",
       "label": "First name placeholder",
       "default": "First name *"
     },
     {
-      "type": "checkbox",
-      "id": "first_name_required",
-      "label": "First name required",
-      "default": true
-    },
-    {
       "type": "text",
-      "id": "surname_label",
-      "label": "Surname field label",
-      "default": "Surname"
-    },
-    {
-      "type": "text",
-      "id": "surname_placeholder",
-      "label": "Surname placeholder",
-      "default": "Surname *"
-    },
-    {
-      "type": "checkbox",
-      "id": "surname_required",
-      "label": "Surname required",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "phone_label",
-      "label": "Phone field label",
-      "default": "Telephone"
-    },
-    {
-      "type": "text",
-      "id": "phone_placeholder",
-      "label": "Phone placeholder",
-      "default": "Telephone *"
-    },
-    {
-      "type": "checkbox",
-      "id": "phone_required",
-      "label": "Phone required",
-      "default": true
+      "id": "last_name_placeholder",
+      "label": "Last name placeholder",
+      "default": "Last name *"
     },
     {
       "type": "text",
       "id": "email_placeholder",
       "label": "Email placeholder",
       "default": "Email *"
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone placeholder",
+      "default": "Phone *"
+    },
+    {
+      "type": "text",
+      "id": "best_time_placeholder",
+      "label": "Best time to call placeholder",
+      "default": "Select best time to call *"
+    },
+    {
+      "type": "text",
+      "id": "treatment_placeholder",
+      "label": "Treatment interested in placeholder",
+      "default": "Select treatment *"
+    },
+    {
+      "type": "textarea",
+      "id": "treatment_options",
+      "label": "Treatment options (comma separated)",
+      "default": "Botox, Dermal Fillers, Skin Treatments, Lip Fillers, Anti-Wrinkle Injections, Chemical Peels, Microneedling, Other",
+      "info": "Separate each treatment with a comma"
     },
     {
       "type": "text",
