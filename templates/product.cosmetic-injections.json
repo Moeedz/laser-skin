@@ -347,41 +347,41 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name": "1 Area",
             "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
+            "single_price": "220",
+            "treatment_name_column2": "Top Lip Barcode Lines",
+            "course_price": "140"
           }
         },
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
-            "treatment_name_column1": "",
-            "single_price": "105.00",
-            "treatment_name_column2": "",
-            "course_price": "472.50"
+            "treatment_name": "2 Areas",
+            "treatment_name_column1": "2 Areas",
+            "single_price": "220",
+            "treatment_name_column2": "Masseyter Muscle For bruxism and clenching",
+            "course_price": "140"
           }
         },
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "3 Areas",
             "treatment_name_column1": "",
-            "single_price": "175.00",
-            "treatment_name_column2": "",
-            "course_price": "787.50"
+            "single_price": "270",
+            "treatment_name_column2": "Chemical Brow Lift",
+            "course_price": "220"
           }
         },
         "treatment_LWReLR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Treatment Name",
+            "treatment_name": "4 Areas",
             "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
+            "single_price": "285",
+            "treatment_name_column2": "Chemical Browlift",
+            "course_price": "300"
           }
         }
       },
@@ -394,15 +394,15 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
+        "section_title": "Price List",
         "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "column1_title": "Cosmetic Injections",
+        "column1_subtitle": "More areas on request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
-        "column2_title": "Course Of 6",
-        "column2_subtitle": "Save more with packages",
+        "column2_title": "Alternative Treatments",
+        "column2_subtitle": "Others on request",
         "show_button_column2": true,
         "button_text_column2": "BOOK NOW",
         "button_link_column2": "",
