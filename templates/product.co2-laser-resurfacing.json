@@ -348,9 +348,9 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name": "Full Face",
             "treatment_name_column1": "",
-            "single_price": "75.00",
+            "single_price": "300",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -358,9 +358,9 @@
         "treatment_TWcErn": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Lower Face",
+            "treatment_name": "Half Face",
             "treatment_name_column1": "",
-            "single_price": "105.00",
+            "single_price": "175",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
@@ -368,9 +368,9 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "Course Of 3",
             "treatment_name_column1": "",
-            "single_price": "175.00",
+            "single_price": "850",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -378,9 +378,9 @@
         "treatment_LWReLR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Treatment Name",
+            "treatment_name": "Course Of 6",
             "treatment_name_column1": "",
-            "single_price": "75.00",
+            "single_price": "1600",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -395,10 +395,10 @@
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
-        "section_title": "Our Treatments",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
+        "section_title": "Price List",
+        "show_two_columns": false,
+        "column1_title": "C02 Laser resurfacing",
+        "column1_subtitle": "Longer Course Prices Are Available",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
         "button_link_column1": "",
