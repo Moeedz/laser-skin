@@ -307,7 +307,8 @@
         "collection_UNxjYH"
       ],
       "custom_css": [
-        ".section-header.justify-self-center.text-center {min-width: 100% !important;}"
+        ".section-header.justify-self-center.text-center {min-width: 100% !important;}",
+        "button.button {color: black;}"
       ],
       "name": "t:sections.collection_list.presets.collection_list.name",
       "settings": {
