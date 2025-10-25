@@ -1,0 +1,1058 @@
+<style>
+  .treatment-pricing-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+  }
+
+  .pricing-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-intro {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-intro h2 {
+    font-size: 42px;
+    font-weight: 300;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .section-intro .accent-line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, {{ section.settings.accent_color }}, transparent);
+    margin: 0 auto;
+  }
+
+  /* ==================== STANDARD LAYOUT ==================== */
+  .pricing-container {
+    display: grid;
+    gap: 40px;
+  }
+
+  .pricing-container.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-container.one-column {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  /* ==================== MULTI-COLUMN GRID LAYOUT ==================== */
+  .pricing-container.grid-layout {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .pricing-container.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricing-container.grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .pricing-column.compact {
+    padding: 0;
+  }
+
+  .pricing-column.compact .pricing-header {
+    padding: 20px 20px;
+  }
+
+  .pricing-column.compact .pricing-header h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .pricing-column.compact .pricing-body {
+    padding: 25px 20px;
+  }
+
+  .pricing-column.compact .treatment-item {
+    padding: 4px 0;
+    margin-bottom: 8px;
+  }
+
+  .pricing-column.compact .treatment-name {
+    font-size: 13px;
+  }
+
+  .pricing-column.compact .treatment-price {
+    font-size: 15px;
+  }
+
+  /* ==================== ACCORDION LAYOUT ==================== */
+  .accordion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .accordion-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .accordion-item:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+
+  .accordion-header {
+    background: linear-gradient(135deg, {{ section.settings.header_color }} 0%, {{ section.settings.accent_color }} 100%);
+    color: {{ section.settings.header_text_color }};
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    user-select: none;
+  }
+
+  .accordion-header h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .accordion-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    font-weight: 300;
+  }
+
+  .accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 3000px;
+    padding: 30px;
+  }
+
+  .accordion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+  }
+
+  /* ==================== TAB LAYOUT ==================== */
+  .tabs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
+  }
+
+  .tab-button {
+    background: white;
+    border: 2px solid {{ section.settings.accent_color }}40;
+    color: #3a3a3a;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .tab-button:hover {
+    border-color: {{ section.settings.accent_color }};
+    background: {{ section.settings.accent_color }}10;
+  }
+
+  .tab-button.active {
+    background: linear-gradient(135deg, {{ section.settings.header_color }} 0%, {{ section.settings.accent_color }} 100%);
+    color: {{ section.settings.header_text_color }};
+    border-color: transparent;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .tab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  /* ==================== STANDARD COLUMN STYLES ==================== */
+  .pricing-column {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+  }
+
+  .pricing-column:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+  }
+
+  .pricing-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, {{ section.settings.header_color }}, {{ section.settings.accent_color }});
+  }
+
+  .pricing-header {
+    background: linear-gradient(135deg, {{ section.settings.header_color }} 0%, {{ section.settings.accent_color }} 100%);
+    color: {{ section.settings.header_text_color }};
+    padding: 35px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pricing-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .pricing-header h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pricing-header .subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 8px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .pricing-body {
+    padding: 45px 35px;
+  }
+
+  .treatment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    transition: padding-left 0.3s ease;
+  }
+
+  .treatment-item:hover {
+    padding-left: 10px;
+  }
+
+  .treatment-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .treatment-name {
+    position: relative;
+    padding-right: 20px;
+    background: white;
+    z-index: 2;
+    font-size: 16px;
+    color: #3a3a3a;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .treatment-price {
+    position: relative;
+    padding-left: 20px;
+    background: white;
+    z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: {{ section.settings.accent_color }};
+    letter-spacing: 0.5px;
+  }
+
+  .treatment-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background: repeating-linear-gradient(
+      to right,
+      {{ section.settings.accent_color }}40 0px,
+      {{ section.settings.accent_color }}40 8px,
+      transparent 8px,
+      transparent 16px
+    );
+    z-index: 0;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .book-now-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, {{ section.settings.button_color }} 0%, {{ section.settings.accent_color }} 100%);
+    color: {{ section.settings.button_text_color }};
+    padding: 18px 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .book-now-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .book-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+  .book-now-btn:hover::before {
+    left: 100%;
+  }
+
+  /* Category Divider */
+  .category-divider {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ section.settings.accent_color }};
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid {{ section.settings.accent_color }}30;
+  }
+
+  .category-divider:first-child {
+    margin-top: 0;
+  }
+
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 1024px) {
+    .pricing-container.grid-4-cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .accordion-grid,
+    .tab-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .treatment-pricing-section {
+      padding: 50px 15px;
+    }
+
+    .section-intro h2 {
+      font-size: 32px;
+    }
+
+    .pricing-container.two-columns,
+    .pricing-container.grid-3-cols,
+    .pricing-container.grid-4-cols {
+      grid-template-columns: 1fr;
+    }
+    
+    .pricing-header h3 {
+      font-size: 22px;
+      padding: 20px;
+    }
+
+    .pricing-body {
+      padding: 30px 25px;
+    }
+    
+    .treatment-name {
+      font-size: 14px;
+    }
+
+    .treatment-price {
+      font-size: 17px;
+    }
+
+    .book-now-btn {
+      padding: 15px 40px;
+      font-size: 14px;
+    }
+
+    .tabs-nav {
+      flex-direction: column;
+    }
+
+    .tab-button {
+      width: 100%;
+      text-align: center;
+    }
+
+    .accordion-header h3 {
+      font-size: 18px;
+    }
+
+    .accordion-item.active .accordion-content {
+      padding: 20px;
+    }
+  }
+</style>
+
+<div class="treatment-pricing-section">
+  <div class="pricing-wrapper">
+    
+    {% if section.settings.show_section_title %}
+      <div class="section-intro">
+        <h2>{{ section.settings.section_title }}</h2>
+        <div class="accent-line"></div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.layout_style == 'accordion' %}
+      <!-- ACCORDION LAYOUT -->
+      <div class="accordion-container">
+        {% assign current_category = '' %}
+        {% assign category_blocks = '' | split: '' %}
+        
+        {% for block in section.blocks %}
+          {% if block.type == 'category' %}
+            {% if category_blocks.size > 0 %}
+              <div class="accordion-item" {{ block.shopify_attributes }}>
+                <div class="accordion-header">
+                  <h3>{{ current_category }}</h3>
+                  <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-grid">
+                    {% for treatment_block in category_blocks %}
+                      <div class="treatment-item">
+                        <span class="treatment-name">{{ treatment_block.settings.treatment_name }}</span>
+                        <span class="treatment-price">£{{ treatment_block.settings.single_price }}</span>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% assign category_blocks = '' | split: '' %}
+            {% endif %}
+            {% assign current_category = block.settings.category_name %}
+          {% elsif block.type == 'treatment' %}
+            {% assign category_blocks = category_blocks | push: block %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if category_blocks.size > 0 %}
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>{{ current_category }}</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-grid">
+                {% for treatment_block in category_blocks %}
+                  <div class="treatment-item">
+                    <span class="treatment-name">{{ treatment_block.settings.treatment_name }}</span>
+                    <span class="treatment-price">£{{ treatment_block.settings.single_price }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+    {% elsif section.settings.layout_style == 'tabs' %}
+      <!-- TABS LAYOUT -->
+      <div class="tabs-container">
+        <div class="tabs-nav">
+          {% assign tab_index = 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'category' %}
+              <button class="tab-button {% if tab_index == 0 %}active{% endif %}" data-tab="tab-{{ tab_index }}">
+                {{ block.settings.category_name }}
+              </button>
+              {% assign tab_index = tab_index | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% assign tab_index = 0 %}
+        {% assign current_category = '' %}
+        {% assign category_blocks = '' | split: '' %}
+        
+        {% for block in section.blocks %}
+          {% if block.type == 'category' %}
+            {% if category_blocks.size > 0 %}
+              <div class="tab-content {% if tab_index == 0 %}active{% endif %}" id="tab-{{ tab_index }}">
+                <div class="tab-grid">
+                  {% for treatment_block in category_blocks %}
+                    <div class="treatment-item">
+                      <span class="treatment-name">{{ treatment_block.settings.treatment_name }}</span>
+                      <span class="treatment-price">£{{ treatment_block.settings.single_price }}</span>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% assign category_blocks = '' | split: '' %}
+              {% assign tab_index = tab_index | plus: 1 %}
+            {% endif %}
+            {% assign current_category = block.settings.category_name %}
+          {% elsif block.type == 'treatment' %}
+            {% assign category_blocks = category_blocks | push: block %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if category_blocks.size > 0 %}
+          <div class="tab-content {% if tab_index == 0 %}active{% endif %}" id="tab-{{ tab_index }}">
+            <div class="tab-grid">
+              {% for treatment_block in category_blocks %}
+                <div class="treatment-item">
+                  <span class="treatment-name">{{ treatment_block.settings.treatment_name }}</span>
+                  <span class="treatment-price">£{{ treatment_block.settings.single_price }}</span>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+    {% elsif section.settings.layout_style == 'grid' %}
+      <!-- GRID LAYOUT (3 or 4 columns) -->
+      <div class="pricing-container grid-layout {% if section.settings.grid_columns == '3' %}grid-3-cols{% else %}grid-4-cols{% endif %}">
+        {% for i in (1..section.settings.grid_columns) %}
+          <div class="pricing-column compact">
+            <div class="pricing-header">
+              <h3>{% if i == 1 %}{{ section.settings.column1_title }}{% else %}{{ section.settings.column2_title }}{% endif %}</h3>
+            </div>
+            <div class="pricing-body">
+              {% for block in section.blocks %}
+                {% if block.type == 'treatment' %}
+                  {% assign treatment_index = forloop.index | modulo: section.settings.grid_columns | plus: 1 %}
+                  {% if treatment_index == i %}
+                    <div class="treatment-item">
+                      <span class="treatment-name">{{ block.settings.treatment_name }}</span>
+                      <span class="treatment-price">
+                        {% if i == 1 %}
+                          £{{ block.settings.single_price }}
+                        {% else %}
+                          £{{ block.settings.course_price }}
+                        {% endif %}
+                      </span>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    {% else %}
+      <!-- STANDARD 2-COLUMN OR 1-COLUMN LAYOUT -->
+      <div class="pricing-container {% if section.settings.show_two_columns %}two-columns{% else %}one-column{% endif %}">
+        
+        <!-- First Column -->
+        <div class="pricing-column">
+          <div class="pricing-header">
+            <h3>{{ section.settings.column1_title }}</h3>
+            {% if section.settings.column1_subtitle != blank %}
+              <div class="subtitle">{{ section.settings.column1_subtitle }}</div>
+            {% endif %}
+          </div>
+          <div class="pricing-body">
+            {% assign current_category = '' %}
+            {% for block in section.blocks %}
+              {% if block.type == 'category' %}
+                <div class="category-divider">{{ block.settings.category_name }}</div>
+                {% assign current_category = block.settings.category_name %}
+              {% elsif block.type == 'treatment' %}
+                <div class="treatment-item">
+                  <span class="treatment-name">
+                    {% if block.settings.treatment_name_column1 != blank %}
+                      {{ block.settings.treatment_name_column1 }}
+                    {% else %}
+                      {{ block.settings.treatment_name }}
+                    {% endif %}
+                  </span>
+                  <span class="treatment-price">£{{ block.settings.single_price }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
+            
+            {% if section.settings.show_button_column1 %}
+              <div class="btn-wrapper">
+                <a href="{{ section.settings.button_link_column1 }}" class="book-now-btn">
+                  {{ section.settings.button_text_column1 }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Second Column -->
+        {% if section.settings.show_two_columns %}
+          <div class="pricing-column">
+            <div class="pricing-header">
+              <h3>{{ section.settings.column2_title }}</h3>
+              {% if section.settings.column2_subtitle != blank %}
+                <div class="subtitle">{{ section.settings.column2_subtitle }}</div>
+              {% endif %}
+            </div>
+            <div class="pricing-body">
+              {% assign current_category = '' %}
+              {% for block in section.blocks %}
+                {% if block.type == 'category' %}
+                  <div class="category-divider">{{ block.settings.category_name }}</div>
+                  {% assign current_category = block.settings.category_name %}
+                {% elsif block.type == 'treatment' %}
+                  <div class="treatment-item">
+                    <span class="treatment-name">
+                      {% if block.settings.treatment_name_column2 != blank %}
+                        {{ block.settings.treatment_name_column2 }}
+                      {% else %}
+                        {{ block.settings.treatment_name }}
+                      {% endif %}
+                    </span>
+                    <span class="treatment-price">£{{ block.settings.course_price }}</span>
+                  </div>
+                {% endif %}
+              {% endfor %}
+              
+              {% if section.settings.show_button_column2 %}
+                <div class="btn-wrapper">
+                  <a href="{{ section.settings.button_link_column2 }}" class="book-now-btn">
+                    {{ section.settings.button_text_column2 }}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+        
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  // Accordion functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', function() {
+        const accordionItem = this.parentElement;
+        const isActive = accordionItem.classList.contains('active');
+        
+        // Close all accordion items
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+          accordionItem.classList.add('active');
+        }
+      });
+    });
+
+    // Open first accordion item by default
+    const firstAccordion = document.querySelector('.accordion-item');
+    if (firstAccordion) {
+      firstAccordion.classList.add('active');
+    }
+
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        
+        // Remove active class from all buttons and contents
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        this.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Treatment Pricing Enh",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section_title",
+      "label": "Show Section Title",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Our Treatments"
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "Layout Style",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard (2 columns)"
+        },
+        {
+          "value": "grid",
+          "label": "Multi-Column Grid (3-4 cols)"
+        },
+        {
+          "value": "accordion",
+          "label": "Accordion (Categories)"
+        },
+        {
+          "value": "tabs",
+          "label": "Tabs (Categories)"
+        }
+      ],
+      "default": "standard",
+      "info": "Choose layout for displaying treatments"
+    },
+    {
+      "type": "select",
+      "id": "grid_columns",
+      "label": "Grid Columns (for Grid layout)",
+      "options": [
+        {
+          "value": "3",
+          "label": "3 Columns"
+        },
+        {
+          "value": "4",
+          "label": "4 Columns"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_two_columns",
+      "label": "Show Two Columns (Standard layout only)",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Column 1 Settings"
+    },
+    {
+      "type": "text",
+      "id": "column1_title",
+      "label": "Column 1 Title",
+      "default": "Single Treatment"
+    },
+    {
+      "type": "text",
+      "id": "column1_subtitle",
+      "label": "Column 1 Subtitle",
+      "default": "Pay as you go"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_column1",
+      "label": "Show Button Column 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text_column1",
+      "label": "Button Text Column 1",
+      "default": "Book Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link_column1",
+      "label": "Button Link Column 1"
+    },
+    {
+      "type": "header",
+      "content": "Column 2 Settings"
+    },
+    {
+      "type": "text",
+      "id": "column2_title",
+      "label": "Column 2 Title",
+      "default": "Course Of 6"
+    },
+    {
+      "type": "text",
+      "id": "column2_subtitle",
+      "label": "Column 2 Subtitle",
+      "default": "Save more with packages"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_column2",
+      "label": "Show Button Column 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text_column2",
+      "label": "Button Text Column 2",
+      "default": "Book Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link_column2",
+      "label": "Button Link Column 2"
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Primary Color",
+      "default": "#c9a86a"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#d4a574",
+      "info": "Used for gradients and highlights"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color",
+      "default": "#c9a86a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name",
+          "default": "Face Treatments",
+          "info": "Used in Accordion, Tabs, and Standard layouts as section divider"
+        }
+      ]
+    },
+    {
+      "type": "treatment",
+      "name": "Treatment",
+      "settings": [
+        {
+          "type": "text",
+          "id": "treatment_name",
+          "label": "Treatment Name (Default)",
+          "default": "Treatment Name",
+          "info": "This will be used for both columns unless you specify different names below"
+        },
+        {
+          "type": "header",
+          "content": "Column 1 (Single Price)"
+        },
+        {
+          "type": "text",
+          "id": "treatment_name_column1",
+          "label": "Treatment Name for Column 1",
+          "info": "Leave blank to use default treatment name"
+        },
+        {
+          "type": "text",
+          "id": "single_price",
+          "label": "Single Price",
+          "default": "75.00"
+        },
+        {
+          "type": "header",
+          "content": "Column 2 (Course Price)"
+        },
+        {
+          "type": "text",
+          "id": "treatment_name_column2",
+          "label": "Treatment Name for Column 2",
+          "info": "Leave blank to use default treatment name"
+        },
+        {
+          "type": "text",
+          "id": "course_price",
+          "label": "Course Price",
+          "default": "337.50"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Pricing Enhanced",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Face Treatments"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "single_price": "35.00",
+            "course_price": "189.00"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Lip and Chin",
+            "single_price": "45.00",
+            "course_price": "243.00"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face",
+            "single_price": "85.00",
+            "course_price": "350.00"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Body Treatments"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Underarms",
+            "single_price": "35.00",
+            "course_price": "189.00"
+          }
+        },
+        {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Half Arms",
+            "single_price": "40.00",
+            "course_price": "216.00"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
