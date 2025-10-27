@@ -596,6 +596,7 @@
         "before_h3jXfm",
         "after_PymKJA"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.presets.before_after.name",
       "settings": {
         "color_scheme": "",
