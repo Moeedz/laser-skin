@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws_stories_intro.jpg"
+            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro.jpg"
           }
         }
       },
@@ -246,7 +246,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws_stories_intro_3.jpg"
+            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro-3.jpg"
           }
         }
       },
@@ -504,7 +504,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/MAR-PWS-WHY-INSTAST-REV01_pws_stories_why_choose.jpg",
+        "image": "shopify://shop_images/MAR-PWS-WHY-INSTAST-REV01_pws-stories-why-choose.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -547,6 +547,7 @@
         "link_JegaW4": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/MAR-PWS-SHANRES-INSTAST-REV01_pws-stories-shannon-results.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -673,7 +674,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/MAR-PWS-TRTAREAS1-INSTAST-REV01_pws_stories_treatment_areas_1.jpg",
+        "image": "shopify://shop_images/MAR-PWS-TRTAREAS1-INSTAST-REV01_pws-stories-treatment-areas-1.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "portrait",
