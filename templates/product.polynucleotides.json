@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/IMG_0654_720x_4398b652-fe13-4f63-adc1-50fd2122042f.jpg"
           }
         }
       },
@@ -504,7 +504,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/IMG_0655_720x_611ad82a-fc6f-4f8a-bfcd-2e8acba5a1d7.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -547,6 +547,7 @@
         "link_LJYrWf": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/IMG_0656_720x_52282f88-8f86-48f6-8d51-af39d0f6b189.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
