@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": false,
-            "image": "shopify://shop_images/MAR-HO2-HERO1-INSTAST-REV01_ho2_stories_hero_1.jpg"
+            "image": "shopify://shop_images/MAR-HO2-HERO1-INSTAST-REV01_ho2-stories-hero-1.jpg"
           }
         }
       },
@@ -504,7 +504,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/3D-HydrO2_facial_digital_screens-2_-_MAR-HO2-CPDS-REV01.jpg",
+        "image": "shopify://shop_images/3D-HydrO2-facial-digital-screens-2---MAR-HO2-CPDS-REV01.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -547,6 +547,7 @@
         "link_L4C8Dg": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/3D-Brochure_ho2-results-1.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -574,7 +575,7 @@
           "type": "before",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/3D_Brochure_ho2_results_1.jpg",
+            "image": "shopify://shop_images/3D-Brochure_ho2-results-1.jpg",
             "text": "Before",
             "link_text": "",
             "link_url": "",
@@ -673,7 +674,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2_facial_social_media_graphics_3.jpg",
+        "image": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2-facial-social-media-graphics-3.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "portrait",
