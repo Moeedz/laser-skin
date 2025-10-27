@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/main_image.jpg"
           }
         }
       },
