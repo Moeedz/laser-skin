@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/EMlift_machine.jpg"
           }
         }
       },
@@ -246,7 +246,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/MAR-3DEML-CUSDS-REV01_3D-EML-customer-digital-screen-5.jpg"
           }
         }
       },
@@ -504,7 +504,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/MAR-3DEML-CUSDS-REV01_3D-EML-customer-digital-screen-1.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -547,6 +547,7 @@
         "link_GPeENH": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/EML_Imogen-B_A-1.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -673,7 +674,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/MAR-3DEML-CUSDS-REV01_3D-EML-customer-digital-screen-10.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "portrait",
