@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/dna-blog-5.jpg"
+            "image": "shopify://shop_images/IMG_0107.jpg"
           }
         }
       },
@@ -246,7 +246,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/IMG_0107.jpg"
           }
         }
       },
@@ -546,6 +546,7 @@
         "link_jYfj9x": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/IMG_1506.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
