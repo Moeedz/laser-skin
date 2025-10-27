@@ -540,6 +540,32 @@
         "lazy": true
       }
     },
+    "ss_clothing_image_grid_nEyd9b": {
+      "type": "ss-clothing-image-grid",
+      "blocks": {
+        "link_VQbfwp": {
+          "type": "link",
+          "settings": {
+            "text": "",
+            "url": "",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "link_VQbfwp"
+      ],
+      "name": "SS - Threads Image Grid",
+      "settings": {
+        "font_size": 24,
+        "font_color": "#000000",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_vertical": 0,
+        "section-width": 200
+      }
+    },
     "before_after_FYP3MP": {
       "type": "before-after",
       "blocks": {
@@ -570,6 +596,7 @@
         "before_h3jXfm",
         "after_PymKJA"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.presets.before_after.name",
       "settings": {
         "color_scheme": "",
@@ -790,6 +817,7 @@
     "ss_image_with_text_12_gUF6fh",
     "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
+    "ss_clothing_image_grid_nEyd9b",
     "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
