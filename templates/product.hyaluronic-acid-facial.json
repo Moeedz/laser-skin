@@ -134,6 +134,10 @@
             "text": "",
             "button": "",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/dna-blog-5.jpg"
           }
         }
@@ -196,10 +200,10 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
-        "button_bg_color": "#B59DE3",
-        "button_bg_hover_color": "#B198DE",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
         "button_border_color": "#000000",
         "button_border_hover_color": "#000000",
         "image_border_color": "#000000",
@@ -208,7 +212,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -238,6 +242,10 @@
             "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
             "button": "Enquire Now",
             "button_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
             "image": "shopify://shop_images/laser-hair-removal.webp"
           }
         }
@@ -301,8 +309,8 @@
         "pagination_text_height": 130,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
-        "button_color": "#FFFFFF",
-        "button_hover_color": "#FFFFFF",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
         "button_bg_color": "#e6b325",
         "button_bg_hover_color": "#deac21",
         "button_border_color": "#000000",
@@ -313,7 +321,7 @@
         "dots_border_color": "#000000",
         "dots_border_hover_color": "#000000",
         "number_color": "#000000",
-        "number_hover_color": "#FFFFFF",
+        "number_hover_color": "#ffffff",
         "pagination_text_color": "#000000",
         "background_color": "#645e5c",
         "background_gradient": "",
@@ -532,6 +540,32 @@
         "lazy": true
       }
     },
+    "ss_clothing_image_grid_FywE3Y": {
+      "type": "ss-clothing-image-grid",
+      "blocks": {
+        "link_xPzXVB": {
+          "type": "link",
+          "settings": {
+            "text": "",
+            "url": "",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "link_xPzXVB"
+      ],
+      "name": "SS - Threads Image Grid",
+      "settings": {
+        "font_size": 24,
+        "font_color": "#000000",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_vertical": 0,
+        "section-width": 200
+      }
+    },
     "before_after_FYP3MP": {
       "type": "before-after",
       "blocks": {
@@ -562,6 +596,7 @@
         "before_h3jXfm",
         "after_PymKJA"
       ],
+      "disabled": true,
       "name": "t:sections.before_after.presets.before_after.name",
       "settings": {
         "color_scheme": "",
@@ -673,7 +708,7 @@
         "title_color": "#121212",
         "text_color": "#121212",
         "image_border_color": "#121212",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#121212",
         "margin_top": 0,
@@ -782,6 +817,7 @@
     "ss_image_with_text_12_gUF6fh",
     "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
+    "ss_clothing_image_grid_FywE3Y",
     "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
