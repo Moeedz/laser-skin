@@ -181,21 +181,6 @@
     border-top: 1px solid #f0f0f0;
   }
 
-  .category-divider {
-    font-size: 18px;
-    font-weight: 600;
-    color: {{ section.settings.accent_color }};
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 30px 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid {{ section.settings.accent_color }}30;
-  }
-
-  .category-divider:first-child {
-    margin-top: 0;
-  }
-
   .book-now-btn {
     display: inline-block;
     background: linear-gradient(135deg, {{ section.settings.button_color }} 0%, {{ section.settings.accent_color }} 100%);
@@ -237,7 +222,7 @@
 
   @media (max-width: 1024px) {
     .pricing-container.three-columns {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -264,7 +249,8 @@
       padding: 30px 25px;
     }
     
-    .treatment-name {
+    .treatment-name,
+    .treatment-price {
       font-size: 14px;
     }
 
@@ -289,11 +275,7 @@
       </div>
     {% endif %}
 
-    <div class="pricing-container 
-      {% if section.settings.column_count == '1' %}one-column
-      {% elsif section.settings.column_count == '2' %}two-columns
-      {% elsif section.settings.column_count == '3' %}three-columns
-      {% endif %}">
+    <div class="pricing-container {{ section.settings.column_layout }}">
       
       <!-- First Column -->
       <div class="pricing-column">
@@ -305,9 +287,7 @@
         </div>
         <div class="pricing-body">
           {% for block in section.blocks %}
-            {% if block.type == 'category' %}
-              <div class="category-divider">{{ block.settings.category_name }}</div>
-            {% elsif block.type == 'treatment' %}
+            {% if block.type == 'treatment' %}
               <div class="treatment-item">
                 <span class="treatment-name">
                   {% if block.settings.treatment_name_column1 != blank %}
@@ -316,7 +296,7 @@
                     {{ block.settings.treatment_name }}
                   {% endif %}
                 </span>
-                <span class="treatment-price">£{{ block.settings.column1_price }}</span>
+                <span class="treatment-price">£{{ block.settings.price_column1 }}</span>
               </div>
             {% endif %}
           {% endfor %}
@@ -332,7 +312,7 @@
       </div>
 
       <!-- Second Column -->
-      {% if section.settings.column_count == '2' or section.settings.column_count == '3' %}
+      {% if section.settings.column_layout == 'two-columns' or section.settings.column_layout == 'three-columns' %}
         <div class="pricing-column">
           <div class="pricing-header">
             <h3>{{ section.settings.column2_title }}</h3>
@@ -342,9 +322,7 @@
           </div>
           <div class="pricing-body">
             {% for block in section.blocks %}
-              {% if block.type == 'category' %}
-                <div class="category-divider">{{ block.settings.category_name }}</div>
-              {% elsif block.type == 'treatment' %}
+              {% if block.type == 'treatment' %}
                 <div class="treatment-item">
                   <span class="treatment-name">
                     {% if block.settings.treatment_name_column2 != blank %}
@@ -353,7 +331,7 @@
                       {{ block.settings.treatment_name }}
                     {% endif %}
                   </span>
-                  <span class="treatment-price">£{{ block.settings.column2_price }}</span>
+                  <span class="treatment-price">£{{ block.settings.price_column2 }}</span>
                 </div>
               {% endif %}
             {% endfor %}
@@ -370,7 +348,7 @@
       {% endif %}
 
       <!-- Third Column -->
-      {% if section.settings.column_count == '3' %}
+      {% if section.settings.column_layout == 'three-columns' %}
         <div class="pricing-column">
           <div class="pricing-header">
             <h3>{{ section.settings.column3_title }}</h3>
@@ -380,9 +358,7 @@
           </div>
           <div class="pricing-body">
             {% for block in section.blocks %}
-              {% if block.type == 'category' %}
-                <div class="category-divider">{{ block.settings.category_name }}</div>
-              {% elsif block.type == 'treatment' %}
+              {% if block.type == 'treatment' %}
                 <div class="treatment-item">
                   <span class="treatment-name">
                     {% if block.settings.treatment_name_column3 != blank %}
@@ -391,7 +367,7 @@
                       {{ block.settings.treatment_name }}
                     {% endif %}
                   </span>
-                  <span class="treatment-price">£{{ block.settings.column3_price }}</span>
+                  <span class="treatment-price">£{{ block.settings.price_column3 }}</span>
                 </div>
               {% endif %}
             {% endfor %}
@@ -413,7 +389,7 @@
 
 {% schema %}
 {
-  "name": "Treatment Pricing Enh",
+  "name": "Treatment Pricing",
   "settings": [
     {
       "type": "header",
@@ -437,23 +413,23 @@
     },
     {
       "type": "select",
-      "id": "column_count",
+      "id": "column_layout",
       "label": "Number of Columns",
       "options": [
         {
-          "value": "1",
+          "value": "one-column",
           "label": "1 Column"
         },
         {
-          "value": "2",
+          "value": "two-columns",
           "label": "2 Columns"
         },
         {
-          "value": "3",
+          "value": "three-columns",
           "label": "3 Columns"
         }
       ],
-      "default": "2"
+      "default": "two-columns"
     },
     {
       "type": "header",
@@ -535,7 +511,7 @@
       "type": "text",
       "id": "column3_subtitle",
       "label": "Column 3 Subtitle",
-      "default": "Best Value"
+      "default": "Maximum savings"
     },
     {
       "type": "checkbox",
@@ -592,19 +568,6 @@
   ],
   "blocks": [
     {
-      "type": "category",
-      "name": "Category",
-      "settings": [
-        {
-          "type": "text",
-          "id": "category_name",
-          "label": "Category Name",
-          "default": "Face Treatments",
-          "info": "Used as a visual divider between treatment groups"
-        }
-      ]
-    },
-    {
       "type": "treatment",
       "name": "Treatment",
       "settings": [
@@ -627,8 +590,8 @@
         },
         {
           "type": "text",
-          "id": "column1_price",
-          "label": "Column 1 Price",
+          "id": "price_column1",
+          "label": "Price for Column 1",
           "default": "75.00"
         },
         {
@@ -643,8 +606,8 @@
         },
         {
           "type": "text",
-          "id": "column2_price",
-          "label": "Column 2 Price",
+          "id": "price_column2",
+          "label": "Price for Column 2",
           "default": "337.50"
         },
         {
@@ -659,8 +622,8 @@
         },
         {
           "type": "text",
-          "id": "column3_price",
-          "label": "Column 3 Price",
+          "id": "price_column3",
+          "label": "Price for Column 3",
           "default": "500.00"
         }
       ]
@@ -668,33 +631,33 @@
   ],
   "presets": [
     {
-      "name": "Treatment Pricing Enhanced",
+      "name": "Treatment Pricing",
       "blocks": [
         {
           "type": "treatment",
           "settings": {
             "treatment_name": "Upper Lip Or Chin",
-            "column1_price": "75.00",
-            "column2_price": "337.50",
-            "column3_price": "500.00"
+            "price_column1": "75.00",
+            "price_column2": "337.50",
+            "price_column3": "500.00"
           }
         },
         {
           "type": "treatment",
           "settings": {
             "treatment_name": "Lower Face",
-            "column1_price": "105.00",
-            "column2_price": "472.50",
-            "column3_price": "700.00"
+            "price_column1": "105.00",
+            "price_column2": "472.50",
+            "price_column3": "700.00"
           }
         },
         {
           "type": "treatment",
           "settings": {
             "treatment_name": "Full Face",
-            "column1_price": "175.00",
-            "column2_price": "787.50",
-            "column3_price": "1200.00"
+            "price_column1": "175.00",
+            "price_column2": "787.50",
+            "price_column3": "1200.00"
           }
         }
       ]
