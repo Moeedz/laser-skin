@@ -112,6 +112,13 @@
 
   .pricing-body {
     padding: 45px 35px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+  }
+
+  .treatments-list {
+    flex: 1;
   }
 
   .treatment-item {
@@ -124,7 +131,7 @@
     transition: padding-left 0.3s ease;
   }
 
-  .treatment-item:hover {
+  .treatment-item.has-price:hover {
     padding-left: 10px;
   }
 
@@ -156,7 +163,7 @@
     letter-spacing: 0.5px;
   }
 
-  .treatment-item::before {
+  .treatment-item.has-price::before {
     content: '';
     position: absolute;
     left: 0;
@@ -239,14 +246,15 @@
     .pricing-container.three-columns {
       grid-template-columns: 1fr;
     }
+
+    .pricing-body {
+      padding: 30px 25px;
+      min-height: auto;
+    }
     
     .pricing-header h3 {
       font-size: 22px;
       padding: 20px;
-    }
-
-    .pricing-body {
-      padding: 30px 25px;
     }
     
     .treatment-name,
@@ -286,22 +294,24 @@
           {% endif %}
         </div>
         <div class="pricing-body">
-          {% for block in section.blocks %}
-            {% if block.type == 'treatment' %}
-              <div class="treatment-item">
-                <span class="treatment-name">
-                  {% if block.settings.treatment_name_column1 != blank %}
-                    {{ block.settings.treatment_name_column1 }}
-                  {% else %}
-                    {{ block.settings.treatment_name }}
+          <div class="treatments-list">
+            {% for block in section.blocks %}
+              {% if block.type == 'treatment' %}
+                <div class="treatment-item {% if block.settings.price_column1 != blank %}has-price{% endif %}">
+                  <span class="treatment-name">
+                    {% if block.settings.treatment_name_column1 != blank %}
+                      {{ block.settings.treatment_name_column1 }}
+                    {% else %}
+                      {{ block.settings.treatment_name }}
+                    {% endif %}
+                  </span>
+                  {% if block.settings.price_column1 != blank %}
+                    <span class="treatment-price">£{{ block.settings.price_column1 }}</span>
                   {% endif %}
-                </span>
-                {% if block.settings.price_column1 != blank %}
-                  <span class="treatment-price">£{{ block.settings.price_column1 }}</span>
-                {% endif %}
-              </div>
-            {% endif %}
-          {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
           
           {% if section.settings.show_button_column1 %}
             <div class="btn-wrapper">
@@ -323,22 +333,24 @@
             {% endif %}
           </div>
           <div class="pricing-body">
-            {% for block in section.blocks %}
-              {% if block.type == 'treatment' %}
-                <div class="treatment-item">
-                  <span class="treatment-name">
-                    {% if block.settings.treatment_name_column2 != blank %}
-                      {{ block.settings.treatment_name_column2 }}
-                    {% else %}
-                      {{ block.settings.treatment_name }}
+            <div class="treatments-list">
+              {% for block in section.blocks %}
+                {% if block.type == 'treatment' %}
+                  <div class="treatment-item {% if block.settings.price_column2 != blank %}has-price{% endif %}">
+                    <span class="treatment-name">
+                      {% if block.settings.treatment_name_column2 != blank %}
+                        {{ block.settings.treatment_name_column2 }}
+                      {% else %}
+                        {{ block.settings.treatment_name }}
+                      {% endif %}
+                    </span>
+                    {% if block.settings.price_column2 != blank %}
+                      <span class="treatment-price">£{{ block.settings.price_column2 }}</span>
                     {% endif %}
-                  </span>
-                  {% if block.settings.price_column2 != blank %}
-                    <span class="treatment-price">£{{ block.settings.price_column2 }}</span>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
             
             {% if section.settings.show_button_column2 %}
               <div class="btn-wrapper">
@@ -361,22 +373,24 @@
             {% endif %}
           </div>
           <div class="pricing-body">
-            {% for block in section.blocks %}
-              {% if block.type == 'treatment' %}
-                <div class="treatment-item">
-                  <span class="treatment-name">
-                    {% if block.settings.treatment_name_column3 != blank %}
-                      {{ block.settings.treatment_name_column3 }}
-                    {% else %}
-                      {{ block.settings.treatment_name }}
+            <div class="treatments-list">
+              {% for block in section.blocks %}
+                {% if block.type == 'treatment' %}
+                  <div class="treatment-item {% if block.settings.price_column3 != blank %}has-price{% endif %}">
+                    <span class="treatment-name">
+                      {% if block.settings.treatment_name_column3 != blank %}
+                        {{ block.settings.treatment_name_column3 }}
+                      {% else %}
+                        {{ block.settings.treatment_name }}
+                      {% endif %}
+                    </span>
+                    {% if block.settings.price_column3 != blank %}
+                      <span class="treatment-price">£{{ block.settings.price_column3 }}</span>
                     {% endif %}
-                  </span>
-                  {% if block.settings.price_column3 != blank %}
-                    <span class="treatment-price">£{{ block.settings.price_column3 }}</span>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
             
             {% if section.settings.show_button_column3 %}
               <div class="btn-wrapper">
