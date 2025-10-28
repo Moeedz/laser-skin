@@ -341,6 +341,120 @@
         "lazy": true
       }
     },
+    "treatment_pricing_enhanced_XUyycc": {
+      "type": "treatment-pricing-enhanced",
+      "blocks": {
+        "treatment_jfbw9f": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Lip £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "",
+            "price_column2": "337.50",
+            "treatment_name_column3": "",
+            "price_column3": "500.00"
+          }
+        },
+        "treatment_JApaDh": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name_column1": "Chin £35 Course of 6",
+            "price_column1": "75.00",
+            "treatment_name_column2": "cd",
+            "price_column2": "337.50",
+            "treatment_name_column3": "ef",
+            "price_column3": "500.00"
+          }
+        },
+        "treatment_qBf64k": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Lower Face",
+            "treatment_name_column1": "Lip and Chin £45 Course of 6",
+            "price_column1": "105.00",
+            "treatment_name_column2": "",
+            "price_column2": "472.50",
+            "treatment_name_column3": "",
+            "price_column3": "700.00"
+          }
+        },
+        "treatment_34jCnb": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face",
+            "treatment_name_column1": "Full Face £65 Course of 6",
+            "price_column1": "175.00",
+            "treatment_name_column2": "",
+            "price_column2": "787.50",
+            "treatment_name_column3": "",
+            "price_column3": "1200.00"
+          }
+        },
+        "treatment_HtNPWa": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Treatment Name",
+            "treatment_name_column1": "Lower Face £55 Course of 6",
+            "price_column1": "75.00",
+            "treatment_name_column2": "",
+            "price_column2": "337.50",
+            "treatment_name_column3": "",
+            "price_column3": "500.00"
+          }
+        },
+        "treatment_NMrwDw": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Treatment Name",
+            "treatment_name_column1": "Face and Neck £65 Course of 6",
+            "price_column1": "75.00",
+            "treatment_name_column2": "",
+            "price_column2": "337.50",
+            "treatment_name_column3": "",
+            "price_column3": "500.00"
+          }
+        }
+      },
+      "block_order": [
+        "treatment_jfbw9f",
+        "treatment_JApaDh",
+        "treatment_qBf64k",
+        "treatment_34jCnb",
+        "treatment_HtNPWa",
+        "treatment_NMrwDw"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important;}}"
+      ],
+      "name": "Treatment Pricing Enhanced",
+      "settings": {
+        "show_section_title": true,
+        "section_title": "Our Treatments",
+        "column_layout": "three-columns",
+        "column1_title": "FACE",
+        "column1_subtitle": "Course of 6",
+        "show_button_column1": true,
+        "button_text_column1": "Book Now",
+        "button_link_column1": "",
+        "column2_title": "Course Of 6",
+        "column2_subtitle": "Course of 6",
+        "show_button_column2": true,
+        "button_text_column2": "Book Now",
+        "button_link_column2": "",
+        "column3_title": "Course Of 10",
+        "column3_subtitle": "Course of 6",
+        "show_button_column3": true,
+        "button_text_column3": "Book Now",
+        "button_link_column3": "",
+        "header_color": "#c9a86a",
+        "accent_color": "#d4a574",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
+      }
+    },
     "treatment_pricing_hjdUCE": {
       "type": "treatment-pricing",
       "blocks": {
@@ -816,6 +930,7 @@
     "main",
     "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
+    "treatment_pricing_enhanced_XUyycc",
     "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
     "ss_clothing_image_grid_bYwVtF",
