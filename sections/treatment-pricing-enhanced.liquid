@@ -55,6 +55,8 @@
     box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .pricing-column:hover {
@@ -114,7 +116,7 @@
     padding: 45px 35px;
     display: flex;
     flex-direction: column;
-    min-height: 400px;
+    flex: 1;
   }
 
   .treatments-list {
@@ -249,7 +251,6 @@
 
     .pricing-body {
       padding: 30px 25px;
-      min-height: auto;
     }
     
     .pricing-header h3 {
@@ -651,7 +652,7 @@
   ],
   "presets": [
     {
-      "name": "Treatment Pricing Enhanced",
+      "name": "Treatment Pricing",
       "blocks": [
         {
           "type": "treatment",
