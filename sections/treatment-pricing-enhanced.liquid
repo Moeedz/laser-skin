@@ -181,6 +181,21 @@
     border-top: 1px solid #f0f0f0;
   }
 
+  .category-divider {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ section.settings.accent_color }};
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 30px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid {{ section.settings.accent_color }}30;
+  }
+
+  .category-divider:first-child {
+    margin-top: 0;
+  }
+
   .book-now-btn {
     display: inline-block;
     background: linear-gradient(135deg, {{ section.settings.button_color }} 0%, {{ section.settings.accent_color }} 100%);
@@ -290,7 +305,9 @@
         </div>
         <div class="pricing-body">
           {% for block in section.blocks %}
-            {% if block.type == 'treatment' %}
+            {% if block.type == 'category' %}
+              <div class="category-divider">{{ block.settings.category_name }}</div>
+            {% elsif block.type == 'treatment' %}
               <div class="treatment-item">
                 <span class="treatment-name">
                   {% if block.settings.treatment_name_column1 != blank %}
@@ -325,7 +342,9 @@
           </div>
           <div class="pricing-body">
             {% for block in section.blocks %}
-              {% if block.type == 'treatment' %}
+              {% if block.type == 'category' %}
+                <div class="category-divider">{{ block.settings.category_name }}</div>
+              {% elsif block.type == 'treatment' %}
                 <div class="treatment-item">
                   <span class="treatment-name">
                     {% if block.settings.treatment_name_column2 != blank %}
@@ -361,7 +380,9 @@
           </div>
           <div class="pricing-body">
             {% for block in section.blocks %}
-              {% if block.type == 'treatment' %}
+              {% if block.type == 'category' %}
+                <div class="category-divider">{{ block.settings.category_name }}</div>
+              {% elsif block.type == 'treatment' %}
                 <div class="treatment-item">
                   <span class="treatment-name">
                     {% if block.settings.treatment_name_column3 != blank %}
@@ -570,6 +591,19 @@
     }
   ],
   "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name",
+          "default": "Face Treatments",
+          "info": "Used as a visual divider between treatment groups"
+        }
+      ]
+    },
     {
       "type": "treatment",
       "name": "Treatment",
