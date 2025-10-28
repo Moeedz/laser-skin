@@ -546,6 +546,82 @@
         "button_text_color": "#ffffff"
       }
     },
+    "treatment_pricing_enhanced_dtHQt9": {
+      "type": "treatment-pricing-enhanced",
+      "blocks": {
+        "treatment_wzNT7p": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Lip £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "Bikini Line £40 Course of 6",
+            "price_column2": "216",
+            "treatment_name_column3": "Under Arms £35 Course of 6",
+            "price_column3": "189"
+          }
+        },
+        "treatment_XDYMwd": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name_column1": "Chin £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "Bikini Brazilian £45 Course of 6",
+            "price_column2": "243",
+            "treatment_name_column3": "Hollywood and Underarms together £60 Course of 6",
+            "price_column3": "324"
+          }
+        },
+        "treatment_rJ63Ef": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Beard Sculpting £45 Course of 6",
+            "price_column1": "243",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        }
+      },
+      "block_order": [
+        "treatment_wzNT7p",
+        "treatment_XDYMwd",
+        "treatment_rJ63Ef"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}",
+        ".treatment-pricing-section {padding-top: 0 !important;}"
+      ],
+      "name": "Treatment Pricing Enhanced",
+      "settings": {
+        "show_section_title": true,
+        "section_title": "",
+        "column_layout": "three-columns",
+        "column1_title": "FACE",
+        "column1_subtitle": "Course of 6",
+        "show_button_column1": true,
+        "button_text_column1": "Book Now",
+        "button_link_column1": "",
+        "column2_title": "BIKINI AREA",
+        "column2_subtitle": "Course of 6",
+        "show_button_column2": true,
+        "button_text_column2": "Book Now",
+        "button_link_column2": "",
+        "column3_title": "UNDERARMS & COMBO PACKAGES",
+        "column3_subtitle": "Course of 6",
+        "show_button_column3": true,
+        "button_text_column3": "Book Now",
+        "button_link_column3": "",
+        "header_color": "#c9a86a",
+        "accent_color": "#d4a574",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
+      }
+    },
     "treatment_pricing_hjdUCE": {
       "type": "treatment-pricing",
       "blocks": {
@@ -1022,6 +1098,7 @@
     "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
     "treatment_pricing_enhanced_XUyycc",
+    "treatment_pricing_enhanced_dtHQt9",
     "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
     "ss_clothing_image_grid_bYwVtF",
