@@ -350,10 +350,10 @@
             "treatment_name": "",
             "treatment_name_column1": "Lip £35 Course of 6",
             "price_column1": "189",
-            "treatment_name_column2": "",
-            "price_column2": "337.50",
-            "treatment_name_column3": "",
-            "price_column3": "500.00"
+            "treatment_name_column2": "Bikini Line £40 Course of 6",
+            "price_column2": "216",
+            "treatment_name_column3": "Under Arms £35 Course of 6",
+            "price_column3": "189"
           }
         },
         "treatment_JApaDh": {
@@ -361,11 +361,11 @@
           "settings": {
             "treatment_name": "Upper Lip Or Chin",
             "treatment_name_column1": "Chin £35 Course of 6",
-            "price_column1": "75.00",
-            "treatment_name_column2": "cd",
-            "price_column2": "337.50",
-            "treatment_name_column3": "ef",
-            "price_column3": "500.00"
+            "price_column1": "189",
+            "treatment_name_column2": "Bikini Brazilian £45 Course of 6",
+            "price_column2": "243",
+            "treatment_name_column3": "Hollywood and Underarms together £60 Course of 6",
+            "price_column3": "324"
           }
         },
         "treatment_qBf64k": {
@@ -373,47 +373,131 @@
           "settings": {
             "treatment_name": "Lower Face",
             "treatment_name_column1": "Lip and Chin £45 Course of 6",
-            "price_column1": "105.00",
-            "treatment_name_column2": "",
-            "price_column2": "472.50",
-            "treatment_name_column3": "",
-            "price_column3": "700.00"
+            "price_column1": "243",
+            "treatment_name_column2": "Bikini Hollywood £55 Course of 6",
+            "price_column2": "295",
+            "treatment_name_column3": "Brazilian and Underarms £50 Course of 6",
+            "price_column3": "270"
           }
         },
         "treatment_34jCnb": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Full Face",
+            "treatment_name": "",
             "treatment_name_column1": "Full Face £65 Course of 6",
-            "price_column1": "175.00",
-            "treatment_name_column2": "",
-            "price_column2": "787.50",
+            "price_column1": "350",
+            "treatment_name_column2": "Peri Anal £35 Course of 6",
+            "price_column2": "189",
             "treatment_name_column3": "",
-            "price_column3": "1200.00"
+            "price_column3": ""
           }
         },
         "treatment_HtNPWa": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Treatment Name",
+            "treatment_name": "",
             "treatment_name_column1": "Lower Face £55 Course of 6",
-            "price_column1": "75.00",
-            "treatment_name_column2": "",
-            "price_column2": "337.50",
+            "price_column1": "297",
+            "treatment_name_column2": "Buttocks £40 Course of 6",
+            "price_column2": "216",
             "treatment_name_column3": "",
-            "price_column3": "500.00"
+            "price_column3": ""
           }
         },
         "treatment_NMrwDw": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Treatment Name",
+            "treatment_name": "",
             "treatment_name_column1": "Face and Neck £65 Course of 6",
-            "price_column1": "75.00",
-            "treatment_name_column2": "",
-            "price_column2": "337.50",
+            "price_column1": "350",
+            "treatment_name_column2": "Naval Line £25 Course of 6",
+            "price_column2": "135",
             "treatment_name_column3": "",
-            "price_column3": "500.00"
+            "price_column3": ""
+          }
+        },
+        "treatment_yp8gQe": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Neck £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        },
+        "treatment_whRQAF": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Sideburns £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        },
+        "treatment_kzMzUU": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Centre Brow £20 Course of 6",
+            "price_column1": "108",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        },
+        "treatment_m8tJrd": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Between Eyebrows £20 Course of 6",
+            "price_column1": "108",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        },
+        "treatment_hJCXBd": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Ears £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        },
+        "treatment_MzEtzW": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Jawline £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
+          }
+        },
+        "treatment_ewWz48": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "Beard Sculpting £45 Course of 6",
+            "price_column1": "243",
+            "treatment_name_column2": "",
+            "price_column2": "",
+            "treatment_name_column3": "",
+            "price_column3": ""
           }
         }
       },
@@ -423,10 +507,17 @@
         "treatment_qBf64k",
         "treatment_34jCnb",
         "treatment_HtNPWa",
-        "treatment_NMrwDw"
+        "treatment_NMrwDw",
+        "treatment_yp8gQe",
+        "treatment_whRQAF",
+        "treatment_kzMzUU",
+        "treatment_m8tJrd",
+        "treatment_hJCXBd",
+        "treatment_MzEtzW",
+        "treatment_ewWz48"
       ],
       "custom_css": [
-        "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important;}}"
+        "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}"
       ],
       "name": "Treatment Pricing Enhanced",
       "settings": {
@@ -438,12 +529,12 @@
         "show_button_column1": true,
         "button_text_column1": "Book Now",
         "button_link_column1": "",
-        "column2_title": "Course Of 6",
+        "column2_title": "BIKINI AREA",
         "column2_subtitle": "Course of 6",
         "show_button_column2": true,
         "button_text_column2": "Book Now",
         "button_link_column2": "",
-        "column3_title": "Course Of 10",
+        "column3_title": "UNDERARMS & COMBO PACKAGES",
         "column3_subtitle": "Course of 6",
         "show_button_column3": true,
         "button_text_column3": "Book Now",
