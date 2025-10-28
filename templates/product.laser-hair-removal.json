@@ -553,43 +553,56 @@
           "type": "treatment",
           "settings": {
             "treatment_name": "",
-            "treatment_name_column1": "Lip £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "Bikini Line £40 Course of 6",
-            "price_column2": "216",
-            "treatment_name_column3": "Under Arms £35 Course of 6",
-            "price_column3": "189"
+            "treatment_name_column1": "Full Arms £60 Course of 6",
+            "price_column1": "324",
+            "treatment_name_column2": "Full Leg £120 Course of 6",
+            "price_column2": "648",
+            "treatment_name_column3": "Full Back £90 Course of 6",
+            "price_column3": "486"
           }
         },
         "treatment_XDYMwd": {
           "type": "treatment",
           "settings": {
             "treatment_name": "Upper Lip Or Chin",
-            "treatment_name_column1": "Chin £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "Bikini Brazilian £45 Course of 6",
-            "price_column2": "243",
-            "treatment_name_column3": "Hollywood and Underarms together £60 Course of 6",
-            "price_column3": "324"
+            "treatment_name_column1": "Half Arms £40 Course of 6",
+            "price_column1": "216",
+            "treatment_name_column2": "Half Legs £65 Course of 6",
+            "price_column2": "350",
+            "treatment_name_column3": "Half Back £70 Course of 6",
+            "price_column3": "378"
           }
         },
         "treatment_rJ63Ef": {
           "type": "treatment",
           "settings": {
             "treatment_name": "",
-            "treatment_name_column1": "Beard Sculpting £45 Course of 6",
-            "price_column1": "243",
+            "treatment_name_column1": "Hands and Fingers £35 Course of 6",
+            "price_column1": "189",
+            "treatment_name_column2": "Feet and Toes £45 Course of 6",
+            "price_column2": "243",
+            "treatment_name_column3": "Chest £60 Course of 6",
+            "price_column3": "324"
+          }
+        },
+        "treatment_FihiAU": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "",
+            "treatment_name_column1": "",
+            "price_column1": "",
             "treatment_name_column2": "",
             "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
+            "treatment_name_column3": "Full Back and Full Chest £130 Course of 6",
+            "price_column3": "702"
           }
         }
       },
       "block_order": [
         "treatment_wzNT7p",
         "treatment_XDYMwd",
-        "treatment_rJ63Ef"
+        "treatment_rJ63Ef",
+        "treatment_FihiAU"
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}",
@@ -600,17 +613,17 @@
         "show_section_title": true,
         "section_title": "",
         "column_layout": "three-columns",
-        "column1_title": "FACE",
+        "column1_title": "ARMS & HANDS",
         "column1_subtitle": "Course of 6",
         "show_button_column1": true,
         "button_text_column1": "Book Now",
         "button_link_column1": "",
-        "column2_title": "BIKINI AREA",
+        "column2_title": "LEGS & FEET",
         "column2_subtitle": "Course of 6",
         "show_button_column2": true,
         "button_text_column2": "Book Now",
         "button_link_column2": "",
-        "column3_title": "UNDERARMS & COMBO PACKAGES",
+        "column3_title": "BODY",
         "column3_subtitle": "Course of 6",
         "show_button_column3": true,
         "button_text_column3": "Book Now",
