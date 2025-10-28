@@ -296,7 +296,9 @@
                     {{ block.settings.treatment_name }}
                   {% endif %}
                 </span>
-                <span class="treatment-price">£{{ block.settings.price_column1 }}</span>
+                {% if block.settings.price_column1 != blank %}
+                  <span class="treatment-price">£{{ block.settings.price_column1 }}</span>
+                {% endif %}
               </div>
             {% endif %}
           {% endfor %}
@@ -331,7 +333,9 @@
                       {{ block.settings.treatment_name }}
                     {% endif %}
                   </span>
-                  <span class="treatment-price">£{{ block.settings.price_column2 }}</span>
+                  {% if block.settings.price_column2 != blank %}
+                    <span class="treatment-price">£{{ block.settings.price_column2 }}</span>
+                  {% endif %}
                 </div>
               {% endif %}
             {% endfor %}
@@ -367,7 +371,9 @@
                       {{ block.settings.treatment_name }}
                     {% endif %}
                   </span>
-                  <span class="treatment-price">£{{ block.settings.price_column3 }}</span>
+                  {% if block.settings.price_column3 != blank %}
+                    <span class="treatment-price">£{{ block.settings.price_column3 }}</span>
+                  {% endif %}
                 </div>
               {% endif %}
             {% endfor %}
@@ -592,7 +598,7 @@
           "type": "text",
           "id": "price_column1",
           "label": "Price for Column 1",
-          "default": "75.00"
+          "info": "Leave blank to hide price"
         },
         {
           "type": "header",
@@ -608,7 +614,7 @@
           "type": "text",
           "id": "price_column2",
           "label": "Price for Column 2",
-          "default": "337.50"
+          "info": "Leave blank to hide price"
         },
         {
           "type": "header",
@@ -624,7 +630,7 @@
           "type": "text",
           "id": "price_column3",
           "label": "Price for Column 3",
-          "default": "500.00"
+          "info": "Leave blank to hide price"
         }
       ]
     }
