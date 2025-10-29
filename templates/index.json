@@ -15,6 +15,7 @@
         "slide-1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_1.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -51,6 +52,48 @@
         "cycle_speed": 5,
         "background": "#000000",
         "controls_color": "#ffffff"
+      }
+    },
+    "176123897800c69b3c": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_FiGewP": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+          "settings": {
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
+          }
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_FiGewP"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
       }
     },
     "ss_scrolling_images_eTgjpG": {
@@ -99,12 +142,13 @@
         "image_afVQCQ",
         "image_m6mezf"
       ],
+      "disabled": true,
       "custom_css": [
         ".slide-text-template--25564423717244__ss_scrolling_images_eTgjpG {display: none;}"
       ],
       "name": "SS - Scrolling images",
       "settings": {
-        "heading": "<h2>Treatments Featured In</h2>",
+        "heading": "<h2>Treatments We Offer</h2>",
         "heading_custom": false,
         "heading_font": "josefin_sans_n4",
         "heading_size": 32,
@@ -321,8 +365,8 @@
         "collections_per_row_mobile": "1",
         "collections_per_row_desktop": 3,
         "subheading": "",
-        "title": "Popular Treatments",
-        "content": "<p>Discover our range of advanced aesthetic treatments, each tailored to your unique goal and anatomy for subtle, yet stunning enhancements.</p>"
+        "title": "<strong>Treatments Our Clients Love</strong>",
+        "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
       }
     },
     "feature_cards_JKUWqd": {
@@ -438,48 +482,6 @@
         "button_text_color": "#ffffff",
         "button_hover_bg_color": "#000000",
         "button_hover_text_color": "#ffffff"
-      }
-    },
-    "176123897800c69b3c": {
-      "type": "apps",
-      "blocks": {
-        "appio_google_reviews_carousel1_FiGewP": {
-          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
-          "settings": {
-            "title_type": "h2",
-            "show_callout_layout": true,
-            "card_background_color": "#f8f8f8",
-            "card_text_color": "#747171",
-            "star_color": "#fbbc05",
-            "max_line_review_content": 4,
-            "auto_scroll": true,
-            "slide_delay": 3,
-            "show_navigation_bar": true,
-            "show_reviewer_avatar": true,
-            "show_reviewer_name_detail": true,
-            "show_review_date": true,
-            "show_verified_badge": true,
-            "show_review_photos": true,
-            "show_liked_review": true,
-            "show_business_summary": true,
-            "show_business_summary_rating": true,
-            "show_business_summary_total_review": true,
-            "show_business_summary_summary_rating": true,
-            "business_summary_color": "#3a454f",
-            "show_leave_review_button": true,
-            "button_color": "#ffffff",
-            "button_background": "#4285f4"
-          }
-        }
-      },
-      "block_order": [
-        "appio_google_reviews_carousel1_FiGewP"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
       }
     },
     "contact_info_form_heNtLy": {
@@ -636,11 +638,11 @@
   },
   "order": [
     "slideshow",
-    "ss_scrolling_images_eTgjpG",
-    "ss_image_with_text_12_aRwVQy",
-    "collection_list_yywqTr",
-    "feature_cards_JKUWqd",
     "176123897800c69b3c",
+    "ss_scrolling_images_eTgjpG",
+    "collection_list_yywqTr",
+    "ss_image_with_text_12_aRwVQy",
+    "feature_cards_JKUWqd",
     "contact_info_form_heNtLy"
   ]
 }
