@@ -333,8 +333,8 @@
           "settings": {
             "icon": "doctor",
             "icon_color": "#e6b325",
-            "title": "Doctor-Led Expertise",
-            "description": "Safe, effective, and personalised treatments delivered by experienced professionals."
+            "title": "Medically-Led Precision",
+            "description": "Every treatment is overseen by experienced medical professionals, ensuring your results are safe, effective, and expertly delivered."
           }
         },
         "feature_p6rxJj": {
@@ -342,26 +342,44 @@
           "settings": {
             "icon": "list",
             "icon_color": "#e6b325",
-            "title": "Tailored Treatment Plans",
-            "description": "We create bespoke aesthetic plans to suit your individual needs and goals."
+            "title": "Your Skin, Your Plan",
+            "description": "We craft personalised treatment plans tailored to your skin type, goals, and lifestyle so your results feel uniquely yours."
           }
         },
         "feature_iitNT6": {
           "type": "feature",
           "settings": {
-            "icon": "microscope",
+            "icon": "shield",
             "icon_color": "#e6b325",
-            "title": "Advanced Technology",
-            "description": "Using the latest technology for precise results and quicker recovery times."
+            "title": "Innovative Laser Technology",
+            "description": "Experience the power of advanced medical-grade technology for precise results, enhanced comfort, and faster recovery."
           }
         },
         "feature_3F3yKN": {
           "type": "feature",
           "settings": {
+            "icon": "checkmark",
+            "icon_color": "#e6b325",
+            "title": "Results That Speak for Themselves",
+            "description": "Our clients choose Laser Skin Clinics for real, visible improvements — achieved through proven techniques, medical expertise, and genuine care."
+          }
+        },
+        "feature_Q8AJpV": {
+          "type": "feature",
+          "settings": {
+            "icon": "users",
+            "icon_color": "#e6b325",
+            "title": "12 Years of Trusted Expertise",
+            "description": "With over 12 years in aesthetics, Laser Skin Clinics has built a reputation for delivering safe, effective, and natural-looking results you can trust."
+          }
+        },
+        "feature_gViWqA": {
+          "type": "feature",
+          "settings": {
             "icon": "heart",
             "icon_color": "#e6b325",
-            "title": "Safety & Care First",
-            "description": "A professional, hygienic, and comfortable environment to keep you at ease."
+            "title": "Care You Can Trust",
+            "description": "From consultation to aftercare, we prioritise your safety, comfort, and confidence in a professional, welcoming environment."
           }
         }
       },
@@ -369,15 +387,17 @@
         "feature_b3cnnG",
         "feature_p6rxJj",
         "feature_iitNT6",
-        "feature_3F3yKN"
+        "feature_3F3yKN",
+        "feature_Q8AJpV",
+        "feature_gViWqA"
       ],
       "name": "Features with Cards",
       "settings": {
-        "heading": "Why Choose Us?",
+        "heading": "Why Choose Laser Skin Clinics",
         "heading_size": 36,
         "heading_weight": "600",
         "heading_color": "#000000",
-        "subheading": "Your trusted partner",
+        "subheading": "Your Trusted Local Skin Clinic",
         "subheading_size": 18,
         "subheading_weight": "400",
         "subheading_color": "#666666",
@@ -490,7 +510,7 @@
           "type": "opening_hour",
           "settings": {
             "day": "Thursday",
-            "hours": "10AM - 8PM"
+            "hours": "Closed"
           }
         },
         "opening_hour_X44EHe": {
@@ -537,12 +557,12 @@
         "gradient_color_1": "#f7f1e6",
         "gradient_color_2": "#efefef",
         "gradient_direction": "to bottom",
-        "info_heading": "Send Us Your Enquiries",
+        "info_heading": "Contact Us Now",
         "heading_size": 32,
         "heading_weight": "600",
         "heading_color": "#000000",
         "heading_spacing": 20,
-        "info_description": "Ready to restore and revive your youthful beauty? Feel free to contact us to help us design and discuss your personalised aesthetic treatment plan.",
+        "info_description": "Ready to restore and revive your youthful glow? Contact Laser Skin Clinics today to design your personalised treatment plan and begin your journey to radiant, confident skin.",
         "description_size": 15,
         "description_color": "#333333",
         "info_section_spacing": 30,
@@ -556,14 +576,14 @@
         "link_hover_color": "#a07d42",
         "show_address": true,
         "address_title": "Address",
-        "address_line1": "25 Highfield Road,",
-        "address_line2": "Edgbaston",
-        "address_line3": "Birmingham",
-        "address_line4": "B15 3DP",
+        "address_line1": "Laser Skin Clinics,",
+        "address_line2": "4 Perton Farm Barns Jenny Walkers Lane",
+        "address_line3": "Wolverhampton",
+        "address_line4": "WV6 7HB",
         "show_contact_methods": true,
         "contact_methods_title": "Email Or Call Us",
-        "phone": "0121 461 6260",
-        "email": "info@ihyaaesthetics.co.uk",
+        "phone": "01902 256667",
+        "email": "info@laserskinclinics.co.uk",
         "show_social_icons": true,
         "instagram_url": "",
         "whatsapp_number": "+441214616260",
