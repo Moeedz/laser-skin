@@ -190,15 +190,91 @@
         "lazy": true
       }
     },
+    "collection_list_yywqTr": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_t3NT6e": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_eRHTkV": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_UNxjYH": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_t3NT6e",
+        "collection_eRHTkV",
+        "collection_UNxjYH"
+      ],
+      "custom_css": [
+        ".section-header.justify-self-center.text-center {min-width: 100% !important;}",
+        "button.button {color: black;}"
+      ],
+      "name": "t:sections.collection_list.presets.collection_list.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "image_size": "auto",
+        "show_text_outside": false,
+        "space_items": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row_desktop": 3,
+        "subheading": "",
+        "title": "<strong>Treatments Our Clients Love</strong>",
+        "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
+      }
+    },
     "ss_image_with_text_12_aRwVQy": {
       "type": "ss-image-with-text-12",
       "blocks": {
         "slide_D4nkJd": {
           "type": "slide",
           "settings": {
-            "heading": "<p><strong>Heading</strong></p>",
-            "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>",
-            "button": "Book Consultation Now",
+            "heading": "<p><strong>This Month’s Special Offer</strong></p>",
+            "text": "<p><em>Enjoy smooth, confident skin with our limited-time laser hair removal offer. Experience long-lasting results with advanced technology and expert care, because confidence looks good on everyone.</em></p>",
+            "button": "View Special Offer",
             "button_url": "",
             "video_autoplay": true,
             "video_loop": true,
@@ -291,82 +367,6 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
-      }
-    },
-    "collection_list_yywqTr": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_t3NT6e": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "button_style": "solid",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection_eRHTkV": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "button_style": "solid",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection_UNxjYH": {
-          "type": "collection",
-          "settings": {
-            "color_scheme": "",
-            "collection": "",
-            "expand_collection": false,
-            "content_position": "place-self-end-start text-start",
-            "subheading": "",
-            "title": "",
-            "button_text": "View products",
-            "button_link": "",
-            "button_style": "solid",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "collection_t3NT6e",
-        "collection_eRHTkV",
-        "collection_UNxjYH"
-      ],
-      "custom_css": [
-        ".section-header.justify-self-center.text-center {min-width: 100% !important;}",
-        "button.button {color: black;}"
-      ],
-      "name": "t:sections.collection_list.presets.collection_list.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "image_size": "auto",
-        "show_text_outside": false,
-        "space_items": true,
-        "stack_collections": true,
-        "collections_per_row_mobile": "1",
-        "collections_per_row_desktop": 3,
-        "subheading": "",
-        "title": "<strong>Treatments Our Clients Love</strong>",
-        "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
       }
     },
     "feature_cards_JKUWqd": {
