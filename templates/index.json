@@ -432,6 +432,7 @@
         },
         "feature_Q8AJpV": {
           "type": "feature",
+          "disabled": true,
           "settings": {
             "icon": "users",
             "icon_color": "#e6b325",
@@ -441,6 +442,7 @@
         },
         "feature_gViWqA": {
           "type": "feature",
+          "disabled": true,
           "settings": {
             "icon": "heart",
             "icon_color": "#e6b325",
