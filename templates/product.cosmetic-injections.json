@@ -138,7 +138,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/IMG_0107.jpg"
+            "image": "shopify://shop_images/Antiwrinkle-4.jpg"
           }
         }
       },
@@ -246,7 +246,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/IMG_0107.jpg"
+            "image": "shopify://shop_images/Antiwrinkle-5_b93b9697-cd88-45eb-ac13-10222c4bd2c6.jpg"
           }
         }
       },
@@ -503,7 +503,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/Antiwrinkle-3_e0e78c72-a95e-49ea-8e46-60dcb705f5cb.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -546,7 +546,7 @@
         "link_jYfj9x": {
           "type": "link",
           "settings": {
-            "image": "shopify://shop_images/IMG_1506.jpg",
+            "image": "shopify://shop_images/IMG_0107_fb66ac61-f052-4305-9582-ab86139a3723.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -673,11 +673,11 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/IMG_1506_bac4b4bd-61c5-44f5-9502-7c17c7241685.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "steps_custom": false,
         "steps_font": "josefin_sans_n4",
         "steps_size": 12,
