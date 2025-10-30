@@ -198,6 +198,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
+            "image": "shopify://shop_images/Antiwrinkle-3.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
@@ -214,6 +215,24 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
+            "image": "shopify://shop_images/MAR-VJU-INTRO-INSTAST-REV01_vju-stories-intro_44cb8a08-3621-465d-8dc9-3656da76e19b.jpg",
+            "expand_collection": false,
+            "content_position": "place-self-end-start text-start",
+            "subheading": "",
+            "title": "",
+            "button_text": "View products",
+            "button_link": "",
+            "button_style": "solid",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_fBqiBP": {
+          "type": "collection",
+          "settings": {
+            "color_scheme": "",
+            "collection": "",
+            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro_ef4ae590-a69d-4dcc-916a-548d3e596bb6.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
@@ -230,6 +249,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
+            "image": "shopify://shop_images/Main-Image_0b6889dc-9d3a-4c3f-bd52-a07fb07c7d12.jpg",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
@@ -245,6 +265,7 @@
       "block_order": [
         "collection_t3NT6e",
         "collection_eRHTkV",
+        "collection_fBqiBP",
         "collection_UNxjYH"
       ],
       "custom_css": [
