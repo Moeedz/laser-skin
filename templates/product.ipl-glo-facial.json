@@ -183,8 +183,8 @@
         "button_style": "non_outline",
         "images_position": "left",
         "images_position_mobile": "bottom",
-        "image_ratio": "square",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "image_shape": "none",
         "image_radius": 0,
         "image_border_thickness": 0,
@@ -246,7 +246,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/2_849a4f2f-ef97-4c0c-9e16-5a711f1eadd2.jpg"
           }
         }
       },
@@ -503,7 +503,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/4.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -546,6 +546,7 @@
         "link_HqxMdr": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/3_5452f9d8-486f-4a98-af3f-e2b1a47f8940.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -672,11 +673,11 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/5_a56cd006-7731-4d7c-9dc3-99455f890850.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "steps_custom": false,
         "steps_font": "josefin_sans_n4",
         "steps_size": 12,
