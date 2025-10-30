@@ -246,7 +246,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/CLF-2.jpg"
           }
         }
       },
@@ -504,7 +504,7 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/CLF-3_5fe55b40-0185-4220-b30f-15ce34487a14.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
         "image_ratio": "square",
@@ -547,6 +547,7 @@
         "link_3AcRYE": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/CLF-4.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -673,11 +674,11 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/CLF-5.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "steps_custom": false,
         "steps_font": "josefin_sans_n4",
         "steps_size": 12,
