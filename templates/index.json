@@ -300,7 +300,8 @@
             "video_autoplay": true,
             "video_loop": true,
             "video_muted": true,
-            "video_controls": true
+            "video_controls": true,
+            "image": "shopify://shop_images/october_special_offer_1080x1080_36220e5f-e1da-4ddb-9ec2-93824373ac85.png"
           }
         }
       },
