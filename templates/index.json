@@ -207,7 +207,7 @@
             "button_link": "shopify://products/botox-fillers-by-medical-professionals",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_eRHTkV": {
@@ -224,7 +224,7 @@
             "button_link": "shopify://products/co2-laser-resurfacing",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 10
           }
         },
         "collection_fBqiBP": {
@@ -241,7 +241,7 @@
             "button_link": "shopify://products/power-sculpt-hifem",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 6
           }
         },
         "collection_UNxjYH": {
@@ -258,7 +258,7 @@
             "button_link": "shopify://products/dermaforce-rf-microneedling",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         }
       },
@@ -281,7 +281,7 @@
         "space_items": true,
         "stack_collections": true,
         "collections_per_row_mobile": "1",
-        "collections_per_row_desktop": 3,
+        "collections_per_row_desktop": 4,
         "subheading": "",
         "title": "<strong>Treatments Our Clients Love</strong>",
         "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
