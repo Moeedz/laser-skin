@@ -28,6 +28,9 @@
     },
     "main": {
       "type": "main-collection",
+      "custom_css": [
+        ".product-card__figure {border: solid 1px #0000003d;}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "hide_product_information": false,
