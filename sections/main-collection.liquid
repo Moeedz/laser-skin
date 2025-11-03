@@ -54,6 +54,45 @@ CSS
     --collection-items-per-row-large: 1;
   }
 
+  {%- if section.settings.enable_list_view -%}
+  /* List View Styling */
+  #shopify-section-{{ section.id }} .product-list {
+    --collection-items-per-row-large: 1 !important;
+    --collection-items-per-row-medium: 1 !important;
+    --collection-items-per-row-compact: 1 !important;
+  }
+
+  #shopify-section-{{ section.id }} .product-list .product-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .product-list .product-card {
+      grid-template-columns: 250px 1fr;
+      gap: 2rem;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .product-list .product-card__figure {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .product-list .product-card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  /* Hide grid mode selector when list view is enabled */
+  #shopify-section-{{ section.id }} .collection-toolbar__layout-switch-list {
+    display: none;
+  }
+  {%- endif -%}
+
   #shopify-section-{{ section.id }} .product-list {
     --product-list-max-items-per-row-allowed: 99 !important; {% comment %}On collection page, we explicitly set a number of items so we don't want this{% endcomment %}
   }
@@ -61,9 +100,11 @@ CSS
   @media screen and (min-width: 700px) {
     #shopify-section-{{ section.id }} {
       {% comment %}On tablet, we do not have any sidebar, so we can fix it{% endcomment %}
+      {%- unless section.settings.enable_list_view -%}
       --collection-items-per-row-compact: 4;
       --collection-items-per-row-medium: 3;
       --collection-items-per-row-large: 2;
+      {%- endunless -%}
     }
   }
 
@@ -71,15 +112,17 @@ CSS
     #shopify-section-{{ section.id }} {
       {%- comment -%}Starting from 1000px it starts to get funky, as we can have or not the sidebar{%- endcomment -%}
 
-      {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
-        --collection-items-per-row-compact: 4;
-        --collection-items-per-row-medium: 3;
-        --collection-items-per-row-large: 2;
-      {%- else -%}
-        --collection-items-per-row-compact: 6;
-        --collection-items-per-row-medium: 4;
-        --collection-items-per-row-large: 3;
-      {%- endif -%}
+      {%- unless section.settings.enable_list_view -%}
+        {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
+          --collection-items-per-row-compact: 4;
+          --collection-items-per-row-medium: 3;
+          --collection-items-per-row-large: 2;
+        {%- else -%}
+          --collection-items-per-row-compact: 6;
+          --collection-items-per-row-medium: 4;
+          --collection-items-per-row-large: 3;
+        {%- endif -%}
+      {%- endunless -%}
     }
 
     #shopify-section-{{ section.id }} .collection {
@@ -93,11 +136,13 @@ CSS
     #shopify-section-{{ section.id }} {
       {%- comment -%}Starting from 1400px we can afford having more content even in sidebar mode{%- endcomment -%}
 
-      {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
-        --collection-items-per-row-compact: 6;
-        --collection-items-per-row-medium: 4;
-        --collection-items-per-row-large: 3;
-      {%- endif -%}
+      {%- unless section.settings.enable_list_view -%}
+        {%- if section.settings.filter_layout == 'sidebar' and show_filters -%}
+          --collection-items-per-row-compact: 6;
+          --collection-items-per-row-medium: 4;
+          --collection-items-per-row-large: 3;
+        {%- endif -%}
+      {%- endunless -%}
     }
   }
 </style>
@@ -167,7 +212,7 @@ LIQUID
               </p>
             {%- endif -%}
 
-            {%- if section.settings.show_grid_mode_selector -%}
+            {%- if section.settings.show_grid_mode_selector and section.settings.enable_list_view == false -%}
               <collection-layout-switch device="mobile" class="collection-toolbar__layout-switch-list sm:hidden" aria-controls="product-list-{{ section.id }}">
                 <button type="button" value="large" class="collection-toolbar__button {% if products_mobile_grid_mode == 'large' %}is-active{% endif %}" aria-label="Switch to larger product images">{%- render 'icon' with 'collection-layout-1' -%}</button>
                 <button type="button" value="medium" class="collection-toolbar__button {% if products_mobile_grid_mode == 'medium' %}is-active{% endif %}" aria-label="Switch to smaller product images">{%- render 'icon' with 'collection-layout-2' -%}</button>
@@ -222,7 +267,7 @@ LIQUID
               <div class="collection__main">
                 {%- render 'active-facets', results: collection -%}
 
-                <product-list id="product-list-{{ section.id }}" class="product-list" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}">
+                <product-list id="product-list-{{ section.id }}" class="product-list{% if section.settings.enable_list_view %} product-list--horizontal{% endif %}" collection-mobile-layout="{{ products_mobile_grid_mode }}" collection-desktop-layout="{{ products_desktop_grid_mode }}">
                   {%- for product in collection.products -%}
                     {%- render 'product-card', product: product, reveal: settings.stagger_products_apparition, position: forloop.index, hide_product_information: section.settings.hide_product_information, stacked: true -%}
                   {%- endfor -%}
@@ -259,6 +304,13 @@ LIQUID
     {
       "type": "header",
       "content": "t:global.product_list.product_list_category"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_list_view",
+      "label": "Enable list view layout",
+      "info": "Display products horizontally with image on left and details on right",
+      "default": false
     },
     {
       "type": "range",
