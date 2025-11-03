@@ -2243,6 +2243,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 .product-card__info :is(.price-list, .rating-badge) {
   justify-content: center;
+  margin-right: 40px;
 }
 
 .product-card__info .color-swatch {
