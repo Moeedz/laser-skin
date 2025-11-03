@@ -97,6 +97,11 @@ CSS
     display: flex !important;
     justify-content: space-between !important;
 }
+  @media screen and (max-width: 767px) {
+#shopify-section-{{ section.id }} .product-list .product-card__info .v-stack.justify-items-center.gap-2 .v-stack.justify-items-center.gap-1 {
+    flex-flow: column !important;
+}
+}
   /* Hide grid mode selector when list view is enabled */
   #shopify-section-{{ section.id }} .collection-toolbar__layout-switch-list {
     display: none;
