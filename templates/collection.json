@@ -34,6 +34,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "hide_product_information": false,
+        "enable_list_view": true,
         "products_per_page": 50,
         "products_per_row_mobile": "2",
         "products_size_desktop": "medium",
