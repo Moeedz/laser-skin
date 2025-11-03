@@ -77,7 +77,8 @@ CSS
   }
 
   #shopify-section-{{ section.id }} .product-list .product-card__figure {
-    margin-bottom: 0;
+    margin-right: 0 !important;
+    margin: calc(40% / 4);
   }
 
   #shopify-section-{{ section.id }} .product-list .product-card__info {
@@ -88,6 +89,14 @@ CSS
     align-items: center;
   }
 
+  #shopify-section-{{ section.id }} .product-list .product-card__info .v-stack.justify-items-center.gap-2 {
+    width: 100% !important;
+  }
+  #shopify-section-{{ section.id }} .product-list .product-card__info .v-stack.justify-items-center.gap-2 .v-stack.justify-items-center.gap-1 {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
   /* Hide grid mode selector when list view is enabled */
   #shopify-section-{{ section.id }} .collection-toolbar__layout-switch-list {
     display: none;
