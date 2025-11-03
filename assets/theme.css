@@ -2234,7 +2234,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 .product-card__info {
-  text-align: center;
+  /* text-align: center; */
   align-content: start;
   justify-items: center;
   gap: .75rem;
