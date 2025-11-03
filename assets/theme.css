@@ -2240,7 +2240,11 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   gap: .75rem;
   display: grid;
 }
-
+@media screen and (max-width: 767px) {
+.product-card__info :is(.price-list,.rating-badge) {
+    justify-content: start !important;
+}
+}
 .product-card__info :is(.price-list, .rating-badge) {
   justify-content: center;
   margin-right: 40px;
