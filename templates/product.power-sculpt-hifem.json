@@ -851,18 +851,6 @@
         "answer_bg_color": "#ffffff",
         "questions-font-size": 1
       }
-    },
-    "custom_liquid_P3aK7W": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div id=\"pabau-book-now\"> </div>",
-        "text_alignment": "center"
-      }
     }
   },
   "order": [
@@ -876,7 +864,6 @@
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
-    "ss_simple_faq_jiYFWj",
-    "custom_liquid_P3aK7W"
+    "ss_simple_faq_jiYFWj"
   ]
 }
