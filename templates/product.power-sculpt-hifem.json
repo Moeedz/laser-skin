@@ -401,7 +401,7 @@
         "column1_subtitle": "Longer courses available on request",
         "show_button_column1": true,
         "button_text_column1": "BOOK NOW",
-        "button_link_column1": "",
+        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93159&services=3552094&location=4546",
         "column2_title": "Course Of 6",
         "column2_subtitle": "Save more with packages",
         "show_button_column2": true,
@@ -464,7 +464,7 @@
           "type": "button",
           "settings": {
             "button": "Book Now",
-            "button_url": "",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93159&services=3552094&location=4546",
             "button_custom": false,
             "button_font": "josefin_sans_n4",
             "button_size": 16,
