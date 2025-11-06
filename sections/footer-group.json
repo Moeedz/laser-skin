@@ -13,14 +13,13 @@
   "sections": {
     "sticky_mobile_bottom_bar_LKUdnM": {
       "type": "sticky-mobile-bottom-bar",
-      "disabled": true,
       "name": "Sticky Mobile Bottom Bar",
       "settings": {
         "button_text": "BOOK FREE CONSULTATION",
-        "button_link": "",
+        "button_link": "shopify://pages/contact",
         "button_bg_color": "#1a3a52",
         "button_text_color": "#ffffff",
-        "whatsapp_number": "923001234567",
+        "whatsapp_number": "44798983387",
         "whatsapp_bg_color": "#25d366"
       }
     },
