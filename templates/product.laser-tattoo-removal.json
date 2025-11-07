@@ -261,7 +261,7 @@
           "type": "slide",
           "settings": {
             "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "text": "<p><strong>Ready to erase the past and reveal clear, confident skin?</strong></p><p>Say goodbye to unwanted tattoos and hello to a fresh start with our advanced <strong>Laser Tattoo Removal</strong> treatment in Wolverhampton Whether it’s a faded design, a change in style, or simply something that no longer represents you, our state-of-the-art laser technology can safely and effectively remove unwanted ink - helping you restore the skin you love.</p><p><strong>What is Laser Tattoo Removal?</strong></p><p>Laser tattoo removal works by using precise pulses of light energy that target the pigment within the tattoo ink. The laser breaks the ink particles into tiny fragments, which are then naturally cleared away by your body over time. Unlike older removal methods that could damage the skin, our advanced laser system offers a safer, more comfortable, and highly effective solution for all skin types and ink colours.</p>",
             "button": "Book Online",
             "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195392&services=2472830&location=4546",
             "button2": "Get more information",
@@ -463,7 +463,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h2>Benefits of Laser Tattoo Removal</h2>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -479,28 +479,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Advanced laser technology targets only the ink, protecting the surrounding skin."
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Removes a wide range of tattoo pigments, including stubborn dark and coloured inks."
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Quick sessions with little to no recovery time, so you can get back to your day immediately."
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Your body naturally clears the broken-down ink, revealing clearer skin after each session."
           }
         },
         "button_HfVK4Q": {
@@ -693,7 +693,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "The Process of Laser Tattoo Removal",
             "heading_tag": "h3"
           }
         }
@@ -718,7 +718,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "text": "<p>During your consultation, we’ll discuss your tattoo removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
           }
         },
         "step_jiiz8x": {
@@ -726,7 +726,7 @@
           "settings": {
             "step": "STEP 2",
             "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the tattoo. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
           }
         },
         "step_6jaGgE": {
@@ -851,27 +851,35 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "Is laser tattoo removal suitable for all skin types?",
+            "answer": "<p>Yes. Our advanced laser system is designed to safely treat a wide range of skin tones with minimal risk of pigmentation changes.</p>"
+          }
+        },
+        "text_LpArYV": {
+          "type": "text",
+          "settings": {
+            "question": "How does laser tattoo removal work?",
+            "answer": "<p>The laser emits concentrated light energy that targets the pigment in the tattoo ink. The ink absorbs this energy and breaks down into smaller particles, which your body’s natural processes then remove over time.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Is the treatment painful",
+            "answer": "<p>Most clients describe the sensation as similar to a rubber band flicking against the skin. While it can be slightly uncomfortable, it’s very tolerable — and we can use numbing cream to make the experience as comfortable as possible.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>The number of sessions depends on the size, colour, and age of your tattoo. Most tattoos require between 6 to 10 sessions, spaced around 6–8 weeks apart, for optimal results.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_LpArYV",
         "text_JMUbWR",
         "text_UiGdVT"
       ],
