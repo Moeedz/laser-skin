@@ -1146,27 +1146,51 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "Is there any downtime?",
+            "answer": "<p>No downtime is required. You might experience mild redness or sensitivity for a few hours after treatment, but this quickly subsides, allowing you to resume your normal routine straight away.</p>"
+          }
+        },
+        "text_XJ6tAQ": {
+          "type": "text",
+          "settings": {
+            "question": "What should I do before my treatment?",
+            "answer": "<p>We recommend shaving the treatment area 24 hours before your session and avoiding sun exposure or fake tan for at least two weeks prior.</p>"
+          }
+        },
+        "text_MLKHPB": {
+          "type": "text",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results are long-lasting, once a follicle is disabled, it will not regrow. Some clients may need occasional maintenance sessions to treat any fine or regrown hairs over time</p>"
+          }
+        },
+        "text_YUQkbE": {
+          "type": "text",
+          "settings": {
+            "question": "Is the treatment painful?",
+            "answer": "<p>Most clients describe the feeling as a quick, warm flick against the skin, much more comfortable than waxing. Our advanced laser systems include cooling technology to minimise any discomfort during treatment.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>For best results, most clients require between 6 and 8 sessions. Hair grows in cycles, so multiple treatments ensure we target every follicle at the right stage of growth.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "Can all skin types be treated?",
+            "answer": "<p>Absolutely. Our advanced laser systems are suitable for a wide range of skin tones and hair types. During your consultation, we’ll assess your skin and create a personalised treatment plan.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_XJ6tAQ",
+        "text_MLKHPB",
+        "text_YUQkbE",
         "text_JMUbWR",
         "text_UiGdVT"
       ],
