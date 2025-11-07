@@ -414,7 +414,7 @@
           "settings": {
             "treatment_name": "Course Of 3",
             "treatment_name_column1": "",
-            "single_price": "850",
+            "single_price": "750",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -424,7 +424,7 @@
           "settings": {
             "treatment_name": "Course Of 6",
             "treatment_name_column1": "",
-            "single_price": "1600",
+            "single_price": "1500",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -874,7 +874,7 @@
           "type": "text",
           "settings": {
             "question": "When will I see results?",
-            "answer": "<p>You will begin to notice improvements within 1 to 2 weeks for ablative treatments and within days for non-ablative.<br/><br/>Collagen production continues to increase for several months, enhancing firmness and clarity over time.</p>"
+            "answer": "<p>You will begin to notice improvements within 4-6 weeks.<br/><br/>Collagen production continues to increase for several months, enhancing firmness and clarity over time.</p>"
           }
         },
         "text_XUDYHP": {
@@ -888,7 +888,7 @@
           "type": "text",
           "settings": {
             "question": "How many sessions do I need?",
-            "answer": "<p>Most clients see significant improvement after a single session.<br/><br/>However, a course of 2 to 3 treatments may be recommended for deeper concerns such as acne scars or more advanced signs of ageing.</p>"
+            "answer": "<p>Most clients see significant improvement after a single session.<br/><br/>However, a course of 3-6 treatments may be recommended for deeper concerns.</p>"
           }
         }
       },
