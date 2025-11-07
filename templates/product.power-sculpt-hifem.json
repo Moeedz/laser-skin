@@ -261,7 +261,7 @@
           "type": "slide",
           "settings": {
             "heading": "<h2><strong>Power Sculpt – Build Muscle. Burn Fat. Transform Your Body.</strong></h2><p></p>",
-            "text": "<h3><strong>The revolutionary body-contouring treatment that tones, lifts and defines.</strong></h3><p>Introducing <strong>Power Sculpt</strong>, the non-invasive body-sculpting treatment that uses advanced <strong>HIFEM (High-Intensity Focused Electromagnetic)</strong> technology to simultaneously <strong>build muscle and burn fat</strong> — all while you relax.</p><p>Each session delivers the equivalent of <strong>20,000 crunches, squats or glute bridges</strong>, triggering deep supramaximal muscle contractions that are impossible to achieve through regular exercise.</p><p>The result? Stronger, more defined muscles and a noticeably tighter, more sculpted physique — without downtime, needles, or recovery.</p><p></p>",
+            "text": "<h3><strong>The revolutionary body-contouring treatment that tones, lifts and defines.</strong></h3><p>Introducing <strong>Power Sculpt</strong>, the non-invasive body-sculpting treatment that uses advanced <strong>High-Intensity Focused Electromagnetic</strong> technology to simultaneously <strong>build muscle and burn fat</strong> - all while you relax.</p><p>Each session delivers the equivalent of <strong>20,000 crunches, squats or glute bridges</strong>, triggering deep supramaximal muscle contractions that are impossible to achieve through regular exercise.</p><p>The result? Stronger, more defined muscles and a noticeably tighter, more sculpted physique — without downtime, needles, or recovery.</p><p></p>",
             "button": "Book Online",
             "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93159&services=3552094&location=4546",
             "button2": "Get more information",
@@ -393,13 +393,14 @@
           "settings": {
             "treatment_name": "Powersculpt Single Session",
             "treatment_name_column1": "",
-            "single_price": "60",
+            "single_price": "50",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
         },
         "treatment_TWcErn": {
           "type": "treatment",
+          "disabled": true,
           "settings": {
             "treatment_name": "Powersculpt",
             "treatment_name_column1": "Course Of 3",
@@ -413,7 +414,7 @@
           "settings": {
             "treatment_name": "Course of 6",
             "treatment_name_column1": "",
-            "single_price": "300",
+            "single_price": "250",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -694,7 +695,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "The Process of Power Sculpt",
             "heading_tag": "h3"
           }
         }
@@ -874,7 +875,7 @@
           "type": "text",
           "settings": {
             "question": "How many sessions will I need?",
-            "answer": "<p>We recommend a course of 4 to 6 sessions, usually spaced over 2 to 3 weeks, for the best results.</p>"
+            "answer": "<p>We recommend a course of 6 sessions once every 1/2 weeks to see optimal results.</p>"
           }
         }
       },
