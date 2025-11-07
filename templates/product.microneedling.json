@@ -404,7 +404,7 @@
           "settings": {
             "treatment_name": "Radio Frequency Microneedling + PRP",
             "treatment_name_column1": "",
-            "single_price": "320",
+            "single_price": "350",
             "treatment_name_column2": "RFM 5 Sessions",
             "course_price": "1100"
           }
@@ -759,7 +759,7 @@
           "settings": {
             "step": "STEP 2",
             "title": "PROCEDURE",
-            "text": "<p>After a detailed consultation with one of our <strong>skin specialists</strong>, a topical anaesthetic is applied for comfort. Ultra-fine, gold-plated needles create micro-channels in the skin while controlled RF energy heats the deeper layers, triggering collagen production and instant tightening.</p>"
+            "text": "<p>After a detailed consultation with one of our skin specialists, ultra-fine, gold-plated needles create micro-channels in the skin while controlled RF energy heats the deeper layers, triggering collagen production and instant tightening.</p>"
           }
         },
         "step_6jaGgE": {
