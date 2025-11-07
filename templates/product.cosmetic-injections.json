@@ -726,7 +726,7 @@
           "settings": {
             "step": "STEP 2",
             "title": "Treatment",
-            "text": "<p>Once your plan is agreed, Dr Scotton carefully administers the selected injectable product using advanced techniques for precision and natural results.<br/><br/>Whether it is wrinkle-relaxing injections, dermal fillers, or a skin booster, every treatment is carried out in a calm, clinical environment with comfort as a priority.<br/><br/>Sessions typically take 30 to 45 minutes and require minimal downtime.</p>"
+            "text": "<p>Once your plan is agreed, Dr Scotton carefully administers the selected injectable product using advanced techniques for precision and natural results.<br/><br/>Whether it is wrinkle-relaxing injections or a skin booster, every treatment is carried out in a calm, clinical environment with comfort as a priority.<br/><br/>Sessions typically take 15-30 minutes and require minimal downtime.</p>"
           }
         },
         "step_6jaGgE": {
@@ -734,7 +734,7 @@
           "settings": {
             "step": "STEP 3",
             "title": "Aftercare and Maintenance",
-            "text": "<p>After treatment, you may experience mild redness or swelling at the injection sites which settles quickly.<br/><br/>Results develop over the following days, leaving the skin smoother and more refined.<br/><br/>Regular maintenance sessions every few months help preserve and enhance your results over time.</p>"
+            "text": "<p>After treatment, you may experience mild redness or swelling at the injection sites which settles quickly.<br/><br/>Results develop over 1/2 weeks leaving the skin smoother and more refined.<br/><br/>Regular maintenance sessions every few months help preserve and enhance your results over time.</p>"
           }
         }
       },
