@@ -442,7 +442,7 @@
         "section_title": "Price List",
         "show_two_columns": false,
         "column1_title": "C02 Laser resurfacing",
-        "column1_subtitle": "Longer Course Prices Are Available",
+        "column1_subtitle": "",
         "show_button_column1": true,
         "button_text_column1": "BOOK ONLINE",
         "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3552096&location=4546",
@@ -719,7 +719,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>Your treatment begins with a detailed consultation with one of our qualified medical professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether ablative or non-ablative resurfacing is most suitable.<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
+            "text": "<p>Your treatment begins with a detailed consultation with one of our qualified professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether ablative or non-ablative resurfacing is most suitable.<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
           }
         },
         "step_jiiz8x": {
@@ -853,7 +853,7 @@
           "type": "text",
           "settings": {
             "question": "What is the difference between ablative and non-ablative CO2 laser?",
-            "answer": "<p>Ablative CO2 laser resurfacing removes thin layers of damaged skin, producing dramatic results for deep lines and scarring.</p><p>Non-ablative CO2 laser heats the deeper dermal layers without removing surface tissue, providing subtle rejuvenation and shorter recovery time.</p>"
+            "answer": "<p>Ablative resurfacing removes damaged cells on the surface, while non-ablative treatment works deeper to remodel collagen without breaking the skin barrier. </p><p></p>"
           }
         },
         "text_JMUbWR": {
