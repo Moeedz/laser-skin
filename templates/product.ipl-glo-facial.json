@@ -261,7 +261,7 @@
           "type": "slide",
           "settings": {
             "heading": "<h3><strong>Advanced Light-Based Treatment for Clearer, Brighter, and More Even Skin.</strong></h3>",
-            "text": "<p>Intense Pulse Light Therapy (IPL) is a non-invasive, light-based treatment that targets pigmentation, redness, and visible veins to restore a clearer, more balanced complexion.</p><p>It works by delivering precise pulses of light energy into the skin, which are absorbed by unwanted pigment or blood vessels.</p><p>This gentle yet effective process helps reduce redness, fade pigmentation, and rejuvenate the skin without downtime.</p><p>IPL is one of our most versatile and effective therapies for achieving smooth, radiant, and even-toned skin.<br/><br/><strong>Conditions Treated with IPL</strong></p><p>IPL Therapy can effectively target and treat a range of common skin concerns including:</p><p>• Thread veins and spider veins<br/>• Sun damage and age spots<br/>• Rosacea and facial redness<br/>• Hyperpigmentation and uneven skin tone<br/>• Freckles and sun-induced pigmentation<br/>• Broken capillaries and vascular lesions<br/><br/>By gently targeting these imperfections, IPL helps restore a clearer, more even complexion while stimulating natural collagen renewal.<br/></p>",
+            "text": "<p>Intense Pulse Light Therapy (IPL) is a non-invasive, light-based treatment that targets pigmentation, redness, and visible veins to restore a clearer, more balanced complexion.</p><p>It works by delivering precise pulses of light energy into the skin, which are absorbed by unwanted pigment or blood vessels.</p><p>This gentle yet effective process helps reduce redness, fade pigmentation, and rejuvenate the skin without downtime.</p><p>IPL is one of our most versatile and effective therapies for achieving smooth, radiant, and even-toned skin.<br/><br/><strong>Conditions Treated with IPL</strong></p><p>IPL Therapy can effectively target and treat a range of common skin concerns including:</p><p>• Thread veins and spider veins<br/>• Sun damage and age spots<br/>• Acne, Rosacea and facial redness<br/>• Hyperpigmentation and uneven skin tone<br/>• Freckles and sun-induced pigmentation<br/>• Broken capillaries and vascular lesions<br/><br/>By gently targeting these imperfections, IPL helps restore a clearer, more even complexion while stimulating natural collagen renewal.<br/></p>",
             "button": "Book Online",
             "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3564718&location=4546",
             "button2": "Get more information",
@@ -403,6 +403,16 @@
           "settings": {
             "treatment_name": "Age Spots",
             "treatment_name_column1": "",
+            "single_price": "50",
+            "treatment_name_column2": "",
+            "course_price": "472.50"
+          }
+        },
+        "treatment_mne8WG": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face IPL Facial",
+            "treatment_name_column1": "",
             "single_price": "80",
             "treatment_name_column2": "",
             "course_price": "472.50"
@@ -411,9 +421,9 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Rosacea And Facial Redness",
+            "treatment_name": "Rosacea, Nose and cheek area",
             "treatment_name_column1": "",
-            "single_price": "75",
+            "single_price": "80",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -432,6 +442,7 @@
       "block_order": [
         "treatment_NbwzRR",
         "treatment_TWcErn",
+        "treatment_mne8WG",
         "treatment_DGUDpX",
         "treatment_LWReLR"
       ],
