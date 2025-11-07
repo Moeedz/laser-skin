@@ -393,7 +393,7 @@
           "settings": {
             "treatment_name": "Acne Therapy Single Session",
             "treatment_name_column1": "",
-            "single_price": "145",
+            "single_price": "130",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -403,7 +403,7 @@
           "settings": {
             "treatment_name": "Course Of 3",
             "treatment_name_column1": "",
-            "single_price": "400",
+            "single_price": "300",
             "treatment_name_column2": "",
             "course_price": "472.50"
           }
@@ -413,7 +413,7 @@
           "settings": {
             "treatment_name": "Course Of 6",
             "treatment_name_column1": "",
-            "single_price": "800",
+            "single_price": "600",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -867,7 +867,7 @@
           "type": "text",
           "settings": {
             "question": "How does Acne Therapy work?",
-            "answer": "<p>At Laser Skin Clinics, we use a combination of LED light, chemical peels, and deep-cleansing techniques to address multiple acne triggers.<br/><br/>The treatments kill bacteria, reduce oil production, and encourage skin renewal for a clearer, calmer complexion.</p>"
+            "answer": "<p>We use a combination of different laser and energy devices alongside, facial and peels. <br/><br/>The treatments kill bacteria, reduce oil production, and encourage skin renewal for a clearer, calmer complexion.</p>"
           }
         },
         "text_JMUbWR": {
