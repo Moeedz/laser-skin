@@ -393,7 +393,7 @@
           "settings": {
             "treatment_name": "Stretch Mark Removal",
             "treatment_name_column1": "",
-            "single_price": "100",
+            "single_price": "175",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -413,7 +413,7 @@
           "settings": {
             "treatment_name": "Course Of 3",
             "treatment_name_column1": "",
-            "single_price": "270",
+            "single_price": "500",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -423,7 +423,7 @@
           "settings": {
             "treatment_name": "Course Of 6",
             "treatment_name_column1": "",
-            "single_price": "500",
+            "single_price": "900",
             "treatment_name_column2": "",
             "course_price": "337.50"
           }
@@ -718,7 +718,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "Consultation and Skin Assessment",
-            "text": "<p>Your journey begins with a personal consultation with one of our qualified medical practitioners.<br/><br/>We assess the area of concern, the age and depth of your stretch marks, and your skin type to determine the best combination of treatments for you.<br/><br/>Your plan is then tailored to achieve safe, effective, and lasting results.</p>"
+            "text": "<p>Your journey begins with a personal consultation with one of our qualified practitioners.<br/><br/>We assess the area of concern, the age and depth of your stretch marks, and your skin type to determine the best combination of treatments for you.<br/><br/>Your plan is then tailored to achieve safe, effective, and lasting results.</p>"
           }
         },
         "step_jiiz8x": {
