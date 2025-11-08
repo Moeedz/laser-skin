@@ -852,6 +852,13 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_cCjehh": {
+          "type": "text",
+          "settings": {
             "question": "How do I book?",
             "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
           }
@@ -908,6 +915,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_cCjehh",
         "text_N6AU4Q",
         "text_MDwccX",
         "text_yJg3mH",
