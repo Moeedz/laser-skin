@@ -515,7 +515,7 @@
             "button_size_mobile": 16,
             "button_height": 100,
             "button_width": 200,
-            "button_width_mobile": 200,
+            "button_width_mobile": 700,
             "button_mt": 52,
             "button_mt_mobile": 16,
             "button_padding_vertical": 16,
