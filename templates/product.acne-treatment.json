@@ -719,7 +719,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "Consultation and Skin Analysis",
-            "text": "<p>Your acne journey begins with a detailed skin consultation and analysis on the day of the treatment<br/><br/>One of our qualified practitioners will assess your skin type, breakout patterns, and lifestyle factors that may be contributing to your acne.<br/><br/>A customised plan is then designed to address both the symptoms and underlying causes safely and effectively.</p>"
+            "text": "<p>Your consultation will be done on the day of your treatment, an extra consultation session is not needed.<br/><br/>One of our qualified practitioners will assess your skin type, breakout patterns, and lifestyle factors that may be contributing to your acne.<br/><br/>A customised plan is then designed to address both the symptoms and underlying causes safely and effectively.</p>"
           }
         },
         "step_jiiz8x": {
@@ -915,7 +915,7 @@
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "Who is acne therapy suitable for?",
+            "question": "Who is Acne Therapy suitable for?",
             "answer": "<p>Our acne treatments are suitable for both men and women of all skin types who suffer from mild to severe breakouts, congestion, or post-acne scarring.</p>"
           }
         },
