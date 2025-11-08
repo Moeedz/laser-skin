@@ -391,6 +391,16 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
+            "treatment_name": "Patch Test",
+            "treatment_name_column1": "",
+            "single_price": "30",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
+          }
+        },
+        "treatment_GhwhJU": {
+          "type": "treatment",
+          "settings": {
             "treatment_name": "Small Tattoo",
             "treatment_name_column1": "",
             "single_price": "45",
@@ -431,6 +441,7 @@
       },
       "block_order": [
         "treatment_NbwzRR",
+        "treatment_GhwhJU",
         "treatment_TWcErn",
         "treatment_DGUDpX",
         "treatment_LWReLR"
@@ -855,6 +866,20 @@
             "answer": "<p>Yes. Our advanced laser system is designed to safely treat a wide range of skin tones with minimal risk of pigmentation changes.</p>"
           }
         },
+        "text_763k6p": {
+          "type": "text",
+          "settings": {
+            "question": "I already had a patch test elsewhere do I need another one?",
+            "answer": "<p>Yes we must conduct our own patch test before treatment can start.</p>"
+          }
+        },
+        "text_8nArET": {
+          "type": "text",
+          "settings": {
+            "question": "How much is a patch test?",
+            "answer": "<p>£30</p>"
+          }
+        },
         "text_LpArYV": {
           "type": "text",
           "settings": {
@@ -879,6 +904,8 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_763k6p",
+        "text_8nArET",
         "text_LpArYV",
         "text_JMUbWR",
         "text_UiGdVT"
