@@ -853,7 +853,7 @@
           "type": "text",
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations upto 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but can not be refunded.</p>"
+            "answer": "<p>Cancellations upto 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
           }
         },
         "text_6bTQ9U": {
