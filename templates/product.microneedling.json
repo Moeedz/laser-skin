@@ -751,7 +751,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your treatment and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "text": "<p>Your consultation will be done on the day of your treatment, an extra consultation session is not needed.<br/><br/>We will begin with a detailed consultation by one of our qualified professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether this treatment is suitable for you<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
           }
         },
         "step_jiiz8x": {
@@ -895,25 +895,53 @@
             "answer": "<p>Yes - RF Microneedling is safe for all skin tones and types, and is fully customisable by depth and intensity.</p>"
           }
         },
-        "text_UiGdVT": {
+        "text_EBwXnT": {
           "type": "text",
           "settings": {
-            "question": "Do I need a consultation before I have RF Microneedling?",
-            "answer": "<p>We recommend a consultation before your first RF Microneedling treatment.</p><p>During your consultation, one of our qualified medical professionals will assess your skin, discuss your goals, and determine if the treatment is good for you.</p>"
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
           }
         },
-        "text_MJdEb9": {
+        "text_qHH7mH": {
           "type": "text",
           "settings": {
-            "question": "How quickly can I get booked in after I purchase my treatment?",
-            "answer": "<p>We should be able to fit you in within 7 days of purchase. We also have cancellations and can make a note on your account to give you a call should something sooner come up.</p>"
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
           }
         },
-        "text_CNRVpf": {
+        "text_Kpf4Tr": {
           "type": "text",
           "settings": {
-            "question": "What is the booking procedure?",
-            "answer": "<p>To book simply add the treatment to your cart and go through the checkout. Once you've purchased the product one of our team will give you a call within 48 hours and look for a day and time that works for you.</p>"
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_9CY8U3": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_qfp6yP": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
+        "text_R9Lmwa": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if you determine the treatment is not for me?",
+            "answer": "<p>You will be issued a full refund.</p>"
+          }
+        },
+        "text_czPQNr": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
         "text_UeEfyf": {
@@ -934,9 +962,13 @@
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT",
-        "text_MJdEb9",
-        "text_CNRVpf",
+        "text_EBwXnT",
+        "text_qHH7mH",
+        "text_Kpf4Tr",
+        "text_9CY8U3",
+        "text_qfp6yP",
+        "text_R9Lmwa",
+        "text_czPQNr",
         "text_UeEfyf",
         "text_6TapGq"
       ],
