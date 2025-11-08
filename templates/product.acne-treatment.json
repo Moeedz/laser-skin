@@ -852,6 +852,13 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_mqGCre": {
+          "type": "text",
+          "settings": {
             "question": "How does payment work?",
             "answer": "<p>Payment is made online when making your appointment.</p>"
           }
@@ -915,6 +922,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_mqGCre",
         "text_cCjehh",
         "text_N6AU4Q",
         "text_MDwccX",
