@@ -719,7 +719,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>Your treatment begins with a detailed consultation with one of our qualified professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether this treatment is suitable for you<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
+            "text": "<p>Your consultation will be done on the day of your treatment, an extra consultation session is not needed.<br/><br/>We will begin with a detailed consultation by one of our qualified professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether this treatment is suitable for you<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
           }
         },
         "step_jiiz8x": {
@@ -866,22 +866,36 @@
         "text_AYYwGh": {
           "type": "text",
           "settings": {
-            "question": "Question text",
-            "answer": "<p>Answer richtext</p>"
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
         "text_Najw7q": {
           "type": "text",
           "settings": {
-            "question": "Question text",
-            "answer": "<p>Answer richtext</p>"
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
           }
         },
         "text_FgKQjA": {
           "type": "text",
           "settings": {
-            "question": "Question text",
-            "answer": "<p>Answer richtext</p>"
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
+          }
+        },
+        "text_RLjMrU": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_gbpjCk": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>f you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
           }
         },
         "text_JMUbWR": {
@@ -926,6 +940,8 @@
         "text_AYYwGh",
         "text_Najw7q",
         "text_FgKQjA",
+        "text_RLjMrU",
+        "text_gbpjCk",
         "text_JMUbWR",
         "text_UiGdVT",
         "text_P8rQpD",
