@@ -852,6 +852,20 @@
             "answer": "<p>No, the Carbon Facial is very comfortable.</p><p>You may feel a mild warmth or light snapping sensation as the laser works, but most clients find the experience relaxing.</p>"
           }
         },
+        "text_D4FYRJ": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if you determine the treatment is not for me?",
+            "answer": "<p>You will be issued a full refund.</p>"
+          }
+        },
+        "text_qkqAHH": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
@@ -894,6 +908,8 @@
         "text_3Bf6HW",
         "text_gRixBx",
         "text_JMUbWR",
+        "text_D4FYRJ",
+        "text_qkqAHH",
         "text_UiGdVT",
         "text_zRLFXn",
         "text_BBR9dw",
