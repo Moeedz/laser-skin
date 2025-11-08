@@ -820,6 +820,13 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations upto 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
+        "text_r9pPVi": {
+          "type": "text",
+          "settings": {
             "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
             "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/>- Contact us via email at info@laserskinclinics.co.uk<br/>- Call us during opening hours on 01902 256667<br/>- Send us a whatsapp by clicking the Whatsapp button on the website.</p>"
           }
@@ -883,6 +890,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_r9pPVi",
         "text_3Bf6HW",
         "text_gRixBx",
         "text_JMUbWR",
