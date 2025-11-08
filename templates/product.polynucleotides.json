@@ -856,6 +856,48 @@
             "answer": "<p>Once injected into the skin, polynucleotides attract water molecules and promote cellular renewal.</p><p>They help rebuild the skin’s extracellular matrix, improving structure, firmness, and elasticity over time.</p>"
           }
         },
+        "text_cjNbFY": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_jwTewj": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+          }
+        },
+        "text_bpBtfB": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_QJYKVM": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_7QAeEF": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>f you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_WtVEUr": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
@@ -901,6 +943,12 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_cjNbFY",
+        "text_jwTewj",
+        "text_bpBtfB",
+        "text_QJYKVM",
+        "text_7QAeEF",
+        "text_WtVEUr",
         "text_JMUbWR",
         "text_UiGdVT",
         "text_wQBdgU",
