@@ -852,6 +852,13 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
+          }
+        },
+        "text_N6AU4Q": {
+          "type": "text",
+          "settings": {
             "question": "Do I need to book a consultation before my first session?",
             "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
           }
@@ -901,6 +908,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_N6AU4Q",
         "text_MDwccX",
         "text_yJg3mH",
         "text_g8RX6D",
