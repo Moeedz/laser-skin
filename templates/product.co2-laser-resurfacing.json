@@ -856,6 +856,34 @@
             "answer": "<p>Ablative resurfacing removes damaged cells on the surface, while non-ablative treatment works deeper to remodel collagen without breaking the skin barrier. </p><p></p>"
           }
         },
+        "text_zWknmA": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
+        "text_AYYwGh": {
+          "type": "text",
+          "settings": {
+            "question": "Question text",
+            "answer": "<p>Answer richtext</p>"
+          }
+        },
+        "text_Najw7q": {
+          "type": "text",
+          "settings": {
+            "question": "Question text",
+            "answer": "<p>Answer richtext</p>"
+          }
+        },
+        "text_FgKQjA": {
+          "type": "text",
+          "settings": {
+            "question": "Question text",
+            "answer": "<p>Answer richtext</p>"
+          }
+        },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
@@ -894,6 +922,10 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_zWknmA",
+        "text_AYYwGh",
+        "text_Najw7q",
+        "text_FgKQjA",
         "text_JMUbWR",
         "text_UiGdVT",
         "text_P8rQpD",
