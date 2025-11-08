@@ -687,7 +687,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "Consultation and Skin Preparation",
-            "text": "<p>Your treatment begins with a skin consultation to assess your concerns and determine the most suitable settings for your skin type.<br/><br/>The skin is then cleansed and a thin layer of medical-grade liquid carbon is applied.<br/><br/>The carbon acts as a powerful absorber, drawing out impurities, oil, and dead skin cells from deep within the pores.</p>"
+            "text": "<p>Your appointment begins with a detailed skin consultation and analysis on the day of the treatment<br/><br/>The skin is then cleansed and a thin layer of medical-grade liquid carbon is applied.<br/><br/>The carbon acts as a powerful absorber, drawing out impurities, oil, and dead skin cells from deep within the pores.</p>"
           }
         },
         "step_jiiz8x": {
@@ -820,6 +820,13 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/>- Contact us via email at info@laserskinclinics.co.uk<br/>- Call us during opening hours on 01902 256667<br/>- Send us a whatsapp by clicking the Whatsapp button on the website.</p>"
+          }
+        },
+        "text_3Bf6HW": {
+          "type": "text",
+          "settings": {
             "question": "When will I see results?",
             "answer": "<p>You’ll notice an immediate improvement in clarity, smoothness, and glow.<br/><br/>Pore size reduction and improved tone become more visible after a few sessions.</p>"
           }
@@ -851,14 +858,39 @@
             "question": "How many sessions will I need?",
             "answer": "<p>For best results, we recommend a course of 4 to 6 treatments spaced 2 to 4 weeks apart.<br/><br/>Your practitioner will advise on the ideal number based on your skin type and goals.</p>"
           }
+        },
+        "text_BBR9dw": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
+          }
+        },
+        "text_nKC6Hg": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_89wXWA": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_3Bf6HW",
         "text_gRixBx",
         "text_JMUbWR",
         "text_UiGdVT",
-        "text_zRLFXn"
+        "text_zRLFXn",
+        "text_BBR9dw",
+        "text_nKC6Hg",
+        "text_89wXWA"
       ],
       "name": "SS - FAQ #1",
       "settings": {
