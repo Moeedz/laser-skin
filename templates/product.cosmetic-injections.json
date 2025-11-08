@@ -911,6 +911,13 @@
             "answer": "<p>Downtime is minimal.<br/><br/>You may have slight redness or swelling immediately after treatment, but this normally settles within a few hours.</p>"
           }
         },
+        "text_ajEmr6": {
+          "type": "text",
+          "settings": {
+            "question": "What product do we use when administrating anti wrinkle injections?",
+            "answer": "<p>We only use botox</p>"
+          }
+        },
         "text_LjyLRP": {
           "type": "text",
           "settings": {
@@ -936,6 +943,7 @@
         "text_MpyGVf",
         "text_JMUbWR",
         "text_UiGdVT",
+        "text_ajEmr6",
         "text_LjyLRP",
         "text_6DkaHf"
       ],
