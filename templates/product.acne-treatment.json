@@ -852,6 +852,13 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_MDwccX": {
+          "type": "text",
+          "settings": {
             "question": "Does the treatment hurt?",
             "answer": "<p>No, Acne Therapy is gentle and non-invasive.<br/><br/>You may feel a light tingling or warmth during the procedure, but it is generally very comfortable.</p>"
           }
@@ -894,6 +901,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_MDwccX",
         "text_yJg3mH",
         "text_g8RX6D",
         "text_JMUbWR",
