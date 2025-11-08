@@ -849,11 +849,46 @@
     "ss_simple_faq_jiYFWj": {
       "type": "ss-simple-faq",
       "blocks": {
+        "text_NzGjnk": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
             "question": "What makes HydroFacial different from a regular facial?",
             "answer": "<p>Unlike a traditional facial, HydroFacial delivers consistent, medical-grade results using advanced technology rather than manual extractions.</p><p>It penetrates deeper into the skin to remove debris from pores and replenish essential moisture all with no irritation, no downtime, and visible results after a single treatment.</p>"
+          }
+        },
+        "text_Jn4LDD": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below<br/><br/>- Use the enquiry button.<br/>- Contact us via email - info@laserskinclinics.co.uk<br/>- Call us during opening hours on 01902 256667<br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_N46HGf": {
+          "type": "text",
+          "settings": {
+            "question": "What happens If I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_WrgkHK": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+          }
+        },
+        "text_RtKhXw": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
           }
         },
         "text_JMUbWR": {
@@ -893,7 +928,12 @@
         }
       },
       "block_order": [
+        "text_NzGjnk",
         "text_Dpx4Qh",
+        "text_Jn4LDD",
+        "text_N46HGf",
+        "text_WrgkHK",
+        "text_RtKhXw",
         "text_JMUbWR",
         "text_UiGdVT",
         "text_F4JeBA",
