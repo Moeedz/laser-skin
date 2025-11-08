@@ -718,7 +718,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "Consultation and Skin Assessment",
-            "text": "<p>Your journey begins with a personal consultation with one of our qualified practitioners.<br/><br/>We assess the area of concern, the age and depth of your stretch marks, and your skin type to determine the best combination of treatments for you.<br/><br/>Your plan is then tailored to achieve safe, effective, and lasting results.</p>"
+            "text": "<p>Your consultation will be done on the day of your treatment, an extra consultation session is not needed.<br/><br/>We will assess the area of concern, the age and depth of your stretch marks, and your skin type to determine the best combination of treatments for you.<br/><br/>Your plan is then tailored to achieve safe, effective, and lasting results.</p>"
           }
         },
         "step_jiiz8x": {
@@ -855,11 +855,53 @@
             "answer": "<p>At Laser Skin Clinics, we use fractional CO2 laser and RF microneedling to deliver controlled energy into the skin.<br/><br/>This stimulates natural collagen production and encourages new, healthy skin cells to replace damaged tissue.</p>"
           }
         },
+        "text_Wzn3k8": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_qiUyUY": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+          }
+        },
+        "text_HDhD4b": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_EjJ3nY": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_DRf8A3": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
             "question": "Who is the treatment suitable for?",
             "answer": "<p>Stretch Mark Removal is suitable for both men and women with stretch marks caused by pregnancy, weight changes, or growth spurts.<br/><br/>It can be safely used on areas such as the abdomen, thighs, hips, chest, and upper arms.</p>"
+          }
+        },
+        "text_JRgDXm": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
           }
         },
         "text_UiGdVT": {
@@ -886,7 +928,13 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_Wzn3k8",
+        "text_qiUyUY",
+        "text_HDhD4b",
+        "text_EjJ3nY",
+        "text_DRf8A3",
         "text_JMUbWR",
+        "text_JRgDXm",
         "text_UiGdVT",
         "text_MX67kq",
         "text_tMfFXC"
