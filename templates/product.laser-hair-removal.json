@@ -388,6 +388,18 @@
     "treatment_pricing_enhanced_XUyycc": {
       "type": "treatment-pricing-enhanced",
       "blocks": {
+        "treatment_rYjJ4z": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Consultation",
+            "treatment_name_column1": "",
+            "price_column1": "30",
+            "treatment_name_column2": "",
+            "price_column2": "30",
+            "treatment_name_column3": "",
+            "price_column3": "30"
+          }
+        },
         "treatment_jfbw9f": {
           "type": "treatment",
           "settings": {
@@ -546,6 +558,7 @@
         }
       },
       "block_order": [
+        "treatment_rYjJ4z",
         "treatment_jfbw9f",
         "treatment_JApaDh",
         "treatment_qBf64k",
@@ -593,6 +606,18 @@
     "treatment_pricing_enhanced_dtHQt9": {
       "type": "treatment-pricing-enhanced",
       "blocks": {
+        "treatment_ezkAka": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Consultation",
+            "treatment_name_column1": "",
+            "price_column1": "30",
+            "treatment_name_column2": "",
+            "price_column2": "30",
+            "treatment_name_column3": "",
+            "price_column3": "30"
+          }
+        },
         "treatment_wzNT7p": {
           "type": "treatment",
           "settings": {
@@ -643,6 +668,7 @@
         }
       },
       "block_order": [
+        "treatment_ezkAka",
         "treatment_wzNT7p",
         "treatment_XDYMwd",
         "treatment_rJ63Ef",
