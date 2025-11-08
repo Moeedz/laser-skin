@@ -877,6 +877,13 @@
             "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
           }
         },
+        "text_iapnQM": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if you determine the treatment is not for me?",
+            "answer": "<p>You will be issued a full refund.</p>"
+          }
+        },
         "text_FgKQjA": {
           "type": "text",
           "settings": {
@@ -939,6 +946,7 @@
         "text_zWknmA",
         "text_AYYwGh",
         "text_Najw7q",
+        "text_iapnQM",
         "text_FgKQjA",
         "text_RLjMrU",
         "text_gbpjCk",
