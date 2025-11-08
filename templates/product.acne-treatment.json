@@ -623,7 +623,7 @@
         "link_JLnhBL": {
           "type": "link",
           "settings": {
-            "image": "shopify://shop_images/acne-therapy-4.jpg",
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.22.35_8f64ff19.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -719,7 +719,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "Consultation and Skin Analysis",
-            "text": "<p>Your consultation will be done on the day of your treatment, an extra consultation session is not needed.<br/><br/>One of our qualified practitioners will assess your skin type, breakout patterns, and lifestyle factors that may be contributing to your acne.<br/><br/>A customised plan is then designed to address both the symptoms and underlying causes safely and effectively.</p>"
+            "text": "<p>Your acne journey begins with a detailed skin consultation and analysis.<br/><br/>One of our qualified practitioners will assess your skin type, breakout patterns, and lifestyle factors that may be contributing to your acne.<br/><br/>A customised plan is then designed to address both the symptoms and underlying causes safely and effectively.</p>"
           }
         },
         "step_jiiz8x": {
@@ -852,55 +852,6 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations upto 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
-          }
-        },
-        "text_6bTQ9U": {
-          "type": "text",
-          "settings": {
-            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
-            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a whatsapp by clicking the Whatsapp button on the website.</p>"
-          }
-        },
-        "text_PBmLeb": {
-          "type": "text",
-          "settings": {
-            "question": "What happens if I want to book a course?",
-            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
-          }
-        },
-        "text_mqGCre": {
-          "type": "text",
-          "settings": {
-            "question": "How does payment work?",
-            "answer": "<p>Payment is made online when making your appointment.</p>"
-          }
-        },
-        "text_cCjehh": {
-          "type": "text",
-          "settings": {
-            "question": "How do I book?",
-            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
-          }
-        },
-        "text_N6AU4Q": {
-          "type": "text",
-          "settings": {
-            "question": "Do I need to book a consultation before my first session?",
-            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
-          }
-        },
-        "text_4dY4rF": {
-          "type": "text",
-          "settings": {
-            "question": "What happens if you determine the treatment is not for me?",
-            "answer": "<p>You will be issued a full refund.</p>"
-          }
-        },
-        "text_MDwccX": {
-          "type": "text",
-          "settings": {
             "question": "Does the treatment hurt?",
             "answer": "<p>No, Acne Therapy is gentle and non-invasive.<br/><br/>You may feel a light tingling or warmth during the procedure, but it is generally very comfortable.</p>"
           }
@@ -922,7 +873,7 @@
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "Who is Acne Therapy suitable for?",
+            "question": "Who is acne therapy suitable for?",
             "answer": "<p>Our acne treatments are suitable for both men and women of all skin types who suffer from mild to severe breakouts, congestion, or post-acne scarring.</p>"
           }
         },
@@ -943,13 +894,6 @@
       },
       "block_order": [
         "text_Dpx4Qh",
-        "text_6bTQ9U",
-        "text_PBmLeb",
-        "text_mqGCre",
-        "text_cCjehh",
-        "text_N6AU4Q",
-        "text_4dY4rF",
-        "text_MDwccX",
         "text_yJg3mH",
         "text_g8RX6D",
         "text_JMUbWR",
