@@ -140,7 +140,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.15.11_6ae6277d.jpg"
+            "image": "shopify://shop_images/IMG_0114-2.jpg"
           }
         }
       },
@@ -270,7 +270,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.15.11_2c5173c2.jpg"
+            "image": "shopify://shop_images/2_849a4f2f-ef97-4c0c-9e16-5a711f1eadd2.jpg"
           }
         }
       },
@@ -391,6 +391,16 @@
         "treatment_NbwzRR": {
           "type": "treatment",
           "settings": {
+            "treatment_name": "Patch Test",
+            "treatment_name_column1": "",
+            "single_price": "30",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
+          }
+        },
+        "treatment_j3BaAc": {
+          "type": "treatment",
+          "settings": {
             "treatment_name": "Red and Thread Vein",
             "treatment_name_column1": "",
             "single_price": "80",
@@ -423,7 +433,7 @@
           "settings": {
             "treatment_name": "Rosacea, Nose and cheek area",
             "treatment_name_column1": "",
-            "single_price": "50",
+            "single_price": "80",
             "treatment_name_column2": "",
             "course_price": "787.50"
           }
@@ -441,6 +451,7 @@
       },
       "block_order": [
         "treatment_NbwzRR",
+        "treatment_j3BaAc",
         "treatment_TWcErn",
         "treatment_mne8WG",
         "treatment_DGUDpX",
@@ -451,7 +462,7 @@
         "show_section_title": true,
         "section_title": "Pricelist",
         "show_two_columns": false,
-        "column1_title": "Intense pulsed light therapy",
+        "column1_title": "Intense pull light therapy",
         "column1_subtitle": "(Per Session Prices) Alternative Treatments On Request",
         "show_button_column1": true,
         "button_text_column1": "BOOK ONLINE",
@@ -728,8 +739,8 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "Consultation and Skin Assessment",
-            "text": "<p>Your treatment begins with a full consultation and patch test carried out by one of our qualified practitioners.<br/><br/>We assess your skin type, concerns, and sensitivity to determine the appropriate wavelength and settings for your IPL session.<br/><br/>This ensures your treatment is both safe and highly effective.</p>"
+            "title": "Patch Test and Skin Assessment",
+            "text": "<p>Your treatment begins with a full consultation and patch test carried out by one of our qualified practitioners.<br/><br/>You must have a patch test before you can have IPL as per our insurance requirements. Once you've had a patch test you can come back for your first session 48 hours later.<br/><br/>This ensures your treatment is both safe and highly effective.<br/><br/>While conducting your patch test we will assess your skin type, concerns, and sensitivity to determine the appropriate wavelength and settings for your IPL session.<br/></p>"
           }
         },
         "step_jiiz8x": {
@@ -760,7 +771,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.15.12_05f88dd4.jpg",
+        "image": "shopify://shop_images/5_a56cd006-7731-4d7c-9dc3-99455f890850.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "original",
@@ -862,8 +873,64 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "What treatments can IPL treat",
+            "question": "What treatments can IPL treat?",
             "answer": "<p>IPL can treat a wide variety of concerns including thread veins, spider veins, sun damage, pigmentation, rosacea, and age spots.<br/><br/>It can also improve overall skin tone and texture by stimulating collagen production.</p>"
+          }
+        },
+        "text_7pBYAD": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need a patch test before starting IPL?",
+            "answer": "<p>You must have a patch test before you can have IPL as per our insurance requirements. Once you've had a patch test you can come back for your first session 48 hours later.<br/><br/>This ensures your treatment is both safe and highly effective.</p>"
+          }
+        },
+        "text_8igXfx": {
+          "type": "text",
+          "settings": {
+            "question": "How much will the patch test cost?",
+            "answer": "<p>The patch test will be £30 which is paid upon booking your appointment</p>"
+          }
+        },
+        "text_wmqzjd": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book my patch test?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+          }
+        },
+        "text_KjQ8cq": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_gePVTj": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_tAa6wK": {
+          "type": "text",
+          "settings": {
+            "question": "Question text",
+            "answer": "<p>Answer richtext</p>"
+          }
+        },
+        "text_XW3hwH": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
+        "text_V4eLzX": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
           }
         },
         "text_JMUbWR": {
@@ -897,6 +964,14 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_7pBYAD",
+        "text_8igXfx",
+        "text_wmqzjd",
+        "text_KjQ8cq",
+        "text_gePVTj",
+        "text_tAa6wK",
+        "text_XW3hwH",
+        "text_V4eLzX",
         "text_JMUbWR",
         "text_UiGdVT",
         "text_b7Jhnf",
