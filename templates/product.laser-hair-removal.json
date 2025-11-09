@@ -1013,7 +1013,7 @@
           "settings": {
             "step": "STEP 1",
             "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.<br/><br/>You must have a patch test before you can start Laser Hair Removal as per our insurance requirements. Once you've had a patch test you can come back for your first session 48 hours later.<br/><br/>This ensures your treatment is both safe and highly effective.</p>"
           }
         },
         "step_jiiz8x": {
@@ -1150,6 +1150,20 @@
             "answer": "<p>You can click book test patch which will take you to our diary where you will be able to choose a slot that works for you.</p>"
           }
         },
+        "text_VRegUr": {
+          "type": "text",
+          "settings": {
+            "question": "I already had a patch test elsewhere do I need another one?",
+            "answer": "<p>Yes we must conduct our own patch test before treatment can start.</p>"
+          }
+        },
+        "text_h38rDH": {
+          "type": "text",
+          "settings": {
+            "question": "How much does a patch test cost?",
+            "answer": "<p>£30</p>"
+          }
+        },
         "text_nVHJHa": {
           "type": "text",
           "settings": {
@@ -1216,6 +1230,8 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_VRegUr",
+        "text_h38rDH",
         "text_nVHJHa",
         "text_Hir8bk",
         "text_M3G6jX",
