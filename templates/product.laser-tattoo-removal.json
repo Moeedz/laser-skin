@@ -870,7 +870,7 @@
           "type": "text",
           "settings": {
             "question": "How do I book?",
-            "answer": "<p>You can book your patch test by clicking book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+            "answer": "<p>You can book your patch test by clicking book patch test which will take you to our diary where you will be able to choose a slot that works for you.</p>"
           }
         },
         "text_C64jCF": {
