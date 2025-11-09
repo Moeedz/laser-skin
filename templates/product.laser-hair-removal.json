@@ -388,18 +388,6 @@
     "treatment_pricing_enhanced_XUyycc": {
       "type": "treatment-pricing-enhanced",
       "blocks": {
-        "treatment_rYjJ4z": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Consultation",
-            "treatment_name_column1": "",
-            "price_column1": "30",
-            "treatment_name_column2": "",
-            "price_column2": "30",
-            "treatment_name_column3": "",
-            "price_column3": "30"
-          }
-        },
         "treatment_jfbw9f": {
           "type": "treatment",
           "settings": {
@@ -558,7 +546,6 @@
         }
       },
       "block_order": [
-        "treatment_rYjJ4z",
         "treatment_jfbw9f",
         "treatment_JApaDh",
         "treatment_qBf64k",
@@ -606,18 +593,6 @@
     "treatment_pricing_enhanced_dtHQt9": {
       "type": "treatment-pricing-enhanced",
       "blocks": {
-        "treatment_ezkAka": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Consultation",
-            "treatment_name_column1": "",
-            "price_column1": "30",
-            "treatment_name_column2": "",
-            "price_column2": "30",
-            "treatment_name_column3": "",
-            "price_column3": "30"
-          }
-        },
         "treatment_wzNT7p": {
           "type": "treatment",
           "settings": {
@@ -668,7 +643,6 @@
         }
       },
       "block_order": [
-        "treatment_ezkAka",
         "treatment_wzNT7p",
         "treatment_XDYMwd",
         "treatment_rJ63Ef",
@@ -1172,6 +1146,34 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book test patch which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+          }
+        },
+        "text_nVHJHa": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_Hir8bk": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_M3G6jX": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
+        "text_QxQNbr": {
+          "type": "text",
+          "settings": {
             "question": "Is there any downtime?",
             "answer": "<p>No downtime is required. You might experience mild redness or sensitivity for a few hours after treatment, but this quickly subsides, allowing you to resume your normal routine straight away.</p>"
           }
@@ -1214,6 +1216,10 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_nVHJHa",
+        "text_Hir8bk",
+        "text_M3G6jX",
+        "text_QxQNbr",
         "text_XJ6tAQ",
         "text_MLKHPB",
         "text_YUQkbE",
