@@ -82,7 +82,7 @@
             "show_below_gallery": false,
             "icon": "picto-star",
             "title": "Benefits",
-            "content": "<p>• Deeply cleanses and removes excess oil, dirt, and impurities.<br/><br/>• Reduces active acne and helps prevent future breakouts.<br/><br/>• Kills acne-causing bacteria while calming inflammation.<br/><br/>• Improves overall skin texture and clarity.<br/><br/>• Hydrates and balances the skin without clogging pores.</p><p>This treatment combination targets the root causes of acne, restoring balance and leaving your skin visibly clearer, smoother, and healthier.</p>",
+            "content": "<p>Text goes here</p>",
             "liquid": "",
             "page": ""
           }
@@ -93,7 +93,7 @@
             "show_below_gallery": false,
             "icon": "picto-star",
             "title": "Aftercare & Results",
-            "content": "<p>You may experience mild redness or sensitivity following your session — this is normal and will subside within a few hours.</p><p><strong>Aftercare Tips:</strong><br/><br/>• Avoid touching or picking at the treated area.<br/><br/>• Skip exfoliants, retinol, and active products for 2–3 days.<br/><br/>• Keep the skin hydrated with a gentle, oil-free moisturizer.<br/><br/>• Avoid direct sunlight and apply SPF daily.</p><p>Consistent treatments and proper aftercare lead to long-term improvement — revealing a calmer, clearer, and more balanced complexion with every visit.</p>",
+            "content": "<p>Text goes here</p>",
             "liquid": "",
             "page": ""
           }
@@ -146,29 +146,53 @@
         "question_RrLqCK": {
           "type": "question",
           "settings": {
-            "question": "Hydrofacial",
-            "answer": "<p>A deep-cleansing and exfoliating facial that removes oil, dirt, and dead skin cells while infusing the skin with purifying and hydrating serums. Ideal for acne-prone and congested skin, this treatment unclogs pores and restores balance, leaving your complexion refreshed and revitalised.</p>"
+            "question": "Skin Peel",
+            "answer": "<p>Text goes here</p>"
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
-            "question": "Specialist Acne Treatment",
-            "answer": "<p>A targeted treatment designed to calm inflammation, treat active breakouts, and prevent future flare-ups. Using professional-grade products and advanced techniques, it works to clear existing blemishes while rebalancing the skin’s natural barrier for long-term results.</p>"
+            "question": "Anti-Wrinkle Injections (up to 3 areas)",
+            "answer": "<p>Text goes here</p>"
           }
         },
         "question_NR7jMw": {
           "type": "question",
           "settings": {
-            "question": "Blue Light Therapy",
-            "answer": "<p>A gentle, non-invasive therapy that targets and eliminates acne-causing bacteria beneath the skin’s surface. It reduces redness and inflammation while promoting healing, helping your skin recover faster and maintain a clearer, calmer appearance.</p>"
+            "question": "Polynucleotides",
+            "answer": "<p>Text goes here</p>"
+          }
+        },
+        "question_EfDVPP": {
+          "type": "question",
+          "settings": {
+            "question": "RF Microneedling",
+            "answer": "<p>Text goes here</p>"
+          }
+        },
+        "question_3WxPfa": {
+          "type": "question",
+          "settings": {
+            "question": "CO2 Resurfacing",
+            "answer": "<p>Text goes here</p>"
+          }
+        },
+        "question_mbR4tM": {
+          "type": "question",
+          "settings": {
+            "question": "Celluma Red Light Therapy",
+            "answer": "<p>Text goes here</p>"
           }
         }
       },
       "block_order": [
         "question_RrLqCK",
         "question_DLzrmg",
-        "question_NR7jMw"
+        "question_NR7jMw",
+        "question_EfDVPP",
+        "question_3WxPfa",
+        "question_mbR4tM"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
