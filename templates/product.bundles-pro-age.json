@@ -1,0 +1,231 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "rating_L6n6pm": {
+          "type": "rating",
+          "settings": {
+            "show_empty": true,
+            "rating_mode": "rating"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#e6b325",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "accordion_YdJrFX": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Benefits",
+            "content": "<p>• Deeply cleanses and removes excess oil, dirt, and impurities.<br/><br/>• Reduces active acne and helps prevent future breakouts.<br/><br/>• Kills acne-causing bacteria while calming inflammation.<br/><br/>• Improves overall skin texture and clarity.<br/><br/>• Hydrates and balances the skin without clogging pores.</p><p>This treatment combination targets the root causes of acne, restoring balance and leaving your skin visibly clearer, smoother, and healthier.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_GdNBTM": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Aftercare & Results",
+            "content": "<p>You may experience mild redness or sensitivity following your session — this is normal and will subside within a few hours.</p><p><strong>Aftercare Tips:</strong><br/><br/>• Avoid touching or picking at the treated area.<br/><br/>• Skip exfoliants, retinol, and active products for 2–3 days.<br/><br/>• Keep the skin hydrated with a gentle, oil-free moisturizer.<br/><br/>• Avoid direct sunlight and apply SPF daily.</p><p>Consistent treatments and proper aftercare lead to long-term improvement — revealing a calmer, clearer, and more balanced complexion with every visit.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 2,
+            "show_below_gallery": true,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "rating_L6n6pm",
+        "description",
+        "payment_terms",
+        "separator",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "accordion_YdJrFX",
+        "accordion_GdNBTM",
+        "complementary_products"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "xl",
+        "product_info_size": 50,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "faq_bradJb": {
+      "type": "faq",
+      "blocks": {
+        "question_RrLqCK": {
+          "type": "question",
+          "settings": {
+            "question": "Hydrofacial",
+            "answer": "<p>A deep-cleansing and exfoliating facial that removes oil, dirt, and dead skin cells while infusing the skin with purifying and hydrating serums. Ideal for acne-prone and congested skin, this treatment unclogs pores and restores balance, leaving your complexion refreshed and revitalised.</p>"
+          }
+        },
+        "question_DLzrmg": {
+          "type": "question",
+          "settings": {
+            "question": "Specialist Acne Treatment",
+            "answer": "<p>A targeted treatment designed to calm inflammation, treat active breakouts, and prevent future flare-ups. Using professional-grade products and advanced techniques, it works to clear existing blemishes while rebalancing the skin’s natural barrier for long-term results.</p>"
+          }
+        },
+        "question_NR7jMw": {
+          "type": "question",
+          "settings": {
+            "question": "Blue Light Therapy",
+            "answer": "<p>A gentle, non-invasive therapy that targets and eliminates acne-causing bacteria beneath the skin’s surface. It reduces redness and inflammation while promoting healing, helping your skin recover faster and maintain a clearer, calmer appearance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_RrLqCK",
+        "question_DLzrmg",
+        "question_NR7jMw"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "show_categories": false,
+        "subheading": "",
+        "title": "What's In The Set?",
+        "content": ""
+      }
+    },
+    "175993612397035c9e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_qFMFmN": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+          "settings": {
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
+          }
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_qFMFmN"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq_bradJb",
+    "175993612397035c9e"
+  ]
+}
