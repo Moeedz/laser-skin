@@ -146,42 +146,21 @@
         "question_RrLqCK": {
           "type": "question",
           "settings": {
-            "question": "Skin Peel",
+            "question": "Power Sculpt",
             "answer": "<p>Text goes here</p>"
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
-            "question": "Anti-Wrinkle Injections (up to 3 areas)",
-            "answer": "<p>Text goes here</p>"
-          }
-        },
-        "question_NR7jMw": {
-          "type": "question",
-          "settings": {
-            "question": "Polynucleotides",
-            "answer": "<p>Text goes here</p>"
-          }
-        },
-        "question_EfDVPP": {
-          "type": "question",
-          "settings": {
-            "question": "RF Microneedling",
+            "question": "Radio Frequency Skin Tightening",
             "answer": "<p>Text goes here</p>"
           }
         },
         "question_3WxPfa": {
           "type": "question",
           "settings": {
-            "question": "CO2 Resurfacing",
-            "answer": "<p>Text goes here</p>"
-          }
-        },
-        "question_mbR4tM": {
-          "type": "question",
-          "settings": {
-            "question": "Celluma Red Light Therapy",
+            "question": "Ultrasound Fat Cavitation",
             "answer": "<p>Text goes here</p>"
           }
         }
@@ -189,10 +168,7 @@
       "block_order": [
         "question_RrLqCK",
         "question_DLzrmg",
-        "question_NR7jMw",
-        "question_EfDVPP",
-        "question_3WxPfa",
-        "question_mbR4tM"
+        "question_3WxPfa"
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
