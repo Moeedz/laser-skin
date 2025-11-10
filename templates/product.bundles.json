@@ -80,9 +80,9 @@
           "type": "accordion",
           "settings": {
             "show_below_gallery": false,
-            "icon": "none",
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "icon": "picto-star",
+            "title": "Benefits",
+            "content": "<p>• Deeply cleanses and detoxifies the skin for a clearer complexion.</p><p>• Tightens and lifts facial contours for a naturally youthful appearance.</p><p>• Reduces fine lines, puffiness, and dark circles around the eyes.</p><p>• Boosts collagen production for long-term skin rejuvenation.</p><p>• Leaves your skin radiant, smooth, and revitalized.</p>",
             "liquid": "",
             "page": ""
           }
@@ -91,9 +91,9 @@
           "type": "accordion",
           "settings": {
             "show_below_gallery": false,
-            "icon": "none",
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "icon": "picto-star",
+            "title": "Aftercare & Results",
+            "content": "<p>You may experience mild redness or warmth immediately after your, this is completely normal and should settle within a few hours.</p><p><strong>Aftercare tips:</strong><br/><br/>• Avoid direct sun exposure and always wear SPF.<br/><br/>• Skip makeup and active skincare (like retinol or acids) for 24 hours.<br/><br/>• Keep your skin hydrated with a gentle moisturizer.</p><p>Results are often visible after the first session, with continued improvements over time as collagen production increases and skin renewal takes place.</p>",
             "liquid": "",
             "page": ""
           }
