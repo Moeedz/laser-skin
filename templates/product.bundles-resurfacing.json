@@ -82,7 +82,7 @@
             "show_below_gallery": false,
             "icon": "picto-star",
             "title": "Benefits",
-            "content": "<p>• Deeply cleanses and detoxifies the skin for a clearer complexion.</p><p>• Tightens and lifts facial contours for a naturally youthful appearance.</p><p>• Reduces fine lines, puffiness, and dark circles around the eyes.</p><p>• Boosts collagen production for long-term skin rejuvenation.</p><p>• Leaves your skin radiant, smooth, and revitalized.</p>",
+            "content": "<p>• Deeply cleanses and exfoliates to remove impurities and dead skin cells.<br/><br/>• Stimulates collagen and elastin production for firmer, smoother skin.<br/><br/>• Reduces fine lines, acne scars, and pigmentation for an even complexion.<br/><br/>• Hydrates and revitalises the skin, leaving it radiant and refreshed.<br/><br/>• Revives the under-eye area, diminishing puffiness and dark circles.</p><p>Together, these treatments work synergistically to resurface, renew, and restore your skin’s natural glow, delivering visible, long-lasting results.</p>",
             "liquid": "",
             "page": ""
           }
@@ -93,7 +93,7 @@
             "show_below_gallery": false,
             "icon": "picto-star",
             "title": "Aftercare & Results",
-            "content": "<p>You may experience mild redness or warmth immediately after your, this is completely normal and should settle within a few hours.</p><p><strong>Aftercare tips:</strong><br/><br/>• Avoid direct sun exposure and always wear SPF.<br/><br/>• Skip makeup and active skincare (like retinol or acids) for 24 hours.<br/><br/>• Keep your skin hydrated with a gentle moisturizer.</p><p>Results are often visible after the first session, with continued improvements over time as collagen production increases and skin renewal takes place.</p>",
+            "content": "<p>Following your Resurfacing Bundle treatment, you may experience mild redness, sensitivity, or slight peeling, this is a normal part of the rejuvenation process.</p><p><strong>Aftercare Tips:</strong><br/><br/>• Avoid direct sunlight and apply SPF daily.<br/><br/>• Refrain from using active skincare products (like retinol or acids) for 3–5 days.<br/><br/>• Keep your skin hydrated with a gentle, nourishing moisturizer.<br/><br/>• Avoid heat treatments, saunas, and intense exercise for 24–48 hours.</p><p>Results improve progressively as your skin heals and collagen regeneration continues, leaving you with a smoother, brighter, and more youthful complexion.</p>",
             "liquid": "",
             "page": ""
           }
@@ -146,22 +146,22 @@
         "question_RrLqCK": {
           "type": "question",
           "settings": {
-            "question": "Carbon Facial",
-            "answer": "<p>A deep-cleansing laser facial that removes impurities, tightens pores, and evens out skin tone. This treatment helps clear congestion, reduce blackheads, and leave the skin feeling instantly smoother, brighter, and more refined.</p>"
+            "question": "Hydrofacial",
+            "answer": "<p>A deep-cleansing and hydrating facial that removes impurities, exfoliates dead skin cells, and infuses the skin with essential serums. This treatment instantly refreshes dull, congested skin, leaving it smoother, clearer, and glowing with renewed vitality.</p>"
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
-            "question": "Emlift",
-            "answer": "<p>A non-invasive skin tightening treatment that uses advanced energy technology to lift and sculpt facial contours. It boosts collagen and elasticity, helping to restore firmness and definition — the perfect alternative to surgical lifting.</p>"
+            "question": "CO2 Resurfacing / RF Microneedling",
+            "answer": "<p>An advanced skin renewal treatment that stimulates collagen production and resurfaces the skin’s texture. It helps reduce fine lines, acne scars, and pigmentation while tightening and refining pores — revealing a smoother, more even, and youthful complexion.</p>"
           }
         },
         "question_NR7jMw": {
           "type": "question",
           "settings": {
-            "question": "NCTF Skin Booster (Eye Area)",
-            "answer": "<p>A powerful revitalising treatment designed specifically for the delicate under-eye area. It targets fine lines, puffiness, and dark circles while deeply hydrating and brightening the skin for a refreshed, youthful look.</p>"
+            "question": "Polynucleotides (Eye Area)",
+            "answer": "<p>A regenerative booster specifically designed to repair and strengthen the delicate under-eye skin. It improves elasticity, reduces puffiness and dark circles, and restores a bright, rejuvenated appearance around the eyes.</p>"
           }
         }
       },
