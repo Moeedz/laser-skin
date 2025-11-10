@@ -76,6 +76,28 @@
             "payment_button_text_color": ""
           }
         },
+        "accordion_YdJrFX": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_GdNBTM": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
         "complementary_products": {
           "type": "complementary_products",
           "disabled": true,
@@ -99,6 +121,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "accordion_YdJrFX",
+        "accordion_GdNBTM",
         "complementary_products"
       ],
       "settings": {
