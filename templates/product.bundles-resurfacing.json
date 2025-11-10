@@ -82,7 +82,7 @@
             "show_below_gallery": false,
             "icon": "picto-star",
             "title": "Benefits",
-            "content": "<p>• Deeply cleanses and removes excess oil, dirt, and impurities.<br/><br/>• Reduces active acne and helps prevent future breakouts.<br/><br/>• Kills acne-causing bacteria while calming inflammation.<br/><br/>• Improves overall skin texture and clarity.<br/><br/>• Hydrates and balances the skin without clogging pores.</p><p>This treatment combination targets the root causes of acne, restoring balance and leaving your skin visibly clearer, smoother, and healthier.</p>",
+            "content": "<p>• Deeply cleanses and exfoliates to remove impurities and dead skin cells.<br/><br/>• Stimulates collagen and elastin production for firmer, smoother skin.<br/><br/>• Reduces fine lines, acne scars, and pigmentation for an even complexion.<br/><br/>• Hydrates and revitalises the skin, leaving it radiant and refreshed.<br/><br/>• Revives the under-eye area, diminishing puffiness and dark circles.</p><p>Together, these treatments work synergistically to resurface, renew, and restore your skin’s natural glow, delivering visible, long-lasting results.</p>",
             "liquid": "",
             "page": ""
           }
@@ -93,7 +93,7 @@
             "show_below_gallery": false,
             "icon": "picto-star",
             "title": "Aftercare & Results",
-            "content": "<p>You may experience mild redness or sensitivity following your session — this is normal and will subside within a few hours.</p><p><strong>Aftercare Tips:</strong><br/><br/>• Avoid touching or picking at the treated area.<br/><br/>• Skip exfoliants, retinol, and active products for 2–3 days.<br/><br/>• Keep the skin hydrated with a gentle, oil-free moisturizer.<br/><br/>• Avoid direct sunlight and apply SPF daily.</p><p>Consistent treatments and proper aftercare lead to long-term improvement — revealing a calmer, clearer, and more balanced complexion with every visit.</p>",
+            "content": "<p>Following your Resurfacing Bundle treatment, you may experience mild redness, sensitivity, or slight peeling, this is a normal part of the rejuvenation process.</p><p><strong>Aftercare Tips:</strong><br/><br/>• Avoid direct sunlight and apply SPF daily.<br/><br/>• Refrain from using active skincare products (like retinol or acids) for 3–5 days.<br/><br/>• Keep your skin hydrated with a gentle, nourishing moisturizer.<br/><br/>• Avoid heat treatments, saunas, and intense exercise for 24–48 hours.</p><p>Results improve progressively as your skin heals and collagen regeneration continues, leaving you with a smoother, brighter, and more youthful complexion.</p>",
             "liquid": "",
             "page": ""
           }
@@ -147,21 +147,21 @@
           "type": "question",
           "settings": {
             "question": "Hydrofacial",
-            "answer": "<p>A deep-cleansing and exfoliating facial that removes oil, dirt, and dead skin cells while infusing the skin with purifying and hydrating serums. Ideal for acne-prone and congested skin, this treatment unclogs pores and restores balance, leaving your complexion refreshed and revitalised.</p>"
+            "answer": "<p>A deep-cleansing and hydrating facial that removes impurities, exfoliates dead skin cells, and infuses the skin with essential serums. This treatment instantly refreshes dull, congested skin, leaving it smoother, clearer, and glowing with renewed vitality.</p>"
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
-            "question": "Specialist Acne Treatment",
-            "answer": "<p>A targeted treatment designed to calm inflammation, treat active breakouts, and prevent future flare-ups. Using professional-grade products and advanced techniques, it works to clear existing blemishes while rebalancing the skin’s natural barrier for long-term results.</p>"
+            "question": "CO2 Resurfacing / RF Microneedling",
+            "answer": "<p>An advanced skin renewal treatment that stimulates collagen production and resurfaces the skin’s texture. It helps reduce fine lines, acne scars, and pigmentation while tightening and refining pores — revealing a smoother, more even, and youthful complexion.</p>"
           }
         },
         "question_NR7jMw": {
           "type": "question",
           "settings": {
-            "question": "Blue Light Therapy",
-            "answer": "<p>A gentle, non-invasive therapy that targets and eliminates acne-causing bacteria beneath the skin’s surface. It reduces redness and inflammation while promoting healing, helping your skin recover faster and maintain a clearer, calmer appearance.</p>"
+            "question": "Polynucleotides (Eye Area)",
+            "answer": "<p>A regenerative booster specifically designed to repair and strengthen the delicate under-eye skin. It improves elasticity, reduces puffiness and dark circles, and restores a bright, rejuvenated appearance around the eyes.</p>"
           }
         }
       },
