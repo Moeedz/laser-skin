@@ -23,10 +23,18 @@
             "heading_tag": "h3"
           }
         },
-        "price": {
-          "type": "price",
+        "rating_L6n6pm": {
+          "type": "rating",
           "settings": {
-            "show_taxes_notice": false
+            "show_empty": true,
+            "rating_mode": "rating"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
           }
         },
         "payment_terms": {
@@ -36,6 +44,12 @@
         "separator": {
           "type": "separator",
           "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -54,23 +68,17 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient": true,
-            "atc_button_background": "",
+            "atc_button_background": "#e6b325",
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
-        },
         "complementary_products": {
           "type": "complementary_products",
+          "disabled": true,
           "settings": {
             "title": "Pairs well with",
             "products_count": 2,
@@ -83,13 +91,14 @@
       "block_order": [
         "vendor",
         "title",
-        "price",
+        "rating_L6n6pm",
+        "description",
         "payment_terms",
         "separator",
+        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "complementary_products"
       ],
       "settings": {
