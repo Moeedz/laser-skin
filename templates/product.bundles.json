@@ -146,22 +146,22 @@
         "question_RrLqCK": {
           "type": "question",
           "settings": {
-            "question": "Product 1",
-            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "question": "Carbon Facial",
+            "answer": "<p>A deep-cleansing laser facial that removes impurities, tightens pores, and evens out skin tone. This treatment helps clear congestion, reduce blackheads, and leave the skin feeling instantly smoother, brighter, and more refined.</p>"
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
-            "question": "Product 2",
-            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "question": "Emlift",
+            "answer": "<p>A non-invasive skin tightening treatment that uses advanced energy technology to lift and sculpt facial contours. It boosts collagen and elasticity, helping to restore firmness and definition — the perfect alternative to surgical lifting.</p>"
           }
         },
         "question_NR7jMw": {
           "type": "question",
           "settings": {
-            "question": "Product 3",
-            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "question": "NCTF Skin Booster (Eye Area)",
+            "answer": "<p>A powerful revitalising treatment designed specifically for the delicate under-eye area. It targets fine lines, puffiness, and dark circles while deeply hydrating and brightening the skin for a refreshed, youthful look.</p>"
           }
         }
       },
