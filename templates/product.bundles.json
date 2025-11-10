@@ -140,6 +140,46 @@
         "max_image_zoom_level": 3
       }
     },
+    "faq_bradJb": {
+      "type": "faq",
+      "blocks": {
+        "question_RrLqCK": {
+          "type": "question",
+          "settings": {
+            "question": "Product 1",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+          }
+        },
+        "question_DLzrmg": {
+          "type": "question",
+          "settings": {
+            "question": "Product 2",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+          }
+        },
+        "question_NR7jMw": {
+          "type": "question",
+          "settings": {
+            "question": "Product 3",
+            "answer": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_RrLqCK",
+        "question_DLzrmg",
+        "question_NR7jMw"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "show_categories": false,
+        "subheading": "",
+        "title": "What's In The Set?",
+        "content": ""
+      }
+    },
     "175993612397035c9e": {
       "type": "apps",
       "blocks": {
@@ -181,53 +221,11 @@
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
       }
-    },
-    "ss_simple_faq_jiYFWj": {
-      "type": "ss-simple-faq",
-      "blocks": {
-        "text_Dpx4Qh": {
-          "type": "text",
-          "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
-          }
-        },
-        "text_JMUbWR": {
-          "type": "text",
-          "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
-          }
-        },
-        "text_UiGdVT": {
-          "type": "text",
-          "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_Dpx4Qh",
-        "text_JMUbWR",
-        "text_UiGdVT"
-      ],
-      "name": "SS - FAQ #1",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "icon_color": "#ffffff",
-        "hover_color": "#efefef",
-        "question_color": "#ffffff",
-        "background_color": "#e6b325",
-        "answer_color": "#000000",
-        "answer_bg_color": "#ffffff",
-        "questions-font-size": 1
-      }
     }
   },
   "order": [
     "main",
-    "175993612397035c9e",
-    "ss_simple_faq_jiYFWj"
+    "faq_bradJb",
+    "175993612397035c9e"
   ]
 }
