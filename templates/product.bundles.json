@@ -258,7 +258,7 @@
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
-        "remove_vertical_spacing": true
+        "remove_vertical_spacing": false
       }
     },
     "ss_steps_11_7cMyRT": {
