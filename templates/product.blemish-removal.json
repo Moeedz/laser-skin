@@ -140,7 +140,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.14.24_68a5940e.jpg"
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.32.24_82a8e21b.jpg"
           }
         }
       },
@@ -199,8 +199,8 @@
         "button2_style": "outline",
         "images_position": "left",
         "images_position_mobile": "bottom",
-        "image_ratio": "square",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "image_shape": "none",
         "image_radius": 0,
         "image_border_thickness": 0,
@@ -330,8 +330,8 @@
         "button2_style": "outline",
         "images_position": "right",
         "images_position_mobile": "bottom",
-        "image_ratio": "square",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "image_shape": "none",
         "image_radius": 0,
         "image_border_thickness": 0,
@@ -547,11 +547,11 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.32.24_06b0f17e.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
-        "image_ratio": "square",
-        "image_ratio_mobile": "square",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "content_maxwidth": 700,
         "content_padding_vertical": 40,
         "content_padding_vertical_mobile": 20,
@@ -590,6 +590,7 @@
         "link_MbBn7K": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.36.19_8b98629b.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -716,11 +717,11 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.32.24_8b8af937.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "steps_custom": false,
         "steps_font": "josefin_sans_n4",
         "steps_size": 12,
