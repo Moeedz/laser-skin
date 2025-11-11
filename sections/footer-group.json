@@ -19,7 +19,7 @@
         "button_link": "shopify://pages/contact",
         "button_bg_color": "#1a3a52",
         "button_text_color": "#ffffff",
-        "phone_number": "+447798983387",
+        "phone_number": "01902 256667",
         "call_bg_color": "#0066cc",
         "timezone": "Europe/London",
         "monday_hours": "Closed",
@@ -29,7 +29,7 @@
         "friday_hours": "10:00AM-6:00PM",
         "saturday_hours": "10:00AM-4:00PM",
         "sunday_hours": "Closed",
-        "whatsapp_number": "44798983387",
+        "whatsapp_number": "447798983387",
         "whatsapp_bg_color": "#25d366"
       }
     },
