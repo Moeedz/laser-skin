@@ -391,7 +391,7 @@
         "description_color": "#666666",
         "description_hover_color": "#ffffff",
         "show_button": true,
-        "button_text": "Book Consultation Now",
+        "button_text": "Make an Enquiry",
         "button_link": "shopify://pages/contact",
         "button_spacing": 40,
         "button_text_size": 16,
