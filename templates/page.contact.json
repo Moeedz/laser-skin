@@ -92,7 +92,7 @@
         "opening_hour_qRPUnW"
       ],
       "custom_css": [
-        "@media screen and (max-width: 767px) {.contact-container-template--25564423848316__contact_info_form_fbXpbj {flex-flow: column-reverse !important; display: flex !important;}}"
+        "@media screen and (max-width: 767px) {.contact-container-template--25564423848316__contact_info_form_fbXpbj {flex-flow: column-reverse !important; display: flex !important; }}"
       ],
       "name": "Contact with Info & Form",
       "settings": {
@@ -182,11 +182,54 @@
         "button_hover_text_color": "#ffffff",
         "success_message": "Thank you for contacting us. We will get back to you soon!"
       }
+    },
+    "176285252469d4736e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_Dbb86a": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+          "settings": {
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "rgb(116, 113, 113)",
+            "star_color": "#FBBC05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3A454F",
+            "show_leave_review_button": true,
+            "button_color": "#FFFFFF",
+            "button_background": "#4285F4"
+          }
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_Dbb86a"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
     }
   },
   "order": [
     "main",
     "contact-form",
-    "contact_info_form_fbXpbj"
+    "contact_info_form_fbXpbj",
+    "176285252469d4736e"
   ]
 }
