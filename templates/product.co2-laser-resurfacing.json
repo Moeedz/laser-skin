@@ -412,7 +412,7 @@
         "treatment_DGUDpX": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Course Of 3",
+            "treatment_name": "Full Face Course Of 3",
             "treatment_name_column1": "",
             "single_price": "750",
             "treatment_name_column2": "",
@@ -422,7 +422,7 @@
         "treatment_LWReLR": {
           "type": "treatment",
           "settings": {
-            "treatment_name": "Course Of 6",
+            "treatment_name": "Full Face Course Of 6",
             "treatment_name_column1": "",
             "single_price": "1500",
             "treatment_name_column2": "",
