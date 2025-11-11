@@ -467,6 +467,9 @@
         "opening_hour_eVV7db",
         "opening_hour_WY46aA"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.contact-container-template--25564423717244__contact_info_form_heNtLy {flex-flow: column-reverse !important; display: flex !important; }}"
+      ],
       "name": "Contact with Info & Form",
       "settings": {
         "color_scheme": "",
