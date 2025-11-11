@@ -485,25 +485,13 @@
 
             <div class="form-group">
               <label for="contact-treatment-{{ section.id }}">Treatment interested in</label>
-              <select 
+              <input 
+                type="text" 
                 id="contact-treatment-{{ section.id }}"
                 name="contact[Treatment interested in]"
+                placeholder="{{ section.settings.treatment_placeholder }}"
                 required
               >
-                <option value="">{{ section.settings.treatment_placeholder }}</option>
-                {% if section.settings.treatment_options != blank %}
-                  {%- assign treatments = section.settings.treatment_options | split: ',' -%}
-                  {%- for treatment in treatments -%}
-                    <option value="{{ treatment | strip }}">{{ treatment | strip }}</option>
-                  {%- endfor -%}
-                {% else %}
-                  <option value="Botox">Botox</option>
-                  <option value="Dermal Fillers">Dermal Fillers</option>
-                  <option value="Skin Treatments">Skin Treatments</option>
-                  <option value="Lip Fillers">Lip Fillers</option>
-                  <option value="Other">Other</option>
-                {% endif %}
-              </select>
             </div>
           </div>
 
@@ -1076,14 +1064,7 @@
       "type": "text",
       "id": "treatment_placeholder",
       "label": "Treatment interested in placeholder",
-      "default": "Select treatment *"
-    },
-    {
-      "type": "textarea",
-      "id": "treatment_options",
-      "label": "Treatment options (comma separated)",
-      "default": "Botox, Dermal Fillers, Skin Treatments, Lip Fillers, Anti-Wrinkle Injections, Chemical Peels, Microneedling, Other",
-      "info": "Separate each treatment with a comma"
+      "default": "Treatment interested in *"
     },
     {
       "type": "text",
