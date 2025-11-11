@@ -91,6 +91,9 @@
         "opening_hour_Ee3eCt",
         "opening_hour_qRPUnW"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.contact-container-template--25564423848316__contact_info_form_fbXpbj {flex-flow: column-reverse !important; display: flex !important;}}"
+      ],
       "name": "Contact with Info & Form",
       "settings": {
         "color_scheme": "",
