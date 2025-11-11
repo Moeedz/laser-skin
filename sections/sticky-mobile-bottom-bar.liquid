@@ -40,6 +40,10 @@
       
       <div class="call-status" id="callStatus"></div>
       
+      <div class="closed-message" id="closedMessage">
+        You can send us a WhatsApp, send us an email or call back during opening hours
+      </div>
+      
       <div class="opening-hours">
         <h4>Opening Hours</h4>
         <div class="hours-list">
@@ -259,6 +263,22 @@
     color: #721c24;
   }
 
+  .closed-message {
+    display: none;
+    background: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-left: 4px solid #ffc107;
+  }
+
+  .closed-message.show {
+    display: block;
+  }
+
   .opening-hours {
     background: #f8f9fa;
     border-radius: 8px;
@@ -384,6 +404,7 @@
 
     callButton.addEventListener('click', function() {
       const status = checkIfOpen();
+      const closedMessage = document.getElementById('closedMessage');
       
       callStatus.textContent = status.message;
       callStatus.className = 'call-status ' + (status.isOpen ? 'open' : 'closed');
@@ -391,9 +412,11 @@
       if (!status.isOpen) {
         callNowBtn.classList.add('disabled');
         callNowBtn.textContent = 'Currently Closed';
+        closedMessage.classList.add('show');
       } else {
         callNowBtn.classList.remove('disabled');
         callNowBtn.textContent = 'Call Now';
+        closedMessage.classList.remove('show');
       }
       
       callModal.classList.add('active');
