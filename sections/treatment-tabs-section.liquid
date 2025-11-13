@@ -23,21 +23,24 @@
     display: flex;
     flex-wrap: wrap;
     gap: {{ section.settings.tab_gap }}px;
-    margin-bottom: 40px;
     justify-content: {{ section.settings.tab_alignment }};
   }
 
-  /* Hide top tabs on desktop, show on mobile */
+  /* Hide top tabs - not used anymore */
   .tab-navigation.top-tabs {
     display: none;
   }
 
-  /* Tabs inside content - show on desktop only */
-  .tab-navigation.content-tabs {
+  /* Desktop tabs - show inside content column on desktop */
+  .tab-navigation.desktop-tabs {
     display: flex;
-    margin-bottom: 0;
     margin-top: 20px;
     justify-content: flex-start;
+  }
+
+  /* Mobile tabs - hide on desktop, show below image on mobile */
+  .tab-navigation.mobile-tabs {
+    display: none;
   }
 
   .tab-button {
@@ -274,13 +277,15 @@
       gap: 12px;
     }
 
-    /* Show top tabs on tablets, hide content tabs */
-    .tab-navigation.top-tabs {
-      display: flex;
+    /* Hide desktop tabs, show mobile tabs */
+    .tab-navigation.desktop-tabs {
+      display: none;
     }
 
-    .tab-navigation.content-tabs {
-      display: none;
+    .tab-navigation.mobile-tabs {
+      display: flex;
+      margin: 20px 0;
+      justify-content: center;
     }
   }
 
@@ -289,18 +294,19 @@
       padding: 30px 16px;
     }
 
-    /* Show top tabs on mobile, hide content tabs */
-    .tab-navigation.top-tabs {
-      display: flex;
+    /* Keep mobile tabs visible on mobile */
+    .tab-navigation.desktop-tabs {
+      display: none;
     }
 
-    .tab-navigation.content-tabs {
-      display: none;
+    .tab-navigation.mobile-tabs {
+      display: flex;
+      margin: 20px 0;
+      justify-content: center;
     }
 
     .tab-navigation {
       gap: 8px;
-      margin-bottom: 30px;
     }
 
     .tab-button {
@@ -431,22 +437,36 @@
                 </div>
                 <p>{{ block.settings.package_description }}</p>
               </div>
-            </div>
 
-            <!-- Tab Navigation - Inside Content (Desktop Only) -->
-            <div class="tab-navigation content-tabs">
-              {% for tab_block in section.blocks %}
-                {% if tab_block.type == 'tab' %}
-                  <button 
-                    class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
-                    data-tab="{{ tab_block.settings.tab_identifier }}"
-                    onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
-                    {{ tab_block.settings.tab_name }}
-                  </button>
-                {% endif %}
-              {% endfor %}
+              <!-- Tab Navigation - Desktop Only (Below CTA Cards) -->
+              <div class="tab-navigation content-tabs desktop-tabs">
+                {% for tab_block in section.blocks %}
+                  {% if tab_block.type == 'tab' %}
+                    <button 
+                      class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                      data-tab="{{ tab_block.settings.tab_identifier }}"
+                      onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                      {{ tab_block.settings.tab_name }}
+                    </button>
+                  {% endif %}
+                {% endfor %}
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- Tab Navigation - Mobile Only (Below Image) -->
+        <div class="tab-navigation content-tabs mobile-tabs">
+          {% for tab_block in section.blocks %}
+            {% if tab_block.type == 'tab' %}
+              <button 
+                class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                data-tab="{{ tab_block.settings.tab_identifier }}"
+                onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                {{ tab_block.settings.tab_name }}
+              </button>
+            {% endif %}
+          {% endfor %}
         </div>
 
         <!-- Packages Container - Below Main Content -->
