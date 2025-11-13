@@ -21,9 +21,34 @@
   /* Tab Navigation */
   .tab-navigation {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: {{ section.settings.tab_gap }}px;
-    justify-content: {{ section.settings.tab_alignment }};
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: {{ section.settings.tab_active_background }} #e0e0e0;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar Styling for Webkit browsers */
+  .tab-navigation::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .tab-navigation::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+  }
+
+  .tab-navigation::-webkit-scrollbar-thumb {
+    background: {{ section.settings.tab_active_background }};
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  .tab-navigation::-webkit-scrollbar-thumb:hover {
+    background: {{ section.settings.tab_active_border_color }};
   }
 
   /* Hide top tabs - not used anymore */
@@ -35,7 +60,7 @@
   .tab-navigation.desktop-tabs {
     display: flex;
     margin-top: 20px;
-    justify-content: flex-start;
+    padding-bottom: 10px;
   }
 
   /* Mobile tabs - hide on desktop, show below image on mobile */
@@ -54,6 +79,7 @@
     font-weight: {{ section.settings.tab_font_weight }};
     transition: all 0.3s ease;
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .tab-button:hover {
@@ -157,6 +183,12 @@
     transition: all 0.3s ease;
     position: relative;
     background: {{ section.settings.cta_background }};
+    display: block;
+  }
+
+  a.cta-card {
+    text-decoration: none;
+    color: inherit;
   }
 
   .cta-card:hover {
@@ -265,6 +297,13 @@
     transition: all 0.2s ease;
   }
 
+  a.package-select {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: normal;
+  }
+
   .package-select:hover {
     background: {{ section.settings.package_button_hover_background }};
     transform: scale(1.02);
@@ -285,7 +324,7 @@
     .tab-navigation.mobile-tabs {
       display: flex;
       margin: 20px 0;
-      justify-content: center;
+      padding-bottom: 10px;
     }
   }
 
@@ -302,7 +341,7 @@
     .tab-navigation.mobile-tabs {
       display: flex;
       margin: 20px 0;
-      justify-content: center;
+      padding-bottom: 10px;
     }
 
     .tab-navigation {
@@ -428,15 +467,27 @@
             <!-- CTA Cards -->
             <div class="cta-cards">
               <!-- Book Consultation Card -->
-              <div class="cta-card consultation-card">
-                <div class="cta-card-header">
-                  <h3>{{ block.settings.consultation_heading }}</h3>
-                  {% if block.settings.consultation_badge != blank %}
-                    <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
-                  {% endif %}
+              {% if block.settings.consultation_link != blank %}
+                <a href="{{ block.settings.consultation_link }}" class="cta-card consultation-card" style="text-decoration: none; color: inherit;">
+                  <div class="cta-card-header">
+                    <h3>{{ block.settings.consultation_heading }}</h3>
+                    {% if block.settings.consultation_badge != blank %}
+                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.consultation_description }}</p>
+                </a>
+              {% else %}
+                <div class="cta-card consultation-card">
+                  <div class="cta-card-header">
+                    <h3>{{ block.settings.consultation_heading }}</h3>
+                    {% if block.settings.consultation_badge != blank %}
+                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.consultation_description }}</p>
                 </div>
-                <p>{{ block.settings.consultation_description }}</p>
-              </div>
+              {% endif %}
 
               <!-- Buy Package Card -->
               <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.settings.tab_identifier }}')">
@@ -477,7 +528,13 @@
                 <div class="package-card">
                   <h4>{{ package_block.settings.package_name }}</h4>
                   <div class="package-price">{{ package_block.settings.price }}</div>
-                  <button class="package-select">{{ package_block.settings.button_text | default: 'SELECT' }}</button>
+                  {% if package_block.settings.package_link != blank %}
+                    <a href="{{ package_block.settings.package_link }}" class="package-select" style="text-decoration: none; display: block; text-align: center;">
+                      {{ package_block.settings.button_text | default: 'SELECT' }}
+                    </a>
+                  {% else %}
+                    <button class="package-select">{{ package_block.settings.button_text | default: 'SELECT' }}</button>
+                  {% endif %}
                 </div>
               {% endif %}
             {% endfor %}
@@ -668,6 +725,14 @@
       "id": "tab_active_border_color",
       "label": "Tab Active Border Color",
       "default": "#d4ed4e"
+    },
+    {
+      "type": "header",
+      "content": "Tab Scrollbar (Mobile)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the scrollbar that appears when tabs overflow on mobile. The scrollbar thumb uses the active tab background color."
     },
     {
       "type": "header",
@@ -949,6 +1014,12 @@
           "default": "Meet with one of our experts for a complimentary consultation."
         },
         {
+          "type": "url",
+          "id": "consultation_link",
+          "label": "Consultation Button Link",
+          "info": "Where should the consultation card link to?"
+        },
+        {
           "type": "text",
           "id": "package_heading",
           "label": "Package Card Heading",
@@ -989,6 +1060,12 @@
           "id": "button_text",
           "label": "Button Text",
           "default": "SELECT"
+        },
+        {
+          "type": "url",
+          "id": "package_link",
+          "label": "Package Button Link",
+          "info": "Where should this package button link to?"
         }
       ]
     }
