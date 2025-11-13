@@ -135,16 +135,78 @@
             "heading": "FACE",
             "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
+            "image_1_aspect_ratio": "original",
             "consultation_heading": "Book a Consultation",
             "consultation_badge": "FREE",
             "consultation_description": "Meet with one of our experts for a complimentary consultation.",
             "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save.",
-            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>",
-            "image_2": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.36.19_8b98629b.jpg"
+            "package_description": "Pay per session or buy a bundle and save."
           }
         },
         "package_g6agp9": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_htGRU4": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_CnHHDh": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_9XxCVY": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_XxzCrW": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_zUYkgR": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_7n3riN": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_DYYfLj": {
           "type": "package",
           "settings": {
             "parent_tab": "face",
@@ -205,12 +267,66 @@
             "tab_name": "BIKINI AREA",
             "heading": "BIKINI AREA",
             "top_description": "<p>Skin123</p>",
+            "image_1_aspect_ratio": "original",
             "consultation_heading": "Book a Consultation",
             "consultation_badge": "FREE",
             "consultation_description": "Meet with one of our experts for a complimentary consultation.",
             "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save.",
-            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_yPVQin": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bikni",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_kbzDJM": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bikni",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_CBggAt": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bikni",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_3mNfmt": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bikni",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_Vxhidq": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bikni",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_8akbYd": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bikni",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
           }
         },
         "tab_LKRC64": {
@@ -220,12 +336,39 @@
             "tab_name": "UNDERARMS",
             "heading": "UNDERARMS & COMBO PACKAGES",
             "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "image_1_aspect_ratio": "original",
             "consultation_heading": "Book a Consultation",
             "consultation_badge": "FREE",
             "consultation_description": "Meet with one of our experts for a complimentary consultation.",
             "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save.",
-            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_3Gfqy4": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "underarms",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_GyTgEF": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "underarms",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_nVjdEV": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "underarms",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
           }
         },
         "tab_Vw4FGR": {
@@ -235,12 +378,39 @@
             "tab_name": "ARMS",
             "heading": "ARMS & HANDS",
             "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "image_1_aspect_ratio": "original",
             "consultation_heading": "Book a Consultation",
             "consultation_badge": "FREE",
             "consultation_description": "Meet with one of our experts for a complimentary consultation.",
             "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save.",
-            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_TECTjx": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "arms",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_a8qkan": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "arms",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_r9tyci": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "arms",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
           }
         },
         "tab_faWE3F": {
@@ -250,12 +420,39 @@
             "tab_name": "LEGS",
             "heading": "LEGS & FEET",
             "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "image_1_aspect_ratio": "original",
             "consultation_heading": "Book a Consultation",
             "consultation_badge": "FREE",
             "consultation_description": "Meet with one of our experts for a complimentary consultation.",
             "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save.",
-            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_qY6wN8": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "legs",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_TEha8b": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "legs",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_bfj6hV": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "legs",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
           }
         },
         "tab_jQP9jJ": {
@@ -265,28 +462,90 @@
             "tab_name": "BODY",
             "heading": "BODY",
             "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "image_1_aspect_ratio": "original",
             "consultation_heading": "Book a Consultation",
             "consultation_badge": "FREE",
             "consultation_description": "Meet with one of our experts for a complimentary consultation.",
             "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save.",
-            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_fPMYYK": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "body",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_GNQeKP": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "body",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_Lh7bMz": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "body",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_jc3xMW": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "body",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
           }
         }
       },
       "block_order": [
         "tab_HQTVhL",
         "package_g6agp9",
+        "package_htGRU4",
+        "package_CnHHDh",
+        "package_9XxCVY",
+        "package_XxzCrW",
+        "package_zUYkgR",
+        "package_7n3riN",
+        "package_DYYfLj",
         "package_pXpyPP",
         "package_FjMJcU",
         "package_gXckCf",
         "package_6f6qe6",
         "package_REEcNq",
         "tab_DTGxeP",
+        "package_yPVQin",
+        "package_kbzDJM",
+        "package_CBggAt",
+        "package_3mNfmt",
+        "package_Vxhidq",
+        "package_8akbYd",
         "tab_LKRC64",
+        "package_3Gfqy4",
+        "package_GyTgEF",
+        "package_nVjdEV",
         "tab_Vw4FGR",
+        "package_TECTjx",
+        "package_a8qkan",
+        "package_r9tyci",
         "tab_faWE3F",
-        "tab_jQP9jJ"
+        "package_qY6wN8",
+        "package_TEha8b",
+        "package_bfj6hV",
+        "tab_jQP9jJ",
+        "package_fPMYYK",
+        "package_GNQeKP",
+        "package_Lh7bMz",
+        "package_jc3xMW"
       ],
       "name": "Treatment Tabs",
       "settings": {
