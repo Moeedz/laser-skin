@@ -258,7 +258,6 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    min-height: 160px;
     width: 100%;
     box-sizing: border-box;
     background: {{ section.settings.package_background }};
@@ -270,10 +269,14 @@
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   }
 
-  .package-card h4 {
+  .package-card-header {
+    cursor: pointer;
+  }
+
+  .package-card-header h4 {
     font-size: 15px;
     font-weight: 500;
-    margin: 0 0 auto 0;
+    margin: 0 0 12px 0;
     line-height: 1.4;
     color: {{ section.settings.package_heading_color }};
   }
@@ -281,7 +284,83 @@
   .package-price {
     font-size: 14px;
     color: {{ section.settings.package_price_color }};
-    margin: 12px 0;
+    margin-bottom: 12px;
+  }
+
+  /* Session Options */
+  .session-options {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .session-options.active {
+    max-height: 800px;
+    margin-top: 16px;
+  }
+
+  .session-selector-heading {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .session-option {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border: 2px solid {{ section.settings.package_border_color }};
+    border-radius: {{ section.settings.package_border_radius }}px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .session-option:hover {
+    background: #f9f9f9;
+    border-color: {{ section.settings.tab_active_background }};
+  }
+
+  .session-option.selected {
+    background: #f0f9e8;
+    border-color: {{ section.settings.tab_active_background }};
+  }
+
+  .session-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .session-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: {{ section.settings.package_heading_color }};
+  }
+
+  .session-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: {{ section.settings.package_heading_color }};
+  }
+
+  .session-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: {{ section.settings.package_price_color }};
+  }
+
+  .session-select {
+    margin-top: 16px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .session-select.enabled {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .package-select {
@@ -372,13 +451,28 @@
     }
 
     .package-card {
-      min-height: 140px;
       padding: 16px;
       width: 100%;
     }
 
     .packages-container {
       margin-top: 20px;
+    }
+
+    .session-option {
+      padding: 10px 12px;
+    }
+
+    .session-label {
+      font-size: 13px;
+    }
+
+    .session-price {
+      font-size: 15px;
+    }
+
+    .session-details {
+      font-size: 11px;
     }
   }
 
@@ -400,7 +494,20 @@
     }
 
     .package-card {
-      min-height: auto;
+      padding: 16px;
+    }
+
+    .session-selector-heading {
+      font-size: 14px;
+    }
+
+    .session-info {
+      flex-wrap: wrap;
+    }
+
+    .session-label,
+    .session-price {
+      font-size: 14px;
     }
   }
 </style>
@@ -526,15 +633,69 @@
             {% for package_block in section.blocks %}
               {% if package_block.type == 'package' and package_block.settings.parent_tab == block.settings.tab_identifier %}
                 <div class="package-card">
-                  <h4>{{ package_block.settings.package_name }}</h4>
-                  <div class="package-price">{{ package_block.settings.price }}</div>
-                  {% if package_block.settings.package_link != blank %}
-                    <a href="{{ package_block.settings.package_link }}" class="package-select" style="text-decoration: none; display: block; text-align: center;">
-                      {{ package_block.settings.button_text | default: 'SELECT' }}
-                    </a>
-                  {% else %}
-                    <button class="package-select">{{ package_block.settings.button_text | default: 'SELECT' }}</button>
-                  {% endif %}
+                  <div class="package-card-header" onclick="toggleSessionOptions('{{ package_block.id }}')">
+                    <h4>{{ package_block.settings.package_name }}</h4>
+                    <div class="package-price">{{ package_block.settings.price }}</div>
+                  </div>
+                  
+                  <!-- Session Options -->
+                  <div class="session-options" id="session-{{ package_block.id }}">
+                    <div class="session-selector-heading">Select Number of Session</div>
+                    
+                    {% if package_block.settings.show_session_1 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_1_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_1_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_1_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_1_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_1_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_3 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_3_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_3_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_3_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_3_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_3_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_6 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_6_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_6_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_6_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_6_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_6_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_10 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_10_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_10_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_10_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_10_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_10_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    <button class="package-select session-select">SELECT</button>
+                  </div>
                 </div>
               {% endif %}
             {% endfor %}
@@ -566,12 +727,54 @@
     document.querySelectorAll('.packages-container').forEach(container => {
       container.classList.remove('active');
     });
+
+    // Close any open session options
+    document.querySelectorAll('.session-options').forEach(session => {
+      session.classList.remove('active');
+    });
   }
 
   function togglePackages(tabId) {
     const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
     packagesContainer.classList.toggle('active');
   }
+
+  function toggleSessionOptions(packageId) {
+    const sessionOptions = document.getElementById(`session-${packageId}`);
+    sessionOptions.classList.toggle('active');
+  }
+
+  // Handle session selection
+  document.addEventListener('DOMContentLoaded', function() {
+    let selectedSessionLink = '';
+
+    document.querySelectorAll('.session-option').forEach(option => {
+      option.addEventListener('click', function() {
+        // Remove selected class from siblings
+        const parent = this.parentElement;
+        parent.querySelectorAll('.session-option').forEach(opt => {
+          opt.classList.remove('selected');
+        });
+        
+        // Add selected class to clicked option
+        this.classList.add('selected');
+        
+        // Store the link from data attribute
+        selectedSessionLink = this.getAttribute('data-link');
+        
+        // Enable the SELECT button
+        const selectButton = parent.querySelector('.session-select');
+        selectButton.classList.add('enabled');
+        
+        // Add click handler to SELECT button
+        selectButton.onclick = function() {
+          if (selectedSessionLink && selectedSessionLink !== '') {
+            window.location.href = selectedSessionLink;
+          }
+        };
+      });
+    });
+  });
 </script>
 
 {% schema %}
@@ -1052,20 +1255,165 @@
         {
           "type": "text",
           "id": "price",
-          "label": "Price",
-          "default": "from £21.00"
+          "label": "Starting Price (shown on card)",
+          "default": "from £21.00",
+          "info": "This is the price shown on the package card before it's clicked"
+        },
+        {
+          "type": "header",
+          "content": "1 Session Option"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_session_1",
+          "label": "Show 1 Session Option",
+          "default": true
         },
         {
           "type": "text",
-          "id": "button_text",
-          "label": "Button Text",
-          "default": "SELECT"
+          "id": "session_1_label",
+          "label": "Session Label",
+          "default": "1 session"
+        },
+        {
+          "type": "text",
+          "id": "session_1_price",
+          "label": "Price",
+          "default": "£11"
+        },
+        {
+          "type": "text",
+          "id": "session_1_total",
+          "label": "Total Price Text",
+          "default": "total £11.00"
+        },
+        {
+          "type": "text",
+          "id": "session_1_per_session",
+          "label": "Per Session Text",
+          "default": "per session"
         },
         {
           "type": "url",
-          "id": "package_link",
-          "label": "Package Button Link",
-          "info": "Where should this package button link to?"
+          "id": "session_1_link",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "3 Sessions Option"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_session_3",
+          "label": "Show 3 Sessions Option",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "session_3_label",
+          "label": "Session Label",
+          "default": "3 session"
+        },
+        {
+          "type": "text",
+          "id": "session_3_price",
+          "label": "Price",
+          "default": "£10.00"
+        },
+        {
+          "type": "text",
+          "id": "session_3_total",
+          "label": "Total Price Text",
+          "default": "total £30.00"
+        },
+        {
+          "type": "text",
+          "id": "session_3_per_session",
+          "label": "Per Session Text",
+          "default": "per session"
+        },
+        {
+          "type": "url",
+          "id": "session_3_link",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "6 Sessions Option"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_session_6",
+          "label": "Show 6 Sessions Option",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "session_6_label",
+          "label": "Session Label",
+          "default": "6 session"
+        },
+        {
+          "type": "text",
+          "id": "session_6_price",
+          "label": "Price",
+          "default": "£9.00"
+        },
+        {
+          "type": "text",
+          "id": "session_6_total",
+          "label": "Total Price Text",
+          "default": "total £54.00"
+        },
+        {
+          "type": "text",
+          "id": "session_6_per_session",
+          "label": "Per Session Text",
+          "default": "per session"
+        },
+        {
+          "type": "url",
+          "id": "session_6_link",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "10 Sessions Option"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_session_10",
+          "label": "Show 10 Sessions Option",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "session_10_label",
+          "label": "Session Label",
+          "default": "10 session"
+        },
+        {
+          "type": "text",
+          "id": "session_10_price",
+          "label": "Price",
+          "default": "£7.00"
+        },
+        {
+          "type": "text",
+          "id": "session_10_total",
+          "label": "Total Price Text",
+          "default": "total £70.00"
+        },
+        {
+          "type": "text",
+          "id": "session_10_per_session",
+          "label": "Per Session Text",
+          "default": "per session"
+        },
+        {
+          "type": "url",
+          "id": "session_10_link",
+          "label": "Link"
         }
       ]
     }
