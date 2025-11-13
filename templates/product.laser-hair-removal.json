@@ -432,6 +432,38 @@
             "session_10_link": ""
           }
         },
+        "package_rqzeL3": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Face + Neck",
+            "price": "from £50.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£70",
+            "session_1_total": "total £70.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£65.00",
+            "session_3_total": "total £195.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£60.00",
+            "session_6_total": "total £360.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": true,
+            "session_10_label": "10 session",
+            "session_10_price": "£55.00",
+            "session_10_total": "total £550.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
         "tab_DTGxeP": {
           "type": "tab",
           "settings": {
@@ -1132,6 +1164,7 @@
         "package_dDKrQa",
         "package_7n3riN",
         "package_pXpyPP",
+        "package_rqzeL3",
         "tab_DTGxeP",
         "package_yPVQin",
         "package_kbzDJM",
