@@ -12,39 +12,43 @@
   }
 
   .treatment-tabs-section {
-    max-width: 1400px;
+    max-width: {{ section.settings.section_width }}px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: {{ section.settings.section_padding_top }}px 20px {{ section.settings.section_padding_bottom }}px;
+    background-color: {{ section.settings.section_background }};
   }
 
   /* Tab Navigation */
   .tab-navigation {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: {{ section.settings.tab_gap }}px;
     margin-bottom: 40px;
-    justify-content: center;
+    justify-content: {{ section.settings.tab_alignment }};
   }
 
   .tab-button {
     padding: 12px 28px;
-    border: 2px solid #333;
-    background: white;
-    border-radius: 50px;
+    border: {{ section.settings.tab_border_width }}px solid {{ section.settings.tab_border_color }};
+    background: {{ section.settings.tab_background }};
+    color: {{ section.settings.tab_text_color }};
+    border-radius: {{ section.settings.tab_border_radius }}px;
     cursor: pointer;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: {{ section.settings.tab_font_size }}px;
+    font-weight: {{ section.settings.tab_font_weight }};
     transition: all 0.3s ease;
     white-space: nowrap;
   }
 
   .tab-button:hover {
-    background: #f5f5f5;
+    background: {{ section.settings.tab_hover_background }};
+    color: {{ section.settings.tab_hover_text_color }};
   }
 
   .tab-button.active {
-    background: #d4ed4e;
-    border-color: #d4ed4e;
+    background: {{ section.settings.tab_active_background }};
+    border-color: {{ section.settings.tab_active_border_color }};
+    color: {{ section.settings.tab_active_text_color }};
   }
 
   /* Tab Content Container */
@@ -76,7 +80,7 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
+    border-radius: {{ section.settings.image_border_radius }}px;
   }
 
   .treatment-image.image-1 {
@@ -86,16 +90,17 @@
 
   /* Right Column - Content */
   .content-column h2 {
-    font-size: 42px;
-    font-weight: 400;
+    font-size: {{ section.settings.heading_font_size }}px;
+    font-weight: {{ section.settings.heading_font_weight }};
+    color: {{ section.settings.heading_color }};
     margin: 0 0 20px 0;
     line-height: 1.2;
   }
 
   .top-description {
-    font-size: 15px;
+    font-size: {{ section.settings.text_font_size }}px;
     line-height: 1.7;
-    color: #333;
+    color: {{ section.settings.text_color }};
     margin-bottom: 30px;
   }
 
@@ -103,22 +108,25 @@
   .cta-cards {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: {{ section.settings.cta_card_gap }}px;
     margin-bottom: 0;
     width: 100%;
   }
 
   .cta-card {
-    border: 2px solid #333;
-    border-radius: 16px;
+    border: {{ section.settings.cta_border_width }}px solid {{ section.settings.cta_border_color }};
+    border-radius: {{ section.settings.cta_border_radius }}px;
     padding: 20px 24px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    background: {{ section.settings.cta_background }};
   }
 
   .cta-card:hover {
-    background: #f9f9f9;
+    background: {{ section.settings.cta_hover_background }};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   .cta-card-header {
@@ -132,10 +140,12 @@
     font-size: 18px;
     font-weight: 500;
     margin: 0;
+    color: {{ section.settings.cta_heading_color }};
   }
 
   .cta-badge {
-    background: #f0f0f0;
+    background: {{ section.settings.badge_background }};
+    color: {{ section.settings.badge_text_color }};
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 13px;
@@ -144,13 +154,13 @@
 
   .cta-price {
     font-size: 14px;
-    color: #666;
+    color: {{ section.settings.price_text_color }};
   }
 
   .cta-card p {
     margin: 0;
     font-size: 14px;
-    color: #666;
+    color: {{ section.settings.cta_text_color }};
     line-height: 1.5;
   }
 
@@ -175,14 +185,21 @@
   }
 
   .package-card {
-    border: 2px solid #333;
-    border-radius: 12px;
+    border: {{ section.settings.package_border_width }}px solid {{ section.settings.package_border_color }};
+    border-radius: {{ section.settings.package_border_radius }}px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     min-height: 160px;
     width: 100%;
     box-sizing: border-box;
+    background: {{ section.settings.package_background }};
+    transition: all 0.3s ease;
+  }
+
+  .package-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   }
 
   .package-card h4 {
@@ -190,19 +207,21 @@
     font-weight: 500;
     margin: 0 0 auto 0;
     line-height: 1.4;
+    color: {{ section.settings.package_heading_color }};
   }
 
   .package-price {
     font-size: 14px;
-    color: #666;
+    color: {{ section.settings.package_price_color }};
     margin: 12px 0;
   }
 
   .package-select {
-    background: #d4ed4e;
+    background: {{ section.settings.package_button_background }};
+    color: {{ section.settings.package_button_text_color }};
     border: none;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: {{ section.settings.package_button_radius }}px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -211,7 +230,8 @@
   }
 
   .package-select:hover {
-    background: #c5de3f;
+    background: {{ section.settings.package_button_hover_background }};
+    transform: scale(1.02);
   }
 
   /* Bottom Section */
@@ -224,9 +244,9 @@
   }
 
   .bottom-description {
-    font-size: 15px;
+    font-size: {{ section.settings.text_font_size }}px;
     line-height: 1.7;
-    color: #333;
+    color: {{ section.settings.text_color }};
   }
 
   .bottom-description p {
@@ -240,7 +260,7 @@
   .bottom-image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: {{ section.settings.image_border_radius }}px;
     max-height: 500px;
     object-fit: cover;
   }
@@ -478,7 +498,368 @@
 {% schema %}
 {
   "name": "Treatment Tabs",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_width",
+      "label": "Section Width (px)",
+      "min": 1000,
+      "max": 1920,
+      "step": 20,
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Section Padding Top (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Section Padding Bottom (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Tab Navigation Style"
+    },
+    {
+      "type": "select",
+      "id": "tab_alignment",
+      "label": "Tab Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "tab_gap",
+      "label": "Tab Gap (px)",
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "tab_font_size",
+      "label": "Tab Font Size (px)",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "tab_font_weight",
+      "label": "Tab Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "tab_border_radius",
+      "label": "Tab Border Radius (px)",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "tab_border_width",
+      "label": "Tab Border Width (px)",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "tab_background",
+      "label": "Tab Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_border_color",
+      "label": "Tab Border Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_background",
+      "label": "Tab Hover Background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_text_color",
+      "label": "Tab Hover Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_background",
+      "label": "Tab Active Background",
+      "default": "#d4ed4e"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_text_color",
+      "label": "Tab Active Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_border_color",
+      "label": "Tab Active Border Color",
+      "default": "#d4ed4e"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size (px)",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "default": 42
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading Font Weight",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "Text Font Size (px)",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "CTA Cards Style"
+    },
+    {
+      "type": "range",
+      "id": "cta_card_gap",
+      "label": "Gap Between Cards (px)",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "cta_border_radius",
+      "label": "CTA Card Border Radius (px)",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "cta_border_width",
+      "label": "CTA Card Border Width (px)",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "cta_background",
+      "label": "CTA Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "cta_border_color",
+      "label": "CTA Card Border Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "cta_hover_background",
+      "label": "CTA Card Hover Background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "cta_heading_color",
+      "label": "CTA Card Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "CTA Card Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "badge_background",
+      "label": "Badge Background Color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "price_text_color",
+      "label": "Price Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Package Cards Style"
+    },
+    {
+      "type": "range",
+      "id": "package_border_radius",
+      "label": "Package Card Border Radius (px)",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "package_border_width",
+      "label": "Package Card Border Width (px)",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "package_background",
+      "label": "Package Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "package_border_color",
+      "label": "Package Card Border Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "package_heading_color",
+      "label": "Package Card Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "package_price_color",
+      "label": "Package Price Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "package_button_radius",
+      "label": "Package Button Border Radius (px)",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "package_button_background",
+      "label": "Package Button Background",
+      "default": "#d4ed4e"
+    },
+    {
+      "type": "color",
+      "id": "package_button_text_color",
+      "label": "Package Button Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "package_button_hover_background",
+      "label": "Package Button Hover Background",
+      "default": "#c5de3f"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image Border Radius (px)",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 8
+    }
+  ],
   "blocks": [
     {
       "type": "tab",
