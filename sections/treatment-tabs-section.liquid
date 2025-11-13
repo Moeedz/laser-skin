@@ -84,8 +84,28 @@
   }
 
   .treatment-image.image-1 {
-    max-height: 400px;
     object-fit: cover;
+  }
+
+  /* Image Aspect Ratios */
+  .image-aspect-square {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .image-aspect-portrait {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  .image-aspect-landscape {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .image-aspect-original {
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   /* Right Column - Content */
@@ -261,8 +281,7 @@
     width: 100%;
     height: auto;
     border-radius: {{ section.settings.image_border_radius }}px;
-    max-height: 500px;
-    object-fit: cover;
+    display: block;
   }
 
   /* Mobile Responsive */
@@ -381,7 +400,7 @@
               <img 
                 src="{{ block.settings.image_1 | img_url: '800x' }}" 
                 alt="{{ block.settings.heading }}"
-                class="treatment-image image-1"
+                class="treatment-image image-1 image-aspect-{{ block.settings.image_1_aspect_ratio }}"
                 loading="lazy">
             {% else %}
               <div style="background: #f0f0f0; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
@@ -454,7 +473,7 @@
               <img 
                 src="{{ block.settings.image_2 | img_url: '800x' }}" 
                 alt="{{ block.settings.heading }}"
-                class="bottom-image"
+                class="bottom-image image-aspect-{{ block.settings.image_2_aspect_ratio }}"
                 loading="lazy">
             {% else %}
               <div style="background: #f0f0f0; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
@@ -896,6 +915,19 @@
           "label": "Top Image"
         },
         {
+          "type": "select",
+          "id": "image_1_aspect_ratio",
+          "label": "Top Image Aspect Ratio",
+          "options": [
+            { "value": "original", "label": "Original" },
+            { "value": "square", "label": "Square (1:1)" },
+            { "value": "portrait", "label": "Portrait (3:4)" },
+            { "value": "landscape", "label": "Landscape (16:9)" }
+          ],
+          "default": "original",
+          "info": "Choose how the image should be displayed"
+        },
+        {
           "type": "text",
           "id": "consultation_heading",
           "label": "Consultation Card Heading",
@@ -935,6 +967,19 @@
           "type": "image_picker",
           "id": "image_2",
           "label": "Bottom Image"
+        },
+        {
+          "type": "select",
+          "id": "image_2_aspect_ratio",
+          "label": "Bottom Image Aspect Ratio",
+          "options": [
+            { "value": "original", "label": "Original" },
+            { "value": "square", "label": "Square (1:1)" },
+            { "value": "portrait", "label": "Portrait (3:4)" },
+            { "value": "landscape", "label": "Landscape (16:9)" }
+          ],
+          "default": "original",
+          "info": "Choose how the image should be displayed"
         }
       ]
     },
