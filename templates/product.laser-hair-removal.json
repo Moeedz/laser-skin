@@ -1825,6 +1825,7 @@
         "treatment_MzEtzW",
         "treatment_ewWz48"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}"
       ],
@@ -1913,6 +1914,7 @@
         "treatment_rJ63Ef",
         "treatment_FihiAU"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}",
         ".treatment-pricing-section {padding-top: 0 !important;}"
