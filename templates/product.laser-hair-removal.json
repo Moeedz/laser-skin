@@ -385,6 +385,109 @@
         "lazy": true
       }
     },
+    "treatment_tabs_section_h4BDQx": {
+      "type": "treatment-tabs-section",
+      "blocks": {
+        "tab_HQTVhL": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "face",
+            "tab_name": "Face",
+            "heading": "Face",
+            "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "image_1": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.32.24_8b8af937.jpg",
+            "consultation_heading": "Book a Consultation",
+            "consultation_badge": "FREE",
+            "consultation_description": "Meet with one of our experts for a complimentary consultation.",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save.",
+            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>",
+            "image_2": "shopify://shop_images/WhatsApp_Image_2025-11-12_at_00.36.19_8b98629b.jpg"
+          }
+        },
+        "package_g6agp9": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_pXpyPP": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_FjMJcU": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_gXckCf": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_6f6qe6": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "package_REEcNq": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "face",
+            "package_name": "Treatment Name",
+            "price": "from £21.00",
+            "button_text": "SELECT"
+          }
+        },
+        "tab_DTGxeP": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "skin",
+            "tab_name": "Skin",
+            "heading": "Face",
+            "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "consultation_heading": "Book a Consultation",
+            "consultation_badge": "FREE",
+            "consultation_description": "Meet with one of our experts for a complimentary consultation.",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save.",
+            "bottom_description": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_HQTVhL",
+        "package_g6agp9",
+        "package_pXpyPP",
+        "package_FjMJcU",
+        "package_gXckCf",
+        "package_6f6qe6",
+        "package_REEcNq",
+        "tab_DTGxeP"
+      ],
+      "name": "Treatment Tabs",
+      "settings": {}
+    },
     "treatment_pricing_enhanced_XUyycc": {
       "type": "treatment-pricing-enhanced",
       "blocks": {
@@ -1259,6 +1362,7 @@
     "main",
     "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
+    "treatment_tabs_section_h4BDQx",
     "treatment_pricing_enhanced_XUyycc",
     "treatment_pricing_enhanced_dtHQt9",
     "treatment_pricing_hjdUCE",
