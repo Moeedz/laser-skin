@@ -7,6 +7,10 @@
 {% endcomment %}
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   .treatment-tabs-section {
     max-width: 1400px;
     margin: 0 auto;
@@ -101,6 +105,7 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: 30px;
+    width: 100%;
   }
 
   .cta-card {
@@ -155,6 +160,7 @@
     overflow: hidden;
     transition: max-height 0.4s ease;
     margin-top: 20px;
+    width: 100%;
   }
 
   .packages-container.active {
@@ -166,6 +172,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-top: 20px;
+    width: 100%;
   }
 
   .package-card {
@@ -175,6 +182,8 @@
     display: flex;
     flex-direction: column;
     min-height: 160px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .package-card h4 {
@@ -266,11 +275,13 @@
     .packages-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
+      width: 100%;
     }
 
     .package-card {
       min-height: 140px;
       padding: 16px;
+      width: 100%;
     }
 
     .bottom-section {
