@@ -27,6 +27,19 @@
     justify-content: {{ section.settings.tab_alignment }};
   }
 
+  /* Hide top tabs on desktop, show on mobile */
+  .tab-navigation.top-tabs {
+    display: none;
+  }
+
+  /* Tabs inside content - show on desktop only */
+  .tab-navigation.content-tabs {
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
   .tab-button {
     padding: 12px 28px;
     border: {{ section.settings.tab_border_width }}px solid {{ section.settings.tab_border_color }};
@@ -260,11 +273,29 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
+
+    /* Show top tabs on tablets, hide content tabs */
+    .tab-navigation.top-tabs {
+      display: flex;
+    }
+
+    .tab-navigation.content-tabs {
+      display: none;
+    }
   }
 
   @media (max-width: 968px) {
     .treatment-tabs-section {
       padding: 30px 16px;
+    }
+
+    /* Show top tabs on mobile, hide content tabs */
+    .tab-navigation.top-tabs {
+      display: flex;
+    }
+
+    .tab-navigation.content-tabs {
+      display: none;
     }
 
     .tab-navigation {
@@ -330,8 +361,8 @@
 </style>
 
 <div class="treatment-tabs-section">
-  <!-- Tab Navigation -->
-  <div class="tab-navigation">
+  <!-- Tab Navigation - Top (Mobile Only) -->
+  <div class="tab-navigation top-tabs">
     {% for block in section.blocks %}
       {% if block.type == 'tab' %}
         <button 
@@ -401,6 +432,20 @@
                 <p>{{ block.settings.package_description }}</p>
               </div>
             </div>
+
+            <!-- Tab Navigation - Inside Content (Desktop Only) -->
+            <div class="tab-navigation content-tabs">
+              {% for tab_block in section.blocks %}
+                {% if tab_block.type == 'tab' %}
+                  <button 
+                    class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                    data-tab="{{ tab_block.settings.tab_identifier }}"
+                    onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                    {{ tab_block.settings.tab_name }}
+                  </button>
+                {% endif %}
+              {% endfor %}
+            </div>
           </div>
         </div>
 
@@ -426,11 +471,13 @@
 
 <script>
   function switchTab(tabId) {
-    // Update tab buttons
+    // Update ALL tab buttons (both top and content tabs)
     document.querySelectorAll('.tab-button').forEach(btn => {
       btn.classList.remove('active');
     });
-    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+    document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
+      btn.classList.add('active');
+    });
 
     // Update tab content
     document.querySelectorAll('.tab-content').forEach(content => {
