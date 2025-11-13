@@ -21,34 +21,9 @@
   /* Tab Navigation */
   .tab-navigation {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: {{ section.settings.tab_gap }}px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: {{ section.settings.tab_active_background }} #e0e0e0;
-    scroll-behavior: smooth;
-  }
-
-  /* Custom Scrollbar Styling for Webkit browsers */
-  .tab-navigation::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .tab-navigation::-webkit-scrollbar-track {
-    background: #e0e0e0;
-    border-radius: 10px;
-  }
-
-  .tab-navigation::-webkit-scrollbar-thumb {
-    background: {{ section.settings.tab_active_background }};
-    border-radius: 10px;
-    transition: background 0.3s ease;
-  }
-
-  .tab-navigation::-webkit-scrollbar-thumb:hover {
-    background: {{ section.settings.tab_active_border_color }};
+    justify-content: {{ section.settings.tab_alignment }};
   }
 
   /* Hide top tabs - not used anymore */
@@ -60,7 +35,7 @@
   .tab-navigation.desktop-tabs {
     display: flex;
     margin-top: 20px;
-    padding-bottom: 10px;
+    justify-content: flex-start;
   }
 
   /* Mobile tabs - hide on desktop, show below image on mobile */
@@ -79,7 +54,6 @@
     font-weight: {{ section.settings.tab_font_weight }};
     transition: all 0.3s ease;
     white-space: nowrap;
-    flex-shrink: 0;
   }
 
   .tab-button:hover {
@@ -311,7 +285,7 @@
     .tab-navigation.mobile-tabs {
       display: flex;
       margin: 20px 0;
-      padding-bottom: 10px;
+      justify-content: center;
     }
   }
 
@@ -328,7 +302,7 @@
     .tab-navigation.mobile-tabs {
       display: flex;
       margin: 20px 0;
-      padding-bottom: 10px;
+      justify-content: center;
     }
 
     .tab-navigation {
@@ -694,14 +668,6 @@
       "id": "tab_active_border_color",
       "label": "Tab Active Border Color",
       "default": "#d4ed4e"
-    },
-    {
-      "type": "header",
-      "content": "Tab Scrollbar (Mobile)"
-    },
-    {
-      "type": "paragraph",
-      "content": "Customize the scrollbar that appears when tabs overflow on mobile. The scrollbar thumb uses the active tab background color."
     },
     {
       "type": "header",
