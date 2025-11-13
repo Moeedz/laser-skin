@@ -1,0 +1,568 @@
+{% comment %}
+  Treatment Tabs Section
+  - Multiple tabs with dynamic content
+  - Package cards that toggle
+  - Fully customizable from section settings
+  - Mobile optimized
+{% endcomment %}
+
+<style>
+  .treatment-tabs-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* Tab Navigation */
+  .tab-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+
+  .tab-button {
+    padding: 12px 28px;
+    border: 2px solid #333;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .tab-button:hover {
+    background: #f5f5f5;
+  }
+
+  .tab-button.active {
+    background: #d4ed4e;
+    border-color: #d4ed4e;
+  }
+
+  /* Tab Content Container */
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  /* Main Content Grid */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+
+  /* Left Column - Images */
+  .images-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .treatment-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  .treatment-image.image-1 {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  /* Right Column - Content */
+  .content-column h2 {
+    font-size: 42px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+  }
+
+  .top-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  /* CTA Cards */
+  .cta-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .cta-card {
+    border: 2px solid #333;
+    border-radius: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .cta-card:hover {
+    background: #f9f9f9;
+  }
+
+  .cta-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .cta-card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .cta-badge {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .cta-price {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .cta-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Package Cards */
+  .packages-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 20px;
+  }
+
+  .packages-container.active {
+    max-height: 2000px;
+  }
+
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .package-card {
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+  }
+
+  .package-card h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 auto 0;
+    line-height: 1.4;
+  }
+
+  .package-price {
+    font-size: 14px;
+    color: #666;
+    margin: 12px 0;
+  }
+
+  .package-select {
+    background: #d4ed4e;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .package-select:hover {
+    background: #c5de3f;
+  }
+
+  /* Bottom Section */
+  .bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .bottom-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .bottom-description p {
+    margin: 0 0 16px 0;
+  }
+
+  .bottom-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .bottom-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 968px) {
+    .treatment-tabs-section {
+      padding: 30px 16px;
+    }
+
+    .tab-navigation {
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .content-column h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .packages-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .package-card {
+      min-height: 140px;
+      padding: 16px;
+    }
+
+    .bottom-section {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .bottom-section .bottom-description {
+      order: 2;
+    }
+
+    .bottom-section .bottom-image {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .content-column h2 {
+      font-size: 28px;
+    }
+
+    .packages-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .package-card {
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="treatment-tabs-section">
+  <!-- Tab Navigation -->
+  <div class="tab-navigation">
+    {% for block in section.blocks %}
+      {% if block.type == 'tab' %}
+        <button 
+          class="tab-button {% if forloop.first %}active{% endif %}" 
+          data-tab="{{ block.id }}"
+          onclick="switchTab('{{ block.id }}')">
+          {{ block.settings.tab_name }}
+        </button>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Tab Content -->
+  {% for block in section.blocks %}
+    {% if block.type == 'tab' %}
+      <div class="tab-content {% if forloop.first %}active{% endif %}" data-tab-content="{{ block.id }}">
+        
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+          <!-- Left Column - First Image -->
+          <div class="images-column">
+            {% if block.settings.image_1 %}
+              <img 
+                src="{{ block.settings.image_1 | img_url: '800x' }}" 
+                alt="{{ block.settings.heading }}"
+                class="treatment-image image-1"
+                loading="lazy">
+            {% else %}
+              <div style="background: #f0f0f0; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                Image 1
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Right Column - Content -->
+          <div class="content-column">
+            <h2>{{ block.settings.heading }}</h2>
+            
+            <div class="top-description">
+              {{ block.settings.top_description }}
+            </div>
+
+            <!-- CTA Cards -->
+            <div class="cta-cards">
+              <!-- Book Consultation Card -->
+              <div class="cta-card consultation-card">
+                <div class="cta-card-header">
+                  <h3>{{ block.settings.consultation_heading }}</h3>
+                  {% if block.settings.consultation_badge != blank %}
+                    <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                  {% endif %}
+                </div>
+                <p>{{ block.settings.consultation_description }}</p>
+              </div>
+
+              <!-- Buy Package Card -->
+              <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.id }}')">
+                <div class="cta-card-header">
+                  <h3>{{ block.settings.package_heading }}</h3>
+                  <span class="cta-price" data-package-price="{{ block.id }}">
+                    {% assign first_package = section.blocks | where: "type", "package" | where: "settings.parent_tab", block.id | first %}
+                    {% if first_package %}
+                      from {{ first_package.settings.price }}
+                    {% endif %}
+                  </span>
+                </div>
+                <p>{{ block.settings.package_description }}</p>
+              </div>
+
+              <!-- Packages Container -->
+              <div class="packages-container" data-packages="{{ block.id }}">
+                <div class="packages-grid">
+                  {% for package_block in section.blocks %}
+                    {% if package_block.type == 'package' and package_block.settings.parent_tab == block.id %}
+                      <div class="package-card">
+                        <h4>{{ package_block.settings.package_name }}</h4>
+                        <div class="package-price">{{ package_block.settings.price }}</div>
+                        <button class="package-select">{{ package_block.settings.button_text | default: 'SELECT' }}</button>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+          <div class="bottom-description">
+            {{ block.settings.bottom_description }}
+          </div>
+          
+          <div>
+            {% if block.settings.image_2 %}
+              <img 
+                src="{{ block.settings.image_2 | img_url: '800x' }}" 
+                alt="{{ block.settings.heading }}"
+                class="bottom-image"
+                loading="lazy">
+            {% else %}
+              <div style="background: #f0f0f0; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                Image 2
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+  function switchTab(tabId) {
+    // Update tab buttons
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+
+    // Update tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+    document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
+
+    // Close any open package containers
+    document.querySelectorAll('.packages-container').forEach(container => {
+      container.classList.remove('active');
+    });
+  }
+
+  function togglePackages(tabId) {
+    const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
+    packagesContainer.classList.toggle('active');
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Treatment Tabs",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Treatment Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_name",
+          "label": "Tab Name",
+          "default": "Face"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Face"
+        },
+        {
+          "type": "richtext",
+          "id": "top_description",
+          "label": "Top Description",
+          "default": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Top Image"
+        },
+        {
+          "type": "text",
+          "id": "consultation_heading",
+          "label": "Consultation Card Heading",
+          "default": "Book a Consultation"
+        },
+        {
+          "type": "text",
+          "id": "consultation_badge",
+          "label": "Consultation Badge Text",
+          "default": "FREE"
+        },
+        {
+          "type": "text",
+          "id": "consultation_description",
+          "label": "Consultation Description",
+          "default": "Meet with one of our experts for a complimentary consultation."
+        },
+        {
+          "type": "text",
+          "id": "package_heading",
+          "label": "Package Card Heading",
+          "default": "Buy a Package"
+        },
+        {
+          "type": "text",
+          "id": "package_description",
+          "label": "Package Description",
+          "default": "Pay per session or buy a bundle and save."
+        },
+        {
+          "type": "richtext",
+          "id": "bottom_description",
+          "label": "Bottom Description",
+          "default": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Bottom Image"
+        }
+      ]
+    },
+    {
+      "type": "package",
+      "name": "Package",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent_tab",
+          "label": "Parent Tab ID",
+          "info": "Enter the ID of the tab this package belongs to. You can find this in the block ID."
+        },
+        {
+          "type": "text",
+          "id": "package_name",
+          "label": "Package Name",
+          "default": "Treatment Name"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "from £21.00"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "SELECT"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Tabs",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Face",
+            "heading": "Face"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
