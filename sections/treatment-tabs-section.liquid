@@ -401,6 +401,20 @@
                 Image 1
               </div>
             {% endif %}
+
+            <!-- Tab Navigation - Mobile Only (Below Image) -->
+            <div class="tab-navigation content-tabs mobile-tabs">
+              {% for tab_block in section.blocks %}
+                {% if tab_block.type == 'tab' %}
+                  <button 
+                    class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                    data-tab="{{ tab_block.settings.tab_identifier }}"
+                    onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                    {{ tab_block.settings.tab_name }}
+                  </button>
+                {% endif %}
+              {% endfor %}
+            </div>
           </div>
 
           <!-- Right Column - Content -->
@@ -453,20 +467,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Tab Navigation - Mobile Only (Below Image) -->
-        <div class="tab-navigation content-tabs mobile-tabs">
-          {% for tab_block in section.blocks %}
-            {% if tab_block.type == 'tab' %}
-              <button 
-                class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
-                data-tab="{{ tab_block.settings.tab_identifier }}"
-                onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
-                {{ tab_block.settings.tab_name }}
-              </button>
-            {% endif %}
-          {% endfor %}
         </div>
 
         <!-- Packages Container - Below Main Content -->
