@@ -2098,6 +2098,7 @@
         },
         "button_8MiDiX": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "Get more information",
             "button_url": "shopify://pages/contact",
