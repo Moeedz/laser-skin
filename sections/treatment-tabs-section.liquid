@@ -309,8 +309,8 @@
       {% if block.type == 'tab' %}
         <button 
           class="tab-button {% if forloop.first %}active{% endif %}" 
-          data-tab="{{ block.id }}"
-          onclick="switchTab('{{ block.id }}')">
+          data-tab="{{ block.settings.tab_identifier }}"
+          onclick="switchTab('{{ block.settings.tab_identifier }}')">
           {{ block.settings.tab_name }}
         </button>
       {% endif %}
@@ -320,7 +320,7 @@
   <!-- Tab Content -->
   {% for block in section.blocks %}
     {% if block.type == 'tab' %}
-      <div class="tab-content {% if forloop.first %}active{% endif %}" data-tab-content="{{ block.id }}">
+      <div class="tab-content {% if forloop.first %}active{% endif %}" data-tab-content="{{ block.settings.tab_identifier }}">
         
         <!-- Main Content Grid -->
         <div class="content-grid">
@@ -361,11 +361,11 @@
               </div>
 
               <!-- Buy Package Card -->
-              <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.id }}')">
+              <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.settings.tab_identifier }}')">
                 <div class="cta-card-header">
                   <h3>{{ block.settings.package_heading }}</h3>
-                  <span class="cta-price" data-package-price="{{ block.id }}">
-                    {% assign first_package = section.blocks | where: "type", "package" | where: "settings.parent_tab", block.id | first %}
+                  <span class="cta-price" data-package-price="{{ block.settings.tab_identifier }}">
+                    {% assign first_package = section.blocks | where: "type", "package" | where: "settings.parent_tab", block.settings.tab_identifier | first %}
                     {% if first_package %}
                       from {{ first_package.settings.price }}
                     {% endif %}
@@ -375,10 +375,10 @@
               </div>
 
               <!-- Packages Container -->
-              <div class="packages-container" data-packages="{{ block.id }}">
+              <div class="packages-container" data-packages="{{ block.settings.tab_identifier }}">
                 <div class="packages-grid">
                   {% for package_block in section.blocks %}
-                    {% if package_block.type == 'package' and package_block.settings.parent_tab == block.id %}
+                    {% if package_block.type == 'package' and package_block.settings.parent_tab == block.settings.tab_identifier %}
                       <div class="package-card">
                         <h4>{{ package_block.settings.package_name }}</h4>
                         <div class="package-price">{{ package_block.settings.price }}</div>
@@ -455,6 +455,13 @@
       "settings": [
         {
           "type": "text",
+          "id": "tab_identifier",
+          "label": "Tab Identifier",
+          "default": "face",
+          "info": "Use a unique identifier like: face, bikini, upper-body, lower-body, packages (lowercase, no spaces)"
+        },
+        {
+          "type": "text",
           "id": "tab_name",
           "label": "Tab Name",
           "default": "Face"
@@ -526,8 +533,8 @@
         {
           "type": "text",
           "id": "parent_tab",
-          "label": "Parent Tab ID",
-          "info": "Enter the ID of the tab this package belongs to. You can find this in the block ID."
+          "label": "Parent Tab Identifier",
+          "info": "Enter the same identifier you used in the tab (e.g., face, bikini, upper-body). This links the package to its tab."
         },
         {
           "type": "text",
@@ -557,6 +564,7 @@
         {
           "type": "tab",
           "settings": {
+            "tab_identifier": "face",
             "tab_name": "Face",
             "heading": "Face"
           }
