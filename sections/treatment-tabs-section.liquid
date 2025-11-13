@@ -254,36 +254,6 @@
     transform: scale(1.02);
   }
 
-  /* Bottom Section */
-  .bottom-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin-top: 40px;
-  }
-
-  .bottom-description {
-    font-size: {{ section.settings.text_font_size }}px;
-    line-height: 1.7;
-    color: {{ section.settings.text_color }};
-  }
-
-  .bottom-description p {
-    margin: 0 0 16px 0;
-  }
-
-  .bottom-description p:last-child {
-    margin-bottom: 0;
-  }
-
-  .bottom-image {
-    width: 100%;
-    height: auto;
-    border-radius: {{ section.settings.image_border_radius }}px;
-    display: block;
-  }
-
   /* Mobile Responsive */
   @media (max-width: 1024px) {
     .packages-grid {
@@ -315,19 +285,6 @@
     .content-column h2 {
       font-size: 32px;
       margin-bottom: 16px;
-    }
-
-    .bottom-section {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-
-    .bottom-section .bottom-description {
-      order: 2;
-    }
-
-    .bottom-section .bottom-image {
-      order: 1;
     }
   }
 
@@ -459,27 +416,6 @@
                 </div>
               {% endif %}
             {% endfor %}
-          </div>
-        </div>
-
-        <!-- Bottom Section -->
-        <div class="bottom-section">
-          <div class="bottom-description">
-            {{ block.settings.bottom_description }}
-          </div>
-          
-          <div>
-            {% if block.settings.image_2 %}
-              <img 
-                src="{{ block.settings.image_2 | img_url: '800x' }}" 
-                alt="{{ block.settings.heading }}"
-                class="bottom-image image-aspect-{{ block.settings.image_2_aspect_ratio }}"
-                loading="lazy">
-            {% else %}
-              <div style="background: #f0f0f0; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
-                Image 2
-              </div>
-            {% endif %}
           </div>
         </div>
 
@@ -956,30 +892,6 @@
           "id": "package_description",
           "label": "Package Description",
           "default": "Pay per session or buy a bundle and save."
-        },
-        {
-          "type": "richtext",
-          "id": "bottom_description",
-          "label": "Bottom Description",
-          "default": "<p>Use Laser Hair Removal at KClinics to have hair-free perfect skin.</p>"
-        },
-        {
-          "type": "image_picker",
-          "id": "image_2",
-          "label": "Bottom Image"
-        },
-        {
-          "type": "select",
-          "id": "image_2_aspect_ratio",
-          "label": "Bottom Image Aspect Ratio",
-          "options": [
-            { "value": "original", "label": "Original" },
-            { "value": "square", "label": "Square (1:1)" },
-            { "value": "portrait", "label": "Portrait (3:4)" },
-            { "value": "landscape", "label": "Landscape (16:9)" }
-          ],
-          "default": "original",
-          "info": "Choose how the image should be displayed"
         }
       ]
     },
