@@ -391,14 +391,22 @@
   /* Collapsible Tabs Section */
   .collapsible-tabs-section {
     max-width: 100%;
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* Hide mobile collapsible tabs on desktop */
+  .collapsible-tabs-section.collapsible-mobile {
+    display: none;
   }
 
   .collapsible-tab {
     border-bottom: 1px solid #e0e0e0;
     padding: 20px 0;
+  }
+
+  .collapsible-tab:first-child {
+    border-top: 1px solid #e0e0e0;
   }
 
   .collapsible-header {
@@ -498,6 +506,15 @@
       margin: 20px 0;
       padding-bottom: 10px;
     }
+
+    /* Hide desktop collapsible tabs, show mobile collapsible tabs */
+    .collapsible-tabs-section:not(.collapsible-mobile) {
+      display: none;
+    }
+
+    .collapsible-tabs-section.collapsible-mobile {
+      display: block;
+    }
   }
 
   @media (max-width: 968px) {
@@ -514,6 +531,15 @@
       display: flex;
       margin: 20px 0;
       padding-bottom: 10px;
+    }
+
+    /* Hide desktop collapsible tabs, show mobile collapsible tabs */
+    .collapsible-tabs-section:not(.collapsible-mobile) {
+      display: none;
+    }
+
+    .collapsible-tabs-section.collapsible-mobile {
+      display: block;
     }
 
     .tab-navigation {
@@ -580,8 +606,8 @@
     }
 
     .collapsible-tabs-section {
-      margin-top: 40px;
-      padding-top: 30px;
+      margin-top: 30px;
+      margin-bottom: 15px;
     }
 
     .collapsible-tab {
@@ -679,6 +705,78 @@
                 {% endif %}
               {% endfor %}
             </div>
+
+            <!-- Collapsible Tabs Section - Mobile (Below mobile tabs) -->
+            <div class="collapsible-tabs-section collapsible-mobile">
+              {% if section.settings.show_collapsible_1 %}
+                <div class="collapsible-tab" id="collapsible-1-mobile-{{ block.settings.tab_identifier }}">
+                  <div class="collapsible-header" onclick="toggleCollapsible('collapsible-1-mobile-{{ block.settings.tab_identifier }}')">
+                    <div class="collapsible-header-left">
+                      <div class="collapsible-icon">
+                        {{ section.settings.collapsible_1_icon }}
+                      </div>
+                      <div class="collapsible-title">{{ section.settings.collapsible_1_title }}</div>
+                    </div>
+                    <div class="collapsible-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                      {{ section.settings.collapsible_1_content }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if section.settings.show_collapsible_2 %}
+                <div class="collapsible-tab" id="collapsible-2-mobile-{{ block.settings.tab_identifier }}">
+                  <div class="collapsible-header" onclick="toggleCollapsible('collapsible-2-mobile-{{ block.settings.tab_identifier }}')">
+                    <div class="collapsible-header-left">
+                      <div class="collapsible-icon">
+                        {{ section.settings.collapsible_2_icon }}
+                      </div>
+                      <div class="collapsible-title">{{ section.settings.collapsible_2_title }}</div>
+                    </div>
+                    <div class="collapsible-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                      {{ section.settings.collapsible_2_content }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if section.settings.show_collapsible_3 %}
+                <div class="collapsible-tab" id="collapsible-3-mobile-{{ block.settings.tab_identifier }}">
+                  <div class="collapsible-header" onclick="toggleCollapsible('collapsible-3-mobile-{{ block.settings.tab_identifier }}')">
+                    <div class="collapsible-header-left">
+                      <div class="collapsible-icon">
+                        {{ section.settings.collapsible_3_icon }}
+                      </div>
+                      <div class="collapsible-title">{{ section.settings.collapsible_3_title }}</div>
+                    </div>
+                    <div class="collapsible-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                      {{ section.settings.collapsible_3_content }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
           </div>
 
           <!-- Right Column - Content -->
@@ -743,6 +841,78 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Collapsible Tabs Section (Static - doesn't change with tabs) -->
+        <div class="collapsible-tabs-section">
+          {% if section.settings.show_collapsible_1 %}
+            <div class="collapsible-tab" id="collapsible-1-{{ block.settings.tab_identifier }}">
+              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-1-{{ block.settings.tab_identifier }}')">
+                <div class="collapsible-header-left">
+                  <div class="collapsible-icon">
+                    {{ section.settings.collapsible_1_icon }}
+                  </div>
+                  <div class="collapsible-title">{{ section.settings.collapsible_1_title }}</div>
+                </div>
+                <div class="collapsible-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="collapsible-content">
+                <div class="collapsible-content-inner">
+                  {{ section.settings.collapsible_1_content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.show_collapsible_2 %}
+            <div class="collapsible-tab" id="collapsible-2-{{ block.settings.tab_identifier }}">
+              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-2-{{ block.settings.tab_identifier }}')">
+                <div class="collapsible-header-left">
+                  <div class="collapsible-icon">
+                    {{ section.settings.collapsible_2_icon }}
+                  </div>
+                  <div class="collapsible-title">{{ section.settings.collapsible_2_title }}</div>
+                </div>
+                <div class="collapsible-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="collapsible-content">
+                <div class="collapsible-content-inner">
+                  {{ section.settings.collapsible_2_content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.show_collapsible_3 %}
+            <div class="collapsible-tab" id="collapsible-3-{{ block.settings.tab_identifier }}">
+              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-3-{{ block.settings.tab_identifier }}')">
+                <div class="collapsible-header-left">
+                  <div class="collapsible-icon">
+                    {{ section.settings.collapsible_3_icon }}
+                  </div>
+                  <div class="collapsible-title">{{ section.settings.collapsible_3_title }}</div>
+                </div>
+                <div class="collapsible-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="collapsible-content">
+                <div class="collapsible-content-inner">
+                  {{ section.settings.collapsible_3_content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
         </div>
 
         <!-- Packages Container - Below Main Content -->
@@ -823,78 +993,6 @@
       </div>
     {% endif %}
   {% endfor %}
-
-  <!-- Collapsible Tabs Section (Static - doesn't change with tabs) -->
-  <div class="collapsible-tabs-section">
-    {% if section.settings.show_collapsible_1 %}
-      <div class="collapsible-tab" id="collapsible-1">
-        <div class="collapsible-header" onclick="toggleCollapsible('collapsible-1')">
-          <div class="collapsible-header-left">
-            <div class="collapsible-icon">
-              {{ section.settings.collapsible_1_icon }}
-            </div>
-            <div class="collapsible-title">{{ section.settings.collapsible_1_title }}</div>
-          </div>
-          <div class="collapsible-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-        <div class="collapsible-content">
-          <div class="collapsible-content-inner">
-            {{ section.settings.collapsible_1_content }}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    {% if section.settings.show_collapsible_2 %}
-      <div class="collapsible-tab" id="collapsible-2">
-        <div class="collapsible-header" onclick="toggleCollapsible('collapsible-2')">
-          <div class="collapsible-header-left">
-            <div class="collapsible-icon">
-              {{ section.settings.collapsible_2_icon }}
-            </div>
-            <div class="collapsible-title">{{ section.settings.collapsible_2_title }}</div>
-          </div>
-          <div class="collapsible-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-        <div class="collapsible-content">
-          <div class="collapsible-content-inner">
-            {{ section.settings.collapsible_2_content }}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    {% if section.settings.show_collapsible_3 %}
-      <div class="collapsible-tab" id="collapsible-3">
-        <div class="collapsible-header" onclick="toggleCollapsible('collapsible-3')">
-          <div class="collapsible-header-left">
-            <div class="collapsible-icon">
-              {{ section.settings.collapsible_3_icon }}
-            </div>
-            <div class="collapsible-title">{{ section.settings.collapsible_3_title }}</div>
-          </div>
-          <div class="collapsible-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-        <div class="collapsible-content">
-          <div class="collapsible-content-inner">
-            {{ section.settings.collapsible_3_content }}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  </div>
 </div>
 
 <script>
