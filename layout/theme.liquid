@@ -3,11 +3,6 @@
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
     <script>
-      // In theme.liquid or cart page
-if (window.location.pathname.includes('/cart/')) {
-  sessionStorage.setItem('preventCheckoutRedirect', 'true');
-} 
-
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="https://partner.pabau.com/"]').forEach(link => {
         link.style.display = 'none';
