@@ -775,6 +775,29 @@
                   </div>
                 </div>
               {% endif %}
+
+              {% if section.settings.show_collapsible_4 %}
+                <div class="collapsible-tab" id="collapsible-4-mobile-{{ block.settings.tab_identifier }}">
+                  <div class="collapsible-header" onclick="toggleCollapsible('collapsible-4-mobile-{{ block.settings.tab_identifier }}')">
+                    <div class="collapsible-header-left">
+                      <div class="collapsible-icon">
+                        {{ section.settings.collapsible_4_icon }}
+                      </div>
+                      <div class="collapsible-title">{{ section.settings.collapsible_4_title }}</div>
+                    </div>
+                    <div class="collapsible-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                      {{ section.settings.collapsible_4_content }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </div>
 
@@ -908,6 +931,29 @@
               <div class="collapsible-content">
                 <div class="collapsible-content-inner">
                   {{ section.settings.collapsible_3_content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.show_collapsible_4 %}
+            <div class="collapsible-tab" id="collapsible-4-{{ block.settings.tab_identifier }}">
+              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-4-{{ block.settings.tab_identifier }}')">
+                <div class="collapsible-header-left">
+                  <div class="collapsible-icon">
+                    {{ section.settings.collapsible_4_icon }}
+                  </div>
+                  <div class="collapsible-title">{{ section.settings.collapsible_4_title }}</div>
+                </div>
+                <div class="collapsible-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="collapsible-content">
+                <div class="collapsible-content-inner">
+                  {{ section.settings.collapsible_4_content }}
                 </div>
               </div>
             </div>
@@ -1447,7 +1493,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Add up to 3 collapsible accordion tabs that remain the same across all treatment tabs."
+      "content": "Add up to 4 collapsible accordion tabs that remain the same across all treatment tabs."
     },
     {
       "type": "checkbox",
@@ -1523,6 +1569,31 @@
       "id": "collapsible_3_content",
       "label": "Tab 3 - Content",
       "default": "<p>Add benefits and features here.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collapsible_4",
+      "label": "Show Collapsible Tab 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "collapsible_4_title",
+      "label": "Tab 4 - Title",
+      "default": "FAQS"
+    },
+    {
+      "type": "html",
+      "id": "collapsible_4_icon",
+      "label": "Tab 4 - Icon (SVG)",
+      "default": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>",
+      "info": "Paste SVG code for the icon"
+    },
+    {
+      "type": "richtext",
+      "id": "collapsible_4_content",
+      "label": "Tab 4 - Content",
+      "default": "<p>Add your FAQs here.</p>"
     }
   ],
   "blocks": [
