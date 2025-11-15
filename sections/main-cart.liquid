@@ -20,9 +20,9 @@
           <div class="v-stack gap-4">
             <h1 class="h2">{{ 'cart.general.title' | t }}</h1>
 
-            {%- if settings.cart_show_free_shipping_bar -%}
+            {% comment %} {%- if settings.cart_show_free_shipping_bar -%}
               {%- render 'free-shipping-bar' -%}
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
           </div>
         </div>
 
