@@ -399,6 +399,15 @@
     display: none;
   }
 
+  /* Show mobile collapsible tabs on mobile - positioned after CTA cards */
+  @media (max-width: 1024px) {
+    .collapsible-tabs-section.collapsible-mobile {
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
   .collapsible-tab {
     border-bottom: 1px solid #e0e0e0;
     padding: 20px 0;
@@ -513,6 +522,8 @@
 
     .collapsible-tabs-section.collapsible-mobile {
       display: block;
+      margin-top: 30px;
+      margin-bottom: 0;
     }
   }
 
@@ -602,6 +613,11 @@
     .tab-button {
       padding: 8px 16px;
       font-size: 13px;
+    }
+
+    .collapsible-tabs-section.collapsible-mobile {
+      margin-top: 24px;
+      margin-bottom: 0;
     }
 
     .collapsible-tabs-section {
@@ -704,8 +720,71 @@
                 {% endif %}
               {% endfor %}
             </div>
+          </div>
 
-            <!-- Collapsible Tabs Section - Mobile (Below mobile tabs) -->
+          <!-- Right Column - Content -->
+          <div class="content-column">
+            <h2>{{ block.settings.heading }}</h2>
+            
+            <div class="top-description">
+              {{ block.settings.top_description }}
+            </div>
+
+            <!-- CTA Cards -->
+            <div class="cta-cards">
+              <!-- Book Consultation Card -->
+              {% if block.settings.consultation_link != blank %}
+                <a href="{{ block.settings.consultation_link }}" class="cta-card consultation-card" style="text-decoration: none; color: inherit;">
+                  <div class="cta-card-header">
+                    <h3>{{ block.settings.consultation_heading }}</h3>
+                    {% if block.settings.consultation_badge != blank %}
+                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.consultation_description }}</p>
+                </a>
+              {% else %}
+                <div class="cta-card consultation-card">
+                  <div class="cta-card-header">
+                    <h3>{{ block.settings.consultation_heading }}</h3>
+                    {% if block.settings.consultation_badge != blank %}
+                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.consultation_description }}</p>
+                </div>
+              {% endif %}
+
+              <!-- Buy Package Card -->
+              <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.settings.tab_identifier }}')">
+                <div class="cta-card-header">
+                  <h3>{{ block.settings.package_heading }}</h3>
+                  <span class="cta-price" data-package-price="{{ block.settings.tab_identifier }}">
+                    {% assign first_package = section.blocks | where: "type", "package" | where: "settings.parent_tab", block.settings.tab_identifier | first %}
+                    {% if first_package %}
+                      from {{ first_package.settings.price }}
+                    {% endif %}
+                  </span>
+                </div>
+                <p>{{ block.settings.package_description }}</p>
+              </div>
+
+              <!-- Tab Navigation - Desktop Only (Below CTA Cards) -->
+              <div class="tab-navigation content-tabs desktop-tabs">
+                {% for tab_block in section.blocks %}
+                  {% if tab_block.type == 'tab' %}
+                    <button 
+                      class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                      data-tab="{{ tab_block.settings.tab_identifier }}"
+                      onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                      {{ tab_block.settings.tab_name }}
+                    </button>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+
+            <!-- Collapsible Tabs Section - Mobile (After CTA Cards) -->
             <div class="collapsible-tabs-section collapsible-mobile">
               {% if section.settings.show_collapsible_1 %}
                 <div class="collapsible-tab" id="collapsible-1-mobile-{{ block.settings.tab_identifier }}">
@@ -798,69 +877,6 @@
                   </div>
                 </div>
               {% endif %}
-            </div>
-          </div>
-
-          <!-- Right Column - Content -->
-          <div class="content-column">
-            <h2>{{ block.settings.heading }}</h2>
-            
-            <div class="top-description">
-              {{ block.settings.top_description }}
-            </div>
-
-            <!-- CTA Cards -->
-            <div class="cta-cards">
-              <!-- Book Consultation Card -->
-              {% if block.settings.consultation_link != blank %}
-                <a href="{{ block.settings.consultation_link }}" class="cta-card consultation-card" style="text-decoration: none; color: inherit;">
-                  <div class="cta-card-header">
-                    <h3>{{ block.settings.consultation_heading }}</h3>
-                    {% if block.settings.consultation_badge != blank %}
-                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
-                    {% endif %}
-                  </div>
-                  <p>{{ block.settings.consultation_description }}</p>
-                </a>
-              {% else %}
-                <div class="cta-card consultation-card">
-                  <div class="cta-card-header">
-                    <h3>{{ block.settings.consultation_heading }}</h3>
-                    {% if block.settings.consultation_badge != blank %}
-                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
-                    {% endif %}
-                  </div>
-                  <p>{{ block.settings.consultation_description }}</p>
-                </div>
-              {% endif %}
-
-              <!-- Buy Package Card -->
-              <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.settings.tab_identifier }}')">
-                <div class="cta-card-header">
-                  <h3>{{ block.settings.package_heading }}</h3>
-                  <span class="cta-price" data-package-price="{{ block.settings.tab_identifier }}">
-                    {% assign first_package = section.blocks | where: "type", "package" | where: "settings.parent_tab", block.settings.tab_identifier | first %}
-                    {% if first_package %}
-                      from {{ first_package.settings.price }}
-                    {% endif %}
-                  </span>
-                </div>
-                <p>{{ block.settings.package_description }}</p>
-              </div>
-
-              <!-- Tab Navigation - Desktop Only (Below CTA Cards) -->
-              <div class="tab-navigation content-tabs desktop-tabs">
-                {% for tab_block in section.blocks %}
-                  {% if tab_block.type == 'tab' %}
-                    <button 
-                      class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
-                      data-tab="{{ tab_block.settings.tab_identifier }}"
-                      onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
-                      {{ tab_block.settings.tab_name }}
-                    </button>
-                  {% endif %}
-                {% endfor %}
-              </div>
             </div>
           </div>
         </div>
