@@ -1089,20 +1089,6 @@
             "answer": "<p>Yes. Our advanced laser system is designed to safely treat a wide range of skin tones with minimal risk of pigmentation changes.</p>"
           }
         },
-        "text_byRpBE": {
-          "type": "text",
-          "settings": {
-            "question": "How do I book?",
-            "answer": "<p>You can book your patch test by clicking book patch test which will take you to our diary where you will be able to choose a slot that works for you.</p>"
-          }
-        },
-        "text_C64jCF": {
-          "type": "text",
-          "settings": {
-            "question": "How does payment work?",
-            "answer": "<p>Payment is made online when making your appointment.</p>"
-          }
-        },
         "text_g8Wtnb": {
           "type": "text",
           "settings": {
@@ -1115,13 +1101,6 @@
           "settings": {
             "question": "I already had a patch test elsewhere do I need another one?",
             "answer": "<p>Yes we must conduct our own patch test before treatment can start.</p>"
-          }
-        },
-        "text_8nArET": {
-          "type": "text",
-          "settings": {
-            "question": "How much does a patch test cost?",
-            "answer": "<p>£30</p>"
           }
         },
         "text_TfiUEr": {
@@ -1141,7 +1120,7 @@
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "Is the treatment painful",
+            "question": "Is the treatment painful?",
             "answer": "<p>Most clients describe the sensation as similar to a rubber band flicking against the skin. While it can be slightly uncomfortable, it’s very tolerable — and we can use numbing cream to make the experience as comfortable as possible.</p>"
           }
         },
@@ -1155,11 +1134,8 @@
       },
       "block_order": [
         "text_Dpx4Qh",
-        "text_byRpBE",
-        "text_C64jCF",
         "text_g8Wtnb",
         "text_763k6p",
-        "text_8nArET",
         "text_TfiUEr",
         "text_LpArYV",
         "text_JMUbWR",
