@@ -560,6 +560,7 @@
         "treatment_DGUDpX",
         "treatment_LWReLR"
       ],
+      "disabled": true,
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
