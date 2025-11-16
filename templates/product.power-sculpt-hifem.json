@@ -155,7 +155,7 @@
             "session_1_price": "£50",
             "session_1_total": "total £50.00",
             "session_1_per_session": "per session",
-            "session_1_link": "",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983349858684&quantity=1",
             "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£10.00",
@@ -167,13 +167,13 @@
             "session_6_price": "£41.50",
             "session_6_total": "total £250.00",
             "session_6_per_session": "per session",
-            "session_6_link": "",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983349891452&quantity=1",
             "show_session_10": true,
             "session_10_label": "10 session",
             "session_10_price": "£40.00",
             "session_10_total": "total £400.00",
             "session_10_per_session": "per session",
-            "session_10_link": ""
+            "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983349924220&quantity=1"
           }
         }
       },
