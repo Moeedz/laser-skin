@@ -368,6 +368,7 @@
       "block_order": [
         "slide_mTH4wq"
       ],
+      "disabled": true,
       "custom_css": [
         ".swiper-fade .swiper-slide-active {align-items: center !important;}",
         ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
