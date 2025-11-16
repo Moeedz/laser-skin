@@ -2433,32 +2433,11 @@
     "ss_simple_faq_jiYFWj": {
       "type": "ss-simple-faq",
       "blocks": {
-        "text_Dpx4Qh": {
-          "type": "text",
-          "settings": {
-            "question": "How do I book?",
-            "answer": "<p>You can click book test patch which will take you to our diary where you will be able to choose a slot that works for you.</p>"
-          }
-        },
         "text_VRegUr": {
           "type": "text",
           "settings": {
             "question": "I already had a patch test elsewhere do I need another one?",
             "answer": "<p>Yes we must conduct our own patch test before treatment can start.</p>"
-          }
-        },
-        "text_h38rDH": {
-          "type": "text",
-          "settings": {
-            "question": "How much does a patch test cost?",
-            "answer": "<p>£30</p>"
-          }
-        },
-        "text_nVHJHa": {
-          "type": "text",
-          "settings": {
-            "question": "How does payment work?",
-            "answer": "<p>Payment is made online when making your appointment.</p>"
           }
         },
         "text_Hir8bk": {
@@ -2519,10 +2498,7 @@
         }
       },
       "block_order": [
-        "text_Dpx4Qh",
         "text_VRegUr",
-        "text_h38rDH",
-        "text_nVHJHa",
         "text_Hir8bk",
         "text_M3G6jX",
         "text_QxQNbr",
