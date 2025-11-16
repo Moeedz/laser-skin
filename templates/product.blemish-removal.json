@@ -324,7 +324,7 @@
         "package_button_radius": 8,
         "package_button_background": "#E6B325",
         "package_button_text_color": "#FFFFFF",
-        "package_button_hover_background": "#c5de3f",
+        "package_button_hover_background": "#e6b325",
         "image_border_radius": 8,
         "show_collapsible_1": true,
         "collapsible_1_title": "DESCRIPTION",
@@ -656,6 +656,7 @@
         "treatment_DGUDpX",
         "treatment_LWReLR"
       ],
+      "disabled": true,
       "name": "Treatment Pricing",
       "settings": {
         "show_section_title": true,
