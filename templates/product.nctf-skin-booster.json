@@ -130,11 +130,11 @@
         "tab_Amzfdm": {
           "type": "tab",
           "settings": {
-            "tab_identifier": "poly",
-            "tab_name": "Polynucleotides",
-            "heading": "Polynucleotides",
-            "top_description": "<p>Polynucleotides rejuvenate the skin from within by stimulating repair, boosting hydration, and improving overall elasticity. They help smooth fine lines, brighten dull skin, and restore a healthier, more youthful glow.</p>",
-            "image_1": "shopify://shop_images/IMG_0654_720x_4398b652-fe13-4f63-adc1-50fd2122042f.jpg",
+            "tab_identifier": "nctf",
+            "tab_name": "NCTF Skin Booster",
+            "heading": "NCTF Skin Booster",
+            "top_description": "<p>NCTF Skin Booster delivers a potent blend of vitamins, hyaluronic acid, and antioxidants to deeply hydrate and revitalise the skin. It improves texture, radiance, and firmness, giving a smoother, healthier, and more youthful glow.</p>",
+            "image_1": "shopify://shop_images/main_image.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
@@ -147,7 +147,7 @@
         "package_HrfHda": {
           "type": "package",
           "settings": {
-            "parent_tab": "poly",
+            "parent_tab": "nctf",
             "package_name": "Small Eye",
             "price": "from £91.50",
             "show_session_1": true,
@@ -179,7 +179,7 @@
         "package_JjNGMf": {
           "type": "package",
           "settings": {
-            "parent_tab": "poly",
+            "parent_tab": "nctf",
             "package_name": "Half Face",
             "price": "from £120.50",
             "show_session_1": true,
@@ -211,7 +211,7 @@
         "package_eaxCci": {
           "type": "package",
           "settings": {
-            "parent_tab": "poly",
+            "parent_tab": "nctf",
             "package_name": "Full Face",
             "price": "from £200.00",
             "show_session_1": true,
@@ -335,6 +335,7 @@
       "block_order": [
         "slide_mTH4wq"
       ],
+      "disabled": true,
       "custom_css": [
         ".swiper-fade .swiper-slide-active {align-items: center !important;}",
         ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
