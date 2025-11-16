@@ -198,9 +198,9 @@
         "tab_border_color": "#333333",
         "tab_hover_background": "#f5f5f5",
         "tab_hover_text_color": "#000000",
-        "tab_active_background": "#E6B325",
-        "tab_active_text_color": "#FFFFFF",
-        "tab_active_border_color": "#E6B325",
+        "tab_active_background": "#e6b325",
+        "tab_active_text_color": "#ffffff",
+        "tab_active_border_color": "#e6b325",
         "heading_font_size": 42,
         "heading_font_weight": "400",
         "heading_color": "#000000",
@@ -224,8 +224,8 @@
         "package_heading_color": "#000000",
         "package_price_color": "#666666",
         "package_button_radius": 8,
-        "package_button_background": "#E6B325",
-        "package_button_text_color": "#FFFFFF",
+        "package_button_background": "#e6b325",
+        "package_button_text_color": "#ffffff",
         "package_button_hover_background": "#e6b325",
         "image_border_radius": 8,
         "show_collapsible_1": true,
@@ -980,32 +980,11 @@
             "answer": "<p>Celluma’s LED light penetrates deep into the skin, stimulating natural cellular activity.<br/><br/>This enhances collagen and elastin production, reduces inflammation, and accelerates tissue repair for smoother, stronger, and more radiant skin.</p>"
           }
         },
-        "text_Aqcjzf": {
-          "type": "text",
-          "settings": {
-            "question": "What happens if I want to book a course?",
-            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
-          }
-        },
-        "text_xCWpyw": {
-          "type": "text",
-          "settings": {
-            "question": "How does payment work?",
-            "answer": "<p>Payment is made online when making your appointment.</p>"
-          }
-        },
         "text_krXArd": {
           "type": "text",
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
-          }
-        },
-        "text_RWdwHG": {
-          "type": "text",
-          "settings": {
-            "question": "How do I book?",
-            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
         "text_Af7dzD": {
@@ -1046,10 +1025,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
-        "text_Aqcjzf",
-        "text_xCWpyw",
         "text_krXArd",
-        "text_RWdwHG",
         "text_Af7dzD",
         "text_JMUbWR",
         "text_UiGdVT",
