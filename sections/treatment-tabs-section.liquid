@@ -770,6 +770,81 @@
           </div>
         </div>
 
+        <!-- Packages Container - Right below desktop tabs -->
+        <div class="packages-container" data-packages="{{ block.settings.tab_identifier }}">
+          <div class="packages-grid">
+            {% for package_block in section.blocks %}
+              {% if package_block.type == 'package' and package_block.settings.parent_tab == block.settings.tab_identifier %}
+                <div class="package-card">
+                  <div class="package-card-header" onclick="toggleSessionOptions('{{ package_block.id }}')">
+                    <h4>{{ package_block.settings.package_name }}</h4>
+                    <div class="package-price">{{ package_block.settings.price }}</div>
+                  </div>
+                  
+                  <!-- Session Options -->
+                  <div class="session-options" id="session-{{ package_block.id }}">
+                    <div class="session-selector-heading">Select Number of Session</div>
+                    
+                    {% if package_block.settings.show_session_1 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_1_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_1_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_1_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_1_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_1_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_3 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_3_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_3_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_3_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_3_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_3_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_6 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_6_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_6_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_6_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_6_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_6_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_10 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_10_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_10_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_10_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_10_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_10_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    <button class="package-select session-select">SELECT</button>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
         <!-- Collapsible Tabs Section (Static - doesn't change with tabs) -->
         <div class="collapsible-tabs-section">
           {% if section.settings.show_collapsible_1 %}
@@ -863,81 +938,6 @@
               </div>
             </div>
           {% endif %}
-        </div>
-
-        <!-- Packages Container - Below Main Content -->
-        <div class="packages-container" data-packages="{{ block.settings.tab_identifier }}">
-          <div class="packages-grid">
-            {% for package_block in section.blocks %}
-              {% if package_block.type == 'package' and package_block.settings.parent_tab == block.settings.tab_identifier %}
-                <div class="package-card">
-                  <div class="package-card-header" onclick="toggleSessionOptions('{{ package_block.id }}')">
-                    <h4>{{ package_block.settings.package_name }}</h4>
-                    <div class="package-price">{{ package_block.settings.price }}</div>
-                  </div>
-                  
-                  <!-- Session Options -->
-                  <div class="session-options" id="session-{{ package_block.id }}">
-                    <div class="session-selector-heading">Select Number of Session</div>
-                    
-                    {% if package_block.settings.show_session_1 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_1_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_1_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_1_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_1_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_1_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    {% if package_block.settings.show_session_3 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_3_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_3_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_3_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_3_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_3_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    {% if package_block.settings.show_session_6 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_6_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_6_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_6_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_6_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_6_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    {% if package_block.settings.show_session_10 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_10_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_10_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_10_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_10_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_10_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    <button class="package-select session-select">SELECT</button>
-                  </div>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
         </div>
 
         <!-- Collapsible Tabs Section - Mobile (After Packages) -->
