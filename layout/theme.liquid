@@ -3,15 +3,21 @@
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-  // Find all anchor tags with spans containing "Get more information"
+document.addEventListener('DOMContentLoaded', function() {
+  // For anchor tags with spans containing "Get more information"
   document.querySelectorAll('a span').forEach(span => {
     if (span.textContent.trim() === 'Get more information') {
       span.closest('a').style.display = 'none';
     }
   });
+  
+  // For anchor tags with direct text "Get more Information"
+  document.querySelectorAll('a').forEach(link => {
+    if (link.textContent.trim() === 'Get more Information') {
+      link.style.display = 'none';
+    }
+  });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="https://partner.pabau.com/"]').forEach(link => {
         link.style.display = 'none';
