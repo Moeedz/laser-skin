@@ -3,12 +3,12 @@
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
     <script>
-      // Find all anchor tags with spans containing "Get more information"
-document.querySelectorAll('a span').forEach(span => {
-  if (span.textContent.trim() === 'Get more information') {
-    span.closest('a').style.display = 'none';
-  }
-});
+      const link = Array.from(document.querySelectorAll('a span'))
+  .find(span => span.textContent.trim() === 'Get more information');
+
+if (link) {
+  link.closest('a').style.display = 'none';
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="https://partner.pabau.com/"]').forEach(link => {
