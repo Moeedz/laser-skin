@@ -37,7 +37,7 @@
     "show_discount": false,
     "cart_type": "drawer",
     "cart_icon": "shopping_bag",
-    "cart_show_free_shipping_bar": true,
+    "cart_show_free_shipping_bar": false,
     "cart_free_shipping_threshold": "60",
     "social_facebook": "https://www.facebook.com/LaserSkinClinicsWolverhampton/",
     "social_twitter": "https://x.com/laserclinicwolv",
