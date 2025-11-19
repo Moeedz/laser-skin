@@ -422,7 +422,7 @@
                 id="contact-first-name-{{ section.id }}"
                 name="contact[First name]" 
                 placeholder="{{ section.settings.first_name_placeholder }}"
-                required
+                {% if section.settings.first_name_required %}required{% endif %}
                 autocomplete="given-name"
               >
             </div>
@@ -434,7 +434,7 @@
                 id="contact-last-name-{{ section.id }}"
                 name="contact[Last name]" 
                 placeholder="{{ section.settings.last_name_placeholder }}"
-                required
+                {% if section.settings.last_name_required %}required{% endif %}
                 autocomplete="family-name"
               >
             </div>
@@ -449,7 +449,7 @@
                 name="contact[email]" 
                 placeholder="{{ section.settings.email_placeholder }}"
                 value="{{ customer.email }}"
-                required
+                {% if section.settings.email_required %}required{% endif %}
                 autocomplete="email"
               >
             </div>
@@ -461,7 +461,7 @@
                 id="contact-phone-{{ section.id }}"
                 name="contact[Phone]" 
                 placeholder="{{ section.settings.phone_placeholder }}"
-                required
+                {% if section.settings.phone_required %}required{% endif %}
                 autocomplete="tel"
               >
             </div>
@@ -473,7 +473,7 @@
               <select 
                 id="contact-best-time-{{ section.id }}"
                 name="contact[Best time to call]"
-                required
+                {% if section.settings.best_time_required %}required{% endif %}
               >
                 <option value="">{{ section.settings.best_time_placeholder }}</option>
                 <option value="Morning (9am - 12pm)">Morning (9am - 12pm)</option>
@@ -490,7 +490,7 @@
                 id="contact-treatment-{{ section.id }}"
                 name="contact[Treatment interested in]"
                 placeholder="{{ section.settings.treatment_placeholder }}"
-                required
+                {% if section.settings.treatment_required %}required{% endif %}
               >
             </div>
           </div>
@@ -536,7 +536,7 @@
               id="contact-message-{{ section.id }}"
               name="contact[body]" 
               placeholder="{{ section.settings.message_placeholder }}"
-              required
+              {% if section.settings.message_required %}required{% endif %}
             ></textarea>
           </div>
 
@@ -1037,10 +1037,22 @@
       "default": "First name *"
     },
     {
+      "type": "checkbox",
+      "id": "first_name_required",
+      "label": "First name required",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "last_name_placeholder",
       "label": "Last name placeholder",
       "default": "Last name *"
+    },
+    {
+      "type": "checkbox",
+      "id": "last_name_required",
+      "label": "Last name required",
+      "default": true
     },
     {
       "type": "text",
@@ -1049,10 +1061,22 @@
       "default": "Email *"
     },
     {
+      "type": "checkbox",
+      "id": "email_required",
+      "label": "Email required",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "phone_placeholder",
       "label": "Phone placeholder",
       "default": "Phone *"
+    },
+    {
+      "type": "checkbox",
+      "id": "phone_required",
+      "label": "Phone required",
+      "default": true
     },
     {
       "type": "text",
@@ -1061,16 +1085,34 @@
       "default": "Select best time to call *"
     },
     {
+      "type": "checkbox",
+      "id": "best_time_required",
+      "label": "Best time to call required",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "treatment_placeholder",
       "label": "Treatment interested in placeholder",
       "default": "Treatment interested in *"
     },
     {
+      "type": "checkbox",
+      "id": "treatment_required",
+      "label": "Treatment interested in required",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "message_placeholder",
       "label": "Message placeholder",
       "default": "Message *"
+    },
+    {
+      "type": "checkbox",
+      "id": "message_required",
+      "label": "Message required",
+      "default": true
     },
     {
       "type": "range",
