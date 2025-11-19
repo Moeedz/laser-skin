@@ -938,6 +938,29 @@
               </div>
             </div>
           {% endif %}
+
+          {% if section.settings.show_collapsible_5 %}
+            <div class="collapsible-tab" id="collapsible-5-{{ block.settings.tab_identifier }}">
+              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-5-{{ block.settings.tab_identifier }}')">
+                <div class="collapsible-header-left">
+                  <div class="collapsible-icon">
+                    {{ section.settings.collapsible_5_icon }}
+                  </div>
+                  <div class="collapsible-title">{{ section.settings.collapsible_5_title }}</div>
+                </div>
+                <div class="collapsible-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="collapsible-content">
+                <div class="collapsible-content-inner">
+                  {{ section.settings.collapsible_5_content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
         </div>
 
         <!-- Collapsible Tabs Section - Mobile (After Packages) -->
@@ -1029,6 +1052,29 @@
               <div class="collapsible-content">
                 <div class="collapsible-content-inner">
                   {{ section.settings.collapsible_4_content }}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.show_collapsible_5 %}
+            <div class="collapsible-tab" id="collapsible-5-mobile-{{ block.settings.tab_identifier }}">
+              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-5-mobile-{{ block.settings.tab_identifier }}')">
+                <div class="collapsible-header-left">
+                  <div class="collapsible-icon">
+                    {{ section.settings.collapsible_5_icon }}
+                  </div>
+                  <div class="collapsible-title">{{ section.settings.collapsible_5_title }}</div>
+                </div>
+                <div class="collapsible-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="collapsible-content">
+                <div class="collapsible-content-inner">
+                  {{ section.settings.collapsible_5_content }}
                 </div>
               </div>
             </div>
@@ -1493,7 +1539,7 @@
     },
     {
       "type": "paragraph",
-      "content": "Add up to 4 collapsible accordion tabs that remain the same across all treatment tabs."
+      "content": "Add up to 5 collapsible accordion tabs that remain the same across all treatment tabs."
     },
     {
       "type": "checkbox",
@@ -1594,6 +1640,31 @@
       "id": "collapsible_4_content",
       "label": "Tab 4 - Content",
       "default": "<p>Add your FAQs here.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collapsible_5",
+      "label": "Show Collapsible Tab 5",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "collapsible_5_title",
+      "label": "Tab 5 - Title",
+      "default": "REVIEWS"
+    },
+    {
+      "type": "html",
+      "id": "collapsible_5_icon",
+      "label": "Tab 5 - Icon (SVG)",
+      "default": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z' /></svg>",
+      "info": "Paste SVG code for the icon"
+    },
+    {
+      "type": "richtext",
+      "id": "collapsible_5_content",
+      "label": "Tab 5 - Content",
+      "default": "<p>Add your reviews here.</p>"
     }
   ],
   "blocks": [
