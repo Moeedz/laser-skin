@@ -478,7 +478,7 @@
         "package_button_hover_background": "#e6b325",
         "image_border_radius": 8,
         "show_collapsible_1": true,
-        "collapsible_1_title": "Discover if Anti-Wrinkle Is Right for You",
+        "collapsible_1_title": "Discover if This Treatment Is Right for You",
         "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
         "collapsible_1_content": "<p>Our Anti-Wrinkle clinic runs every Saturday morning, led by Dr Scotton. She’ll happily assess your concerns and discuss whether this treatment is right for you — completely free of charge.<br/><br/>As we operate on an appointment-only basis, please contact us to secure your consultation and we’ll gladly get you booked into the diary.</p>",
         "show_collapsible_2": false,
