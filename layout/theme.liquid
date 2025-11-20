@@ -2,6 +2,12 @@
 
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
+    {% if template == 'product' %}
+  {% assign hidden_products = 'laser-hair-removal-course-of-10,laser-hair-removal-course-of-6,laser-hair-removal-course-of-3,laser-hair-removal-single-session' | split: ',' %}
+  {% if hidden_products contains product.handle %}
+    <meta name="robots" content="noindex, follow">
+  {% endif %}
+{% endif %}
     <script>
 document.addEventListener('DOMContentLoaded', function() {
   // For anchor tags with spans containing "Get more information"
