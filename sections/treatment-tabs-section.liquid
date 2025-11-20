@@ -1,7 +1,8 @@
 {% comment %}
-  Treatment Tabs Section
+  Treatment Tabs Section with Consultation Modal
   - Multiple tabs with dynamic content
   - Package cards that toggle
+  - Consultation modal with multiple contact options
   - Fully customizable from section settings
   - Mobile optimized
 {% endcomment %}
@@ -488,6 +489,185 @@
     margin-bottom: 0;
   }
 
+  /* Modal Styles */
+  .consultation-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .consultation-modal-overlay.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .consultation-modal {
+    background: white;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .modal-close:hover {
+    background: #e0e0e0;
+    transform: rotate(90deg);
+  }
+
+  .modal-close svg {
+    width: 18px;
+    height: 18px;
+    stroke: #333;
+  }
+
+  .modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    padding-right: 40px;
+  }
+
+  .modal-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+  }
+
+  .modal-content {
+    padding: 30px;
+  }
+
+  .consultation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .consultation-option {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+  }
+
+  .consultation-option:hover {
+    border-color: {{ section.settings.tab_active_background }};
+    background: #f9f9f9;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .consultation-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: {{ section.settings.tab_active_background }}15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  .consultation-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: {{ section.settings.tab_active_background }};
+    fill: none;
+  }
+
+  .consultation-details {
+    flex: 1;
+  }
+
+  .consultation-method {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  .consultation-info {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .consultation-arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .consultation-option:hover .consultation-arrow {
+    opacity: 1;
+  }
+
+  .consultation-arrow svg {
+    width: 20px;
+    height: 20px;
+    stroke: #333;
+  }
+
   /* Mobile Responsive */
   @media (max-width: 1024px) {
     .packages-grid {
@@ -628,6 +808,46 @@
     .collapsible-content-inner {
       font-size: 13px;
     }
+
+    .consultation-modal {
+      width: 95%;
+      margin: 10px;
+    }
+
+    .modal-header {
+      padding: 20px 20px 15px;
+    }
+
+    .modal-title {
+      font-size: 20px;
+    }
+
+    .modal-content {
+      padding: 20px;
+    }
+
+    .consultation-option {
+      padding: 16px;
+    }
+
+    .consultation-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+    }
+
+    .consultation-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .consultation-method {
+      font-size: 15px;
+    }
+
+    .consultation-info {
+      font-size: 13px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -716,28 +936,16 @@
 
             <!-- CTA Cards -->
             <div class="cta-cards">
-              <!-- Book Consultation Card -->
-              {% if block.settings.consultation_link != blank %}
-                <a href="{{ block.settings.consultation_link }}" class="cta-card consultation-card" style="text-decoration: none; color: inherit;">
-                  <div class="cta-card-header">
-                    <h3>{{ block.settings.consultation_heading }}</h3>
-                    {% if block.settings.consultation_badge != blank %}
-                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
-                    {% endif %}
-                  </div>
-                  <p>{{ block.settings.consultation_description }}</p>
-                </a>
-              {% else %}
-                <div class="cta-card consultation-card">
-                  <div class="cta-card-header">
-                    <h3>{{ block.settings.consultation_heading }}</h3>
-                    {% if block.settings.consultation_badge != blank %}
-                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
-                    {% endif %}
-                  </div>
-                  <p>{{ block.settings.consultation_description }}</p>
+              <!-- Book Consultation Card - Now triggers modal -->
+              <div class="cta-card consultation-card" onclick="openConsultationModal('{{ block.settings.tab_identifier }}')">
+                <div class="cta-card-header">
+                  <h3>{{ block.settings.consultation_heading }}</h3>
+                  {% if block.settings.consultation_badge != blank %}
+                    <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                  {% endif %}
                 </div>
-              {% endif %}
+                <p>{{ block.settings.consultation_description }}</p>
+              </div>
 
               <!-- Buy Package Card -->
               <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.settings.tab_identifier }}')">
@@ -765,6 +973,85 @@
                     </button>
                   {% endif %}
                 {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation Modal for this tab -->
+        <div class="consultation-modal-overlay" id="consultation-modal-{{ block.settings.tab_identifier }}">
+          <div class="consultation-modal">
+            <div class="modal-header">
+              <button class="modal-close" onclick="closeConsultationModal('{{ block.settings.tab_identifier }}')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <h3 class="modal-title">{{ block.settings.modal_title | default: 'How would you like to consult?' }}</h3>
+              <p class="modal-subtitle">{{ block.settings.modal_subtitle | default: 'Choose your preferred method to get in touch with us' }}</p>
+            </div>
+            <div class="modal-content">
+              <div class="consultation-options">
+                
+                <!-- Contact Page Option -->
+                {% if block.settings.contact_page_url != blank %}
+                  <a href="{{ block.settings.contact_page_url }}" class="consultation-option">
+                    <div class="consultation-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div class="consultation-details">
+                      <div class="consultation-method">{{ block.settings.contact_option_title | default: 'Contact Form' }}</div>
+                      <div class="consultation-info">{{ block.settings.contact_option_description | default: 'Fill out our online form' }}</div>
+                    </div>
+                    <div class="consultation-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                {% endif %}
+
+                <!-- Phone Option -->
+                {% if block.settings.phone_number != blank %}
+                  <a href="tel:{{ block.settings.phone_number | replace: ' ', '' | replace: '-', '' }}" class="consultation-option">
+                    <div class="consultation-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div class="consultation-details">
+                      <div class="consultation-method">{{ block.settings.phone_option_title | default: 'Call Us' }}</div>
+                      <div class="consultation-info">{{ block.settings.phone_number }}</div>
+                    </div>
+                    <div class="consultation-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                {% endif %}
+
+                <!-- WhatsApp Option -->
+                {% if block.settings.whatsapp_number != blank %}
+                  <a href="https://wa.me/{{ block.settings.whatsapp_number | replace: ' ', '' | replace: '-', '' | replace: '+', '' }}" target="_blank" class="consultation-option">
+                    <div class="consultation-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </div>
+                    <div class="consultation-details">
+                      <div class="consultation-method">{{ block.settings.whatsapp_option_title | default: 'WhatsApp' }}</div>
+                      <div class="consultation-info">{{ block.settings.whatsapp_display_number | default: block.settings.whatsapp_number }}</div>
+                    </div>
+                    <div class="consultation-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -858,7 +1145,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -881,7 +1168,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -904,7 +1191,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -927,7 +1214,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -950,7 +1237,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -973,7 +1260,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -999,7 +1286,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -1022,7 +1309,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -1045,7 +1332,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -1068,7 +1355,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -1091,7 +1378,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -1114,7 +1401,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
                   </svg>
                 </div>
               </div>
@@ -1174,8 +1461,26 @@
     collapsibleTab.classList.toggle('active');
   }
 
-  // Handle session selection
+  // Modal Functions
+  function openConsultationModal(tabId) {
+    const modal = document.getElementById(`consultation-modal-${tabId}`);
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent body scroll when modal is open
+    }
+  }
+
+  function closeConsultationModal(tabId) {
+    const modal = document.getElementById(`consultation-modal-${tabId}`);
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = ''; // Restore body scroll
+    }
+  }
+
+  // Close modal when clicking on overlay
   document.addEventListener('DOMContentLoaded', function() {
+    // Handle session selection
     let selectedSessionLink = '';
 
     document.querySelectorAll('.session-option').forEach(option => {
@@ -1203,6 +1508,26 @@
           }
         };
       });
+    });
+
+    // Close modal when clicking on overlay (not on modal content)
+    document.querySelectorAll('.consultation-modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.consultation-modal-overlay.active').forEach(modal => {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
     });
   });
 </script>
@@ -1805,10 +2130,81 @@
           "default": "Meet with one of our experts for a complimentary consultation."
         },
         {
+          "type": "header",
+          "content": "Consultation Modal Settings"
+        },
+        {
+          "type": "text",
+          "id": "modal_title",
+          "label": "Modal Title",
+          "default": "How would you like to consult?"
+        },
+        {
+          "type": "text",
+          "id": "modal_subtitle",
+          "label": "Modal Subtitle",
+          "default": "Choose your preferred method to get in touch with us"
+        },
+        {
+          "type": "header",
+          "content": "Contact Page Option"
+        },
+        {
           "type": "url",
-          "id": "consultation_link",
-          "label": "Consultation Button Link",
-          "info": "Where should the consultation card link to?"
+          "id": "contact_page_url",
+          "label": "Contact Page URL",
+          "info": "Link to your contact page"
+        },
+        {
+          "type": "text",
+          "id": "contact_option_title",
+          "label": "Contact Option Title",
+          "default": "Contact Form"
+        },
+        {
+          "type": "text",
+          "id": "contact_option_description",
+          "label": "Contact Option Description",
+          "default": "Fill out our online form"
+        },
+        {
+          "type": "header",
+          "content": "Phone Option"
+        },
+        {
+          "type": "text",
+          "id": "phone_number",
+          "label": "Phone Number",
+          "info": "Enter phone number (e.g., +1234567890)"
+        },
+        {
+          "type": "text",
+          "id": "phone_option_title",
+          "label": "Phone Option Title",
+          "default": "Call Us"
+        },
+        {
+          "type": "header",
+          "content": "WhatsApp Option"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_number",
+          "label": "WhatsApp Number",
+          "info": "Enter WhatsApp number without + or spaces (e.g., 1234567890)"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_display_number",
+          "label": "WhatsApp Display Number",
+          "info": "How the number should be displayed (e.g., +1 234 567 890)",
+          "default": "447798983387"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_option_title",
+          "label": "WhatsApp Option Title",
+          "default": "WhatsApp"
         },
         {
           "type": "text",
