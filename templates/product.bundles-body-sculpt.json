@@ -74,8 +74,8 @@
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
-            "title": "Payment And Booking",
-            "content": "<p>All payments for our packages need to be made through the online system.<br/><br/>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your package for a date and time that suits you.</p>",
+            "title": "Your Booking",
+            "content": "<p>All packages are paid for securely through our online booking system. After confirming your booking, our team will reach out via phone, WhatsApp or email to schedule your appointment.</p><p>You’ll always be offered an appointment <strong>within 7 days of booking</strong>.</p>",
             "liquid": "",
             "page": ""
           }
