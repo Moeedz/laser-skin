@@ -401,22 +401,22 @@
         "text_VRegUr": {
           "type": "text",
           "settings": {
-            "question": "I already had a patch test elsewhere do I need another one?",
-            "answer": "<p>Yes we must conduct our own patch test before treatment can start.</p>"
+            "question": " What is included in The Sculpt, Cleanse & Glow Signature Package?",
+            "answer": "<p>This package includes three advanced treatments in one appointment: Power Sculpt body contouring, a Carbon Facial for deep cleansing and brightening, and Red Light Therapy to calm, rejuvenate and boost collagen.</p>"
           }
         },
         "text_Hir8bk": {
           "type": "text",
           "settings": {
-            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
-            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+            "question": "Is the £99 price for everything together?",
+            "answer": "<p>Yes - the full £99 covers all three treatments in your appointment. Purchased individually, they normally total £220.</p>"
           }
         },
         "text_M3G6jX": {
           "type": "text",
           "settings": {
-            "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+            "question": "How long does the appointment take?",
+            "answer": "<p>Please allow up to 2 hours for your Sculpt, Cleanse & Glow Signature Package. This includes consultation, preparation and treatment time.</p>"
           }
         },
         "text_QxQNbr": {
@@ -429,36 +429,57 @@
         "text_XJ6tAQ": {
           "type": "text",
           "settings": {
-            "question": "What should I do before my treatment?",
-            "answer": "<p>We recommend shaving the treatment area 24 hours before your session and avoiding sun exposure or fake tan for at least two weeks prior.</p>"
+            "question": "In what order are the treatments done?",
+            "answer": "<p>Power Sculpt is performed first, followed by a Carbon Facial, and then Red Light Therapy. This order ensures each treatment complements the next.</p>"
           }
         },
         "text_MLKHPB": {
           "type": "text",
           "settings": {
-            "question": "How long do results last?",
-            "answer": "<p>Results are long-lasting, once a follicle is disabled, it will not regrow. Some clients may need occasional maintenance sessions to treat any fine or regrown hairs over time</p>"
+            "question": "Are there any reasons I might not be suitable?",
+            "answer": "<p>You may not be suitable if you are pregnant, breastfeeding, have certain medical conditions, metal implants/pacemakers, or active skin infections.</p>"
           }
         },
         "text_YUQkbE": {
           "type": "text",
           "settings": {
-            "question": "Is the treatment painful?",
-            "answer": "<p>Most clients describe the feeling as a quick, warm flick against the skin, much more comfortable than waxing. Our advanced laser systems include cooling technology to minimise any discomfort during treatment.</p>"
+            "question": "Do any of the treatments hurt, and is there any downtime?",
+            "answer": "<p>Power Sculpt creates strong muscle contractions, which can feel unusual but not painful. The Carbon Facial may feel warm but is generally very comfortable. Red Light Therapy is completely relaxing. There is <strong>no downtime</strong> from any of the treatments - you can return to your normal activities straight away.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "How many sessions will I need?",
-            "answer": "<p>For best results, most clients require between 6 and 8 sessions. Hair grows in cycles, so multiple treatments ensure we target every follicle at the right stage of growth.</p>"
+            "question": "What areas can be treated with Power Sculpt in this package?",
+            "answer": "<p>Common areas include the stomach, glutes, thighs or arms. Your practitioner will help you choose the most effective area based on your goals.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "Can all skin types be treated?",
-            "answer": "<p>Absolutely. Our advanced laser systems are suitable for a wide range of skin tones and hair types. During your consultation, we’ll assess your skin and create a personalised treatment plan.</p>"
+            "question": "What does the Carbon Facial do for my skin?",
+            "answer": "<p>It deeply cleanses the pores, smooths texture, brightens the complexion and helps reduce oil, congestion and uneven skin tone.</p>"
+          }
+        },
+        "text_KK7Pzi": {
+          "type": "text",
+          "settings": {
+            "question": "What does the Carbon Facial do for my skin?",
+            "answer": "<p>It deeply cleanses the pores, smooths texture, brightens the complexion and helps reduce oil, congestion and uneven skin tone.</p>"
+          }
+        },
+        "text_F8VzVF": {
+          "type": "text",
+          "settings": {
+            "question": "How soon will I see results?",
+            "answer": "<p>Many clients notice an immediate glow and smoother skin. Tightening and contouring continue to improve over the following weeks, especially when supported with a healthy lifestyle.</p>"
+          }
+        },
+        "text_WDUHyt": {
+          "type": "text",
+          "settings": {
+            "question": "If I want to add more of any particular treatment after the package, how do I do it?",
+            "answer": "<p>Simply speak to your practitioner after your appointment or contact the clinic at any time. We can book additional Power Sculpt, Carbon Facial or Red Light Therapy sessions individually or as part of a tailored course.</p>"
           }
         }
       },
@@ -471,7 +492,10 @@
         "text_MLKHPB",
         "text_YUQkbE",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_KK7Pzi",
+        "text_F8VzVF",
+        "text_WDUHyt"
       ],
       "name": "SS - FAQ #1",
       "settings": {
