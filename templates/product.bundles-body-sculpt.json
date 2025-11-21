@@ -186,9 +186,7 @@
         "question_DLzrmg",
         "question_3WxPfa"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.faq__content {flex-basis: 100% !important;}.accordion__content img {height: 700px !important; width: 100% !important;}}"
-      ],
+      "custom_css": [],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
         "color_scheme": "",
