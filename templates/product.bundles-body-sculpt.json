@@ -163,21 +163,80 @@
           "type": "question",
           "settings": {
             "question": "Power Sculpt",
-            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>"
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>",
+            "show_embedded_section": true,
+            "embedded_image": "shopify://shop_images/MAR-PWS-TRTAREAS1-INSTAST-REV01_pws_stories_treatment_areas_1.jpg",
+            "embedded_layout": "image_content",
+            "embedded_layout_mobile": "image_content",
+            "embedded_layout_gap": 40,
+            "embedded_layout_gap_mobile": 20,
+            "embedded_image_ratio": "portrait",
+            "embedded_image_ratio_mobile": "portrait",
+            "embedded_step_1": "Technology",
+            "embedded_step_1_title": "How It Works",
+            "embedded_step_1_text": "<p>Power Sculpt uses focused electromagnetic energy to stimulate thousands of powerful muscle contractions in your chosen treatment area.</p><p>These contractions force the muscle fibres to adapt, strengthen, and grow while also enhancing fat metabolism in the surrounding tissue.</p><p>In short: it tones, tightens, and burns simultaneously.</p>",
+            "embedded_step_2": "Step 2",
+            "embedded_step_2_title": "Treatment",
+            "embedded_step_2_text": "<p>During treatment, you’ll feel strong, rhythmic muscle contractions - not pain, as the electromagnetic energy engages the muscles.<br/><br/>There’s no downtime or soreness; you can return to normal activities immediately. Most clients even describe the feeling as an intense workout without breaking a sweat.</p>",
+            "embedded_step_3": "Step 3",
+            "embedded_step_3_title": "After",
+            "embedded_step_3_text": "<p>After your Power Sculpt session, you can return to normal activities immediately - there’s no downtime or recovery required. You may feel a mild muscle ache similar to an intense workout, but this simply means your body is already responding and strengthening.</p>",
+            "embedded_step_4": "04",
+            "embedded_step_4_title": "Fourth Step",
+            "embedded_step_4_text": ""
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
             "question": "Carbon Facial",
-            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p><p></p>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0597/2643/0401/files/Capture.jpg?v=1763728044\" />"
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p><p></p>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0597/2643/0401/files/Capture.jpg?v=1763728044\" />",
+            "show_embedded_section": false,
+            "embedded_image": "shopify://shop_images/CLF-3.jpg",
+            "embedded_layout": "image_content",
+            "embedded_layout_mobile": "image_content",
+            "embedded_layout_gap": 40,
+            "embedded_layout_gap_mobile": 20,
+            "embedded_image_ratio": "portrait",
+            "embedded_image_ratio_mobile": "portrait",
+            "embedded_step_1": "Step 1",
+            "embedded_step_1_title": "First Step",
+            "embedded_step_1_text": "<p>Your appointment begins with a detailed skin consultation and analysis on the day of the treatment<br/><br/>The skin is then cleansed and a thin layer of medical-grade liquid carbon is applied.<br/><br/>The carbon acts as a powerful absorber, drawing out impurities, oil, and dead skin cells from deep within the pores.</p>",
+            "embedded_step_2": "02",
+            "embedded_step_2_title": "Laser Activation",
+            "embedded_step_2_text": "<p>Once the carbon has penetrated the skin, a specialised laser is passed over the area.<br/><br/>The laser light is absorbed by the carbon particles, gently vaporising them along with trapped debris, bacteria, and dead skin cells.<br/><br/>This process provides deep exfoliation and pore purification while stimulating collagen production in the underlying skin layers.</p>",
+            "embedded_step_3": "03",
+            "embedded_step_3_title": "Cooling And Hydration",
+            "embedded_step_3_text": "<p>After the laser treatment, the skin is cooled and hydrated with soothing serums to restore balance and comfort.<br/><br/>Your skin will look instantly clearer and smoother with a noticeable glow that continues to improve over the following days.<br/><br/>For lasting results, a course of 4 to 6 sessions spaced a few weeks apart is recommended.</p>",
+            "embedded_step_4": "04",
+            "embedded_step_4_title": "Fourth Step",
+            "embedded_step_4_text": ""
           }
         },
         "question_3WxPfa": {
           "type": "question",
           "settings": {
             "question": "Red Light Therapy",
-            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>"
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>",
+            "show_embedded_section": false,
+            "embedded_layout": "image_content",
+            "embedded_layout_mobile": "image_content",
+            "embedded_layout_gap": 40,
+            "embedded_layout_gap_mobile": 20,
+            "embedded_image_ratio": "portrait",
+            "embedded_image_ratio_mobile": "portrait",
+            "embedded_step_1": "01",
+            "embedded_step_1_title": "First Step",
+            "embedded_step_1_text": "",
+            "embedded_step_2": "02",
+            "embedded_step_2_title": "Second Step",
+            "embedded_step_2_text": "",
+            "embedded_step_3": "03",
+            "embedded_step_3_title": "Third Step",
+            "embedded_step_3_text": "",
+            "embedded_step_4": "04",
+            "embedded_step_4_title": "Fourth Step",
+            "embedded_step_4_text": ""
           }
         }
       },
