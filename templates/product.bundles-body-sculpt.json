@@ -237,11 +237,105 @@
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
       }
+    },
+    "ss_steps_11_7cMyRT": {
+      "type": "ss-steps-11",
+      "blocks": {
+        "step_jmRN9F": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 1",
+            "title": "Pre Treatment",
+            "text": "<p>Your treatment begins with a detailed consultation with one of our qualified medical professionals.<br/><br/>We assess your skin’s texture, hydration, and overall condition to determine the most effective injection points and concentration for your goals.<br/><br/>This ensures your plan is precise, safe, and fully tailored to your skin’s needs.</p>"
+          }
+        },
+        "step_jiiz8x": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 2",
+            "title": "Polynucleotide Injection Treatment",
+            "text": "<p>During treatment, small amounts of the polynucleotide solution are injected into the skin using fine micro-needles.<br/><br/>The formula begins working immediately to boost hydration and cellular repair while supporting collagen and elastin regeneration.<br/><br/>The procedure takes around 20 to 30 minutes, and a topical numbing cream can be applied to enhance comfort.</p>"
+          }
+        },
+        "step_6jaGgE": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 3",
+            "title": "Restoration and Maintenance",
+            "text": "<p>Over the following days and weeks, the skin becomes firmer, smoother, and more luminous as cell turnover increases.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_jmRN9F",
+        "step_jiiz8x",
+        "step_6jaGgE"
+      ],
+      "name": "SS - Steps #11",
+      "settings": {
+        "layout": "image_content",
+        "layout_mobile": "image_content",
+        "layout_gap": 64,
+        "layout_gap_mobile": 32,
+        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_21.24.41_f48c108b.jpg",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "steps_custom": false,
+        "steps_font": "josefin_sans_n4",
+        "steps_size": 12,
+        "steps_size_mobile": 12,
+        "steps_height": 100,
+        "steps_padding_horizontal": 8,
+        "steps_padding_horizontal_mobile": 8,
+        "steps_padding_vertical": 4,
+        "steps_padding_vertical_mobile": 4,
+        "steps_radius": 100,
+        "steps_border_thickness": 1,
+        "steps_content_align": "left",
+        "steps_content_align_mobile": "left",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 24,
+        "title_size_mobile": 20,
+        "title_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 8,
+        "text_mt_mobile": 8,
+        "steps_color": "#ffffff",
+        "steps_bg_color": "#e6b325",
+        "steps_border_color": "#e6b325",
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "image_border_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
     }
   },
   "order": [
     "main",
     "faq_bradJb",
-    "175993612397035c9e"
+    "175993612397035c9e",
+    "ss_steps_11_7cMyRT"
   ]
 }
