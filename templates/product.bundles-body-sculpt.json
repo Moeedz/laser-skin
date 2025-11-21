@@ -74,8 +74,8 @@
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
-            "title": "Benefits",
-            "content": "<p>Text goes here</p>",
+            "title": "Payment And Booking",
+            "content": "<p>All payments for our packages need to be made through the online system.<br/><br/>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your package for a date and time that suits you.</p>",
             "liquid": "",
             "page": ""
           }
@@ -85,8 +85,30 @@
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
-            "title": "Aftercare & Results",
-            "content": "<p>Text goes here</p>",
+            "title": "Treatment Time And Process",
+            "content": "<p>Your Sculpt, Cleanse & Glow Signature Package is structured to maximise results, with all three treatments completed in a smooth sequence during a 2-hour appointment.</p><p>First, you’ll begin with Power Sculpt to lift, tighten and define targeted areas.</p><p>Next, you’ll receive a Carbon Facial to deeply cleanse, refine pores and brighten the skin.</p><p>Finally, your treatment finishes with calming Red Light Therapy to boost collagen and enhance overall rejuvenation.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_D8Xijx": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Cancellation, Refund And Reschedule Policy",
+            "content": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_6NpUwT": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Contact And Address",
+            "content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
             "liquid": "",
             "page": ""
           }
@@ -115,6 +137,8 @@
         "buy_buttons",
         "accordion_YdJrFX",
         "accordion_GdNBTM",
+        "accordion_D8Xijx",
+        "accordion_6NpUwT",
         "complementary_products"
       ],
       "settings": {
@@ -139,21 +163,21 @@
           "type": "question",
           "settings": {
             "question": "Power Sculpt",
-            "answer": "<p>Text goes here</p>"
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>"
           }
         },
         "question_DLzrmg": {
           "type": "question",
           "settings": {
-            "question": "Radio Frequency Skin Tightening",
-            "answer": "<p>Text goes here</p>"
+            "question": "Carbon Facial",
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>"
           }
         },
         "question_3WxPfa": {
           "type": "question",
           "settings": {
-            "question": "Ultrasound Fat Cavitation",
-            "answer": "<p>Text goes here</p>"
+            "question": "Red Light Therapy",
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>"
           }
         }
       },
@@ -168,7 +192,7 @@
         "separate_section_with_border": false,
         "show_categories": false,
         "subheading": "",
-        "title": "What's In The Set?",
+        "title": "What's In The Package",
         "content": ""
       }
     },
