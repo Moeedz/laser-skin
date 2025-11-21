@@ -419,13 +419,6 @@
             "answer": "<p>Please allow up to 2 hours for your Sculpt, Cleanse & Glow Signature Package. This includes consultation, preparation and treatment time.</p>"
           }
         },
-        "text_QxQNbr": {
-          "type": "text",
-          "settings": {
-            "question": "Is there any downtime?",
-            "answer": "<p>No downtime is required. You might experience mild redness or sensitivity for a few hours after treatment, but this quickly subsides, allowing you to resume your normal routine straight away.</p>"
-          }
-        },
         "text_XJ6tAQ": {
           "type": "text",
           "settings": {
@@ -464,8 +457,8 @@
         "text_KK7Pzi": {
           "type": "text",
           "settings": {
-            "question": "What does the Carbon Facial do for my skin?",
-            "answer": "<p>It deeply cleanses the pores, smooths texture, brightens the complexion and helps reduce oil, congestion and uneven skin tone.</p>"
+            "question": "Do I need to book a consultation first?",
+            "answer": "<p>No you don't need to book a consultation first.</p>"
           }
         },
         "text_F8VzVF": {
@@ -487,7 +480,6 @@
         "text_VRegUr",
         "text_Hir8bk",
         "text_M3G6jX",
-        "text_QxQNbr",
         "text_XJ6tAQ",
         "text_MLKHPB",
         "text_YUQkbE",
