@@ -203,24 +203,24 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "Pre Treatment",
-            "text": "<p>Your treatment begins with a detailed consultation with one of our qualified medical professionals.<br/><br/>We assess your skin’s texture, hydration, and overall condition to determine the most effective injection points and concentration for your goals.<br/><br/>This ensures your plan is precise, safe, and fully tailored to your skin’s needs.</p>"
+            "title": "Consultation and Skin Preparation",
+            "text": "<p>Your appointment begins with a detailed skin consultation and analysis on the day of the treatment<br/><br/>The skin is then cleansed and a thin layer of medical-grade liquid carbon is applied.<br/><br/>The carbon acts as a powerful absorber, drawing out impurities, oil, and dead skin cells from deep within the pores.</p>"
           }
         },
         "step_jiiz8x": {
           "type": "step",
           "settings": {
             "step": "STEP 2",
-            "title": "Polynucleotide Injection Treatment",
-            "text": "<p>During treatment, small amounts of the polynucleotide solution are injected into the skin using fine micro-needles.<br/><br/>The formula begins working immediately to boost hydration and cellular repair while supporting collagen and elastin regeneration.<br/><br/>The procedure takes around 20 to 30 minutes, and a topical numbing cream can be applied to enhance comfort.</p>"
+            "title": "Laser Activation",
+            "text": "<p>Once the carbon has penetrated the skin, a specialised laser is passed over the area.<br/><br/>The laser light is absorbed by the carbon particles, gently vaporising them along with trapped debris, bacteria, and dead skin cells.<br/><br/>This process provides deep exfoliation and pore purification while stimulating collagen production in the underlying skin layers.</p>"
           }
         },
         "step_6jaGgE": {
           "type": "step",
           "settings": {
             "step": "STEP 3",
-            "title": "Restoration and Maintenance",
-            "text": "<p>Over the following days and weeks, the skin becomes firmer, smoother, and more luminous as cell turnover increases.</p>"
+            "title": "Cooling and Hydration",
+            "text": "<p>After the laser treatment, the skin is cooled and hydrated with soothing serums to restore balance and comfort.<br/><br/>Your skin will look instantly clearer and smoother with a noticeable glow that continues to improve over the following days.<br/><br/>For lasting results, a course of 4 to 6 sessions spaced a few weeks apart is recommended.</p>"
           }
         }
       },
@@ -235,7 +235,7 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_21.24.41_f48c108b.jpg",
+        "image": "shopify://shop_images/CLF-5.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
         "image_ratio": "original",
