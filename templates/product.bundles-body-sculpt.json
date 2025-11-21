@@ -394,12 +394,103 @@
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false
       }
+    },
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_VRegUr": {
+          "type": "text",
+          "settings": {
+            "question": "I already had a patch test elsewhere do I need another one?",
+            "answer": "<p>Yes we must conduct our own patch test before treatment can start.</p>"
+          }
+        },
+        "text_Hir8bk": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_M3G6jX": {
+          "type": "text",
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+          }
+        },
+        "text_QxQNbr": {
+          "type": "text",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>No downtime is required. You might experience mild redness or sensitivity for a few hours after treatment, but this quickly subsides, allowing you to resume your normal routine straight away.</p>"
+          }
+        },
+        "text_XJ6tAQ": {
+          "type": "text",
+          "settings": {
+            "question": "What should I do before my treatment?",
+            "answer": "<p>We recommend shaving the treatment area 24 hours before your session and avoiding sun exposure or fake tan for at least two weeks prior.</p>"
+          }
+        },
+        "text_MLKHPB": {
+          "type": "text",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results are long-lasting, once a follicle is disabled, it will not regrow. Some clients may need occasional maintenance sessions to treat any fine or regrown hairs over time</p>"
+          }
+        },
+        "text_YUQkbE": {
+          "type": "text",
+          "settings": {
+            "question": "Is the treatment painful?",
+            "answer": "<p>Most clients describe the feeling as a quick, warm flick against the skin, much more comfortable than waxing. Our advanced laser systems include cooling technology to minimise any discomfort during treatment.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>For best results, most clients require between 6 and 8 sessions. Hair grows in cycles, so multiple treatments ensure we target every follicle at the right stage of growth.</p>"
+          }
+        },
+        "text_UiGdVT": {
+          "type": "text",
+          "settings": {
+            "question": "Can all skin types be treated?",
+            "answer": "<p>Absolutely. Our advanced laser systems are suitable for a wide range of skin tones and hair types. During your consultation, we’ll assess your skin and create a personalised treatment plan.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_VRegUr",
+        "text_Hir8bk",
+        "text_M3G6jX",
+        "text_QxQNbr",
+        "text_XJ6tAQ",
+        "text_MLKHPB",
+        "text_YUQkbE",
+        "text_JMUbWR",
+        "text_UiGdVT"
+      ],
+      "name": "SS - FAQ #1",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 1
+      }
     }
   },
   "order": [
     "main",
     "faq_bradJb",
     "ss_steps_11_7cMyRT",
-    "175993612397035c9e"
+    "175993612397035c9e",
+    "ss_simple_faq_jiYFWj"
   ]
 }
