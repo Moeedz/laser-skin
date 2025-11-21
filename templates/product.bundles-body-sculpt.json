@@ -172,7 +172,7 @@
             "embedded_layout_gap_mobile": 20,
             "embedded_image_ratio": "portrait",
             "embedded_image_ratio_mobile": "portrait",
-            "embedded_step_1": "Technology",
+            "embedded_step_1": "Step 1",
             "embedded_step_1_title": "How It Works",
             "embedded_step_1_text": "<p>Power Sculpt uses focused electromagnetic energy to stimulate thousands of powerful muscle contractions in your chosen treatment area.</p><p>These contractions force the muscle fibres to adapt, strengthen, and grow while also enhancing fat metabolism in the surrounding tissue.</p><p>In short: it tones, tightens, and burns simultaneously.</p>",
             "embedded_step_2": "Step 2",
@@ -190,8 +190,8 @@
           "type": "question",
           "settings": {
             "question": "Carbon Facial",
-            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p><p></p>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0597/2643/0401/files/Capture.jpg?v=1763728044\" />",
-            "show_embedded_section": false,
+            "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>",
+            "show_embedded_section": true,
             "embedded_image": "shopify://shop_images/CLF-3.jpg",
             "embedded_layout": "image_content",
             "embedded_layout_mobile": "image_content",
@@ -218,7 +218,7 @@
           "settings": {
             "question": "Red Light Therapy",
             "answer": "<p>Using advanced electromagnetic technology, this non-invasive treatment delivers powerful muscle contractions to tone, lift and define key areas of your body. Simultaneously builds lean muscle and improves fat metabolism for a sculpted, refined result.</p>",
-            "show_embedded_section": false,
+            "show_embedded_section": true,
             "embedded_image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.29.00_65d5d3de.jpg",
             "embedded_layout": "image_content",
             "embedded_layout_mobile": "image_content",
@@ -246,7 +246,9 @@
         "question_DLzrmg",
         "question_3WxPfa"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.faq__content {flex-basis: 100% !important; }}"
+      ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
         "color_scheme": "",
