@@ -139,7 +139,16 @@
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
             "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
+            "modal_title": "How would you like to consult?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "+447798983387",
+            "phone_option_title": "Call Us",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
             "package_heading": "View prices and book now.",
             "package_description": "Pay per session or buy a bundle and save."
           }
