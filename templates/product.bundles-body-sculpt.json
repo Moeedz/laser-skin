@@ -23,13 +23,6 @@
             "heading_tag": "h3"
           }
         },
-        "rating_L6n6pm": {
-          "type": "rating",
-          "settings": {
-            "show_empty": true,
-            "rating_mode": "rating"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -113,7 +106,6 @@
       "block_order": [
         "vendor",
         "title",
-        "rating_L6n6pm",
         "description",
         "payment_terms",
         "separator",
