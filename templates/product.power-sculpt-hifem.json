@@ -650,7 +650,7 @@
           "type": "button",
           "settings": {
             "button": "Book Online",
-            "button_url": "https://app.pabau.com/",
+            "button_url": "https://partner.pabau.com/",
             "button_custom": false,
             "button_font": "josefin_sans_n4",
             "button_size": 16,
