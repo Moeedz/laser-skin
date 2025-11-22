@@ -44,7 +44,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "nav.header__secondary-nav {display: none !important;}"
+        "@media screen and (min-width: 768px) {nav.header__secondary-nav {display: none !important;}}"
       ],
       "settings": {
         "color_scheme": "",
