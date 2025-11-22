@@ -647,6 +647,7 @@
         },
         "button_HfVK4Q": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "Book Now",
             "button_url": "",

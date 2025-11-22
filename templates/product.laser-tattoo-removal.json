@@ -756,6 +756,7 @@
         },
         "button_HfVK4Q": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "Book Online",
             "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195392&services=2472830&location=4546",
@@ -787,6 +788,7 @@
         },
         "button_agCEYw": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "Get more information",
             "button_url": "shopify://pages/contact",

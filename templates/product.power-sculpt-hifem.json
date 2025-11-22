@@ -648,6 +648,7 @@
         },
         "button_YRwEBb": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "Book Online",
             "button_url": "https://partner.pabau.com/",
@@ -679,6 +680,7 @@
         },
         "button_HfVK4Q": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "Get more information",
             "button_url": "shopify://pages/contact",
