@@ -728,6 +728,22 @@
     font-size: 16px;
   }
 
+  .closed-message {
+    background: #FFF3CD;
+    border-left: 4px solid #FFC107;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .closed-message p {
+    color: #856404;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
   .opening-hours {
     text-align: left;
     margin-bottom: 25px;
@@ -804,6 +820,17 @@
     background: #0056CC;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
+  }
+
+  .call-now-button.disabled {
+    background: #cccccc !important;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .call-now-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
   }
 
   /* Mobile Responsive */
@@ -1071,8 +1098,8 @@
             <div class="top-description">
               {{ block.settings.top_description }}
             </div>
-            
-               <span style="display: inline-flex;gap: 5px;align-items: center;padding-bottom: 10px;"> <p><span id="shopify-installments-content" data-testid="shopify-installments-content" class="pr-1.5">Pay in instalments with </span></p><div class="inline-flex align-middle text-purple-primary" style="
+
+            <span style="display: inline-flex;gap: 5px;align-items: center;padding-bottom: 10px;"> <p><span id="shopify-installments-content" data-testid="shopify-installments-content" class="pr-1.5">Pay in instalments with </span></p><div class="inline-flex align-middle text-purple-primary" style="
     color: rgb(84 51 235 / 1);
     vertical-align: middle;
     display: inline-flex;
@@ -1227,6 +1254,10 @@
               <span class="status-text">We are currently open</span>
             </div>
 
+            <div class="closed-message" id="closed-message-{{ block.settings.tab_identifier }}" style="display: none;">
+              <p>{{ block.settings.closed_message | default: 'You can send us a WhatsApp, send us an email or call back during opening hours' }}</p>
+            </div>
+
             <div class="opening-hours">
               <h4 class="hours-heading">Opening Hours</h4>
               <div class="hours-list">
@@ -1261,7 +1292,7 @@
               </div>
             </div>
 
-            <a href="tel:{{ block.settings.phone_number | replace: ' ', '' | replace: '-', '' }}" class="call-now-button">
+            <a href="tel:{{ block.settings.phone_number | replace: ' ', '' | replace: '-', '' }}" class="call-now-button" id="call-button-{{ block.settings.tab_identifier }}">
               Call Now
             </a>
           </div>
@@ -1761,15 +1792,35 @@
     // Update status display
     const statusIcon = statusElement.querySelector('.status-icon');
     const statusText = statusElement.querySelector('.status-text');
+    const closedMessage = document.getElementById(`closed-message-${tabId}`);
+    const callButton = document.getElementById(`call-button-${tabId}`);
     
     if (isOpen) {
       statusElement.classList.remove('closed');
       statusIcon.textContent = '✓';
       statusText.textContent = 'We are currently open';
+      if (closedMessage) {
+        closedMessage.style.display = 'none';
+      }
+      if (callButton) {
+        callButton.textContent = 'Call Now';
+        callButton.classList.remove('disabled');
+        callButton.style.pointerEvents = 'auto';
+        callButton.style.background = '#007AFF';
+      }
     } else {
       statusElement.classList.add('closed');
       statusIcon.textContent = '✗';
       statusText.textContent = 'We are currently closed';
+      if (closedMessage) {
+        closedMessage.style.display = 'block';
+      }
+      if (callButton) {
+        callButton.textContent = 'Currently Closed';
+        callButton.classList.add('disabled');
+        callButton.style.pointerEvents = 'none';
+        callButton.style.background = '#cccccc';
+      }
     }
   }
 
@@ -2544,6 +2595,13 @@
           "id": "sunday_hours",
           "label": "Sunday",
           "default": "Closed"
+        },
+        {
+          "type": "textarea",
+          "id": "closed_message",
+          "label": "Closed Hours Message",
+          "default": "You can send us a WhatsApp, send us an email or call back during opening hours",
+          "info": "This message appears when the store is closed"
         },
         {
           "type": "header",
