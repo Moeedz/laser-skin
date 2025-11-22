@@ -138,7 +138,7 @@
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
             "modal_title": "How would you like to consult?",
             "modal_subtitle": "Choose your preferred method to get in touch with us",
             "contact_page_url": "shopify://pages/contact",
@@ -149,8 +149,8 @@
             "whatsapp_number": "447798983387",
             "whatsapp_display_number": "+44 7798 983387",
             "whatsapp_option_title": "WhatsApp",
-            "package_heading": "View prices and book now",
-            "package_description": "Pay per session or buy a bundle and save."
+            "package_heading": "Click here to view our prices and book your treatment.",
+            "package_description": "We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider."
           }
         },
         "package_Jn3FDm": {
