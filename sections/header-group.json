@@ -43,9 +43,7 @@
     },
     "header": {
       "type": "header",
-      "custom_css": [
-        "@media screen and (min-width: 768px) {nav.header__secondary-nav {display: none !important;}}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "",
         "enable_sticky": true,
