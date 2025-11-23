@@ -557,11 +557,21 @@
       return hours * 60 + (minutes || 0);
     }
 
-    // Open contact options modal
+    // Open contact options modal from sticky button
     contactButton.addEventListener('click', function() {
       contactModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
+
+    // Open contact options modal from header button
+    const headerContactBtn = document.getElementById('headerContactBtn');
+    if (headerContactBtn) {
+      headerContactBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        contactModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
 
     // Close contact options modal
     closeContactModal.addEventListener('click', function() {
