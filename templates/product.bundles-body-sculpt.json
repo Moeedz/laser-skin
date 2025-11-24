@@ -77,6 +77,7 @@
         },
         "accordion_YdJrFX": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -88,6 +89,7 @@
         },
         "accordion_GdNBTM": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -99,6 +101,7 @@
         },
         "accordion_D8Xijx": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -110,6 +113,7 @@
         },
         "accordion_6NpUwT": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -262,7 +266,7 @@
         "separate_section_with_border": false,
         "show_categories": false,
         "subheading": "",
-        "title": "What's In The Package",
+        "title": "The Process",
         "content": ""
       }
     },
