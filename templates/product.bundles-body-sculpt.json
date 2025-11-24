@@ -437,6 +437,13 @@
             "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.</p><p>Any cancellations on the day can be rescheduled but will not be refunded</p><p>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
+        "text_HhtUzg": {
+          "type": "text",
+          "settings": {
+            "question": "What are your opening hours?",
+            "answer": "<ul><li><strong>Monday:</strong>Closed</li><li><strong>Tuesday:</strong>10AM - 6PM</li><li><strong>Wednesday:</strong>10AM - 6PM</li><li><strong>Thursday:</strong>Closed</li><li><strong>Friday:</strong>10AM - 6PM</li><li><strong>Saturday:</strong>10AM - 4PM</li><li><strong>Sunday:</strong>Closed</li></ul>"
+          }
+        },
         "text_EkDPcx": {
           "type": "text",
           "settings": {
@@ -513,6 +520,7 @@
         "text_EkPBNL",
         "text_wgM46e",
         "text_73aMaM",
+        "text_HhtUzg",
         "text_EkDPcx",
         "text_VRegUr",
         "text_Hir8bk",
