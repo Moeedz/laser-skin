@@ -409,6 +409,34 @@
     "ss_simple_faq_jiYFWj": {
       "type": "ss-simple-faq",
       "blocks": {
+        "text_EkPBNL": {
+          "type": "text",
+          "settings": {
+            "question": "What happens once I've purchased the bundle?",
+            "answer": "<p>After you've purchased our team will reach out via phone, WhatsApp or email to schedule your appointment.</p><p>You’ll always be offered an appointment <strong>within 7 days of booking</strong>.</p>"
+          }
+        },
+        "text_wgM46e": {
+          "type": "text",
+          "settings": {
+            "question": "How long will the treatment take and in what order are they performed?",
+            "answer": "<p>Your Sculpt, Cleanse & Glow Signature Package is structured to maximise results, with all three treatments completed in a smooth sequence during a 2-hour appointment.</p><p>First, you’ll begin with Power Sculpt to lift, tighten a chosen targeted area on your body such as arms, buttocks, stomach or others.</p><p>Next, you’ll receive a Carbon Facial to deeply cleanse, refine pores and brighten the skin.</p><p>Finally, your treatment finishes with calming Red Light Therapy to boost collagen and enhance overall rejuvenation.</p>"
+          }
+        },
+        "text_73aMaM": {
+          "type": "text",
+          "settings": {
+            "question": "What is the cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.</p><p>Any cancellations on the day can be rescheduled but will not be refunded</p><p>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+          }
+        },
+        "text_EkDPcx": {
+          "type": "text",
+          "settings": {
+            "question": "What are your contact details and address?",
+            "answer": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>"
+          }
+        },
         "text_VRegUr": {
           "type": "text",
           "settings": {
@@ -421,20 +449,6 @@
           "settings": {
             "question": "Is the £99 price for everything together?",
             "answer": "<p>Yes - the full £99 covers all three treatments in your appointment. Purchased individually, they normally total £220.</p>"
-          }
-        },
-        "text_M3G6jX": {
-          "type": "text",
-          "settings": {
-            "question": "How long does the appointment take?",
-            "answer": "<p>Please allow up to 2 hours for your Sculpt, Cleanse & Glow Signature Package. This includes consultation, preparation and treatment time.</p>"
-          }
-        },
-        "text_XJ6tAQ": {
-          "type": "text",
-          "settings": {
-            "question": "In what order are the treatments done?",
-            "answer": "<p>Power Sculpt is performed first, followed by a Carbon Facial, and then Red Light Therapy. This order ensures each treatment complements the next.</p>"
           }
         },
         "text_MLKHPB": {
@@ -488,10 +502,12 @@
         }
       },
       "block_order": [
+        "text_EkPBNL",
+        "text_wgM46e",
+        "text_73aMaM",
+        "text_EkDPcx",
         "text_VRegUr",
         "text_Hir8bk",
-        "text_M3G6jX",
-        "text_XJ6tAQ",
         "text_MLKHPB",
         "text_YUQkbE",
         "text_JMUbWR",
