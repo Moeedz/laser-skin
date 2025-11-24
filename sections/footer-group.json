@@ -15,7 +15,7 @@
       "type": "sticky-mobile-bottom-bar",
       "name": "Sticky Mobile Bottom Bar",
       "settings": {
-        "button_text": "Speak to a specialist",
+        "button_text": "CONTACT US",
         "button_bg_color": "#1a3a52",
         "button_text_color": "#ffffff",
         "contact_form_url": "shopify://pages/contact",
