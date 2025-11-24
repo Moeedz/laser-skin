@@ -409,6 +409,13 @@
     "ss_simple_faq_jiYFWj": {
       "type": "ss-simple-faq",
       "blocks": {
+        "text_3NnRB7": {
+          "type": "text",
+          "settings": {
+            "question": "When will my appointment be?",
+            "answer": "<p>We'll be able to get you in within 7 days of your booking. We have weekday appointments and weekend appointments.</p>"
+          }
+        },
         "text_EkPBNL": {
           "type": "text",
           "settings": {
@@ -502,6 +509,7 @@
         }
       },
       "block_order": [
+        "text_3NnRB7",
         "text_EkPBNL",
         "text_wgM46e",
         "text_73aMaM",
