@@ -1630,32 +1630,6 @@
           {% endif %}
         </div>
 
-        <!-- View FAQs Link Section -->
-        {% if section.settings.show_faq_link %}
-          <div class="faq-link-section">
-            <div class="faq-link-wrapper">
-              {% if section.settings.faq_pre_text != blank %}
-                <p class="faq-pre-text">{{ section.settings.faq_pre_text }}</p>
-              {% endif %}
-              {% if section.settings.faq_section_id != blank %}
-                <button onclick="scrollToFAQ('{{ section.settings.faq_section_id }}')" class="faq-link-button">
-                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              {% elsif section.settings.faq_link_url != blank %}
-                <a href="{{ section.settings.faq_link_url }}" class="faq-link-button">
-                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              {% endif %}
-            </div>
-          </div>
-        {% endif %}
-
         <!-- Collapsible Tabs Section - Mobile (After Packages) -->
         <div class="collapsible-tabs-section collapsible-mobile">
           {% if section.settings.show_collapsible_1 %}
@@ -1796,6 +1770,32 @@
             </div>
           {% endif %}
         </div>
+
+        <!-- View FAQs Link Section -->
+        {% if section.settings.show_faq_link %}
+          <div class="faq-link-section">
+            <div class="faq-link-wrapper">
+              {% if section.settings.faq_pre_text != blank %}
+                <p class="faq-pre-text">{{ section.settings.faq_pre_text }}</p>
+              {% endif %}
+              {% if section.settings.faq_section_id != blank %}
+                <button onclick="scrollToFAQ('{{ section.settings.faq_section_id }}')" class="faq-link-button">
+                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              {% elsif section.settings.faq_link_url != blank %}
+                <a href="{{ section.settings.faq_link_url }}" class="faq-link-button">
+                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
 
       </div>
     {% endif %}
