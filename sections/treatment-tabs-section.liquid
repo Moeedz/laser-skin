@@ -1624,14 +1624,14 @@
         </div>
 
         <!-- View FAQs Link Section -->
-        {% if block.settings.show_faq_link %}
+        {% if section.settings.show_faq_link %}
           <div class="faq-link-section">
             <div class="faq-link-wrapper">
-              {% if block.settings.faq_pre_text != blank %}
-                <p class="faq-pre-text">{{ block.settings.faq_pre_text }}</p>
+              {% if section.settings.faq_pre_text != blank %}
+                <p class="faq-pre-text">{{ section.settings.faq_pre_text }}</p>
               {% endif %}
-              <a href="{{ block.settings.faq_link_url }}" class="faq-link-button">
-                {{ block.settings.faq_link_text | default: 'View FAQs' }}
+              <a href="{{ section.settings.faq_link_url }}" class="faq-link-button">
+                {{ section.settings.faq_link_text | default: 'View FAQs' }}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -2550,6 +2550,40 @@
       "id": "collapsible_6_content",
       "label": "Tab 6 - Content",
       "default": "<p>Add your aftercare instructions here.</p>"
+    },
+    {
+      "type": "header",
+      "content": "FAQ Link Section"
+    },
+    {
+      "type": "paragraph",
+      "content": "Add a link to your FAQs page that appears below all collapsible tabs."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_faq_link",
+      "label": "Show FAQ Link",
+      "default": true,
+      "info": "Display a link to your FAQs page below the collapsible tabs"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_pre_text",
+      "label": "Text Above FAQ Link",
+      "default": "Have more questions? Check out our frequently asked questions for detailed information.",
+      "info": "Optional text that appears above the FAQ button"
+    },
+    {
+      "type": "text",
+      "id": "faq_link_text",
+      "label": "FAQ Button Text",
+      "default": "View FAQs"
+    },
+    {
+      "type": "url",
+      "id": "faq_link_url",
+      "label": "FAQ Page URL",
+      "info": "Link to your FAQs page (e.g., /pages/faqs)"
     }
   ],
   "blocks": [
@@ -2763,36 +2797,6 @@
           "id": "package_description",
           "label": "Package Description",
           "default": "Pay per session or buy a bundle and save."
-        },
-        {
-          "type": "header",
-          "content": "FAQ Link Section"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_faq_link",
-          "label": "Show FAQ Link",
-          "default": true,
-          "info": "Display a link to your FAQs page below the collapsible tabs"
-        },
-        {
-          "type": "textarea",
-          "id": "faq_pre_text",
-          "label": "Text Above FAQ Link",
-          "default": "Have more questions? Check out our frequently asked questions for detailed information.",
-          "info": "Optional text that appears above the FAQ button"
-        },
-        {
-          "type": "text",
-          "id": "faq_link_text",
-          "label": "FAQ Button Text",
-          "default": "View FAQs"
-        },
-        {
-          "type": "url",
-          "id": "faq_link_url",
-          "label": "FAQ Page URL",
-          "info": "Link to your FAQs page (e.g., /pages/faqs)"
         }
       ]
     },
