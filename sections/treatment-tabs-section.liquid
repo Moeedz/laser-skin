@@ -521,6 +521,14 @@
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  button.faq-link-button {
+    border: none;
+    outline: none;
   }
 
   .faq-link-button:hover {
@@ -1629,12 +1637,21 @@
               {% if section.settings.faq_pre_text != blank %}
                 <p class="faq-pre-text">{{ section.settings.faq_pre_text }}</p>
               {% endif %}
-              <a href="{{ section.settings.faq_link_url }}" class="faq-link-button">
-                {{ section.settings.faq_link_text | default: 'View FAQs' }}
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              {% if section.settings.faq_section_id != blank %}
+                <button onclick="scrollToFAQ('{{ section.settings.faq_section_id }}')" class="faq-link-button">
+                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              {% elsif section.settings.faq_link_url != blank %}
+                <a href="{{ section.settings.faq_link_url }}" class="faq-link-button">
+                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              {% endif %}
             </div>
           </div>
         {% endif %}
@@ -2018,6 +2035,35 @@
       }
     });
   });
+
+  // Smooth scroll to FAQ section
+  function scrollToFAQ(sectionId) {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      // Calculate the position to scroll to, accounting for any fixed headers
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback - try to find by partial ID match
+      const sections = document.querySelectorAll('[id*="faq"]');
+      if (sections.length > 0) {
+        const headerOffset = 80;
+        const elementPosition = sections[0].getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
 </script>
 
 {% schema %}
@@ -2556,14 +2602,14 @@
     },
     {
       "type": "paragraph",
-      "content": "Add a link to your FAQs page that appears below all collapsible tabs."
+      "content": "Add a link to your FAQs that either scrolls to a section on the same page or links to another page."
     },
     {
       "type": "checkbox",
       "id": "show_faq_link",
       "label": "Show FAQ Link",
       "default": true,
-      "info": "Display a link to your FAQs page below the collapsible tabs"
+      "info": "Display a link to your FAQs below the collapsible tabs"
     },
     {
       "type": "textarea",
@@ -2579,10 +2625,16 @@
       "default": "View FAQs"
     },
     {
+      "type": "text",
+      "id": "faq_section_id",
+      "label": "FAQ Section ID (For Same Page)",
+      "info": "Enter the section ID to scroll to on the same page (e.g., shopify-section-template--25630357193084__ss_simple_faq_jiYFWj)",
+    },
+    {
       "type": "url",
       "id": "faq_link_url",
-      "label": "FAQ Page URL",
-      "info": "Link to your FAQs page (e.g., /pages/faqs)",
+      "label": "FAQ Page URL (For Different Page)",
+      "info": "Link to a different FAQs page (e.g., /pages/faqs). Only used if Section ID is not set.",
     }
   ],
   "blocks": [
