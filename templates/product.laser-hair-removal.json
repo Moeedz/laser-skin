@@ -1538,7 +1538,8 @@
         "show_faq_link": true,
         "faq_pre_text": "Have more questions?",
         "faq_link_text": "View FAQs",
-        "faq_link_url": "#shopify-section-template--25630357193084__ss_simple_faq_jiYFWj"
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
       }
     },
     "ss_image_with_text_12_PPNnyT": {
