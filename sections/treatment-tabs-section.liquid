@@ -1,7 +1,9 @@
 {% comment %}
-  Treatment Tabs Section with Consultation Modal
+  Treatment Tabs Section with Consultation Modal + APPOINTMENT BOOKING
   - Multiple tabs with dynamic content
   - Package cards that toggle
+  - Session selection with DATE & TIME picker
+  - Appointment data passed to cart as line item properties
   - Consultation modal with multiple contact options
   - Fully customizable from section settings
   - Mobile optimized
@@ -243,7 +245,7 @@
   }
 
   .packages-container.active {
-    max-height: 2000px;
+    max-height: 4000px;
   }
 
   .packages-grid {
@@ -295,7 +297,7 @@
   }
 
   .session-options.active {
-    max-height: 800px;
+    max-height: 1500px;
     margin-top: 16px;
   }
 
@@ -350,6 +352,119 @@
     justify-content: space-between;
     font-size: 12px;
     color: {{ section.settings.package_price_color }};
+  }
+
+  /* APPOINTMENT PICKER STYLES */
+  .appointment-picker {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .appointment-picker.active {
+    max-height: 600px;
+    opacity: 1;
+  }
+
+  .appointment-heading {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: {{ section.settings.package_heading_color }};
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .appointment-heading svg {
+    width: 16px;
+    height: 16px;
+    stroke: {{ section.settings.tab_active_background }};
+  }
+
+  .date-picker-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .date-picker-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .date-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .date-input:hover {
+    border-color: #ccc;
+  }
+
+  .date-input:focus {
+    outline: none;
+    border-color: {{ section.settings.tab_active_background }};
+  }
+
+  .time-picker-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .time-picker-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .time-slot {
+    padding: 8px 6px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    color: #333;
+  }
+
+  .time-slot:hover {
+    border-color: #ccc;
+    background: #f9f9f9;
+  }
+
+  .time-slot.selected {
+    background: {{ section.settings.tab_active_background }};
+    border-color: {{ section.settings.tab_active_background }};
+    color: white;
+  }
+
+  .appointment-required-note {
+    font-size: 11px;
+    color: #999;
+    margin-top: 8px;
+    font-style: italic;
   }
 
   .session-select {
@@ -947,6 +1062,10 @@
     .collapsible-tabs-section.collapsible-mobile {
       display: block;
     }
+
+    .time-slots-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 968px) {
@@ -1024,6 +1143,16 @@
 
     .session-details {
       font-size: 11px;
+    }
+
+    .time-slots-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .time-slot {
+      padding: 10px 8px;
+      font-size: 13px;
     }
   }
 
@@ -1162,6 +1291,10 @@
     .session-label,
     .session-price {
       font-size: 14px;
+    }
+
+    .time-slots-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>
@@ -1493,7 +1626,45 @@
                       </div>
                     {% endif %}
 
-                    <button class="package-select session-select">SELECT</button>
+                    <!-- APPOINTMENT PICKER - NEW FEATURE -->
+                    <div class="appointment-picker" id="appointment-{{ package_block.id }}">
+                      <div class="appointment-heading">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        Select Appointment Date & Time
+                      </div>
+
+                      <!-- Date Picker -->
+                      <div class="date-picker-wrapper">
+                        <label class="date-picker-label">Choose Date</label>
+                        <input 
+                          type="date" 
+                          class="date-input" 
+                          id="date-{{ package_block.id }}"
+                          min="{{ 'now' | date: '%Y-%m-%d' }}">
+                      </div>
+
+                      <!-- Time Picker -->
+                      <div class="time-picker-wrapper">
+                        <label class="time-picker-label">Choose Time Slot</label>
+                        <div class="time-slots-grid" id="time-slots-{{ package_block.id }}">
+                          <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+                          <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
+                          <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
+                          <div class="time-slot" data-time="1:00 PM">1:00 PM</div>
+                          <div class="time-slot" data-time="2:00 PM">2:00 PM</div>
+                          <div class="time-slot" data-time="3:00 PM">3:00 PM</div>
+                          <div class="time-slot" data-time="4:00 PM">4:00 PM</div>
+                          <div class="time-slot" data-time="5:00 PM">5:00 PM</div>
+                          <div class="time-slot" data-time="6:00 PM">6:00 PM</div>
+                        </div>
+                      </div>
+
+                      <p class="appointment-required-note">* Date and time selection required</p>
+                    </div>
+
+                    <button class="package-select session-select" id="select-btn-{{ package_block.id }}">SELECT</button>
                   </div>
                 </div>
               {% endif %}
@@ -1839,6 +2010,11 @@
     document.querySelectorAll('.session-options').forEach(session => {
       session.classList.remove('active');
     });
+
+    // Close any open appointment pickers
+    document.querySelectorAll('.appointment-picker').forEach(picker => {
+      picker.classList.remove('active');
+    });
   }
 
   function togglePackages(tabId) {
@@ -1995,15 +2171,18 @@
     }
   }
 
-  // Close modal when clicking on overlay
+  // NEW APPOINTMENT PICKER LOGIC
   document.addEventListener('DOMContentLoaded', function() {
-    // Handle session selection
-    let selectedSessionLink = '';
+    // Track appointment state for each package
+    const appointmentState = {};
 
+    // Handle session selection
     document.querySelectorAll('.session-option').forEach(option => {
       option.addEventListener('click', function() {
-        // Remove selected class from siblings
         const parent = this.parentElement;
+        const packageId = parent.id.replace('session-', '');
+        
+        // Remove selected class from siblings
         parent.querySelectorAll('.session-option').forEach(opt => {
           opt.classList.remove('selected');
         });
@@ -2012,20 +2191,116 @@
         this.classList.add('selected');
         
         // Store the link from data attribute
-        selectedSessionLink = this.getAttribute('data-link');
+        const selectedLink = this.getAttribute('data-link');
         
+        // Initialize appointment state for this package
+        if (!appointmentState[packageId]) {
+          appointmentState[packageId] = {
+            link: '',
+            date: '',
+            time: ''
+          };
+        }
+        appointmentState[packageId].link = selectedLink;
+        
+        // Show appointment picker
+        const appointmentPicker = document.getElementById(`appointment-${packageId}`);
+        if (appointmentPicker) {
+          appointmentPicker.classList.add('active');
+        }
+        
+        // Check if date and time are already selected
+        checkAppointmentComplete(packageId);
+      });
+    });
+
+    // Handle time slot selection
+    document.querySelectorAll('.time-slot').forEach(slot => {
+      slot.addEventListener('click', function() {
+        const timeSlotsGrid = this.parentElement;
+        const packageId = timeSlotsGrid.id.replace('time-slots-', '');
+        
+        // Remove selected from all slots in this grid
+        timeSlotsGrid.querySelectorAll('.time-slot').forEach(s => {
+          s.classList.remove('selected');
+        });
+        
+        // Mark this slot as selected
+        this.classList.add('selected');
+        
+        // Store selected time
+        const selectedTime = this.getAttribute('data-time');
+        if (!appointmentState[packageId]) {
+          appointmentState[packageId] = {
+            link: '',
+            date: '',
+            time: ''
+          };
+        }
+        appointmentState[packageId].time = selectedTime;
+        
+        // Check if all appointment details are complete
+        checkAppointmentComplete(packageId);
+      });
+    });
+
+    // Handle date selection
+    document.querySelectorAll('.date-input').forEach(dateInput => {
+      dateInput.addEventListener('change', function() {
+        const packageId = this.id.replace('date-', '');
+        const selectedDate = this.value;
+        
+        if (!appointmentState[packageId]) {
+          appointmentState[packageId] = {
+            link: '',
+            date: '',
+            time: ''
+          };
+        }
+        appointmentState[packageId].date = selectedDate;
+        
+        // Check if all appointment details are complete
+        checkAppointmentComplete(packageId);
+      });
+    });
+
+    // Check if appointment is complete and enable SELECT button
+    function checkAppointmentComplete(packageId) {
+      const state = appointmentState[packageId];
+      const selectButton = document.getElementById(`select-btn-${packageId}`);
+      
+      if (state && state.link && state.date && state.time) {
         // Enable the SELECT button
-        const selectButton = parent.querySelector('.session-select');
         selectButton.classList.add('enabled');
         
         // Add click handler to SELECT button
         selectButton.onclick = function() {
-          if (selectedSessionLink && selectedSessionLink !== '') {
-            window.location.href = selectedSessionLink;
-          }
+          addToCartWithAppointment(state.link, state.date, state.time);
         };
+      } else {
+        // Disable SELECT button if not all fields are filled
+        selectButton.classList.remove('enabled');
+        selectButton.onclick = null;
+      }
+    }
+
+    // Add to cart with appointment data
+    function addToCartWithAppointment(cartLink, appointmentDate, appointmentTime) {
+      // Format date nicely
+      const dateObj = new Date(appointmentDate);
+      const formattedDate = dateObj.toLocaleDateString('en-US', { 
+        month: 'long', 
+        day: 'numeric', 
+        year: 'numeric' 
       });
-    });
+      
+      // Construct the cart URL with line item properties
+      const separator = cartLink.includes('?') ? '&' : '?';
+      const finalUrl = `${cartLink}${separator}properties[Appointment Date]=${encodeURIComponent(formattedDate)}&properties[Appointment Time]=${encodeURIComponent(appointmentTime)}`;
+      
+      // Redirect to cart with the appointment data
+      window.location.href = finalUrl;
+    }
 
     // Close modal when clicking on overlay (not on modal content)
     document.querySelectorAll('.consultation-modal-overlay').forEach(overlay => {
@@ -2647,7 +2922,7 @@
       "type": "url",
       "id": "faq_link_url",
       "label": "FAQ Page URL (For Different Page)",
-      "info": "Link to a different FAQs page (e.g., /pages/faqs). Only used if Section ID is not set.",
+      "info": "Link to a different FAQs page (e.g., /pages/faqs). Only used if Section ID is not set."
     }
   ],
   "blocks": [
@@ -2924,7 +3199,8 @@
         {
           "type": "url",
           "id": "session_1_link",
-          "label": "Link"
+          "label": "Cart Add Link",
+          "info": "Example: /cart/add?id=55977562374524&quantity=1"
         },
         {
           "type": "header",
@@ -2963,7 +3239,8 @@
         {
           "type": "url",
           "id": "session_3_link",
-          "label": "Link"
+          "label": "Cart Add Link",
+          "info": "Example: /cart/add?id=55977562374524&quantity=1"
         },
         {
           "type": "header",
@@ -3002,7 +3279,8 @@
         {
           "type": "url",
           "id": "session_6_link",
-          "label": "Link"
+          "label": "Cart Add Link",
+          "info": "Example: /cart/add?id=55977562374524&quantity=1"
         },
         {
           "type": "header",
@@ -3041,14 +3319,15 @@
         {
           "type": "url",
           "id": "session_10_link",
-          "label": "Link"
+          "label": "Cart Add Link",
+          "info": "Example: /cart/add?id=55977562374524&quantity=1"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Treatment Tabs",
+      "name": "Treatment Tabs with Appointments",
       "blocks": [
         {
           "type": "tab",
