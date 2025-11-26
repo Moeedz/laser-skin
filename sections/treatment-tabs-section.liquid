@@ -467,6 +467,31 @@
     font-style: italic;
   }
 
+  .closed-day-message {
+    background: #FFE4E1;
+    border-left: 4px solid #FF4444;
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .closed-day-message.active {
+    display: block;
+  }
+
+  .closed-day-message p {
+    color: #D8000C;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .time-slot.hidden {
+    display: none;
+  }
+
   .session-select {
     margin-top: 16px;
     opacity: 0.5;
@@ -1649,16 +1674,21 @@
                       <div class="time-picker-wrapper">
                         <label class="time-picker-label">Choose Time Slot</label>
                         <div class="time-slots-grid" id="time-slots-{{ package_block.id }}">
-                          <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
-                          <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
-                          <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
-                          <div class="time-slot" data-time="1:00 PM">1:00 PM</div>
-                          <div class="time-slot" data-time="2:00 PM">2:00 PM</div>
-                          <div class="time-slot" data-time="3:00 PM">3:00 PM</div>
-                          <div class="time-slot" data-time="4:00 PM">4:00 PM</div>
-                          <div class="time-slot" data-time="5:00 PM">5:00 PM</div>
-                          <div class="time-slot" data-time="6:00 PM">6:00 PM</div>
+                          <div class="time-slot" data-time="10:00 AM" data-hour="10">10:00 AM</div>
+                          <div class="time-slot" data-time="11:00 AM" data-hour="11">11:00 AM</div>
+                          <div class="time-slot" data-time="12:00 PM" data-hour="12">12:00 PM</div>
+                          <div class="time-slot" data-time="1:00 PM" data-hour="13">1:00 PM</div>
+                          <div class="time-slot" data-time="2:00 PM" data-hour="14">2:00 PM</div>
+                          <div class="time-slot" data-time="3:00 PM" data-hour="15">3:00 PM</div>
+                          <div class="time-slot" data-time="4:00 PM" data-hour="16">4:00 PM</div>
+                          <div class="time-slot" data-time="5:00 PM" data-hour="17">5:00 PM</div>
+                          <div class="time-slot" data-time="6:00 PM" data-hour="18">6:00 PM</div>
                         </div>
+                      </div>
+
+                      <!-- Closed Day Message -->
+                      <div class="closed-day-message" id="closed-day-message-{{ package_block.id }}">
+                        <p>⚠️ <span id="closed-day-name-{{ package_block.id }}"></span> is closed. Please select a different day to book your appointment.</p>
                       </div>
 
                       <p class="appointment-required-note">* Date and time selection required</p>
@@ -2259,6 +2289,70 @@
         }
         appointmentState[packageId].date = selectedDate;
         
+        // Check which day of the week is selected
+        const dateObj = new Date(selectedDate + 'T00:00:00');
+        const dayOfWeek = dateObj.getDay(); // 0 = Sunday, 1 = Monday, etc.
+        
+        // Business hours: 
+        // Monday (1): Closed
+        // Tuesday (2): 10AM - 6PM
+        // Wednesday (3): 10AM - 6PM
+        // Thursday (4): Closed
+        // Friday (5): 10AM - 6PM
+        // Saturday (6): 10AM - 4PM
+        // Sunday (0): Closed
+        
+        const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
+        const saturdayDay = 6;
+        
+        const timeSlotsGrid = document.getElementById(`time-slots-${packageId}`);
+        const timeSlots = timeSlotsGrid.querySelectorAll('.time-slot');
+        const closedDayMessage = document.getElementById(`closed-day-message-${packageId}`);
+        const closedDayName = document.getElementById(`closed-day-name-${packageId}`);
+        
+        // Reset time selection when date changes
+        timeSlots.forEach(slot => slot.classList.remove('selected'));
+        appointmentState[packageId].time = '';
+        
+        if (closedDays.includes(dayOfWeek)) {
+          // Show closed day message
+          const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          closedDayName.textContent = dayNames[dayOfWeek];
+          closedDayMessage.classList.add('active');
+          
+          // Hide all time slots
+          timeSlots.forEach(slot => {
+            slot.classList.add('hidden');
+            slot.style.pointerEvents = 'none';
+          });
+          
+          // Disable SELECT button
+          checkAppointmentComplete(packageId);
+        } else {
+          // Hide closed day message
+          closedDayMessage.classList.remove('active');
+          
+          if (dayOfWeek === saturdayDay) {
+            // Saturday: Only show 10AM - 4PM (hours 10-16)
+            timeSlots.forEach(slot => {
+              const hour = parseInt(slot.getAttribute('data-hour'));
+              if (hour >= 10 && hour <= 16) {
+                slot.classList.remove('hidden');
+                slot.style.pointerEvents = 'auto';
+              } else {
+                slot.classList.add('hidden');
+                slot.style.pointerEvents = 'none';
+              }
+            });
+          } else {
+            // Regular days (Tue, Wed, Fri): Show all slots 10AM - 6PM
+            timeSlots.forEach(slot => {
+              slot.classList.remove('hidden');
+              slot.style.pointerEvents = 'auto';
+            });
+          }
+        }
+        
         // Check if all appointment details are complete
         checkAppointmentComplete(packageId);
       });
@@ -2269,7 +2363,16 @@
       const state = appointmentState[packageId];
       const selectButton = document.getElementById(`select-btn-${packageId}`);
       
-      if (state && state.link && state.date && state.time) {
+      // Check if date is a closed day
+      let isClosedDay = false;
+      if (state && state.date) {
+        const dateObj = new Date(state.date + 'T00:00:00');
+        const dayOfWeek = dateObj.getDay();
+        const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
+        isClosedDay = closedDays.includes(dayOfWeek);
+      }
+      
+      if (state && state.link && state.date && state.time && !isClosedDay) {
         // Enable the SELECT button
         selectButton.classList.add('enabled');
         
@@ -2278,7 +2381,7 @@
           addToCartWithAppointment(state.link, state.date, state.time);
         };
       } else {
-        // Disable SELECT button if not all fields are filled
+        // Disable SELECT button if not all fields are filled OR if it's a closed day
         selectButton.classList.remove('enabled');
         selectButton.onclick = null;
       }
