@@ -366,212 +366,98 @@
   }
 
   .appointment-picker.active {
-    max-height: 800px;
+    max-height: 600px;
     opacity: 1;
   }
 
   .appointment-heading {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .appointment-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    background: #fff;
-    padding: 16px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-  }
-
-  /* CUSTOM CALENDAR STYLES */
-  .custom-calendar {
-    background: white;
-  }
-
-  .calendar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }
-
-  .calendar-nav-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px 8px;
-    font-size: 18px;
-    color: #333;
-    transition: color 0.2s ease;
-  }
-
-  .calendar-nav-btn:hover {
-    color: #000;
-  }
-
-  .calendar-month-year {
     font-size: 14px;
     font-weight: 600;
-    color: #000;
+    margin-bottom: 12px;
+    color: {{ section.settings.package_heading_color }};
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
-  .calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    margin-bottom: 8px;
+  .appointment-heading svg {
+    width: 16px;
+    height: 16px;
+    stroke: {{ section.settings.tab_active_background }};
   }
 
-  .calendar-weekday {
-    text-align: center;
-    font-size: 11px;
-    font-weight: 600;
+  .date-picker-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .date-picker-label {
+    font-size: 13px;
+    font-weight: 500;
     color: #666;
-    padding: 4px 0;
+    margin-bottom: 6px;
+    display: block;
   }
 
-  .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-  }
-
-  .calendar-day {
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    color: #333;
-    background: white;
-    border: 1px solid transparent;
-  }
-
-  .calendar-day:hover:not(.disabled):not(.selected) {
-    background: #f5f5f5;
-  }
-
-  .calendar-day.selected {
-    background: #10B981;
-    color: white;
-    border-color: #10B981;
-  }
-
-  .calendar-day.today {
-    border-color: #10B981;
-  }
-
-  .calendar-day.disabled {
-    color: #ccc;
-    cursor: not-allowed;
-    text-decoration: line-through;
-  }
-
-  .calendar-day.other-month {
-    color: #ddd;
-  }
-
-  .calendar-day.empty {
-    cursor: default;
-  }
-
-  /* TIME SLOTS PANEL */
-  .time-slots-panel {
-    background: #FFFBEB;
-    border: 1px solid #FEF3C7;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .time-slots-header {
-    background: #1F2937;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .time-slots-container {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 280px;
-    padding: 8px;
-  }
-
-  .time-slot-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .date-input {
+    width: 100%;
     padding: 10px 12px;
-    margin-bottom: 4px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s ease;
     cursor: pointer;
-    transition: background 0.2s ease;
-    border-radius: 4px;
   }
 
-  .time-slot-item:hover {
-    background: #FEF3C7;
+  .date-input:hover {
+    border-color: #ccc;
   }
 
-  .time-slot-item.selected {
-    background: #FEF3C7;
+  .date-input:focus {
+    outline: none;
+    border-color: {{ section.settings.tab_active_background }};
   }
 
-  .time-slot-label {
+  .time-picker-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .time-picker-label {
     font-size: 13px;
     font-weight: 500;
-    color: #1F2937;
+    color: #666;
+    margin-bottom: 8px;
+    display: block;
   }
 
-  .time-slot-radio {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #D1D5DB;
-    border-radius: 50%;
-    position: relative;
-    transition: all 0.2s ease;
+  .time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
   }
 
-  .time-slot-item.selected .time-slot-radio {
-    border-color: #10B981;
-  }
-
-  .time-slot-item.selected .time-slot-radio::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    background: #10B981;
-    border-radius: 50%;
-  }
-
-  .time-slots-scroll-hint {
+  .time-slot {
+    padding: 8px 6px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
     text-align: center;
-    padding: 8px;
-    font-size: 11px;
-    color: #92400E;
-    background: #FEF3C7;
-    border-top: 1px solid #FDE68A;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    color: #333;
   }
 
-  .time-slot-item.hidden {
-    display: none;
+  .time-slot:hover {
+    border-color: #ccc;
+    background: #f9f9f9;
+  }
+
+  .time-slot.selected {
+    background: {{ section.settings.tab_active_background }};
+    border-color: {{ section.settings.tab_active_background }};
+    color: white;
   }
 
   .appointment-required-note {
@@ -1771,50 +1657,32 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        SELECT DATE AND TIME
+                        Select Appointment Date & Time
                       </div>
 
-                      <div class="appointment-grid">
-                        <!-- Custom Calendar -->
-                        <div class="custom-calendar" id="calendar-{{ package_block.id }}">
-                          <div class="calendar-header">
-                            <button type="button" class="calendar-nav" id="prev-month-{{ package_block.id }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                              </svg>
-                            </button>
-                            <div class="calendar-month-year" id="month-year-{{ package_block.id }}">November 2024</div>
-                            <button type="button" class="calendar-nav" id="next-month-{{ package_block.id }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="calendar-weekdays">
-                            <div class="calendar-weekday">Mon</div>
-                            <div class="calendar-weekday">Tue</div>
-                            <div class="calendar-weekday">Wed</div>
-                            <div class="calendar-weekday">Thu</div>
-                            <div class="calendar-weekday">Fri</div>
-                            <div class="calendar-weekday">Sat</div>
-                            <div class="calendar-weekday">Sun</div>
-                          </div>
-                          <div class="calendar-dates" id="dates-{{ package_block.id }}">
-                            <!-- Dates populated by JavaScript -->
-                          </div>
-                        </div>
+                      <!-- Date Picker -->
+                      <div class="date-picker-wrapper">
+                        <label class="date-picker-label">Choose Date</label>
+                        <input 
+                          type="date" 
+                          class="date-input" 
+                          id="date-{{ package_block.id }}"
+                          min="{{ 'now' | date: '%Y-%m-%d' }}">
+                      </div>
 
-                        <!-- Time Slots Panel -->
-                        <div class="time-panel" id="time-panel-{{ package_block.id }}">
-                          <div class="time-panel-header" id="time-header-{{ package_block.id }}">
-                            Select a date first
-                          </div>
-                          <div class="time-slots-scroll" id="time-scroll-{{ package_block.id }}">
-                            <!-- Time slots populated by JavaScript -->
-                          </div>
-                          <div class="time-scroll-indicator">
-                            Scroll to see more time slots
-                          </div>
+                      <!-- Time Picker -->
+                      <div class="time-picker-wrapper">
+                        <label class="time-picker-label">Choose Time Slot</label>
+                        <div class="time-slots-grid" id="time-slots-{{ package_block.id }}">
+                          <div class="time-slot" data-time="10:00 AM" data-hour="10">10:00 AM</div>
+                          <div class="time-slot" data-time="11:00 AM" data-hour="11">11:00 AM</div>
+                          <div class="time-slot" data-time="12:00 PM" data-hour="12">12:00 PM</div>
+                          <div class="time-slot" data-time="1:00 PM" data-hour="13">1:00 PM</div>
+                          <div class="time-slot" data-time="2:00 PM" data-hour="14">2:00 PM</div>
+                          <div class="time-slot" data-time="3:00 PM" data-hour="15">3:00 PM</div>
+                          <div class="time-slot" data-time="4:00 PM" data-hour="16">4:00 PM</div>
+                          <div class="time-slot" data-time="5:00 PM" data-hour="17">5:00 PM</div>
+                          <div class="time-slot" data-time="6:00 PM" data-hour="18">6:00 PM</div>
                         </div>
                       </div>
 
@@ -2586,261 +2454,6 @@
       }
     }
   }
-
-  // CUSTOM CALENDAR & APPOINTMENT PICKER JAVASCRIPT
-// Add this to the existing <script> section in the treatment tabs file
-
-// Calendar state management
-const calendarState = {};
-
-// Initialize calendars when DOM is ready
-function initializeCalendars() {
-  document.querySelectorAll('.custom-calendar').forEach(calendar => {
-    const packageId = calendar.id.replace('calendar-', '');
-    
-    if (!calendarState[packageId]) {
-      calendarState[packageId] = {
-        currentMonth: new Date().getMonth(),
-        currentYear: new Date().getFullYear(),
-        selectedDate: null
-      };
-    }
-    
-    renderCalendar(packageId);
-    setupCalendarNav(packageId);
-  });
-}
-
-// Render calendar for a specific package
-function renderCalendar(packageId) {
-  const state = calendarState[packageId];
-  const datesContainer = document.getElementById(`dates-${packageId}`);
-  const monthYearDisplay = document.getElementById(`month-year-${packageId}`);
-  
-  if (!datesContainer || !monthYearDisplay) return;
-  
-  // Update month/year display
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                      'July', 'August', 'September', 'October', 'November', 'December'];
-  monthYearDisplay.textContent = `${monthNames[state.currentMonth]} ${state.currentYear}`;
-  
-  // Clear existing dates
-  datesContainer.innerHTML = '';
-  
-  // Get first day of month and number of days
-  const firstDay = new Date(state.currentYear, state.currentMonth, 1).getDay();
-  const daysInMonth = new Date(state.currentYear, state.currentMonth + 1, 0).getDate();
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  
-  // Adjust firstDay to start week on Monday (0=Sun, 1=Mon)
-  const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
-  
-  // Add empty cells for days before month starts
-  for (let i = 0; i < adjustedFirstDay; i++) {
-    const emptyDate = document.createElement('div');
-    emptyDate.className = 'calendar-date other-month';
-    datesContainer.appendChild(emptyDate);
-  }
-  
-  // Business hours - closed days: Sunday(0), Monday(1), Thursday(4)
-  const closedDays = [0, 1, 4];
-  
-  // Add days of the month
-  for (let day = 1; day <= daysInMonth; day++) {
-    const dateElement = document.createElement('div');
-    dateElement.className = 'calendar-date';
-    dateElement.textContent = day;
-    
-    const currentDate = new Date(state.currentYear, state.currentMonth, day);
-    currentDate.setHours(0, 0, 0, 0);
-    const dayOfWeek = currentDate.getDay();
-    
-    // Check if date is in the past
-    if (currentDate < today) {
-      dateElement.classList.add('past');
-    }
-    // Check if date is a closed day
-    else if (closedDays.includes(dayOfWeek)) {
-      dateElement.classList.add('disabled');
-    }
-    // Check if it's today
-    else if (currentDate.getTime() === today.getTime()) {
-      dateElement.classList.add('today');
-    }
-    
-    // Check if date is selected
-    if (state.selectedDate && 
-        currentDate.getTime() === new Date(state.selectedDate).getTime()) {
-      dateElement.classList.add('selected');
-    }
-    
-    // Add click handler for valid dates
-    if (!dateElement.classList.contains('past') && !dateElement.classList.contains('disabled')) {
-      dateElement.addEventListener('click', () => selectDate(packageId, currentDate));
-    }
-    
-    datesContainer.appendChild(dateElement);
-  }
-}
-
-// Setup calendar navigation buttons
-function setupCalendarNav(packageId) {
-  const prevBtn = document.getElementById(`prev-month-${packageId}`);
-  const nextBtn = document.getElementById(`next-month-${packageId}`);
-  
-  if (prevBtn) {
-    prevBtn.onclick = () => {
-      calendarState[packageId].currentMonth--;
-      if (calendarState[packageId].currentMonth < 0) {
-        calendarState[packageId].currentMonth = 11;
-        calendarState[packageId].currentYear--;
-      }
-      renderCalendar(packageId);
-    };
-  }
-  
-  if (nextBtn) {
-    nextBtn.onclick = () => {
-      calendarState[packageId].currentMonth++;
-      if (calendarState[packageId].currentMonth > 11) {
-        calendarState[packageId].currentMonth = 0;
-        calendarState[packageId].currentYear++;
-      }
-      renderCalendar(packageId);
-    };
-  }
-}
-
-// Select a date
-function selectDate(packageId, date) {
-  calendarState[packageId].selectedDate = date;
-  renderCalendar(packageId);
-  updateTimeSlots(packageId, date);
-  
-  // Store in appointment state
-  if (!appointmentState[packageId]) {
-    appointmentState[packageId] = { link: '', date: '', time: '' };
-  }
-  appointmentState[packageId].date = date.toISOString().split('T')[0];
-  
-  // Clear previously selected time
-  appointmentState[packageId].time = '';
-  checkAppointmentComplete(packageId);
-}
-
-// Update time slots based on selected date
-function updateTimeSlots(packageId, date) {
-  const timePanelHeader = document.getElementById(`time-header-${packageId}`);
-  const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
-  
-  if (!timePanelHeader || !timeScrollContainer) return;
-  
-  // Format date for header
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const dayOfWeek = dayNames[date.getDay()];
-  const day = date.getDate();
-  const month = monthNames[date.getMonth()];
-  const year = date.getFullYear();
-  
-  timePanelHeader.textContent = `${dayOfWeek}, ${day} ${month} ${year}`;
-  
-  // Generate time slots based on day of week
-  const selectedDayOfWeek = date.getDay();
-  let timeSlots = [];
-  
-  // Saturday (6): 10 AM - 4 PM
-  if (selectedDayOfWeek === 6) {
-    timeSlots = generateTimeSlots(10, 16);
-  }
-  // Regular days (Tue, Wed, Fri): 10 AM - 6 PM
-  else {
-    timeSlots = generateTimeSlots(10, 18);
-  }
-  
-  // Clear existing time slots
-  timeScrollContainer.innerHTML = '';
-  
-  // Create time slot elements
-  timeSlots.forEach(time => {
-    const slotElement = document.createElement('div');
-    slotElement.className = 'time-slot-option';
-    slotElement.innerHTML = `
-      <span class="time-slot-label">${time}</span>
-      <div class="time-slot-radio"></div>
-    `;
-    
-    slotElement.addEventListener('click', () => selectTimeSlot(packageId, time));
-    timeScrollContainer.appendChild(slotElement);
-  });
-}
-
-// Generate time slots with 15-minute intervals
-function generateTimeSlots(startHour, endHour) {
-  const slots = [];
-  for (let hour = startHour; hour <= endHour; hour++) {
-    for (let minute = 0; minute < 60; minute += 15) {
-      if (hour === endHour && minute > 0) break; // Stop at top of end hour
-      
-      const period = hour >= 12 ? 'PM' : 'AM';
-      const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
-      const displayMinute = minute.toString().padStart(2, '0');
-      slots.push(`${displayHour}:${displayMinute} ${period}`);
-    }
-  }
-  return slots;
-}
-
-// Select a time slot
-function selectTimeSlot(packageId, time) {
-  // Remove selected class from all slots
-  const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
-  if (timeScrollContainer) {
-    timeScrollContainer.querySelectorAll('.time-slot-option').forEach(slot => {
-      slot.classList.remove('selected');
-    });
-  }
-  
-  // Add selected class to clicked slot
-  event.currentTarget.classList.add('selected');
-  
-  // Store in appointment state
-  if (!appointmentState[packageId]) {
-    appointmentState[packageId] = { link: '', date: '', time: '' };
-  }
-  appointmentState[packageId].time = time;
-  
-  // Check if appointment is complete
-  checkAppointmentComplete(packageId);
-}
-
-// Initialize calendars when appointment picker becomes active
-document.addEventListener('DOMContentLoaded', function() {
-  // Watch for appointment pickers becoming active
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.target.classList.contains('appointment-picker') && 
-          mutation.target.classList.contains('active')) {
-        const packageId = mutation.target.id.replace('appointment-', '');
-        if (!calendarState[packageId]) {
-          calendarState[packageId] = {
-            currentMonth: new Date().getMonth(),
-            currentYear: new Date().getFullYear(),
-            selectedDate: null
-          };
-          renderCalendar(packageId);
-          setupCalendarNav(packageId);
-        }
-      }
-    });
-  });
-  
-  // Observe all appointment pickers
-  document.querySelectorAll('.appointment-picker').forEach(picker => {
-    observer.observe(picker, { attributes: true, attributeFilter: ['class'] });
-  });
-});
 </script>
 
 {% schema %}
