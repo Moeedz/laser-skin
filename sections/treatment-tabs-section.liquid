@@ -2149,31 +2149,22 @@
 
 <script>
   function switchTab(tabId) {
-    // Update ALL tab buttons (both top and content tabs)
     document.querySelectorAll('.tab-button').forEach(btn => {
       btn.classList.remove('active');
     });
     document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
       btn.classList.add('active');
     });
-
-    // Update tab content
     document.querySelectorAll('.tab-content').forEach(content => {
       content.classList.remove('active');
     });
     document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
-
-    // Close any open package containers
     document.querySelectorAll('.packages-container').forEach(container => {
       container.classList.remove('active');
     });
-
-    // Close any open session options
     document.querySelectorAll('.session-options').forEach(session => {
       session.classList.remove('active');
     });
-
-    // Close any open appointment pickers
     document.querySelectorAll('.appointment-picker').forEach(picker => {
       picker.classList.remove('active');
     });
@@ -2194,12 +2185,11 @@
     collapsibleTab.classList.toggle('active');
   }
 
-  // Modal Functions
   function openConsultationModal(tabId) {
     const modal = document.getElementById(`consultation-modal-${tabId}`);
     if (modal) {
       modal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
     }
   }
 
@@ -2207,25 +2197,17 @@
     const modal = document.getElementById(`consultation-modal-${tabId}`);
     if (modal) {
       modal.classList.remove('active');
-      document.body.style.overflow = ''; // Restore body scroll
+      document.body.style.overflow = '';
     }
   }
 
-  // Phone Hours Modal Functions
   function openPhoneHoursModal(tabId) {
-    // First close the consultation modal
     closeConsultationModal(tabId);
-    
-    // Open phone hours modal
     const modal = document.getElementById(`phone-hours-modal-${tabId}`);
     if (modal) {
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
-      
-      // Check if store is open and update status
       checkStoreStatus(tabId);
-      
-      // Highlight current day
       highlightCurrentDay(tabId);
     }
   }
@@ -2241,24 +2223,17 @@
   function checkStoreStatus(tabId) {
     const statusElement = document.getElementById(`store-status-${tabId}`);
     if (!statusElement) return;
-
-    // Get current time
     const now = new Date();
-    const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const currentDay = now.getDay();
     const currentHour = now.getHours();
     const currentMinute = now.getMinutes();
-    const currentTime = currentHour * 60 + currentMinute; // Convert to minutes for easier comparison
-
-    // Get store hours for current day from the modal
+    const currentTime = currentHour * 60 + currentMinute;
     const modal = document.getElementById(`phone-hours-modal-${tabId}`);
     const hoursRows = modal.querySelectorAll('.hours-row');
-    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1]; // Adjust for Sunday being 0
+    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];
     const hoursText = todayRow.querySelector('.time').textContent.trim();
-
-    // Check if store is open
     let isOpen = false;
     if (hoursText.toLowerCase() !== 'closed') {
-      // Parse hours (format: "10:00AM-6:00PM")
       const matches = hoursText.match(/(\d{1,2}):(\d{2})(AM|PM)-(\d{1,2}):(\d{2})(AM|PM)/i);
       if (matches) {
         let openHour = parseInt(matches[1]);
@@ -2267,33 +2242,24 @@
         let closeHour = parseInt(matches[4]);
         const closeMinute = parseInt(matches[5]);
         const closePeriod = matches[6].toUpperCase();
-
-        // Convert to 24-hour format
         if (openPeriod === 'PM' && openHour !== 12) openHour += 12;
         if (openPeriod === 'AM' && openHour === 12) openHour = 0;
         if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;
         if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;
-
         const openTime = openHour * 60 + openMinute;
         const closeTime = closeHour * 60 + closeMinute;
-
         isOpen = currentTime >= openTime && currentTime < closeTime;
       }
     }
-
-    // Update status display
     const statusIcon = statusElement.querySelector('.status-icon');
     const statusText = statusElement.querySelector('.status-text');
     const closedMessage = document.getElementById(`closed-message-${tabId}`);
     const callButton = document.getElementById(`call-button-${tabId}`);
-    
     if (isOpen) {
       statusElement.classList.remove('closed');
       statusIcon.textContent = '✓';
       statusText.textContent = 'We are currently open';
-      if (closedMessage) {
-        closedMessage.style.display = 'none';
-      }
+      if (closedMessage) closedMessage.style.display = 'none';
       if (callButton) {
         callButton.textContent = 'Call Now';
         callButton.classList.remove('disabled');
@@ -2304,9 +2270,7 @@
       statusElement.classList.add('closed');
       statusIcon.textContent = '✗';
       statusText.textContent = 'We are currently closed';
-      if (closedMessage) {
-        closedMessage.style.display = 'block';
-      }
+      if (closedMessage) closedMessage.style.display = 'block';
       if (callButton) {
         callButton.textContent = 'Currently Closed';
         callButton.classList.add('disabled');
@@ -2319,238 +2283,243 @@
   function highlightCurrentDay(tabId) {
     const modal = document.getElementById(`phone-hours-modal-${tabId}`);
     if (!modal) return;
-
     const now = new Date();
-    const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
-    
+    const currentDay = now.getDay();
     const hoursRows = modal.querySelectorAll('.hours-row');
     hoursRows.forEach(row => row.classList.remove('current-day'));
-    
-    // Highlight the current day row
-    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1]; // Adjust for Sunday being 0
-    if (todayRow) {
-      todayRow.classList.add('current-day');
+    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];
+    if (todayRow) todayRow.classList.add('current-day');
+  }
+
+  function scrollToFAQ(sectionId) {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      const headerOffset = 80;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    } else {
+      const sections = document.querySelectorAll('[id*="faq"]');
+      if (sections.length > 0) {
+        const headerOffset = 80;
+        const elementPosition = sections[0].getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
     }
   }
 
-  // NEW APPOINTMENT PICKER LOGIC
-  document.addEventListener('DOMContentLoaded', function() {
-    // Track appointment state for each package
-    const appointmentState = {};
+  const appointmentState = {};
+  const calendarState = {};
 
-    // Handle session selection
+  function initCalendar(packageId) {
+    if (!calendarState[packageId]) {
+      calendarState[packageId] = {
+        currentMonth: new Date().getMonth(),
+        currentYear: new Date().getFullYear(),
+        selectedDate: null
+      };
+    }
+    renderCalendar(packageId);
+    setupCalendarNav(packageId);
+  }
+
+  function renderCalendar(packageId) {
+    const state = calendarState[packageId];
+    const datesContainer = document.getElementById(`dates-${packageId}`);
+    const monthYearDisplay = document.getElementById(`month-year-${packageId}`);
+    if (!datesContainer || !monthYearDisplay) {
+      console.error('Calendar elements not found for package:', packageId);
+      return;
+    }
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    monthYearDisplay.textContent = `${monthNames[state.currentMonth]} ${state.currentYear}`;
+    datesContainer.innerHTML = '';
+    const firstDay = new Date(state.currentYear, state.currentMonth, 1).getDay();
+    const daysInMonth = new Date(state.currentYear, state.currentMonth + 1, 0).getDate();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
+    const closedDays = [0, 1, 4];
+    for (let i = 0; i < adjustedFirstDay; i++) {
+      const emptyDate = document.createElement('div');
+      emptyDate.className = 'calendar-date other-month';
+      datesContainer.appendChild(emptyDate);
+    }
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateElement = document.createElement('div');
+      dateElement.className = 'calendar-date';
+      dateElement.textContent = day;
+      const currentDate = new Date(state.currentYear, state.currentMonth, day);
+      currentDate.setHours(0, 0, 0, 0);
+      const dayOfWeek = currentDate.getDay();
+      if (currentDate < today) {
+        dateElement.classList.add('past');
+      } else if (closedDays.includes(dayOfWeek)) {
+        dateElement.classList.add('disabled');
+      } else if (currentDate.getTime() === today.getTime()) {
+        dateElement.classList.add('today');
+      }
+      if (state.selectedDate && currentDate.getTime() === new Date(state.selectedDate).getTime()) {
+        dateElement.classList.add('selected');
+      }
+      if (!dateElement.classList.contains('past') && !dateElement.classList.contains('disabled')) {
+        dateElement.addEventListener('click', () => selectDate(packageId, currentDate));
+      }
+      datesContainer.appendChild(dateElement);
+    }
+  }
+
+  function setupCalendarNav(packageId) {
+    const prevBtn = document.getElementById(`prev-month-${packageId}`);
+    const nextBtn = document.getElementById(`next-month-${packageId}`);
+    if (prevBtn) {
+      prevBtn.onclick = () => {
+        calendarState[packageId].currentMonth--;
+        if (calendarState[packageId].currentMonth < 0) {
+          calendarState[packageId].currentMonth = 11;
+          calendarState[packageId].currentYear--;
+        }
+        renderCalendar(packageId);
+      };
+    }
+    if (nextBtn) {
+      nextBtn.onclick = () => {
+        calendarState[packageId].currentMonth++;
+        if (calendarState[packageId].currentMonth > 11) {
+          calendarState[packageId].currentMonth = 0;
+          calendarState[packageId].currentYear++;
+        }
+        renderCalendar(packageId);
+      };
+    }
+  }
+
+  function selectDate(packageId, date) {
+    calendarState[packageId].selectedDate = date;
+    renderCalendar(packageId);
+    updateTimeSlots(packageId, date);
+    if (!appointmentState[packageId]) {
+      appointmentState[packageId] = { link: '', date: '', time: '' };
+    }
+    appointmentState[packageId].date = date.toISOString().split('T')[0];
+    appointmentState[packageId].time = '';
+    const closedDayMessage = document.getElementById(`closed-day-message-${packageId}`);
+    if (closedDayMessage) {
+      closedDayMessage.classList.remove('active');
+    }
+    checkAppointmentComplete(packageId);
+  }
+
+  function updateTimeSlots(packageId, date) {
+    const timePanelHeader = document.getElementById(`time-header-${packageId}`);
+    const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
+    if (!timePanelHeader || !timeScrollContainer) return;
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const dayOfWeek = dayNames[date.getDay()];
+    const day = date.getDate();
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+    timePanelHeader.textContent = `${dayOfWeek}, ${day} ${month} ${year}`;
+    const selectedDayOfWeek = date.getDay();
+    let timeSlots = [];
+    if (selectedDayOfWeek === 6) {
+      timeSlots = generateTimeSlots(10, 16);
+    } else {
+      timeSlots = generateTimeSlots(10, 18);
+    }
+    timeScrollContainer.innerHTML = '';
+    timeSlots.forEach(time => {
+      const slotElement = document.createElement('div');
+      slotElement.className = 'time-slot-option';
+      slotElement.innerHTML = `<span class="time-slot-label">${time}</span><div class="time-slot-radio"></div>`;
+      slotElement.addEventListener('click', () => selectTimeSlot(packageId, time, slotElement));
+      timeScrollContainer.appendChild(slotElement);
+    });
+  }
+
+  function generateTimeSlots(startHour, endHour) {
+    const slots = [];
+    for (let hour = startHour; hour <= endHour; hour++) {
+      const period = hour >= 12 ? 'PM' : 'AM';
+      const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
+      slots.push(`${displayHour}:00 ${period}`);
+    }
+    return slots;
+  }
+
+  function selectTimeSlot(packageId, time, element) {
+    const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
+    if (timeScrollContainer) {
+      timeScrollContainer.querySelectorAll('.time-slot-option').forEach(slot => {
+        slot.classList.remove('selected');
+      });
+    }
+    element.classList.add('selected');
+    if (!appointmentState[packageId]) {
+      appointmentState[packageId] = { link: '', date: '', time: '' };
+    }
+    appointmentState[packageId].time = time;
+    checkAppointmentComplete(packageId);
+  }
+
+  function checkAppointmentComplete(packageId) {
+    const state = appointmentState[packageId];
+    const selectButton = document.getElementById(`select-btn-${packageId}`);
+    let isClosedDay = false;
+    if (state && state.date) {
+      const dateObj = new Date(state.date + 'T00:00:00');
+      const dayOfWeek = dateObj.getDay();
+      const closedDays = [0, 1, 4];
+      isClosedDay = closedDays.includes(dayOfWeek);
+    }
+    if (state && state.link && state.date && state.time && !isClosedDay) {
+      selectButton.classList.add('enabled');
+      selectButton.onclick = function() {
+        addToCartWithAppointment(state.link, state.date, state.time);
+      };
+    } else {
+      selectButton.classList.remove('enabled');
+      selectButton.onclick = null;
+    }
+  }
+
+  function addToCartWithAppointment(cartLink, appointmentDate, appointmentTime) {
+    const dateObj = new Date(appointmentDate + 'T00:00:00');
+    const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const separator = cartLink.includes('?') ? '&' : '?';
+    const finalUrl = `${cartLink}${separator}properties[Appointment Date]=${encodeURIComponent(formattedDate)}&properties[Appointment Time]=${encodeURIComponent(appointmentTime)}`;
+    window.location.href = finalUrl;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.session-option').forEach(option => {
       option.addEventListener('click', function() {
         const parent = this.parentElement;
         const packageId = parent.id.replace('session-', '');
-        
-        // Remove selected class from siblings
         parent.querySelectorAll('.session-option').forEach(opt => {
           opt.classList.remove('selected');
         });
-        
-        // Add selected class to clicked option
         this.classList.add('selected');
-        
-        // Store the link from data attribute
         const selectedLink = this.getAttribute('data-link');
-        
-        // Initialize appointment state for this package
         if (!appointmentState[packageId]) {
-          appointmentState[packageId] = {
-            link: '',
-            date: '',
-            time: ''
-          };
+          appointmentState[packageId] = { link: '', date: '', time: '' };
         }
         appointmentState[packageId].link = selectedLink;
-        
-        // Show appointment picker
         const appointmentPicker = document.getElementById(`appointment-${packageId}`);
         if (appointmentPicker) {
           appointmentPicker.classList.add('active');
-        }
-
-        // Initialize calendar when session selected
-        if (!calendarState[packageId]) {
-          calendarState[packageId] = {
-            currentMonth: new Date().getMonth(),
-            currentYear: new Date().getFullYear(),
-            selectedDate: null
-          };
           setTimeout(() => {
-            renderCalendar(packageId);
-            setupCalendarNav(packageId);
+            initCalendar(packageId);
           }, 100);
         }
-        
-        // Check if date and time are already selected
-        checkAppointmentComplete(packageId);
-      });
-    });
-
-    // Handle time slot selection
-    document.querySelectorAll('.time-slot').forEach(slot => {
-      slot.addEventListener('click', function() {
-        const timeSlotsGrid = this.parentElement;
-        const packageId = timeSlotsGrid.id.replace('time-slots-', '');
-        
-        // Remove selected from all slots in this grid
-        timeSlotsGrid.querySelectorAll('.time-slot').forEach(s => {
-          s.classList.remove('selected');
-        });
-        
-        // Mark this slot as selected
-        this.classList.add('selected');
-        
-        // Store selected time
-        const selectedTime = this.getAttribute('data-time');
-        if (!appointmentState[packageId]) {
-          appointmentState[packageId] = {
-            link: '',
-            date: '',
-            time: ''
-          };
-        }
-        appointmentState[packageId].time = selectedTime;
-        
-        // Check if all appointment details are complete
-        checkAppointmentComplete(packageId);
-      });
-    });
-
-    // Handle date selection
-    document.querySelectorAll('.date-input').forEach(dateInput => {
-      dateInput.addEventListener('change', function() {
-        const packageId = this.id.replace('date-', '');
-        const selectedDate = this.value;
-        
-        if (!appointmentState[packageId]) {
-          appointmentState[packageId] = {
-            link: '',
-            date: '',
-            time: ''
-          };
-        }
-        appointmentState[packageId].date = selectedDate;
-        
-        // Check which day of the week is selected
-        const dateObj = new Date(selectedDate + 'T00:00:00');
-        const dayOfWeek = dateObj.getDay(); // 0 = Sunday, 1 = Monday, etc.
-        
-        // Business hours: 
-        // Monday (1): Closed
-        // Tuesday (2): 10AM - 6PM
-        // Wednesday (3): 10AM - 6PM
-        // Thursday (4): Closed
-        // Friday (5): 10AM - 6PM
-        // Saturday (6): 10AM - 4PM
-        // Sunday (0): Closed
-        
-        const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
-        const saturdayDay = 6;
-        
-        const timeSlotsGrid = document.getElementById(`time-slots-${packageId}`);
-        const timeSlots = timeSlotsGrid.querySelectorAll('.time-slot');
-        const closedDayMessage = document.getElementById(`closed-day-message-${packageId}`);
-        const closedDayName = document.getElementById(`closed-day-name-${packageId}`);
-        
-        // Reset time selection when date changes
-        timeSlots.forEach(slot => slot.classList.remove('selected'));
-        appointmentState[packageId].time = '';
-        
-        if (closedDays.includes(dayOfWeek)) {
-          // Show closed day message
-          const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-          closedDayName.textContent = dayNames[dayOfWeek];
-          closedDayMessage.classList.add('active');
-          
-          // Hide all time slots
-          timeSlots.forEach(slot => {
-            slot.classList.add('hidden');
-            slot.style.pointerEvents = 'none';
-          });
-          
-          // Disable SELECT button
-          checkAppointmentComplete(packageId);
-        } else {
-          // Hide closed day message
-          closedDayMessage.classList.remove('active');
-          
-          if (dayOfWeek === saturdayDay) {
-            // Saturday: Only show 10AM - 4PM (hours 10-16)
-            timeSlots.forEach(slot => {
-              const hour = parseInt(slot.getAttribute('data-hour'));
-              if (hour >= 10 && hour <= 16) {
-                slot.classList.remove('hidden');
-                slot.style.pointerEvents = 'auto';
-              } else {
-                slot.classList.add('hidden');
-                slot.style.pointerEvents = 'none';
-              }
-            });
-          } else {
-            // Regular days (Tue, Wed, Fri): Show all slots 10AM - 6PM
-            timeSlots.forEach(slot => {
-              slot.classList.remove('hidden');
-              slot.style.pointerEvents = 'auto';
-            });
-          }
-        }
-        
-        // Check if all appointment details are complete
-        checkAppointmentComplete(packageId);
-      });
-    });
-
-    // Check if appointment is complete and enable SELECT button
-    function checkAppointmentComplete(packageId) {
-      const state = appointmentState[packageId];
-      const selectButton = document.getElementById(`select-btn-${packageId}`);
-      
-      // Check if date is a closed day
-      let isClosedDay = false;
-      if (state && state.date) {
-        const dateObj = new Date(state.date + 'T00:00:00');
-        const dayOfWeek = dateObj.getDay();
-        const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
-        isClosedDay = closedDays.includes(dayOfWeek);
-      }
-      
-      if (state && state.link && state.date && state.time && !isClosedDay) {
-        // Enable the SELECT button
+        const selectButton = parent.querySelector('.session-select');
         selectButton.classList.add('enabled');
-        
-        // Add click handler to SELECT button
-        selectButton.onclick = function() {
-          addToCartWithAppointment(state.link, state.date, state.time);
-        };
-      } else {
-        // Disable SELECT button if not all fields are filled OR if it's a closed day
-        selectButton.classList.remove('enabled');
-        selectButton.onclick = null;
-      }
-    }
-
-    // Add to cart with appointment data
-    function addToCartWithAppointment(cartLink, appointmentDate, appointmentTime) {
-      // Format date nicely
-      const dateObj = new Date(appointmentDate);
-      const formattedDate = dateObj.toLocaleDateString('en-US', { 
-        month: 'long', 
-        day: 'numeric', 
-        year: 'numeric' 
+        checkAppointmentComplete(packageId);
       });
-      
-      // Construct the cart URL with line item properties
-      const separator = cartLink.includes('?') ? '&' : '?';
-      const finalUrl = `${cartLink}${separator}properties[Appointment Date]=${encodeURIComponent(formattedDate)}&properties[Appointment Time]=${encodeURIComponent(appointmentTime)}`;
-      
-      // Redirect to cart with the appointment data
-      window.location.href = finalUrl;
-    }
+    });
 
-    // Close modal when clicking on overlay (not on modal content)
     document.querySelectorAll('.consultation-modal-overlay').forEach(overlay => {
       overlay.addEventListener('click', function(e) {
         if (e.target === this) {
@@ -2560,7 +2529,6 @@
       });
     });
 
-    // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         document.querySelectorAll('.consultation-modal-overlay.active').forEach(modal => {
@@ -2570,290 +2538,6 @@
       }
     });
   });
-
-  // Smooth scroll to FAQ section
-  function scrollToFAQ(sectionId) {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      // Calculate the position to scroll to, accounting for any fixed headers
-      const headerOffset = 80; // Adjust this value based on your header height
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    } else {
-      // Fallback - try to find by partial ID match
-      const sections = document.querySelectorAll('[id*="faq"]');
-      if (sections.length > 0) {
-        const headerOffset = 80;
-        const elementPosition = sections[0].getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-  }
-
-  // CUSTOM CALENDAR & APPOINTMENT PICKER JAVASCRIPT
-// Add this to the existing <script> section in the treatment tabs file
-
-// Calendar state management
-const calendarState = {};
-
-// Initialize calendars when DOM is ready
-function initializeCalendars() {
-  document.querySelectorAll('.custom-calendar').forEach(calendar => {
-    const packageId = calendar.id.replace('calendar-', '');
-    
-    if (!calendarState[packageId]) {
-      calendarState[packageId] = {
-        currentMonth: new Date().getMonth(),
-        currentYear: new Date().getFullYear(),
-        selectedDate: null
-      };
-    }
-    
-    renderCalendar(packageId);
-    setupCalendarNav(packageId);
-  });
-}
-
-// Render calendar for a specific package
-function renderCalendar(packageId) {
-  const state = calendarState[packageId];
-  const datesContainer = document.getElementById(`dates-${packageId}`);
-  const monthYearDisplay = document.getElementById(`month-year-${packageId}`);
-  
-  if (!datesContainer || !monthYearDisplay) return;
-  
-  // Update month/year display
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                      'July', 'August', 'September', 'October', 'November', 'December'];
-  monthYearDisplay.textContent = `${monthNames[state.currentMonth]} ${state.currentYear}`;
-  
-  // Clear existing dates
-  datesContainer.innerHTML = '';
-  
-  // Get first day of month and number of days
-  const firstDay = new Date(state.currentYear, state.currentMonth, 1).getDay();
-  const daysInMonth = new Date(state.currentYear, state.currentMonth + 1, 0).getDate();
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  
-  // Adjust firstDay to start week on Monday (0=Sun, 1=Mon)
-  const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
-  
-  // Add empty cells for days before month starts
-  for (let i = 0; i < adjustedFirstDay; i++) {
-    const emptyDate = document.createElement('div');
-    emptyDate.className = 'calendar-date other-month';
-    datesContainer.appendChild(emptyDate);
-  }
-  
-  // Business hours - closed days: Sunday(0), Monday(1), Thursday(4)
-  const closedDays = [0, 1, 4];
-  
-  // Add days of the month
-  for (let day = 1; day <= daysInMonth; day++) {
-    const dateElement = document.createElement('div');
-    dateElement.className = 'calendar-date';
-    dateElement.textContent = day;
-    
-    const currentDate = new Date(state.currentYear, state.currentMonth, day);
-    currentDate.setHours(0, 0, 0, 0);
-    const dayOfWeek = currentDate.getDay();
-    
-    // Check if date is in the past
-    if (currentDate < today) {
-      dateElement.classList.add('past');
-    }
-    // Check if date is a closed day
-    else if (closedDays.includes(dayOfWeek)) {
-      dateElement.classList.add('disabled');
-    }
-    // Check if it's today
-    else if (currentDate.getTime() === today.getTime()) {
-      dateElement.classList.add('today');
-    }
-    
-    // Check if date is selected
-    if (state.selectedDate && 
-        currentDate.getTime() === new Date(state.selectedDate).getTime()) {
-      dateElement.classList.add('selected');
-    }
-    
-    // Add click handler for valid dates
-    if (!dateElement.classList.contains('past') && !dateElement.classList.contains('disabled')) {
-      dateElement.addEventListener('click', () => selectDate(packageId, currentDate));
-    }
-    
-    datesContainer.appendChild(dateElement);
-  }
-}
-
-// Setup calendar navigation buttons
-function setupCalendarNav(packageId) {
-  const prevBtn = document.getElementById(`prev-month-${packageId}`);
-  const nextBtn = document.getElementById(`next-month-${packageId}`);
-  
-  if (prevBtn) {
-    prevBtn.onclick = () => {
-      calendarState[packageId].currentMonth--;
-      if (calendarState[packageId].currentMonth < 0) {
-        calendarState[packageId].currentMonth = 11;
-        calendarState[packageId].currentYear--;
-      }
-      renderCalendar(packageId);
-    };
-  }
-  
-  if (nextBtn) {
-    nextBtn.onclick = () => {
-      calendarState[packageId].currentMonth++;
-      if (calendarState[packageId].currentMonth > 11) {
-        calendarState[packageId].currentMonth = 0;
-        calendarState[packageId].currentYear++;
-      }
-      renderCalendar(packageId);
-    };
-  }
-}
-
-// Select a date
-function selectDate(packageId, date) {
-  calendarState[packageId].selectedDate = date;
-  renderCalendar(packageId);
-  updateTimeSlots(packageId, date);
-  
-  // Store in appointment state
-  if (!appointmentState[packageId]) {
-    appointmentState[packageId] = { link: '', date: '', time: '' };
-  }
-  appointmentState[packageId].date = date.toISOString().split('T')[0];
-  
-  // Clear previously selected time
-  appointmentState[packageId].time = '';
-  checkAppointmentComplete(packageId);
-}
-
-// Update time slots based on selected date
-function updateTimeSlots(packageId, date) {
-  const timePanelHeader = document.getElementById(`time-header-${packageId}`);
-  const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
-  
-  if (!timePanelHeader || !timeScrollContainer) return;
-  
-  // Format date for header
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const dayOfWeek = dayNames[date.getDay()];
-  const day = date.getDate();
-  const month = monthNames[date.getMonth()];
-  const year = date.getFullYear();
-  
-  timePanelHeader.textContent = `${dayOfWeek}, ${day} ${month} ${year}`;
-  
-  // Generate time slots based on day of week
-  const selectedDayOfWeek = date.getDay();
-  let timeSlots = [];
-  
-  // Saturday (6): 10 AM - 4 PM
-  if (selectedDayOfWeek === 6) {
-    timeSlots = generateTimeSlots(10, 16);
-  }
-  // Regular days (Tue, Wed, Fri): 10 AM - 6 PM
-  else {
-    timeSlots = generateTimeSlots(10, 18);
-  }
-  
-  // Clear existing time slots
-  timeScrollContainer.innerHTML = '';
-  
-  // Create time slot elements
-  timeSlots.forEach(time => {
-    const slotElement = document.createElement('div');
-    slotElement.className = 'time-slot-option';
-    slotElement.innerHTML = `
-      <span class="time-slot-label">${time}</span>
-      <div class="time-slot-radio"></div>
-    `;
-    
-    slotElement.addEventListener('click', () => selectTimeSlot(packageId, time));
-    timeScrollContainer.appendChild(slotElement);
-  });
-}
-
-// Generate time slots with 15-minute intervals
-function generateTimeSlots(startHour, endHour) {
-  const slots = [];
-  for (let hour = startHour; hour <= endHour; hour++) {
-    for (let minute = 0; minute < 60; minute += 15) {
-      if (hour === endHour && minute > 0) break; // Stop at top of end hour
-      
-      const period = hour >= 12 ? 'PM' : 'AM';
-      const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
-      const displayMinute = minute.toString().padStart(2, '0');
-      slots.push(`${displayHour}:${displayMinute} ${period}`);
-    }
-  }
-  return slots;
-}
-
-// Select a time slot
-function selectTimeSlot(packageId, time) {
-  // Remove selected class from all slots
-  const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
-  if (timeScrollContainer) {
-    timeScrollContainer.querySelectorAll('.time-slot-option').forEach(slot => {
-      slot.classList.remove('selected');
-    });
-  }
-  
-  // Add selected class to clicked slot
-  event.currentTarget.classList.add('selected');
-  
-  // Store in appointment state
-  if (!appointmentState[packageId]) {
-    appointmentState[packageId] = { link: '', date: '', time: '' };
-  }
-  appointmentState[packageId].time = time;
-  
-  // Check if appointment is complete
-  checkAppointmentComplete(packageId);
-}
-
-// Initialize calendars when appointment picker becomes active
-document.addEventListener('DOMContentLoaded', function() {
-  // Watch for appointment pickers becoming active
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.target.classList.contains('appointment-picker') && 
-          mutation.target.classList.contains('active')) {
-        const packageId = mutation.target.id.replace('appointment-', '');
-        if (!calendarState[packageId]) {
-          calendarState[packageId] = {
-            currentMonth: new Date().getMonth(),
-            currentYear: new Date().getFullYear(),
-            selectedDate: null
-          };
-          renderCalendar(packageId);
-          setupCalendarNav(packageId);
-        }
-      }
-    });
-  });
-  
-  // Observe all appointment pickers
-  document.querySelectorAll('.appointment-picker').forEach(picker => {
-    observer.observe(picker, { attributes: true, attributeFilter: ['class'] });
-  });
-});
 </script>
 
 {% schema %}
