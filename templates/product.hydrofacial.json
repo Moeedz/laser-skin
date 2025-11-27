@@ -173,13 +173,13 @@
             "session_1_total": "total £100.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481880956&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£90.00",
             "session_3_total": "total £270.00",
             "session_3_per_session": "per session",
             "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481913724&quantity=1",
-            "show_session_6": true,
+            "show_session_6": false,
             "session_6_label": "6 session",
             "session_6_price": "£80.00",
             "session_6_total": "total £480.00",
@@ -195,6 +195,7 @@
         },
         "package_XgQqnx": {
           "type": "package",
+          "disabled": true,
           "settings": {
             "parent_tab": "hydro",
             "package_name": "Express 30 Minute Treatment",
