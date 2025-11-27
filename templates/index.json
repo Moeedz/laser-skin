@@ -325,6 +325,7 @@
         },
         "separator_xB8RrQ": {
           "type": "separator",
+          "disabled": true,
           "settings": {}
         },
         "description_r9BKqK": {
@@ -352,7 +353,6 @@
         },
         "buy_buttons_VyLPb7": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient": true,
