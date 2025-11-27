@@ -2266,33 +2266,96 @@
   {% endfor %}
 </div>
 
-<script>
+<parameter name="new_str"><script>
   // ========================================================================
   // ⚙️ APPOINTMENT SETTINGS - SUPER SIMPLE!
   // ========================================================================
   
   // ========================================================================
-  // STEP 1: CHOOSE YOUR SLOT LENGTH
-  // Delete the "//" in front of the ONE option you want
+  // STEP 1: LIST ALL YOUR TIME SLOTS (Remove "//" to activate)
+  // Add ALL the times you want to show - mix any durations you want!
   // ========================================================================
   
-  // const SLOT_DURATION = 15;    // 15-minute slots (10:00, 10:15, 10:30...)
-  // const SLOT_DURATION = 30;    // 30-minute slots (10:00, 10:30, 11:00...)
-  const SLOT_DURATION = 60;       // 1-hour slots (10:00, 11:00, 12:00...) ← DEFAULT
-  // const SLOT_DURATION = 120;   // 2-hour slots (10:00, 12:00, 2:00...)
+  const AVAILABLE_TIME_SLOTS = [
+    // MORNING SLOTS
+    '10:00 AM',
+    '10:15 AM',
+    '10:30 AM',
+    '10:45 AM',
+    '11:00 AM',
+    '11:15 AM',
+    '11:30 AM',
+    '11:45 AM',
+    
+    // AFTERNOON SLOTS
+    '12:00 PM',
+    '12:15 PM',
+    '12:30 PM',
+    '12:45 PM',
+    '1:00 PM',
+    '1:15 PM',
+    '1:30 PM',
+    '1:45 PM',
+    '2:00 PM',
+    '2:15 PM',
+    '2:30 PM',
+    '2:45 PM',
+    '3:00 PM',
+    '3:15 PM',
+    '3:30 PM',
+    '3:45 PM',
+    '4:00 PM',
+    '4:15 PM',
+    '4:30 PM',
+    '4:45 PM',
+    '5:00 PM',
+    '5:15 PM',
+    '5:30 PM',
+    '5:45 PM',
+    '6:00 PM',
+  ];
+  
+  // For SATURDAY (limited hours) - 10 AM to 4 PM only
+  const SATURDAY_TIME_SLOTS = [
+    '10:00 AM',
+    '10:15 AM',
+    '10:30 AM',
+    '10:45 AM',
+    '11:00 AM',
+    '11:15 AM',
+    '11:30 AM',
+    '11:45 AM',
+    '12:00 PM',
+    '12:15 PM',
+    '12:30 PM',
+    '12:45 PM',
+    '1:00 PM',
+    '1:15 PM',
+    '1:30 PM',
+    '1:45 PM',
+    '2:00 PM',
+    '2:15 PM',
+    '2:30 PM',
+    '2:45 PM',
+    '3:00 PM',
+    '3:15 PM',
+    '3:30 PM',
+    '3:45 PM',
+    '4:00 PM',
+  ];
   
   
   // ========================================================================
-  // STEP 2: BLOCK SPECIFIC DATES (Optional)
+  // STEP 2: BLOCK SPECIFIC TIMES ON SPECIFIC DATES (Optional)
   // Copy a line, change the date/times, remove the "//" at the start
   // ========================================================================
   
   const BLOCKED_DATES = [
     // Examples (remove "//" to activate):
-    // { date: '2025-12-25', block: 'ALL' },                    // Block entire day
-    // { date: '2025-12-31', block: ['2:00 PM', '3:00 PM'] },   // Block specific times
+    // { date: '2025-12-25', block: 'ALL' },                              // Block entire day
+    // { date: '2025-12-31', block: ['2:00 PM', '2:15 PM', '2:30 PM'] },  // Block specific times
     
-    // Add your blocked dates below (copy the line above and edit):
+    // Add your blocked dates below:
     
   ];
   
@@ -2302,7 +2365,8 @@
   // ========================================================================
   
   const APPOINTMENT_CONFIG = {
-    slotDuration: SLOT_DURATION,
+    availableSlots: AVAILABLE_TIME_SLOTS,
+    saturdaySlots: SATURDAY_TIME_SLOTS,
     blockedSlots: {}
   };
   
@@ -2594,13 +2658,15 @@
     // Format date as YYYY-MM-DD for checking blocked slots
     const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     
-    // Get time slots based on day
+    // Get time slots based on day - use custom slot lists
     const selectedDayOfWeek = date.getDay();
     let timeSlots = [];
     if (selectedDayOfWeek === 6) {
-      timeSlots = generateTimeSlots(10, 16); // Saturday: 10 AM - 4 PM
+      // Saturday: use Saturday slots
+      timeSlots = APPOINTMENT_CONFIG.saturdaySlots;
     } else {
-      timeSlots = generateTimeSlots(10, 18); // Regular: 10 AM - 6 PM
+      // Regular days: use regular slots
+      timeSlots = APPOINTMENT_CONFIG.availableSlots;
     }
     
     // Check if this date has blocked slots
@@ -2766,7 +2832,7 @@
 
 {% schema %}
 {
-  "name": "Treatment Tabs",
+  "name": "Treatment Tabs ",
   "settings": [
     {
       "type": "header",
