@@ -410,20 +410,6 @@
     "ss_simple_faq_jiYFWj": {
       "type": "ss-simple-faq",
       "blocks": {
-        "text_3NnRB7": {
-          "type": "text",
-          "settings": {
-            "question": "When will my appointment be?",
-            "answer": "<p>We'll be able to get you in within 7 days of your booking. We have weekday appointments and weekend appointments.</p>"
-          }
-        },
-        "text_EkPBNL": {
-          "type": "text",
-          "settings": {
-            "question": "What happens once I've purchased the bundle?",
-            "answer": "<p>After you've purchased our team will reach out via phone, WhatsApp or email to schedule your appointment.</p><p>You’ll always be offered an appointment <strong>within 7 days of booking</strong>.</p>"
-          }
-        },
         "text_wgM46e": {
           "type": "text",
           "settings": {
@@ -517,8 +503,6 @@
         }
       },
       "block_order": [
-        "text_3NnRB7",
-        "text_EkPBNL",
         "text_wgM46e",
         "text_73aMaM",
         "text_HhtUzg",
