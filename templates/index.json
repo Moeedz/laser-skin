@@ -288,6 +288,119 @@
         "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
       }
     },
+    "featured_product_cXQqbT": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_CTw3JP": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title_q8cxYD": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "badges_fb4BDf": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price_pN9hnH": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating_WiMNhy": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "show_empty": true,
+            "rating_mode": "rating"
+          }
+        },
+        "payment_terms_gM3PzW": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator_xB8RrQ": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description_r9BKqK": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "variant_picker_6hzQ6p": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_q7XB7L": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_VyLPb7": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "pickup_availability_CMURYH": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor_CTw3JP",
+        "title_q8cxYD",
+        "badges_fb4BDf",
+        "price_pN9hnH",
+        "rating_WiMNhy",
+        "payment_terms_gM3PzW",
+        "separator_xB8RrQ",
+        "description_r9BKqK",
+        "variant_picker_6hzQ6p",
+        "quantity_selector_q7XB7L",
+        "buy_buttons_VyLPb7",
+        "pickup_availability_CMURYH"
+      ],
+      "name": "t:sections.featured_product.presets.featured_product.name",
+      "settings": {
+        "color_scheme": "",
+        "product": "sculpt-cleanse-glow-package",
+        "separate_section_with_border": true,
+        "container_size": "lg",
+        "product_info_size": 45,
+        "center_basic_info": false,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "subheading": "",
+        "title": "Featured product",
+        "content": ""
+      }
+    },
     "feature_cards_JKUWqd": {
       "type": "feature-cards",
       "blocks": {
@@ -583,6 +696,7 @@
     "176123897800c69b3c",
     "ss_scrolling_images_eTgjpG",
     "collection_list_yywqTr",
+    "featured_product_cXQqbT",
     "feature_cards_JKUWqd",
     "contact_info_form_heNtLy",
     "custom_liquid_PVemgx"
