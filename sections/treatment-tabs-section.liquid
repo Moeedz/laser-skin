@@ -2267,6 +2267,49 @@
 </div>
 
 <script>
+  // ========================================================================
+  // ⚙️ APPOINTMENT SETTINGS - SUPER SIMPLE!
+  // ========================================================================
+  
+  // ========================================================================
+  // STEP 1: CHOOSE YOUR SLOT LENGTH
+  // Delete the "//" in front of the ONE option you want
+  // ========================================================================
+  
+  // const SLOT_DURATION = 15;    // 15-minute slots (10:00, 10:15, 10:30...)
+  // const SLOT_DURATION = 30;    // 30-minute slots (10:00, 10:30, 11:00...)
+  const SLOT_DURATION = 60;       // 1-hour slots (10:00, 11:00, 12:00...) ← DEFAULT
+  // const SLOT_DURATION = 120;   // 2-hour slots (10:00, 12:00, 2:00...)
+  
+  
+  // ========================================================================
+  // STEP 2: BLOCK SPECIFIC DATES (Optional)
+  // Copy a line, change the date/times, remove the "//" at the start
+  // ========================================================================
+  
+  const BLOCKED_DATES = [
+    // Examples (remove "//" to activate):
+    // { date: '2025-12-25', block: 'ALL' },                    // Block entire day
+    // { date: '2025-12-31', block: ['2:00 PM', '3:00 PM'] },   // Block specific times
+    
+    // Add your blocked dates below (copy the line above and edit):
+    
+  ];
+  
+  
+  // ========================================================================
+  // ⛔ STOP! Don't edit below this line
+  // ========================================================================
+  
+  const APPOINTMENT_CONFIG = {
+    slotDuration: SLOT_DURATION,
+    blockedSlots: {}
+  };
+  
+  BLOCKED_DATES.forEach(item => {
+    APPOINTMENT_CONFIG.blockedSlots[item.date] = item.block;
+  });
+
   function switchTab(tabId) {
     document.querySelectorAll('.tab-button').forEach(btn => {
       btn.classList.remove('active');
@@ -2538,37 +2581,88 @@
     const timePanelHeader = document.getElementById(`time-header-${packageId}`);
     const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
     if (!timePanelHeader || !timeScrollContainer) return;
+    
     const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const dayOfWeek = dayNames[date.getDay()];
     const day = date.getDate();
     const month = monthNames[date.getMonth()];
     const year = date.getFullYear();
+    
     timePanelHeader.textContent = `${dayOfWeek}, ${day} ${month} ${year}`;
+    
+    // Format date as YYYY-MM-DD for checking blocked slots
+    const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    
+    // Get time slots based on day
     const selectedDayOfWeek = date.getDay();
     let timeSlots = [];
     if (selectedDayOfWeek === 6) {
-      timeSlots = generateTimeSlots(10, 16);
+      timeSlots = generateTimeSlots(10, 16); // Saturday: 10 AM - 4 PM
     } else {
-      timeSlots = generateTimeSlots(10, 18);
+      timeSlots = generateTimeSlots(10, 18); // Regular: 10 AM - 6 PM
     }
+    
+    // Check if this date has blocked slots
+    const blockedForDate = APPOINTMENT_CONFIG.blockedSlots[dateString];
+    
+    // Clear container
     timeScrollContainer.innerHTML = '';
+    
+    // If entire day is blocked
+    if (blockedForDate === 'ALL') {
+      const noSlotsMessage = document.createElement('div');
+      noSlotsMessage.style.padding = '20px';
+      noSlotsMessage.style.textAlign = 'center';
+      noSlotsMessage.style.color = '#999';
+      noSlotsMessage.textContent = 'All slots are fully booked for this date';
+      timeScrollContainer.appendChild(noSlotsMessage);
+      return;
+    }
+    
+    // Filter out blocked slots and create elements
     timeSlots.forEach(time => {
+      // Skip if this specific time is blocked
+      if (blockedForDate && Array.isArray(blockedForDate) && blockedForDate.includes(time)) {
+        return; // Don't add this slot
+      }
+      
       const slotElement = document.createElement('div');
       slotElement.className = 'time-slot-option';
       slotElement.innerHTML = `<span class="time-slot-label">${time}</span><div class="time-slot-radio"></div>`;
       slotElement.addEventListener('click', () => selectTimeSlot(packageId, time, slotElement));
       timeScrollContainer.appendChild(slotElement);
     });
+    
+    // If no slots available after filtering
+    if (timeScrollContainer.children.length === 0) {
+      const noSlotsMessage = document.createElement('div');
+      noSlotsMessage.style.padding = '20px';
+      noSlotsMessage.style.textAlign = 'center';
+      noSlotsMessage.style.color = '#999';
+      noSlotsMessage.textContent = 'No available slots for this date';
+      timeScrollContainer.appendChild(noSlotsMessage);
+    }
   }
 
   function generateTimeSlots(startHour, endHour) {
     const slots = [];
-    for (let hour = startHour; hour <= endHour; hour++) {
+    const duration = APPOINTMENT_CONFIG.slotDuration;
+    
+    // Convert hours to minutes
+    const startMinutes = startHour * 60;
+    const endMinutes = endHour * 60;
+    
+    // Generate slots based on duration
+    for (let minutes = startMinutes; minutes < endMinutes; minutes += duration) {
+      const hour = Math.floor(minutes / 60);
+      const minute = minutes % 60;
       const period = hour >= 12 ? 'PM' : 'AM';
       const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
-      slots.push(`${displayHour}:00 ${period}`);
+      const displayMinute = minute.toString().padStart(2, '0');
+      slots.push(`${displayHour}:${displayMinute} ${period}`);
     }
+    
     return slots;
   }
 
