@@ -13,6 +13,7 @@
   "sections": {
     "sticky_mobile_bottom_bar_LKUdnM": {
       "type": "sticky-mobile-bottom-bar",
+      "disabled": true,
       "name": "Sticky Mobile Bottom Bar",
       "settings": {
         "button_text": "CONTACT US",
