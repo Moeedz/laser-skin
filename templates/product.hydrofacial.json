@@ -23,6 +23,22 @@
             "heading_tag": "h3"
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
         "button_PUkJNb": {
           "type": "button",
           "disabled": true,
@@ -36,26 +52,15 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
             "show_taxes_notice": false
           }
         },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "disabled": true,
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "hide_sold_out_variants": false,
-            "selector_style": "block",
+            "selector_style": "dropdown",
             "swatch_selector_style": "swatch",
             "variant_image_options": "",
             "size_chart_page": ""
@@ -77,13 +82,6 @@
             "payment_button_text_color": ""
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
-        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -98,21 +96,20 @@
       "block_order": [
         "vendor",
         "title",
-        "button_PUkJNb",
-        "price",
+        "description",
         "payment_terms",
         "separator",
+        "button_PUkJNb",
+        "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "complementary_products"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "container_size": "full",
-        "product_info_size": 35,
+        "product_info_size": 50,
         "show_sticky_add_to_cart": true,
         "center_basic_info": false,
         "desktop_media_layout": "grid",
