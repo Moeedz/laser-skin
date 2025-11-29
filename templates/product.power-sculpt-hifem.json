@@ -23,6 +23,48 @@
             "heading_tag": "h3"
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "dropdown",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#e6b325",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
         "button_PUkJNb": {
           "type": "button",
           "disabled": true,
@@ -34,58 +76,20 @@
             "text_color": ""
           }
         },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "disabled": true,
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "liquid_BmgJWJ": {
+          "type": "liquid",
           "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
+            "liquid": "<style>\n  /* Standalone Consultation Card Styles */\n  .standalone-consultation-wrapper {\n    max-width: 600px;\n    margin: 20px 0;\n  }\n\n  .standalone-cta-card {\n    border: 2px solid #333333;\n    border-radius: 16px;\n    padding: 20px 24px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    background: #ffffff;\n    display: block;\n  }\n\n  .standalone-cta-card:hover {\n    background: #f9f9f9;\n    transform: translateY(-2px);\n    box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n  }\n\n  .standalone-cta-card-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 8px;\n  }\n\n  .standalone-cta-card h3 {\n    font-size: 18px;\n    font-weight: 500;\n    margin: 0;\n    color: #000000;\n  }\n\n  .standalone-cta-badge {\n    background: #f0f0f0;\n    color: #000000;\n    padding: 4px 12px;\n    border-radius: 20px;\n    font-size: 13px;\n    font-weight: 500;\n  }\n\n  .standalone-cta-card p {\n    margin: 0;\n    font-size: 14px;\n    color: #666666;\n    line-height: 1.5;\n  }\n\n  /* Modal Styles */\n  .standalone-consultation-modal-overlay {\n    display: none;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: 9998;\n    animation: fadeIn 0.3s ease;\n  }\n\n  .standalone-consultation-modal-overlay.active {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n\n  @keyframes slideUp {\n    from {\n      opacity: 0;\n      transform: translateY(30px);\n    }\n    to {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n\n  .standalone-consultation-modal {\n    background: white;\n    border-radius: 16px;\n    max-width: 420px;\n    width: 90%;\n    max-height: 90vh;\n    overflow-y: auto;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);\n  }\n\n  .standalone-modal-header {\n    padding: 25px 25px 20px;\n    position: relative;\n    border-bottom: none;\n  }\n\n  .standalone-modal-close {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    width: 28px;\n    height: 28px;\n    background: transparent;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s ease;\n    border-radius: 50%;\n  }\n\n  .standalone-modal-close:hover {\n    background: #f5f5f5;\n  }\n\n  .standalone-modal-close svg {\n    width: 20px;\n    height: 20px;\n    stroke: #999;\n  }\n\n  .standalone-modal-title {\n    font-size: 20px;\n    font-weight: 700;\n    color: #000;\n    margin: 0;\n    padding-right: 30px;\n    line-height: 1.3;\n  }\n\n  .standalone-modal-subtitle {\n    font-size: 14px;\n    color: #6c757d;\n    margin-top: 6px;\n    line-height: 1.4;\n  }\n\n  .standalone-modal-content {\n    padding: 10px 20px 25px;\n  }\n\n  .standalone-consultation-options {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n  }\n\n  .standalone-consultation-option {\n    display: flex;\n    align-items: center;\n    padding: 16px;\n    border: 1px solid #e8e8e8;\n    border-radius: 12px;\n    cursor: pointer;\n    transition: all 0.2s ease;\n    text-decoration: none;\n    color: inherit;\n    background: white;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.06);\n  }\n\n  .standalone-consultation-option:hover {\n    border-color: #d0d0d0;\n    background: #fafafa;\n    transform: translateX(2px);\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);\n  }\n\n  .standalone-consultation-icon {\n    width: 44px;\n    height: 44px;\n    border-radius: 10px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-right: 14px;\n    flex-shrink: 0;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon {\n    background: #FFF4E6;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #FF9500;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon {\n    background: #E3F2FD;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #2196F3;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon {\n    background: #E8F5E9;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    fill: #4CAF50;\n  }\n\n  .standalone-consultation-details {\n    flex: 1;\n  }\n\n  .standalone-consultation-method {\n    font-size: 15px;\n    font-weight: 600;\n    color: #000;\n    margin-bottom: 2px;\n  }\n\n  .standalone-consultation-info {\n    font-size: 13px;\n    color: #6c757d;\n    line-height: 1.3;\n  }\n\n  .standalone-consultation-arrow {\n    width: 20px;\n    height: 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.3;\n    transition: opacity 0.2s ease;\n  }\n\n  .standalone-consultation-option:hover .standalone-consultation-arrow {\n    opacity: 0.6;\n  }\n\n  .standalone-consultation-arrow svg {\n    width: 16px;\n    height: 16px;\n    stroke: #666;\n  }\n\n  /* Phone Hours Modal Styles */\n  .standalone-phone-hours-modal {\n    background: white;\n    border-radius: 20px;\n    max-width: 400px;\n    width: 90%;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);\n    padding: 15px 30px 30px;\n    text-align: center;\n  }\n\n  .standalone-phone-icon-circle {\n    width: 60px;\n    height: 60px;\n    background: #007AFF;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin: 0 auto 5px;\n  }\n\n  .standalone-phone-icon-circle svg {\n    width: 25px;\n    height: 25px;\n    stroke: white;\n    fill: none;\n  }\n\n  .standalone-phone-modal-title {\n    font-size: 24px;\n    font-weight: 600;\n    color: #000;\n    margin: 0 0 5px 0;\n  }\n\n  .standalone-store-status {\n    background: #D1F2E0;\n    color: #0F9D58;\n    padding: 5px 20px;\n    border-radius: 25px;\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 10px;\n    font-weight: 500;\n    font-size: 14px;\n  }\n\n  .standalone-store-status.closed {\n    background: #FFE4E1;\n    color: #FF4444;\n  }\n\n  .standalone-status-icon {\n    font-size: 16px;\n  }\n\n  .standalone-closed-message {\n    background: #FFF3CD;\n    border-left: 4px solid #FFC107;\n    padding: 12px 16px;\n    margin-bottom: 20px;\n    border-radius: 8px;\n    text-align: left;\n  }\n\n  .standalone-closed-message p {\n    color: #856404;\n    font-size: 12px;\n    line-height: 1.5;\n    margin: 0;\n  }\n\n  .standalone-opening-hours {\n    text-align: left;\n    margin-bottom: 25px;\n  }\n\n  .standalone-hours-heading {\n    font-size: 14px;\n    font-weight: 600;\n    color: #666;\n    margin: 0 0 15px 0;\n    text-align: center;\n  }\n\n  .standalone-hours-list {\n    background: #f8f8f8;\n    border-radius: 12px;\n    padding: 15px;\n  }\n\n  .standalone-hours-row {\n    display: flex;\n    justify-content: space-between;\n    padding: 8px 0;\n    border-bottom: 1px solid #e0e0e0;\n    font-size: 11px;\n  }\n\n  .standalone-hours-row:last-child {\n    border-bottom: none;\n  }\n\n  .standalone-hours-row .day {\n    font-weight: 500;\n    color: #333;\n  }\n\n  .standalone-hours-row .time {\n    color: #666;\n  }\n\n  .standalone-hours-row.current-day {\n    background: #fff;\n    margin: -5px -10px;\n    padding: 8px 10px;\n    border-radius: 8px;\n    font-weight: 600;\n  }\n\n  .standalone-hours-row.current-day .day {\n    color: #007AFF;\n  }\n\n  .standalone-hours-row.current-day .time {\n    color: #007AFF;\n  }\n\n  .standalone-call-now-button {\n    background: #007AFF;\n    color: white;\n    border: none;\n    padding: 5px 40px;\n    border-radius: 25px;\n    font-size: 13px;\n    font-weight: 600;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n    text-decoration: none;\n    display: block;\n    transition: all 0.3s ease;\n  }\n\n  .standalone-call-now-button:hover {\n    background: #0056CC;\n    transform: translateY(-2px);\n    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);\n  }\n\n  .standalone-call-now-button.disabled {\n    background: #cccccc !important;\n    cursor: not-allowed;\n    pointer-events: none;\n  }\n\n  .standalone-call-now-button.disabled:hover {\n    transform: none;\n    box-shadow: none;\n  }\n\n  @media (max-width: 640px) {\n    .standalone-consultation-modal {\n      width: 95%;\n      margin: 10px;\n      border-radius: 12px;\n    }\n\n    .standalone-modal-header {\n      padding: 20px 20px 15px;\n    }\n\n    .standalone-modal-title {\n      font-size: 18px;\n    }\n\n    .standalone-modal-subtitle {\n      font-size: 13px;\n    }\n\n    .standalone-modal-content {\n      padding: 5px 15px 20px;\n    }\n\n    .standalone-consultation-option {\n      padding: 14px;\n    }\n\n    .standalone-consultation-icon {\n      width: 40px;\n      height: 40px;\n      margin-right: 12px;\n      border-radius: 8px;\n    }\n\n    .standalone-consultation-icon svg {\n      width: 20px;\n      height: 20px;\n    }\n\n    .standalone-consultation-method {\n      font-size: 14px;\n    }\n\n    .standalone-consultation-info {\n      font-size: 12px;\n    }\n\n    .standalone-modal-close {\n      top: 12px;\n      right: 12px;\n      width: 26px;\n      height: 26px;\n    }\n\n    .standalone-modal-close svg {\n      width: 18px;\n      height: 18px;\n    }\n  }\n</style>\n\n<!-- ============= CUSTOMIZABLE SETTINGS - EDIT THESE ============= -->\n{% assign consultation_heading = \"Speak to the team \" %}\n{% assign consultation_badge = \"\" %}\n{% assign consultation_description = \"Can't find the answer to your question in the FAQ'S at the bottom of the page? Contact us by clicking here.\" %}\n{% assign modal_title = \"How would you like to contact us?\" %}\n{% assign modal_subtitle = \"Choose your preferred method to get in touch with us\" %}\n\n{% comment %} Contact Options {% endcomment %}\n{% assign contact_page_url = \"/pages/contact\" %}\n{% assign contact_option_title = \"Contact Form\" %}\n{% assign contact_option_description = \"Fill out our online form\" %}\n\n{% assign phone_number = \"01902256667\" %}\n{% assign phone_option_title = \"Call Us\" %}\n\n{% assign whatsapp_number = \"447798983387\" %}\n{% assign whatsapp_display_number = \"+44 7798 983387\" %}\n{% assign whatsapp_option_title = \"WhatsApp\" %}\n\n{% comment %} Store Hours {% endcomment %}\n{% assign monday_hours = \"Closed\" %}\n{% assign tuesday_hours = \"10:00AM-6:00PM\" %}\n{% assign wednesday_hours = \"10:00AM-6:00PM\" %}\n{% assign thursday_hours = \"Closed\" %}\n{% assign friday_hours = \"10:00AM-6:00PM\" %}\n{% assign saturday_hours = \"10:00AM-4:00PM\" %}\n{% assign sunday_hours = \"Closed\" %}\n{% assign closed_message = \"You can send us a WhatsApp, send us an email or call back during opening hours\" %}\n<!-- ============================================================== -->\n\n<div class=\"standalone-consultation-wrapper\">\n  <!-- Consultation Card Button -->\n  <div class=\"standalone-cta-card\" onclick=\"openStandaloneConsultationModal()\">\n    <div class=\"standalone-cta-card-header\">\n      <h3>{{ consultation_heading }}</h3>\n      {% if consultation_badge != blank %}\n        <span class=\"standalone-cta-badge\">{{ consultation_badge }}</span>\n      {% endif %}\n    </div>\n    <p>{{ consultation_description }}</p>\n  </div>\n\n  <!-- Consultation Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-consultation-modal\">\n    <div class=\"standalone-consultation-modal\">\n      <div class=\"standalone-modal-header\">\n        <button class=\"standalone-modal-close\" onclick=\"closeStandaloneConsultationModal()\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n          </svg>\n        </button>\n        <h3 class=\"standalone-modal-title\">{{ modal_title }}</h3>\n        <p class=\"standalone-modal-subtitle\">{{ modal_subtitle }}</p>\n      </div>\n      <div class=\"standalone-modal-content\">\n        <div class=\"standalone-consultation-options\">\n          \n          <!-- Contact Page Option -->\n          {% if contact_page_url != blank %}\n            <a href=\"{{ contact_page_url }}\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ contact_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ contact_option_description }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n\n          <!-- Phone Option -->\n          {% if phone_number != blank %}\n            <div class=\"standalone-consultation-option\" onclick=\"openStandalonePhoneHoursModal(); event.preventDefault();\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ phone_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ phone_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </div>\n          {% endif %}\n\n          <!-- WhatsApp Option -->\n          {% if whatsapp_number != blank %}\n            <a href=\"https://wa.me/{{ whatsapp_number | replace: ' ', '' | replace: '-', '' | replace: '+', '' }}\" target=\"_blank\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                  <path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z\"/>\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ whatsapp_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ whatsapp_display_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phone Hours Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-phone-hours-modal\">\n    <div class=\"standalone-phone-hours-modal\">\n      <button class=\"standalone-modal-close\" onclick=\"closeStandalonePhoneHoursModal()\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n        </svg>\n      </button>\n      \n      <div class=\"standalone-phone-icon-circle\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n        </svg>\n      </div>\n\n      <h3 class=\"standalone-phone-modal-title\">Call Us</h3>\n\n      <div class=\"standalone-store-status\" id=\"standalone-store-status\">\n        <span class=\"standalone-status-icon\">✓</span>\n        <span class=\"status-text\">We are currently open</span>\n      </div>\n\n      <div class=\"standalone-closed-message\" id=\"standalone-closed-message\" style=\"display: none;\">\n        <p>{{ closed_message }}</p>\n      </div>\n\n      <div class=\"standalone-opening-hours\">\n        <h4 class=\"standalone-hours-heading\">Opening Hours</h4>\n        <div class=\"standalone-hours-list\">\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Monday</span>\n            <span class=\"time\">{{ monday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Tuesday</span>\n            <span class=\"time\">{{ tuesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Wednesday</span>\n            <span class=\"time\">{{ wednesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Thursday</span>\n            <span class=\"time\">{{ thursday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Friday</span>\n            <span class=\"time\">{{ friday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Saturday</span>\n            <span class=\"time\">{{ saturday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Sunday</span>\n            <span class=\"time\">{{ sunday_hours }}</span>\n          </div>\n        </div>\n      </div>\n\n      <a href=\"tel:{{ phone_number | replace: ' ', '' | replace: '-', '' }}\" class=\"standalone-call-now-button\" id=\"standalone-call-button\">\n        Call Now\n      </a>\n    </div>\n  </div>\n</div>\n\n<script>\n  function openStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n    }\n  }\n\n  function closeStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function openStandalonePhoneHoursModal() {\n    closeStandaloneConsultationModal();\n    \n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n      checkStandaloneStoreStatus();\n      highlightStandaloneCurrentDay();\n    }\n  }\n\n  function closeStandalonePhoneHoursModal() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function checkStandaloneStoreStatus() {\n    const statusElement = document.getElementById('standalone-store-status');\n    if (!statusElement) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    const currentHour = now.getHours();\n    const currentMinute = now.getMinutes();\n    const currentTime = currentHour * 60 + currentMinute;\n\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    const hoursText = todayRow.querySelector('.time').textContent.trim();\n\n    let isOpen = false;\n    if (hoursText.toLowerCase() !== 'closed') {\n      const matches = hoursText.match(/(\\d{1,2}):(\\d{2})(AM|PM)-(\\d{1,2}):(\\d{2})(AM|PM)/i);\n      if (matches) {\n        let openHour = parseInt(matches[1]);\n        const openMinute = parseInt(matches[2]);\n        const openPeriod = matches[3].toUpperCase();\n        let closeHour = parseInt(matches[4]);\n        const closeMinute = parseInt(matches[5]);\n        const closePeriod = matches[6].toUpperCase();\n\n        if (openPeriod === 'PM' && openHour !== 12) openHour += 12;\n        if (openPeriod === 'AM' && openHour === 12) openHour = 0;\n        if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;\n        if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;\n\n        const openTime = openHour * 60 + openMinute;\n        const closeTime = closeHour * 60 + closeMinute;\n\n        isOpen = currentTime >= openTime && currentTime < closeTime;\n      }\n    }\n\n    const statusIcon = statusElement.querySelector('.standalone-status-icon');\n    const statusText = statusElement.querySelector('.status-text');\n    const closedMessage = document.getElementById('standalone-closed-message');\n    const callButton = document.getElementById('standalone-call-button');\n    \n    if (isOpen) {\n      statusElement.classList.remove('closed');\n      statusIcon.textContent = '✓';\n      statusText.textContent = 'We are currently open';\n      if (closedMessage) closedMessage.style.display = 'none';\n      if (callButton) {\n        callButton.textContent = 'Call Now';\n        callButton.classList.remove('disabled');\n        callButton.style.pointerEvents = 'auto';\n        callButton.style.background = '#007AFF';\n      }\n    } else {\n      statusElement.classList.add('closed');\n      statusIcon.textContent = '✗';\n      statusText.textContent = 'We are currently closed';\n      if (closedMessage) closedMessage.style.display = 'block';\n      if (callButton) {\n        callButton.textContent = 'Currently Closed';\n        callButton.classList.add('disabled');\n        callButton.style.pointerEvents = 'none';\n        callButton.style.background = '#cccccc';\n      }\n    }\n  }\n\n  function highlightStandaloneCurrentDay() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (!modal) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    \n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    hoursRows.forEach(row => row.classList.remove('current-day'));\n    \n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    if (todayRow) {\n      todayRow.classList.add('current-day');\n    }\n  }\n\n  // Close modals when clicking on overlay\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.standalone-consultation-modal-overlay').forEach(overlay => {\n      overlay.addEventListener('click', function(e) {\n        if (e.target === this) {\n          this.classList.remove('active');\n          document.body.style.overflow = '';\n        }\n      });\n    });\n\n    document.addEventListener('keydown', function(e) {\n      if (e.key === 'Escape') {\n        closeStandaloneConsultationModal();\n        closeStandalonePhoneHoursModal();\n      }\n    });\n  });\n</script>"
           }
         },
         "complementary_products": {
           "type": "complementary_products",
+          "disabled": true,
           "settings": {
             "title": "Pairs well with",
             "products_count": 2,
@@ -98,24 +102,24 @@
       "block_order": [
         "vendor",
         "title",
-        "button_PUkJNb",
-        "price",
+        "description",
         "payment_terms",
         "separator",
+        "price",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "description",
+        "button_PUkJNb",
+        "quantity_selector",
+        "liquid_BmgJWJ",
         "complementary_products"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
-        "container_size": "full",
-        "product_info_size": 35,
-        "show_sticky_add_to_cart": true,
+        "container_size": "xl",
+        "product_info_size": 50,
+        "show_sticky_add_to_cart": false,
         "center_basic_info": false,
-        "desktop_media_layout": "grid",
+        "desktop_media_layout": "grid_2x_highlighted",
         "desktop_media_grid_gap": 30,
         "mobile_controls": "dots",
         "enable_media_autoplay": false,
@@ -198,6 +202,7 @@
         "tab_EX9Qjn",
         "package_FEwd4g"
       ],
+      "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
         "section_width": 1400,
