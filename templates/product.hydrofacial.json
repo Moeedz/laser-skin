@@ -243,6 +243,7 @@
         "package_hnTmxD",
         "package_XgQqnx"
       ],
+      "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
         "section_width": 1400,
