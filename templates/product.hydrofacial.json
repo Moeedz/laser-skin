@@ -120,7 +120,6 @@
         "liquid_NdwPrd",
         "complementary_products"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "container_size": "xl",
