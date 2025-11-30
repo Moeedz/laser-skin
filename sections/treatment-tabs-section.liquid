@@ -2272,12 +2272,11 @@
   // ========================================================================
   
   // ========================================================================
-  // STEP 1: LIST ALL YOUR TIME SLOTS (Remove "//" to activate)
-  // Add ALL the times you want to show - mix any durations you want!
+  // STEP 1: DEFAULT TIME SLOTS (Most Days)
+  // These show on regular days (Tue, Wed, Fri) unless you override below
   // ========================================================================
   
-  const AVAILABLE_TIME_SLOTS = [
-    // MORNING SLOTS
+  const DEFAULT_TIME_SLOTS = [
     '10:00 AM',
     '10:15 AM',
     '10:30 AM',
@@ -2286,8 +2285,6 @@
     '11:15 AM',
     '11:30 AM',
     '11:45 AM',
-    
-    // AFTERNOON SLOTS
     '12:00 PM',
     '12:15 PM',
     '12:30 PM',
@@ -2315,8 +2312,13 @@
     '6:00 PM',
   ];
   
-  // For SATURDAY (limited hours) - 10 AM to 4 PM only
-  const SATURDAY_TIME_SLOTS = [
+  
+  // ========================================================================
+  // STEP 2: SATURDAY DEFAULT SLOTS
+  // These show on Saturdays unless you override for specific Saturday below
+  // ========================================================================
+  
+  const SATURDAY_DEFAULT_SLOTS = [
     '10:00 AM',
     '10:15 AM',
     '10:30 AM',
@@ -2346,16 +2348,23 @@
   
   
   // ========================================================================
-  // STEP 2: BLOCK SPECIFIC TIMES ON SPECIFIC DATES (Optional)
-  // Copy a line, change the date/times, remove the "//" at the start
+  // STEP 3: CUSTOM SLOTS FOR SPECIFIC DATES
+  // Want different times on a specific date? Add it here!
   // ========================================================================
   
-  const BLOCKED_DATES = [
-    // Examples (remove "//" to activate):
-    // { date: '2025-11-28', block: 'ALL' },                              // Block entire day
-     { date: '2025-11-28', block: ['10:00 AM', '10:15 AM', '10:30 AM', '10:45 AM', '11:00 AM', '11:15 AM', '11:30 AM', '11:45 AM', '12:00 PM', '12:15 PM', '12:30 PM', '12:45 PM', '1:00 PM', '1:15 PM', '1:30 PM', '1:45 PM', '2:00 PM', '2:15 PM', '2:30 PM',  '2:45 PM', '3:00 PM', '3:15 PM', '3:30 PM', '4:00 PM', '4:15 PM', '4:45 PM', '5:00 PM', '5:15 PM', '5:30 PM'] },  // Block specific times
+  const CUSTOM_DATE_SLOTS = [
+    // Copy these templates and edit:
     
-    // Add your blocked dates below:
+    // Template 1: Custom times for a date
+    // { date: '2025-12-20', slots: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'] },
+    
+    // Template 2: Fully booked / closed day
+    // { date: '2025-12-25', slots: 'CLOSED' },
+    
+    // Template 3: Half day (morning only)
+    // { date: '2025-12-31', slots: ['10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM'] },
+    
+    // Add your custom dates below:
     
   ];
   
@@ -2365,13 +2374,13 @@
   // ========================================================================
   
   const APPOINTMENT_CONFIG = {
-    availableSlots: AVAILABLE_TIME_SLOTS,
-    saturdaySlots: SATURDAY_TIME_SLOTS,
-    blockedSlots: {}
+    defaultSlots: DEFAULT_TIME_SLOTS,
+    saturdaySlots: SATURDAY_DEFAULT_SLOTS,
+    customDates: {}
   };
   
-  BLOCKED_DATES.forEach(item => {
-    APPOINTMENT_CONFIG.blockedSlots[item.date] = item.block;
+  CUSTOM_DATE_SLOTS.forEach(item => {
+    APPOINTMENT_CONFIG.customDates[item.date] = item.slots;
   });
 
   function switchTab(tabId) {
@@ -2655,44 +2664,44 @@
     
     timePanelHeader.textContent = `${dayOfWeek}, ${day} ${month} ${year}`;
     
-    // Format date as YYYY-MM-DD for checking blocked slots
+    // Format date as YYYY-MM-DD for checking custom slots
     const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-    
-    // Get time slots based on day - use custom slot lists
-    const selectedDayOfWeek = date.getDay();
-    let timeSlots = [];
-    if (selectedDayOfWeek === 6) {
-      // Saturday: use Saturday slots
-      timeSlots = APPOINTMENT_CONFIG.saturdaySlots;
-    } else {
-      // Regular days: use regular slots
-      timeSlots = APPOINTMENT_CONFIG.availableSlots;
-    }
-    
-    // Check if this date has blocked slots
-    const blockedForDate = APPOINTMENT_CONFIG.blockedSlots[dateString];
     
     // Clear container
     timeScrollContainer.innerHTML = '';
     
-    // If entire day is blocked
-    if (blockedForDate === 'ALL') {
-      const noSlotsMessage = document.createElement('div');
-      noSlotsMessage.style.padding = '20px';
-      noSlotsMessage.style.textAlign = 'center';
-      noSlotsMessage.style.color = '#999';
-      noSlotsMessage.textContent = 'All slots are fully booked for this date';
-      timeScrollContainer.appendChild(noSlotsMessage);
-      return;
-    }
-    
-    // Filter out blocked slots and create elements
-    timeSlots.forEach(time => {
-      // Skip if this specific time is blocked
-      if (blockedForDate && Array.isArray(blockedForDate) && blockedForDate.includes(time)) {
-        return; // Don't add this slot
+    // Check if this specific date has custom slots
+    let timeSlots = [];
+    if (APPOINTMENT_CONFIG.customDates[dateString]) {
+      const customSlots = APPOINTMENT_CONFIG.customDates[dateString];
+      
+      // If marked as CLOSED
+      if (customSlots === 'CLOSED') {
+        const noSlotsMessage = document.createElement('div');
+        noSlotsMessage.style.padding = '20px';
+        noSlotsMessage.style.textAlign = 'center';
+        noSlotsMessage.style.color = '#999';
+        noSlotsMessage.textContent = 'No appointments available on this date';
+        timeScrollContainer.appendChild(noSlotsMessage);
+        return;
       }
       
+      // Use custom slots for this date
+      timeSlots = customSlots;
+    } else {
+      // No custom slots - use defaults based on day of week
+      const selectedDayOfWeek = date.getDay();
+      if (selectedDayOfWeek === 6) {
+        // Saturday: use Saturday default
+        timeSlots = APPOINTMENT_CONFIG.saturdaySlots;
+      } else {
+        // Regular days: use regular default
+        timeSlots = APPOINTMENT_CONFIG.defaultSlots;
+      }
+    }
+    
+    // Create slot elements
+    timeSlots.forEach(time => {
       const slotElement = document.createElement('div');
       slotElement.className = 'time-slot-option';
       slotElement.innerHTML = `<span class="time-slot-label">${time}</span><div class="time-slot-radio"></div>`;
@@ -2700,7 +2709,7 @@
       timeScrollContainer.appendChild(slotElement);
     });
     
-    // If no slots available after filtering
+    // If no slots available
     if (timeScrollContainer.children.length === 0) {
       const noSlotsMessage = document.createElement('div');
       noSlotsMessage.style.padding = '20px';
@@ -2751,14 +2760,21 @@
     const state = appointmentState[packageId];
     const selectButton = document.getElementById(`select-btn-${packageId}`);
     let isClosedDay = false;
+    
     if (state && state.date) {
-      // Parse date manually: YYYY-MM-DD
-      const [year, month, day] = state.date.split('-').map(Number);
-      const dateObj = new Date(year, month - 1, day); // month is 0-indexed
-      const dayOfWeek = dateObj.getDay();
-      const closedDays = [0, 1, 4];
-      isClosedDay = closedDays.includes(dayOfWeek);
+      // Check if this specific date is marked as CLOSED
+      if (APPOINTMENT_CONFIG.customDates[state.date] === 'CLOSED') {
+        isClosedDay = true;
+      } else {
+        // Parse date manually: YYYY-MM-DD
+        const [year, month, day] = state.date.split('-').map(Number);
+        const dateObj = new Date(year, month - 1, day); // month is 0-indexed
+        const dayOfWeek = dateObj.getDay();
+        const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
+        isClosedDay = closedDays.includes(dayOfWeek);
+      }
     }
+    
     if (state && state.link && state.date && state.time && !isClosedDay) {
       selectButton.classList.add('enabled');
       selectButton.onclick = function() {
@@ -2832,7 +2848,7 @@
 
 {% schema %}
 {
-  "name": "Treatment Tabs ",
+  "name": "Treatment Tabs",
   "settings": [
     {
       "type": "header",
