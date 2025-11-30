@@ -2268,111 +2268,52 @@
 
 <parameter name="new_str"><script>
   // ========================================================================
-  // ⚙️ APPOINTMENT SETTINGS - SUPER SIMPLE!
+  // ⚙️ APPOINTMENT SETTINGS - Managed in Theme Customizer
+  // Go to: Theme Customizer > This Section > Appointment Slots Configuration
   // ========================================================================
   
-  // ========================================================================
-  // STEP 1: DEFAULT TIME SLOTS (Most Days)
-  // These show on regular days (Tue, Wed, Fri) unless you override below
-  // ========================================================================
+  // Read settings from Shopify customizer
+  const defaultSlotsText = `{{ section.settings.default_time_slots }}`;
+  const saturdaySlotsText = `{{ section.settings.saturday_time_slots }}`;
+  const customDatesText = `{{ section.settings.custom_date_slots }}`;
   
-  const DEFAULT_TIME_SLOTS = [
-    '10:00 AM',
-    '10:15 AM',
-    '10:30 AM',
-    '10:45 AM',
-    '11:00 AM',
-    '11:15 AM',
-    '11:30 AM',
-    '11:45 AM',
-    '12:00 PM',
-    '12:15 PM',
-    '12:30 PM',
-    '12:45 PM',
-    '1:00 PM',
-    '1:15 PM',
-    '1:30 PM',
-    '1:45 PM',
-    '2:00 PM',
-    '2:15 PM',
-    '2:30 PM',
-    '2:45 PM',
-    '3:00 PM',
-    '3:15 PM',
-    '3:30 PM',
-    '3:45 PM',
-    '4:00 PM',
-    '4:15 PM',
-    '4:30 PM',
-    '4:45 PM',
-    '5:00 PM',
-    '5:15 PM',
-    '5:30 PM',
-    '5:45 PM',
-    '6:00 PM',
-  ];
+  // Parse default time slots (one per line)
+  const DEFAULT_TIME_SLOTS = defaultSlotsText
+    .split('\n')
+    .map(slot => slot.trim())
+    .filter(slot => slot.length > 0);
   
+  // Parse Saturday time slots (one per line)
+  const SATURDAY_DEFAULT_SLOTS = saturdaySlotsText
+    .split('\n')
+    .map(slot => slot.trim())
+    .filter(slot => slot.length > 0);
   
-  // ========================================================================
-  // STEP 2: SATURDAY DEFAULT SLOTS
-  // These show on Saturdays unless you override for specific Saturday below
-  // ========================================================================
+  // Parse custom dates (format: 2025-12-25|CLOSED or 2025-12-25|10:00 AM,11:00 AM)
+  const CUSTOM_DATE_SLOTS = [];
+  if (customDatesText && customDatesText.trim().length > 0) {
+    customDatesText.split('\n').forEach(line => {
+      line = line.trim();
+      if (line.length === 0) return;
+      
+      const parts = line.split('|');
+      if (parts.length !== 2) return;
+      
+      const date = parts[0].trim();
+      const slotsStr = parts[1].trim();
+      
+      if (slotsStr === 'CLOSED') {
+        CUSTOM_DATE_SLOTS.push({ date: date, slots: 'CLOSED' });
+      } else {
+        const slots = slotsStr.split(',').map(s => s.trim()).filter(s => s.length > 0);
+        if (slots.length > 0) {
+          CUSTOM_DATE_SLOTS.push({ date: date, slots: slots });
+        }
+      }
+    });
+  }
   
-  const SATURDAY_DEFAULT_SLOTS = [
-    '10:00 AM',
-    '10:15 AM',
-    '10:30 AM',
-    '10:45 AM',
-    '11:00 AM',
-    '11:15 AM',
-    '11:30 AM',
-    '11:45 AM',
-    '12:00 PM',
-    '12:15 PM',
-    '12:30 PM',
-    '12:45 PM',
-    '1:00 PM',
-    '1:15 PM',
-    '1:30 PM',
-    '1:45 PM',
-    '2:00 PM',
-    '2:15 PM',
-    '2:30 PM',
-    '2:45 PM',
-    '3:00 PM',
-    '3:15 PM',
-    '3:30 PM',
-    '3:45 PM',
-    '4:00 PM',
-  ];
-  
-  
-  // ========================================================================
-  // STEP 3: CUSTOM SLOTS FOR SPECIFIC DATES
-  // Want different times on a specific date? Add it here!
-  // ========================================================================
-  
-  const CUSTOM_DATE_SLOTS = [
-    // Copy these templates and edit:
-    
-    // Template 1: Custom times for a date
-    // { date: '2025-12-20', slots: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'] },
-    
-    // Template 2: Fully booked / closed day
-    // { date: '2025-12-25', slots: 'CLOSED' },
-    
-    // Template 3: Half day (morning only)
-    // { date: '2025-12-31', slots: ['10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM'] },
-    
-    // Add your custom dates below:
-    
-  ];
-  
-  
-  // ========================================================================
-  // ⛔ STOP! Don't edit below this line
-  // ========================================================================
-  
+  // Build config object
   const APPOINTMENT_CONFIG = {
     defaultSlots: DEFAULT_TIME_SLOTS,
     saturdaySlots: SATURDAY_DEFAULT_SLOTS,
@@ -2850,6 +2791,35 @@
 {
   "name": "Treatment Tabs",
   "settings": [
+    {
+      "type": "header",
+      "content": "⚙️ APPOINTMENT SLOTS CONFIGURATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure your available appointment times. One time per line. Format: 10:00 AM"
+    },
+    {
+      "type": "textarea",
+      "id": "default_time_slots",
+      "label": "Default Time Slots (Regular Days)",
+      "info": "One time per line. Example: 10:00 AM",
+      "default": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM\n4:15 PM\n4:30 PM\n4:45 PM\n5:00 PM\n5:15 PM\n5:30 PM\n5:45 PM\n6:00 PM"
+    },
+    {
+      "type": "textarea",
+      "id": "saturday_time_slots",
+      "label": "Saturday Time Slots",
+      "info": "One time per line. Example: 10:00 AM",
+      "default": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_date_slots",
+      "label": "Custom Dates (Advanced)",
+      "info": "Format: 2025-12-25|CLOSED or 2025-12-31|10:00 AM,11:00 AM,2:00 PM (one date per line)",
+      "placeholder": "2025-12-25|CLOSED\n2025-12-31|10:00 AM,11:00 AM,2:00 PM"
+    },
     {
       "type": "header",
       "content": "Section Layout"
