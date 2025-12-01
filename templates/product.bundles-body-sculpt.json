@@ -208,7 +208,7 @@
           "settings": {
             "default_slots": "10:00 AM\n12:00 PM\n2:00 PM\n4:00 PM",
             "saturday_slots": "12:00 PM\n2:00 PM",
-            "custom_dates": ""
+            "custom_dates": "2025-12-25|CLOSED\n2025-12-26|CLOSED\n2025-12-31|CLOSED\n2026-01-01|CLOSED"
           }
         },
         "variant_picker": {
