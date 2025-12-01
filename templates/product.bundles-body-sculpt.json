@@ -51,7 +51,7 @@
           "settings": {
             "parent_tab": "bundle",
             "package_name": "The Sculpt, Cleanse & Glow Signature Package",
-            "price": "from £99.00",
+            "price": "",
             "show_session_1": true,
             "session_1_label": "1 session",
             "session_1_price": "£99",
