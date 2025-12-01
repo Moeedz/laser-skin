@@ -83,6 +83,7 @@
         "tab_G7qx6t",
         "package_kDd97i"
       ],
+      "disabled": true,
       "custom_css": [
         ".top-description p {padding-bottom: 10px;}"
       ],
@@ -311,7 +312,6 @@
         "accordion_6NpUwT",
         "complementary_products"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "container_size": "xl",
