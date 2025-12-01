@@ -44,8 +44,17 @@
             "show_taxes_notice": false
           }
         },
+        "appointment_picker_BigeDd": {
+          "type": "appointment_picker",
+          "settings": {
+            "default_slots": "10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM\n4:30 PM\n5:00 PM\n5:30 PM\n6:00 PM",
+            "saturday_slots": "10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM",
+            "custom_dates": ""
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "hide_sold_out_variants": false,
             "selector_style": "dropdown",
@@ -105,6 +114,7 @@
         "payment_terms",
         "separator",
         "price",
+        "appointment_picker_BigeDd",
         "variant_picker",
         "button_PUkJNb",
         "quantity_selector",
@@ -204,6 +214,9 @@
       "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
+        "default_time_slots": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM\n4:15 PM\n4:30 PM\n4:45 PM\n5:00 PM\n5:15 PM\n5:30 PM\n5:45 PM\n6:00 PM",
+        "saturday_time_slots": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM",
+        "custom_date_slots": "",
         "section_width": 1400,
         "section_padding_top": 40,
         "section_padding_bottom": 40,
