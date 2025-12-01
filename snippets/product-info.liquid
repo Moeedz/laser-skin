@@ -507,6 +507,10 @@ Supported variables
                 {%- render 'icon' with 'chevron-right' -%}
               </a>
             {%- endif -%}
+
+            {%- when 'appointment_picker' -%}
+            {% render 'appointment-picker-block', block: block %}
+            
         {%- endcase -%}
       {%- endcapture -%}
       
