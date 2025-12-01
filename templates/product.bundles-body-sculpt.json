@@ -203,7 +203,7 @@
             "show_taxes_notice": false
           }
         },
-        "appointment_picker_ECCygB": {
+        "appointment_picker_kVxb3E": {
           "type": "appointment_picker",
           "settings": {
             "default_slots": "10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM\n4:30 PM\n5:00 PM\n5:30 PM\n6:00 PM",
@@ -213,6 +213,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "hide_sold_out_variants": false,
             "selector_style": "dropdown",
@@ -310,7 +311,7 @@
         "payment_terms",
         "separator",
         "price",
-        "appointment_picker_ECCygB",
+        "appointment_picker_kVxb3E",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
