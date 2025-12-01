@@ -434,32 +434,53 @@
         
         display.textContent = `${formattedDate} at ${selectedTime}`;
         
-        // Find the product form - try multiple methods
+        // Find the ACTUAL product form (not payment installment)
         let form = null;
         
-        // Method 1: Use the product form ID passed from template
-        if (productFormId) {
+        // Method 1: Use the product form ID (excluding payment-installment)
+        if (productFormId && !productFormId.includes('payment-installment')) {
           form = document.getElementById(productFormId);
-          console.log('Found form by ID:', productFormId);
+          console.log('Method 1 - Found form by ID:', productFormId);
         }
         
-        // Method 2: Look for form with action="/cart/add"
+        // Method 2: Look for form that contains buy buttons
         if (!form) {
-          form = document.querySelector('form[action*="/cart/add"]');
-          console.log('Found form by action selector');
+          const buyButtonsBlock = document.querySelector('.buy-buttons');
+          if (buyButtonsBlock) {
+            form = buyButtonsBlock.closest('form');
+            console.log('Method 2 - Found form via buy buttons');
+          }
         }
         
-        // Method 3: Look for any product form
+        // Method 3: Find form with action /cart/add that's NOT payment-installment
         if (!form) {
-          form = document.querySelector('form[id*="product-form"]');
-          console.log('Found form by product-form ID');
+          const allForms = document.querySelectorAll('form[action*="/cart/add"]');
+          for (const f of allForms) {
+            if (!f.id.includes('payment-installment')) {
+              form = f;
+              console.log('Method 3 - Found form by filtering out payment-installment, ID:', f.id);
+              break;
+            }
+          }
+        }
+        
+        // Method 4: Look for shopify-product-form class (excluding payment installment)
+        if (!form) {
+          const allProductForms = document.querySelectorAll('form.shopify-product-form');
+          for (const f of allProductForms) {
+            if (!f.id.includes('payment-installment')) {
+              form = f;
+              console.log('Method 4 - Found shopify-product-form, ID:', f.id);
+              break;
+            }
+          }
         }
         
         if (form) {
-          // Remove existing appointment inputs
-          form.querySelectorAll('input[name^="properties[Appointment"]').forEach(input => input.remove());
+          // Remove existing appointment inputs from ALL forms (to be safe)
+          document.querySelectorAll('input[name^="properties[Appointment"]').forEach(input => input.remove());
           
-          // Add new inputs
+          // Add new inputs to the correct form
           const dateInput = document.createElement('input');
           dateInput.type = 'hidden';
           dateInput.name = 'properties[Appointment Date]';
@@ -472,12 +493,14 @@
           timeInput.value = selectedTime;
           form.appendChild(timeInput);
           
-          console.log('✅ Appointment added to cart:', formattedDate, selectedTime);
-          console.log('Form:', form);
-          console.log('Hidden inputs:', form.querySelectorAll('input[name^="properties"]'));
+          console.log('✅ Appointment added to CORRECT form');
+          console.log('Form ID:', form.id);
+          console.log('Form action:', form.action);
+          console.log('Has buy buttons:', form.querySelector('.buy-buttons') ? 'YES' : 'NO');
+          console.log('Appointment:', formattedDate, selectedTime);
         } else {
-          console.error('❌ Could not find product form!');
-          console.log('Available forms:', document.querySelectorAll('form'));
+          console.error('❌ Could not find correct product form!');
+          console.log('All forms on page:', document.querySelectorAll('form'));
         }
         
         closeModal();
