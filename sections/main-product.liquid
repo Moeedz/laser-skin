@@ -99,7 +99,7 @@
                   {%- render 'complementary-products', product: product, block: block -%}
 
                 {% when 'appointment_picker' %}
-  
+                  {% render 'appointment-picker-block', block: block %}
 
               {%- endcase -%}
             {%- endfor -%}
