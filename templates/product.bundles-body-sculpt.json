@@ -83,6 +83,7 @@
         "tab_G7qx6t",
         "package_kDd97i"
       ],
+      "disabled": true,
       "custom_css": [
         ".top-description p {padding-bottom: 10px;}"
       ],
