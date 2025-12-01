@@ -1,0 +1,673 @@
+{% comment %}
+  Simple Appointment Picker - Add to Product Page
+  Displays: "Select Date and Time" dropdown → Opens calendar modal
+{% endcomment %}
+
+<style>
+  .appointment-selector-wrapper {
+    margin: 20px 0;
+  }
+
+  .appointment-selector-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+  }
+
+  .appointment-dropdown {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+  }
+
+  .appointment-dropdown:hover {
+    border-color: #999;
+  }
+
+  .appointment-dropdown-icon {
+    transition: transform 0.3s;
+  }
+
+  .appointment-dropdown.active .appointment-dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Modal Overlay */
+  .appointment-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .appointment-modal.active {
+    display: flex;
+  }
+
+  .appointment-modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .appointment-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .appointment-modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .appointment-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .appointment-modal-close:hover {
+    color: #333;
+  }
+
+  .appointment-modal-body {
+    padding: 20px;
+  }
+
+  /* Calendar Styles */
+  .calendar-section {
+    margin-bottom: 24px;
+  }
+
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .calendar-nav-btn {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 20px;
+    color: #333;
+    border-radius: 4px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calendar-nav-btn:hover {
+    background: #e0e0e0;
+  }
+
+  .calendar-month-year {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .calendar-weekday {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    padding: 4px 0;
+  }
+
+  .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+
+  .calendar-date {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s;
+    color: #333;
+    background: white;
+    border: 2px solid transparent;
+    min-height: 40px;
+  }
+
+  .calendar-date:hover:not(.disabled):not(.selected):not(.past) {
+    background: #f5f5f5;
+  }
+
+  .calendar-date.selected {
+    background: #10B981;
+    color: white;
+    border-color: #10B981;
+  }
+
+  .calendar-date.today {
+    border-color: #10B981;
+  }
+
+  .calendar-date.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
+  .calendar-date.past {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .calendar-date.other-month {
+    color: #ddd;
+  }
+
+  /* Time Slots */
+  .time-section {
+    margin-top: 24px;
+  }
+
+  .time-panel-header {
+    background: #2D3748;
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .time-slots-scroll {
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 8px;
+  }
+
+  .time-slot-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 4px;
+  }
+
+  .time-slot-option:hover {
+    background: #f5f5f5;
+  }
+
+  .time-slot-option.selected {
+    background: #E6F7F1;
+  }
+
+  .time-slot-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+  }
+
+  .time-slot-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D1D5DB;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  .time-slot-option.selected .time-slot-radio {
+    border-color: #10B981;
+  }
+
+  .time-slot-option.selected .time-slot-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #10B981;
+    border-radius: 50%;
+  }
+
+  .time-scroll-indicator {
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    color: #92400E;
+    background: #FEF3C7;
+    border-top: 1px solid #FDE68A;
+  }
+
+  .appointment-modal-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 12px;
+  }
+
+  .appointment-btn {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .appointment-btn-cancel {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  .appointment-btn-cancel:hover {
+    background: #e0e0e0;
+  }
+
+  .appointment-btn-confirm {
+    background: #10B981;
+    color: white;
+  }
+
+  .appointment-btn-confirm:hover {
+    background: #059669;
+  }
+
+  .appointment-btn-confirm:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+</style>
+
+<div class="appointment-selector-wrapper">
+  <label class="appointment-selector-label">Select Date and Time:</label>
+  
+  <div class="appointment-dropdown" id="appointmentDropdown">
+    <span id="appointmentDisplay">Choose appointment date and time</span>
+    <span class="appointment-dropdown-icon">▼</span>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="appointment-modal" id="appointmentModal">
+  <div class="appointment-modal-content">
+    <div class="appointment-modal-header">
+      <div class="appointment-modal-title">📅 Select Date and Time</div>
+      <button class="appointment-modal-close" id="closeModal">&times;</button>
+    </div>
+    
+    <div class="appointment-modal-body">
+      <!-- Calendar -->
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <button type="button" class="calendar-nav-btn" id="prevMonth">‹</button>
+          <div class="calendar-month-year" id="monthYear">November 2025</div>
+          <button type="button" class="calendar-nav-btn" id="nextMonth">›</button>
+        </div>
+        
+        <div class="calendar-weekdays">
+          <div class="calendar-weekday">Mon</div>
+          <div class="calendar-weekday">Tue</div>
+          <div class="calendar-weekday">Wed</div>
+          <div class="calendar-weekday">Thu</div>
+          <div class="calendar-weekday">Fri</div>
+          <div class="calendar-weekday">Sat</div>
+          <div class="calendar-weekday">Sun</div>
+        </div>
+        
+        <div class="calendar-dates" id="calendarDates">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+      
+      <!-- Time Slots -->
+      <div class="time-section">
+        <div class="time-panel-header" id="timeHeader">
+          Select a date first
+        </div>
+        <div class="time-slots-scroll" id="timeSlots">
+          <!-- Populated by JavaScript -->
+        </div>
+        <div class="time-scroll-indicator">
+          Scroll to see more time slots
+        </div>
+      </div>
+    </div>
+    
+    <div class="appointment-modal-footer">
+      <button class="appointment-btn appointment-btn-cancel" id="cancelBtn">Cancel</button>
+      <button class="appointment-btn appointment-btn-confirm" id="confirmBtn" disabled>Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // Configuration from theme settings
+    const defaultSlotsText = `{{ section.settings.default_time_slots }}`;
+    const saturdaySlotsText = `{{ section.settings.saturday_time_slots }}`;
+    const customDatesText = `{{ section.settings.custom_date_slots }}`;
+    
+    const DEFAULT_TIME_SLOTS = defaultSlotsText.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+    const SATURDAY_SLOTS = saturdaySlotsText.split('\n').map(s => s.trim()).filter(s => s.length > 0);
+    
+    const CUSTOM_DATES = {};
+    if (customDatesText && customDatesText.trim().length > 0) {
+      customDatesText.split('\n').forEach(line => {
+        line = line.trim();
+        if (line.length === 0) return;
+        const parts = line.split('|');
+        if (parts.length !== 2) return;
+        const date = parts[0].trim();
+        const slotsStr = parts[1].trim();
+        if (slotsStr === 'CLOSED') {
+          CUSTOM_DATES[date] = 'CLOSED';
+        } else {
+          CUSTOM_DATES[date] = slotsStr.split(',').map(s => s.trim()).filter(s => s.length > 0);
+        }
+      });
+    }
+    
+    // State
+    let currentMonth = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+    let selectedDate = null;
+    let selectedTime = null;
+    
+    // Elements
+    const dropdown = document.getElementById('appointmentDropdown');
+    const display = document.getElementById('appointmentDisplay');
+    const modal = document.getElementById('appointmentModal');
+    const closeBtn = document.getElementById('closeModal');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const confirmBtn = document.getElementById('confirmBtn');
+    const prevBtn = document.getElementById('prevMonth');
+    const nextBtn = document.getElementById('nextMonth');
+    
+    // Open modal
+    dropdown.addEventListener('click', () => {
+      modal.classList.add('active');
+      dropdown.classList.add('active');
+      renderCalendar();
+    });
+    
+    // Close modal
+    function closeModal() {
+      modal.classList.remove('active');
+      dropdown.classList.remove('active');
+    }
+    
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    
+    // Calendar navigation
+    prevBtn.addEventListener('click', () => {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      renderCalendar();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      renderCalendar();
+    });
+    
+    // Render calendar
+    function renderCalendar() {
+      const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+      document.getElementById('monthYear').textContent = `${monthNames[currentMonth]} ${currentYear}`;
+      
+      const datesContainer = document.getElementById('calendarDates');
+      datesContainer.innerHTML = '';
+      
+      const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+      const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      
+      const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
+      const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
+      
+      // Empty cells
+      for (let i = 0; i < adjustedFirstDay; i++) {
+        const emptyDate = document.createElement('div');
+        emptyDate.className = 'calendar-date other-month';
+        datesContainer.appendChild(emptyDate);
+      }
+      
+      // Date cells
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateElement = document.createElement('div');
+        dateElement.className = 'calendar-date';
+        dateElement.textContent = day;
+        
+        const currentDate = new Date(currentYear, currentMonth, day);
+        currentDate.setHours(0, 0, 0, 0);
+        const dayOfWeek = currentDate.getDay();
+        
+        if (currentDate < today) {
+          dateElement.classList.add('past');
+        } else if (closedDays.includes(dayOfWeek)) {
+          dateElement.classList.add('disabled');
+        } else if (currentDate.getTime() === today.getTime()) {
+          dateElement.classList.add('today');
+        }
+        
+        if (selectedDate && currentDate.getTime() === new Date(selectedDate).getTime()) {
+          dateElement.classList.add('selected');
+        }
+        
+        if (!dateElement.classList.contains('past') && !dateElement.classList.contains('disabled')) {
+          dateElement.addEventListener('click', () => selectDate(currentDate));
+        }
+        
+        datesContainer.appendChild(dateElement);
+      }
+    }
+    
+    // Select date
+    function selectDate(date) {
+      selectedDate = date;
+      selectedTime = null;
+      renderCalendar();
+      updateTimeSlots(date);
+      updateConfirmButton();
+    }
+    
+    // Update time slots
+    function updateTimeSlots(date) {
+      const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      
+      const header = document.getElementById('timeHeader');
+      header.textContent = `${dayNames[date.getDay()]}, ${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+      
+      const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+      
+      let timeSlots = [];
+      if (CUSTOM_DATES[dateString]) {
+        if (CUSTOM_DATES[dateString] === 'CLOSED') {
+          document.getElementById('timeSlots').innerHTML = '<div style="padding: 20px; text-align: center; color: #999;">No appointments available</div>';
+          return;
+        }
+        timeSlots = CUSTOM_DATES[dateString];
+      } else {
+        timeSlots = date.getDay() === 6 ? SATURDAY_SLOTS : DEFAULT_TIME_SLOTS;
+      }
+      
+      const container = document.getElementById('timeSlots');
+      container.innerHTML = '';
+      
+      timeSlots.forEach(time => {
+        const slotElement = document.createElement('div');
+        slotElement.className = 'time-slot-option';
+        slotElement.innerHTML = `<span class="time-slot-label">${time}</span><div class="time-slot-radio"></div>`;
+        slotElement.addEventListener('click', () => selectTime(time, slotElement));
+        container.appendChild(slotElement);
+      });
+    }
+    
+    // Select time
+    function selectTime(time, element) {
+      document.querySelectorAll('.time-slot-option').forEach(slot => {
+        slot.classList.remove('selected');
+      });
+      element.classList.add('selected');
+      selectedTime = time;
+      updateConfirmButton();
+    }
+    
+    // Update confirm button
+    function updateConfirmButton() {
+      confirmBtn.disabled = !(selectedDate && selectedTime);
+    }
+    
+    // Confirm selection
+    confirmBtn.addEventListener('click', () => {
+      if (!selectedDate || !selectedTime) return;
+      
+      const dateObj = selectedDate;
+      const formattedDate = dateObj.toLocaleDateString('en-US', { 
+        month: 'long', 
+        day: 'numeric', 
+        year: 'numeric' 
+      });
+      
+      display.textContent = `${formattedDate} at ${selectedTime}`;
+      
+      // Create hidden inputs for Shopify cart properties
+      const form = document.querySelector('form[action="/cart/add"]');
+      if (form) {
+        // Remove existing appointment inputs
+        form.querySelectorAll('input[name^="properties[Appointment"]').forEach(input => input.remove());
+        
+        // Add new inputs
+        const dateInput = document.createElement('input');
+        dateInput.type = 'hidden';
+        dateInput.name = 'properties[Appointment Date]';
+        dateInput.value = formattedDate;
+        form.appendChild(dateInput);
+        
+        const timeInput = document.createElement('input');
+        timeInput.type = 'hidden';
+        timeInput.name = 'properties[Appointment Time]';
+        timeInput.value = selectedTime;
+        form.appendChild(timeInput);
+      }
+      
+      closeModal();
+    });
+    
+    // Initialize
+    renderCalendar();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Simple Appointment Picker",
+  "settings": [
+    {
+      "type": "header",
+      "content": "⚙️ APPOINTMENT SLOTS CONFIGURATION"
+    },
+    {
+      "type": "paragraph",
+      "content": "Configure your available appointment times. One time per line. Format: 10:00 AM"
+    },
+    {
+      "type": "textarea",
+      "id": "default_time_slots",
+      "label": "Default Time Slots (Regular Days)",
+      "info": "One time per line. Example: 10:00 AM",
+      "default": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM\n4:15 PM\n4:30 PM\n4:45 PM\n5:00 PM\n5:15 PM\n5:30 PM\n5:45 PM\n6:00 PM"
+    },
+    {
+      "type": "textarea",
+      "id": "saturday_time_slots",
+      "label": "Saturday Time Slots",
+      "info": "One time per line. Example: 10:00 AM",
+      "default": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_date_slots",
+      "label": "Custom Dates (Advanced)",
+      "info": "Format: 2025-12-25|CLOSED or 2025-12-31|10:00 AM,11:00 AM,2:00 PM (one date per line)",
+      "placeholder": "2025-12-25|CLOSED\n2025-12-31|10:00 AM,11:00 AM,2:00 PM"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Simple Appointment Picker"
+    }
+  ]
+}
+{% endschema %}
