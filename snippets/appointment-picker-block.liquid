@@ -402,21 +402,32 @@
           `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
         
         const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
-        let slots = [];
         
+        // Start with default slots based on day of week
+        let slots = date.getDay() === 6 ? [...saturdaySlots] : [...defaultSlots];
+        
+        // Check if this date has custom blocking rules
         if (CUSTOM_DATES[dateStr]) {
           if (CUSTOM_DATES[dateStr] === 'CLOSED') {
+            // If marked as CLOSED, show no slots
             document.getElementById(`timeSlots-${blockId}`).innerHTML = 
               '<div style="padding:20px;text-align:center;color:#999">No appointments available</div>';
             return;
+          } else {
+            // Block/remove specific times from the list
+            const blockedTimes = CUSTOM_DATES[dateStr];
+            slots = slots.filter(time => !blockedTimes.includes(time));
           }
-          slots = CUSTOM_DATES[dateStr];
-        } else {
-          slots = date.getDay() === 6 ? saturdaySlots : defaultSlots;
         }
         
         const container = document.getElementById(`timeSlots-${blockId}`);
         container.innerHTML = '';
+        
+        if (slots.length === 0) {
+          container.innerHTML = '<div style="padding:20px;text-align:center;color:#999">No available slots</div>';
+          return;
+        }
+        
         slots.forEach(time => {
           const el = document.createElement('div');
           el.className = 'time-slot-option';
