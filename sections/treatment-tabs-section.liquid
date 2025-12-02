@@ -1879,54 +1879,52 @@
     <div class="modal-content">
       <div class="enquiry-form-wrapper">
         {%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
-          {%- if form.posted_successfully? -%}
-            {%- assign content = 'contact.form.success_message' | t -%}
-            {%- render 'banner', status: 'success', content: content -%}
-          {%- endif -%}
+  {%- if form.posted_successfully? -%}
+    {%- assign content = 'contact.form.success_message' | t -%}
+    {%- render 'banner', status: 'success', content: content -%}
+  {%- endif -%}
 
-          {%- if form.errors -%}
-            {%- capture content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
-            {%- render 'banner', status: 'error', content: content -%}
-          {%- endif -%}
+  {%- if form.errors -%}
+    {%- capture content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
+    {%- render 'banner', status: 'error', content: content -%}
+  {%- endif -%}
 
-          <div class="fieldset">
-            <div class="fieldset-row">
-              {%- assign label = 'First Name' -%}
-              {%- render 'input', type: 'text', name: 'contact[First Name]', label: label, required: true, autocomplete: 'given-name', id_prefix: 'enquiry' -%}
+  <div class="fieldset">
+    <div class="fieldset-row">
+      {%- assign label = 'First Name' -%}
+      {%- render 'input', type: 'text', name: 'contact[first_name]', label: label, required: true, autocomplete: 'given-name', id_prefix: 'enquiry' -%}
 
-              {%- assign label = 'Last Name' -%}
-              {%- render 'input', type: 'text', name: 'contact[Last Name]', label: label, required: true, autocomplete: 'family-name', id_prefix: 'enquiry' -%}
-            </div>
+      {%- assign label = 'Last Name' -%}
+      {%- render 'input', type: 'text', name: 'contact[last_name]', label: label, required: true, autocomplete: 'family-name', id_prefix: 'enquiry' -%}
+    </div>
 
-            <div class="fieldset-row">
-              {%- assign label = 'Email' -%}
-              {%- render 'input', type: 'email', name: 'contact[Email]', label: label, required: true, autocomplete: 'email', id_prefix: 'enquiry' -%}
+    <div class="fieldset-row">
+      {%- assign label = 'Email' -%}
+      {%- render 'input', type: 'email', name: 'contact[email]', label: label, required: true, autocomplete: 'email', id_prefix: 'enquiry' -%}
 
-              {%- assign label = 'Phone' -%}
-              {%- render 'input', type: 'tel', name: 'contact[Phone]', label: label, required: true, autocomplete: 'tel', id_prefix: 'enquiry' -%}
-            </div>
+      {%- assign label = 'Phone' -%}
+      {%- render 'input', type: 'tel', name: 'contact[phone]', label: label, required: true, autocomplete: 'tel', id_prefix: 'enquiry' -%}
+    </div>
 
-            {%- if section.settings.time_to_call_options != blank -%}
-              {%- assign time_options = section.settings.time_to_call_options | split: ',' -%}
-              {%- assign label = 'Best time to call' -%}
-              {%- render 'select', option_values: time_options, show_empty_value: true, name: 'contact[Best time to call]', label: label, required: false, id_prefix: 'enquiry' -%}
-            {%- endif -%}
+    {%- if section.settings.time_to_call_options != blank -%}
+      {%- assign time_options = section.settings.time_to_call_options | split: ',' -%}
+      {%- assign label = 'Best time to call' -%}
+      {%- render 'select', option_values: time_options, show_empty_value: true, name: 'contact[company]', label: label, required: false, id_prefix: 'enquiry' -%}
+    {%- endif -%}
 
-            {%- comment -%} Auto-filled fields (visible for display) {%- endcomment -%}
-            {%- assign label = 'Treatment Name' -%}
-            {%- render 'input', type: 'text', name: 'contact[Treatment Name]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
+    {%- assign label = 'Treatment Name' -%}
+    {%- render 'input', type: 'text', name: 'contact[note]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
 
-            {%- assign label = 'Selected Sessions' -%}
-            {%- render 'input', type: 'text', name: 'contact[Selected Sessions]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
+    {%- assign label = 'Selected Sessions' -%}
+    {%- render 'input', type: 'text', name: 'contact[subject]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
 
-            {%- assign label = 'Message' -%}
-            {%- render 'input', name: 'contact[body]', label: label, multiline: 4, required: true, id_prefix: 'enquiry' -%}
+    {%- assign label = 'Message' -%}
+    {%- render 'input', name: 'contact[body]', label: label, multiline: 4, required: true, id_prefix: 'enquiry' -%}
+  </div>
 
-          </div>
-
-          {%- assign button_content = 'Submit Enquiry' -%}
-          {%- render 'button', content: button_content, type: 'submit', stretch: true -%}
-        {%- endform -%}
+  {%- assign button_content = 'Submit Enquiry' -%}
+  {%- render 'button', content: button_content, type: 'submit', stretch: true -%}
+{%- endform -%}
       </div>
     </div>
   </div>
@@ -2114,23 +2112,23 @@ function togglePackages(tabId) {
   function openEnquiryModal() {
   const modal = document.getElementById('enquiry-modal');
   if (modal) {
-    // Populate auto-filled fields using name attribute (more reliable)
-    const treatmentNameInput = document.querySelector('input[name="contact[Treatment Name]"]');
-    const selectedSessionsInput = document.querySelector('input[name="contact[Selected Sessions]"]');
+    // Use new field names
+    const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
+    const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
     
     if (treatmentNameInput) {
-  treatmentNameInput.value = `${enquiryState.packageName} - {{ product.title }}`;
-  treatmentNameInput.setAttribute('readonly', true);
-}
+      treatmentNameInput.value = `${enquiryState.packageName} - {{ product.title }}`;
+      treatmentNameInput.setAttribute('readonly', true);
+    }
     if (selectedSessionsInput) {
-  selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
-  selectedSessionsInput.setAttribute('readonly', true);
-}
+      selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
+      selectedSessionsInput.setAttribute('readonly', true);
+    }
     
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
-}
+  }
 
   function closeEnquiryModal() {
     const modal = document.getElementById('enquiry-modal');
