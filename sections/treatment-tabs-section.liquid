@@ -1764,9 +1764,9 @@
     const selectedSessionsInput = document.querySelector('input[name="contact[Selected Sessions]"]');
     
     if (treatmentNameInput) {
-      treatmentNameInput.value = enquiryState.packageName;
-      treatmentNameInput.setAttribute('readonly', true);
-    }
+  treatmentNameInput.value = `${enquiryState.packageName} - {{ product.title }}`;
+  treatmentNameInput.setAttribute('readonly', true);
+}
     if (selectedSessionsInput) {
       selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionPrice}`;
       selectedSessionsInput.setAttribute('readonly', true);
