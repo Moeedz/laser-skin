@@ -1878,7 +1878,7 @@
     </div>
     <div class="modal-content">
       <div class="enquiry-form-wrapper">
-        {%- form 'contact', id: 'my-test-form-12345', class: 'form', method: 'post' -%}
+        {%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
           {%- if form.posted_successfully? -%}
             {%- assign content = 'contact.form.success_message' | t -%}
             {%- render 'banner', status: 'success', content: content -%}
