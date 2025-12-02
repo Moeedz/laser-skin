@@ -2657,6 +2657,7 @@
     },
     "contact_DWareM": {
       "type": "contact",
+      "disabled": true,
       "name": "t:sections.contact.presets.contact_form.name",
       "settings": {
         "color_scheme": "",
