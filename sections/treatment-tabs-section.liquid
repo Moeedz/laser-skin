@@ -1,9 +1,8 @@
 {% comment %}
-  Treatment Tabs Section with Consultation Modal + APPOINTMENT BOOKING
+  Treatment Tabs Section with Enquiry Form
   - Multiple tabs with dynamic content
-  - Package cards that toggle
-  - Session selection with DATE & TIME picker
-  - Appointment data passed to cart as line item properties
+  - Package cards with session selection
+  - Enquiry form modal with auto-filled treatment details
   - Consultation modal with multiple contact options
   - Fully customizable from section settings
   - Mobile optimized
@@ -354,377 +353,6 @@
     color: {{ section.settings.package_price_color }};
   }
 
-  /* APPOINTMENT PICKER STYLES */
-  .appointment-picker {
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #e0e0e0;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-
-  .appointment-picker.active {
-    max-height: 1200px;
-    opacity: 1;
-  }
-
-  .appointment-heading {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .appointment-heading svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .appointment-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: #fff;
-    padding: 16px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-  }
-
-  /* CUSTOM CALENDAR STYLES */
-  .custom-calendar {
-    background: white;
-    width: 100%;
-    padding: 16px;
-  }
-
-  .calendar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }
-
-  .calendar-nav-btn {
-    background: #f5f5f5;
-    border: 1px solid #e0e0e0;
-    cursor: pointer;
-    padding: 8px 12px;
-    font-size: 20px;
-    color: #333;
-    transition: all 0.2s ease;
-    border-radius: 4px;
-    min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .calendar-nav-btn:hover {
-    background: #e0e0e0;
-    color: #000;
-  }
-
-  .calendar-nav-btn:active {
-    background: #d0d0d0;
-  }
-
-  .calendar-nav-btn svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .calendar-month-year {
-    font-size: 16px;
-    font-weight: 700;
-    color: #000;
-    flex: 1;
-    text-align: center;
-  }
-
-  .calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .calendar-weekday {
-    text-align: center;
-    font-size: 11px;
-    font-weight: 600;
-    color: #666;
-    padding: 4px 0;
-  }
-
-  .calendar-dates {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
-  }
-
-  .calendar-date {
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    color: #333;
-    background: white;
-    border: 2px solid transparent;
-    min-height: 40px;
-  }
-
-  .calendar-date:hover:not(.disabled):not(.selected):not(.past) {
-    background: #f5f5f5;
-  }
-
-  .calendar-date.selected {
-    background: #10B981;
-    color: white;
-    border-color: #10B981;
-  }
-
-  .calendar-date.today {
-    border-color: #10B981;
-  }
-
-  .calendar-date.disabled {
-    color: #ccc;
-    cursor: not-allowed;
-    text-decoration: line-through;
-  }
-
-  .calendar-date.past {
-    color: #ccc;
-    cursor: not-allowed;
-  }
-
-  .calendar-date.other-month {
-    color: #ddd;
-  }
-
-  .calendar-date.empty {
-    cursor: default;
-  }
-
-  /* TIME PANEL STYLES */
-  .time-panel {
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .time-panel-header {
-    background: #2D3748;
-    color: white;
-    padding: 12px 16px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .time-slots-scroll {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 250px;
-    padding: 8px;
-  }
-
-  .time-slot-option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 12px;
-    margin-bottom: 4px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    border-radius: 4px;
-  }
-
-  .time-slot-option:hover {
-    background: #f5f5f5;
-  }
-
-  .time-slot-option.selected {
-    background: #E6F7F1;
-  }
-
-  .time-slot-label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #1F2937;
-  }
-
-  .time-slot-radio {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #D1D5DB;
-    border-radius: 50%;
-    position: relative;
-    transition: all 0.2s ease;
-  }
-
-  .time-slot-option.selected .time-slot-radio {
-    border-color: #10B981;
-  }
-
-  .time-slot-option.selected .time-slot-radio::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    background: #10B981;
-    border-radius: 50%;
-  }
-
-  .time-scroll-indicator {
-    text-align: center;
-    padding: 8px;
-    font-size: 12px;
-    color: #92400E;
-    background: #FEF3C7;
-    border-top: 1px solid #FDE68A;
-  }
-
-  /* OLD TIME SLOTS PANEL (keeping for compatibility) */
-  .time-slots-panel {
-    background: #FFFBEB;
-    border: 1px solid #FEF3C7;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .time-slots-header {
-    background: #1F2937;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .time-slots-container {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 280px;
-    padding: 8px;
-  }
-
-  .time-slot-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 12px;
-    margin-bottom: 4px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    border-radius: 4px;
-  }
-
-  .time-slot-item:hover {
-    background: #FEF3C7;
-  }
-
-  .time-slot-item.selected {
-    background: #FEF3C7;
-  }
-
-  .time-slot-label {
-    font-size: 13px;
-    font-weight: 500;
-    color: #1F2937;
-  }
-
-  .time-slot-radio {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #D1D5DB;
-    border-radius: 50%;
-    position: relative;
-    transition: all 0.2s ease;
-  }
-
-  .time-slot-item.selected .time-slot-radio {
-    border-color: #10B981;
-  }
-
-  .time-slot-item.selected .time-slot-radio::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    background: #10B981;
-    border-radius: 50%;
-  }
-
-  .time-slots-scroll-hint {
-    text-align: center;
-    padding: 8px;
-    font-size: 11px;
-    color: #92400E;
-    background: #FEF3C7;
-    border-top: 1px solid #FDE68A;
-  }
-
-  .time-slot-item.hidden {
-    display: none;
-  }
-
-  .appointment-required-note {
-    font-size: 11px;
-    color: #999;
-    margin-top: 8px;
-    font-style: italic;
-  }
-
-  .closed-day-message {
-    background: #FFE4E1;
-    border-left: 4px solid #FF4444;
-    padding: 12px 16px;
-    margin-top: 12px;
-    border-radius: 8px;
-    display: none;
-  }
-
-  .closed-day-message.active {
-    display: block;
-  }
-
-  .closed-day-message p {
-    color: #D8000C;
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 0;
-    font-weight: 500;
-  }
-
-  .time-slot.hidden {
-    display: none;
-  }
-
   .session-select {
     margin-top: 16px;
     opacity: 0.5;
@@ -931,12 +559,13 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 9998;
     animation: fadeIn 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
   }
 
   .consultation-modal-overlay.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   @keyframes fadeIn {
@@ -1129,169 +758,37 @@
     stroke: #666;
   }
 
-  /* Phone Hours Modal Styles */
-  .phone-hours-modal {
+  /* Enquiry Form Modal */
+  .enquiry-modal {
     background: white;
-    border-radius: 20px;
-    max-width: 400px;
+    border-radius: 16px;
+    max-width: 540px;
     width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
     position: relative;
     animation: slideUp 0.3s ease;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    padding: 40px 30px 30px;
-    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   }
 
-  .phone-icon-circle {
-    width: 80px;
-    height: 80px;
-    background: #007AFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
+  .enquiry-form-wrapper {
+    padding: 0;
   }
 
-  .phone-icon-circle svg {
-    width: 40px;
-    height: 40px;
-    stroke: white;
-    fill: none;
+  .enquiry-form-wrapper .form {
+    padding: 0;
   }
 
-  .phone-modal-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000;
-    margin: 0 0 20px 0;
+  .enquiry-form-wrapper .fieldset {
+    gap: 16px;
   }
 
-  .store-status {
-    background: #D1F2E0;
-    color: #0F9D58;
-    padding: 10px 20px;
-    border-radius: 25px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 25px;
-    font-weight: 500;
-    font-size: 14px;
+  .enquiry-form-wrapper .fieldset-row {
+    gap: 12px;
   }
 
-  .store-status.closed {
-    background: #FFE4E1;
-    color: #FF4444;
-  }
-
-  .status-icon {
-    font-size: 16px;
-  }
-
-  .closed-message {
-    background: #FFF3CD;
-    border-left: 4px solid #FFC107;
-    padding: 12px 16px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    text-align: left;
-  }
-
-  .closed-message p {
-    color: #856404;
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .opening-hours {
-    text-align: left;
-    margin-bottom: 25px;
-  }
-
-  .hours-heading {
-    font-size: 14px;
-    font-weight: 600;
-    color: #666;
-    margin: 0 0 15px 0;
-    text-align: center;
-  }
-
-  .hours-list {
-    background: #f8f8f8;
-    border-radius: 12px;
-    padding: 15px;
-  }
-
-  .hours-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 14px;
-  }
-
-  .hours-row:last-child {
-    border-bottom: none;
-  }
-
-  .hours-row .day {
-    font-weight: 500;
-    color: #333;
-  }
-
-  .hours-row .time {
-    color: #666;
-  }
-
-  .hours-row.current-day {
-    background: #fff;
-    margin: -5px -10px;
-    padding: 8px 10px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-
-  .hours-row.current-day .day {
-    color: #007AFF;
-  }
-
-  .hours-row.current-day .time {
-    color: #007AFF;
-  }
-
-  .call-now-button {
-    background: #007AFF;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  .call-now-button:hover {
-    background: #0056CC;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
-  }
-
-  .call-now-button.disabled {
-    background: #cccccc !important;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  .call-now-button.disabled:hover {
-    transform: none;
-    box-shadow: none;
+  .enquiry-form-wrapper .banner {
+    margin-bottom: 16px;
   }
 
   /* Mobile Responsive */
@@ -1319,10 +816,6 @@
 
     .collapsible-tabs-section.collapsible-mobile {
       display: block;
-    }
-
-    .time-slots-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -1402,16 +895,6 @@
     .session-details {
       font-size: 11px;
     }
-
-    .time-slots-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-
-    .time-slot {
-      padding: 10px 8px;
-      font-size: 13px;
-    }
   }
 
   @media (max-width: 640px) {
@@ -1449,7 +932,8 @@
       font-size: 13px;
     }
 
-    .consultation-modal {
+    .consultation-modal,
+    .enquiry-modal {
       width: 95%;
       margin: 10px;
       border-radius: 12px;
@@ -1550,10 +1034,6 @@
     .session-price {
       font-size: 14px;
     }
-
-    .time-slots-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 </style>
 
@@ -1592,9 +1072,6 @@
                 Image 1
               </div>
             {% endif %}
-
-            <!-- Tab Navigation - Mobile Only (Below Image) -->
-            
           </div>
 
           <!-- Right Column - Content -->
@@ -1618,16 +1095,6 @@
               {% endfor %}
             </div>
             
-            <span style="display: inline-flex;gap: 5px;align-items: center;padding-bottom: 10px;"> <p><span id="shopify-installments-content" data-testid="shopify-installments-content" class="pr-1.5">Pay in instalments with </span></p><div class="inline-flex align-middle text-purple-primary" style="
-    color: rgb(84 51 235 / 1);
-    vertical-align: middle;
-    display: inline-flex;
-    padding-right: 5px;
-"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 25" aria-label="Shop Pay" role="img" class="h-[14px] w-[59px]" style="
-    width: 59px;
-    height: 14px;
-"><path fill="currentColor" d="M70.842 7.915h2.25c1.561 0 2.328.642 2.328 1.715 0 1.074-.739 1.715-2.259 1.715h-2.32v-3.43ZM80.525 16.142c-.879 0-1.227-.474-1.227-.948 0-.642.725-.935 2.147-1.102l1.115-.125c-.07 1.227-.892 2.175-2.035 2.175Z"></path><path fill="currentColor" fill-rule="evenodd" d="M65.645.5a3.64 3.64 0 0 0-3.64 3.64V20.7a3.64 3.64 0 0 0 3.64 3.64h29.668a3.64 3.64 0 0 0 3.64-3.64V4.14A3.64 3.64 0 0 0 95.314.5H65.645Zm5.197 16.674v-4.197h2.64c2.412 0 3.695-1.353 3.695-3.402 0-2.05-1.283-3.277-3.695-3.277h-4.341v10.876h1.7Zm9.334.223c1.297 0 2.147-.572 2.538-1.548.112 1.088.767 1.645 2.189 1.269l.014-1.157c-.572.055-.683-.154-.683-.753v-2.845c0-1.673-1.102-2.663-3.138-2.663-2.008 0-3.165 1.004-3.165 2.705h1.562c0-.809.572-1.297 1.576-1.297 1.06 0 1.547.46 1.534 1.255v.363l-1.8.195c-2.021.223-3.137.99-3.137 2.329 0 1.101.781 2.147 2.51 2.147Zm9.906.32c-.711 1.73-1.855 2.245-3.64 2.245h-.766V18.54h.822c.977 0 1.45-.307 1.966-1.185L85.3 9.923h1.757l2.259 5.424 2.008-5.424h1.715l-2.956 7.795Z" clip-rule="evenodd"></path><path fill="currentColor" d="M6.992 11.055c-2.359-.509-3.41-.708-3.41-1.612 0-.85.711-1.274 2.134-1.274 1.25 0 2.165.544 2.839 1.61.05.081.155.11.241.066l2.655-1.335a.186.186 0 0 0 .076-.259c-1.102-1.9-3.137-2.94-5.818-2.94C2.188 5.311 0 7.037 0 9.781c0 2.915 2.664 3.651 5.027 4.16 2.362.51 3.417.709 3.417 1.613s-.769 1.33-2.303 1.33c-1.416 0-2.467-.644-3.102-1.896a.186.186 0 0 0-.251-.082L.14 16.21a.188.188 0 0 0-.083.253c1.051 2.102 3.207 3.285 6.087 3.285 3.668 0 5.885-1.698 5.885-4.527 0-2.83-2.677-3.651-5.037-4.16v-.007ZM21.218 5.311c-1.505 0-2.835.531-3.791 1.477-.06.057-.159.015-.159-.067V.687A.185.185 0 0 0 17.081.5h-3.322a.185.185 0 0 0-.187.187v18.73c0 .104.083.186.187.186h3.322a.185.185 0 0 0 .187-.186V11.2c0-1.587 1.223-2.804 2.87-2.804 1.649 0 2.843 1.191 2.843 2.804v8.216c0 .104.082.186.187.186h3.322a.185.185 0 0 0 .187-.186V11.2c0-3.452-2.274-5.89-5.459-5.89ZM33.415 4.774c-1.803 0-3.493.55-4.706 1.343a.186.186 0 0 0-.06.25l1.464 2.488c.054.089.168.12.257.066a5.853 5.853 0 0 1 3.052-.834c2.899 0 5.03 2.036 5.03 4.726 0 2.292-1.706 3.99-3.868 3.99-1.762 0-2.985-1.022-2.985-2.463 0-.825.352-1.502 1.27-1.98a.183.183 0 0 0 .073-.258l-1.381-2.327a.187.187 0 0 0-.226-.079c-1.85.683-3.15 2.327-3.15 4.533 0 3.338 2.67 5.83 6.396 5.83 4.35 0 7.478-3 7.478-7.303 0-4.612-3.64-7.982-8.644-7.982ZM51.776 5.283c-1.68 0-3.182.62-4.277 1.707a.093.093 0 0 1-.16-.066v-1.31a.185.185 0 0 0-.187-.186h-3.235a.185.185 0 0 0-.188.187v18.702c0 .104.083.186.188.186h3.32a.185.185 0 0 0 .188-.186v-6.133c0-.082.099-.123.16-.07 1.091 1.012 2.536 1.603 4.19 1.603 3.897 0 6.936-3.139 6.936-7.217 0-4.078-3.042-7.217-6.935-7.217Zm-.63 11.266c-2.215 0-3.895-1.754-3.895-4.074S48.928 8.4 51.147 8.4c2.22 0 3.893 1.726 3.893 4.075 0 2.348-1.651 4.074-3.896 4.074h.003Z"></path></svg></div></span>
-
             <!-- CTA Cards -->
             <div class="cta-cards">
               <!-- Book Consultation Card - Now triggers modal -->
@@ -1707,9 +1174,9 @@
                   </a>
                 {% endif %}
 
-                <!-- Phone Option - Now opens hours modal -->
+                <!-- Phone Option -->
                 {% if block.settings.phone_number != blank %}
-                  <div class="consultation-option" onclick="openPhoneHoursModal('{{ block.settings.tab_identifier }}'); event.preventDefault();">
+                  <a href="tel:{{ block.settings.phone_number | replace: ' ', '' | replace: '-', '' }}" class="consultation-option">
                     <div class="consultation-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -1724,7 +1191,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
-                  </div>
+                  </a>
                 {% endif %}
 
                 <!-- WhatsApp Option -->
@@ -1751,72 +1218,6 @@
           </div>
         </div>
 
-        <!-- Phone Hours Modal for this tab -->
-        <div class="consultation-modal-overlay" id="phone-hours-modal-{{ block.settings.tab_identifier }}">
-          <div class="phone-hours-modal">
-            <button class="modal-close" onclick="closePhoneHoursModal('{{ block.settings.tab_identifier }}')">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
-            <div class="phone-icon-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-
-            <h3 class="phone-modal-title">Call Us</h3>
-
-            <div class="store-status" id="store-status-{{ block.settings.tab_identifier }}">
-              <span class="status-icon">✓</span>
-              <span class="status-text">We are currently open</span>
-            </div>
-
-            <div class="closed-message" id="closed-message-{{ block.settings.tab_identifier }}" style="display: none;">
-              <p>{{ block.settings.closed_message | default: 'You can send us a WhatsApp, send us an email or call back during opening hours' }}</p>
-            </div>
-
-            <div class="opening-hours">
-              <h4 class="hours-heading">Opening Hours</h4>
-              <div class="hours-list">
-                <div class="hours-row">
-                  <span class="day">Monday</span>
-                  <span class="time">{{ block.settings.monday_hours | default: 'Closed' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Tuesday</span>
-                  <span class="time">{{ block.settings.tuesday_hours | default: '10:00AM-6:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Wednesday</span>
-                  <span class="time">{{ block.settings.wednesday_hours | default: '10:00AM-6:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Thursday</span>
-                  <span class="time">{{ block.settings.thursday_hours | default: 'Closed' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Friday</span>
-                  <span class="time">{{ block.settings.friday_hours | default: '10:00AM-6:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Saturday</span>
-                  <span class="time">{{ block.settings.saturday_hours | default: '10:00AM-4:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Sunday</span>
-                  <span class="time">{{ block.settings.sunday_hours | default: 'Closed' }}</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="tel:{{ block.settings.phone_number | replace: ' ', '' | replace: '-', '' }}" class="call-now-button" id="call-button-{{ block.settings.tab_identifier }}">
-              Call Now
-            </a>
-          </div>
-        </div>
-
         <!-- Packages Container - Right below desktop tabs -->
         <div class="packages-container" data-packages="{{ block.settings.tab_identifier }}">
           <div class="packages-grid">
@@ -1830,10 +1231,14 @@
                   
                   <!-- Session Options -->
                   <div class="session-options" id="session-{{ package_block.id }}">
-                    <div class="session-selector-heading">Select Number of Session</div>
+                    <div class="session-selector-heading">Select Number of Sessions</div>
                     
                     {% if package_block.settings.show_session_1 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_1_link }}">
+                      <div class="session-option" 
+                           data-package-name="{{ package_block.settings.package_name }}"
+                           data-session-label="{{ package_block.settings.session_1_label }}"
+                           data-session-price="{{ package_block.settings.session_1_price }}"
+                           data-link="{{ package_block.settings.session_1_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_1_label }}</span>
                           <span class="session-price">{{ package_block.settings.session_1_price }}</span>
@@ -1846,7 +1251,11 @@
                     {% endif %}
 
                     {% if package_block.settings.show_session_3 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_3_link }}">
+                      <div class="session-option"
+                           data-package-name="{{ package_block.settings.package_name }}"
+                           data-session-label="{{ package_block.settings.session_3_label }}"
+                           data-session-price="{{ package_block.settings.session_3_price }}"
+                           data-link="{{ package_block.settings.session_3_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_3_label }}</span>
                           <span class="session-price">{{ package_block.settings.session_3_price }}</span>
@@ -1859,7 +1268,11 @@
                     {% endif %}
 
                     {% if package_block.settings.show_session_6 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_6_link }}">
+                      <div class="session-option"
+                           data-package-name="{{ package_block.settings.package_name }}"
+                           data-session-label="{{ package_block.settings.session_6_label }}"
+                           data-session-price="{{ package_block.settings.session_6_price }}"
+                           data-link="{{ package_block.settings.session_6_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_6_label }}</span>
                           <span class="session-price">{{ package_block.settings.session_6_price }}</span>
@@ -1872,7 +1285,11 @@
                     {% endif %}
 
                     {% if package_block.settings.show_session_10 %}
-                      <div class="session-option" data-link="{{ package_block.settings.session_10_link }}">
+                      <div class="session-option"
+                           data-package-name="{{ package_block.settings.package_name }}"
+                           data-session-label="{{ package_block.settings.session_10_label }}"
+                           data-session-price="{{ package_block.settings.session_10_price }}"
+                           data-link="{{ package_block.settings.session_10_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_10_label }}</span>
                           <span class="session-price">{{ package_block.settings.session_10_price }}</span>
@@ -1884,67 +1301,6 @@
                       </div>
                     {% endif %}
 
-                    <!-- APPOINTMENT PICKER - NEW FEATURE -->
-                    <div class="appointment-picker" id="appointment-{{ package_block.id }}">
-                      <div class="appointment-heading">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        SELECT DATE AND TIME
-                      </div>
-
-                      <div class="appointment-container">
-                        <!-- Custom Calendar -->
-                        <div class="custom-calendar" id="calendar-{{ package_block.id }}">
-                          <div class="calendar-header">
-                            <button type="button" class="calendar-nav-btn" id="prev-month-{{ package_block.id }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                              </svg>
-                            </button>
-                            <div class="calendar-month-year" id="month-year-{{ package_block.id }}">November 2024</div>
-                            <button type="button" class="calendar-nav-btn" id="next-month-{{ package_block.id }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="calendar-weekdays">
-                            <div class="calendar-weekday">Mon</div>
-                            <div class="calendar-weekday">Tue</div>
-                            <div class="calendar-weekday">Wed</div>
-                            <div class="calendar-weekday">Thu</div>
-                            <div class="calendar-weekday">Fri</div>
-                            <div class="calendar-weekday">Sat</div>
-                            <div class="calendar-weekday">Sun</div>
-                          </div>
-                          <div class="calendar-dates" id="dates-{{ package_block.id }}">
-                            <!-- Dates populated by JavaScript -->
-                          </div>
-                        </div>
-
-                        <!-- Time Slots Panel -->
-                        <div class="time-panel" id="time-panel-{{ package_block.id }}">
-                          <div class="time-panel-header" id="time-header-{{ package_block.id }}">
-                            Select a date first
-                          </div>
-                          <div class="time-slots-scroll" id="time-scroll-{{ package_block.id }}">
-                            <!-- Time slots populated by JavaScript -->
-                          </div>
-                          <div class="time-scroll-indicator">
-                            Scroll to see more time slots
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Closed Day Message -->
-                      <div class="closed-day-message" id="closed-day-message-{{ package_block.id }}">
-                        <p>⚠️ <span id="closed-day-name-{{ package_block.id }}"></span> is closed. Please select a different day to book your appointment.</p>
-                      </div>
-
-                      <p class="appointment-required-note">* Date and time selection required</p>
-                    </div>
-
                     <button class="package-select session-select" id="select-btn-{{ package_block.id }}">SELECT</button>
                   </div>
                 </div>
@@ -1953,7 +1309,7 @@
           </div>
         </div>
 
-        <!-- Collapsible Tabs Section (Static - doesn't change with tabs) -->
+        <!-- Collapsible Tabs Section (Desktop) -->
         <div class="collapsible-tabs-section">
           {% if section.settings.show_collapsible_1 %}
             <div class="collapsible-tab" id="collapsible-1-{{ block.settings.tab_identifier }}">
@@ -2266,63 +1622,78 @@
   {% endfor %}
 </div>
 
-<parameter name="new_str"><script>
-  // ========================================================================
-  // ⚙️ APPOINTMENT SETTINGS - Managed in Theme Customizer
-  // Go to: Theme Customizer > This Section > Appointment Slots Configuration
-  // ========================================================================
-  
-  // Read settings from Shopify customizer
-  const defaultSlotsText = `{{ section.settings.default_time_slots }}`;
-  const saturdaySlotsText = `{{ section.settings.saturday_time_slots }}`;
-  const customDatesText = `{{ section.settings.custom_date_slots }}`;
-  
-  // Parse default time slots (one per line)
-  const DEFAULT_TIME_SLOTS = defaultSlotsText
-    .split('\n')
-    .map(slot => slot.trim())
-    .filter(slot => slot.length > 0);
-  
-  // Parse Saturday time slots (one per line)
-  const SATURDAY_DEFAULT_SLOTS = saturdaySlotsText
-    .split('\n')
-    .map(slot => slot.trim())
-    .filter(slot => slot.length > 0);
-  
-  // Parse custom dates (format: 2025-12-25|CLOSED or 2025-12-25|10:00 AM,11:00 AM)
-  const CUSTOM_DATE_SLOTS = [];
-  if (customDatesText && customDatesText.trim().length > 0) {
-    customDatesText.split('\n').forEach(line => {
-      line = line.trim();
-      if (line.length === 0) return;
-      
-      const parts = line.split('|');
-      if (parts.length !== 2) return;
-      
-      const date = parts[0].trim();
-      const slotsStr = parts[1].trim();
-      
-      if (slotsStr === 'CLOSED') {
-        CUSTOM_DATE_SLOTS.push({ date: date, slots: 'CLOSED' });
-      } else {
-        const slots = slotsStr.split(',').map(s => s.trim()).filter(s => s.length > 0);
-        if (slots.length > 0) {
-          CUSTOM_DATE_SLOTS.push({ date: date, slots: slots });
-        }
-      }
-    });
-  }
-  
-  // Build config object
-  const APPOINTMENT_CONFIG = {
-    defaultSlots: DEFAULT_TIME_SLOTS,
-    saturdaySlots: SATURDAY_DEFAULT_SLOTS,
-    customDates: {}
+<!-- Global Enquiry Form Modal -->
+<div class="consultation-modal-overlay" id="enquiry-modal">
+  <div class="enquiry-modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeEnquiryModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 class="modal-title">{{ section.settings.enquiry_modal_title | default: 'Request a Quote' }}</h3>
+      <p class="modal-subtitle">{{ section.settings.enquiry_modal_subtitle | default: 'Fill out the form below and we will get back to you shortly' }}</p>
+    </div>
+    <div class="modal-content">
+      <div class="enquiry-form-wrapper">
+        {%- form 'contact', id: 'treatment-enquiry-form', class: 'form' -%}
+          {%- if form.posted_successfully? -%}
+            {%- assign content = 'contact.form.success_message' | t -%}
+            {%- render 'banner', status: 'success', content: content -%}
+          {%- endif -%}
+
+          {%- if form.errors -%}
+            {%- capture content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
+            {%- render 'banner', status: 'error', content: content -%}
+          {%- endif -%}
+
+          <div class="fieldset">
+            <div class="fieldset-row">
+              {%- assign label = 'First Name' -%}
+              {%- render 'input', type: 'text', name: 'contact[First Name]', label: label, required: true, autocomplete: 'given-name', id_prefix: 'enquiry' -%}
+
+              {%- assign label = 'Last Name' -%}
+              {%- render 'input', type: 'text', name: 'contact[Last Name]', label: label, required: true, autocomplete: 'family-name', id_prefix: 'enquiry' -%}
+            </div>
+
+            <div class="fieldset-row">
+              {%- assign label = 'Email' -%}
+              {%- render 'input', type: 'email', name: 'contact[Email]', label: label, required: true, autocomplete: 'email', id_prefix: 'enquiry' -%}
+
+              {%- assign label = 'Phone' -%}
+              {%- render 'input', type: 'tel', name: 'contact[Phone]', label: label, required: true, autocomplete: 'tel', id_prefix: 'enquiry' -%}
+            </div>
+
+            {%- if section.settings.time_to_call_options != blank -%}
+              {%- assign time_options = section.settings.time_to_call_options | split: ',' -%}
+              {%- assign label = 'Best time to call' -%}
+              {%- render 'select', option_values: time_options, show_empty_value: true, name: 'contact[Best time to call]', label: label, required: false, id_prefix: 'enquiry' -%}
+            {%- endif -%}
+
+            {%- comment -%} Hidden fields auto-populated by JavaScript {%- endcomment -%}
+            {%- render 'input', type: 'hidden', name: 'contact[Treatment Name]', id_prefix: 'enquiry' -%}
+            {%- render 'input', type: 'hidden', name: 'contact[Selected Sessions]', id_prefix: 'enquiry' -%}
+
+            {%- assign label = 'Message' -%}
+            {%- render 'input', name: 'contact[body]', label: label, multiline: 4, required: true, id_prefix: 'enquiry' -%}
+          </div>
+
+          {%- assign button_content = 'Submit Enquiry' -%}
+          {%- render 'button', content: button_content, type: 'submit', stretch: true -%}
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Enquiry state management
+  const enquiryState = {
+    packageName: '',
+    sessionLabel: '',
+    sessionPrice: '',
+    cartLink: ''
   };
-  
-  CUSTOM_DATE_SLOTS.forEach(item => {
-    APPOINTMENT_CONFIG.customDates[item.date] = item.slots;
-  });
 
   function switchTab(tabId) {
     document.querySelectorAll('.tab-button').forEach(btn => {
@@ -2340,9 +1711,6 @@
     });
     document.querySelectorAll('.session-options').forEach(session => {
       session.classList.remove('active');
-    });
-    document.querySelectorAll('.appointment-picker').forEach(picker => {
-      picker.classList.remove('active');
     });
   }
 
@@ -2377,94 +1745,31 @@
     }
   }
 
-  function openPhoneHoursModal(tabId) {
-    closeConsultationModal(tabId);
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
+  function openEnquiryModal() {
+    const modal = document.getElementById('enquiry-modal');
     if (modal) {
+      // Populate hidden fields
+      const treatmentNameInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-treatment-name');
+      const selectedSessionsInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-selected-sessions');
+      
+      if (treatmentNameInput) {
+        treatmentNameInput.value = enquiryState.packageName;
+      }
+      if (selectedSessionsInput) {
+        selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionPrice}`;
+      }
+      
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
-      checkStoreStatus(tabId);
-      highlightCurrentDay(tabId);
     }
   }
 
-  function closePhoneHoursModal(tabId) {
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
+  function closeEnquiryModal() {
+    const modal = document.getElementById('enquiry-modal');
     if (modal) {
       modal.classList.remove('active');
       document.body.style.overflow = '';
     }
-  }
-
-  function checkStoreStatus(tabId) {
-    const statusElement = document.getElementById(`store-status-${tabId}`);
-    if (!statusElement) return;
-    const now = new Date();
-    const currentDay = now.getDay();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-    const currentTime = currentHour * 60 + currentMinute;
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
-    const hoursRows = modal.querySelectorAll('.hours-row');
-    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];
-    const hoursText = todayRow.querySelector('.time').textContent.trim();
-    let isOpen = false;
-    if (hoursText.toLowerCase() !== 'closed') {
-      const matches = hoursText.match(/(\d{1,2}):(\d{2})(AM|PM)-(\d{1,2}):(\d{2})(AM|PM)/i);
-      if (matches) {
-        let openHour = parseInt(matches[1]);
-        const openMinute = parseInt(matches[2]);
-        const openPeriod = matches[3].toUpperCase();
-        let closeHour = parseInt(matches[4]);
-        const closeMinute = parseInt(matches[5]);
-        const closePeriod = matches[6].toUpperCase();
-        if (openPeriod === 'PM' && openHour !== 12) openHour += 12;
-        if (openPeriod === 'AM' && openHour === 12) openHour = 0;
-        if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;
-        if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;
-        const openTime = openHour * 60 + openMinute;
-        const closeTime = closeHour * 60 + closeMinute;
-        isOpen = currentTime >= openTime && currentTime < closeTime;
-      }
-    }
-    const statusIcon = statusElement.querySelector('.status-icon');
-    const statusText = statusElement.querySelector('.status-text');
-    const closedMessage = document.getElementById(`closed-message-${tabId}`);
-    const callButton = document.getElementById(`call-button-${tabId}`);
-    if (isOpen) {
-      statusElement.classList.remove('closed');
-      statusIcon.textContent = '✓';
-      statusText.textContent = 'We are currently open';
-      if (closedMessage) closedMessage.style.display = 'none';
-      if (callButton) {
-        callButton.textContent = 'Call Now';
-        callButton.classList.remove('disabled');
-        callButton.style.pointerEvents = 'auto';
-        callButton.style.background = '#007AFF';
-      }
-    } else {
-      statusElement.classList.add('closed');
-      statusIcon.textContent = '✗';
-      statusText.textContent = 'We are currently closed';
-      if (closedMessage) closedMessage.style.display = 'block';
-      if (callButton) {
-        callButton.textContent = 'Currently Closed';
-        callButton.classList.add('disabled');
-        callButton.style.pointerEvents = 'none';
-        callButton.style.background = '#cccccc';
-      }
-    }
-  }
-
-  function highlightCurrentDay(tabId) {
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
-    if (!modal) return;
-    const now = new Date();
-    const currentDay = now.getDay();
-    const hoursRows = modal.querySelectorAll('.hours-row');
-    hoursRows.forEach(row => row.classList.remove('current-day'));
-    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];
-    if (todayRow) todayRow.classList.add('current-day');
   }
 
   function scrollToFAQ(sectionId) {
@@ -2485,288 +1790,43 @@
     }
   }
 
-  const appointmentState = {};
-  const calendarState = {};
-
-  function initCalendar(packageId) {
-    if (!calendarState[packageId]) {
-      calendarState[packageId] = {
-        currentMonth: new Date().getMonth(),
-        currentYear: new Date().getFullYear(),
-        selectedDate: null
-      };
-    }
-    renderCalendar(packageId);
-    setupCalendarNav(packageId);
-  }
-
-  function renderCalendar(packageId) {
-    const state = calendarState[packageId];
-    const datesContainer = document.getElementById(`dates-${packageId}`);
-    const monthYearDisplay = document.getElementById(`month-year-${packageId}`);
-    if (!datesContainer || !monthYearDisplay) {
-      console.error('Calendar elements not found for package:', packageId);
-      return;
-    }
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    monthYearDisplay.textContent = `${monthNames[state.currentMonth]} ${state.currentYear}`;
-    datesContainer.innerHTML = '';
-    const firstDay = new Date(state.currentYear, state.currentMonth, 1).getDay();
-    const daysInMonth = new Date(state.currentYear, state.currentMonth + 1, 0).getDate();
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
-    const closedDays = [0, 1, 4];
-    for (let i = 0; i < adjustedFirstDay; i++) {
-      const emptyDate = document.createElement('div');
-      emptyDate.className = 'calendar-date other-month';
-      datesContainer.appendChild(emptyDate);
-    }
-    for (let day = 1; day <= daysInMonth; day++) {
-      const dateElement = document.createElement('div');
-      dateElement.className = 'calendar-date';
-      dateElement.textContent = day;
-      const currentDate = new Date(state.currentYear, state.currentMonth, day);
-      currentDate.setHours(0, 0, 0, 0);
-      const dayOfWeek = currentDate.getDay();
-      if (currentDate < today) {
-        dateElement.classList.add('past');
-      } else if (closedDays.includes(dayOfWeek)) {
-        dateElement.classList.add('disabled');
-      } else if (currentDate.getTime() === today.getTime()) {
-        dateElement.classList.add('today');
-      }
-      if (state.selectedDate && currentDate.getTime() === new Date(state.selectedDate).getTime()) {
-        dateElement.classList.add('selected');
-      }
-      if (!dateElement.classList.contains('past') && !dateElement.classList.contains('disabled')) {
-        dateElement.addEventListener('click', () => selectDate(packageId, currentDate));
-      }
-      datesContainer.appendChild(dateElement);
-    }
-  }
-
-  function setupCalendarNav(packageId) {
-    const prevBtn = document.getElementById(`prev-month-${packageId}`);
-    const nextBtn = document.getElementById(`next-month-${packageId}`);
-    if (prevBtn) {
-      prevBtn.onclick = () => {
-        calendarState[packageId].currentMonth--;
-        if (calendarState[packageId].currentMonth < 0) {
-          calendarState[packageId].currentMonth = 11;
-          calendarState[packageId].currentYear--;
-        }
-        renderCalendar(packageId);
-      };
-    }
-    if (nextBtn) {
-      nextBtn.onclick = () => {
-        calendarState[packageId].currentMonth++;
-        if (calendarState[packageId].currentMonth > 11) {
-          calendarState[packageId].currentMonth = 0;
-          calendarState[packageId].currentYear++;
-        }
-        renderCalendar(packageId);
-      };
-    }
-  }
-
-  function selectDate(packageId, date) {
-    calendarState[packageId].selectedDate = date;
-    renderCalendar(packageId);
-    updateTimeSlots(packageId, date);
-    if (!appointmentState[packageId]) {
-      appointmentState[packageId] = { link: '', date: '', time: '' };
-    }
-    // Format date as YYYY-MM-DD without timezone conversion
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    appointmentState[packageId].date = `${year}-${month}-${day}`;
-    appointmentState[packageId].time = '';
-    const closedDayMessage = document.getElementById(`closed-day-message-${packageId}`);
-    if (closedDayMessage) {
-      closedDayMessage.classList.remove('active');
-    }
-    checkAppointmentComplete(packageId);
-  }
-
-  function updateTimeSlots(packageId, date) {
-    const timePanelHeader = document.getElementById(`time-header-${packageId}`);
-    const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
-    if (!timePanelHeader || !timeScrollContainer) return;
-    
-    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const dayOfWeek = dayNames[date.getDay()];
-    const day = date.getDate();
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
-    
-    timePanelHeader.textContent = `${dayOfWeek}, ${day} ${month} ${year}`;
-    
-    // Format date as YYYY-MM-DD for checking custom slots
-    const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-    
-    // Clear container
-    timeScrollContainer.innerHTML = '';
-    
-    // Check if this specific date has custom slots
-    let timeSlots = [];
-    if (APPOINTMENT_CONFIG.customDates[dateString]) {
-      const customSlots = APPOINTMENT_CONFIG.customDates[dateString];
-      
-      // If marked as CLOSED
-      if (customSlots === 'CLOSED') {
-        const noSlotsMessage = document.createElement('div');
-        noSlotsMessage.style.padding = '20px';
-        noSlotsMessage.style.textAlign = 'center';
-        noSlotsMessage.style.color = '#999';
-        noSlotsMessage.textContent = 'No appointments available on this date';
-        timeScrollContainer.appendChild(noSlotsMessage);
-        return;
-      }
-      
-      // Use custom slots for this date
-      timeSlots = customSlots;
-    } else {
-      // No custom slots - use defaults based on day of week
-      const selectedDayOfWeek = date.getDay();
-      if (selectedDayOfWeek === 6) {
-        // Saturday: use Saturday default
-        timeSlots = APPOINTMENT_CONFIG.saturdaySlots;
-      } else {
-        // Regular days: use regular default
-        timeSlots = APPOINTMENT_CONFIG.defaultSlots;
-      }
-    }
-    
-    // Create slot elements
-    timeSlots.forEach(time => {
-      const slotElement = document.createElement('div');
-      slotElement.className = 'time-slot-option';
-      slotElement.innerHTML = `<span class="time-slot-label">${time}</span><div class="time-slot-radio"></div>`;
-      slotElement.addEventListener('click', () => selectTimeSlot(packageId, time, slotElement));
-      timeScrollContainer.appendChild(slotElement);
-    });
-    
-    // If no slots available
-    if (timeScrollContainer.children.length === 0) {
-      const noSlotsMessage = document.createElement('div');
-      noSlotsMessage.style.padding = '20px';
-      noSlotsMessage.style.textAlign = 'center';
-      noSlotsMessage.style.color = '#999';
-      noSlotsMessage.textContent = 'No available slots for this date';
-      timeScrollContainer.appendChild(noSlotsMessage);
-    }
-  }
-
-  function generateTimeSlots(startHour, endHour) {
-    const slots = [];
-    const duration = APPOINTMENT_CONFIG.slotDuration;
-    
-    // Convert hours to minutes
-    const startMinutes = startHour * 60;
-    const endMinutes = endHour * 60;
-    
-    // Generate slots based on duration
-    for (let minutes = startMinutes; minutes < endMinutes; minutes += duration) {
-      const hour = Math.floor(minutes / 60);
-      const minute = minutes % 60;
-      const period = hour >= 12 ? 'PM' : 'AM';
-      const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
-      const displayMinute = minute.toString().padStart(2, '0');
-      slots.push(`${displayHour}:${displayMinute} ${period}`);
-    }
-    
-    return slots;
-  }
-
-  function selectTimeSlot(packageId, time, element) {
-    const timeScrollContainer = document.getElementById(`time-scroll-${packageId}`);
-    if (timeScrollContainer) {
-      timeScrollContainer.querySelectorAll('.time-slot-option').forEach(slot => {
-        slot.classList.remove('selected');
-      });
-    }
-    element.classList.add('selected');
-    if (!appointmentState[packageId]) {
-      appointmentState[packageId] = { link: '', date: '', time: '' };
-    }
-    appointmentState[packageId].time = time;
-    checkAppointmentComplete(packageId);
-  }
-
-  function checkAppointmentComplete(packageId) {
-    const state = appointmentState[packageId];
-    const selectButton = document.getElementById(`select-btn-${packageId}`);
-    let isClosedDay = false;
-    
-    if (state && state.date) {
-      // Check if this specific date is marked as CLOSED
-      if (APPOINTMENT_CONFIG.customDates[state.date] === 'CLOSED') {
-        isClosedDay = true;
-      } else {
-        // Parse date manually: YYYY-MM-DD
-        const [year, month, day] = state.date.split('-').map(Number);
-        const dateObj = new Date(year, month - 1, day); // month is 0-indexed
-        const dayOfWeek = dateObj.getDay();
-        const closedDays = [0, 1, 4]; // Sunday, Monday, Thursday
-        isClosedDay = closedDays.includes(dayOfWeek);
-      }
-    }
-    
-    if (state && state.link && state.date && state.time && !isClosedDay) {
-      selectButton.classList.add('enabled');
-      selectButton.onclick = function() {
-        addToCartWithAppointment(state.link, state.date, state.time);
-      };
-    } else {
-      selectButton.classList.remove('enabled');
-      selectButton.onclick = null;
-    }
-  }
-
-  function addToCartWithAppointment(cartLink, appointmentDate, appointmentTime) {
-    // Parse date manually to avoid timezone issues
-    // appointmentDate is in format: YYYY-MM-DD
-    const [year, month, day] = appointmentDate.split('-');
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                        'July', 'August', 'September', 'October', 'November', 'December'];
-    const formattedDate = `${monthNames[parseInt(month) - 1]} ${parseInt(day)}, ${year}`;
-    
-    const separator = cartLink.includes('?') ? '&' : '?';
-    const finalUrl = `${cartLink}${separator}properties[Appointment Date]=${encodeURIComponent(formattedDate)}&properties[Appointment Time]=${encodeURIComponent(appointmentTime)}`;
-    window.location.href = finalUrl;
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
+    // Session option selection handler
     document.querySelectorAll('.session-option').forEach(option => {
       option.addEventListener('click', function() {
         const parent = this.parentElement;
         const packageId = parent.id.replace('session-', '');
+        
+        // Deselect all options in this package
         parent.querySelectorAll('.session-option').forEach(opt => {
           opt.classList.remove('selected');
         });
+        
+        // Select this option
         this.classList.add('selected');
-        const selectedLink = this.getAttribute('data-link');
-        if (!appointmentState[packageId]) {
-          appointmentState[packageId] = { link: '', date: '', time: '' };
-        }
-        appointmentState[packageId].link = selectedLink;
-        const appointmentPicker = document.getElementById(`appointment-${packageId}`);
-        if (appointmentPicker) {
-          appointmentPicker.classList.add('active');
-          setTimeout(() => {
-            initCalendar(packageId);
-          }, 100);
-        }
+        
+        // Store selection data
+        enquiryState.packageName = this.getAttribute('data-package-name');
+        enquiryState.sessionLabel = this.getAttribute('data-session-label');
+        enquiryState.sessionPrice = this.getAttribute('data-session-price');
+        enquiryState.cartLink = this.getAttribute('data-link');
+        
+        // Enable SELECT button
         const selectButton = parent.querySelector('.session-select');
         selectButton.classList.add('enabled');
-        checkAppointmentComplete(packageId);
       });
     });
 
+    // SELECT button handler
+    document.querySelectorAll('.session-select').forEach(button => {
+      button.addEventListener('click', function() {
+        if (this.classList.contains('enabled')) {
+          openEnquiryModal();
+        }
+      });
+    });
+
+    // Modal overlay click to close
     document.querySelectorAll('.consultation-modal-overlay').forEach(overlay => {
       overlay.addEventListener('click', function(e) {
         if (e.target === this) {
@@ -2776,6 +1836,7 @@
       });
     });
 
+    // Escape key to close modals
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         document.querySelectorAll('.consultation-modal-overlay.active').forEach(modal => {
@@ -2784,6 +1845,20 @@
         });
       }
     });
+
+    // If form was submitted successfully, reopen modal to show success message
+    {% if form.posted_successfully? %}
+      setTimeout(function() {
+        openEnquiryModal();
+      }, 100);
+    {% endif %}
+
+    // If form has errors, reopen modal to show errors
+    {% if form.errors %}
+      setTimeout(function() {
+        openEnquiryModal();
+      }, 100);
+    {% endif %}
   });
 </script>
 
@@ -2791,35 +1866,6 @@
 {
   "name": "Treatment Tabs",
   "settings": [
-    {
-      "type": "header",
-      "content": "⚙️ APPOINTMENT SLOTS CONFIGURATION"
-    },
-    {
-      "type": "paragraph",
-      "content": "Configure your available appointment times. One time per line. Format: 10:00 AM"
-    },
-    {
-      "type": "textarea",
-      "id": "default_time_slots",
-      "label": "Default Time Slots (Regular Days)",
-      "info": "One time per line. Example: 10:00 AM",
-      "default": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM\n4:15 PM\n4:30 PM\n4:45 PM\n5:00 PM\n5:15 PM\n5:30 PM\n5:45 PM\n6:00 PM"
-    },
-    {
-      "type": "textarea",
-      "id": "saturday_time_slots",
-      "label": "Saturday Time Slots",
-      "info": "One time per line. Example: 10:00 AM",
-      "default": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM"
-    },
-    {
-      "type": "textarea",
-      "id": "custom_date_slots",
-      "label": "Custom Dates (Advanced)",
-      "info": "Format: 2025-12-25|CLOSED or 2025-12-31|10:00 AM,11:00 AM,2:00 PM (one date per line)",
-      "placeholder": "2025-12-25|CLOSED\n2025-12-31|10:00 AM,11:00 AM,2:00 PM"
-    },
     {
       "type": "header",
       "content": "Section Layout"
@@ -2856,6 +1902,29 @@
       "id": "section_background",
       "label": "Section Background Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Enquiry Form Settings"
+    },
+    {
+      "type": "text",
+      "id": "enquiry_modal_title",
+      "label": "Modal Title",
+      "default": "Request a Quote"
+    },
+    {
+      "type": "text",
+      "id": "enquiry_modal_subtitle",
+      "label": "Modal Subtitle",
+      "default": "Fill out the form below and we'll get back to you shortly"
+    },
+    {
+      "type": "text",
+      "id": "time_to_call_options",
+      "label": "Best Time to Call Options",
+      "info": "Comma-separated values (e.g., Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm))",
+      "default": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)"
     },
     {
       "type": "header",
@@ -2967,14 +2036,6 @@
       "id": "tab_active_border_color",
       "label": "Tab Active Border Color",
       "default": "#E6B325"
-    },
-    {
-      "type": "header",
-      "content": "Tab Scrollbar (Mobile)"
-    },
-    {
-      "type": "paragraph",
-      "content": "Customize the scrollbar that appears when tabs overflow on mobile. The scrollbar thumb uses the active tab background color."
     },
     {
       "type": "header",
@@ -3510,63 +2571,6 @@
         },
         {
           "type": "header",
-          "content": "Store Opening Hours"
-        },
-        {
-          "type": "paragraph",
-          "content": "Set your opening hours for each day. Format: 10:00AM-6:00PM or 'Closed'. These will be shown when customers click on the phone option."
-        },
-        {
-          "type": "text",
-          "id": "monday_hours",
-          "label": "Monday",
-          "default": "Closed"
-        },
-        {
-          "type": "text",
-          "id": "tuesday_hours",
-          "label": "Tuesday",
-          "default": "10:00AM-6:00PM"
-        },
-        {
-          "type": "text",
-          "id": "wednesday_hours",
-          "label": "Wednesday",
-          "default": "10:00AM-6:00PM"
-        },
-        {
-          "type": "text",
-          "id": "thursday_hours",
-          "label": "Thursday",
-          "default": "Closed"
-        },
-        {
-          "type": "text",
-          "id": "friday_hours",
-          "label": "Friday",
-          "default": "10:00AM-6:00PM"
-        },
-        {
-          "type": "text",
-          "id": "saturday_hours",
-          "label": "Saturday",
-          "default": "10:00AM-4:00PM"
-        },
-        {
-          "type": "text",
-          "id": "sunday_hours",
-          "label": "Sunday",
-          "default": "Closed"
-        },
-        {
-          "type": "textarea",
-          "id": "closed_message",
-          "label": "Closed Hours Message",
-          "default": "You can send us a WhatsApp, send us an email or call back during opening hours",
-          "info": "This message appears when the store is closed"
-        },
-        {
-          "type": "header",
           "content": "WhatsApp Option"
         },
         {
@@ -3679,7 +2683,7 @@
           "type": "text",
           "id": "session_3_label",
           "label": "Session Label",
-          "default": "3 session"
+          "default": "3 sessions"
         },
         {
           "type": "text",
@@ -3719,7 +2723,7 @@
           "type": "text",
           "id": "session_6_label",
           "label": "Session Label",
-          "default": "6 session"
+          "default": "6 sessions"
         },
         {
           "type": "text",
@@ -3759,7 +2763,7 @@
           "type": "text",
           "id": "session_10_label",
           "label": "Session Label",
-          "default": "10 session"
+          "default": "10 sessions"
         },
         {
           "type": "text",
@@ -3790,7 +2794,7 @@
   ],
   "presets": [
     {
-      "name": "Treatment Tabs with Appointments",
+      "name": "Treatment Tabs with Enquiry",
       "blocks": [
         {
           "type": "tab",
