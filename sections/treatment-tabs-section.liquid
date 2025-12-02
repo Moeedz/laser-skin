@@ -1035,6 +1035,13 @@
       font-size: 14px;
     }
   }
+  /* Style auto-filled fields as read-only */
+  .enquiry-form-wrapper input[name="contact[Treatment Name]"],
+  .enquiry-form-wrapper input[name="contact[Selected Sessions]"] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
 </style>
 
 <div class="treatment-tabs-section">
@@ -1670,12 +1677,12 @@
               {%- render 'select', option_values: time_options, show_empty_value: true, name: 'contact[Best time to call]', label: label, required: false, id_prefix: 'enquiry' -%}
             {%- endif -%}
 
-            {%- comment -%} Auto-filled fields (visible but read-only) {%- endcomment -%}
+            {%- comment -%} Auto-filled fields (visible for display) {%- endcomment -%}
             {%- assign label = 'Treatment Name' -%}
-            {%- render 'input', type: 'text', name: 'contact[Treatment Name]', label: label, required: true, disabled: true, id_prefix: 'enquiry' -%}
+            {%- render 'input', type: 'text', name: 'contact[Treatment Name]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
 
             {%- assign label = 'Selected Sessions' -%}
-            {%- render 'input', type: 'text', name: 'contact[Selected Sessions]', label: label, required: true, disabled: true, id_prefix: 'enquiry' -%}
+            {%- render 'input', type: 'text', name: 'contact[Selected Sessions]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
 
             {%- assign label = 'Message' -%}
             {%- render 'input', name: 'contact[body]', label: label, multiline: 4, required: true, id_prefix: 'enquiry' -%}
@@ -1752,15 +1759,17 @@
   function openEnquiryModal() {
   const modal = document.getElementById('enquiry-modal');
   if (modal) {
-    // Populate auto-filled fields
-    const treatmentNameInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-treatment-name');
-    const selectedSessionsInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-selected-sessions');
+    // Populate auto-filled fields using name attribute (more reliable)
+    const treatmentNameInput = document.querySelector('input[name="contact[Treatment Name]"]');
+    const selectedSessionsInput = document.querySelector('input[name="contact[Selected Sessions]"]');
     
     if (treatmentNameInput) {
       treatmentNameInput.value = enquiryState.packageName;
+      treatmentNameInput.setAttribute('readonly', true);
     }
     if (selectedSessionsInput) {
       selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionPrice}`;
+      selectedSessionsInput.setAttribute('readonly', true);
     }
     
     modal.classList.add('active');
