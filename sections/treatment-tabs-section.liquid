@@ -1750,23 +1750,23 @@
   }
 
   function openEnquiryModal() {
-    const modal = document.getElementById('enquiry-modal');
-    if (modal) {
-      // Populate hidden fields
-      const treatmentNameInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-treatment-name');
-      const selectedSessionsInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-selected-sessions');
-      
-      if (treatmentNameInput) {
-        treatmentNameInput.value = enquiryState.packageName;
-      }
-      if (selectedSessionsInput) {
-        selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionPrice}`;
-      }
-      
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  const modal = document.getElementById('enquiry-modal');
+  if (modal) {
+    // Populate auto-filled fields
+    const treatmentNameInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-treatment-name');
+    const selectedSessionsInput = document.querySelector('#input-enquiry-{{ section.id }}-treatment-enquiry-form-contact-selected-sessions');
+    
+    if (treatmentNameInput) {
+      treatmentNameInput.value = enquiryState.packageName;
     }
+    if (selectedSessionsInput) {
+      selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionPrice}`;
+    }
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
+}
 
   function closeEnquiryModal() {
     const modal = document.getElementById('enquiry-modal');
