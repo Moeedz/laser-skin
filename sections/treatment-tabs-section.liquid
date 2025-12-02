@@ -1670,12 +1670,16 @@
               {%- render 'select', option_values: time_options, show_empty_value: true, name: 'contact[Best time to call]', label: label, required: false, id_prefix: 'enquiry' -%}
             {%- endif -%}
 
-            {%- comment -%} Hidden fields auto-populated by JavaScript {%- endcomment -%}
-            {%- render 'input', type: 'hidden', name: 'contact[Treatment Name]', id_prefix: 'enquiry' -%}
-            {%- render 'input', type: 'hidden', name: 'contact[Selected Sessions]', id_prefix: 'enquiry' -%}
+            {%- comment -%} Auto-filled fields (visible but read-only) {%- endcomment -%}
+            {%- assign label = 'Treatment Name' -%}
+            {%- render 'input', type: 'text', name: 'contact[Treatment Name]', label: label, required: true, disabled: true, id_prefix: 'enquiry' -%}
+
+            {%- assign label = 'Selected Sessions' -%}
+            {%- render 'input', type: 'text', name: 'contact[Selected Sessions]', label: label, required: true, disabled: true, id_prefix: 'enquiry' -%}
 
             {%- assign label = 'Message' -%}
             {%- render 'input', name: 'contact[body]', label: label, multiline: 4, required: true, id_prefix: 'enquiry' -%}
+
           </div>
 
           {%- assign button_content = 'Submit Enquiry' -%}
