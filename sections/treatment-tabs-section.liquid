@@ -1941,6 +1941,62 @@
 
 <script>
 
+  <script>
+  // FORCE POST - Prevent any interference
+  (function() {
+    let formSubmitted = false;
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('treatment-enquiry-form');
+      
+      if (form) {
+        // Override form submission
+        form.addEventListener('submit', function(e) {
+          if (formSubmitted) return;
+          
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          
+          // Create a fresh form that submits via POST
+          const tempForm = document.createElement('form');
+          tempForm.method = 'POST';
+          tempForm.action = '/contact';
+          tempForm.style.display = 'none';
+          
+          // Copy all form data
+          const formData = new FormData(form);
+          for (let [key, value] of formData.entries()) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            tempForm.appendChild(input);
+          }
+          
+          // Add required hidden fields
+          const formType = document.createElement('input');
+          formType.type = 'hidden';
+          formType.name = 'form_type';
+          formType.value = 'contact';
+          tempForm.appendChild(formType);
+          
+          const utf8 = document.createElement('input');
+          utf8.type = 'hidden';
+          utf8.name = 'utf8';
+          utf8.value = '✓';
+          tempForm.appendChild(utf8);
+          
+          // Submit
+          document.body.appendChild(tempForm);
+          formSubmitted = true;
+          tempForm.submit();
+        }, true);
+      }
+    });
+  })();
+  
+  // ... rest of your existing code
+
   // Enquiry state management
   const enquiryState = {
     packageName: '',
