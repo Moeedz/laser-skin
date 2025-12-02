@@ -1066,6 +1066,7 @@
       "blocks": {
         "text_TjwyWf": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What is the difference between a Full Hydrafacial and an Express Hydrafacial?",
             "answer": "<p>The Express Hydrofacial is a quicker, more streamlined version of the treatment. It focuses on the first three core cleansing and exfoliating steps of the full seven-step Hydrofacial, giving your skin a refreshed, cleansed boost in roughly half the time.</p><p>The Full Hydrofacial includes all seven steps for deeper rejuvenation, enhanced hydration and maximum glow.</p>"
