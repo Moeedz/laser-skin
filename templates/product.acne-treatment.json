@@ -204,6 +204,9 @@
         "section_padding_top": 40,
         "section_padding_bottom": 40,
         "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
         "tab_alignment": "center",
         "tab_gap": 12,
         "tab_font_size": 15,
@@ -248,7 +251,7 @@
         "show_collapsible_1": true,
         "collapsible_1_title": "7-Day Appointment Guarantee",
         "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers will be seen within 7 days of their initial booking. If we’re unable to do so, you’ll receive either a full refund or a £50 voucher to spend at Laser Skin Clinics.</p>",
+        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers can be seen within 7 days of their enquiry.</p>",
         "show_collapsible_2": true,
         "collapsible_2_title": "Course Price Match Guarantee",
         "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
@@ -268,7 +271,12 @@
         "show_collapsible_6": true,
         "collapsible_6_title": "Contact and address",
         "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
-        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>"
+        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>",
+        "show_faq_link": true,
+        "faq_pre_text": "Have more questions?",
+        "faq_link_text": "View FAQs",
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
       }
     },
     "ss_image_with_text_12_PPNnyT": {
