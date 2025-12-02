@@ -2655,16 +2655,16 @@
         "questions-font-size": 1
       }
     },
-    "contact_DWareM": {
-      "type": "contact",
-      "disabled": true,
-      "name": "t:sections.contact.presets.contact_form.name",
+    "custom_liquid_deNDcz": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
-        "subheading": "",
-        "title": "Contact",
-        "content": ""
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<!-- SUPER SIMPLE TEST -->\n<div style=\"max-width: 600px; margin: 40px auto; padding: 20px; background: #ffcccc; border: 3px solid red;\">\n  <h2>🔴 MINIMAL TEST FORM</h2>\n  \n  {%- form 'contact', method: 'post' -%}\n    {%- if form.posted_successfully? -%}\n      <p style=\"background: green; color: white; padding: 20px;\">✅ SUCCESS!</p>\n    {%- endif -%}\n    \n    {%- if form.errors -%}\n      <p style=\"background: red; color: white; padding: 20px;\">❌ Error: {{ form.errors.messages[form.errors.first] }}</p>\n    {%- endif -%}\n    \n    <input type=\"text\" name=\"contact[name]\" placeholder=\"Name\" required style=\"width: 100%; padding: 10px; margin: 10px 0;\">\n    <input type=\"email\" name=\"contact[email]\" placeholder=\"Email\" required style=\"width: 100%; padding: 10px; margin: 10px 0;\">\n    <textarea name=\"contact[body]\" placeholder=\"Message\" required style=\"width: 100%; padding: 10px; margin: 10px 0;\"></textarea>\n    <button type=\"submit\" style=\"padding: 12px 30px; background: blue; color: white; border: none;\">TEST SUBMIT</button>\n  {%- endform -%}\n</div>",
+        "text_alignment": "center"
       }
     }
   },
@@ -2683,6 +2683,6 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
-    "contact_DWareM"
+    "custom_liquid_deNDcz"
   ]
 }
