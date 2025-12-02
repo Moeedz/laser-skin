@@ -64,8 +64,8 @@
         "appointment_picker_iUiMMf": {
           "type": "appointment_picker",
           "settings": {
-            "default_slots": "10:00 AM\n11:00 AM\n1:00 PM\n3:00 PM\n5:00 PM",
-            "saturday_slots": "10:00 AM\n12:00 PM\n2:00 PM\n3:00 PM",
+            "default_slots": "11:00 AM\n1:00 PM\n3:00 PM",
+            "saturday_slots": "1:00 PM\n2:00 PM",
             "custom_dates": "2025-12-23|CLOSED\n2025-12-25|CLOSED\n2025-12-24|CLOSED\n2025-12-26|CLOSED\n2025-12-31|CLOSED\n2026-01-01|CLOSED"
           }
         },
@@ -256,13 +256,13 @@
       "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
-        "default_time_slots": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM\n4:15 PM\n4:30 PM\n4:45 PM\n5:00 PM\n5:15 PM\n5:30 PM\n5:45 PM\n6:00 PM",
-        "saturday_time_slots": "10:00 AM\n10:15 AM\n10:30 AM\n10:45 AM\n11:00 AM\n11:15 AM\n11:30 AM\n11:45 AM\n12:00 PM\n12:15 PM\n12:30 PM\n12:45 PM\n1:00 PM\n1:15 PM\n1:30 PM\n1:45 PM\n2:00 PM\n2:15 PM\n2:30 PM\n2:45 PM\n3:00 PM\n3:15 PM\n3:30 PM\n3:45 PM\n4:00 PM",
-        "custom_date_slots": "",
         "section_width": 1400,
         "section_padding_top": 40,
         "section_padding_bottom": 40,
         "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
         "tab_alignment": "center",
         "tab_gap": 12,
         "tab_font_size": 15,
