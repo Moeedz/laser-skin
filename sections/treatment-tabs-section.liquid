@@ -1933,6 +1933,21 @@
 </div>
 
 <script>
+  
+  // Force POST submission
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('treatment-enquiry-form');
+  if (form) {
+    // Remove any existing submit handlers
+    const newForm = form.cloneNode(true);
+    form.parentNode.replaceChild(newForm, form);
+    
+    // Ensure POST method
+    newForm.setAttribute('method', 'post');
+    newForm.setAttribute('action', '/contact');
+  }
+});
+
   // Enquiry state management
   const enquiryState = {
     packageName: '',
