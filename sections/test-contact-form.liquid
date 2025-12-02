@@ -1,0 +1,47 @@
+<div style="padding: 40px; max-width: 600px; margin: 0 auto; background: #f5f5f5;">
+  <h2 style="margin-bottom: 20px;">🧪 Simple Test Form</h2>
+  
+  {%- form 'contact' -%}
+    {%- if form.posted_successfully? -%}
+      <div style="padding: 20px; background: #d4edda; color: #155724; margin-bottom: 20px; border-radius: 5px;">
+        ✅ SUCCESS! Form submitted via POST correctly!
+      </div>
+    {%- endif -%}
+    
+    {%- if form.errors -%}
+      <div style="padding: 20px; background: #f8d7da; color: #721c24; margin-bottom: 20px; border-radius: 5px;">
+        ❌ Error: {{ form.errors.messages[form.errors.first] }}
+      </div>
+    {%- endif -%}
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: bold;">Name:</label>
+      <input type="text" name="contact[name]" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+      <input type="email" name="contact[email]" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
+      <textarea name="contact[body]" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; min-height: 100px;"></textarea>
+    </div>
+    
+    <button type="submit" style="padding: 12px 30px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+      Submit Test
+    </button>
+  {%- endform -%}
+  
+  <p style="margin-top: 20px; font-size: 14px; color: #666;">
+    📌 After submitting, check the URL. If data appears in URL, there's a site-wide issue.
+  </p>
+</div>
+
+{% schema %}
+{
+  "name": "Test Contact Form",
+  "settings": []
+}
+{% endschema %}
