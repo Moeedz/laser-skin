@@ -1942,9 +1942,9 @@
     cartLink: ''
   };
 
-  let packagesVisible = false;
+ let packagesVisible = false;
 
-  function switchTab(tabId) {
+function switchTab(tabId) {
   document.querySelectorAll('.tab-button').forEach(btn => {
     btn.classList.remove('active');
   });
@@ -1964,17 +1964,14 @@
   
   // NEW: Keep packages visible when switching tabs
   if (packagesVisible) {
-    const packagesContainer = document.getElementById(`packages-${tabId}`);
-    const ctaCard = document.getElementById(`cta-card-${tabId}`);
-    
-    if (packagesContainer && ctaCard) {
+    const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
+    if (packagesContainer) {
       packagesContainer.classList.add('active');
-      ctaCard.style.display = 'none';
     }
   }
 }
 
-  function togglePackages(tabId) {
+function togglePackages(tabId) {
   const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
   packagesContainer.classList.toggle('active');
   
