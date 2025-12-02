@@ -1864,10 +1864,21 @@
   {% endfor %}
 </div>
 
-<!-- TEMPORARY TEST - Form outside modal -->
-<div style="max-width: 600px; margin: 40px auto; padding: 20px; background: #f5f5f5;">
-  <h3>TEST: Form Outside Modal</h3>
-{%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
+<!-- Global Enquiry Form Modal -->
+<div class="consultation-modal-overlay" id="enquiry-modal">
+  <div class="enquiry-modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeEnquiryModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 class="modal-title">{{ section.settings.enquiry_modal_title | default: 'Get in Touch' }}</h3>
+      <p class="modal-subtitle">{{ section.settings.enquiry_modal_subtitle | default: 'Fill out the form below and we will get back to you shortly' }}</p>
+    </div>
+    <div class="modal-content">
+      <div class="enquiry-form-wrapper">
+        {%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
           {%- if form.posted_successfully? -%}
             {%- assign content = 'contact.form.success_message' | t -%}
             {%- render 'banner', status: 'success', content: content -%}
@@ -1916,86 +1927,12 @@
           {%- assign button_content = 'Submit Enquiry' -%}
           {%- render 'button', content: button_content, type: 'submit', stretch: true -%}
         {%- endform -%}
-
-        </div>
-
-<!-- Global Enquiry Form Modal -->
-<div class="consultation-modal-overlay" id="enquiry-modal">
-  <div class="enquiry-modal">
-    <div class="modal-header">
-      <button class="modal-close" onclick="closeEnquiryModal()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <h3 class="modal-title">{{ section.settings.enquiry_modal_title | default: 'Get in Touch' }}</h3>
-      <p class="modal-subtitle">{{ section.settings.enquiry_modal_subtitle | default: 'Fill out the form below and we will get back to you shortly' }}</p>
-    </div>
-    <div class="modal-content">
-      <div class="enquiry-form-wrapper">
-        
       </div>
     </div>
   </div>
 </div>
 
 <script>
-
-  <script>
-  // FORCE POST - Prevent any interference
-  (function() {
-    let formSubmitted = false;
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('treatment-enquiry-form');
-      
-      if (form) {
-        // Override form submission
-        form.addEventListener('submit', function(e) {
-          if (formSubmitted) return;
-          
-          e.preventDefault();
-          e.stopImmediatePropagation();
-          
-          // Create a fresh form that submits via POST
-          const tempForm = document.createElement('form');
-          tempForm.method = 'POST';
-          tempForm.action = '/contact';
-          tempForm.style.display = 'none';
-          
-          // Copy all form data
-          const formData = new FormData(form);
-          for (let [key, value] of formData.entries()) {
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = key;
-            input.value = value;
-            tempForm.appendChild(input);
-          }
-          
-          // Add required hidden fields
-          const formType = document.createElement('input');
-          formType.type = 'hidden';
-          formType.name = 'form_type';
-          formType.value = 'contact';
-          tempForm.appendChild(formType);
-          
-          const utf8 = document.createElement('input');
-          utf8.type = 'hidden';
-          utf8.name = 'utf8';
-          utf8.value = '✓';
-          tempForm.appendChild(utf8);
-          
-          // Submit
-          document.body.appendChild(tempForm);
-          formSubmitted = true;
-          tempForm.submit();
-        }, true);
-      }
-    });
-  })();
-  
-  // ... rest of your existing code
 
   // Enquiry state management
   const enquiryState = {
