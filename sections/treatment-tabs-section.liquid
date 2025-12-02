@@ -1245,6 +1245,7 @@
                            data-package-name="{{ package_block.settings.package_name }}"
                            data-session-label="{{ package_block.settings.session_1_label }}"
                            data-session-price="{{ package_block.settings.session_1_price }}"
+                           data-session-total="{{ package_block.settings.session_1_total }}"
                            data-link="{{ package_block.settings.session_1_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_1_label }}</span>
@@ -1262,6 +1263,7 @@
                            data-package-name="{{ package_block.settings.package_name }}"
                            data-session-label="{{ package_block.settings.session_3_label }}"
                            data-session-price="{{ package_block.settings.session_3_price }}"
+                           data-session-total="{{ package_block.settings.session_3_total }}"
                            data-link="{{ package_block.settings.session_3_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_3_label }}</span>
@@ -1279,6 +1281,7 @@
                            data-package-name="{{ package_block.settings.package_name }}"
                            data-session-label="{{ package_block.settings.session_6_label }}"
                            data-session-price="{{ package_block.settings.session_6_price }}"
+                           data-session-total="{{ package_block.settings.session_6_total }}"
                            data-link="{{ package_block.settings.session_6_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_6_label }}</span>
@@ -1296,6 +1299,7 @@
                            data-package-name="{{ package_block.settings.package_name }}"
                            data-session-label="{{ package_block.settings.session_10_label }}"
                            data-session-price="{{ package_block.settings.session_10_price }}"
+                           data-session-total="{{ package_block.settings.session_10_total }}"
                            data-link="{{ package_block.settings.session_10_link }}">
                         <div class="session-info">
                           <span class="session-label">{{ package_block.settings.session_10_label }}</span>
@@ -1703,6 +1707,7 @@
     packageName: '',
     sessionLabel: '',
     sessionPrice: '',
+    sessionTotal: '',
     cartLink: ''
   };
 
@@ -1768,9 +1773,9 @@
   treatmentNameInput.setAttribute('readonly', true);
 }
     if (selectedSessionsInput) {
-      selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionPrice}`;
-      selectedSessionsInput.setAttribute('readonly', true);
-    }
+  selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
+  selectedSessionsInput.setAttribute('readonly', true);
+}
     
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -1822,6 +1827,7 @@
         enquiryState.packageName = this.getAttribute('data-package-name');
         enquiryState.sessionLabel = this.getAttribute('data-session-label');
         enquiryState.sessionPrice = this.getAttribute('data-session-price');
+        enquiryState.sessionTotal = this.getAttribute('data-session-total');
         enquiryState.cartLink = this.getAttribute('data-link');
         
         // Enable SELECT button
