@@ -1942,29 +1942,49 @@
     cartLink: ''
   };
 
+  let packagesVisible = false;
+
   function switchTab(tabId) {
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
-      btn.classList.add('active');
-    });
-    document.querySelectorAll('.tab-content').forEach(content => {
-      content.classList.remove('active');
-    });
-    document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
-    document.querySelectorAll('.packages-container').forEach(container => {
-      container.classList.remove('active');
-    });
-    document.querySelectorAll('.session-options').forEach(session => {
-      session.classList.remove('active');
-    });
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
+    btn.classList.add('active');
+  });
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.classList.remove('active');
+  });
+  document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
+  document.querySelectorAll('.packages-container').forEach(container => {
+    container.classList.remove('active');
+  });
+  document.querySelectorAll('.session-options').forEach(session => {
+    session.classList.remove('active');
+  });
+  
+  // NEW: Keep packages visible when switching tabs
+  if (packagesVisible) {
+    const packagesContainer = document.getElementById(`packages-${tabId}`);
+    const ctaCard = document.getElementById(`cta-card-${tabId}`);
+    
+    if (packagesContainer && ctaCard) {
+      packagesContainer.classList.add('active');
+      ctaCard.style.display = 'none';
+    }
   }
+}
 
   function togglePackages(tabId) {
-    const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
-    packagesContainer.classList.toggle('active');
+  const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
+  packagesContainer.classList.toggle('active');
+  
+  // Track if packages are now visible or hidden
+  if (packagesContainer.classList.contains('active')) {
+    packagesVisible = true;
+  } else {
+    packagesVisible = false;
   }
+}
 
   function toggleSessionOptions(packageId) {
     const sessionOptions = document.getElementById(`session-${packageId}`);
