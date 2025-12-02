@@ -1864,21 +1864,10 @@
   {% endfor %}
 </div>
 
-<!-- Global Enquiry Form Modal -->
-<div class="consultation-modal-overlay" id="enquiry-modal">
-  <div class="enquiry-modal">
-    <div class="modal-header">
-      <button class="modal-close" onclick="closeEnquiryModal()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <h3 class="modal-title">{{ section.settings.enquiry_modal_title | default: 'Get in Touch' }}</h3>
-      <p class="modal-subtitle">{{ section.settings.enquiry_modal_subtitle | default: 'Fill out the form below and we will get back to you shortly' }}</p>
-    </div>
-    <div class="modal-content">
-      <div class="enquiry-form-wrapper">
-        {%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
+<!-- TEMPORARY TEST - Form outside modal -->
+<div style="max-width: 600px; margin: 40px auto; padding: 20px; background: #f5f5f5;">
+  <h3>TEST: Form Outside Modal</h3>
+{%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
           {%- if form.posted_successfully? -%}
             {%- assign content = 'contact.form.success_message' | t -%}
             {%- render 'banner', status: 'success', content: content -%}
@@ -1927,6 +1916,24 @@
           {%- assign button_content = 'Submit Enquiry' -%}
           {%- render 'button', content: button_content, type: 'submit', stretch: true -%}
         {%- endform -%}
+
+        </div>
+
+<!-- Global Enquiry Form Modal -->
+<div class="consultation-modal-overlay" id="enquiry-modal">
+  <div class="enquiry-modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeEnquiryModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 class="modal-title">{{ section.settings.enquiry_modal_title | default: 'Get in Touch' }}</h3>
+      <p class="modal-subtitle">{{ section.settings.enquiry_modal_subtitle | default: 'Fill out the form below and we will get back to you shortly' }}</p>
+    </div>
+    <div class="modal-content">
+      <div class="enquiry-form-wrapper">
+        
       </div>
     </div>
   </div>
