@@ -198,5 +198,393 @@ span.mobile-btn a {
         {%- sections 'footer-group' -%}
       {%- endif -%}
     </main>
+
+    <!-- Global Consultation Modal -->
+<div class="consultation-modal-overlay global-consultation-modal" id="global-consultation-modal">
+  <div class="consultation-modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeGlobalConsultation()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 class="modal-title">How would you like to contact us?</h3>
+      <p class="modal-subtitle">Choose your preferred method to get in touch with us</p>
+    </div>
+    <div class="modal-content">
+      <div class="consultation-options">
+        
+        <!-- Contact Form Option -->
+        <a href="/pages/contact" class="consultation-option">
+          <div class="consultation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="consultation-details">
+            <div class="consultation-method">Contact Form</div>
+            <div class="consultation-info">Fill out our online form</div>
+          </div>
+          <div class="consultation-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Phone Option -->
+        <div class="consultation-option" onclick="window.location.href='tel:01902256567'">
+          <div class="consultation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <div class="consultation-details">
+            <div class="consultation-method">Call Us</div>
+            <div class="consultation-info">01902256567</div>
+          </div>
+          <div class="consultation-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- WhatsApp Option -->
+        <a href="https://wa.me/447798983387" target="_blank" class="consultation-option">
+          <div class="consultation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+          </div>
+          <div class="consultation-details">
+            <div class="consultation-method">WhatsApp</div>
+            <div class="consultation-info">+44 7798 983387</div>
+          </div>
+          <div class="consultation-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Global Consultation Modal Styles */
+  .global-consultation-modal.consultation-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    animation: fadeIn 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .global-consultation-modal.consultation-modal-overlay.active {
+    display: flex;
+  }
+
+  .global-consultation-modal .consultation-modal {
+    background: white;
+    border-radius: 16px;
+    max-width: 420px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .global-consultation-modal .modal-header {
+    padding: 25px 25px 20px;
+    position: relative;
+    border-bottom: none;
+  }
+
+  .global-consultation-modal .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+  }
+
+  .global-consultation-modal .modal-close:hover {
+    background: #f5f5f5;
+  }
+
+  .global-consultation-modal .modal-close svg {
+    width: 20px;
+    height: 20px;
+    stroke: #999;
+  }
+
+  .global-consultation-modal .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    padding-right: 30px;
+    line-height: 1.3;
+  }
+
+  .global-consultation-modal .modal-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  .global-consultation-modal .modal-content {
+    padding: 10px 20px 25px;
+  }
+
+  .global-consultation-modal .consultation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .global-consultation-modal .consultation-option {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .global-consultation-modal .consultation-option:hover {
+    border-color: #d0d0d0;
+    background: #fafafa;
+    transform: translateX(2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .global-consultation-modal .consultation-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+    flex-shrink: 0;
+  }
+
+  .global-consultation-modal .consultation-option:nth-child(1) .consultation-icon {
+    background: #FFF4E6;
+  }
+
+  .global-consultation-modal .consultation-option:nth-child(1) .consultation-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: #FF9500;
+    fill: none;
+  }
+
+  .global-consultation-modal .consultation-option:nth-child(2) .consultation-icon {
+    background: #E3F2FD;
+  }
+
+  .global-consultation-modal .consultation-option:nth-child(2) .consultation-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: #2196F3;
+    fill: none;
+  }
+
+  .global-consultation-modal .consultation-option:nth-child(3) .consultation-icon {
+    background: #E8F5E9;
+  }
+
+  .global-consultation-modal .consultation-option:nth-child(3) .consultation-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #4CAF50;
+  }
+
+  .global-consultation-modal .consultation-details {
+    flex: 1;
+  }
+
+  .global-consultation-modal .consultation-method {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 2px;
+  }
+
+  .global-consultation-modal .consultation-info {
+    font-size: 13px;
+    color: #6c757d;
+    line-height: 1.3;
+  }
+
+  .global-consultation-modal .consultation-arrow {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+  }
+
+  .global-consultation-modal .consultation-option:hover .consultation-arrow {
+    opacity: 0.6;
+  }
+
+  .global-consultation-modal .consultation-arrow svg {
+    width: 16px;
+    height: 16px;
+    stroke: #666;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .global-consultation-modal .consultation-modal {
+      width: 95%;
+      margin: 10px;
+      border-radius: 12px;
+    }
+
+    .global-consultation-modal .modal-header {
+      padding: 20px 20px 15px;
+    }
+
+    .global-consultation-modal .modal-title {
+      font-size: 18px;
+    }
+
+    .global-consultation-modal .modal-subtitle {
+      font-size: 13px;
+    }
+
+    .global-consultation-modal .modal-content {
+      padding: 5px 15px 20px;
+    }
+
+    .global-consultation-modal .consultation-option {
+      padding: 14px;
+    }
+
+    .global-consultation-modal .consultation-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      border-radius: 8px;
+    }
+
+    .global-consultation-modal .consultation-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .global-consultation-modal .consultation-method {
+      font-size: 14px;
+    }
+
+    .global-consultation-modal .consultation-info {
+      font-size: 12px;
+    }
+
+    .global-consultation-modal .modal-close {
+      top: 12px;
+      right: 12px;
+      width: 26px;
+      height: 26px;
+    }
+
+    .global-consultation-modal .modal-close svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+</style>
+
+<script>
+  // Global functions for consultation modal
+  window.openGlobalConsultation = function() {
+    const modal = document.getElementById('global-consultation-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeGlobalConsultation = function() {
+    const modal = document.getElementById('global-consultation-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Close modal when clicking outside
+  document.addEventListener('click', function(e) {
+    const modal = document.getElementById('global-consultation-modal');
+    if (e.target === modal) {
+      closeGlobalConsultation();
+    }
+  });
+
+  // Close modal on ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeGlobalConsultation();
+    }
+  });
+
+  // Initialize header button
+  document.addEventListener('DOMContentLoaded', function() {
+    const headerBtn = document.querySelector('.header-contact-trigger');
+    if (headerBtn) {
+      headerBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openGlobalConsultation();
+      });
+    }
+  });
+</script>
+
   </body>
 </html>
