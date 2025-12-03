@@ -1948,16 +1948,6 @@
 
 <script>
 
-  // Make modal opening function global for header button
-window.openHeaderConsultation = function() {
-  // Get the first tab's identifier (or change 'face' to your default tab)
-  const firstTab = document.querySelector('.tab-content');
-  if (firstTab) {
-    const tabId = firstTab.getAttribute('data-tab-content');
-    openConsultationModal(tabId);
-  }
-};
-
   // Enquiry state management
   const enquiryState = {
     packageName: '',
