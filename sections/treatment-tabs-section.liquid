@@ -1948,88 +1948,15 @@
 
 <script>
 
-  // Add this inside the existing <script> tag in your Treatment Tabs section
-
-// Global function to open consultation modal from header
-window.openConsultationFromHeader = function(specificTabId = null) {
-  try {
-    let tabId;
-    
-    if (specificTabId) {
-      // Use specific tab if provided
-      tabId = specificTabId;
-    } else {
-      // Get currently active tab
-      const activeTab = document.querySelector('.tab-content.active');
-      if (activeTab) {
-        tabId = activeTab.getAttribute('data-tab-content');
-      } else {
-        // Fallback to first tab
-        const firstTab = document.querySelector('.tab-content');
-        if (firstTab) {
-          tabId = firstTab.getAttribute('data-tab-content');
-        }
-      }
-    }
-    
-    if (tabId) {
-      // Make sure the tab is active first
-      switchTab(tabId);
-      
-      // Small delay to ensure DOM is ready
-      setTimeout(function() {
-        openConsultationModal(tabId);
-      }, 100);
-      
-      // Scroll to section
-      const treatmentSection = document.querySelector('.treatment-tabs-section');
-      if (treatmentSection) {
-        setTimeout(function() {
-          const headerOffset = 100;
-          const elementPosition = treatmentSection.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }, 150);
-      }
-    } else {
-      console.error('No treatment tabs found');
-    }
-  } catch (error) {
-    console.error('Error opening consultation modal:', error);
+  // Make modal opening function global for header button
+window.openHeaderConsultation = function() {
+  // Get the first tab's identifier (or change 'face' to your default tab)
+  const firstTab = document.querySelector('.tab-content');
+  if (firstTab) {
+    const tabId = firstTab.getAttribute('data-tab-content');
+    openConsultationModal(tabId);
   }
 };
-
-// Initialize header button listener
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initHeaderContactButton);
-} else {
-  initHeaderContactButton();
-}
-
-function initHeaderContactButton() {
-  const headerContactBtn = document.querySelector('.header-contact-trigger');
-  
-  if (headerContactBtn) {
-    // Remove any existing listeners
-    headerContactBtn.replaceWith(headerContactBtn.cloneNode(true));
-    
-    // Get the new element and add listener
-    const newBtn = document.querySelector('.header-contact-trigger');
-    newBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      // Open modal for currently active tab (or first tab)
-      window.openConsultationFromHeader();
-    });
-    
-    console.log('Header contact button initialized');
-  }
-}
 
   // Enquiry state management
   const enquiryState = {
