@@ -1977,7 +1977,6 @@ function switchTab(tabId) {
     session.classList.remove('active');
   });
   
-  // NEW: Keep packages visible when switching tabs
   if (packagesVisible) {
     const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
     if (packagesContainer) {
@@ -1990,7 +1989,6 @@ function togglePackages(tabId) {
   const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
   packagesContainer.classList.toggle('active');
   
-  // Track if packages are now visible or hidden
   if (packagesContainer.classList.contains('active')) {
     packagesVisible = true;
   } else {
@@ -2126,24 +2124,26 @@ function togglePackages(tabId) {
   }
 
   function openEnquiryModal() {
-  const modal = document.getElementById('enquiry-modal');
-  if (modal) {
-    // Use new field names
-    const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
-    const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
-    
-    if (treatmentNameInput) {
-      treatmentNameInput.value = `${enquiryState.packageName} - {{ product.title }}`;
-      treatmentNameInput.setAttribute('readonly', true);
+    const modal = document.getElementById('enquiry-modal');
+    if (modal) {
+      const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
+      const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
+      
+      if (treatmentNameInput) {
+        treatmentNameInput.value = `${enquiryState.packageName}`;
+        treatmentNameInput.setAttribute('readonly', true);
+      }
+      if (selectedSessionsInput) {
+        selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
+        selectedSessionsInput.setAttribute('readonly', true);
+      }
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Store in sessionStorage that modal should be open
+      sessionStorage.setItem('enquiryModalOpen', 'true');
     }
-    if (selectedSessionsInput) {
-      selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
-      selectedSessionsInput.setAttribute('readonly', true);
-    }
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
   }
 
   function closeEnquiryModal() {
@@ -2151,6 +2151,8 @@ function togglePackages(tabId) {
     if (modal) {
       modal.classList.remove('active');
       document.body.style.overflow = '';
+      // Clear the flag
+      sessionStorage.removeItem('enquiryModalOpen');
     }
   }
 
@@ -2179,22 +2181,18 @@ function togglePackages(tabId) {
         const parent = this.parentElement;
         const packageId = parent.id.replace('session-', '');
         
-        // Deselect all options in this package
         parent.querySelectorAll('.session-option').forEach(opt => {
           opt.classList.remove('selected');
         });
         
-        // Select this option
         this.classList.add('selected');
         
-        // Store selection data
         enquiryState.packageName = this.getAttribute('data-package-name');
         enquiryState.sessionLabel = this.getAttribute('data-session-label');
         enquiryState.sessionPrice = this.getAttribute('data-session-price');
         enquiryState.sessionTotal = this.getAttribute('data-session-total');
         enquiryState.cartLink = this.getAttribute('data-link');
         
-        // Enable SELECT button
         const selectButton = parent.querySelector('.session-select');
         selectButton.classList.add('enabled');
       });
@@ -2226,21 +2224,25 @@ function togglePackages(tabId) {
           modal.classList.remove('active');
           document.body.style.overflow = '';
         });
+        sessionStorage.removeItem('enquiryModalOpen');
       }
     });
 
-    // If form was submitted successfully, reopen modal to show success message
-    {% if form.posted_successfully? %}
-      setTimeout(function() {
-        openEnquiryModal();
-      }, 100);
-    {% endif %}
-
-    // If form has errors, reopen modal to show errors
-    {% if form.errors %}
-      setTimeout(function() {
-        openEnquiryModal();
-      }, 100);
+    // Check if modal should be reopened after form submission
+    {% if form.posted_successfully? or form.errors %}
+      // Check if the modal was open before page reload
+      if (sessionStorage.getItem('enquiryModalOpen') === 'true') {
+        setTimeout(function() {
+          openEnquiryModal();
+          // Scroll to the success/error message
+          setTimeout(function() {
+            const banner = document.querySelector('.enquiry-form-wrapper .banner');
+            if (banner) {
+              banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          }, 300);
+        }, 100);
+      }
     {% endif %}
   });
 </script>
