@@ -574,15 +574,16 @@ span.mobile-btn a {
     }
   });
 
-  // Initialize header button
+  // Initialize ALL header buttons (both desktop and mobile)
   document.addEventListener('DOMContentLoaded', function() {
-    const headerBtn = document.querySelector('.header-contact-trigger');
-    if (headerBtn) {
-      headerBtn.addEventListener('click', function(e) {
+    const headerBtns = document.querySelectorAll('.header-contact-trigger'); // Changed to querySelectorAll
+    
+    headerBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
         e.preventDefault();
         openGlobalConsultation();
       });
-    }
+    });
   });
 </script>
 
