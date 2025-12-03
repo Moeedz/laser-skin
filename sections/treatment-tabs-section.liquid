@@ -1948,6 +1948,23 @@
 
 <script>
 
+  // Reopen enquiry modal if URL contains success parameter
+if (window.location.search.includes('contact_posted=true') && window.location.hash === '#treatment-enquiry-form') {
+  setTimeout(function() {
+    openEnquiryModal();
+    // Scroll to the success message
+    setTimeout(function() {
+      const modal = document.getElementById('enquiry-modal');
+      if (modal) {
+        const banner = modal.querySelector('.banner');
+        if (banner) {
+          banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    }, 300);
+  }, 500);
+}
+
   // Enquiry state management
   const enquiryState = {
     packageName: '',
