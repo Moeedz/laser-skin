@@ -1957,44 +1957,46 @@
     cartLink: ''
   };
 
-  let packagesVisible = false;
+ let packagesVisible = false;
 
-  function switchTab(tabId) {
-    document.querySelectorAll('.tab-button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
-      btn.classList.add('active');
-    });
-    document.querySelectorAll('.tab-content').forEach(content => {
-      content.classList.remove('active');
-    });
-    document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
-    document.querySelectorAll('.packages-container').forEach(container => {
-      container.classList.remove('active');
-    });
-    document.querySelectorAll('.session-options').forEach(session => {
-      session.classList.remove('active');
-    });
-    
-    if (packagesVisible) {
-      const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
-      if (packagesContainer) {
-        packagesContainer.classList.add('active');
-      }
-    }
-  }
-
-  function togglePackages(tabId) {
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
+    btn.classList.add('active');
+  });
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.classList.remove('active');
+  });
+  document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
+  document.querySelectorAll('.packages-container').forEach(container => {
+    container.classList.remove('active');
+  });
+  document.querySelectorAll('.session-options').forEach(session => {
+    session.classList.remove('active');
+  });
+  
+  // NEW: Keep packages visible when switching tabs
+  if (packagesVisible) {
     const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
-    packagesContainer.classList.toggle('active');
-    
-    if (packagesContainer.classList.contains('active')) {
-      packagesVisible = true;
-    } else {
-      packagesVisible = false;
+    if (packagesContainer) {
+      packagesContainer.classList.add('active');
     }
   }
+}
+
+function togglePackages(tabId) {
+  const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
+  packagesContainer.classList.toggle('active');
+  
+  // Track if packages are now visible or hidden
+  if (packagesContainer.classList.contains('active')) {
+    packagesVisible = true;
+  } else {
+    packagesVisible = false;
+  }
+}
 
   function toggleSessionOptions(packageId) {
     const sessionOptions = document.getElementById(`session-${packageId}`);
@@ -2124,23 +2126,24 @@
   }
 
   function openEnquiryModal() {
-    const modal = document.getElementById('enquiry-modal');
-    if (modal) {
-      const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
-      const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
-      
-      if (treatmentNameInput) {
-        treatmentNameInput.value = `${enquiryState.packageName}`;
-        treatmentNameInput.setAttribute('readonly', true);
-      }
-      if (selectedSessionsInput) {
-        selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
-        selectedSessionsInput.setAttribute('readonly', true);
-      }
-      
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  const modal = document.getElementById('enquiry-modal');
+  if (modal) {
+    // Use new field names
+    const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
+    const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
+    
+    if (treatmentNameInput) {
+      treatmentNameInput.value = `${enquiryState.packageName} - {{ product.title }}`;
+      treatmentNameInput.setAttribute('readonly', true);
     }
+    if (selectedSessionsInput) {
+      selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
+      selectedSessionsInput.setAttribute('readonly', true);
+    }
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
   }
 
   function closeEnquiryModal() {
@@ -2169,53 +2172,6 @@
     }
   }
 
-  function showFormMessage(status, message) {
-    // Remove existing banners
-    const existingBanner = document.querySelector('.enquiry-form-wrapper .banner');
-    if (existingBanner) {
-      existingBanner.remove();
-    }
-    
-    // Create new banner
-    const banner = document.createElement('div');
-    banner.className = `banner banner--${status}`;
-    banner.style.cssText = 'margin-bottom: 20px; padding: 15px; border-radius: 8px; animation: slideDown 0.3s ease;';
-    
-    if (status === 'success') {
-      banner.style.backgroundColor = '#d4edda';
-      banner.style.borderLeft = '4px solid #28a745';
-      banner.style.color = '#155724';
-    } else {
-      banner.style.backgroundColor = '#f8d7da';
-      banner.style.borderLeft = '4px solid #dc3545';
-      banner.style.color = '#721c24';
-    }
-    
-    banner.innerHTML = `
-      <div class="banner__content" style="font-size: 14px; line-height: 1.5;">
-        ${message}
-      </div>
-    `;
-    
-    // Insert at top of form
-    const formWrapper = document.querySelector('.enquiry-form-wrapper .form');
-    if (formWrapper) {
-      formWrapper.insertBefore(banner, formWrapper.firstChild);
-      
-      // Scroll to banner
-      setTimeout(() => {
-        banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 100);
-    }
-    
-    // Auto-close modal after success (optional - remove if you want it to stay open)
-    if (status === 'success') {
-      setTimeout(() => {
-        closeEnquiryModal();
-      }, 3000);
-    }
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
     // Session option selection handler
     document.querySelectorAll('.session-option').forEach(option => {
@@ -2223,18 +2179,22 @@
         const parent = this.parentElement;
         const packageId = parent.id.replace('session-', '');
         
+        // Deselect all options in this package
         parent.querySelectorAll('.session-option').forEach(opt => {
           opt.classList.remove('selected');
         });
         
+        // Select this option
         this.classList.add('selected');
         
+        // Store selection data
         enquiryState.packageName = this.getAttribute('data-package-name');
         enquiryState.sessionLabel = this.getAttribute('data-session-label');
         enquiryState.sessionPrice = this.getAttribute('data-session-price');
         enquiryState.sessionTotal = this.getAttribute('data-session-total');
         enquiryState.cartLink = this.getAttribute('data-link');
         
+        // Enable SELECT button
         const selectButton = parent.querySelector('.session-select');
         selectButton.classList.add('enabled');
       });
@@ -2269,86 +2229,20 @@
       }
     });
 
-    // AJAX Form Submission - NO PAGE RELOAD
-    const enquiryForm = document.getElementById('treatment-enquiry-form');
-    if (enquiryForm) {
-      enquiryForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent page reload
-        
-        const submitButton = this.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
-        
-        // Show loading state
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        submitButton.style.opacity = '0.6';
-        submitButton.style.cursor = 'not-allowed';
-        
-        // Get form data
-        const formData = new FormData(this);
-        
-        // Submit via AJAX
-        fetch('/contact', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json, text/html'
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            // Success
-            showFormMessage('success', 'Thank you for your enquiry! We will get back to you shortly.');
-            enquiryForm.reset();
-            
-            // Reset readonly fields
-            const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
-            const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
-            if (treatmentNameInput) treatmentNameInput.removeAttribute('readonly');
-            if (selectedSessionsInput) selectedSessionsInput.removeAttribute('readonly');
-            
-            // Clear enquiry state
-            enquiryState.packageName = '';
-            enquiryState.sessionLabel = '';
-            enquiryState.sessionPrice = '';
-            enquiryState.sessionTotal = '';
-            
-          } else {
-            // Error
-            showFormMessage('error', 'There was an error submitting your enquiry. Please try again or contact us directly.');
-          }
-        })
-        .catch(error => {
-          console.error('Form submission error:', error);
-          showFormMessage('error', 'There was an error submitting your enquiry. Please try again or contact us directly.');
-        })
-        .finally(() => {
-          // Reset button state
-          submitButton.textContent = originalButtonText;
-          submitButton.disabled = false;
-          submitButton.style.opacity = '1';
-          submitButton.style.cursor = 'pointer';
-        });
-      });
-    }
+    // If form was submitted successfully, reopen modal to show success message
+    {% if form.posted_successfully? %}
+      setTimeout(function() {
+        openEnquiryModal();
+      }, 100);
+    {% endif %}
+
+    // If form has errors, reopen modal to show errors
+    {% if form.errors %}
+      setTimeout(function() {
+        openEnquiryModal();
+      }, 100);
+    {% endif %}
   });
-
-  // Add animation for banner
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  `;
-  document.head.appendChild(style);
-
 </script>
 
 {% schema %}
