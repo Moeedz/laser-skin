@@ -1948,6 +1948,49 @@
 
 <script>
 
+  // Global function to open consultation modal from anywhere
+window.openConsultationFromHeader = function() {
+  // Get the currently active tab ID
+  const activeTab = document.querySelector('.tab-content.active');
+  
+  if (activeTab) {
+    const tabId = activeTab.getAttribute('data-tab-content');
+    openConsultationModal(tabId);
+  } else {
+    // Fallback: open the first tab's modal
+    const firstTab = document.querySelector('.tab-content');
+    if (firstTab) {
+      const tabId = firstTab.getAttribute('data-tab-content');
+      openConsultationModal(tabId);
+    }
+  }
+  
+  // Scroll to the treatment section smoothly
+  const treatmentSection = document.querySelector('.treatment-tabs-section');
+  if (treatmentSection) {
+    const headerOffset = 100;
+    const elementPosition = treatmentSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
+// Listen for header button clicks
+document.addEventListener('DOMContentLoaded', function() {
+  const headerContactBtn = document.querySelector('.header-contact-trigger');
+  
+  if (headerContactBtn) {
+    headerContactBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.openConsultationFromHeader();
+    });
+  }
+});
+
   // Enquiry state management
   const enquiryState = {
     packageName: '',
