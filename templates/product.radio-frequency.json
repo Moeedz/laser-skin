@@ -261,14 +261,14 @@
         "tab_xRpEBf": {
           "type": "tab",
           "settings": {
-            "tab_identifier": "face",
-            "tab_name": "Face",
-            "heading": "Face",
-            "top_description": "<p>Face laser hair removal is ideal for removing unwanted hair from places including the jawline, chin, cheeks, and upper lip.</p>",
+            "tab_identifier": "Radio Frequency Skin Tightening",
+            "tab_name": "Radio Frequency Skin Tightening",
+            "heading": "Radio Frequency",
+            "top_description": "<p>Radio Frequency Skin Tightening is a non-surgical treatment designed to firm and lift the early signs of loose or sagging skin<br/><br/>Using controlled radiofrequency energy to gently heat the deeper layers of the skin, this treatment stimulates collagen contraction and renewal, resulting in a tighter, more defined appearance.<br/><br/>It is an excellent option for clients with mild to moderate skin laxity, typically those aged 30 to 50 who want a natural, non-invasive way to restore firmness and improve facial contour without surgery or downtime.</p>",
             "image_1_aspect_ratio": "original",
-            "consultation_heading": "Book a Consultation",
-            "consultation_badge": "FREE",
-            "consultation_description": "Meet with one of our experts for a complimentary consultation.",
+            "consultation_heading": "Speak to a specialist",
+            "consultation_badge": "",
+            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
             "modal_title": "How would you like to consult?",
             "modal_subtitle": "Choose your preferred method to get in touch with us",
             "contact_page_url": "",
@@ -287,8 +287,8 @@
             "whatsapp_number": "",
             "whatsapp_display_number": "+44 7798 983387",
             "whatsapp_option_title": "WhatsApp",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "package_heading": "View prices and make an enquiry",
+            "package_description": "Pay per session or buy multiple and save"
           }
         },
         "package_qDQXpx": {
