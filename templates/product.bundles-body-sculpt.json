@@ -593,6 +593,13 @@
             "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.</p><p>Any cancellations on the day can be rescheduled but will not be refunded</p><p>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
+        "text_H9Efg7": {
+          "type": "text",
+          "settings": {
+            "question": "Do you offer flexible payment options?",
+            "answer": "<p>Flexible payment options are available, including Klarna and Shopify Pay. Just choose the one you prefer at checkout.</p>"
+          }
+        },
         "text_HhtUzg": {
           "type": "text",
           "settings": {
@@ -674,6 +681,7 @@
       "block_order": [
         "text_wgM46e",
         "text_73aMaM",
+        "text_H9Efg7",
         "text_HhtUzg",
         "text_EkDPcx",
         "text_VRegUr",
