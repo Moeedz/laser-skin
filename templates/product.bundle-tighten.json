@@ -607,6 +607,13 @@
             "answer": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>"
           }
         },
+        "text_TTGaBb": {
+          "type": "text",
+          "settings": {
+            "question": "Do you offer flexible payment options?",
+            "answer": "<p>Flexible payment options are available, including Klarna and Shopify Pay. Just choose the one you prefer at checkout.</p>"
+          }
+        },
         "text_VRegUr": {
           "type": "text",
           "settings": {
@@ -678,6 +685,7 @@
         "text_73aMaM",
         "text_HhtUzg",
         "text_EkDPcx",
+        "text_TTGaBb",
         "text_VRegUr",
         "text_Hir8bk",
         "text_MLKHPB",
