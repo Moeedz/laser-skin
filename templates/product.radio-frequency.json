@@ -975,29 +975,77 @@
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Yes, we provide free standard shipping on all orders over $100. For orders under $100, a small shipping fee applies, which will be shown at checkout.</p>"
+            "question": "What is radio frequency skin tightening?",
+            "answer": "<p>Radio Frequency Skin Tightening uses controlled heat energy to stimulate collagen and elastin production deep within the skin, helping to firm, tighten, and smooth areas of the face and body.</p>"
           }
         },
         "text_JMUbWR": {
           "type": "text",
           "settings": {
-            "question": "What is your refund policy?",
-            "answer": "<p>If you're not completely satisfied with your purchase, you can return it within 14 for a full refund. Please ensure the item is unused and in its original packaging.</p>"
+            "question": "Who is the treatment suitable for?",
+            "answer": "<p>It is suitable for anyone experiencing mild to moderate skin laxity, including loose skin on the jawline, cheeks, neck, stomach, or thighs.</p><p>It is ideal for clients looking for a natural, non-surgical lift.</p>"
           }
         },
         "text_UiGdVT": {
           "type": "text",
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "Does it hurt?",
+            "answer": "<p>No, the treatment is comfortable and often described as warm and relaxing.</p><p>Most clients experience no discomfort at all.</p>"
+          }
+        },
+        "text_rmizwe": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients achieve best results with a course of 4 to 6 weekly sessions.</p><p>Maintenance treatments every 3 to 6 months help sustain long-term firmness.</p>"
+          }
+        },
+        "text_NwKKpe": {
+          "type": "text",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can last several months depending on age, skin condition, and lifestyle.</p><p>Because radiofrequency stimulates your skin’s natural collagen process, improvements continue to develop over time.</p>"
+          }
+        },
+        "text_P3QaTk": {
+          "type": "text",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>There is no downtime.</p><p>You may experience mild warmth or temporary redness, but you can return to normal activities immediately.</p>"
+          }
+        },
+        "text_DqjnkC": {
+          "type": "text",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Some clients notice immediate tightness due to collagen contraction, with deeper, longer-lasting results developing over 4 to 12 weeks as new collagen forms.</p>"
+          }
+        },
+        "text_jWAN9D": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_pF8KXa": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         }
       },
       "block_order": [
         "text_Dpx4Qh",
         "text_JMUbWR",
-        "text_UiGdVT"
+        "text_UiGdVT",
+        "text_rmizwe",
+        "text_NwKKpe",
+        "text_P3QaTk",
+        "text_DqjnkC",
+        "text_jWAN9D",
+        "text_pF8KXa"
       ],
       "name": "SS - FAQ #1",
       "settings": {
