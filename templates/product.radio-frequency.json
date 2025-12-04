@@ -817,7 +817,7 @@
         "heading_U7EUj7": {
           "type": "heading",
           "settings": {
-            "text": "The Process of Laser Hair Removal",
+            "text": "<strong>The Radio Frequency 3-Step Process</strong>",
             "heading_tag": "h3"
           }
         }
@@ -841,24 +841,24 @@
           "type": "step",
           "settings": {
             "step": "STEP 1",
-            "title": "CONSULTATION",
-            "text": "<p>During your consultation, we’ll discuss your hair removal goals and examine the areas you’d like treated. This helps us create a personalised plan that ensures the best possible results.</p>"
+            "title": "Consultation and Skin Assessment",
+            "text": "<p>Your treatment begins with a consultation where your practitioner assesses your skin’s elasticity, concerns, and goals.</p><p>This allows us to determine the most effective radiofrequency settings for your treatment area and create a personalised plan.</p>"
           }
         },
         "step_jiiz8x": {
           "type": "step",
           "settings": {
             "step": "STEP 2",
-            "title": "PROCEDURE",
-            "text": "<p>The laser technician will apply a cooling gel to the treatment area. Then, the laser will be moved across the skin, targeting the hair follicles. While the procedure is relatively quick, it may vary depending on the size of the area being treated.</p>"
+            "title": "Radio Frequency Tightening Treatment",
+            "text": "<p>A handheld device is gently applied to the skin, delivering controlled RF heat deep into the dermis. The treatment feels comfortable and relaxing, similar to a warm massage.</p><p>A session usually lasts 20 to 40 minutes depending on the area.</p>"
           }
         },
         "step_6jaGgE": {
           "type": "step",
           "settings": {
             "step": "STEP 3",
-            "title": "RECOVERY",
-            "text": "<p>After treatment, you may experience slight redness or swelling, but this usually fades within a few hours. You’ll be given aftercare instructions to follow, including avoiding sun exposure and using moisturisers to soothe the skin.</p>"
+            "title": "Collagen Renewal and Maintenance",
+            "text": "<p>After your session, the skin may feel warm and slightly flushed, which settles quickly.</p><p>Collagen production continues over the following weeks, gradually improving firmness and definition.</p>"
           }
         }
       },
