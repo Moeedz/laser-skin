@@ -415,8 +415,8 @@
         "slide_4jhyPz": {
           "type": "slide",
           "settings": {
-            "heading": "",
-            "text": "<p>Are you tired of the constant cycle of shaving, waxing or plucking? Say goodbye to unwanted hair and hello to smooth, glowing skin with our best laser hair removal treatment in Birmingham. Experience the freedom of flawless skin that lasts longer and requires less maintenance, all with the power of advanced laser technology. It’s time to simplify your grooming routine and enjoy long-lasting results.</p><p></p><h2>What is Laser Hair Removal?</h2><p>Laser hair removal is a popular cosmetic procedure that uses targeted light to remove unwanted hair. The laser emits a beam of light that is absorbed by the pigment in your hair follicles, damaging them and preventing further hair growth. Unlike temporary methods like shaving and waxing, full-body laser hair removal offers a more lasting solution, leaving you with smooth skin and fewer treatments over time.<br/></p>",
+            "heading": "<h3><strong>Non-Invasive Firming and Collagen Boosting Treatment for Younger, Smoother Skin</strong></h3>",
+            "text": "<p>Radio Frequency Skin Tightening is a gentle, non-invasive treatment that uses controlled radiofrequency energy to heat the deeper layers of the skin.</p><p>This stimulates collagen and elastin production, firms the tissue, and helps to lift and smooth areas of the face and body without needles or downtime.</p><p>It is one of the most effective treatments for improving laxity, restoring firmness, and giving the skin a fresher, more youthful appearance.</p><p>At Laser Skin Clinics, we use advanced radiofrequency technology that safely targets the deeper dermal layers while keeping the surface comfortable and cool.</p><p>Each session is tailored to your skin type and concern, helping you achieve natural tightening and ongoing collagen improvement over time.<br/></p>",
             "button": "",
             "button_url": "",
             "button2": "",
@@ -619,7 +619,7 @@
         "text_zqNDU6": {
           "type": "text",
           "settings": {
-            "text": "<h2>Benefits of Laser Hair Removal</h2>",
+            "text": "<h3><strong>Benefits of Radio Frequency Skin Tightening</strong></h3><p></p>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
             "text_size": 34,
@@ -635,28 +635,28 @@
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Hair-free skin for months without the need for constant waxing."
+            "text": "Stimulates collagen and elastin for long-term skin rejuvenation"
           }
         },
         "icon_text_LJCxHi": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Treatments are fast and effective, even for larger areas like legs or back."
+            "text": "Firms and tightens loose or sagging skin on the face and body"
           }
         },
         "icon_text_dEUWkb": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Targets hair follicles directly without damaging the surrounding skin."
+            "text": "Smooths fine lines and improves overall tone and texture"
           }
         },
         "icon_text_WwkP3M": {
           "type": "icon_text",
           "settings": {
             "icon": "tick",
-            "text": "Say goodbye to razor burns, ingrown hairs, and post-wax redness."
+            "text": "Non-invasive, comfortable treatment with no downtime"
           }
         },
         "button_HfVK4Q": {
