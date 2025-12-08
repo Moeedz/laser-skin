@@ -798,6 +798,13 @@
             "answer": "<p>This can be redeemed instore also. Please just let us know when you come in for your treatment and we will do the rest.</p>"
           }
         },
+        "text_mFqimE": {
+          "type": "text",
+          "settings": {
+            "question": "What happens when I buy a gift card?",
+            "answer": "<p>You'll receive an email with the gift card voucher code on it. This can then be applied at checkout or used instore. You also have the option of sending it directly to an individual which they will receive via email.</p>"
+          }
+        },
         "text_6BDpww": {
           "type": "text",
           "settings": {
@@ -808,6 +815,7 @@
       },
       "block_order": [
         "text_Dpx4Qh",
+        "text_mFqimE",
         "text_6BDpww"
       ],
       "name": "SS - FAQ #1",
