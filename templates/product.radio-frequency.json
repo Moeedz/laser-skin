@@ -265,6 +265,7 @@
             "tab_name": "Radio Frequency Skin Tightening",
             "heading": "Radio Frequency",
             "top_description": "<p>Radio Frequency Skin Tightening is a non-surgical treatment designed to firm and lift the early signs of loose or sagging skin<br/><br/>Using controlled radiofrequency energy to gently heat the deeper layers of the skin, this treatment stimulates collagen contraction and renewal, resulting in a tighter, more defined appearance.<br/><br/>It is an excellent option for clients with mild to moderate skin laxity, typically those aged 30 to 50 who want a natural, non-invasive way to restore firmness and improve facial contour without surgery or downtime.</p>",
+            "image_1": "shopify://shop_images/WhatsApp_Image_2025-12-08_at_16.24.42_6692a4ed.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
@@ -425,7 +426,7 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/laser-hair-removal.webp"
+            "image": "shopify://shop_images/WhatsApp_Image_2025-12-08_at_16.24.42_a66f73fb.jpg"
           }
         }
       },
@@ -485,8 +486,8 @@
         "button2_style": "outline",
         "images_position": "right",
         "images_position_mobile": "bottom",
-        "image_ratio": "square",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "image_shape": "none",
         "image_radius": 0,
         "image_border_thickness": 0,
@@ -704,11 +705,11 @@
       "settings": {
         "body_gap": 50,
         "body_gap_mobile": 0,
-        "image": "shopify://shop_images/15a0da1f00322255f8d000d8f3ea60ed.webp",
+        "image": "shopify://shop_images/WhatsApp_Image_2025-12-08_at_16.24.42_1a8d2488.jpg",
         "image_position": "left",
         "image_position_mobile": "top",
-        "image_ratio": "square",
-        "image_ratio_mobile": "square",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "content_maxwidth": 700,
         "content_padding_vertical": 40,
         "content_padding_vertical_mobile": 20,
@@ -747,6 +748,7 @@
         "link_QBnr39": {
           "type": "link",
           "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-12-08_at_16.24.42_55d11505.jpg",
             "text": "",
             "url": "",
             "overlay_opacity": 0
@@ -873,11 +875,11 @@
         "layout_mobile": "image_content",
         "layout_gap": 64,
         "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/Laser-Hair-Removal.jpg",
+        "image": "shopify://shop_images/WhatsApp_Image_2025-12-08_at_16.24.42_156ac0fb.jpg",
         "image_radius": 0,
         "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
         "steps_custom": false,
         "steps_font": "josefin_sans_n4",
         "steps_size": 12,
