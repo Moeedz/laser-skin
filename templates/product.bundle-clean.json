@@ -583,7 +583,7 @@
           "type": "text",
           "settings": {
             "question": "How long will the treatment take and in what order are they performed?",
-            "answer": "<p>Your <strong>Tighten, Clean & Glow Premium Package</strong> is designed to maximise results, with all three treatments performed in a smooth, seamless sequence during a 2-hour appointment.</p><p>You’ll begin with <strong>Radio Frequency Skin Tightening</strong> to gently heat the deeper layers of the skin, stimulating collagen and improving firmness.</p><p>Next, you’ll move into your <strong>HydroFacial deep cleanse</strong>, targeting congestion, refining pores and restoring clarity and brightness.</p><p>Your session concludes with soothing <strong>Red Light Therapy</strong>, boosting collagen, calming inflammation and enhancing overall rejuvenation.</p>"
+            "answer": "<p><strong>Your Lift, Heal & Glow Supreme Bundle is structured to deliver maximum results, with all three treatments performed in a smooth, seamless sequence during your appointment for around 2 hours</strong></p><p>You’ll begin with <strong>Radio Frequency Skin Tightening</strong>, where controlled heat is delivered into the deeper layers of the skin to stimulate collagen, improve elasticity and firm early signs of sagging.</p><p>Next, you’ll move into your <strong>IPL Glo Facial</strong>, a targeted light-based treatment that breaks down pigmentation, reduces redness and brightens uneven skin tone for a clearer, more radiant complexion.</p><p>Your session concludes with <strong>Celluma Red Light Therapy</strong>, a calming LED treatment that accelerates healing, boosts collagen, reduces inflammation and enhances overall skin rejuvenation.</p><p>Together, these three treatments work in perfect harmony to lift, brighten and heal the skin — leaving your complexion firmer, smoother and beautifully luminous after just one visit.</p>"
           }
         },
         "text_73aMaM": {
@@ -617,15 +617,15 @@
         "text_VRegUr": {
           "type": "text",
           "settings": {
-            "question": " What is included in The Sculpt, Cleanse & Glow Signature Package?",
-            "answer": "<p>This package includes three advanced treatments in one appointment: Power Sculpt body contouring, a Carbon Facial for deep cleansing and brightening, and Red Light Therapy to calm, rejuvenate and boost collagen.</p>"
+            "question": " What is included in The Life, Heal and Glow Supreme Package?",
+            "answer": "<p>This package includes three advanced treatments in one appointment: Radio Frequency Skin Tightening to firm and lift the skin, an IPL Glo Facial to brighten, clarify and even your complexion, and Celluma Red Light Therapy to calm, rejuvenate and boost collagen.</p>"
           }
         },
         "text_Hir8bk": {
           "type": "text",
           "settings": {
-            "question": "Is the £149 price for everything together?",
-            "answer": "<p>Yes - the full £149 covers all three treatments in your appointment. Purchased individually, they normally total £220.</p>"
+            "question": "Is the £99 price for everything together?",
+            "answer": "<p>Yes - the full £99 covers all three treatments in your appointment. Purchased individually, they normally total £200.</p>"
           }
         },
         "text_MLKHPB": {
