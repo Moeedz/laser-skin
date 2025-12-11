@@ -1,0 +1,720 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "treatment_tabs_section_Bqrbnk": {
+      "type": "treatment-tabs-section",
+      "blocks": {
+        "tab_G7qx6t": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "bundle",
+            "tab_name": "Bundle",
+            "heading": "The Sculpt, Cleanse & Glow Signature Package",
+            "top_description": "<p>Experience the most exceptional value package we’ve ever released. Normally, these three premium treatments purchased individually would cost <strong>£205</strong> – but for a limited time, you can enjoy the complete <strong>Sculpt, Cleanse & Glow Signature Package</strong> for just <strong>£99</strong>.</p><p>This exclusive trio has been carefully curated to target body contouring, deep skin purification and long-lasting luminosity. It’s an exceptional saving on a results-led combination designed to sculpt, purify and illuminate — leaving you with a visibly refreshed, refined and radiant appearance.</p><h3><strong>What’s Included in the Package</strong></h3><p><strong>Power Sculpt</strong></p><p>Advanced electromagnetic body sculpting that lifts, tightens and tones your chosen area, helping define your natural contours.</p><p><strong>Carbon Facial</strong></p><p>A deep-cleansing, brightening laser facial that clears pores, smooths skin texture, reduces congestion and instantly boosts radiance.</p><p><strong>Celluma Red Light Therapy</strong></p><p>Collagen-boosting LED light therapy that calms the skin, enhances healing, improves clarity and provides a natural, healthy glow.</p><p>Together, these three treatments work in perfect synergy to deliver a complete skin-and-body refresh — all in one beautifully structured experience.<em><br/></em></p><p><em><strong>Laser Skin Clinics is based in a beautiful rural commercial premises with plenty of free parking just outside Perton in Wolverhampton. The full address is below.<br/><br/></strong></em>Laser Skin Clinics<strong><br/></strong>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB </p>",
+            "image_1": "shopify://shop_images/image11111.webp",
+            "image_1_aspect_ratio": "original",
+            "consultation_heading": "Speak to the team",
+            "consultation_badge": "",
+            "consultation_description": "Can't find the answer to your question in the FAQ'S at the bottom of the page? Contact us by clicking here.",
+            "modal_title": "How would you like to consult?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_kDd97i": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "bundle",
+            "package_name": "The Sculpt, Cleanse & Glow Signature Package",
+            "price": "",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£99",
+            "session_1_total": "total £99.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_G7qx6t",
+        "package_kDd97i"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".top-description p {padding-bottom: 10px;}"
+      ],
+      "name": "Treatment Tabs with Appointments",
+      "settings": {
+        "section_width": 1400,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "tab_alignment": "center",
+        "tab_gap": 12,
+        "tab_font_size": 15,
+        "tab_font_weight": "500",
+        "tab_border_radius": 50,
+        "tab_border_width": 2,
+        "tab_background": "#ffffff",
+        "tab_text_color": "#000000",
+        "tab_border_color": "#333333",
+        "tab_hover_background": "#f5f5f5",
+        "tab_hover_text_color": "#000000",
+        "tab_active_background": "#e6b325",
+        "tab_active_text_color": "#ffffff",
+        "tab_active_border_color": "#e6b325",
+        "heading_font_size": 42,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 15,
+        "text_color": "#333333",
+        "cta_card_gap": 16,
+        "cta_border_radius": 16,
+        "cta_border_width": 2,
+        "cta_background": "#ffffff",
+        "cta_border_color": "#333333",
+        "cta_hover_background": "#f9f9f9",
+        "cta_heading_color": "#000000",
+        "cta_text_color": "#666666",
+        "badge_background": "#f0f0f0",
+        "badge_text_color": "#000000",
+        "price_text_color": "#666666",
+        "package_border_radius": 12,
+        "package_border_width": 2,
+        "package_background": "#ffffff",
+        "package_border_color": "#333333",
+        "package_heading_color": "#000000",
+        "package_price_color": "#666666",
+        "package_button_radius": 8,
+        "package_button_background": "#e6b325",
+        "package_button_text_color": "#ffffff",
+        "package_button_hover_background": "#c5de3f",
+        "image_border_radius": 8,
+        "show_collapsible_1": false,
+        "collapsible_1_title": "DESCRIPTION",
+        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
+        "collapsible_1_content": "<p>Add your description content here.</p>",
+        "show_collapsible_2": false,
+        "collapsible_2_title": "INFORMATION & INGREDIENTS",
+        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_2_content": "<p>Add your information and ingredients here.</p>",
+        "show_collapsible_3": false,
+        "collapsible_3_title": "THIS HELPS WITH",
+        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
+        "collapsible_3_content": "<p>Add benefits and features here.</p>",
+        "show_collapsible_4": false,
+        "collapsible_4_title": "FAQS",
+        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_4_content": "<p>Add your FAQs here.</p>",
+        "show_collapsible_5": false,
+        "collapsible_5_title": "REVIEWS",
+        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
+        "collapsible_5_content": "<p>Add your reviews here.</p>",
+        "show_collapsible_6": false,
+        "collapsible_6_title": "AFTERCARE",
+        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
+        "collapsible_6_content": "<p>Add your aftercare instructions here.</p>",
+        "show_faq_link": true,
+        "faq_pre_text": "Have more questions?",
+        "faq_link_text": "View FAQs",
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "appointment_picker_kVxb3E": {
+          "type": "appointment_picker",
+          "settings": {
+            "default_slots": "10:00 AM\n12:00 PM\n2:00 PM\n4:00 PM",
+            "saturday_slots": "12:00 PM\n2:00 PM",
+            "custom_dates": "2025-12-06|CLOSED\n2025-12-20|CLOSED\n2025-12-23|CLOSED\n2025-12-25|CLOSED\n2025-12-24|CLOSED\n2025-12-26|CLOSED\n2025-12-27|CLOSED\n2025-12-28|CLOSED\n2025-12-31|CLOSED\n2026-01-01|CLOSED\n2025-12-29|CLOSED\n2026-01-01|CLOSED\n2026-01-02|CLOSED\n2026-01-03|CLOSED\n2026-01-04|CLOSED\n2026-01-05|CLOSED\n2025-12-09|CLOSED\n2025-12-13|12:00 PM\n2025-12-20|12:00 PM\n2025-12-10|10:00 AM\n2025-12-16|10:00 AM\n2025-12-17|10:00 AM\n2025-12-19|12:00 PM\n2026-01-10|CLOSED\n2025-12-16|2:00 PM\n2025-12-17|2:00 PM"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "dropdown",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#e6b325",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "liquid_Eg4Pre": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n  /* Standalone Consultation Card Styles */\n  .standalone-consultation-wrapper {\n    max-width: 600px;\n    margin: 20px 0;\n  }\n\n  .standalone-cta-card {\n    border: 2px solid #333333;\n    border-radius: 16px;\n    padding: 20px 24px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    background: #ffffff;\n    display: block;\n  }\n\n  .standalone-cta-card:hover {\n    background: #f9f9f9;\n    transform: translateY(-2px);\n    box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n  }\n\n  .standalone-cta-card-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 8px;\n  }\n\n  .standalone-cta-card h3 {\n    font-size: 18px;\n    font-weight: 500;\n    margin: 0;\n    color: #000000;\n  }\n\n  .standalone-cta-badge {\n    background: #f0f0f0;\n    color: #000000;\n    padding: 4px 12px;\n    border-radius: 20px;\n    font-size: 13px;\n    font-weight: 500;\n  }\n\n  .standalone-cta-card p {\n    margin: 0;\n    font-size: 14px;\n    color: #666666;\n    line-height: 1.5;\n  }\n\n  /* Modal Styles */\n  .standalone-consultation-modal-overlay {\n    display: none;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: 9998;\n    animation: fadeIn 0.3s ease;\n  }\n\n  .standalone-consultation-modal-overlay.active {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n\n  @keyframes slideUp {\n    from {\n      opacity: 0;\n      transform: translateY(30px);\n    }\n    to {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n\n  .standalone-consultation-modal {\n    background: white;\n    border-radius: 16px;\n    max-width: 420px;\n    width: 90%;\n    max-height: 90vh;\n    overflow-y: auto;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);\n  }\n\n  .standalone-modal-header {\n    padding: 25px 25px 20px;\n    position: relative;\n    border-bottom: none;\n  }\n\n  .standalone-modal-close {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    width: 28px;\n    height: 28px;\n    background: transparent;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s ease;\n    border-radius: 50%;\n  }\n\n  .standalone-modal-close:hover {\n    background: #f5f5f5;\n  }\n\n  .standalone-modal-close svg {\n    width: 20px;\n    height: 20px;\n    stroke: #999;\n  }\n\n  .standalone-modal-title {\n    font-size: 20px;\n    font-weight: 700;\n    color: #000;\n    margin: 0;\n    padding-right: 30px;\n    line-height: 1.3;\n  }\n\n  .standalone-modal-subtitle {\n    font-size: 14px;\n    color: #6c757d;\n    margin-top: 6px;\n    line-height: 1.4;\n  }\n\n  .standalone-modal-content {\n    padding: 10px 20px 25px;\n  }\n\n  .standalone-consultation-options {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n  }\n\n  .standalone-consultation-option {\n    display: flex;\n    align-items: center;\n    padding: 16px;\n    border: 1px solid #e8e8e8;\n    border-radius: 12px;\n    cursor: pointer;\n    transition: all 0.2s ease;\n    text-decoration: none;\n    color: inherit;\n    background: white;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.06);\n  }\n\n  .standalone-consultation-option:hover {\n    border-color: #d0d0d0;\n    background: #fafafa;\n    transform: translateX(2px);\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);\n  }\n\n  .standalone-consultation-icon {\n    width: 44px;\n    height: 44px;\n    border-radius: 10px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-right: 14px;\n    flex-shrink: 0;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon {\n    background: #FFF4E6;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #FF9500;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon {\n    background: #E3F2FD;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #2196F3;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon {\n    background: #E8F5E9;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    fill: #4CAF50;\n  }\n\n  .standalone-consultation-details {\n    flex: 1;\n  }\n\n  .standalone-consultation-method {\n    font-size: 15px;\n    font-weight: 600;\n    color: #000;\n    margin-bottom: 2px;\n  }\n\n  .standalone-consultation-info {\n    font-size: 13px;\n    color: #6c757d;\n    line-height: 1.3;\n  }\n\n  .standalone-consultation-arrow {\n    width: 20px;\n    height: 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.3;\n    transition: opacity 0.2s ease;\n  }\n\n  .standalone-consultation-option:hover .standalone-consultation-arrow {\n    opacity: 0.6;\n  }\n\n  .standalone-consultation-arrow svg {\n    width: 16px;\n    height: 16px;\n    stroke: #666;\n  }\n\n  /* Phone Hours Modal Styles */\n  .standalone-phone-hours-modal {\n    background: white;\n    border-radius: 20px;\n    max-width: 400px;\n    width: 90%;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);\n    padding: 15px 30px 30px;\n    text-align: center;\n  }\n\n  .standalone-phone-icon-circle {\n    width: 60px;\n    height: 60px;\n    background: #007AFF;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin: 0 auto 5px;\n  }\n\n  .standalone-phone-icon-circle svg {\n    width: 25px;\n    height: 25px;\n    stroke: white;\n    fill: none;\n  }\n\n  .standalone-phone-modal-title {\n    font-size: 24px;\n    font-weight: 600;\n    color: #000;\n    margin: 0 0 5px 0;\n  }\n\n  .standalone-store-status {\n    background: #D1F2E0;\n    color: #0F9D58;\n    padding: 5px 20px;\n    border-radius: 25px;\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 10px;\n    font-weight: 500;\n    font-size: 14px;\n  }\n\n  .standalone-store-status.closed {\n    background: #FFE4E1;\n    color: #FF4444;\n  }\n\n  .standalone-status-icon {\n    font-size: 16px;\n  }\n\n  .standalone-closed-message {\n    background: #FFF3CD;\n    border-left: 4px solid #FFC107;\n    padding: 12px 16px;\n    margin-bottom: 20px;\n    border-radius: 8px;\n    text-align: left;\n  }\n\n  .standalone-closed-message p {\n    color: #856404;\n    font-size: 12px;\n    line-height: 1.5;\n    margin: 0;\n  }\n\n  .standalone-opening-hours {\n    text-align: left;\n    margin-bottom: 25px;\n  }\n\n  .standalone-hours-heading {\n    font-size: 14px;\n    font-weight: 600;\n    color: #666;\n    margin: 0 0 15px 0;\n    text-align: center;\n  }\n\n  .standalone-hours-list {\n    background: #f8f8f8;\n    border-radius: 12px;\n    padding: 15px;\n  }\n\n  .standalone-hours-row {\n    display: flex;\n    justify-content: space-between;\n    padding: 8px 0;\n    border-bottom: 1px solid #e0e0e0;\n    font-size: 11px;\n  }\n\n  .standalone-hours-row:last-child {\n    border-bottom: none;\n  }\n\n  .standalone-hours-row .day {\n    font-weight: 500;\n    color: #333;\n  }\n\n  .standalone-hours-row .time {\n    color: #666;\n  }\n\n  .standalone-hours-row.current-day {\n    background: #fff;\n    margin: -5px -10px;\n    padding: 8px 10px;\n    border-radius: 8px;\n    font-weight: 600;\n  }\n\n  .standalone-hours-row.current-day .day {\n    color: #007AFF;\n  }\n\n  .standalone-hours-row.current-day .time {\n    color: #007AFF;\n  }\n\n  .standalone-call-now-button {\n    background: #007AFF;\n    color: white;\n    border: none;\n    padding: 5px 40px;\n    border-radius: 25px;\n    font-size: 13px;\n    font-weight: 600;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n    text-decoration: none;\n    display: block;\n    transition: all 0.3s ease;\n  }\n\n  .standalone-call-now-button:hover {\n    background: #0056CC;\n    transform: translateY(-2px);\n    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);\n  }\n\n  .standalone-call-now-button.disabled {\n    background: #cccccc !important;\n    cursor: not-allowed;\n    pointer-events: none;\n  }\n\n  .standalone-call-now-button.disabled:hover {\n    transform: none;\n    box-shadow: none;\n  }\n\n  @media (max-width: 640px) {\n    .standalone-consultation-modal {\n      width: 95%;\n      margin: 10px;\n      border-radius: 12px;\n    }\n\n    .standalone-modal-header {\n      padding: 20px 20px 15px;\n    }\n\n    .standalone-modal-title {\n      font-size: 18px;\n    }\n\n    .standalone-modal-subtitle {\n      font-size: 13px;\n    }\n\n    .standalone-modal-content {\n      padding: 5px 15px 20px;\n    }\n\n    .standalone-consultation-option {\n      padding: 14px;\n    }\n\n    .standalone-consultation-icon {\n      width: 40px;\n      height: 40px;\n      margin-right: 12px;\n      border-radius: 8px;\n    }\n\n    .standalone-consultation-icon svg {\n      width: 20px;\n      height: 20px;\n    }\n\n    .standalone-consultation-method {\n      font-size: 14px;\n    }\n\n    .standalone-consultation-info {\n      font-size: 12px;\n    }\n\n    .standalone-modal-close {\n      top: 12px;\n      right: 12px;\n      width: 26px;\n      height: 26px;\n    }\n\n    .standalone-modal-close svg {\n      width: 18px;\n      height: 18px;\n    }\n  }\n</style>\n\n<!-- ============= CUSTOMIZABLE SETTINGS - EDIT THESE ============= -->\n{% assign consultation_heading = \"Speak to the team \" %}\n{% assign consultation_badge = \"\" %}\n{% assign consultation_description = \"Can't find the answer to your question in the FAQ'S at the bottom of the page? Contact us by clicking here.\" %}\n{% assign modal_title = \"How would you like to contact us?\" %}\n{% assign modal_subtitle = \"Choose your preferred method to get in touch with us\" %}\n\n{% comment %} Contact Options {% endcomment %}\n{% assign contact_page_url = \"/pages/contact\" %}\n{% assign contact_option_title = \"Contact Form\" %}\n{% assign contact_option_description = \"Fill out our online form\" %}\n\n{% assign phone_number = \"01902256667\" %}\n{% assign phone_option_title = \"Call Us\" %}\n\n{% assign whatsapp_number = \"447798983387\" %}\n{% assign whatsapp_display_number = \"+44 7798 983387\" %}\n{% assign whatsapp_option_title = \"WhatsApp\" %}\n\n{% comment %} Store Hours {% endcomment %}\n{% assign monday_hours = \"Closed\" %}\n{% assign tuesday_hours = \"10:00AM-6:00PM\" %}\n{% assign wednesday_hours = \"10:00AM-6:00PM\" %}\n{% assign thursday_hours = \"Closed\" %}\n{% assign friday_hours = \"10:00AM-6:00PM\" %}\n{% assign saturday_hours = \"10:00AM-4:00PM\" %}\n{% assign sunday_hours = \"Closed\" %}\n{% assign closed_message = \"You can send us a WhatsApp, send us an email or call back during opening hours\" %}\n<!-- ============================================================== -->\n\n<div class=\"standalone-consultation-wrapper\">\n  <!-- Consultation Card Button -->\n  <div class=\"standalone-cta-card\" onclick=\"openStandaloneConsultationModal()\">\n    <div class=\"standalone-cta-card-header\">\n      <h3>{{ consultation_heading }}</h3>\n      {% if consultation_badge != blank %}\n        <span class=\"standalone-cta-badge\">{{ consultation_badge }}</span>\n      {% endif %}\n    </div>\n    <p>{{ consultation_description }}</p>\n  </div>\n\n  <!-- Consultation Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-consultation-modal\">\n    <div class=\"standalone-consultation-modal\">\n      <div class=\"standalone-modal-header\">\n        <button class=\"standalone-modal-close\" onclick=\"closeStandaloneConsultationModal()\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n          </svg>\n        </button>\n        <h3 class=\"standalone-modal-title\">{{ modal_title }}</h3>\n        <p class=\"standalone-modal-subtitle\">{{ modal_subtitle }}</p>\n      </div>\n      <div class=\"standalone-modal-content\">\n        <div class=\"standalone-consultation-options\">\n          \n          <!-- Contact Page Option -->\n          {% if contact_page_url != blank %}\n            <a href=\"{{ contact_page_url }}\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ contact_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ contact_option_description }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n\n          <!-- Phone Option -->\n          {% if phone_number != blank %}\n            <div class=\"standalone-consultation-option\" onclick=\"openStandalonePhoneHoursModal(); event.preventDefault();\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ phone_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ phone_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </div>\n          {% endif %}\n\n          <!-- WhatsApp Option -->\n          {% if whatsapp_number != blank %}\n            <a href=\"https://wa.me/{{ whatsapp_number | replace: ' ', '' | replace: '-', '' | replace: '+', '' }}\" target=\"_blank\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                  <path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z\"/>\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ whatsapp_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ whatsapp_display_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phone Hours Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-phone-hours-modal\">\n    <div class=\"standalone-phone-hours-modal\">\n      <button class=\"standalone-modal-close\" onclick=\"closeStandalonePhoneHoursModal()\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n        </svg>\n      </button>\n      \n      <div class=\"standalone-phone-icon-circle\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n        </svg>\n      </div>\n\n      <h3 class=\"standalone-phone-modal-title\">Call Us</h3>\n\n      <div class=\"standalone-store-status\" id=\"standalone-store-status\">\n        <span class=\"standalone-status-icon\">✓</span>\n        <span class=\"status-text\">We are currently open</span>\n      </div>\n\n      <div class=\"standalone-closed-message\" id=\"standalone-closed-message\" style=\"display: none;\">\n        <p>{{ closed_message }}</p>\n      </div>\n\n      <div class=\"standalone-opening-hours\">\n        <h4 class=\"standalone-hours-heading\">Opening Hours</h4>\n        <div class=\"standalone-hours-list\">\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Monday</span>\n            <span class=\"time\">{{ monday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Tuesday</span>\n            <span class=\"time\">{{ tuesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Wednesday</span>\n            <span class=\"time\">{{ wednesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Thursday</span>\n            <span class=\"time\">{{ thursday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Friday</span>\n            <span class=\"time\">{{ friday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Saturday</span>\n            <span class=\"time\">{{ saturday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Sunday</span>\n            <span class=\"time\">{{ sunday_hours }}</span>\n          </div>\n        </div>\n      </div>\n\n      <a href=\"tel:{{ phone_number | replace: ' ', '' | replace: '-', '' }}\" class=\"standalone-call-now-button\" id=\"standalone-call-button\">\n        Call Now\n      </a>\n    </div>\n  </div>\n</div>\n\n<script>\n  function openStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n    }\n  }\n\n  function closeStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function openStandalonePhoneHoursModal() {\n    closeStandaloneConsultationModal();\n    \n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n      checkStandaloneStoreStatus();\n      highlightStandaloneCurrentDay();\n    }\n  }\n\n  function closeStandalonePhoneHoursModal() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function checkStandaloneStoreStatus() {\n    const statusElement = document.getElementById('standalone-store-status');\n    if (!statusElement) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    const currentHour = now.getHours();\n    const currentMinute = now.getMinutes();\n    const currentTime = currentHour * 60 + currentMinute;\n\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    const hoursText = todayRow.querySelector('.time').textContent.trim();\n\n    let isOpen = false;\n    if (hoursText.toLowerCase() !== 'closed') {\n      const matches = hoursText.match(/(\\d{1,2}):(\\d{2})(AM|PM)-(\\d{1,2}):(\\d{2})(AM|PM)/i);\n      if (matches) {\n        let openHour = parseInt(matches[1]);\n        const openMinute = parseInt(matches[2]);\n        const openPeriod = matches[3].toUpperCase();\n        let closeHour = parseInt(matches[4]);\n        const closeMinute = parseInt(matches[5]);\n        const closePeriod = matches[6].toUpperCase();\n\n        if (openPeriod === 'PM' && openHour !== 12) openHour += 12;\n        if (openPeriod === 'AM' && openHour === 12) openHour = 0;\n        if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;\n        if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;\n\n        const openTime = openHour * 60 + openMinute;\n        const closeTime = closeHour * 60 + closeMinute;\n\n        isOpen = currentTime >= openTime && currentTime < closeTime;\n      }\n    }\n\n    const statusIcon = statusElement.querySelector('.standalone-status-icon');\n    const statusText = statusElement.querySelector('.status-text');\n    const closedMessage = document.getElementById('standalone-closed-message');\n    const callButton = document.getElementById('standalone-call-button');\n    \n    if (isOpen) {\n      statusElement.classList.remove('closed');\n      statusIcon.textContent = '✓';\n      statusText.textContent = 'We are currently open';\n      if (closedMessage) closedMessage.style.display = 'none';\n      if (callButton) {\n        callButton.textContent = 'Call Now';\n        callButton.classList.remove('disabled');\n        callButton.style.pointerEvents = 'auto';\n        callButton.style.background = '#007AFF';\n      }\n    } else {\n      statusElement.classList.add('closed');\n      statusIcon.textContent = '✗';\n      statusText.textContent = 'We are currently closed';\n      if (closedMessage) closedMessage.style.display = 'block';\n      if (callButton) {\n        callButton.textContent = 'Currently Closed';\n        callButton.classList.add('disabled');\n        callButton.style.pointerEvents = 'none';\n        callButton.style.background = '#cccccc';\n      }\n    }\n  }\n\n  function highlightStandaloneCurrentDay() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (!modal) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    \n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    hoursRows.forEach(row => row.classList.remove('current-day'));\n    \n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    if (todayRow) {\n      todayRow.classList.add('current-day');\n    }\n  }\n\n  // Close modals when clicking on overlay\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.standalone-consultation-modal-overlay').forEach(overlay => {\n      overlay.addEventListener('click', function(e) {\n        if (e.target === this) {\n          this.classList.remove('active');\n          document.body.style.overflow = '';\n        }\n      });\n    });\n\n    document.addEventListener('keydown', function(e) {\n      if (e.key === 'Escape') {\n        closeStandaloneConsultationModal();\n        closeStandalonePhoneHoursModal();\n      }\n    });\n  });\n</script>"
+          }
+        },
+        "accordion_YdJrFX": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Your Booking",
+            "content": "<p>All packages are paid for securely through our online booking system. After confirming your booking, our team will reach out via phone, WhatsApp or email to schedule your appointment.</p><p>You’ll always be offered an appointment <strong>within 7 days of booking</strong>.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_GdNBTM": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Treatment Time And Process",
+            "content": "<p>Your Sculpt, Cleanse & Glow Signature Package is structured to maximise results, with all three treatments completed in a smooth sequence during a 2-hour appointment.</p><p>First, you’ll begin with Power Sculpt to lift, tighten a chosen targeted area on your body such as arms, buttocks, stomach or others.</p><p>Next, you’ll receive a Carbon Facial to deeply cleanse, refine pores and brighten the skin.</p><p>Finally, your treatment finishes with calming Red Light Therapy to boost collagen and enhance overall rejuvenation.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_D8Xijx": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Cancellation, Refund And Reschedule Policy",
+            "content": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_6NpUwT": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "picto-star",
+            "title": "Contact And Address",
+            "content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "disabled": true,
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 2,
+            "show_below_gallery": true,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "description",
+        "payment_terms",
+        "separator",
+        "price",
+        "appointment_picker_kVxb3E",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "liquid_Eg4Pre",
+        "accordion_YdJrFX",
+        "accordion_GdNBTM",
+        "accordion_D8Xijx",
+        "accordion_6NpUwT",
+        "complementary_products"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "xl",
+        "product_info_size": 50,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "faq_bradJb": {
+      "type": "faq",
+      "blocks": {
+        "question_RrLqCK": {
+          "type": "question",
+          "settings": {
+            "question": "Radio Frequency Skin Tightening",
+            "answer": "<p>Using targeted radio frequency energy, this non-surgical treatment gently heats the deeper layers of the skin to stimulate collagen production. The result is firmer, tighter and more lifted skin, with improved texture and reduced early signs of sagging.</p>",
+            "show_embedded_section": true,
+            "embedded_image": "shopify://shop_images/PHOTO-2025-12-04-17-13-44_4.jpg",
+            "embedded_layout": "image_content",
+            "embedded_layout_mobile": "image_content",
+            "embedded_layout_gap": 40,
+            "embedded_layout_gap_mobile": 20,
+            "embedded_image_ratio": "original",
+            "embedded_image_ratio_mobile": "original",
+            "embedded_step_1": "Step 1",
+            "embedded_step_1_title": "How It Works",
+            "embedded_step_1_text": "<p>Power Sculpt uses focused electromagnetic energy to stimulate thousands of powerful muscle contractions in your chosen treatment area.</p><p>These contractions force the muscle fibres to adapt, strengthen, and grow while also enhancing fat metabolism in the surrounding tissue.</p><p>In short: it tones, tightens, and burns simultaneously.</p>",
+            "embedded_step_2": "Step 2",
+            "embedded_step_2_title": "Treatment",
+            "embedded_step_2_text": "<p>During treatment, you’ll feel strong, rhythmic muscle contractions - not pain, as the electromagnetic energy engages the muscles.<br/><br/>There’s no downtime or soreness; you can return to normal activities immediately. Most clients even describe the feeling as an intense workout without breaking a sweat.</p>",
+            "embedded_step_3": "Step 3",
+            "embedded_step_3_title": "After",
+            "embedded_step_3_text": "<p>After your Power Sculpt session, you can return to normal activities immediately - there’s no downtime or recovery required. You may feel a mild muscle ache similar to an intense workout, but this simply means your body is already responding and strengthening.</p>",
+            "embedded_step_4": "",
+            "embedded_step_4_title": "",
+            "embedded_step_4_text": ""
+          }
+        },
+        "question_DLzrmg": {
+          "type": "question",
+          "settings": {
+            "question": "Hydrofacial",
+            "answer": "<p>HydroFacial is a luxury 7-step, non-invasive skin rejuvenation treatment designed to cleanse, exfoliate, extract and infuse your skin with powerful hydrating serums — all in one relaxing session.\n\nUsing advanced vortex-technology, HydroFacial removes impurities while delivering nourishing ingredients deep into the skin, leaving you with a clearer, brighter and more radiant complexion straight away.</p>",
+            "show_embedded_section": true,
+            "embedded_image": "shopify://shop_images/MAR-HO2-WHY-INSTAST-REV01_ho2-stories-why-hydro2.jpg",
+            "embedded_layout": "image_content",
+            "embedded_layout_mobile": "image_content",
+            "embedded_layout_gap": 40,
+            "embedded_layout_gap_mobile": 20,
+            "embedded_image_ratio": "original",
+            "embedded_image_ratio_mobile": "original",
+            "embedded_step_1": "1",
+            "embedded_step_1_title": "Cleanse & Exfoliate",
+            "embedded_step_1_text": "<p>A gentle resurfacing step removes makeup, dead skin, and built-up oils. This clears the way for deep penetration of active ingredients and reveals brighter, smoother skin instantly.</p>",
+            "embedded_step_2": "02",
+            "embedded_step_2_title": "Extract + Detoxify",
+            "embedded_step_2_text": "<p>The suction handpiece painlessly removes blackheads, congestion, and impurities from deep within the pores - far more effectively than manual extractions.</p>",
+            "embedded_step_3": "03",
+            "embedded_step_3_title": "Hydrate + Protect",
+            "embedded_step_3_text": "<p>Finally, your skin is drenched in a blend of antioxidants, peptides, and hyaluronic acid to replenish moisture, soothe inflammation, and boost long-term skin health.<br/><br/>The result is skin that looks fresh, plump, and luminous - the kind of healthy glow that makeup simply can’t replicate.</p>",
+            "embedded_step_4": "",
+            "embedded_step_4_title": "",
+            "embedded_step_4_text": ""
+          }
+        },
+        "question_3WxPfa": {
+          "type": "question",
+          "settings": {
+            "question": "Celluma Red Light Therapy",
+            "answer": "<p>Celluma Red Light Therapy uses gentle, low-level wavelengths to boost collagen production, reduce inflammation, and support skin healing. It improves texture, calms irritation, and enhances overall skin radiance with no downtime.</p>",
+            "show_embedded_section": true,
+            "embedded_image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.29.00_65d5d3de.jpg",
+            "embedded_layout": "image_content",
+            "embedded_layout_mobile": "image_content",
+            "embedded_layout_gap": 40,
+            "embedded_layout_gap_mobile": 20,
+            "embedded_image_ratio": "original",
+            "embedded_image_ratio_mobile": "original",
+            "embedded_step_1": "01",
+            "embedded_step_1_title": "Cleansed And Prepared",
+            "embedded_step_1_text": "<p>The skin is gently cleansed to ensure maximum light absorption.<br/><br/>This preparation ensures your session is safe, effective, and tailored to your skin’s needs.</p>",
+            "embedded_step_2": "02",
+            "embedded_step_2_title": "Celluma LED Therapy Session",
+            "embedded_step_2_text": "<p>You will relax comfortably as the Celluma device is positioned above the treatment area.<br/><br/>The panel emits targeted red and near-infrared light wavelengths that penetrate deep into the skin to energise cells and trigger collagen renewal.<br/><br/>The session lasts around 20 to 30 minutes and is completely painless. Most clients describe it as warm, calming, and deeply relaxing.</p>",
+            "embedded_step_3": "03",
+            "embedded_step_3_title": "Recovery And Maintenance",
+            "embedded_step_3_text": "<p>After your session, your skin will appear instantly refreshed with a healthy, natural glow.<br/><br/>There is no downtime, and you can return to normal activities straight away.</p>",
+            "embedded_step_4": "",
+            "embedded_step_4_title": "",
+            "embedded_step_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_RrLqCK",
+        "question_DLzrmg",
+        "question_3WxPfa"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.faq__content {flex-basis: 100% !important; }}"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "show_categories": false,
+        "subheading": "",
+        "title": "The Process",
+        "content": ""
+      }
+    },
+    "ss_steps_11_7cMyRT": {
+      "type": "ss-steps-11",
+      "blocks": {
+        "step_jmRN9F": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 1",
+            "title": "Consultation and Skin Preparation",
+            "text": "<p>Your appointment begins with a detailed skin consultation and analysis on the day of the treatment<br/><br/>The skin is then cleansed and a thin layer of medical-grade liquid carbon is applied.<br/><br/>The carbon acts as a powerful absorber, drawing out impurities, oil, and dead skin cells from deep within the pores.</p>"
+          }
+        },
+        "step_jiiz8x": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 2",
+            "title": "Laser Activation",
+            "text": "<p>Once the carbon has penetrated the skin, a specialised laser is passed over the area.<br/><br/>The laser light is absorbed by the carbon particles, gently vaporising them along with trapped debris, bacteria, and dead skin cells.<br/><br/>This process provides deep exfoliation and pore purification while stimulating collagen production in the underlying skin layers.</p>"
+          }
+        },
+        "step_6jaGgE": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 3",
+            "title": "Cooling and Hydration",
+            "text": "<p>After the laser treatment, the skin is cooled and hydrated with soothing serums to restore balance and comfort.<br/><br/>Your skin will look instantly clearer and smoother with a noticeable glow that continues to improve over the following days.<br/><br/>For lasting results, a course of 4 to 6 sessions spaced a few weeks apart is recommended.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_jmRN9F",
+        "step_jiiz8x",
+        "step_6jaGgE"
+      ],
+      "disabled": true,
+      "name": "SS - Steps #11",
+      "settings": {
+        "layout": "image_content",
+        "layout_mobile": "image_content",
+        "layout_gap": 64,
+        "layout_gap_mobile": 32,
+        "image": "shopify://shop_images/CLF-5.jpg",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "steps_custom": false,
+        "steps_font": "josefin_sans_n4",
+        "steps_size": 12,
+        "steps_size_mobile": 12,
+        "steps_height": 100,
+        "steps_padding_horizontal": 8,
+        "steps_padding_horizontal_mobile": 8,
+        "steps_padding_vertical": 4,
+        "steps_padding_vertical_mobile": 4,
+        "steps_radius": 100,
+        "steps_border_thickness": 1,
+        "steps_content_align": "left",
+        "steps_content_align_mobile": "left",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 24,
+        "title_size_mobile": 20,
+        "title_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 8,
+        "text_mt_mobile": 8,
+        "steps_color": "#ffffff",
+        "steps_bg_color": "#e6b325",
+        "steps_border_color": "#e6b325",
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "image_border_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "175993612397035c9e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_qFMFmN": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+          "settings": {
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
+          }
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_qFMFmN"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_wgM46e": {
+          "type": "text",
+          "settings": {
+            "question": "How long will the treatment take and in what order are they performed?",
+            "answer": "<p>Your <strong>Tighten, Clean & Glow Premium Package</strong> is designed to maximise results, with all three treatments performed in a smooth, seamless sequence during a 2-hour appointment.</p><p>You’ll begin with <strong>Radio Frequency Skin Tightening</strong> to gently heat the deeper layers of the skin, stimulating collagen and improving firmness.</p><p>Next, you’ll move into your <strong>HydroFacial deep cleanse</strong>, targeting congestion, refining pores and restoring clarity and brightness.</p><p>Your session concludes with soothing <strong>Red Light Therapy</strong>, boosting collagen, calming inflammation and enhancing overall rejuvenation.</p>"
+          }
+        },
+        "text_73aMaM": {
+          "type": "text",
+          "settings": {
+            "question": "What is the cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.</p><p>Any cancellations on the day can be rescheduled but will not be refunded</p><p>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+          }
+        },
+        "text_HhtUzg": {
+          "type": "text",
+          "settings": {
+            "question": "What are your opening hours?",
+            "answer": "<ul><li><strong>Monday:</strong>Closed</li><li><strong>Tuesday:</strong>10AM - 6PM</li><li><strong>Wednesday:</strong>10AM - 6PM</li><li><strong>Thursday:</strong>Closed</li><li><strong>Friday:</strong>10AM - 6PM</li><li><strong>Saturday:</strong>10AM - 4PM</li><li><strong>Sunday:</strong>Closed</li></ul>"
+          }
+        },
+        "text_EkDPcx": {
+          "type": "text",
+          "settings": {
+            "question": "What are your contact details and address?",
+            "answer": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>"
+          }
+        },
+        "text_TTGaBb": {
+          "type": "text",
+          "settings": {
+            "question": "Do you offer flexible payment options?",
+            "answer": "<p>Flexible payment options are available, including Klarna and Shopify Pay. Just choose the one you prefer at checkout.</p>"
+          }
+        },
+        "text_VRegUr": {
+          "type": "text",
+          "settings": {
+            "question": " What is included in The Sculpt, Cleanse & Glow Signature Package?",
+            "answer": "<p>This package includes three advanced treatments in one appointment: Power Sculpt body contouring, a Carbon Facial for deep cleansing and brightening, and Red Light Therapy to calm, rejuvenate and boost collagen.</p>"
+          }
+        },
+        "text_Hir8bk": {
+          "type": "text",
+          "settings": {
+            "question": "Is the £149 price for everything together?",
+            "answer": "<p>Yes - the full £149 covers all three treatments in your appointment. Purchased individually, they normally total £220.</p>"
+          }
+        },
+        "text_MLKHPB": {
+          "type": "text",
+          "settings": {
+            "question": "Are there any reasons I might not be suitable?",
+            "answer": "<p>You may not be suitable if you are pregnant, breastfeeding, have certain medical conditions, metal implants/pacemakers, or active skin infections.</p>"
+          }
+        },
+        "text_YUQkbE": {
+          "type": "text",
+          "settings": {
+            "question": "Do any of the treatments hurt, and is there any downtime?",
+            "answer": "<p>Power Sculpt creates strong muscle contractions, which can feel unusual but not painful. The Carbon Facial may feel warm but is generally very comfortable. Red Light Therapy is completely relaxing. There is <strong>no downtime</strong> from any of the treatments - you can return to your normal activities straight away.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "What areas can be treated with Power Sculpt in this package?",
+            "answer": "<p>Common areas include the stomach, glutes, thighs or arms. Your practitioner will help you choose the most effective area based on your goals.</p>"
+          }
+        },
+        "text_UiGdVT": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "What does the Carbon Facial do for my skin?",
+            "answer": "<p>It deeply cleanses the pores, smooths texture, brightens the complexion and helps reduce oil, congestion and uneven skin tone.</p>"
+          }
+        },
+        "text_KK7Pzi": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation first?",
+            "answer": "<p>No you don't need to book a consultation first.</p>"
+          }
+        },
+        "text_F8VzVF": {
+          "type": "text",
+          "settings": {
+            "question": "How soon will I see results?",
+            "answer": "<p>Many clients notice an immediate glow and smoother skin after their session. Tightening, refining and overall rejuvenation continue to improve over the following weeks, especially when supported by a healthy lifestyle.</p>"
+          }
+        },
+        "text_WDUHyt": {
+          "type": "text",
+          "settings": {
+            "question": "If I want to add more of any particular treatment after the package, how do I do it?",
+            "answer": "<p>Simply speak to your practitioner after your appointment or contact the clinic at any time. We can book additional Power Sculpt, Carbon Facial or Red Light Therapy sessions individually or as part of a tailored course.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_wgM46e",
+        "text_73aMaM",
+        "text_HhtUzg",
+        "text_EkDPcx",
+        "text_TTGaBb",
+        "text_VRegUr",
+        "text_Hir8bk",
+        "text_MLKHPB",
+        "text_YUQkbE",
+        "text_JMUbWR",
+        "text_UiGdVT",
+        "text_KK7Pzi",
+        "text_F8VzVF",
+        "text_WDUHyt"
+      ],
+      "name": "SS - FAQ #1",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 1
+      }
+    }
+  },
+  "order": [
+    "treatment_tabs_section_Bqrbnk",
+    "main",
+    "faq_bradJb",
+    "ss_steps_11_7cMyRT",
+    "175993612397035c9e",
+    "ss_simple_faq_jiYFWj"
+  ]
+}
