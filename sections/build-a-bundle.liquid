@@ -45,14 +45,17 @@
             {% assign category_title = 'Category ' | append: i %}
           {% endif %}
           
-          <div class="category-wrapper" data-category="{{ i }}" data-locked="{% if i > 5 %}true{% else %}false{% endif %}">
+          <div class="category-wrapper collapsed" data-category="{{ i }}" data-locked="{% if i > 5 %}true{% else %}false{% endif %}">
             <div class="category-header">
               <h3 class="category-title">
                 <span class="category-number">{{ i }}</span>
                 {{ category_title }}
                 <span class="lock-icon">🔒</span>
               </h3>
-              <span class="category-count">0 selected</span>
+              <div class="category-right">
+                <span class="category-count">0 selected</span>
+                <span class="expand-icon">▼</span>
+              </div>
             </div>
             
             <div class="category-options">
@@ -195,6 +198,32 @@
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 2px solid #e0e0e0;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.category-header:hover {
+  background: rgba(76, 175, 80, 0.05);
+  margin: -10px -15px 15px -15px;
+  padding: 10px 15px 15px 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.category-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.expand-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.category-wrapper.collapsed .expand-icon {
+  transform: rotate(-90deg);
 }
 
 .category-title {
@@ -237,6 +266,16 @@
 .category-options {
   display: grid;
   gap: 10px;
+  max-height: 2000px;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.category-wrapper.collapsed .category-options {
+  max-height: 0;
+  opacity: 0;
+  margin-top: -15px;
 }
 
 .option-item {
@@ -441,6 +480,15 @@
   .bundle-footer {
     padding: 20px 15px;
   }
+  
+  .category-header:hover {
+    margin: -8px -12px 15px -12px;
+    padding: 8px 12px 15px 12px;
+  }
+  
+  .category-right {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -572,12 +620,17 @@ function initBundleBuilder() {
       
       if (categoryNum <= 5) {
         category.dataset.locked = 'false';
+        // First 5 categories can be expanded/collapsed freely
       } else if (categoryNum <= 8 && count >= 5) {
         category.dataset.locked = 'false';
+        // Newly unlocked categories are kept collapsed until user expands them
       } else if (categoryNum <= 10 && count >= 8) {
         category.dataset.locked = 'false';
+        // Newly unlocked categories are kept collapsed until user expands them
       } else {
         category.dataset.locked = 'true';
+        // Locked categories should stay collapsed
+        category.classList.add('collapsed');
       }
     });
   }
@@ -637,6 +690,21 @@ function initBundleBuilder() {
     });
   });
   
+  // Handle category expand/collapse
+  document.querySelectorAll('.category-header').forEach(header => {
+    header.addEventListener('click', function(e) {
+      // Don't collapse if clicking on a checkbox inside (shouldn't happen but safety check)
+      if (e.target.classList.contains('option-checkbox')) return;
+      
+      const categoryWrapper = this.closest('.category-wrapper');
+      
+      // Don't allow collapsing locked categories (they should stay closed)
+      if (categoryWrapper.dataset.locked === 'true') return;
+      
+      categoryWrapper.classList.toggle('collapsed');
+    });
+  });
+  
   // Handle add to cart
   const addToCartBtn = document.getElementById('addToCartBtn');
   if (addToCartBtn) {
@@ -687,6 +755,14 @@ function initBundleBuilder() {
   
   // Initialize UI
   updateUI();
+  
+  // Expand first 2-3 unlocked categories by default for better UX
+  const unlocked = document.querySelectorAll('.category-wrapper[data-locked="false"]');
+  unlocked.forEach((category, index) => {
+    if (index < 2) {
+      category.classList.remove('collapsed');
+    }
+  });
 }
 </script>
 
