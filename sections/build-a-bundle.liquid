@@ -28,7 +28,21 @@
         {% assign category_name = 'category_' | append: i | append: '_name' %}
         {% assign category_title = section.settings[category_name] %}
         
-        {% if category_title != blank %}
+        {% comment %} Check if this category has any sub-options assigned {% endcomment %}
+        {% assign has_options = false %}
+        {% for block in section.blocks %}
+          {% if block.settings.category == i %}
+            {% assign has_options = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if has_options %}
+          {% comment %} Use custom name or fallback to default {% endcomment %}
+          {% if category_title == blank %}
+            {% assign category_title = 'Category ' | append: i %}
+          {% endif %}
+          
           <div class="category-wrapper" data-category="{{ i }}" data-locked="{% if i > 5 %}true{% else %}false{% endif %}">
             <div class="category-header">
               <h3 class="category-title">
