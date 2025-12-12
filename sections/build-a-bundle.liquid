@@ -136,19 +136,22 @@
 
 .progress-bar {
   width: 100%;
-  height: 8px;
+  height: 12px;
   background: #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
   width: 0%;
-  transition: width 0.3s ease;
+  transition: width 0.4s ease;
   border-radius: 10px;
+  min-width: 0;
+  display: block;
 }
 
 .progress-text {
@@ -501,7 +504,15 @@ function initBundleBuilder() {
     if (progressFill) {
       const percentage = (count / 10) * 100;
       console.log('Bundle Builder: Setting progress to', percentage + '%');
+      
+      // Force repaint by reading offsetHeight
+      progressFill.offsetHeight;
+      
+      // Set width
       progressFill.style.width = percentage + '%';
+      
+      // Force another repaint
+      void progressFill.offsetHeight;
     } else {
       console.warn('Bundle Builder: progressFill element not found');
     }
