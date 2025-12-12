@@ -27,11 +27,13 @@
       {% for i in (1..10) %}
         {% assign category_name = 'category_' | append: i | append: '_name' %}
         {% assign category_title = section.settings[category_name] %}
+        {% assign current_category = i | plus: 0 %}
         
         {% comment %} Check if this category has any sub-options assigned {% endcomment %}
         {% assign has_options = false %}
         {% for block in section.blocks %}
-          {% if block.settings.category == i %}
+          {% assign block_category = block.settings.category | plus: 0 %}
+          {% if block_category == current_category %}
             {% assign has_options = true %}
             {% break %}
           {% endif %}
@@ -55,7 +57,8 @@
             
             <div class="category-options">
               {% for block in section.blocks %}
-                {% if block.settings.category == i %}
+                {% assign block_category = block.settings.category | plus: 0 %}
+                {% if block_category == current_category %}
                   <label class="option-item">
                     <input 
                       type="checkbox" 
