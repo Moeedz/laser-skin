@@ -1,0 +1,783 @@
+{% comment %}
+  Build a Bundle Section
+  - 10 categories with sub-options
+  - Progressive unlock system
+  - Dynamic pricing based on selections
+  - Line item properties for cart
+{% endcomment %}
+
+<div class="bundle-builder" data-section-id="{{ section.id }}">
+  <div class="bundle-container">
+    {% if section.settings.section_title != blank %}
+      <h2 class="bundle-title">{{ section.settings.section_title }}</h2>
+    {% endif %}
+    
+    {% if section.settings.section_description != blank %}
+      <div class="bundle-description">{{ section.settings.section_description }}</div>
+    {% endif %}
+
+    <div class="bundle-progress">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-text" id="progressText">Select items to build your bundle</p>
+    </div>
+
+    <div class="bundle-categories">
+      {% for i in (1..10) %}
+        {% assign category_name = 'category_' | append: i | append: '_name' %}
+        {% assign category_title = section.settings[category_name] %}
+        
+        {% if category_title != blank %}
+          <div class="category-wrapper" data-category="{{ i }}" data-locked="{% if i > 5 %}true{% else %}false{% endif %}">
+            <div class="category-header">
+              <h3 class="category-title">
+                <span class="category-number">{{ i }}</span>
+                {{ category_title }}
+                <span class="lock-icon">🔒</span>
+              </h3>
+              <span class="category-count">0 selected</span>
+            </div>
+            
+            <div class="category-options">
+              {% for block in section.blocks %}
+                {% if block.settings.category == i %}
+                  <label class="option-item">
+                    <input 
+                      type="checkbox" 
+                      class="option-checkbox"
+                      data-option-name="{{ block.settings.option_name }}"
+                      data-category="{{ i }}"
+                    >
+                    <span class="option-label">{{ block.settings.option_name }}</span>
+                    <span class="checkmark">✓</span>
+                  </label>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="bundle-footer">
+      <div class="bundle-pricing">
+        <div class="price-display">
+          <span class="price-label">Bundle Price:</span>
+          <span class="price-amount" id="bundlePrice">$0.00</span>
+        </div>
+        <div class="selections-count" id="selectionsCount">0 / 10 items selected</div>
+      </div>
+
+      <div class="bundle-message" id="bundleMessage"></div>
+
+      <button 
+        type="button" 
+        class="bundle-add-to-cart"
+        id="addToCartBtn"
+        disabled
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.bundle-builder {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.bundle-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bundle-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.bundle-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.bundle-progress {
+  margin-bottom: 40px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bundle-categories {
+  display: grid;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.category-wrapper {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.category-wrapper[data-locked="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+  background: #f9f9f9;
+}
+
+.category-wrapper[data-locked="false"] {
+  border-color: #4CAF50;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.lock-icon {
+  display: none;
+  font-size: 18px;
+}
+
+.category-wrapper[data-locked="true"] .lock-icon {
+  display: inline;
+}
+
+.category-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.category-options {
+  display: grid;
+  gap: 10px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f8f8f8;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.option-item:hover {
+  background: #f0f0f0;
+  border-color: #4CAF50;
+}
+
+.option-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.option-label {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+  padding-left: 0;
+}
+
+.checkmark {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.option-checkbox:checked ~ .checkmark {
+  display: flex;
+}
+
+.option-checkbox:checked ~ .option-label {
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+.option-item:has(.option-checkbox:checked) {
+  background: #e8f5e9;
+  border-color: #4CAF50;
+}
+
+.bundle-footer {
+  background: #f8f8f8;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.bundle-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-label {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+.price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4CAF50;
+}
+
+.selections-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bundle-message {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.bundle-message.show {
+  display: block;
+}
+
+.bundle-message.info {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+}
+
+.bundle-message.warning {
+  background: #fff3e0;
+  color: #f57c00;
+  border: 1px solid #f57c00;
+}
+
+.bundle-add-to-cart {
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bundle-add-to-cart:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.bundle-add-to-cart:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .bundle-builder {
+    padding: 20px 15px;
+  }
+
+  .bundle-container {
+    padding: 20px 15px;
+  }
+
+  .bundle-title {
+    font-size: 24px;
+  }
+
+  .bundle-description {
+    font-size: 14px;
+  }
+
+  .category-title {
+    font-size: 18px;
+  }
+
+  .category-number {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .option-item {
+    padding: 10px 12px;
+  }
+
+  .option-label {
+    font-size: 14px;
+  }
+
+  .bundle-pricing {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .price-amount {
+    font-size: 28px;
+  }
+
+  .bundle-add-to-cart {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+
+  .bundle-footer {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bundle-title {
+    font-size: 20px;
+  }
+
+  .category-options {
+    gap: 8px;
+  }
+
+  .price-amount {
+    font-size: 24px;
+  }
+}
+</style>
+
+<script>
+(function() {
+  const sectionId = document.querySelector('.bundle-builder').dataset.sectionId;
+  const productId = '{{ section.settings.product_id }}';
+  
+  // Variant IDs for different price tiers
+  const variants = {
+    5: '{{ section.settings.variant_5_id }}',  // $79
+    8: '{{ section.settings.variant_8_id }}',  // $99
+    10: '{{ section.settings.variant_10_id }}' // $129
+  };
+
+  const prices = {
+    5: {{ section.settings.price_5 | default: 79 }},
+    8: {{ section.settings.price_8 | default: 99 }},
+    10: {{ section.settings.price_10 | default: 129 }}
+  };
+
+  let selectedOptions = new Set();
+  
+  function updateUI() {
+    const count = selectedOptions.size;
+    
+    // Update progress bar
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const percentage = (count / 10) * 100;
+    progressFill.style.width = percentage + '%';
+    
+    // Update selections count
+    document.getElementById('selectionsCount').textContent = `${count} / 10 items selected`;
+    
+    // Update category counts
+    document.querySelectorAll('.category-wrapper').forEach(category => {
+      const categoryNum = category.dataset.category;
+      const categoryOptions = category.querySelectorAll('.option-checkbox:checked');
+      const countElement = category.querySelector('.category-count');
+      const optionCount = categoryOptions.length;
+      countElement.textContent = optionCount > 0 ? `${optionCount} selected` : '0 selected';
+    });
+    
+    // Progressive unlock logic
+    unlockCategories(count);
+    
+    // Update pricing and add to cart button
+    updatePricing(count);
+    
+    // Update progress text
+    if (count === 0) {
+      progressText.textContent = 'Select items to build your bundle';
+    } else if (count < 5) {
+      progressText.textContent = `${5 - count} more items needed to unlock first bundle`;
+    } else if (count === 5) {
+      progressText.textContent = '✓ First bundle tier unlocked! ($79)';
+    } else if (count < 8) {
+      progressText.textContent = `${8 - count} more items to unlock second bundle tier`;
+    } else if (count === 8) {
+      progressText.textContent = '✓ Second bundle tier unlocked! ($99)';
+    } else if (count === 9) {
+      progressText.textContent = '1 more item to unlock final bundle tier';
+    } else if (count === 10) {
+      progressText.textContent = '✓ Maximum bundle tier unlocked! ($129)';
+    }
+  }
+  
+  function unlockCategories(count) {
+    const categories = document.querySelectorAll('.category-wrapper');
+    
+    categories.forEach((category, index) => {
+      const categoryNum = index + 1;
+      
+      if (categoryNum <= 5) {
+        category.dataset.locked = 'false';
+      } else if (categoryNum <= 8 && count >= 5) {
+        category.dataset.locked = 'false';
+      } else if (categoryNum <= 10 && count >= 8) {
+        category.dataset.locked = 'false';
+      } else {
+        category.dataset.locked = 'true';
+      }
+    });
+  }
+  
+  function updatePricing(count) {
+    const addToCartBtn = document.getElementById('addToCartBtn');
+    const priceDisplay = document.getElementById('bundlePrice');
+    const messageDiv = document.getElementById('bundleMessage');
+    
+    messageDiv.classList.remove('show', 'info', 'warning');
+    messageDiv.textContent = '';
+    
+    if (count < 5) {
+      addToCartBtn.disabled = true;
+      priceDisplay.textContent = '$0.00';
+      if (count > 0) {
+        messageDiv.textContent = `Select ${5 - count} more items to unlock the first bundle tier`;
+        messageDiv.classList.add('show', 'info');
+      }
+    } else if (count === 5) {
+      addToCartBtn.disabled = false;
+      priceDisplay.textContent = '$' + prices[5].toFixed(2);
+    } else if (count === 6 || count === 7) {
+      addToCartBtn.disabled = true;
+      priceDisplay.textContent = '$' + prices[5].toFixed(2);
+      messageDiv.textContent = 'Please add 8 items in total to be able to add to cart';
+      messageDiv.classList.add('show', 'warning');
+    } else if (count === 8) {
+      addToCartBtn.disabled = false;
+      priceDisplay.textContent = '$' + prices[8].toFixed(2);
+    } else if (count === 9) {
+      addToCartBtn.disabled = true;
+      priceDisplay.textContent = '$' + prices[8].toFixed(2);
+      messageDiv.textContent = 'Please add 10 items in total to be able to add to cart';
+      messageDiv.classList.add('show', 'warning');
+    } else if (count === 10) {
+      addToCartBtn.disabled = false;
+      priceDisplay.textContent = '$' + prices[10].toFixed(2);
+    }
+  }
+  
+  // Handle checkbox changes
+  document.querySelectorAll('.option-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const optionName = this.dataset.optionName;
+      
+      if (this.checked) {
+        selectedOptions.add(optionName);
+      } else {
+        selectedOptions.delete(optionName);
+      }
+      
+      updateUI();
+    });
+  });
+  
+  // Handle add to cart
+  document.getElementById('addToCartBtn').addEventListener('click', function() {
+    const count = selectedOptions.size;
+    let variantId;
+    
+    if (count === 5) variantId = variants[5];
+    else if (count === 8) variantId = variants[8];
+    else if (count === 10) variantId = variants[10];
+    
+    if (!variantId) {
+      alert('Please select a valid bundle configuration');
+      return;
+    }
+    
+    // Build line item properties
+    const properties = {};
+    let index = 1;
+    selectedOptions.forEach(option => {
+      properties[`Item ${index}`] = option;
+      index++;
+    });
+    
+    // Add to cart
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: variantId,
+        quantity: 1,
+        properties: properties
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Success - redirect to cart or show notification
+      window.location.href = '/cart';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error adding to cart. Please try again.');
+    });
+  });
+  
+  // Initialize UI
+  updateUI();
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Build a Bundle",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Build Your Custom Bundle"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "Create your perfect bundle by selecting your favorite items. Choose from our curated selection!"
+    },
+    {
+      "type": "text",
+      "id": "product_id",
+      "label": "Product ID",
+      "info": "The product ID for your bundle product"
+    },
+    {
+      "type": "text",
+      "id": "variant_5_id",
+      "label": "Variant ID for 5 items",
+      "info": "Variant ID for $79 bundle"
+    },
+    {
+      "type": "text",
+      "id": "variant_8_id",
+      "label": "Variant ID for 8 items",
+      "info": "Variant ID for $99 bundle"
+    },
+    {
+      "type": "text",
+      "id": "variant_10_id",
+      "label": "Variant ID for 10 items",
+      "info": "Variant ID for $129 bundle"
+    },
+    {
+      "type": "number",
+      "id": "price_5",
+      "label": "Price for 5 items",
+      "default": 79
+    },
+    {
+      "type": "number",
+      "id": "price_8",
+      "label": "Price for 8 items",
+      "default": 99
+    },
+    {
+      "type": "number",
+      "id": "price_10",
+      "label": "Price for 10 items",
+      "default": 129
+    },
+    {
+      "type": "header",
+      "content": "Category Names"
+    },
+    {
+      "type": "text",
+      "id": "category_1_name",
+      "label": "Category 1 Name",
+      "default": "Category 1"
+    },
+    {
+      "type": "text",
+      "id": "category_2_name",
+      "label": "Category 2 Name",
+      "default": "Category 2"
+    },
+    {
+      "type": "text",
+      "id": "category_3_name",
+      "label": "Category 3 Name",
+      "default": "Category 3"
+    },
+    {
+      "type": "text",
+      "id": "category_4_name",
+      "label": "Category 4 Name",
+      "default": "Category 4"
+    },
+    {
+      "type": "text",
+      "id": "category_5_name",
+      "label": "Category 5 Name",
+      "default": "Category 5"
+    },
+    {
+      "type": "text",
+      "id": "category_6_name",
+      "label": "Category 6 Name",
+      "default": "Category 6"
+    },
+    {
+      "type": "text",
+      "id": "category_7_name",
+      "label": "Category 7 Name",
+      "default": "Category 7"
+    },
+    {
+      "type": "text",
+      "id": "category_8_name",
+      "label": "Category 8 Name",
+      "default": "Category 8"
+    },
+    {
+      "type": "text",
+      "id": "category_9_name",
+      "label": "Category 9 Name",
+      "default": "Category 9"
+    },
+    {
+      "type": "text",
+      "id": "category_10_name",
+      "label": "Category 10 Name",
+      "default": "Category 10"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "option",
+      "name": "Sub-Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "option_name",
+          "label": "Option Name",
+          "default": "Option Name"
+        },
+        {
+          "type": "select",
+          "id": "category",
+          "label": "Assign to Category",
+          "options": [
+            { "value": "1", "label": "Category 1" },
+            { "value": "2", "label": "Category 2" },
+            { "value": "3", "label": "Category 3" },
+            { "value": "4", "label": "Category 4" },
+            { "value": "5", "label": "Category 5" },
+            { "value": "6", "label": "Category 6" },
+            { "value": "7", "label": "Category 7" },
+            { "value": "8", "label": "Category 8" },
+            { "value": "9", "label": "Category 9" },
+            { "value": "10", "label": "Category 10" }
+          ],
+          "default": "1"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Build a Bundle"
+    }
+  ]
+}
+{% endschema %}
