@@ -452,8 +452,27 @@
 </style>
 
 <script>
-(function() {
-  const sectionId = document.querySelector('.bundle-builder').dataset.sectionId;
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait for DOM and run initialization
+  initBundleBuilder();
+});
+
+// Support for Shopify theme customizer
+if (typeof Shopify !== 'undefined' && Shopify.designMode) {
+  document.addEventListener('shopify:section:load', function() {
+    setTimeout(initBundleBuilder, 100);
+  });
+}
+
+function initBundleBuilder() {
+  const bundleBuilder = document.querySelector('.bundle-builder');
+  if (!bundleBuilder) {
+    // If not found, try again after a short delay (for theme customizer)
+    setTimeout(initBundleBuilder, 100);
+    return;
+  }
+
+  const sectionId = bundleBuilder.dataset.sectionId;
   const productId = '{{ section.settings.product_id }}';
   
   // Variant IDs for different price tiers
@@ -473,15 +492,25 @@
   
   function updateUI() {
     const count = selectedOptions.size;
+    console.log('Bundle Builder: Updating UI with count:', count);
     
     // Update progress bar
     const progressFill = document.getElementById('progressFill');
     const progressText = document.getElementById('progressText');
-    const percentage = (count / 10) * 100;
-    progressFill.style.width = percentage + '%';
+    
+    if (progressFill) {
+      const percentage = (count / 10) * 100;
+      console.log('Bundle Builder: Setting progress to', percentage + '%');
+      progressFill.style.width = percentage + '%';
+    } else {
+      console.warn('Bundle Builder: progressFill element not found');
+    }
     
     // Update selections count
-    document.getElementById('selectionsCount').textContent = `${count} / 10 items selected`;
+    const selectionsCount = document.getElementById('selectionsCount');
+    if (selectionsCount) {
+      selectionsCount.textContent = `${count} / 10 items selected`;
+    }
     
     // Update category counts
     document.querySelectorAll('.category-wrapper').forEach(category => {
@@ -489,7 +518,9 @@
       const categoryOptions = category.querySelectorAll('.option-checkbox:checked');
       const countElement = category.querySelector('.category-count');
       const optionCount = categoryOptions.length;
-      countElement.textContent = optionCount > 0 ? `${optionCount} selected` : '0 selected';
+      if (countElement) {
+        countElement.textContent = optionCount > 0 ? `${optionCount} selected` : '0 selected';
+      }
     });
     
     // Progressive unlock logic
@@ -499,20 +530,22 @@
     updatePricing(count);
     
     // Update progress text
-    if (count === 0) {
-      progressText.textContent = 'Select items to build your bundle';
-    } else if (count < 5) {
-      progressText.textContent = `${5 - count} more items needed to unlock first bundle`;
-    } else if (count === 5) {
-      progressText.textContent = '✓ First bundle tier unlocked! ($79)';
-    } else if (count < 8) {
-      progressText.textContent = `${8 - count} more items to unlock second bundle tier`;
-    } else if (count === 8) {
-      progressText.textContent = '✓ Second bundle tier unlocked! ($99)';
-    } else if (count === 9) {
-      progressText.textContent = '1 more item to unlock final bundle tier';
-    } else if (count === 10) {
-      progressText.textContent = '✓ Maximum bundle tier unlocked! ($129)';
+    if (progressText) {
+      if (count === 0) {
+        progressText.textContent = 'Select items to build your bundle';
+      } else if (count < 5) {
+        progressText.textContent = `${5 - count} more items needed to unlock first bundle`;
+      } else if (count === 5) {
+        progressText.textContent = '✓ First bundle tier unlocked! ($79)';
+      } else if (count < 8) {
+        progressText.textContent = `${8 - count} more items to unlock second bundle tier`;
+      } else if (count === 8) {
+        progressText.textContent = '✓ Second bundle tier unlocked! ($99)';
+      } else if (count === 9) {
+        progressText.textContent = '1 more item to unlock final bundle tier';
+      } else if (count === 10) {
+        progressText.textContent = '✓ Maximum bundle tier unlocked! ($129)';
+      }
     }
   }
   
@@ -538,6 +571,8 @@
     const addToCartBtn = document.getElementById('addToCartBtn');
     const priceDisplay = document.getElementById('bundlePrice');
     const messageDiv = document.getElementById('bundleMessage');
+    
+    if (!addToCartBtn || !priceDisplay || !messageDiv) return;
     
     messageDiv.classList.remove('show', 'info', 'warning');
     messageDiv.textContent = '';
@@ -572,7 +607,8 @@
   }
   
   // Handle checkbox changes
-  document.querySelectorAll('.option-checkbox').forEach(checkbox => {
+  const checkboxes = document.querySelectorAll('.option-checkbox');
+  checkboxes.forEach(checkbox => {
     checkbox.addEventListener('change', function() {
       const optionName = this.dataset.optionName;
       
@@ -587,53 +623,56 @@
   });
   
   // Handle add to cart
-  document.getElementById('addToCartBtn').addEventListener('click', function() {
-    const count = selectedOptions.size;
-    let variantId;
-    
-    if (count === 5) variantId = variants[5];
-    else if (count === 8) variantId = variants[8];
-    else if (count === 10) variantId = variants[10];
-    
-    if (!variantId) {
-      alert('Please select a valid bundle configuration');
-      return;
-    }
-    
-    // Build line item properties
-    const properties = {};
-    let index = 1;
-    selectedOptions.forEach(option => {
-      properties[`Item ${index}`] = option;
-      index++;
-    });
-    
-    // Add to cart
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        id: variantId,
-        quantity: 1,
-        properties: properties
+  const addToCartBtn = document.getElementById('addToCartBtn');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', function() {
+      const count = selectedOptions.size;
+      let variantId;
+      
+      if (count === 5) variantId = variants[5];
+      else if (count === 8) variantId = variants[8];
+      else if (count === 10) variantId = variants[10];
+      
+      if (!variantId) {
+        alert('Please select a valid bundle configuration');
+        return;
+      }
+      
+      // Build line item properties
+      const properties = {};
+      let index = 1;
+      selectedOptions.forEach(option => {
+        properties[`Item ${index}`] = option;
+        index++;
+      });
+      
+      // Add to cart
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: variantId,
+          quantity: 1,
+          properties: properties
+        })
       })
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Success - redirect to cart or show notification
-      window.location.href = '/cart';
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('There was an error adding to cart. Please try again.');
+      .then(response => response.json())
+      .then(data => {
+        // Success - redirect to cart or show notification
+        window.location.href = '/cart';
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error adding to cart. Please try again.');
+      });
     });
-  });
+  }
   
   // Initialize UI
   updateUI();
-})();
+}
 </script>
 
 {% schema %}
