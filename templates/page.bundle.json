@@ -17,9 +17,19 @@
         "show_title": true,
         "page_width": "xs"
       }
+    },
+    "build_a_bundle_LHMbkK": {
+      "type": "build-a-bundle",
+      "name": "8x8 Facial Bundle",
+      "settings": {
+        "section_title": "Build Your Custom Facial Treatment Bundle",
+        "section_description": "Create your perfect 8-step facial treatment. Select your skin type, then choose 1 treatment from each of our 8 specialized categories for a completely customized experience.",
+        "variant_id": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "build_a_bundle_LHMbkK"
   ]
 }
