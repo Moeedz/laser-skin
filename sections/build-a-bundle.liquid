@@ -1,12 +1,11 @@
 {% comment %}
-  Build a Bundle Section
-  - 10 categories with sub-options
-  - Progressive unlock system
-  - Dynamic pricing based on selections
-  - Line item properties for cart
+  8x8 Facial Treatment Bundle - Skin Type Filtered
+  - Select skin type first
+  - Choose 1 treatment from each of 8 buckets
+  - Fixed price: $99.99 for 8 treatments
 {% endcomment %}
 
-<div class="bundle-builder" data-section-id="{{ section.id }}">
+<div class="facial-bundle" data-section-id="{{ section.id }}">
   <div class="bundle-container">
     {% if section.settings.section_title != blank %}
       <h2 class="bundle-title">{{ section.settings.section_title }}</h2>
@@ -16,80 +15,207 @@
       <div class="bundle-description">{{ section.settings.section_description }}</div>
     {% endif %}
 
-    <div class="bundle-progress">
+    <!-- Skin Type Selector -->
+    <div class="skin-type-selector">
+      <h3 class="selector-title">Select Your Skin Type</h3>
+      <div class="skin-type-options">
+        <label class="skin-type-option">
+          <input type="radio" name="skin_type" value="Normal" class="skin-type-radio">
+          <span class="skin-type-label">Normal</span>
+        </label>
+        <label class="skin-type-option">
+          <input type="radio" name="skin_type" value="Dry" class="skin-type-radio">
+          <span class="skin-type-label">Dry</span>
+        </label>
+        <label class="skin-type-option">
+          <input type="radio" name="skin_type" value="Oily" class="skin-type-radio">
+          <span class="skin-type-label">Oily</span>
+        </label>
+        <label class="skin-type-option">
+          <input type="radio" name="skin_type" value="Combination" class="skin-type-radio">
+          <span class="skin-type-label">Combination</span>
+        </label>
+        <label class="skin-type-option">
+          <input type="radio" name="skin_type" value="Sensitive" class="skin-type-radio">
+          <span class="skin-type-label">Sensitive</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Treatment Selection Notice -->
+    <div class="selection-notice" id="selectionNotice" style="display: none;">
+      <p>Please select <strong>1 treatment</strong> from each of the <strong>8 categories</strong> below to build your custom facial bundle.</p>
+    </div>
+
+    <!-- Progress Tracker -->
+    <div class="bundle-progress" id="progressSection" style="display: none;">
+      <div class="progress-info">
+        <span class="progress-label">Bundle Progress:</span>
+        <span class="progress-count" id="progressCount">0 / 8 treatments selected</span>
+      </div>
       <div class="progress-bar">
         <div class="progress-fill" id="progressFill"></div>
       </div>
-      <p class="progress-text" id="progressText">Select items to build your bundle</p>
     </div>
 
-    <div class="bundle-categories">
-      {% for i in (1..10) %}
-        {% assign category_name = 'category_' | append: i | append: '_name' %}
-        {% assign category_title = section.settings[category_name] %}
-        {% assign current_category = i | plus: 0 %}
-        
-        {% comment %} Check if this category has any sub-options assigned {% endcomment %}
-        {% assign has_options = false %}
-        {% for block in section.blocks %}
-          {% assign block_category = block.settings.category | plus: 0 %}
-          {% if block_category == current_category %}
-            {% assign has_options = true %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        
-        {% if has_options %}
-          {% comment %} Use custom name or fallback to default {% endcomment %}
-          {% if category_title == blank %}
-            {% assign category_title = 'Category ' | append: i %}
-          {% endif %}
-          
-          <div class="category-wrapper collapsed" data-category="{{ i }}" data-locked="{% if i > 5 %}true{% else %}false{% endif %}">
-            <div class="category-header">
-              <h3 class="category-title">
-                <span class="category-number">{{ i }}</span>
-                {{ category_title }}
-                <span class="lock-icon">🔒</span>
-              </h3>
-              <div class="category-right">
-                <span class="category-count">0 selected</span>
-                <span class="expand-icon">▼</span>
-              </div>
-            </div>
-            
-            <div class="category-options">
-              {% for block in section.blocks %}
-                {% assign block_category = block.settings.category | plus: 0 %}
-                {% if block_category == current_category %}
-                  <label class="option-item">
-                    <input 
-                      type="checkbox" 
-                      class="option-checkbox"
-                      data-option-name="{{ block.settings.option_name }}"
-                      data-category="{{ i }}"
-                    >
-                    <span class="option-label">{{ block.settings.option_name }}</span>
-                    <span class="checkmark">✓</span>
-                  </label>
-                {% endif %}
-              {% endfor %}
-            </div>
+    <!-- Treatment Categories -->
+    <div class="treatment-categories" id="treatmentCategories" style="display: none;">
+      
+      <!-- Category 1: Cleanse & Prep -->
+      <div class="category-wrapper" data-bucket="Cleanse & Prep">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">1</span>
+            <h3 class="category-title">Cleanse & Prep</h3>
           </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="bundle-footer">
-      <div class="bundle-pricing">
-        <div class="price-display">
-          <span class="price-label">Bundle Price:</span>
-          <span class="price-amount" id="bundlePrice">$0.00</span>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
         </div>
-        <div class="selections-count" id="selectionsCount">0 / 10 items selected</div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript based on skin type -->
+        </div>
       </div>
 
-      <div class="bundle-message" id="bundleMessage"></div>
+      <!-- Category 2: Exfoliate & Refine -->
+      <div class="category-wrapper" data-bucket="Exfoliate & Refine">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">2</span>
+            <h3 class="category-title">Exfoliate & Refine</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Category 3: Detox & Clarify -->
+      <div class="category-wrapper" data-bucket="Detox & Clarify">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">3</span>
+            <h3 class="category-title">Detox & Clarify</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Category 4: Extract & Clear -->
+      <div class="category-wrapper" data-bucket="Extract & Clear">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">4</span>
+            <h3 class="category-title">Extract & Clear</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Category 5: Boost & Infuse -->
+      <div class="category-wrapper" data-bucket="Boost & Infuse">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">5</span>
+            <h3 class="category-title">Boost & Infuse</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Category 6: Calm & Balance -->
+      <div class="category-wrapper" data-bucket="Calm & Balance">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">6</span>
+            <h3 class="category-title">Calm & Balance</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Category 7: Activate & Repair -->
+      <div class="category-wrapper" data-bucket="Activate & Repair">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">7</span>
+            <h3 class="category-title">Activate & Repair</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Category 8: Seal & Protect -->
+      <div class="category-wrapper" data-bucket="Seal & Protect">
+        <div class="category-header">
+          <div class="category-title-wrapper">
+            <span class="category-number">8</span>
+            <h3 class="category-title">Seal & Protect</h3>
+          </div>
+          <div class="category-right">
+            <span class="category-status">Not selected</span>
+            <span class="expand-icon">▼</span>
+          </div>
+        </div>
+        
+        <div class="category-options">
+          <!-- Treatments will be populated by JavaScript -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bundle Footer -->
+    <div class="bundle-footer" id="bundleFooter" style="display: none;">
+      <div class="bundle-pricing">
+        <div class="price-display">
+          <span class="price-label">Total Price:</span>
+          <span class="price-amount">$99.99</span>
+        </div>
+        <div class="selections-info" id="selectionsInfo">Complete your bundle to proceed</div>
+      </div>
 
       <button 
         type="button" 
@@ -97,14 +223,14 @@
         id="addToCartBtn"
         disabled
       >
-        Add to Cart
+        Add Bundle to Cart
       </button>
     </div>
   </div>
 </div>
 
 <style>
-.bundle-builder {
+.facial-bundle {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -113,12 +239,12 @@
 .bundle-container {
   background: #fff;
   border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .bundle-title {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 15px;
@@ -128,13 +254,113 @@
 .bundle-description {
   text-align: center;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.bundle-progress {
+/* Skin Type Selector */
+.skin-type-selector {
   margin-bottom: 40px;
+  padding: 30px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.selector-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1a1a1a;
+}
+
+.skin-type-options {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skin-type-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.skin-type-radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.skin-type-label {
+  display: block;
+  padding: 15px 30px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+.skin-type-option:hover .skin-type-label {
+  border-color: #4CAF50;
+  background: #f0f9f0;
+}
+
+.skin-type-radio:checked ~ .skin-type-label {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Selection Notice */
+.selection-notice {
+  text-align: center;
+  padding: 20px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border-left: 4px solid #2196F3;
+}
+
+.selection-notice p {
+  margin: 0;
+  color: #1565C0;
+  font-size: 15px;
+}
+
+/* Progress Tracker */
+.bundle-progress {
+  margin-bottom: 35px;
+  padding: 25px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.progress-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
 }
 
 .progress-bar {
@@ -143,7 +369,6 @@
   background: #e0e0e0;
   border-radius: 10px;
   overflow: visible;
-  margin-bottom: 10px;
   position: relative;
   display: block;
 }
@@ -161,59 +386,83 @@
   will-change: width;
 }
 
-.progress-text {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  font-weight: 500;
-}
-
-.bundle-categories {
+/* Treatment Categories */
+.treatment-categories {
   display: grid;
-  gap: 25px;
+  gap: 20px;
   margin-bottom: 30px;
 }
 
 .category-wrapper {
   border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 0;
   transition: all 0.3s ease;
+  background: white;
 }
 
-.category-wrapper[data-locked="true"] {
-  opacity: 0.5;
-  pointer-events: none;
-  background: #f9f9f9;
-}
-
-.category-wrapper[data-locked="false"] {
+.category-wrapper.completed {
   border-color: #4CAF50;
+  background: #f9fff9;
 }
 
 .category-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0;
+  padding: 20px 25px;
   cursor: pointer;
   user-select: none;
   transition: background 0.2s ease;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .category-header:hover {
   background: rgba(76, 175, 80, 0.05);
-  margin: -10px -15px 15px -15px;
-  padding: 10px 15px 15px 15px;
-  border-radius: 8px 8px 0 0;
+}
+
+.category-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.category-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
 }
 
 .category-right {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.category-status {
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+}
+
+.category-wrapper.completed .category-status {
+  color: #4CAF50;
+  font-weight: 600;
 }
 
 .expand-icon {
@@ -226,89 +475,68 @@
   transform: rotate(-90deg);
 }
 
-.category-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.category-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: #4CAF50;
-  color: white;
-  border-radius: 50%;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.lock-icon {
-  display: none;
-  font-size: 18px;
-}
-
-.category-wrapper[data-locked="true"] .lock-icon {
-  display: inline;
-}
-
-.category-count {
-  font-size: 14px;
-  color: #666;
-  font-weight: 500;
-}
-
 .category-options {
+  padding: 20px 25px;
   display: grid;
-  gap: 10px;
+  gap: 12px;
   max-height: 2000px;
   overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
   opacity: 1;
 }
 
 .category-wrapper.collapsed .category-options {
   max-height: 0;
   opacity: 0;
-  margin-top: -15px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.option-item {
+.treatment-option {
   display: flex;
-  align-items: center;
-  padding: 12px 15px;
+  align-items: flex-start;
+  padding: 16px 18px;
   background: #f8f8f8;
   border: 2px solid transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
 }
 
-.option-item:hover {
+.treatment-option:hover {
   background: #f0f0f0;
   border-color: #4CAF50;
+  transform: translateX(4px);
 }
 
-.option-checkbox {
+.treatment-radio {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.option-label {
+.treatment-content {
   flex: 1;
-  font-size: 15px;
-  color: #333;
   padding-left: 0;
 }
 
-.checkmark {
+.treatment-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.treatment-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.treatment-checkmark {
   display: none;
   width: 24px;
   height: 24px;
@@ -319,26 +547,28 @@
   justify-content: center;
   font-size: 14px;
   font-weight: 700;
+  flex-shrink: 0;
+  margin-left: 12px;
 }
 
-.option-checkbox:checked ~ .checkmark {
+.treatment-radio:checked ~ .treatment-checkmark {
   display: flex;
 }
 
-.option-checkbox:checked ~ .option-label {
-  font-weight: 600;
+.treatment-radio:checked ~ .treatment-content .treatment-name {
   color: #4CAF50;
 }
 
-.option-item:has(.option-checkbox:checked) {
+.treatment-option:has(.treatment-radio:checked) {
   background: #e8f5e9;
   border-color: #4CAF50;
 }
 
+/* Bundle Footer */
 .bundle-footer {
   background: #f8f8f8;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12px;
   margin-top: 30px;
 }
 
@@ -346,68 +576,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .price-display {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .price-label {
-  font-size: 16px;
+  font-size: 18px;
   color: #666;
   font-weight: 500;
 }
 
 .price-amount {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: #4CAF50;
 }
 
-.selections-count {
+.selections-info {
   font-size: 14px;
   color: #666;
   font-weight: 500;
 }
 
-.bundle-message {
-  text-align: center;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  font-weight: 500;
-  display: none;
-}
-
-.bundle-message.show {
-  display: block;
-}
-
-.bundle-message.info {
-  background: #e3f2fd;
-  color: #1976d2;
-  border: 1px solid #1976d2;
-}
-
-.bundle-message.warning {
-  background: #fff3e0;
-  color: #f57c00;
-  border: 1px solid #f57c00;
-}
-
 .bundle-add-to-cart {
   width: 100%;
-  padding: 16px 32px;
+  padding: 18px 32px;
   font-size: 18px;
   font-weight: 600;
   background: #4CAF50;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -417,7 +621,7 @@
 .bundle-add-to-cart:hover:not(:disabled) {
   background: #45a049;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
 }
 
 .bundle-add-to-cart:disabled {
@@ -428,20 +632,34 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .bundle-builder {
+  .facial-bundle {
     padding: 20px 15px;
   }
 
   .bundle-container {
-    padding: 20px 15px;
+    padding: 25px 20px;
   }
 
   .bundle-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
-  .bundle-description {
+  .selector-title {
+    font-size: 20px;
+  }
+
+  .skin-type-options {
+    gap: 10px;
+  }
+
+  .skin-type-label {
+    padding: 12px 20px;
     font-size: 14px;
+    min-width: 120px;
+  }
+
+  .category-header {
+    padding: 15px 18px;
   }
 
   .category-title {
@@ -449,481 +667,707 @@
   }
 
   .category-number {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     font-size: 14px;
   }
 
-  .option-item {
-    padding: 10px 12px;
+  .category-options {
+    padding: 15px 18px;
   }
 
-  .option-label {
+  .treatment-option {
+    padding: 14px 16px;
+  }
+
+  .treatment-name {
     font-size: 14px;
+  }
+
+  .treatment-description {
+    font-size: 12px;
   }
 
   .bundle-pricing {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: flex-start;
   }
 
   .price-amount {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .bundle-add-to-cart {
     font-size: 16px;
-    padding: 14px 24px;
+    padding: 16px 24px;
   }
 
   .bundle-footer {
-    padding: 20px 15px;
-  }
-  
-  .category-header:hover {
-    margin: -8px -12px 15px -12px;
-    padding: 8px 12px 15px 12px;
-  }
-  
-  .category-right {
-    gap: 10px;
+    padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .bundle-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
-  .category-options {
-    gap: 8px;
+  .skin-type-options {
+    flex-direction: column;
+  }
+
+  .skin-type-label {
+    width: 100%;
   }
 
   .price-amount {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 </style>
 
 <script>
+// All treatment data embedded
+const TREATMENT_DATA = {
+  "Normal": {
+    "Cleanse & Prep": [
+      {"name": "Botanical Cream Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Foaming Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating Milk Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Enzyme Gel Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Gel Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultra-Calming Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Cream Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Refresh Cleanse", "description": "A normal-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Exfoliate & Refine": [
+      {"name": "Enzyme Powder Polish", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Lactic Acid Glow Peel", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mild AHA Resurfacing", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "PHA Gentle Exfoliation", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Salicylic Skin Refiner", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soft Peel Renewal", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Texture Smoothing Treatment", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Radiance Boost Exfoliation", "description": "A normal-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Detox & Clarify": [
+      {"name": "Hydro Extraction", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Detox Mask", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Clarifying Clay Mask", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral Detox Treatment", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Purifying Boost", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Reset Mask", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Detox Gel", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Clean Clarifier", "description": "A normal-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Extract & Clear": [
+      {"name": "Manual Extractions", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultrasonic Pore Cleanse", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted Congestion Clearing", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Zero-Trauma Extraction", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Pore Flush", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blackhead Softening Treatment", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Precision Clearing", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Refinement Protocol", "description": "A normal-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Boost & Infuse": [
+      {"name": "Hyaluronic Infusion", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Vitamin B+C Boost", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Niacinamide Balance Shot", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ceramide Repair Ampoule", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Peptide Skin Boost", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydration Recharge Serum", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Support Infusion", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Glow Activating Complex", "description": "A normal-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Calm & Balance": [
+      {"name": "Cooling Gel Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Omega Nourish Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Redness Relief Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Calming Algae Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Repair Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soothing Botanical Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Comfort Treatment", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Inflammation Reset Mask", "description": "A normal-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Activate & Repair": [
+      {"name": "Red Light Therapy", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blue + Red LED Therapy", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Collagen Stimulating LED", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Healing Light Protocol", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Skin Activation", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Cell Renewal Therapy", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted LED Repair", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Low-Level Light Therapy", "description": "A normal-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Seal & Protect": [
+      {"name": "Antioxidant Moisturiser", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating SPF Shield", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oil-Free Gel Moisturiser", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Recovery Cream", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Daily Moisturiser", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral SPF Protection", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Defence Finish", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Moisture Lock Cream", "description": "A normal-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."}
+    ]
+  },
+  "Dry": {
+    "Cleanse & Prep": [
+      {"name": "Botanical Cream Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Foaming Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating Milk Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Enzyme Gel Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Gel Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultra-Calming Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Cream Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Refresh Cleanse", "description": "A dry-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Exfoliate & Refine": [
+      {"name": "Enzyme Powder Polish", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Lactic Acid Glow Peel", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mild AHA Resurfacing", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "PHA Gentle Exfoliation", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Salicylic Skin Refiner", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soft Peel Renewal", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Texture Smoothing Treatment", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Radiance Boost Exfoliation", "description": "A dry-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Detox & Clarify": [
+      {"name": "Hydro Extraction", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Detox Mask", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Clarifying Clay Mask", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral Detox Treatment", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Purifying Boost", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Reset Mask", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Detox Gel", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Clean Clarifier", "description": "A dry-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Extract & Clear": [
+      {"name": "Manual Extractions", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultrasonic Pore Cleanse", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted Congestion Clearing", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Zero-Trauma Extraction", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Pore Flush", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blackhead Softening Treatment", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Precision Clearing", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Refinement Protocol", "description": "A dry-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Boost & Infuse": [
+      {"name": "Hyaluronic Infusion", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Vitamin B+C Boost", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Niacinamide Balance Shot", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ceramide Repair Ampoule", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Peptide Skin Boost", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydration Recharge Serum", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Support Infusion", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Glow Activating Complex", "description": "A dry-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Calm & Balance": [
+      {"name": "Cooling Gel Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Omega Nourish Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Redness Relief Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Calming Algae Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Repair Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soothing Botanical Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Comfort Treatment", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Inflammation Reset Mask", "description": "A dry-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Activate & Repair": [
+      {"name": "Red Light Therapy", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blue + Red LED Therapy", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Collagen Stimulating LED", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Healing Light Protocol", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Skin Activation", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Cell Renewal Therapy", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted LED Repair", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Low-Level Light Therapy", "description": "A dry-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Seal & Protect": [
+      {"name": "Antioxidant Moisturiser", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating SPF Shield", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oil-Free Gel Moisturiser", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Recovery Cream", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Daily Moisturiser", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral SPF Protection", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Defence Finish", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Moisture Lock Cream", "description": "A dry-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."}
+    ]
+  },
+  "Oily": {
+    "Cleanse & Prep": [
+      {"name": "Botanical Cream Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Foaming Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating Milk Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Enzyme Gel Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Gel Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultra-Calming Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Cream Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Refresh Cleanse", "description": "A oily-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Exfoliate & Refine": [
+      {"name": "Enzyme Powder Polish", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Lactic Acid Glow Peel", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mild AHA Resurfacing", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "PHA Gentle Exfoliation", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Salicylic Skin Refiner", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soft Peel Renewal", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Texture Smoothing Treatment", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Radiance Boost Exfoliation", "description": "A oily-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Detox & Clarify": [
+      {"name": "Hydro Extraction", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Detox Mask", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Clarifying Clay Mask", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral Detox Treatment", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Purifying Boost", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Reset Mask", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Detox Gel", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Clean Clarifier", "description": "A oily-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Extract & Clear": [
+      {"name": "Manual Extractions", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultrasonic Pore Cleanse", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted Congestion Clearing", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Zero-Trauma Extraction", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Pore Flush", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blackhead Softening Treatment", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Precision Clearing", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Refinement Protocol", "description": "A oily-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Boost & Infuse": [
+      {"name": "Hyaluronic Infusion", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Vitamin B+C Boost", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Niacinamide Balance Shot", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ceramide Repair Ampoule", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Peptide Skin Boost", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydration Recharge Serum", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Support Infusion", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Glow Activating Complex", "description": "A oily-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Calm & Balance": [
+      {"name": "Cooling Gel Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Omega Nourish Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Redness Relief Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Calming Algae Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Repair Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soothing Botanical Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Comfort Treatment", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Inflammation Reset Mask", "description": "A oily-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Activate & Repair": [
+      {"name": "Red Light Therapy", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blue + Red LED Therapy", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Collagen Stimulating LED", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Healing Light Protocol", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Skin Activation", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Cell Renewal Therapy", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted LED Repair", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Low-Level Light Therapy", "description": "A oily-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Seal & Protect": [
+      {"name": "Antioxidant Moisturiser", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating SPF Shield", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oil-Free Gel Moisturiser", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Recovery Cream", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Daily Moisturiser", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral SPF Protection", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Defence Finish", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Moisture Lock Cream", "description": "A oily-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."}
+    ]
+  },
+  "Combination": {
+    "Cleanse & Prep": [
+      {"name": "Botanical Cream Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Foaming Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating Milk Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Enzyme Gel Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Gel Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultra-Calming Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Cream Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Refresh Cleanse", "description": "A combination-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Exfoliate & Refine": [
+      {"name": "Enzyme Powder Polish", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Lactic Acid Glow Peel", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mild AHA Resurfacing", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "PHA Gentle Exfoliation", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Salicylic Skin Refiner", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soft Peel Renewal", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Texture Smoothing Treatment", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Radiance Boost Exfoliation", "description": "A combination-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Detox & Clarify": [
+      {"name": "Hydro Extraction", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Detox Mask", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Clarifying Clay Mask", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral Detox Treatment", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Purifying Boost", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Reset Mask", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Detox Gel", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Clean Clarifier", "description": "A combination-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Extract & Clear": [
+      {"name": "Manual Extractions", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultrasonic Pore Cleanse", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted Congestion Clearing", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Zero-Trauma Extraction", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Pore Flush", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blackhead Softening Treatment", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Precision Clearing", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Refinement Protocol", "description": "A combination-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Boost & Infuse": [
+      {"name": "Hyaluronic Infusion", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Vitamin B+C Boost", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Niacinamide Balance Shot", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ceramide Repair Ampoule", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Peptide Skin Boost", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydration Recharge Serum", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Support Infusion", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Glow Activating Complex", "description": "A combination-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Calm & Balance": [
+      {"name": "Cooling Gel Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Omega Nourish Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Redness Relief Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Calming Algae Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Repair Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soothing Botanical Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Comfort Treatment", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Inflammation Reset Mask", "description": "A combination-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Activate & Repair": [
+      {"name": "Red Light Therapy", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blue + Red LED Therapy", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Collagen Stimulating LED", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Healing Light Protocol", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Skin Activation", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Cell Renewal Therapy", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted LED Repair", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Low-Level Light Therapy", "description": "A combination-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Seal & Protect": [
+      {"name": "Antioxidant Moisturiser", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating SPF Shield", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oil-Free Gel Moisturiser", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Recovery Cream", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Daily Moisturiser", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral SPF Protection", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Defence Finish", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Moisture Lock Cream", "description": "A combination-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."}
+    ]
+  },
+  "Sensitive": {
+    "Cleanse & Prep": [
+      {"name": "Botanical Cream Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Foaming Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating Milk Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Enzyme Gel Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Gel Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultra-Calming Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Cream Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Refresh Cleanse", "description": "A sensitive-skin suitable option within the cleanse & prep stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Exfoliate & Refine": [
+      {"name": "Enzyme Powder Polish", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Lactic Acid Glow Peel", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mild AHA Resurfacing", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "PHA Gentle Exfoliation", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Salicylic Skin Refiner", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soft Peel Renewal", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Texture Smoothing Treatment", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Radiance Boost Exfoliation", "description": "A sensitive-skin suitable option within the exfoliate & refine stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Detox & Clarify": [
+      {"name": "Hydro Extraction", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Charcoal Detox Mask", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Clarifying Clay Mask", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral Detox Treatment", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Purifying Boost", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Reset Mask", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Detox Gel", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Clean Clarifier", "description": "A sensitive-skin suitable option within the detox & clarify stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Extract & Clear": [
+      {"name": "Manual Extractions", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ultrasonic Pore Cleanse", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted Congestion Clearing", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Zero-Trauma Extraction", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Deep Pore Flush", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blackhead Softening Treatment", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Precision Clearing", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Pore Refinement Protocol", "description": "A sensitive-skin suitable option within the extract & clear stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Boost & Infuse": [
+      {"name": "Hyaluronic Infusion", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Vitamin B+C Boost", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Niacinamide Balance Shot", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Ceramide Repair Ampoule", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Peptide Skin Boost", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydration Recharge Serum", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Support Infusion", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Glow Activating Complex", "description": "A sensitive-skin suitable option within the boost & infuse stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Calm & Balance": [
+      {"name": "Cooling Gel Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Omega Nourish Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Redness Relief Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Calming Algae Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Repair Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Soothing Botanical Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Comfort Treatment", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Inflammation Reset Mask", "description": "A sensitive-skin suitable option within the calm & balance stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Activate & Repair": [
+      {"name": "Red Light Therapy", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Blue + Red LED Therapy", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Collagen Stimulating LED", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Healing Light Protocol", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oxygen Skin Activation", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Cell Renewal Therapy", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Targeted LED Repair", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Low-Level Light Therapy", "description": "A sensitive-skin suitable option within the activate & repair stage, designed to support skin health while delivering visible comfort and results."}
+    ],
+    "Seal & Protect": [
+      {"name": "Antioxidant Moisturiser", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Hydrating SPF Shield", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Oil-Free Gel Moisturiser", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Barrier Recovery Cream", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Balancing Daily Moisturiser", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Mineral SPF Protection", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Skin Defence Finish", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."},
+      {"name": "Moisture Lock Cream", "description": "A sensitive-skin suitable option within the seal & protect stage, designed to support skin health while delivering visible comfort and results."}
+    ]
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Wait for DOM and run initialization
-  initBundleBuilder();
+  initFacialBundle();
 });
 
 // Support for Shopify theme customizer
 if (typeof Shopify !== 'undefined' && Shopify.designMode) {
   document.addEventListener('shopify:section:load', function() {
-    setTimeout(initBundleBuilder, 100);
+    setTimeout(initFacialBundle, 100);
   });
 }
 
-function initBundleBuilder() {
-  const bundleBuilder = document.querySelector('.bundle-builder');
-  if (!bundleBuilder) {
-    // If not found, try again after a short delay (for theme customizer)
-    setTimeout(initBundleBuilder, 100);
+function initFacialBundle() {
+  const bundle = document.querySelector('.facial-bundle');
+  if (!bundle) {
+    setTimeout(initFacialBundle, 100);
     return;
   }
 
-  const sectionId = bundleBuilder.dataset.sectionId;
-  const productId = '{{ section.settings.product_id }}';
-  
-  // Variant IDs for different price tiers
-  const variants = {
-    5: '{{ section.settings.variant_5_id }}',  // $79
-    8: '{{ section.settings.variant_8_id }}',  // $99
-    10: '{{ section.settings.variant_10_id }}' // $129
-  };
+  let selectedSkinType = null;
+  let selectedTreatments = {}; // { bucket: treatmentName }
+  const variantId = '{{ section.settings.variant_id }}';
 
-  const prices = {
-    5: {{ section.settings.price_5 | default: 79 }},
-    8: {{ section.settings.price_8 | default: 99 }},
-    10: {{ section.settings.price_10 | default: 129 }}
-  };
+  // Handle skin type selection
+  document.querySelectorAll('.skin-type-radio').forEach(radio => {
+    radio.addEventListener('change', function() {
+      if (this.checked) {
+        selectedSkinType = this.value;
+        selectedTreatments = {}; // Reset selections
+        loadTreatments(selectedSkinType);
+        showTreatmentSections();
+      }
+    });
+  });
 
-  let selectedOptions = new Set();
-  
-  function updateUI() {
-    const count = selectedOptions.size;
-    console.log('Bundle Builder: Updating UI with count:', count);
+  // Load treatments for selected skin type
+  function loadTreatments(skinType) {
+    const data = TREATMENT_DATA[skinType];
+    
+    document.querySelectorAll('.category-wrapper').forEach(category => {
+      const bucket = category.dataset.bucket;
+      const optionsContainer = category.querySelector('.category-options');
+      const treatments = data[bucket];
+      
+      // Clear existing options
+      optionsContainer.innerHTML = '';
+      
+      // Add treatment options
+      treatments.forEach((treatment, index) => {
+        const optionHtml = `
+          <label class="treatment-option">
+            <input 
+              type="radio" 
+              class="treatment-radio" 
+              name="treatment_${bucket.replace(/\s+/g, '_')}"
+              data-bucket="${bucket}"
+              data-treatment="${treatment.name}"
+            >
+            <div class="treatment-content">
+              <span class="treatment-name">${treatment.name}</span>
+              <p class="treatment-description">${treatment.description}</p>
+            </div>
+            <span class="treatment-checkmark">✓</span>
+          </label>
+        `;
+        optionsContainer.insertAdjacentHTML('beforeend', optionHtml);
+      });
+
+      // Add event listeners to new radios
+      optionsContainer.querySelectorAll('.treatment-radio').forEach(radio => {
+        radio.addEventListener('change', function() {
+          if (this.checked) {
+            const bucket = this.dataset.bucket;
+            const treatment = this.dataset.treatment;
+            selectedTreatments[bucket] = treatment;
+            updateCategoryStatus(bucket);
+            updateProgress();
+          }
+        });
+      });
+    });
+  }
+
+  // Show treatment sections
+  function showTreatmentSections() {
+    document.getElementById('selectionNotice').style.display = 'block';
+    document.getElementById('progressSection').style.display = 'block';
+    document.getElementById('treatmentCategories').style.display = 'block';
+    document.getElementById('bundleFooter').style.display = 'block';
+  }
+
+  // Update category status
+  function updateCategoryStatus(bucket) {
+    const category = document.querySelector(`[data-bucket="${bucket}"]`);
+    const statusSpan = category.querySelector('.category-status');
+    
+    if (selectedTreatments[bucket]) {
+      category.classList.add('completed');
+      statusSpan.textContent = '✓ Selected';
+    } else {
+      category.classList.remove('completed');
+      statusSpan.textContent = 'Not selected';
+    }
+  }
+
+  // Update progress
+  function updateProgress() {
+    const count = Object.keys(selectedTreatments).length;
+    const progressFill = document.getElementById('progressFill');
+    const progressCount = document.getElementById('progressCount');
+    const selectionsInfo = document.getElementById('selectionsInfo');
+    const addToCartBtn = document.getElementById('addToCartBtn');
     
     // Update progress bar
-    const progressFill = document.getElementById('progressFill');
-    const progressText = document.getElementById('progressText');
+    const percentage = (count / 8) * 100;
+    progressFill.style.width = percentage + '%';
     
-    if (progressFill) {
-      const percentage = (count / 10) * 100;
-      console.log('Bundle Builder: Setting progress to', percentage + '%');
-      
-      // Set width
-      progressFill.style.width = percentage + '%';
-      
-      // Log the actual computed style
-      const computedStyle = window.getComputedStyle(progressFill);
-      console.log('Bundle Builder: Computed width is', computedStyle.width);
-      console.log('Bundle Builder: Element visibility', computedStyle.visibility, 'display', computedStyle.display);
-      
+    // Update count text
+    progressCount.textContent = `${count} / 8 treatments selected`;
+    
+    // Update selections info
+    if (count === 0) {
+      selectionsInfo.textContent = 'Select 1 treatment from each category';
+    } else if (count < 8) {
+      selectionsInfo.textContent = `${8 - count} more ${(8 - count) === 1 ? 'treatment' : 'treatments'} needed`;
     } else {
-      console.warn('Bundle Builder: progressFill element not found');
+      selectionsInfo.textContent = '✓ Bundle complete! Ready to add to cart';
     }
     
-    // Update selections count
-    const selectionsCount = document.getElementById('selectionsCount');
-    if (selectionsCount) {
-      selectionsCount.textContent = `${count} / 10 items selected`;
-    }
-    
-    // Update category counts
-    document.querySelectorAll('.category-wrapper').forEach(category => {
-      const categoryNum = category.dataset.category;
-      const categoryOptions = category.querySelectorAll('.option-checkbox:checked');
-      const countElement = category.querySelector('.category-count');
-      const optionCount = categoryOptions.length;
-      if (countElement) {
-        countElement.textContent = optionCount > 0 ? `${optionCount} selected` : '0 selected';
-      }
-    });
-    
-    // Progressive unlock logic
-    unlockCategories(count);
-    
-    // Update pricing and add to cart button
-    updatePricing(count);
-    
-    // Update progress text
-    if (progressText) {
-      if (count === 0) {
-        progressText.textContent = 'Select items to build your bundle';
-      } else if (count < 5) {
-        progressText.textContent = `${5 - count} more items needed to unlock first bundle`;
-      } else if (count === 5) {
-        progressText.textContent = '✓ First bundle tier unlocked! ($79)';
-      } else if (count < 8) {
-        progressText.textContent = `${8 - count} more items to unlock second bundle tier`;
-      } else if (count === 8) {
-        progressText.textContent = '✓ Second bundle tier unlocked! ($99)';
-      } else if (count === 9) {
-        progressText.textContent = '1 more item to unlock final bundle tier';
-      } else if (count === 10) {
-        progressText.textContent = '✓ Maximum bundle tier unlocked! ($129)';
-      }
-    }
+    // Enable/disable add to cart button
+    addToCartBtn.disabled = count !== 8;
   }
-  
-  function unlockCategories(count) {
-    const categories = document.querySelectorAll('.category-wrapper');
-    
-    categories.forEach((category, index) => {
-      const categoryNum = index + 1;
-      
-      if (categoryNum <= 5) {
-        category.dataset.locked = 'false';
-        // First 5 categories can be expanded/collapsed freely
-      } else if (categoryNum <= 8 && count >= 5) {
-        category.dataset.locked = 'false';
-        // Newly unlocked categories are kept collapsed until user expands them
-      } else if (categoryNum <= 10 && count >= 8) {
-        category.dataset.locked = 'false';
-        // Newly unlocked categories are kept collapsed until user expands them
-      } else {
-        category.dataset.locked = 'true';
-        // Locked categories should stay collapsed
-        category.classList.add('collapsed');
-      }
-    });
-  }
-  
-  function updatePricing(count) {
-    const addToCartBtn = document.getElementById('addToCartBtn');
-    const priceDisplay = document.getElementById('bundlePrice');
-    const messageDiv = document.getElementById('bundleMessage');
-    
-    if (!addToCartBtn || !priceDisplay || !messageDiv) return;
-    
-    messageDiv.classList.remove('show', 'info', 'warning');
-    messageDiv.textContent = '';
-    
-    if (count < 5) {
-      addToCartBtn.disabled = true;
-      priceDisplay.textContent = '$0.00';
-      if (count > 0) {
-        messageDiv.textContent = `Select ${5 - count} more items to unlock the first bundle tier`;
-        messageDiv.classList.add('show', 'info');
-      }
-    } else if (count === 5) {
-      addToCartBtn.disabled = false;
-      priceDisplay.textContent = '$' + prices[5].toFixed(2);
-    } else if (count === 6 || count === 7) {
-      addToCartBtn.disabled = true;
-      priceDisplay.textContent = '$' + prices[5].toFixed(2);
-      messageDiv.textContent = 'Please add 8 items in total to be able to add to cart';
-      messageDiv.classList.add('show', 'warning');
-    } else if (count === 8) {
-      addToCartBtn.disabled = false;
-      priceDisplay.textContent = '$' + prices[8].toFixed(2);
-    } else if (count === 9) {
-      addToCartBtn.disabled = true;
-      priceDisplay.textContent = '$' + prices[8].toFixed(2);
-      messageDiv.textContent = 'Please add 10 items in total to be able to add to cart';
-      messageDiv.classList.add('show', 'warning');
-    } else if (count === 10) {
-      addToCartBtn.disabled = false;
-      priceDisplay.textContent = '$' + prices[10].toFixed(2);
-    }
-  }
-  
-  // Handle checkbox changes
-  const checkboxes = document.querySelectorAll('.option-checkbox');
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-      const optionName = this.dataset.optionName;
-      
-      if (this.checked) {
-        selectedOptions.add(optionName);
-      } else {
-        selectedOptions.delete(optionName);
-      }
-      
-      updateUI();
-    });
-  });
-  
+
   // Handle category expand/collapse
   document.querySelectorAll('.category-header').forEach(header => {
-    header.addEventListener('click', function(e) {
-      // Don't collapse if clicking on a checkbox inside (shouldn't happen but safety check)
-      if (e.target.classList.contains('option-checkbox')) return;
-      
-      const categoryWrapper = this.closest('.category-wrapper');
-      
-      // Don't allow collapsing locked categories (they should stay closed)
-      if (categoryWrapper.dataset.locked === 'true') return;
-      
-      categoryWrapper.classList.toggle('collapsed');
+    header.addEventListener('click', function() {
+      const category = this.closest('.category-wrapper');
+      category.classList.toggle('collapsed');
     });
   });
-  
+
   // Handle add to cart
-  const addToCartBtn = document.getElementById('addToCartBtn');
-  if (addToCartBtn) {
-    addToCartBtn.addEventListener('click', function() {
-      const count = selectedOptions.size;
-      let variantId;
-      
-      if (count === 5) variantId = variants[5];
-      else if (count === 8) variantId = variants[8];
-      else if (count === 10) variantId = variants[10];
-      
-      if (!variantId) {
-        alert('Please select a valid bundle configuration');
-        return;
-      }
-      
-      // Build line item properties
-      const properties = {};
-      let index = 1;
-      selectedOptions.forEach(option => {
-        properties[`Item ${index}`] = option;
-        index++;
-      });
-      
-      // Add to cart
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          id: variantId,
-          quantity: 1,
-          properties: properties
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Success - redirect to cart or show notification
-        window.location.href = '/cart';
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error adding to cart. Please try again.');
-      });
-    });
-  }
-  
-  // Initialize UI
-  updateUI();
-  
-  // Expand first 2-3 unlocked categories by default for better UX
-  const unlocked = document.querySelectorAll('.category-wrapper[data-locked="false"]');
-  unlocked.forEach((category, index) => {
-    if (index < 2) {
-      category.classList.remove('collapsed');
+  document.getElementById('addToCartBtn').addEventListener('click', function() {
+    if (Object.keys(selectedTreatments).length !== 8) {
+      alert('Please select 1 treatment from each of the 8 categories.');
+      return;
     }
+
+    if (!variantId) {
+      alert('Product configuration error. Please contact support.');
+      return;
+    }
+
+    // Build line item properties
+    const properties = {
+      'Skin Type': selectedSkinType
+    };
+    
+    let index = 1;
+    const buckets = [
+      'Cleanse & Prep',
+      'Exfoliate & Refine',
+      'Detox & Clarify',
+      'Extract & Clear',
+      'Boost & Infuse',
+      'Calm & Balance',
+      'Activate & Repair',
+      'Seal & Protect'
+    ];
+    
+    buckets.forEach(bucket => {
+      if (selectedTreatments[bucket]) {
+        properties[`${index}. ${bucket}`] = selectedTreatments[bucket];
+        index++;
+      }
+    });
+
+    // Add to cart
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: variantId,
+        quantity: 1,
+        properties: properties
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      window.location.href = '/cart';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error adding to cart. Please try again.');
+    });
   });
 }
 </script>
 
 {% schema %}
 {
-  "name": "Build a Bundle",
+  "name": "8x8 Facial Bundle",
   "settings": [
     {
       "type": "text",
       "id": "section_title",
       "label": "Section Title",
-      "default": "Build Your Custom Bundle"
+      "default": "Build Your Custom Facial Treatment Bundle"
     },
     {
       "type": "textarea",
       "id": "section_description",
       "label": "Section Description",
-      "default": "Create your perfect bundle by selecting your favorite items. Choose from our curated selection!"
+      "default": "Create your perfect 8-step facial treatment. Select your skin type, then choose 1 treatment from each of our 8 specialized categories for a completely customized experience."
     },
     {
       "type": "text",
-      "id": "product_id",
-      "label": "Product ID",
-      "info": "The product ID for your bundle product"
-    },
-    {
-      "type": "text",
-      "id": "variant_5_id",
-      "label": "Variant ID for 5 items",
-      "info": "Variant ID for $79 bundle"
-    },
-    {
-      "type": "text",
-      "id": "variant_8_id",
-      "label": "Variant ID for 8 items",
-      "info": "Variant ID for $99 bundle"
-    },
-    {
-      "type": "text",
-      "id": "variant_10_id",
-      "label": "Variant ID for 10 items",
-      "info": "Variant ID for $129 bundle"
-    },
-    {
-      "type": "number",
-      "id": "price_5",
-      "label": "Price for 5 items",
-      "default": 79
-    },
-    {
-      "type": "number",
-      "id": "price_8",
-      "label": "Price for 8 items",
-      "default": 99
-    },
-    {
-      "type": "number",
-      "id": "price_10",
-      "label": "Price for 10 items",
-      "default": 129
-    },
-    {
-      "type": "header",
-      "content": "Category Names"
-    },
-    {
-      "type": "text",
-      "id": "category_1_name",
-      "label": "Category 1 Name",
-      "default": "Category 1"
-    },
-    {
-      "type": "text",
-      "id": "category_2_name",
-      "label": "Category 2 Name",
-      "default": "Category 2"
-    },
-    {
-      "type": "text",
-      "id": "category_3_name",
-      "label": "Category 3 Name",
-      "default": "Category 3"
-    },
-    {
-      "type": "text",
-      "id": "category_4_name",
-      "label": "Category 4 Name",
-      "default": "Category 4"
-    },
-    {
-      "type": "text",
-      "id": "category_5_name",
-      "label": "Category 5 Name",
-      "default": "Category 5"
-    },
-    {
-      "type": "text",
-      "id": "category_6_name",
-      "label": "Category 6 Name",
-      "default": "Category 6"
-    },
-    {
-      "type": "text",
-      "id": "category_7_name",
-      "label": "Category 7 Name",
-      "default": "Category 7"
-    },
-    {
-      "type": "text",
-      "id": "category_8_name",
-      "label": "Category 8 Name",
-      "default": "Category 8"
-    },
-    {
-      "type": "text",
-      "id": "category_9_name",
-      "label": "Category 9 Name",
-      "default": "Category 9"
-    },
-    {
-      "type": "text",
-      "id": "category_10_name",
-      "label": "Category 10 Name",
-      "default": "Category 10"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "option",
-      "name": "Sub-Option",
-      "settings": [
-        {
-          "type": "text",
-          "id": "option_name",
-          "label": "Option Name",
-          "default": "Option Name"
-        },
-        {
-          "type": "select",
-          "id": "category",
-          "label": "Assign to Category",
-          "options": [
-            { "value": "1", "label": "Category 1" },
-            { "value": "2", "label": "Category 2" },
-            { "value": "3", "label": "Category 3" },
-            { "value": "4", "label": "Category 4" },
-            { "value": "5", "label": "Category 5" },
-            { "value": "6", "label": "Category 6" },
-            { "value": "7", "label": "Category 7" },
-            { "value": "8", "label": "Category 8" },
-            { "value": "9", "label": "Category 9" },
-            { "value": "10", "label": "Category 10" }
-          ],
-          "default": "1"
-        }
-      ]
+      "id": "variant_id",
+      "label": "Product Variant ID",
+      "info": "The variant ID for the $99.99 bundle product"
     }
   ],
   "presets": [
     {
-      "name": "Build a Bundle"
+      "name": "8x8 Facial Bundle"
     }
   ]
 }
