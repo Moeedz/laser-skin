@@ -382,8 +382,20 @@
 .bundle-progress {
   margin-bottom: 35px;
   padding: 25px;
-  background: #f8f8f8;
+  background: #ffffff;
   border-radius: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+}
+
+.bundle-progress.scrolled {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  background: #f8fef8;
+  border-color: #4CAF50;
 }
 
 .progress-info {
@@ -1068,6 +1080,32 @@
     padding: 20px;
   }
   
+  .bundle-progress {
+    padding: 15px;
+    margin-bottom: 20px;
+    top: 0;
+    border-radius: 0 0 8px 8px;
+    font-size: 14px;
+  }
+  
+  .progress-info {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  
+  .progress-label {
+    font-size: 14px;
+  }
+  
+  .progress-count {
+    font-size: 13px;
+  }
+  
+  .progress-bar {
+    height: 10px;
+  }
+  
   .appointment-picker-section {
     padding: 20px;
   }
@@ -1685,6 +1723,18 @@ function initFacialBundle() {
     document.getElementById('progressSection').style.display = 'block';
     document.getElementById('treatmentCategories').style.display = 'block';
     document.getElementById('bundleFooter').style.display = 'block';
+    
+    // Add scroll listener for sticky progress bar effect
+    window.addEventListener('scroll', function() {
+      const progressBar = document.getElementById('progressSection');
+      if (progressBar) {
+        if (window.scrollY > 100) {
+          progressBar.classList.add('scrolled');
+        } else {
+          progressBar.classList.remove('scrolled');
+        }
+      }
+    });
   }
 
   // Update category status
