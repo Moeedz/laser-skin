@@ -42,48 +42,6 @@
       </div>
     </div>
 
-    <!-- Appointment Picker -->
-    <div class="appointment-picker-section" id="appointmentSection" style="display: none;">
-      <h3 class="appointment-title">Select Your Appointment Date & Time</h3>
-      <div class="appointment-dropdown" id="appointmentDropdown">
-        <span id="appointmentDisplay">Choose appointment date and time</span>
-        <span class="appointment-dropdown-icon">▼</span>
-      </div>
-
-      <!-- Appointment Modal -->
-      <div class="appointment-modal" id="appointmentModal">
-        <div class="appointment-modal-content">
-          <div class="appointment-modal-header">
-            <div class="appointment-modal-title">📅 Select Date and Time</div>
-            <button class="appointment-modal-close" id="closeModal">&times;</button>
-          </div>
-          <div class="appointment-modal-body">
-            <div class="calendar-header">
-              <button type="button" class="calendar-nav-btn" id="prevMonth">‹</button>
-              <div class="calendar-month-year" id="monthYear"></div>
-              <button type="button" class="calendar-nav-btn" id="nextMonth">›</button>
-            </div>
-            <div class="calendar-weekdays">
-              <div class="calendar-weekday">Mon</div>
-              <div class="calendar-weekday">Tue</div>
-              <div class="calendar-weekday">Wed</div>
-              <div class="calendar-weekday">Thu</div>
-              <div class="calendar-weekday">Fri</div>
-              <div class="calendar-weekday">Sat</div>
-              <div class="calendar-weekday">Sun</div>
-            </div>
-            <div class="calendar-dates" id="calendarDates"></div>
-            <div class="time-panel-header" id="timeHeader">Select a date first</div>
-            <div class="time-slots-scroll" id="timeSlots"></div>
-          </div>
-          <div class="appointment-modal-footer">
-            <button class="appointment-btn appointment-btn-cancel" id="cancelBtn">Cancel</button>
-            <button class="appointment-btn appointment-btn-confirm" id="confirmBtn" disabled>Confirm</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Treatment Selection Notice -->
     <div class="selection-notice" id="selectionNotice" style="display: none;">
       <p>Please select <strong>1 treatment</strong> from each of the <strong>8 categories</strong> below to build your custom facial bundle.</p>
@@ -249,6 +207,48 @@
 
     </div>
 
+    <!-- Appointment Picker -->
+    <div class="appointment-picker-section" id="appointmentSection" style="display: none;">
+      <h3 class="appointment-title">Select Your Appointment Date & Time</h3>
+      <div class="appointment-dropdown" id="appointmentDropdown">
+        <span id="appointmentDisplay">Choose appointment date and time</span>
+        <span class="appointment-dropdown-icon">▼</span>
+      </div>
+
+      <!-- Appointment Modal -->
+      <div class="appointment-modal" id="appointmentModal">
+        <div class="appointment-modal-content">
+          <div class="appointment-modal-header">
+            <div class="appointment-modal-title">📅 Select Date and Time</div>
+            <button class="appointment-modal-close" id="closeModal">&times;</button>
+          </div>
+          <div class="appointment-modal-body">
+            <div class="calendar-header">
+              <button type="button" class="calendar-nav-btn" id="prevMonth">‹</button>
+              <div class="calendar-month-year" id="monthYear"></div>
+              <button type="button" class="calendar-nav-btn" id="nextMonth">›</button>
+            </div>
+            <div class="calendar-weekdays">
+              <div class="calendar-weekday">Mon</div>
+              <div class="calendar-weekday">Tue</div>
+              <div class="calendar-weekday">Wed</div>
+              <div class="calendar-weekday">Thu</div>
+              <div class="calendar-weekday">Fri</div>
+              <div class="calendar-weekday">Sat</div>
+              <div class="calendar-weekday">Sun</div>
+            </div>
+            <div class="calendar-dates" id="calendarDates"></div>
+            <div class="time-panel-header" id="timeHeader">Select a date first</div>
+            <div class="time-slots-scroll" id="timeSlots"></div>
+          </div>
+          <div class="appointment-modal-footer">
+            <button class="appointment-btn appointment-btn-cancel" id="cancelBtn">Cancel</button>
+            <button class="appointment-btn appointment-btn-confirm" id="confirmBtn" disabled>Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bundle Footer -->
     <div class="bundle-footer" id="bundleFooter" style="display: none;">
       <div class="bundle-pricing">
@@ -392,7 +392,7 @@
   background: #ffffff;
   border-radius: 10px;
   position: sticky;
-  top: 114px;
+  top: 80px;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
@@ -1174,7 +1174,7 @@
   }
   
   .bundle-progress {
-    top: 78px;
+    top: 50px;
     padding: 12px;
   }
   
@@ -1669,19 +1669,34 @@ function initFacialBundle() {
         selectedSkinType = this.value;
         selectedTreatments = {}; // Reset selections
         loadTreatments(selectedSkinType);
-        showTreatmentSections();
-        showAppointmentPicker();
+        showAllSections();
       }
     });
   });
 
-  // Show appointment picker
-  function showAppointmentPicker() {
+  // Show all sections after skin type selection
+  function showAllSections() {
+    document.getElementById('selectionNotice').style.display = 'block';
+    document.getElementById('progressSection').style.display = 'block';
+    document.getElementById('treatmentCategories').style.display = 'block';
     document.getElementById('appointmentSection').style.display = 'block';
+    document.getElementById('bundleFooter').style.display = 'block';
+    
+    // Initialize appointment picker
     initializeAppointmentPicker();
+    
+    // Add scroll listener for sticky progress bar effect
+    window.addEventListener('scroll', function() {
+      const progressBar = document.getElementById('progressSection');
+      if (progressBar) {
+        if (window.scrollY > 100) {
+          progressBar.classList.add('scrolled');
+        } else {
+          progressBar.classList.remove('scrolled');
+        }
+      }
+    });
   }
-
-  // Load treatments for selected skin type
   function loadTreatments(skinType) {
     const data = TREATMENT_DATA[skinType];
     
