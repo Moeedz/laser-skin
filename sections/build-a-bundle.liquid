@@ -1588,6 +1588,30 @@ function initFacialBundle() {
   let appointmentDate = null;
   let appointmentTime = null;
 
+  // Get appointment settings from section
+  const defaultSlotsText = `{{ section.settings.default_slots }}`;
+  const saturdaySlotsText = `{{ section.settings.saturday_slots }}`;
+  const customDatesText = `{{ section.settings.custom_dates }}`;
+
+  // Parse time slots
+  const defaultSlots = defaultSlotsText.split('\n').map(s => s.trim()).filter(s => s);
+  const saturdaySlots = saturdaySlotsText.split('\n').map(s => s.trim()).filter(s => s);
+
+  // Parse custom dates blocking
+  const CUSTOM_DATES = {};
+  if (customDatesText.trim()) {
+    customDatesText.split('\n').forEach(line => {
+      line = line.trim();
+      if (!line) return;
+      const [date, slotsStr] = line.split('|');
+      if (slotsStr === 'CLOSED') {
+        CUSTOM_DATES[date.trim()] = 'CLOSED';
+      } else {
+        CUSTOM_DATES[date.trim()] = slotsStr.split(',').map(s => s.trim());
+      }
+    });
+  }
+
   // Handle skin type selection
   document.querySelectorAll('.skin-type-radio').forEach(radio => {
     radio.addEventListener('change', function() {
@@ -1776,10 +1800,12 @@ function initFacialBundle() {
         const date = new Date(currentYear, currentMonth, day);
         date.setHours(0,0,0,0);
         const dayOfWeek = date.getDay();
+        const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
         
         let classes = 'calendar-date';
         if (date < today) classes += ' past';
         else if (closedDays.includes(dayOfWeek)) classes += ' disabled';
+        else if (CUSTOM_DATES[dateStr] === 'CLOSED') classes += ' disabled'; // Custom closed date
         else if (date.getTime() === today.getTime()) classes += ' today';
         if (appointmentDate && date.getTime() === appointmentDate.getTime()) classes += ' selected';
         
@@ -1809,22 +1835,32 @@ function initFacialBundle() {
       document.getElementById('timeHeader').textContent = 
         `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
       
-      // Default time slots
-      const defaultSlots = [
-        '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
-        '12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM',
-        '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM', '5:00 PM'
-      ];
+      const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
       
-      const saturdaySlots = [
-        '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
-        '12:00 PM', '12:30 PM', '1:00 PM'
-      ];
+      // Start with default slots based on day of week
+      let slots = date.getDay() === 6 ? [...saturdaySlots] : [...defaultSlots];
       
-      const slots = date.getDay() === 6 ? saturdaySlots : defaultSlots;
+      // Check if this date has custom blocking rules
+      if (CUSTOM_DATES[dateStr]) {
+        if (CUSTOM_DATES[dateStr] === 'CLOSED') {
+          // If marked as CLOSED, show no slots
+          document.getElementById('timeSlots').innerHTML = 
+            '<div style="padding:20px;text-align:center;color:#999">No appointments available on this date</div>';
+          return;
+        } else {
+          // Block/remove specific times from the list
+          const blockedTimes = CUSTOM_DATES[dateStr];
+          slots = slots.filter(time => !blockedTimes.includes(time));
+        }
+      }
       
       const container = document.getElementById('timeSlots');
       container.innerHTML = '';
+      
+      if (slots.length === 0) {
+        container.innerHTML = '<div style="padding:20px;text-align:center;color:#999">No available time slots</div>';
+        return;
+      }
       
       slots.forEach(time => {
         const el = document.createElement('div');
@@ -1970,6 +2006,30 @@ function initFacialBundle() {
       "id": "variant_id",
       "label": "Product Variant ID",
       "info": "The variant ID for the $99.99 bundle product"
+    },
+    {
+      "type": "header",
+      "content": "⚙️ Appointment Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "default_slots",
+      "label": "Default Time Slots (Regular Days)",
+      "info": "One time per line. Example: 10:00 AM",
+      "default": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM\n4:30 PM\n5:00 PM"
+    },
+    {
+      "type": "textarea",
+      "id": "saturday_slots",
+      "label": "Saturday Time Slots",
+      "info": "One time per line",
+      "default": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_dates",
+      "label": "Custom Dates (Block Specific Times)",
+      "info": "Block times on specific dates. Format: 2025-12-25|CLOSED (closes entire day) or 2025-12-31|10:00 AM,2:00 PM (removes only those times)"
     }
   ],
   "presets": [
