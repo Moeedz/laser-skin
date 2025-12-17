@@ -272,6 +272,13 @@
 </div>
 
 <style>
+/* 
+  STICKY PROGRESS BAR SETUP:
+  If the progress bar overlaps your header, adjust these values:
+  - Desktop: Change "top: 80px" to your header height + 10px
+  - Mobile: Change "top: 60px" to your mobile header height + 10px
+*/
+
 .facial-bundle {
   max-width: 1200px;
   margin: 0 auto;
@@ -385,7 +392,7 @@
   background: #ffffff;
   border-radius: 10px;
   position: sticky;
-  top: 0;
+  top: 80px;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
@@ -1083,7 +1090,7 @@
   .bundle-progress {
     padding: 15px;
     margin-bottom: 20px;
-    top: 0;
+    top: 60px;
     border-radius: 0 0 8px 8px;
     font-size: 14px;
   }
@@ -1164,6 +1171,11 @@
 
   .price-amount {
     font-size: 26px;
+  }
+  
+  .bundle-progress {
+    top: 50px;
+    padding: 12px;
   }
   
   .appointment-picker-section {
