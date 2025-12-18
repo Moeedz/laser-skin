@@ -1,4 +1,6 @@
 {%- style -%}
+  @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
   /* Section */
   .comparison-{{ section.id }} {
     background-color: {{ section.settings.section_bg }};
@@ -22,7 +24,6 @@
   .comparison-{{ section.id }} .comparison__images {
     gap: {{ section.settings.images_gap }}px;
     margin-bottom: {{ section.settings.images_margin_bottom }}px;
-    margin-top: 20px;
   }
   .comparison-{{ section.id }} .comparison__image-wrapper--left {
     background-color: {{ section.settings.left_image_bg }};
@@ -39,12 +40,17 @@
   }
 
   /* Left Badge */
+  .comparison-{{ section.id }} .comparison__badge--left {
+    left: {{ section.settings.left_badge_pos_x }}%;
+    top: {{ section.settings.left_badge_pos_y }}%;
+    max-width: {{ section.settings.left_badge_size }}px;
+  }
+  .comparison-{{ section.id }} .comparison__badge--left .comparison__badge-wrap {
+    transform: rotate({{ section.settings.left_badge_rotation }}deg);
+  }
   .comparison-{{ section.id }} .comparison__badge--left .comparison__badge-text {
     color: {{ section.settings.left_badge_text_color }};
     font-size: {{ section.settings.left_badge_font_size }}px;
-  }
-  .comparison-{{ section.id }} .comparison__badge-svg {
-    width: {{ section.settings.left_badge_size }}px;
   }
 
   /* VS Badge */
@@ -128,21 +134,38 @@
   }
   .comparison__badge {
     position: absolute;
-    top: -20px;
-    left: -15px;
+    display: block;
+    transform: translate(-50%, -50%);
+    width: 100%;
     z-index: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .comparison__badge-svg {
+  .comparison__badge-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .comparison__badge-icon {
+    width: 100%;
+    position: relative;
+  }
+  .comparison__badge-icon svg {
+    width: 100%;
     height: auto;
     display: block;
   }
   .comparison__badge-text {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 3px;
+    margin: 0;
     position: absolute;
-    font-weight: 500;
-    font-style: italic;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 100%;
+    line-height: 130%;
   }
   .comparison__vs-badge {
     position: absolute;
@@ -207,7 +230,6 @@
     .comparison-{{ section.id }} .comparison__images {
       gap: calc({{ section.settings.images_gap }}px * 0.5);
       margin-bottom: calc({{ section.settings.images_margin_bottom }}px * 0.6);
-      margin-top: 15px;
     }
     .comparison-{{ section.id }} .comparison__vs-badge {
       width: calc({{ section.settings.vs_badge_size }}px * 0.65);
@@ -220,15 +242,11 @@
     .comparison__image {
       max-height: 150px;
     }
-    .comparison__badge {
-      top: -12px;
-      left: -8px;
-    }
-    .comparison-{{ section.id }} .comparison__badge-svg {
-      width: calc({{ section.settings.left_badge_size }}px * 0.7);
+    .comparison-{{ section.id }} .comparison__badge--left {
+      max-width: calc({{ section.settings.left_badge_size }}px * 0.7);
     }
     .comparison-{{ section.id }} .comparison__badge--left .comparison__badge-text {
-      font-size: calc({{ section.settings.left_badge_font_size }}px * 0.7);
+      font-size: calc({{ section.settings.left_badge_font_size }}px * 0.75);
     }
     .comparison__row {
       gap: 8px;
@@ -295,8 +313,12 @@
       <div class="comparison__image-wrapper comparison__image-wrapper--left">
         {%- if section.settings.left_badge_text != blank -%}
           <div class="comparison__badge comparison__badge--left">
-            <svg class="comparison__badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.5 226.25"><path d="M400.5,113.12c0,62.47-45.75,113.12-102.17,113.12-17.77,0-34.48-5.03-49.04-13.87-14.56,8.84-31.27,13.87-49.04,13.87s-34.48-5.03-49.04-13.87c-14.56,8.84-31.27,13.87-49.04,13.87C45.75,226.25,0,175.6,0,113.12S45.75,0,102.17,0c17.77,0,34.48,5.03,49.04,13.87,14.56-8.84,31.27-13.87,49.04-13.87s34.48,5.03,49.04,13.87c14.56-8.84,31.27-13.87,49.04-13.87,56.42,0,102.17,50.65,102.17,113.12Z" style="fill: {{ section.settings.left_badge_bg }};"></path></svg>
-            <span class="comparison__badge-text">{{ section.settings.left_badge_text }}</span>
+            <div class="comparison__badge-wrap">
+              <div class="comparison__badge-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.5 226.25"><path d="M400.5,113.12c0,62.47-45.75,113.12-102.17,113.12-17.77,0-34.48-5.03-49.04-13.87-14.56,8.84-31.27,13.87-49.04,13.87s-34.48-5.03-49.04-13.87c-14.56,8.84-31.27,13.87-49.04,13.87C45.75,226.25,0,175.6,0,113.12S45.75,0,102.17,0c17.77,0,34.48,5.03,49.04,13.87,14.56-8.84,31.27-13.87,49.04-13.87s34.48,5.03,49.04,13.87c14.56-8.84,31.27-13.87,49.04-13.87,56.42,0,102.17,50.65,102.17,113.12Z" style="fill: {{ section.settings.left_badge_bg }};"></path></svg>
+                <p class="comparison__badge-text">{{ section.settings.left_badge_text }}</p>
+              </div>
+            </div>
           </div>
         {%- endif -%}
         {%- if section.settings.left_image != blank -%}
@@ -483,13 +505,43 @@
     },
     {
       "type": "range",
+      "id": "left_badge_pos_x",
+      "min": -10,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "label": "Badge horizontal position",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "left_badge_pos_y",
+      "min": -10,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "label": "Badge vertical position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "left_badge_rotation",
+      "min": -45,
+      "max": 45,
+      "step": 1,
+      "unit": "deg",
+      "label": "Badge rotation",
+      "default": -15
+    },
+    {
+      "type": "range",
       "id": "left_badge_size",
       "min": 80,
-      "max": 180,
-      "step": 10,
+      "max": 200,
+      "step": 5,
       "unit": "px",
       "label": "Badge size",
-      "default": 130
+      "default": 150
     },
     {
       "type": "range",
@@ -511,7 +563,7 @@
       "type": "color",
       "id": "left_badge_text_color",
       "label": "Badge text color",
-      "default": "#4a5568"
+      "default": "#163481"
     },
     {
       "type": "header",
