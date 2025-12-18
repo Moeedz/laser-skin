@@ -22,6 +22,7 @@
   .comparison-{{ section.id }} .comparison__images {
     gap: {{ section.settings.images_gap }}px;
     margin-bottom: {{ section.settings.images_margin_bottom }}px;
+    margin-top: 20px;
   }
   .comparison-{{ section.id }} .comparison__image-wrapper--left {
     background-color: {{ section.settings.left_image_bg }};
@@ -97,11 +98,13 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: visible;
   }
   .comparison__image-wrapper {
     position: relative;
     flex: 1;
     max-width: 400px;
+    overflow: visible;
   }
   .comparison__image-wrapper--left {
     display: flex;
@@ -122,15 +125,15 @@
   }
   .comparison__badge {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    padding: 8px 18px;
-    border-radius: 30px;
+    top: -15px;
+    left: -10px;
+    padding: 12px 22px;
+    border-radius: 58% 42% 55% 45% / 50% 45% 55% 50%;
     font-size: 0.95rem;
     font-weight: 500;
     font-style: italic;
-    z-index: 2;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
   .comparison__vs-badge {
     position: absolute;
@@ -195,6 +198,7 @@
     .comparison-{{ section.id }} .comparison__images {
       gap: calc({{ section.settings.images_gap }}px * 0.5);
       margin-bottom: calc({{ section.settings.images_margin_bottom }}px * 0.6);
+      margin-top: 15px;
     }
     .comparison-{{ section.id }} .comparison__vs-badge {
       width: calc({{ section.settings.vs_badge_size }}px * 0.65);
@@ -208,11 +212,10 @@
       max-height: 150px;
     }
     .comparison__badge {
-      top: 8px;
-      left: 8px;
-      padding: 4px 10px;
+      top: -10px;
+      left: -5px;
+      padding: 6px 12px;
       font-size: 0.7rem;
-      border-radius: 20px;
     }
     .comparison__row {
       gap: 8px;
