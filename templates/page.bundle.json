@@ -108,12 +108,12 @@
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
-        "icon_color": "#fff",
-        "hover_color": "#EFEFEF",
-        "question_color": "#fff",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
         "background_color": "#e6b325",
-        "answer_color": "#000",
-        "answer_bg_color": "#fff",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
         "questions-font-size": 1.5
       }
     }
