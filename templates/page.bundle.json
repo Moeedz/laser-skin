@@ -15,6 +15,7 @@
         "image_Lw4Kg7": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/unnamed_10.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -126,6 +127,11 @@
         "title_margin_bottom": 40,
         "left_image_bg": "rgba(0,0,0,0)",
         "left_badge_text": "Recommended",
+        "left_badge_pos_x": 4,
+        "left_badge_pos_y": 10,
+        "left_badge_rotation": -15,
+        "left_badge_size": 150,
+        "left_badge_font_size": 15,
         "left_badge_bg": "#e6b325",
         "left_badge_text_color": "#ffffff",
         "right_image_bg": "rgba(0,0,0,0)",
