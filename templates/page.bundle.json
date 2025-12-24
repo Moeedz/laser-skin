@@ -116,8 +116,8 @@
       "type": "build-a-bundle",
       "name": "8x8 Facial Bundle",
       "settings": {
-        "section_title": "Build Your Custom Facial Treatment Bundle",
-        "section_description": "Create your perfect 8-step facial treatment. Select your skin type, then choose 1 treatment from each of our 8 specialized categories for a completely customized experience.",
+        "section_title": "",
+        "section_description": "",
         "variant_id": "56128524910972",
         "default_slots": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM\n4:30 PM\n5:00 PM",
         "saturday_slots": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM",
