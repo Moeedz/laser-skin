@@ -56,6 +56,27 @@
         "controls_color": "#ffffff"
       }
     },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": true,
+        "page_width": "xs"
+      }
+    },
+    "build_a_bundle_LHMbkK": {
+      "type": "build-a-bundle",
+      "name": "8x8 Facial Bundle",
+      "settings": {
+        "section_title": "Build Your Custom Facial Treatment Bundle",
+        "section_description": "Create your perfect 8-step facial treatment. Select your skin type, then choose 1 treatment from each of our 8 specialized categories for a completely customized experience.",
+        "variant_id": "56128524910972",
+        "default_slots": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM\n4:30 PM\n5:00 PM",
+        "saturday_slots": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM",
+        "custom_dates": ""
+      }
+    },
     "slideshow_RJHMj3": {
       "type": "slideshow",
       "blocks": {
@@ -101,27 +122,6 @@
         "cycle_speed": 5,
         "background": "rgba(0,0,0,0)",
         "controls_color": "#ffffff"
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "show_title": true,
-        "page_width": "xs"
-      }
-    },
-    "build_a_bundle_LHMbkK": {
-      "type": "build-a-bundle",
-      "name": "8x8 Facial Bundle",
-      "settings": {
-        "section_title": "Build Your Custom Facial Treatment Bundle",
-        "section_description": "Create your perfect 8-step facial treatment. Select your skin type, then choose 1 treatment from each of our 8 specialized categories for a completely customized experience.",
-        "variant_id": "56128524910972",
-        "default_slots": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM\n1:30 PM\n2:00 PM\n2:30 PM\n3:00 PM\n3:30 PM\n4:00 PM\n4:30 PM\n5:00 PM",
-        "saturday_slots": "9:00 AM\n9:30 AM\n10:00 AM\n10:30 AM\n11:00 AM\n11:30 AM\n12:00 PM\n12:30 PM\n1:00 PM",
-        "custom_dates": ""
       }
     },
     "comparison_Cpjbfn": {
@@ -294,9 +294,9 @@
   },
   "order": [
     "slideshow_tN93eC",
-    "slideshow_RJHMj3",
     "main",
     "build_a_bundle_LHMbkK",
+    "slideshow_RJHMj3",
     "comparison_Cpjbfn",
     "ss_simple_faq_jc4aE3",
     "1766049018e5edfa68"
