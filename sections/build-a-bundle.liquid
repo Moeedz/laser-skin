@@ -1693,8 +1693,8 @@ function initFacialBundle() {
       item.innerHTML = `
         <div class="treatment-radio"></div>
         <div class="treatment-content">
-          <span class="treatment-name">£{treatment.name}</span>
-          <p class="treatment-description">£{treatment.description}</p>
+          <span class="treatment-name">${treatment.name}</span>
+          <p class="treatment-description">${treatment.description}</p>
         </div>
       `;
       item.addEventListener('click', () => selectTreatment(category, treatment.name));
@@ -1747,7 +1747,7 @@ function initFacialBundle() {
     
     const percentage = (count / 8) * 100;
     progressFill.style.width = percentage + '%';
-    progressCount.textContent = `£{count} / 8 treatments selected`;
+    progressCount.textContent = `${count} / 8 treatments selected`;
   }
 
   // Check completion
@@ -1804,7 +1804,7 @@ function initFacialBundle() {
 
     function renderCalendar() {
       const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-      document.getElementById('monthYear').textContent = `£{months[currentMonth]} £{currentYear}`;
+      document.getElementById('monthYear').textContent = `${months[currentMonth]} ${currentYear}`;
       
       const container = document.getElementById('calendarDates');
       container.innerHTML = '';
@@ -1825,7 +1825,7 @@ function initFacialBundle() {
         const date = new Date(currentYear, currentMonth, day);
         date.setHours(0,0,0,0);
         const dayOfWeek = date.getDay();
-        const dateStr = `£{date.getFullYear()}-£{String(date.getMonth()+1).padStart(2,'0')}-£{String(date.getDate()).padStart(2,'0')}`;
+        const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
         
         let classes = 'calendar-date';
         if (date < today) classes += ' past';
@@ -1856,9 +1856,9 @@ function initFacialBundle() {
       const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
       const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
       document.getElementById('timeHeader').textContent = 
-        `£{days[date.getDay()]}, £{date.getDate()} £{months[date.getMonth()]} £{date.getFullYear()}`;
+        `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
       
-      const dateStr = `£{date.getFullYear()}-£{String(date.getMonth()+1).padStart(2,'0')}-£{String(date.getDate()).padStart(2,'0')}`;
+      const dateStr = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
       
       let slots = date.getDay() === 6 ? [...saturdaySlots] : [...defaultSlots];
       
@@ -1884,7 +1884,7 @@ function initFacialBundle() {
       slots.forEach(time => {
         const el = document.createElement('div');
         el.className = 'time-slot-option';
-        el.innerHTML = `<span>£{time}</span><div class="time-slot-radio"></div>`;
+        el.innerHTML = `<span>${time}</span><div class="time-slot-radio"></div>`;
         el.addEventListener('click', () => selectTime(time, el));
         container.appendChild(el);
       });
@@ -1916,7 +1916,7 @@ function initFacialBundle() {
         year: 'numeric' 
       });
       
-      display.textContent = `£{formattedDate} at £{appointmentTime}`;
+      display.textContent = `${formattedDate} at ${appointmentTime}`;
       selectedAppointmentDate = formattedDate;
       selectedAppointmentTime = appointmentTime;
       
@@ -1984,7 +1984,7 @@ function initFacialBundle() {
     
     buckets.forEach(bucket => {
       if (selectedTreatments[bucket]) {
-        properties[`£{index}. £{bucket}`] = selectedTreatments[bucket];
+        properties[`${index}. ${bucket}`] = selectedTreatments[bucket];
         index++;
       }
     });
