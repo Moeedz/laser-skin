@@ -414,8 +414,18 @@
         "heading_qcVXpj": {
           "type": "heading",
           "settings": {
-            "text": "BUILD YOUR OWN FACIAL",
+            "text": "BUILD YOUR OWN FACIAL AT LASER SKIN CLINICS",
             "heading_tag": "h4"
+          }
+        },
+        "button_VkywJc": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Build a facial now",
+            "url": "shopify://pages/build-a-facial",
+            "background": "",
+            "text_color": ""
           }
         },
         "richtext_qBrf7F": {
@@ -428,6 +438,7 @@
       "block_order": [
         "subheading_RdX4w4",
         "heading_qcVXpj",
+        "button_VkywJc",
         "richtext_qBrf7F"
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
