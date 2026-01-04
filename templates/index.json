@@ -402,6 +402,46 @@
         "content": ""
       }
     },
+    "image_with_text_T4X7ef": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_RdX4w4": {
+          "type": "subheading",
+          "settings": {
+            "text": "BRAND NEW"
+          }
+        },
+        "heading_qcVXpj": {
+          "type": "heading",
+          "settings": {
+            "text": "BUILD YOUR OWN FACIAL",
+            "heading_tag": "h4"
+          }
+        },
+        "richtext_qBrf7F": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Stop settling for generic facials. We build your treatment step-by-step based on your skin type. Includes custom peels, extractions, LED & boosters. Book now.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_RdX4w4",
+        "heading_qcVXpj",
+        "richtext_qBrf7F"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/unnamed.jpg",
+        "mobile_image": "shopify://shop_images/unnamed_1_1.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
     "feature_cards_JKUWqd": {
       "type": "feature-cards",
       "blocks": {
@@ -698,6 +738,7 @@
     "ss_scrolling_images_eTgjpG",
     "collection_list_yywqTr",
     "featured_product_cXQqbT",
+    "image_with_text_T4X7ef",
     "feature_cards_JKUWqd",
     "contact_info_form_heNtLy",
     "custom_liquid_PVemgx"
