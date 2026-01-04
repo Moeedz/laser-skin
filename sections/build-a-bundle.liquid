@@ -222,9 +222,9 @@
       <div class="bundle-pricing">
         <div class="price-display">
           <span class="price-label">Total Price:</span>
-          <span class="price-amount">£99.99</span>
+          <span class="price-amount">£99</span>
         </div>
-        <div class="selections-info" id="selectionsInfo">Complete your bundle to proceed</div>
+        <div class="selections-info" id="selectionsInfo">Choose appointment date and time to proceed</div>
       </div>
 
       <button 
@@ -233,7 +233,7 @@
         id="addToCartBtn"
         disabled
       >
-        Add Bundle to Cart
+        Book Facial Now
       </button>
     </div>
   </div>
@@ -1943,7 +1943,7 @@ function initFacialBundle() {
       selectionsInfo.textContent = 'Please select an appointment date and time';
     } else {
       addToCartBtn.disabled = true;
-      selectionsInfo.textContent = 'Complete your bundle to proceed';
+      selectionsInfo.textContent = 'Choose appointment date and time to proceed';
     }
   }
 
