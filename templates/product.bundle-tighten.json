@@ -337,39 +337,6 @@
         "max_image_zoom_level": 3
       }
     },
-    "image_with_text_block_PxKxFC": {
-      "type": "image-with-text-block",
-      "blocks": {
-        "subheading_UFjMVH": {
-          "type": "subheading",
-          "disabled": true,
-          "settings": {
-            "text": "Image with text block"
-          }
-        },
-        "richtext_JCfUR9": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_UFjMVH",
-        "richtext_JCfUR9"
-      ],
-      "name": "t:sections.image_with_text_block.presets.image_with_text_block.name",
-      "settings": {
-        "color_scheme": "",
-        "image_size": "auto",
-        "image": "shopify://shop_images/unnamed_15.jpg",
-        "mobile_image": "shopify://shop_images/unnamed_16.jpg",
-        "content_width": "sm",
-        "enable_parallax": true,
-        "remove_vertical_spacing": true
-      }
-    },
     "faq_bradJb": {
       "type": "faq",
       "blocks": {
@@ -414,14 +381,14 @@
             "embedded_image_ratio": "original",
             "embedded_image_ratio_mobile": "original",
             "embedded_step_1": "1",
-            "embedded_step_1_title": "Cleanse & Exfoliate",
-            "embedded_step_1_text": "<p>A gentle resurfacing step removes makeup, dead skin, and built-up oils. This clears the way for deep penetration of active ingredients and reveals brighter, smoother skin instantly.</p>",
+            "embedded_step_1_title": "How It Works (The Science)",
+            "embedded_step_1_text": "<p>This advanced treatment uses a unique \"Vortex-Fusion\" technology to simultaneously exfoliate, extract, and hydrate. The specialised hand-piece creates a circulating vortex of water and serums that gently dislodges impurities and dead skin cells while instantly infusing the fresh skin underneath with potent antioxidants, peptides, and hyaluronic acid.</p>",
             "embedded_step_2": "02",
-            "embedded_step_2_title": "Extract + Detoxify",
-            "embedded_step_2_text": "<p>The suction handpiece painlessly removes blackheads, congestion, and impurities from deep within the pores - far more effectively than manual extractions.</p>",
+            "embedded_step_2_title": "The Treatment (The Feeling)",
+            "embedded_step_2_text": "<p>Clients describe this as a \"cool, wet vacuum\" moving over the face. It is completely non-invasive and painless, there is no squeezing or pinching involved. You will feel a gentle suction sensation and the cooling touch of the fluids, which is incredibly refreshing and soothing, especially on tired skin.</p><p></p>",
             "embedded_step_3": "03",
-            "embedded_step_3_title": "Hydrate + Protect",
-            "embedded_step_3_text": "<p>Finally, your skin is drenched in a blend of antioxidants, peptides, and hyaluronic acid to replenish moisture, soothe inflammation, and boost long-term skin health.<br/><br/>The result is skin that looks fresh, plump, and luminous - the kind of healthy glow that makeup simply can’t replicate.</p>",
+            "embedded_step_3_title": "The Results (The Outcome)",
+            "embedded_step_3_text": "<p>You will see the difference instantly. Your skin will look visibly brighter, plump, and dewy immediately after the treatment. Pores appear significantly smaller because they have been deep-cleaned of congestion, and the texture of your skin will feel incredibly smooth to the touch.</p>",
             "embedded_step_4": "",
             "embedded_step_4_title": "",
             "embedded_step_4_text": ""
@@ -441,14 +408,14 @@
             "embedded_image_ratio": "original",
             "embedded_image_ratio_mobile": "original",
             "embedded_step_1": "01",
-            "embedded_step_1_title": "Cleansed And Prepared",
-            "embedded_step_1_text": "<p>The skin is gently cleansed to ensure maximum light absorption.<br/><br/>This preparation ensures your session is safe, effective, and tailored to your skin’s needs.</p>",
+            "embedded_step_1_title": "How It Works (The Science)",
+            "embedded_step_1_text": "<p>We use professional-grade LED panels that emit specific, low-level wavelengths of light energy. These wavelengths penetrate deep into the tissue to energize your cells (specifically the mitochondria), jump-starting natural cellular repair, reducing inflammation, and stimulating the production of new collagen and elastin deep within the dermis.</p>",
             "embedded_step_2": "02",
-            "embedded_step_2_title": "Celluma LED Therapy Session",
-            "embedded_step_2_text": "<p>You will relax comfortably as the Celluma device is positioned above the treatment area.<br/><br/>The panel emits targeted red and near-infrared light wavelengths that penetrate deep into the skin to energise cells and trigger collagen renewal.<br/><br/>The session lasts around 20 to 30 minutes and is completely painless. Most clients describe it as warm, calming, and deeply relaxing.</p>",
+            "embedded_step_2_title": "The Treatment (The Feeling)",
+            "embedded_step_2_text": "<p>This is the most relaxing part of the package. You simply lie back with the panel positioned over your face (with eye protection). You will feel a gentle, comforting warmth from the light, similar to lying in the sun but without any harmful UV rays. It is so soothing that many clients fall asleep during this 20-30 minute session.</p>",
             "embedded_step_3": "03",
-            "embedded_step_3_title": "Recovery And Maintenance",
-            "embedded_step_3_text": "<p>After your session, your skin will appear instantly refreshed with a healthy, natural glow.<br/><br/>There is no downtime, and you can return to normal activities straight away.</p>",
+            "embedded_step_3_title": "The Results (The Outcome)",
+            "embedded_step_3_text": "<p>While the light works on a cellular level to build collagen over time, the immediate result is a \"calm\" complexion. It drastically reduces any redness or inflammation, accelerates healing, and gives the skin a healthy, unified tone. It leaves you with a \"lit-from-within\" radiance that complements the clean, tightened look from the previous steps.</p>",
             "embedded_step_4": "",
             "embedded_step_4_title": "",
             "embedded_step_4_text": ""
@@ -745,7 +712,6 @@
   "order": [
     "treatment_tabs_section_Bqrbnk",
     "main",
-    "image_with_text_block_PxKxFC",
     "faq_bradJb",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
