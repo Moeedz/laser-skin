@@ -337,6 +337,24 @@
         "max_image_zoom_level": 3
       }
     },
+    "17677181744e36c0d7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b76e720_pBicpK": {
+          "type": "ai_gen_block_b76e720",
+          "settings": {
+            "image": "shopify://shop_images/unnamed_14.jpg",
+            "desktop_width_percent": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b76e720_pBicpK"
+      ],
+      "settings": {}
+    },
     "faq_bradJb": {
       "type": "faq",
       "blocks": {
@@ -712,6 +730,7 @@
   "order": [
     "treatment_tabs_section_Bqrbnk",
     "main",
+    "17677181744e36c0d7",
     "faq_bradJb",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
