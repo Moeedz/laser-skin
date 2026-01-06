@@ -431,7 +431,7 @@
         "richtext_qBrf7F": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Stop settling for generic facials. We build your treatment step-by-step based on your skin type. Includes custom peels, extractions, LED & boosters. Book now.</p>"
+            "content": "<p>Stop settling for generic facials. You build your facial step-by-step based on your skin type.</p>"
           }
         }
       },
@@ -445,7 +445,7 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
-        "image": "shopify://shop_images/unnamed_1.jpg",
+        "image": "shopify://shop_images/unnamed_8.jpg",
         "mobile_image": "shopify://shop_images/unnamed_b5fe5791-7e6a-44bd-b17d-cd4f1e0f7e28.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
