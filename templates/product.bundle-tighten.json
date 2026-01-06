@@ -340,18 +340,18 @@
     "17677181744e36c0d7": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_b76e720_pBicpK": {
-          "type": "ai_gen_block_b76e720",
+        "ai_gen_block_f762891_E3HAxr": {
+          "type": "ai_gen_block_f762891",
           "settings": {
-            "image": "shopify://shop_images/unnamed_14.jpg",
+            "image": "shopify://shop_images/unnamed_16.jpg",
             "desktop_width_percent": 100,
-            "border_radius": 0
+            "mobile_width_percent": 100
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_b76e720_pBicpK"
+        "ai_gen_block_f762891_E3HAxr"
       ],
       "settings": {}
     },
