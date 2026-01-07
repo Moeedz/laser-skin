@@ -337,6 +337,52 @@
         "max_image_zoom_level": 3
       }
     },
+    "17677853344bf6ed15": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b819d7d_DhLgcU": {
+          "type": "ai_gen_block_b819d7d",
+          "settings": {
+            "image": "shopify://shop_images/unnamed_27.jpg",
+            "border_radius": 0,
+            "desktop_width_percent": 100,
+            "show_overlay": false,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0.3,
+            "heading": "Image box heading",
+            "text": "<p>Add descriptive text to your image box</p>",
+            "content_padding": 40,
+            "content_vertical_alignment": "center",
+            "content_horizontal_alignment": "center",
+            "text_alignment": "center",
+            "heading_size": 36,
+            "heading_color": "#ffffff",
+            "text_size": 16,
+            "text_color": "#ffffff",
+            "button_text": "Shop now",
+            "button_link": "",
+            "button_text_size": 14,
+            "button_background": "#1c1c1c",
+            "button_hover_background": "#000000",
+            "button_text_color": "#ffffff",
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b819d7d_DhLgcU"
+      ],
+      "settings": {}
+    },
+    "1767785061487f6b88": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1767785252d784609b": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "faq_bradJb": {
       "type": "faq",
       "blocks": {
@@ -710,6 +756,9 @@
   "order": [
     "treatment_tabs_section_Bqrbnk",
     "main",
+    "17677853344bf6ed15",
+    "1767785061487f6b88",
+    "1767785252d784609b",
     "faq_bradJb",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
