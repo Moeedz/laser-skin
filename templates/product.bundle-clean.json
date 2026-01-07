@@ -704,7 +704,6 @@
         },
         "text_WDUHyt": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "question": "Where is the clinic based?",
             "answer": "<p>Laser Skin Clinics is based in a beautiful rural commercial premises with plenty of free parking just outside Perton in Wolverhampton. <br/><br/>The full address is below.<br/>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB </p>"
