@@ -603,6 +603,7 @@
       "blocks": {
         "text_wgM46e": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "How long will the treatment take and in what order are they performed?",
             "answer": "<p><strong>Your Lift, Heal & Glow Supreme Bundle is structured to deliver maximum results, with all three treatments performed in a smooth, seamless sequence during your appointment for around 2 hours</strong></p><p>You’ll begin with <strong>Radio Frequency Skin Tightening</strong>, where controlled heat is delivered into the deeper layers of the skin to stimulate collagen, improve elasticity and firm early signs of sagging.</p><p>Next, you’ll move into your <strong>IPL Glo Facial</strong>, a targeted light-based treatment that breaks down pigmentation, reduces redness and brightens uneven skin tone for a clearer, more radiant complexion.</p><p>Your session concludes with <strong>Celluma Red Light Therapy</strong>, a calming LED treatment that accelerates healing, boosts collagen, reduces inflammation and enhances overall skin rejuvenation.</p><p>Together, these three treatments work in perfect harmony to lift, brighten and heal the skin — leaving your complexion firmer, smoother and beautifully luminous after just one visit.</p>"
@@ -617,6 +618,7 @@
         },
         "text_HhtUzg": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What are your opening hours?",
             "answer": "<ul><li><strong>Monday:</strong>Closed</li><li><strong>Tuesday:</strong>10AM - 6PM</li><li><strong>Wednesday:</strong>10AM - 6PM</li><li><strong>Thursday:</strong>Closed</li><li><strong>Friday:</strong>10AM - 6PM</li><li><strong>Saturday:</strong>10AM - 4PM</li><li><strong>Sunday:</strong>Closed</li></ul>"
@@ -624,6 +626,7 @@
         },
         "text_EkDPcx": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What are your contact details and address?",
             "answer": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>"
@@ -631,6 +634,7 @@
         },
         "text_TTGaBb": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "Do you offer flexible payment options?",
             "answer": "<p>Flexible payment options are available, including Klarna and Shopify Pay. Just choose the one you prefer at checkout.</p>"
@@ -638,6 +642,7 @@
         },
         "text_VRegUr": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": " What is included in The Lift, Heal and Glow Supreme Package?",
             "answer": "<p>This package includes three advanced treatments in one appointment: Radio Frequency Skin Tightening to firm and lift the skin, an IPL Glo Facial to brighten, clarify and even your complexion, and Celluma Red Light Therapy to calm, rejuvenate and boost collagen.</p>"
@@ -645,6 +650,7 @@
         },
         "text_Hir8bk": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "Is the £99 price for everything together?",
             "answer": "<p>Yes - the full £99 covers all three treatments in your appointment. Purchased individually, they normally total £200.</p>"
@@ -652,6 +658,7 @@
         },
         "text_MLKHPB": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "Are there any reasons I might not be suitable?",
             "answer": "<p>You may not be suitable if you are pregnant, breastfeeding, have certain medical conditions, metal implants/pacemakers, or active skin infections.</p>"
@@ -682,6 +689,7 @@
         },
         "text_KK7Pzi": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "Do I need to book a consultation first?",
             "answer": "<p>No you don't need to book a consultation first.</p>"
@@ -696,6 +704,7 @@
         },
         "text_WDUHyt": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "If I want to add more of any particular treatment after the package, how do I do it?",
             "answer": "<p>Simply speak to your practitioner after your appointment or contact the clinic at any time. We can book additional Power Sculpt, Carbon Facial or Red Light Therapy sessions individually or as part of a tailored course.</p>"
@@ -718,6 +727,7 @@
         "text_F8VzVF",
         "text_WDUHyt"
       ],
+      "disabled": true,
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
