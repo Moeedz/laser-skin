@@ -17,20 +17,20 @@
 
     <!-- Skin Type Selector -->
     <div class="skin-type-selector">
-      <h3 class="selector-title">Select Your Goal</h3>
+      <h3 class="selector-title">Select Your Skin Type</h3>
       <div class="skin-type-options">
-        <button type="button" class="skin-type-btn" data-skin-type="Glow">Glow</button>
-        <button type="button" class="skin-type-btn" data-skin-type="Hydrate">Hydrate</button>
-        <button type="button" class="skin-type-btn" data-skin-type="Calm">Calm</button>
-        <button type="button" class="skin-type-btn" data-skin-type="Lift">Lift</button>
-        <button type="button" class="skin-type-btn" data-skin-type="Clarify">Clarify</button>
+        <button type="button" class="skin-type-btn" data-skin-type="Normal">Normal</button>
+        <button type="button" class="skin-type-btn" data-skin-type="Dry">Dry</button>
+        <button type="button" class="skin-type-btn" data-skin-type="Oily">Oily</button>
+        <button type="button" class="skin-type-btn" data-skin-type="Combination">Combination</button>
+        <button type="button" class="skin-type-btn" data-skin-type="Sensitive">Sensitive</button>
       </div>
     </div>
 
     <!-- Bundle Progress Bar (Sticky) -->
     <div class="bundle-progress" id="bundleProgress" style="display: none;">
       <div class="progress-info">
-        <span class="progress-label">Facial Progress:</span>
+        <span class="progress-label">Bundle Progress:</span>
         <span class="progress-count" id="progressCount">0 / 8 treatments selected</span>
       </div>
       <div class="progress-bar">
@@ -1937,7 +1937,7 @@ function initFacialBundle() {
     
     if (treatmentCount === 8 && hasAppointment) {
       addToCartBtn.disabled = false;
-      selectionsInfo.textContent = '✓ Facial complete! Ready to book';
+      selectionsInfo.textContent = '✓ Bundle complete! Ready to add to cart';
     } else if (treatmentCount === 8) {
       addToCartBtn.disabled = true;
       selectionsInfo.textContent = 'Please select an appointment date and time';
