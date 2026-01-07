@@ -398,7 +398,7 @@
         "background_color": "#e6b325",
         "answer_color": "#000000",
         "answer_bg_color": "#ffffff",
-        "questions-font-size": 1.5
+        "questions-font-size": 0.8
       }
     }
   },
