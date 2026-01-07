@@ -337,6 +337,10 @@
         "max_image_zoom_level": 3
       }
     },
+    "1767783705bfe64fa5": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "faq_bradJb": {
       "type": "faq",
       "blocks": {
@@ -712,6 +716,7 @@
   "order": [
     "treatment_tabs_section_Bqrbnk",
     "main",
+    "1767783705bfe64fa5",
     "faq_bradJb",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
