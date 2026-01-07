@@ -15,9 +15,9 @@
       <div class="bundle-description">{{ section.settings.section_description }}</div>
     {% endif %}
 
-    <!-- Skin Type Selector -->
+    <!-- Skin Goal Selector -->
     <div class="skin-type-selector">
-      <h3 class="selector-title">Select Your Skin Type</h3>
+      <h3 class="selector-title">Select Your Skin Goal</h3>
       <div class="skin-type-options">
         <button type="button" class="skin-type-btn" data-skin-type="Normal">Normal</button>
         <button type="button" class="skin-type-btn" data-skin-type="Dry">Dry</button>
@@ -275,7 +275,7 @@
   line-height: 1.6;
 }
 
-/* Skin Type Selector */
+/* Skin Goal Selector */
 .skin-type-selector {
   margin-bottom: 40px;
   text-align: center;
@@ -1668,7 +1668,7 @@ function initFacialBundle() {
   document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', function() {
       if (!selectedSkinType) {
-        alert('Please select a skin type first');
+        alert('Please select a skin goal first');
         return;
       }
       currentCategory = this.dataset.category;
