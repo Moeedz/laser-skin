@@ -70,6 +70,7 @@
       "blocks": {
         "image_388Lbp": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/unnamed_3.jpg",
             "mobile_image": "shopify://shop_images/unnamed_4.jpg",
@@ -118,8 +119,8 @@
         "image_JA347a": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Gemini_Generated_Image_b7h8zhb7h8zhb7h8_1.png",
-            "mobile_image": "shopify://shop_images/unnamed_5.jpg",
+            "image": "shopify://shop_images/unnamed_16394adb-c8b2-47fc-a010-15c816b5c3c3.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_1_4a2ae0d8-3a24-4900-84d0-3a0cde45769e.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -177,8 +178,8 @@
         "image_i39Tak": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_6.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_7.jpg",
+            "image": "shopify://shop_images/unnamed_3_dcbe24d9-8bf6-4675-ba88-2b44f8ba706c.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_2.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
