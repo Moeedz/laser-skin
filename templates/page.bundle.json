@@ -346,6 +346,13 @@
     "ss_simple_faq_jc4aE3": {
       "type": "ss-simple-faq",
       "blocks": {
+        "text_yU7hVd": {
+          "type": "text",
+          "settings": {
+            "question": "What brands do you use?",
+            "answer": "<p>We use Medik8, Circadia, Dermalogica and Amour Skincare.</p>"
+          }
+        },
         "text_x9yWaq": {
           "type": "text",
           "settings": {
@@ -383,6 +390,7 @@
         }
       },
       "block_order": [
+        "text_yU7hVd",
         "text_x9yWaq",
         "text_tb9ra4",
         "text_VBr33C",
