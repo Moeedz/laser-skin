@@ -349,7 +349,7 @@
             "show_overlay": false,
             "overlay_color": "#000000",
             "overlay_opacity": 0.3,
-            "heading": "Image box heading",
+            "heading": "",
             "text": "<p>Add descriptive text to your image box</p>",
             "content_padding": 40,
             "content_vertical_alignment": "center",
