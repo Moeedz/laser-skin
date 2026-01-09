@@ -25,6 +25,7 @@
   data-is-dismissible="{{ section.settings.is_dismissible }}"
   data-show-on-mobile="{{ section.settings.show_on_mobile }}"
   data-show-on-desktop="{{ section.settings.show_on_desktop }}"
+  data-trigger-element="{{ section.settings.trigger_element }}"
 >
   <div class="sticky-button-container">
     {% if section.settings.bar_text != blank %}
@@ -235,6 +236,7 @@
     const isDismissible = section.dataset.isDismissible === 'true';
     const showOnMobile = section.dataset.showOnMobile === 'true';
     const showOnDesktop = section.dataset.showOnDesktop === 'true';
+    const triggerElementSelector = section.dataset.triggerElement || '';
 
     // Handle device visibility
     if (!showOnMobile) {
@@ -244,8 +246,8 @@
       section.classList.add('hide-desktop');
     }
 
-    // Initial state for scroll-based visibility
-    if (showAfterScroll) {
+    // Initial state - hidden by default if using trigger element or scroll-based visibility
+    if (showAfterScroll || triggerElementSelector) {
       section.classList.add('hidden');
     }
 
@@ -269,29 +271,42 @@
     // Scroll handling
     function handleScroll() {
       const scrollY = window.scrollY || window.pageYOffset;
+      let shouldShow = false;
 
-      // Show after scroll distance
-      if (showAfterScroll) {
-        if (scrollY > scrollDistance) {
-          section.classList.remove('hidden');
-        } else {
-          section.classList.add('hidden');
+      // Check trigger element first (takes priority)
+      if (triggerElementSelector) {
+        const triggerElement = document.querySelector(triggerElementSelector);
+        if (triggerElement) {
+          const triggerRect = triggerElement.getBoundingClientRect();
+          // Show when the element is fully scrolled past (bottom of element is above viewport)
+          shouldShow = triggerRect.bottom < 0;
         }
+      } else if (showAfterScroll) {
+        // Fallback to scroll distance
+        shouldShow = scrollY > scrollDistance;
+      } else {
+        // Always show if no conditions set
+        shouldShow = true;
       }
 
-      // Hide near footer
-      if (hideNearFooter) {
-        const footer = document.querySelector('footer') || document.querySelector('.footer') || document.querySelector('#footer');
+      // Hide near footer (overrides other conditions)
+      if (hideNearFooter && shouldShow) {
+        const footer = document.querySelector('footer') || document.querySelector('.footer') || document.querySelector('#footer') || document.querySelector('.shopify-section--footer');
         if (footer) {
           const footerRect = footer.getBoundingClientRect();
           const windowHeight = window.innerHeight;
           
           if (footerRect.top < windowHeight) {
-            section.classList.add('hidden');
-          } else if (!showAfterScroll || scrollY > scrollDistance) {
-            section.classList.remove('hidden');
+            shouldShow = false;
           }
         }
+      }
+
+      // Apply visibility
+      if (shouldShow) {
+        section.classList.remove('hidden');
+      } else {
+        section.classList.add('hidden');
       }
     }
 
@@ -414,6 +429,13 @@
       "content": "⚙️ Behavior"
     },
     {
+      "type": "text",
+      "id": "trigger_element",
+      "label": "Trigger Element Selector",
+      "info": "CSS selector for element - button appears when this is scrolled past. Leave empty to use scroll distance instead.",
+      "default": ".shopify-section--main-product .section-spacing"
+    },
+    {
       "type": "checkbox",
       "id": "show_on_mobile",
       "label": "Show on Mobile",
@@ -429,13 +451,14 @@
       "type": "checkbox",
       "id": "show_after_scroll",
       "label": "Show only after scrolling",
+      "info": "Fallback if no trigger element is set",
       "default": false
     },
     {
       "type": "range",
       "id": "scroll_distance",
       "label": "Scroll Distance (px)",
-      "info": "How far to scroll before button appears",
+      "info": "Used when no trigger element is set",
       "min": 100,
       "max": 1000,
       "step": 50,
