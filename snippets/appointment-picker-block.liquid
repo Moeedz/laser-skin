@@ -1,5 +1,5 @@
 {% comment %}
-  Appointment Picker Block - Updated with Cart Fix
+  Appointment Picker Block - Updated with Sticky Button Support
   Usage: {% render 'appointment-picker-block', block: block, product_form_id: product_form_id %}
 {% endcomment %}
 
@@ -245,6 +245,16 @@
       background: #ccc;
       cursor: not-allowed;
     }
+    
+    /* Selected appointment display styling */
+    .appointment-dropdown.has-selection {
+      border-color: #10B981;
+      background: #f0fdf4;
+    }
+    .appointment-dropdown.has-selection #appointmentDisplay-{{ block.id }} {
+      color: #10B981;
+      font-weight: 600;
+    }
   </style>
 
   <label class="appointment-selector-label">Select Date and Time:</label>
@@ -320,9 +330,19 @@
       const cancelBtn = document.getElementById(`cancelBtn-${blockId}`);
       const confirmBtn = document.getElementById(`confirmBtn-${blockId}`);
 
-      dropdown.addEventListener('click', () => {
+      // Function to open modal
+      function openModal() {
         modal.classList.add('active');
         renderCalendar();
+      }
+
+      // Open modal on dropdown click
+      dropdown.addEventListener('click', openModal);
+
+      // Listen for sticky button trigger event
+      window.addEventListener('openAppointmentPicker', function() {
+        openModal();
+        console.log('📅 Appointment picker opened via sticky button');
       });
 
       function closeModal() {
@@ -469,6 +489,9 @@
         
         display.textContent = `${formattedDate} at ${selectedTime}`;
         
+        // Add visual indicator that appointment is selected
+        dropdown.classList.add('has-selection');
+        
         // Find the ACTUAL product form (not payment installment)
         let form = null;
         
@@ -533,6 +556,15 @@
           console.log('Form action:', form.action);
           console.log('Has buy buttons:', form.querySelector('.buy-buttons') ? 'YES' : 'NO');
           console.log('Appointment:', formattedDate, selectedTime);
+          
+          // Dispatch custom event so other components can react
+          window.dispatchEvent(new CustomEvent('appointmentSelected', {
+            detail: {
+              date: formattedDate,
+              time: selectedTime,
+              dateObj: selectedDate
+            }
+          }));
         } else {
           console.error('❌ Could not find correct product form!');
           console.log('All forms on page:', document.querySelectorAll('form'));
