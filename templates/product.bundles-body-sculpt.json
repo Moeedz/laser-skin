@@ -760,6 +760,30 @@
         "answer_bg_color": "#ffffff",
         "questions-font-size": 1
       }
+    },
+    "sticky_button_zfyfFL": {
+      "type": "sticky-button",
+      "name": "Sticky Bottom Button",
+      "settings": {
+        "button_text": "Book your appointment for facial",
+        "button_link": "",
+        "open_in_new_tab": false,
+        "bar_text": "",
+        "button_icon": "cart",
+        "button_style": "rounded",
+        "bar_bg_color": "#ffffff",
+        "bar_text_color": "#333333",
+        "button_bg_color": "#e6b325",
+        "button_text_color": "#ffffff",
+        "button_hover_bg_color": "#333333",
+        "button_hover_text_color": "#ffffff",
+        "show_on_mobile": true,
+        "show_on_desktop": true,
+        "show_after_scroll": true,
+        "scroll_distance": 300,
+        "hide_near_footer": true,
+        "is_dismissible": false
+      }
     }
   },
   "order": [
@@ -771,6 +795,7 @@
     "faq_bradJb",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
-    "ss_simple_faq_jiYFWj"
+    "ss_simple_faq_jiYFWj",
+    "sticky_button_zfyfFL"
   ]
 }
