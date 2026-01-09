@@ -272,10 +272,9 @@
         },
         "text_qqHqf8": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "question": "How can I create headshots with AI?",
-            "answer": "<p>Need professional headshots quickly? <a href=\"https://headshots.so\">headshots.so</a>, <a href=\"https://headshots.dk\">headshots.dk</a>, <a href=\"https://headshots.se\">headshots.se</a>, and <a href=\"https://headshots.no\">headshots.no</a> make it easy to produce high-quality images in just a few minutes. Whether you’re updating your LinkedIn profile or website, these platforms help you get a polished look without any hassle.</p>"
+            "question": "When is the £49 paid?",
+            "answer": "<p>When we call you to book you in for your consultation we will take the £49 fee over the phone or we can send you a payment link so you can pay online.</p>"
           }
         }
       },
