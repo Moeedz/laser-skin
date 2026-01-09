@@ -349,7 +349,7 @@
         "text_yU7hVd": {
           "type": "text",
           "settings": {
-            "question": "What brands do you use?",
+            "question": "What brands are used on my skin during the facial?",
             "answer": "<p>We use Medik8, Circadia, Dermalogica and Amour Skincare.</p>"
           }
         },
@@ -369,6 +369,7 @@
         },
         "text_VBr33C": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What is the build a facial experience?",
             "answer": "<p>you choose a pre-set treatment, \"Build a Facial\" is a fully bespoke experience. We construct your treatment step-by-step using 8 distinct stages, from the initial cleanse to the final protective seal. Every single step is selected to match your specific skin type and current concerns.</p>"
@@ -376,6 +377,7 @@
         },
         "text_KdN6ym": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What is the technology lounge step?",
             "answer": "<p>This is a high-tech portion of the facial where we use advanced devices to enhance results depending on your needs.</p>"
