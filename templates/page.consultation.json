@@ -118,8 +118,8 @@
         "image_MeUyje": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_60.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_61.jpg",
+            "image": "shopify://shop_images/unnamed_68.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_66.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -256,7 +256,7 @@
     "custom_liquid_intrC3": {
       "type": "custom-liquid",
       "custom_css": [
-        "@media screen and (min-width: 768px) {.color-scheme.color-scheme--scheme-1.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 .text-center {display: flex !important; justify-content: center !important;}}"
+        "@media screen and (min-width: 768px) {.color-scheme.color-scheme--scheme-1.color-scheme--bg-54922f2e920ba8346f6dc0fba343d673 .text-center {display: flex !important; justify-content: center !important; }}"
       ],
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
