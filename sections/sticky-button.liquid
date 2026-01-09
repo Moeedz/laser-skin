@@ -1,0 +1,464 @@
+{% comment %}
+  Sticky Bottom Button Section
+  - Fixed position at bottom of screen
+  - Fully customizable via theme editor
+  - Optional: hide when footer visible, show after scroll, dismissible
+{% endcomment %}
+
+{% style %}
+  .sticky-button-section-{{ section.id }} {
+    --sticky-btn-bg: {{ section.settings.button_bg_color }};
+    --sticky-btn-text: {{ section.settings.button_text_color }};
+    --sticky-btn-bg-hover: {{ section.settings.button_hover_bg_color }};
+    --sticky-btn-text-hover: {{ section.settings.button_hover_text_color }};
+    --sticky-bar-bg: {{ section.settings.bar_bg_color }};
+    --sticky-bar-text: {{ section.settings.bar_text_color }};
+  }
+{% endstyle %}
+
+<div 
+  class="sticky-button-section sticky-button-section-{{ section.id }}" 
+  id="stickyButton-{{ section.id }}"
+  data-show-after-scroll="{{ section.settings.show_after_scroll }}"
+  data-scroll-distance="{{ section.settings.scroll_distance }}"
+  data-hide-near-footer="{{ section.settings.hide_near_footer }}"
+  data-is-dismissible="{{ section.settings.is_dismissible }}"
+  data-show-on-mobile="{{ section.settings.show_on_mobile }}"
+  data-show-on-desktop="{{ section.settings.show_on_desktop }}"
+>
+  <div class="sticky-button-container">
+    {% if section.settings.bar_text != blank %}
+      <span class="sticky-bar-text">{{ section.settings.bar_text }}</span>
+    {% endif %}
+    
+    <a 
+      href="{{ section.settings.button_link }}" 
+      class="sticky-button {% if section.settings.button_style == 'rounded' %}sticky-button--rounded{% elsif section.settings.button_style == 'pill' %}sticky-button--pill{% endif %}"
+      {% if section.settings.open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+    >
+      {% if section.settings.button_icon != 'none' %}
+        <span class="sticky-button-icon">
+          {% case section.settings.button_icon %}
+            {% when 'cart' %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            {% when 'arrow' %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            {% when 'phone' %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            {% when 'calendar' %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            {% when 'message' %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            {% when 'star' %}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          {% endcase %}
+        </span>
+      {% endif %}
+      <span class="sticky-button-text">{{ section.settings.button_text }}</span>
+    </a>
+
+    {% if section.settings.is_dismissible %}
+      <button type="button" class="sticky-dismiss-btn" aria-label="Dismiss">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .sticky-button-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 12px 20px;
+    background: var(--sticky-bar-bg);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .sticky-button-section.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sticky-button-section.dismissed {
+    display: none !important;
+  }
+
+  .sticky-button-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .sticky-bar-text {
+    color: var(--sticky-bar-text);
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .sticky-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: var(--sticky-btn-bg);
+    color: var(--sticky-btn-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .sticky-button:hover {
+    background: var(--sticky-btn-bg-hover);
+    color: var(--sticky-btn-text-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .sticky-button--rounded {
+    border-radius: 12px;
+  }
+
+  .sticky-button--pill {
+    border-radius: 50px;
+  }
+
+  .sticky-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sticky-button-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sticky-dismiss-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--sticky-bar-text);
+    cursor: pointer;
+    padding: 8px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sticky-dismiss-btn:hover {
+    opacity: 1;
+  }
+
+  /* Full Width Button Style */
+  .sticky-button-section[data-full-width="true"] .sticky-button {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Hide on specific devices */
+  .sticky-button-section.hide-mobile {
+    display: block;
+  }
+
+  .sticky-button-section.hide-desktop {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .sticky-button-section {
+      padding: 10px 15px;
+    }
+
+    .sticky-button-section.hide-mobile {
+      display: none !important;
+    }
+
+    .sticky-button-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sticky-bar-text {
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .sticky-button {
+      width: 100%;
+      padding: 14px 24px;
+      font-size: 15px;
+    }
+
+    .sticky-dismiss-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      transform: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .sticky-button-section.hide-desktop {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    const section = document.getElementById('stickyButton-{{ section.id }}');
+    if (!section) return;
+
+    const showAfterScroll = section.dataset.showAfterScroll === 'true';
+    const scrollDistance = parseInt(section.dataset.scrollDistance) || 300;
+    const hideNearFooter = section.dataset.hideNearFooter === 'true';
+    const isDismissible = section.dataset.isDismissible === 'true';
+    const showOnMobile = section.dataset.showOnMobile === 'true';
+    const showOnDesktop = section.dataset.showOnDesktop === 'true';
+
+    // Handle device visibility
+    if (!showOnMobile) {
+      section.classList.add('hide-mobile');
+    }
+    if (!showOnDesktop) {
+      section.classList.add('hide-desktop');
+    }
+
+    // Initial state for scroll-based visibility
+    if (showAfterScroll) {
+      section.classList.add('hidden');
+    }
+
+    // Dismiss functionality
+    if (isDismissible) {
+      const dismissBtn = section.querySelector('.sticky-dismiss-btn');
+      if (dismissBtn) {
+        dismissBtn.addEventListener('click', function() {
+          section.classList.add('dismissed');
+          // Store in session so it stays dismissed during this visit
+          sessionStorage.setItem('stickyButtonDismissed-{{ section.id }}', 'true');
+        });
+
+        // Check if already dismissed
+        if (sessionStorage.getItem('stickyButtonDismissed-{{ section.id }}') === 'true') {
+          section.classList.add('dismissed');
+        }
+      }
+    }
+
+    // Scroll handling
+    function handleScroll() {
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // Show after scroll distance
+      if (showAfterScroll) {
+        if (scrollY > scrollDistance) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      }
+
+      // Hide near footer
+      if (hideNearFooter) {
+        const footer = document.querySelector('footer') || document.querySelector('.footer') || document.querySelector('#footer');
+        if (footer) {
+          const footerRect = footer.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          
+          if (footerRect.top < windowHeight) {
+            section.classList.add('hidden');
+          } else if (!showAfterScroll || scrollY > scrollDistance) {
+            section.classList.remove('hidden');
+          }
+        }
+      }
+    }
+
+    // Throttled scroll listener
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Initial check
+    handleScroll();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Sticky Bottom Button",
+  "settings": [
+    {
+      "type": "header",
+      "content": "📝 Button Content"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_in_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "bar_text",
+      "label": "Optional Bar Text",
+      "info": "Text displayed next to the button (leave empty to hide)"
+    },
+    {
+      "type": "select",
+      "id": "button_icon",
+      "label": "Button Icon",
+      "options": [
+        { "value": "none", "label": "No Icon" },
+        { "value": "cart", "label": "Cart" },
+        { "value": "arrow", "label": "Arrow" },
+        { "value": "phone", "label": "Phone" },
+        { "value": "calendar", "label": "Calendar" },
+        { "value": "message", "label": "Message" },
+        { "value": "star", "label": "Star" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "options": [
+        { "value": "square", "label": "Square Corners" },
+        { "value": "rounded", "label": "Rounded Corners" },
+        { "value": "pill", "label": "Pill Shape" }
+      ],
+      "default": "rounded"
+    },
+    {
+      "type": "header",
+      "content": "🎨 Colors"
+    },
+    {
+      "type": "color",
+      "id": "bar_bg_color",
+      "label": "Bar Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "bar_text_color",
+      "label": "Bar Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button Hover Background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button Hover Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "⚙️ Behavior"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Show on Mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Show on Desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_after_scroll",
+      "label": "Show only after scrolling",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "scroll_distance",
+      "label": "Scroll Distance (px)",
+      "info": "How far to scroll before button appears",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "default": 300
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_near_footer",
+      "label": "Hide when footer is visible",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "is_dismissible",
+      "label": "Allow users to dismiss",
+      "info": "Shows an X button to close",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky Bottom Button"
+    }
+  ]
+}
+{% endschema %}
