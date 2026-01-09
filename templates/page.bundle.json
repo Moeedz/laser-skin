@@ -411,6 +411,7 @@
     },
     "sticky_button_aAXBpz": {
       "type": "sticky-button",
+      "disabled": true,
       "name": "Sticky Bottom Button",
       "settings": {
         "button_action": "appointment_picker",
