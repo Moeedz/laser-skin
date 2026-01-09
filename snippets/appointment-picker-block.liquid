@@ -347,6 +347,8 @@
 
       function closeModal() {
         modal.classList.remove('active');
+        // Dispatch event so sticky button knows to show again
+        window.dispatchEvent(new CustomEvent('appointmentModalClosed'));
       }
 
       closeBtn.addEventListener('click', closeModal);

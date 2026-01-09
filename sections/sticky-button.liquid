@@ -309,6 +309,9 @@
           if (appointmentModal) {
             appointmentModal.classList.add('active');
             
+            // Hide sticky button while modal is open
+            section.style.display = 'none';
+            
             // Trigger the calendar render if it has a render function
             // This dispatches a custom event that the appointment picker can listen to
             window.dispatchEvent(new CustomEvent('openAppointmentPicker'));
@@ -326,6 +329,49 @@
           }
         });
       }
+      
+      // Listen for modal close to show sticky button again
+      document.addEventListener('click', function(e) {
+        const modal = document.querySelector('.appointment-modal');
+        if (modal && !modal.classList.contains('active')) {
+          // Modal is closed, show sticky button again (if scroll conditions are met)
+          section.style.display = '';
+          handleScroll();
+        }
+      });
+      
+      // Also listen for the appointmentSelected event
+      window.addEventListener('appointmentSelected', function() {
+        section.style.display = '';
+        handleScroll();
+      });
+      
+      // Listen for modal close event
+      window.addEventListener('appointmentModalClosed', function() {
+        section.style.display = '';
+        handleScroll();
+      });
+      
+      // Watch for modal close via MutationObserver
+      const modalObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.attributeName === 'class') {
+            const modal = mutation.target;
+            if (!modal.classList.contains('active')) {
+              section.style.display = '';
+              handleScroll();
+            }
+          }
+        });
+      });
+      
+      // Start observing the modal when it exists
+      setTimeout(() => {
+        const modal = document.querySelector('.appointment-modal');
+        if (modal) {
+          modalObserver.observe(modal, { attributes: true });
+        }
+      }, 500);
     }
 
     // Scroll handling
