@@ -30,7 +30,7 @@
     <!-- Bundle Progress Bar (Sticky) -->
     <div class="bundle-progress" id="bundleProgress" style="display: none;">
       <div class="progress-info">
-        <span class="progress-label">Bundle Progress:</span>
+        <span class="progress-label">Facial Progress:</span>
         <span class="progress-count" id="progressCount">0 / 8 treatments selected</span>
       </div>
       <div class="progress-bar">
@@ -2417,7 +2417,7 @@ function initFacialBundle() {
     
     if (treatmentCount === 8 && hasAppointment) {
       addToCartBtn.disabled = false;
-      selectionsInfo.textContent = '✓ Bundle complete! Ready to add to cart';
+      selectionsInfo.textContent = '✓ Facial complete! Ready to add to cart';
     } else if (treatmentCount === 8) {
       addToCartBtn.disabled = true;
       selectionsInfo.textContent = 'Please select an appointment date and time';
