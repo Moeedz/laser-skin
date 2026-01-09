@@ -357,6 +357,7 @@
         "opening_hour_i3XtaC",
         "opening_hour_9fHMxf"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 767px) {.contact-container-template--26151866466684__contact_info_form_R4TkEh {flex-flow: column-reverse !important; display: flex !important; }}"
       ],
