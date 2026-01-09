@@ -253,48 +253,6 @@
         "controls_color": "#ffffff"
       }
     },
-    "ss_simple_faq_fzGQQA": {
-      "type": "ss-simple-faq",
-      "blocks": {
-        "text_mMVaiE": {
-          "type": "text",
-          "settings": {
-            "question": "How does the £49 redeemable fee work?",
-            "answer": "<p>We view this payment as a commitment to your skin, not a cost. To secure dedicated time with our skin experts for a deep-dive analysis we charge £49 <strong>This entire amount is credited back to you</strong> to use against any treatment or skincare product you choose to move forward with. If you proceed with a treatment or product purchase, the consultation is effectively free.</p>"
-          }
-        },
-        "text_jaEKh3": {
-          "type": "text",
-          "settings": {
-            "question": "Am I obligated to book a treatment after the consultation?",
-            "answer": "<p>Absolutely not. Our goal is to give you a clear roadmap (your Bespoke Protocol). While most clients choose to start their treatment immediately using their £49 credit, you are free to go away and come back at a later date. The £49 will always be available to use against any of our treatments.</p>"
-          }
-        },
-        "text_qqHqf8": {
-          "type": "text",
-          "settings": {
-            "question": "When is the £49 paid?",
-            "answer": "<p>When we call you to book you in for your consultation we will take the £49 fee over the phone or we can send you a payment link so you can pay online.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_mMVaiE",
-        "text_jaEKh3",
-        "text_qqHqf8"
-      ],
-      "name": "SS - FAQ #1",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "icon_color": "#ffffff",
-        "hover_color": "#efefef",
-        "question_color": "#ffffff",
-        "background_color": "#e6b325",
-        "answer_color": "#000000",
-        "answer_bg_color": "#ffffff",
-        "questions-font-size": 0.8
-      }
-    },
     "contact_info_form_R4TkEh": {
       "type": "contact-info-form",
       "blocks": {
@@ -451,6 +409,48 @@
         "button_hover_text_color": "#ffffff",
         "success_message": "Thank you for contacting us. We will get back to you soon!"
       }
+    },
+    "ss_simple_faq_fzGQQA": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_mMVaiE": {
+          "type": "text",
+          "settings": {
+            "question": "How does the £49 redeemable fee work?",
+            "answer": "<p>We view this payment as a commitment to your skin, not a cost. To secure dedicated time with our skin experts for a deep-dive analysis we charge £49 <strong>This entire amount is credited back to you</strong> to use against any treatment or skincare product you choose to move forward with. If you proceed with a treatment or product purchase, the consultation is effectively free.</p>"
+          }
+        },
+        "text_jaEKh3": {
+          "type": "text",
+          "settings": {
+            "question": "Am I obligated to book a treatment after the consultation?",
+            "answer": "<p>Absolutely not. Our goal is to give you a clear roadmap (your Bespoke Protocol). While most clients choose to start their treatment immediately using their £49 credit, you are free to go away and come back at a later date. The £49 will always be available to use against any of our treatments.</p>"
+          }
+        },
+        "text_qqHqf8": {
+          "type": "text",
+          "settings": {
+            "question": "When is the £49 paid?",
+            "answer": "<p>When we call you to book you in for your consultation we will take the £49 fee over the phone or we can send you a payment link so you can pay online.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_mMVaiE",
+        "text_jaEKh3",
+        "text_qqHqf8"
+      ],
+      "name": "SS - FAQ #1",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 0.8
+      }
     }
   },
   "order": [
@@ -460,7 +460,7 @@
     "slideshow_N36fdB",
     "slideshow_9bK6iw",
     "slideshow_WTKLC8",
-    "ss_simple_faq_fzGQQA",
-    "contact_info_form_R4TkEh"
+    "contact_info_form_R4TkEh",
+    "ss_simple_faq_fzGQQA"
   ]
 }
