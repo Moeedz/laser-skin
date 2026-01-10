@@ -297,7 +297,7 @@
             "shoppay_text": "Pay in 4 interest-free installments for orders over $50",
             "shoppay_minimum": 50,
             "shoppay_installments": 3,
-            "show_clearpay": true,
+            "show_clearpay": false,
             "clearpay_name": "Clearpay",
             "clearpay_logo": "https://cdn.shopify.com/s/files/1/0225/4641/5693/files/clearpay.svg?v=1751947060",
             "clearpay_bg": "#b2fce4",
