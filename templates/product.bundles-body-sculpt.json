@@ -192,6 +192,7 @@
         },
         "payment_terms": {
           "type": "payment_terms",
+          "disabled": true,
           "settings": {}
         },
         "separator": {
@@ -281,9 +282,9 @@
         "payment_providers_xiPdmf": {
           "type": "payment_providers",
           "settings": {
-            "margin_top": 16,
-            "margin_bottom": 16,
-            "item_spacing": 8,
+            "margin_top": 24,
+            "margin_bottom": 24,
+            "item_spacing": 14,
             "logo_border_radius": 6,
             "text_size": 14,
             "text_color": "#333333",
@@ -325,7 +326,6 @@
         },
         "accordion_YdJrFX": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -337,7 +337,6 @@
         },
         "accordion_GdNBTM": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -349,7 +348,6 @@
         },
         "accordion_D8Xijx": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -361,7 +359,6 @@
         },
         "accordion_6NpUwT": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
