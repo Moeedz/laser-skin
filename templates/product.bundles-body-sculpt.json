@@ -184,6 +184,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "collapse_content": false,
             "show_below_gallery": false
@@ -236,6 +237,12 @@
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
+          }
+        },
+        "text_PCDGae": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Enter your text here</p>"
           }
         },
         "bundle_contents_FmifNi": {
@@ -348,6 +355,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "text_PCDGae",
         "bundle_contents_FmifNi",
         "liquid_Eg4Pre",
         "accordion_YdJrFX",
