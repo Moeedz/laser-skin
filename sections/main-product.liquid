@@ -2101,6 +2101,259 @@ quick buy information in a template, that will be extracted in JS, which ensures
       "label": "Size / Variant"
     }
   ]
+},
+/* =====================================================
+   PAYMENT PROVIDERS - SCHEMA BLOCK
+   =====================================================
+   
+   Add this block to your main-product.liquid section's 
+   schema "blocks" array.
+   
+   ===================================================== */
+
+{
+  "type": "payment_providers",
+  "name": "Payment Providers",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top (px)",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom (px)",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Space Between Items (px)",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "logo_border_radius",
+      "label": "Logo Box Border Radius (px)",
+      "min": 0,
+      "max": 16,
+      "step": 2,
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text Size (px)",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#333333"
+    },
+    {
+      "type": "text",
+      "id": "currency_symbol",
+      "label": "Currency Symbol",
+      "default": "£",
+      "info": "e.g., £, $, €"
+    },
+    {
+      "type": "number",
+      "id": "fallback_price",
+      "label": "Fallback Price",
+      "default": 50,
+      "info": "Used if product price is unavailable"
+    },
+    {
+      "type": "header",
+      "content": "Shop Pay"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shoppay",
+      "label": "Show Shop Pay",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shoppay_logo",
+      "label": "Shop Pay Logo URL",
+      "default": "https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/shopify_pay-957a48d1202dc65a7890b292de764ee886f7e64cea486ae82e291e9dc824c914.svg"
+    },
+    {
+      "type": "color",
+      "id": "shoppay_bg",
+      "label": "Shop Pay Background",
+      "default": "#f5f0ff"
+    },
+    {
+      "type": "textarea",
+      "id": "shoppay_text",
+      "label": "Shop Pay Text",
+      "default": "Pay in 4 interest-free installments for orders over $50"
+    },
+    {
+      "type": "number",
+      "id": "shoppay_minimum",
+      "label": "Minimum Order Amount",
+      "default": 50,
+      "info": "Shop Pay installments minimum order value"
+    },
+    {
+      "type": "number",
+      "id": "shoppay_installments",
+      "label": "Number of Installments",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Clearpay / Afterpay"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_clearpay",
+      "label": "Show Clearpay/Afterpay",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "clearpay_name",
+      "label": "Display Name",
+      "default": "Clearpay",
+      "info": "Use 'Clearpay' for UK/EU or 'Afterpay' for US/AU"
+    },
+    {
+      "type": "text",
+      "id": "clearpay_logo",
+      "label": "Logo URL",
+      "default": "https://cdn.shopify.com/s/files/1/0225/4641/5693/files/clearpay.svg?v=1751947060"
+    },
+    {
+      "type": "color",
+      "id": "clearpay_bg",
+      "label": "Background Color",
+      "default": "#b2fce4"
+    },
+    {
+      "type": "checkbox",
+      "id": "clearpay_dynamic_price",
+      "label": "Calculate Price Dynamically",
+      "default": true,
+      "info": "Auto-calculate based on product price"
+    },
+    {
+      "type": "textarea",
+      "id": "clearpay_text",
+      "label": "Custom Text (if dynamic is off)",
+      "default": "4 interest-free payments of £13"
+    },
+    {
+      "type": "number",
+      "id": "clearpay_installments",
+      "label": "Number of Installments",
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "clearpay_learn_more",
+      "label": "Show Learn More Link",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "clearpay_enable_modal",
+      "label": "Enable Modal Popup",
+      "default": true,
+      "info": "Requires Afterpay/Clearpay script to be installed"
+    },
+    {
+      "type": "text",
+      "id": "clearpay_locale",
+      "label": "Locale",
+      "default": "en_GB",
+      "info": "e.g., en_GB, en_US, en_AU"
+    },
+    {
+      "type": "text",
+      "id": "clearpay_currency",
+      "label": "Currency Code",
+      "default": "GBP",
+      "info": "e.g., GBP, USD, AUD"
+    },
+    {
+      "type": "header",
+      "content": "Klarna"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_klarna",
+      "label": "Show Klarna",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "klarna_logo",
+      "label": "Klarna Logo URL",
+      "default": "https://cdn.shopify.com/s/files/1/0073/5186/1332/t/75/assets/logo-klarna.svg?64921"
+    },
+    {
+      "type": "color",
+      "id": "klarna_bg",
+      "label": "Klarna Background",
+      "default": "#ffc0cb"
+    },
+    {
+      "type": "checkbox",
+      "id": "klarna_dynamic_price",
+      "label": "Calculate Price Dynamically",
+      "default": true,
+      "info": "Auto-calculate based on product price"
+    },
+    {
+      "type": "textarea",
+      "id": "klarna_text",
+      "label": "Custom Text (if dynamic is off)",
+      "default": "3 interest-free payments of £17.34"
+    },
+    {
+      "type": "number",
+      "id": "klarna_installments",
+      "label": "Number of Installments",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "klarna_learn_more",
+      "label": "Show Learn More Link",
+      "default": true
+    }
+  ]
 }
   ]
 }

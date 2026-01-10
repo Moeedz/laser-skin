@@ -513,6 +513,9 @@ Supported variables
 
             {%- when 'bundle_contents' -%}
             {% render 'bundle-contents', block: block %}
+
+            {%- when 'payment_providers' -%}
+            {% render 'payment-providers', block: block, product: product %}
             
         {%- endcase -%}
       {%- endcapture -%}

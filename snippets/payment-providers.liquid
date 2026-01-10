@@ -1,0 +1,228 @@
+{% comment %}
+  Payment Providers Snippet
+  =========================
+  Displays payment installment options (Shop Pay, Clearpay/Afterpay, Klarna)
+  
+  Usage: {% render 'payment-providers', block: block, product: product %}
+  
+  Parameters:
+  - block: The block object with settings
+  - product: The product object (for dynamic price calculation)
+{% endcomment %}
+
+{% style %}
+  .payment-providers {
+    margin: {{ block.settings.margin_top | default: 16 }}px 0 {{ block.settings.margin_bottom | default: 16 }}px;
+  }
+
+  .payment-providers__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: {{ block.settings.item_spacing | default: 8 }}px;
+  }
+
+  .payment-providers__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .payment-providers__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 94px;
+    height: 40px;
+    padding: 4px 8px;
+    border-radius: {{ block.settings.logo_border_radius | default: 6 }}px;
+    flex-shrink: 0;
+  }
+
+  .payment-providers__logo img {
+    max-height: 18px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .payment-providers__logo--shoppay {
+    background-color: {{ block.settings.shoppay_bg | default: '#f5f0ff' }};
+  }
+
+  .payment-providers__logo--clearpay {
+    background-color: {{ block.settings.clearpay_bg | default: '#b2fce4' }};
+  }
+
+  .payment-providers__logo--klarna {
+    background-color: {{ block.settings.klarna_bg | default: '#ffc0cb' }};
+  }
+
+  .payment-providers__text {
+    padding-left: 12px;
+    font-size: {{ block.settings.text_size | default: 14 }}px;
+    color: {{ block.settings.text_color | default: '#333333' }};
+    line-height: 1.4;
+  }
+
+  .payment-providers__text span {
+    display: block;
+  }
+
+  .payment-providers__link {
+    font-size: {{ block.settings.text_size | default: 14 }}px;
+    color: {{ block.settings.link_color | default: '#333333' }};
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+  }
+
+  .payment-providers__link:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .payment-providers__logo {
+      min-width: 80px;
+      height: 36px;
+    }
+
+    .payment-providers__logo img {
+      max-height: 16px;
+    }
+
+    .payment-providers__text {
+      font-size: 13px;
+      padding-left: 10px;
+    }
+
+    .payment-providers__link {
+      font-size: 13px;
+    }
+  }
+{% endstyle %}
+
+{% comment %} Calculate installment amounts based on product price {% endcomment %}
+{% if product %}
+  {% assign product_price = product.selected_or_first_available_variant.price | divided_by: 100.0 %}
+{% else %}
+  {% assign product_price = block.settings.fallback_price | default: 50 %}
+{% endif %}
+
+{% assign shoppay_installments = block.settings.shoppay_installments | default: 4 %}
+{% assign clearpay_installments = block.settings.clearpay_installments | default: 4 %}
+{% assign klarna_installments = block.settings.klarna_installments | default: 3 %}
+
+{% assign shoppay_amount = product_price | divided_by: shoppay_installments %}
+{% assign clearpay_amount = product_price | divided_by: clearpay_installments %}
+{% assign klarna_amount = product_price | divided_by: klarna_installments %}
+
+{% assign currency_symbol = block.settings.currency_symbol | default: '£' %}
+
+{% comment %} Check minimum order for Shop Pay {% endcomment %}
+{% assign shoppay_minimum = block.settings.shoppay_minimum | default: 50 %}
+
+<div class="payment-providers" {{ block.shopify_attributes }}>
+  
+  {% comment %} Shop Pay {% endcomment %}
+  {% if block.settings.show_shoppay %}
+    <div class="payment-providers__item">
+      <div class="payment-providers__logo payment-providers__logo--shoppay">
+        <img 
+          src="{{ block.settings.shoppay_logo | default: 'https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/shopify_pay-957a48d1202dc65a7890b292de764ee886f7e64cea486ae82e291e9dc824c914.svg' }}" 
+          alt="Shop Pay" 
+          height="18"
+          loading="lazy"
+        >
+      </div>
+      <div class="payment-providers__text">
+        <span>{{ block.settings.shoppay_text | default: 'Pay in 4 interest-free installments for orders over $50' }}</span>
+      </div>
+    </div>
+  {% endif %}
+
+  {% comment %} Clearpay / Afterpay {% endcomment %}
+  {% if block.settings.show_clearpay %}
+    <div class="payment-providers__item">
+      <div class="payment-providers__logo payment-providers__logo--clearpay">
+        <img 
+          src="{{ block.settings.clearpay_logo | default: 'https://cdn.shopify.com/s/files/1/0225/4641/5693/files/clearpay.svg?v=1751947060' }}" 
+          alt="{{ block.settings.clearpay_name | default: 'Clearpay' }}" 
+          height="18"
+          loading="lazy"
+        >
+      </div>
+      <div class="payment-providers__text">
+        {% if block.settings.clearpay_dynamic_price %}
+          <span>{{ clearpay_installments }} interest-free payments of {{ currency_symbol }}{{ clearpay_amount | round: 2 }}</span>
+        {% else %}
+          <span>{{ block.settings.clearpay_text }}</span>
+        {% endif %}
+        {% if block.settings.clearpay_learn_more %}
+          <a href="#" class="payment-providers__link" data-clearpay-modal>Learn more</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% comment %} Klarna {% endcomment %}
+  {% if block.settings.show_klarna %}
+    <div class="payment-providers__item">
+      <div class="payment-providers__logo payment-providers__logo--klarna">
+        <img 
+          src="{{ block.settings.klarna_logo | default: 'https://cdn.shopify.com/s/files/1/0073/5186/1332/t/75/assets/logo-klarna.svg?64921' }}" 
+          alt="Klarna" 
+          height="18"
+          loading="lazy"
+        >
+      </div>
+      <div class="payment-providers__text">
+        {% if block.settings.klarna_dynamic_price %}
+          <span>{{ klarna_installments }} interest-free payments of {{ currency_symbol }}{{ klarna_amount | round: 2 }}</span>
+        {% else %}
+          <span>{{ block.settings.klarna_text }}</span>
+        {% endif %}
+        {% if block.settings.klarna_learn_more %}
+          <a href="#" class="payment-providers__link" data-klarna-modal>Learn more</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+</div>
+
+{% comment %} Optional: Include Afterpay/Clearpay placement for modal {% endcomment %}
+{% if block.settings.show_clearpay and block.settings.clearpay_enable_modal %}
+  <afterpay-placement 
+    data-locale="{{ block.settings.clearpay_locale | default: 'en_GB' }}" 
+    data-currency="{{ block.settings.clearpay_currency | default: 'GBP' }}" 
+    data-amount="{{ product.selected_or_first_available_variant.price | divided_by: 100 }}"
+    data-intro-text=""
+    data-modal-link-style="learn-more-text"
+    data-show-with="false"
+    data-size="sm"
+    style="display: none;"
+  ></afterpay-placement>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Clearpay/Afterpay modal trigger
+    const clearpayLinks = document.querySelectorAll('[data-clearpay-modal]');
+    clearpayLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const afterpayPlacement = document.querySelector('afterpay-placement');
+        if (afterpayPlacement && typeof afterpayPlacement.openModal === 'function') {
+          afterpayPlacement.openModal();
+        }
+      });
+    });
+
+    // Klarna modal trigger (if Klarna SDK is loaded)
+    const klarnaLinks = document.querySelectorAll('[data-klarna-modal]');
+    klarnaLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (typeof Klarna !== 'undefined' && Klarna.OnsiteMessaging) {
+          Klarna.OnsiteMessaging.openModal();
+        }
+      });
+    });
+  });
+</script>
