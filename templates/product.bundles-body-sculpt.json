@@ -575,6 +575,7 @@
       "blocks": {
         "image_JncTzj": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "subheading": "",
             "title": "",
