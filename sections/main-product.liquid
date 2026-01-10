@@ -1887,34 +1887,35 @@ quick buy information in a template, that will be extracted in JS, which ensures
     },
     {
       "type": "header",
-      "content": "Container Style"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_border",
-      "label": "Show Border",
-      "default": true
+      "content": "Card Style"
     },
     {
       "type": "color",
-      "id": "border_color",
-      "label": "Border Color",
-      "default": "#e8e8e8"
+      "id": "card_background",
+      "label": "Card Background Color",
+      "default": "#f9f5f3",
+      "info": "Background color for each item card"
     },
     {
       "type": "range",
-      "id": "border_radius",
-      "label": "Border Radius (px)",
+      "id": "card_border_radius",
+      "label": "Card Border Radius (px)",
       "min": 0,
-      "max": 24,
+      "max": 30,
       "step": 2,
-      "default": 12
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "show_card_border",
+      "label": "Show Card Border",
+      "default": false
     },
     {
       "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#ffffff"
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e8e8e8"
     },
     {
       "type": "header",
@@ -1941,30 +1942,24 @@ quick buy information in a template, that will be extracted in JS, which ensures
     {
       "type": "range",
       "id": "grid_gap",
-      "label": "Gap Between Items (px)",
-      "min": 8,
-      "max": 32,
-      "step": 4,
-      "default": 16
+      "label": "Gap Between Cards (px)",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "default": 12
     },
     {
       "type": "header",
-      "content": "Item Styling"
-    },
-    {
-      "type": "color",
-      "id": "image_background",
-      "label": "Image Background Color",
-      "default": "#f9f9f9"
+      "content": "Text Styling"
     },
     {
       "type": "range",
       "id": "item_title_size",
       "label": "Item Title Size (px)",
-      "min": 12,
+      "min": 10,
       "max": 18,
       "step": 1,
-      "default": 14
+      "default": 13
     },
     {
       "type": "color",
@@ -1979,7 +1974,7 @@ quick buy information in a template, that will be extracted in JS, which ensures
       "min": 10,
       "max": 16,
       "step": 1,
-      "default": 13
+      "default": 12
     },
     {
       "type": "color",
