@@ -1,0 +1,323 @@
+{% comment %}
+  Bundle Contents Snippet
+  ========================
+  Displays "What's in the bundle?" section on product pages
+  
+  Usage: {% render 'bundle-contents', block: block %}
+  
+  Required block settings:
+  - heading: Section heading text
+  - show_border: Toggle border around section
+  - bundle_item_1_image through bundle_item_6_image: Product images
+  - bundle_item_1_title through bundle_item_6_title: Product names
+  - bundle_item_1_subtitle through bundle_item_6_subtitle: Size/variant info
+{% endcomment %}
+
+{% style %}
+  .bundle-contents {
+    margin: 20px 0;
+    padding: 20px 24px;
+    {% if block.settings.show_border %}
+      border: 1px solid {{ block.settings.border_color | default: '#e8e8e8' }};
+      border-radius: {{ block.settings.border_radius | default: 12 }}px;
+    {% endif %}
+    background: {{ block.settings.background_color | default: '#ffffff' }};
+  }
+
+  .bundle-contents__heading {
+    font-size: {{ block.settings.heading_size | default: 18 }}px;
+    font-weight: {{ block.settings.heading_weight | default: 600 }};
+    color: {{ block.settings.heading_color | default: '#000000' }};
+    margin: 0 0 20px 0;
+    text-align: {{ block.settings.heading_alignment | default: 'left' }};
+  }
+
+  .bundle-contents__grid {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.items_per_row | default: 3 }}, 1fr);
+    gap: {{ block.settings.grid_gap | default: 16 }}px;
+  }
+
+  .bundle-contents__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bundle-contents__image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: {{ block.settings.image_background | default: '#f9f9f9' }};
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .bundle-contents__image {
+    max-width: 85%;
+    max-height: 85%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .bundle-contents__image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+  }
+
+  .bundle-contents__image-placeholder svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bundle-contents__title {
+    font-size: {{ block.settings.item_title_size | default: 14 }}px;
+    font-weight: 500;
+    color: {{ block.settings.item_title_color | default: '#000000' }};
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+  }
+
+  .bundle-contents__subtitle {
+    font-size: {{ block.settings.item_subtitle_size | default: 13 }}px;
+    color: {{ block.settings.item_subtitle_color | default: '#666666' }};
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .bundle-contents__grid {
+      grid-template-columns: repeat({{ block.settings.items_per_row_mobile | default: 3 }}, 1fr);
+      gap: 12px;
+    }
+
+    .bundle-contents__heading {
+      font-size: 16px;
+    }
+
+    .bundle-contents__title {
+      font-size: 12px;
+    }
+
+    .bundle-contents__subtitle {
+      font-size: 11px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .bundle-contents {
+      padding: 16px;
+    }
+
+    .bundle-contents__grid {
+      grid-template-columns: repeat({{ block.settings.items_per_row_mobile | default: 3 }}, 1fr);
+      gap: 10px;
+    }
+  }
+{% endstyle %}
+
+{% comment %} Check if any bundle items exist {% endcomment %}
+{% assign has_bundle_items = false %}
+{% if block.settings.bundle_item_1_image != blank or block.settings.bundle_item_1_title != blank %}
+  {% assign has_bundle_items = true %}
+{% endif %}
+
+{% if has_bundle_items %}
+  <div class="bundle-contents" {{ block.shopify_attributes }}>
+    {% if block.settings.heading != blank %}
+      <h3 class="bundle-contents__heading">{{ block.settings.heading }}</h3>
+    {% endif %}
+
+    <div class="bundle-contents__grid">
+      {% comment %} Bundle Item 1 {% endcomment %}
+      {% if block.settings.bundle_item_1_image != blank or block.settings.bundle_item_1_title != blank %}
+        <div class="bundle-contents__item">
+          <div class="bundle-contents__image-wrapper">
+            {% if block.settings.bundle_item_1_image != blank %}
+              <img 
+                src="{{ block.settings.bundle_item_1_image | image_url: width: 300 }}" 
+                alt="{{ block.settings.bundle_item_1_title | escape }}"
+                class="bundle-contents__image"
+                loading="lazy"
+                width="150"
+                height="150"
+              >
+            {% else %}
+              <div class="bundle-contents__image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.bundle_item_1_title != blank %}
+            <p class="bundle-contents__title">{{ block.settings.bundle_item_1_title }}</p>
+          {% endif %}
+          {% if block.settings.bundle_item_1_subtitle != blank %}
+            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_1_subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Bundle Item 2 {% endcomment %}
+      {% if block.settings.bundle_item_2_image != blank or block.settings.bundle_item_2_title != blank %}
+        <div class="bundle-contents__item">
+          <div class="bundle-contents__image-wrapper">
+            {% if block.settings.bundle_item_2_image != blank %}
+              <img 
+                src="{{ block.settings.bundle_item_2_image | image_url: width: 300 }}" 
+                alt="{{ block.settings.bundle_item_2_title | escape }}"
+                class="bundle-contents__image"
+                loading="lazy"
+                width="150"
+                height="150"
+              >
+            {% else %}
+              <div class="bundle-contents__image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.bundle_item_2_title != blank %}
+            <p class="bundle-contents__title">{{ block.settings.bundle_item_2_title }}</p>
+          {% endif %}
+          {% if block.settings.bundle_item_2_subtitle != blank %}
+            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_2_subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Bundle Item 3 {% endcomment %}
+      {% if block.settings.bundle_item_3_image != blank or block.settings.bundle_item_3_title != blank %}
+        <div class="bundle-contents__item">
+          <div class="bundle-contents__image-wrapper">
+            {% if block.settings.bundle_item_3_image != blank %}
+              <img 
+                src="{{ block.settings.bundle_item_3_image | image_url: width: 300 }}" 
+                alt="{{ block.settings.bundle_item_3_title | escape }}"
+                class="bundle-contents__image"
+                loading="lazy"
+                width="150"
+                height="150"
+              >
+            {% else %}
+              <div class="bundle-contents__image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.bundle_item_3_title != blank %}
+            <p class="bundle-contents__title">{{ block.settings.bundle_item_3_title }}</p>
+          {% endif %}
+          {% if block.settings.bundle_item_3_subtitle != blank %}
+            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_3_subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Bundle Item 4 {% endcomment %}
+      {% if block.settings.bundle_item_4_image != blank or block.settings.bundle_item_4_title != blank %}
+        <div class="bundle-contents__item">
+          <div class="bundle-contents__image-wrapper">
+            {% if block.settings.bundle_item_4_image != blank %}
+              <img 
+                src="{{ block.settings.bundle_item_4_image | image_url: width: 300 }}" 
+                alt="{{ block.settings.bundle_item_4_title | escape }}"
+                class="bundle-contents__image"
+                loading="lazy"
+                width="150"
+                height="150"
+              >
+            {% else %}
+              <div class="bundle-contents__image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.bundle_item_4_title != blank %}
+            <p class="bundle-contents__title">{{ block.settings.bundle_item_4_title }}</p>
+          {% endif %}
+          {% if block.settings.bundle_item_4_subtitle != blank %}
+            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_4_subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Bundle Item 5 {% endcomment %}
+      {% if block.settings.bundle_item_5_image != blank or block.settings.bundle_item_5_title != blank %}
+        <div class="bundle-contents__item">
+          <div class="bundle-contents__image-wrapper">
+            {% if block.settings.bundle_item_5_image != blank %}
+              <img 
+                src="{{ block.settings.bundle_item_5_image | image_url: width: 300 }}" 
+                alt="{{ block.settings.bundle_item_5_title | escape }}"
+                class="bundle-contents__image"
+                loading="lazy"
+                width="150"
+                height="150"
+              >
+            {% else %}
+              <div class="bundle-contents__image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.bundle_item_5_title != blank %}
+            <p class="bundle-contents__title">{{ block.settings.bundle_item_5_title }}</p>
+          {% endif %}
+          {% if block.settings.bundle_item_5_subtitle != blank %}
+            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_5_subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% comment %} Bundle Item 6 {% endcomment %}
+      {% if block.settings.bundle_item_6_image != blank or block.settings.bundle_item_6_title != blank %}
+        <div class="bundle-contents__item">
+          <div class="bundle-contents__image-wrapper">
+            {% if block.settings.bundle_item_6_image != blank %}
+              <img 
+                src="{{ block.settings.bundle_item_6_image | image_url: width: 300 }}" 
+                alt="{{ block.settings.bundle_item_6_title | escape }}"
+                class="bundle-contents__image"
+                loading="lazy"
+                width="150"
+                height="150"
+              >
+            {% else %}
+              <div class="bundle-contents__image-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.bundle_item_6_title != blank %}
+            <p class="bundle-contents__title">{{ block.settings.bundle_item_6_title }}</p>
+          {% endif %}
+          {% if block.settings.bundle_item_6_subtitle != blank %}
+            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_6_subtitle }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

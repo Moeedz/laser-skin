@@ -510,6 +510,9 @@ Supported variables
 
             {%- when 'appointment_picker' -%}
             {% render 'appointment-picker-block', block: block %}
+
+            {%- when 'bundle_contents' -%}
+            {% render 'bundle-contents', block: block %}
             
         {%- endcase -%}
       {%- endcapture -%}
