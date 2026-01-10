@@ -243,13 +243,13 @@
         "text_PCDGae": {
           "type": "text",
           "settings": {
-            "text": "<p>Enter your text here</p>"
+            "text": "<p><strong>The Holy Trinity of Transformation.</strong><br/>Sculpt the body. Resurface the skin. Recharge the cells. Three clinical technologies, one radical result.</p>"
           }
         },
         "bundle_contents_FmifNi": {
           "type": "bundle_contents",
           "settings": {
-            "heading": "What's in the bundle?",
+            "heading": "What's in your bundle?",
             "heading_alignment": "left",
             "heading_size": 18,
             "heading_weight": "600",
@@ -265,10 +265,13 @@
             "item_title_color": "#000000",
             "item_subtitle_size": 13,
             "item_subtitle_color": "#666666",
+            "bundle_item_1_image": "shopify://shop_images/unnamed_73.jpg",
             "bundle_item_1_title": "Power Sculpt",
             "bundle_item_1_subtitle": "",
+            "bundle_item_2_image": "shopify://shop_images/unnamed_72.jpg",
             "bundle_item_2_title": "Carbon Facial",
             "bundle_item_2_subtitle": "",
+            "bundle_item_3_image": "shopify://shop_images/unnamed_74.jpg",
             "bundle_item_3_title": "Celluma Red Light Therapy",
             "bundle_item_3_subtitle": "",
             "bundle_item_4_title": "",
