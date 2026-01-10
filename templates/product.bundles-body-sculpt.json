@@ -238,6 +238,40 @@
             "payment_button_text_color": ""
           }
         },
+        "bundle_contents_FmifNi": {
+          "type": "bundle_contents",
+          "settings": {
+            "heading": "What's in the bundle?",
+            "heading_alignment": "left",
+            "heading_size": 18,
+            "heading_weight": "600",
+            "heading_color": "#000000",
+            "show_border": true,
+            "border_color": "#e8e8e8",
+            "border_radius": 12,
+            "background_color": "#ffffff",
+            "items_per_row": 3,
+            "items_per_row_mobile": 3,
+            "grid_gap": 16,
+            "image_background": "#f9f9f9",
+            "item_title_size": 14,
+            "item_title_color": "#000000",
+            "item_subtitle_size": 13,
+            "item_subtitle_color": "#666666",
+            "bundle_item_1_title": "Power Sculpt",
+            "bundle_item_1_subtitle": "",
+            "bundle_item_2_title": "Carbon Facial",
+            "bundle_item_2_subtitle": "",
+            "bundle_item_3_title": "Celluma Red Light Therapy",
+            "bundle_item_3_subtitle": "",
+            "bundle_item_4_title": "",
+            "bundle_item_4_subtitle": "",
+            "bundle_item_5_title": "",
+            "bundle_item_5_subtitle": "",
+            "bundle_item_6_title": "",
+            "bundle_item_6_subtitle": ""
+          }
+        },
         "liquid_Eg4Pre": {
           "type": "liquid",
           "settings": {
@@ -315,6 +349,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "bundle_contents_FmifNi",
         "liquid_Eg4Pre",
         "accordion_YdJrFX",
         "accordion_GdNBTM",
@@ -765,8 +800,10 @@
       "type": "sticky-button",
       "name": "Sticky Bottom Button",
       "settings": {
+        "button_action": "scroll_to",
         "button_text": "Book your appointment for facial",
         "button_link": "",
+        "scroll_target": ".skin-type-selector",
         "open_in_new_tab": false,
         "bar_text": "",
         "button_icon": "cart",
@@ -777,6 +814,7 @@
         "button_text_color": "#ffffff",
         "button_hover_bg_color": "#333333",
         "button_hover_text_color": "#ffffff",
+        "trigger_element": ".shopify-section--main-product .section-spacing",
         "show_on_mobile": true,
         "show_on_desktop": true,
         "show_after_scroll": true,
