@@ -329,7 +329,7 @@
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
-            "title": "Your Booking",
+            "title": "Address",
             "content": "<p>All packages are paid for securely through our online booking system. After confirming your booking, our team will reach out via phone, WhatsApp or email to schedule your appointment.</p><p>You’ll always be offered an appointment <strong>within 7 days of booking</strong>.</p>",
             "liquid": "",
             "page": ""
@@ -340,14 +340,15 @@
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
-            "title": "Treatment Time And Process",
-            "content": "<p>Your Sculpt, Cleanse & Glow Signature Package is structured to maximise results, with all three treatments completed in a smooth sequence during a 2-hour appointment.</p><p>First, you’ll begin with Power Sculpt to lift, tighten a chosen targeted area on your body such as arms, buttocks, stomach or others.</p><p>Next, you’ll receive a Carbon Facial to deeply cleanse, refine pores and brighten the skin.</p><p>Finally, your treatment finishes with calming Red Light Therapy to boost collagen and enhance overall rejuvenation.</p>",
+            "title": "FAQs",
+            "content": "<p><strong>What is the cancellation policy?</strong></p><p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled. Any cancellations on the day can be rescheduled but will not be refunded. If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p><p><strong>Are there any reasons I might not be suitable?</strong></p><p>You may not be suitable if you are pregnant, breastfeeding, have certain medical conditions, metal implants/pacemakers, or active skin infections.</p><p><strong>Do any of the treatments hurt, and is there any downtime?</strong></p><p>Power Sculpt creates strong muscle contractions, which can feel unusual but not painful. The Carbon Facial may feel warm but is generally very comfortable. Red Light Therapy is completely relaxing. There is <strong>no downtime </strong>from any of the treatments - you can return to your normal activities straight away.</p><p><strong>What areas can be treated with Power Sculpt in this package?</strong></p><p>Common areas include the stomach, glutes, thighs or arms. Your practitioner will help you choose the most effective area based on your goals.<br/><br/><strong>How soon will I see results?</strong></p><p>Many clients notice an immediate glow and smoother skin. Tightening and contouring continue to improve over the following weeks, especially when supported with a healthy lifestyle.</p>",
             "liquid": "",
             "page": ""
           }
         },
         "accordion_D8Xijx": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
@@ -359,6 +360,7 @@
         },
         "accordion_6NpUwT": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "show_below_gallery": false,
             "icon": "picto-star",
