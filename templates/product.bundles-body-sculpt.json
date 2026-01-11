@@ -899,7 +899,7 @@
         "button_action": "appointment_picker",
         "button_text": "Book your appointment for facial",
         "button_link": "",
-        "scroll_target": "",
+        "scroll_target": "product-form",
         "open_in_new_tab": false,
         "bar_text": "",
         "button_icon": "cart",
