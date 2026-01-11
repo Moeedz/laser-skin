@@ -243,7 +243,7 @@
         "text_DAmaaK": {
           "type": "text",
           "settings": {
-            "text": "<p>Enter your text here</p>"
+            "text": "<p><strong>The Luminosity Reset.</strong><br/>Tighten the contours. Resurface the texture. Ignite the glow. A clinical fusion of thermal energy, advanced hydration, and light therapy for a filtered finish.</p>"
           }
         },
         "bundle_contents_Mb4xWn": {
@@ -265,10 +265,13 @@
             "item_title_color": "#000000",
             "item_subtitle_size": 12,
             "item_subtitle_color": "#666666",
+            "bundle_item_1_image": "shopify://shop_images/unnamed_92.jpg",
             "bundle_item_1_title": "Radio Frequency Skin Tightening",
             "bundle_item_1_subtitle": "",
+            "bundle_item_2_image": "shopify://shop_images/unnamed_95.jpg",
             "bundle_item_2_title": "Hydrofacial",
             "bundle_item_2_subtitle": "",
+            "bundle_item_3_image": "shopify://shop_images/unnamed_93.jpg",
             "bundle_item_3_title": "Celluma Red Light Therapy",
             "bundle_item_3_subtitle": "",
             "bundle_item_4_title": "",
@@ -294,7 +297,7 @@
             "show_shoppay": true,
             "shoppay_logo": "https://supernovabrands.github.io/cocoandeve-styleguides/images/logo-shoppay.svg",
             "shoppay_bg": "#f5f0ff",
-            "shoppay_text": "Pay in 4 interest-free installments for orders over $50",
+            "shoppay_text": "Pay in 4 interest-free installments using Shop Pay",
             "shoppay_minimum": 50,
             "shoppay_installments": 4,
             "show_clearpay": false,
