@@ -913,7 +913,7 @@
         "trigger_element": ".shopify-section--main-product .section-spacing",
         "show_on_mobile": true,
         "show_on_desktop": true,
-        "show_after_scroll": false,
+        "show_after_scroll": true,
         "scroll_distance": 100,
         "hide_near_footer": false,
         "is_dismissible": false
