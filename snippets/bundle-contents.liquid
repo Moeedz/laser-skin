@@ -16,6 +16,7 @@
 {% style %}
   .bundle-contents {
     margin: 20px 0;
+    width: 100%;
   }
 
   .bundle-contents__heading {
@@ -30,6 +31,7 @@
     display: grid;
     grid-template-columns: repeat({{ block.settings.items_per_row | default: 3 }}, 1fr);
     gap: {{ block.settings.grid_gap | default: 12 }}px;
+    width: 100%;
   }
 
   .bundle-contents__item {
@@ -39,7 +41,8 @@
     text-align: center;
     background: {{ block.settings.card_background | default: '#f9f5f3' }};
     border-radius: {{ block.settings.card_border_radius | default: 16 }}px;
-    padding: 16px 12px 20px;
+    padding: 0 0 16px 0;
+    overflow: hidden;
     {% if block.settings.show_card_border %}
       border: 1px solid {{ block.settings.card_border_color | default: '#e8e8e8' }};
     {% endif %}
@@ -48,19 +51,19 @@
   .bundle-contents__image-wrapper {
     width: 100%;
     aspect-ratio: 1 / 1;
-    margin-bottom: 12px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
   }
 
   .bundle-contents__image {
-    max-width: 90%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    object-position: bottom center;
   }
 
   .bundle-contents__image-placeholder {
@@ -75,6 +78,10 @@
   .bundle-contents__image-placeholder svg {
     width: 40px;
     height: 40px;
+  }
+
+  .bundle-contents__text-wrapper {
+    padding: 12px 10px 0 10px;
   }
 
   .bundle-contents__title {
@@ -104,8 +111,16 @@
     }
 
     .bundle-contents__item {
-      padding: 12px 8px 16px;
+      padding: 0 0 12px 0;
       border-radius: 12px;
+    }
+
+    .bundle-contents__image-wrapper {
+      padding: 8px 8px 0 8px;
+    }
+
+    .bundle-contents__text-wrapper {
+      padding: 10px 8px 0 8px;
     }
 
     .bundle-contents__title {
@@ -124,8 +139,16 @@
     }
 
     .bundle-contents__item {
-      padding: 10px 6px 14px;
+      padding: 0 0 10px 0;
       border-radius: 10px;
+    }
+
+    .bundle-contents__image-wrapper {
+      padding: 6px 6px 0 6px;
+    }
+
+    .bundle-contents__text-wrapper {
+      padding: 8px 6px 0 6px;
     }
   }
 {% endstyle %}
@@ -164,12 +187,14 @@
               </div>
             {% endif %}
           </div>
-          {% if block.settings.bundle_item_1_title != blank %}
-            <p class="bundle-contents__title">{{ block.settings.bundle_item_1_title }}</p>
-          {% endif %}
-          {% if block.settings.bundle_item_1_subtitle != blank %}
-            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_1_subtitle }}</p>
-          {% endif %}
+          <div class="bundle-contents__text-wrapper">
+            {% if block.settings.bundle_item_1_title != blank %}
+              <p class="bundle-contents__title">{{ block.settings.bundle_item_1_title }}</p>
+            {% endif %}
+            {% if block.settings.bundle_item_1_subtitle != blank %}
+              <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_1_subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
 
@@ -194,12 +219,14 @@
               </div>
             {% endif %}
           </div>
-          {% if block.settings.bundle_item_2_title != blank %}
-            <p class="bundle-contents__title">{{ block.settings.bundle_item_2_title }}</p>
-          {% endif %}
-          {% if block.settings.bundle_item_2_subtitle != blank %}
-            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_2_subtitle }}</p>
-          {% endif %}
+          <div class="bundle-contents__text-wrapper">
+            {% if block.settings.bundle_item_2_title != blank %}
+              <p class="bundle-contents__title">{{ block.settings.bundle_item_2_title }}</p>
+            {% endif %}
+            {% if block.settings.bundle_item_2_subtitle != blank %}
+              <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_2_subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
 
@@ -224,12 +251,14 @@
               </div>
             {% endif %}
           </div>
-          {% if block.settings.bundle_item_3_title != blank %}
-            <p class="bundle-contents__title">{{ block.settings.bundle_item_3_title }}</p>
-          {% endif %}
-          {% if block.settings.bundle_item_3_subtitle != blank %}
-            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_3_subtitle }}</p>
-          {% endif %}
+          <div class="bundle-contents__text-wrapper">
+            {% if block.settings.bundle_item_3_title != blank %}
+              <p class="bundle-contents__title">{{ block.settings.bundle_item_3_title }}</p>
+            {% endif %}
+            {% if block.settings.bundle_item_3_subtitle != blank %}
+              <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_3_subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
 
@@ -254,12 +283,14 @@
               </div>
             {% endif %}
           </div>
-          {% if block.settings.bundle_item_4_title != blank %}
-            <p class="bundle-contents__title">{{ block.settings.bundle_item_4_title }}</p>
-          {% endif %}
-          {% if block.settings.bundle_item_4_subtitle != blank %}
-            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_4_subtitle }}</p>
-          {% endif %}
+          <div class="bundle-contents__text-wrapper">
+            {% if block.settings.bundle_item_4_title != blank %}
+              <p class="bundle-contents__title">{{ block.settings.bundle_item_4_title }}</p>
+            {% endif %}
+            {% if block.settings.bundle_item_4_subtitle != blank %}
+              <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_4_subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
 
@@ -284,12 +315,14 @@
               </div>
             {% endif %}
           </div>
-          {% if block.settings.bundle_item_5_title != blank %}
-            <p class="bundle-contents__title">{{ block.settings.bundle_item_5_title }}</p>
-          {% endif %}
-          {% if block.settings.bundle_item_5_subtitle != blank %}
-            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_5_subtitle }}</p>
-          {% endif %}
+          <div class="bundle-contents__text-wrapper">
+            {% if block.settings.bundle_item_5_title != blank %}
+              <p class="bundle-contents__title">{{ block.settings.bundle_item_5_title }}</p>
+            {% endif %}
+            {% if block.settings.bundle_item_5_subtitle != blank %}
+              <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_5_subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
 
@@ -314,12 +347,14 @@
               </div>
             {% endif %}
           </div>
-          {% if block.settings.bundle_item_6_title != blank %}
-            <p class="bundle-contents__title">{{ block.settings.bundle_item_6_title }}</p>
-          {% endif %}
-          {% if block.settings.bundle_item_6_subtitle != blank %}
-            <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_6_subtitle }}</p>
-          {% endif %}
+          <div class="bundle-contents__text-wrapper">
+            {% if block.settings.bundle_item_6_title != blank %}
+              <p class="bundle-contents__title">{{ block.settings.bundle_item_6_title }}</p>
+            {% endif %}
+            {% if block.settings.bundle_item_6_subtitle != blank %}
+              <p class="bundle-contents__subtitle">{{ block.settings.bundle_item_6_subtitle }}</p>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
     </div>
