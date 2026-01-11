@@ -896,7 +896,7 @@
       "type": "sticky-button",
       "name": "Sticky Bottom Button",
       "settings": {
-        "button_action": "scroll_to",
+        "button_action": "appointment_picker",
         "button_text": "Book your appointment for facial",
         "button_link": "",
         "scroll_target": ".skin-type-selector",
