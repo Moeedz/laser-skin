@@ -899,7 +899,7 @@
         "button_action": "appointment_picker",
         "button_text": "Book your appointment for facial",
         "button_link": "",
-        "scroll_target": "h1.product-title.h3",
+        "scroll_target": "",
         "open_in_new_tab": false,
         "bar_text": "",
         "button_icon": "cart",
@@ -913,9 +913,9 @@
         "trigger_element": ".shopify-section--main-product .section-spacing",
         "show_on_mobile": true,
         "show_on_desktop": true,
-        "show_after_scroll": true,
-        "scroll_distance": 300,
-        "hide_near_footer": true,
+        "show_after_scroll": false,
+        "scroll_distance": 100,
+        "hide_near_footer": false,
         "is_dismissible": false
       }
     }
