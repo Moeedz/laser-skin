@@ -897,7 +897,7 @@
       "name": "Sticky Bottom Button",
       "settings": {
         "button_action": "appointment_picker",
-        "button_text": "Book your appointment for facial",
+        "button_text": "Choose appointment date and time",
         "button_link": "",
         "scroll_target": "",
         "open_in_new_tab": false,
