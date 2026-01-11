@@ -807,6 +807,7 @@
         "text_F8VzVF",
         "text_WDUHyt"
       ],
+      "disabled": true,
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
@@ -824,9 +825,9 @@
       "name": "Sticky Bottom Button",
       "settings": {
         "button_action": "appointment_picker",
-        "button_text": "Book your appointment for facial",
+        "button_text": "Choose appointment date and time",
         "button_link": "",
-        "scroll_target": ".skin-type-selector",
+        "scroll_target": "",
         "open_in_new_tab": false,
         "bar_text": "",
         "button_icon": "cart",
@@ -837,12 +838,12 @@
         "button_text_color": "#ffffff",
         "button_hover_bg_color": "#333333",
         "button_hover_text_color": "#ffffff",
-        "trigger_element": ".shopify-section--main-product .section-spacing",
+        "trigger_element": "product-form",
         "show_on_mobile": true,
         "show_on_desktop": true,
-        "show_after_scroll": false,
-        "scroll_distance": 300,
-        "hide_near_footer": true,
+        "show_after_scroll": true,
+        "scroll_distance": 100,
+        "hide_near_footer": false,
         "is_dismissible": false
       }
     }
