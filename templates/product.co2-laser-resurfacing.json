@@ -1961,8 +1961,8 @@
         "image_wiH6Rk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_3_bfb4ba29-1aef-450b-8f02-3545d9e47e33.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_2_417c7404-3d00-4a50-87c0-84ba038eec0b.jpg",
+            "image": "shopify://shop_images/unnamed_4_62867ee2-89d4-4b63-957e-6fe931d62102.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_5_0ce7d425-0e1b-4fd9-8c24-4bcc505c5f00.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -2129,13 +2129,13 @@
       ],
       "name": "FAQ Accordion",
       "settings": {
-        "section_bg_color": "#f5f5f0",
+        "section_bg_color": "#1a1a1a",
         "max_width": 1200,
         "padding_top": 60,
         "padding_bottom": 60,
         "side_padding": 30,
-        "heading": "Frequently Asked Questions",
-        "heading_color": "#333333",
+        "heading": "Your Questions Answered",
+        "heading_color": "#ffffff",
         "heading_font_size": 36,
         "heading_font_weight": "600",
         "heading_alignment": "center",
