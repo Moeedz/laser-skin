@@ -3,172 +3,785 @@
 DEVELOPER NOTE: the slideshow is one of Prestige most complex sections due to the large number of settings it offers. We
 highly recommend you to not edit the code unless you have fully reviewed and understood all the code. A simple change
 may have important consequence on the section itself.
+
+MODIFICATION: Added consultation form overlay option for desktop display
 ------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
 {%- if section.blocks.size > 0 -%}
   {%- assign carousel_id = 'carousel-' | append: section.id -%}
 
-  <slideshow-carousel id="{{ carousel_id }}" class="slideshow" allow-swipe {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} cell-selector=".slideshow__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %} {% if section.settings.autoplay_pause_on_video %}autoplay-pause-on-video{% endif %} role="region" style="{% render 'surface', background: section.settings.background %}">
-    {%- for block in section.blocks -%}
-      {%- capture slide -%}
-        <div class="content-over-media content-over-media--{{ section.settings.media_size }}" style="--content-over-media-content-max-width: {{ block.settings.content_max_width }}px; --content-over-media-gradient-overlay: {{ block.settings.gradient_overlay }}">
-          {%- comment -%}---------------- MEDIA ----------------{%- endcomment -%}
-          {%- if block.type == 'image' -%}
-            {%- if block.settings.image != blank -%}
+  {%- comment -%} Consultation Form Overlay Styles {%- endcomment -%}
+  {%- if section.settings.show_consultation_form -%}
+    <style>
+      .slideshow-with-form {
+        position: relative;
+      }
+
+      .slideshow-consultation-overlay {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: {{ section.settings.form_right_position }}px;
+        transform: translateY(-50%);
+        z-index: 100;
+        max-width: {{ section.settings.form_max_width }}px;
+        width: 100%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .slideshow-consultation-overlay {
+          display: block;
+        }
+      }
+
+      .slideshow-form-container {
+        background: {{ section.settings.form_background }};
+        border-radius: {{ section.settings.form_border_radius }}px;
+        padding: {{ section.settings.form_padding }}px;
+        box-shadow: {{ section.settings.form_shadow }};
+      }
+
+      /* Priority Banner */
+      .slideshow-form .priority-banner {
+        background: {{ section.settings.banner_background }};
+        border: 1px solid {{ section.settings.banner_border_color }};
+        border-radius: {{ section.settings.banner_border_radius }}px;
+        padding: 10px 16px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .slideshow-form .priority-banner svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        color: {{ section.settings.banner_icon_color }};
+      }
+
+      .slideshow-form .priority-banner-text {
+        font-size: {{ section.settings.banner_font_size }}px;
+        color: {{ section.settings.banner_text_color }};
+        line-height: 1.4;
+      }
+
+      .slideshow-form .priority-banner-text strong {
+        color: {{ section.settings.banner_highlight_color }};
+        font-weight: 600;
+      }
+
+      /* Form Heading */
+      .slideshow-form .form-heading {
+        font-size: {{ section.settings.form_heading_font_size }}px;
+        font-weight: {{ section.settings.form_heading_font_weight }};
+        color: {{ section.settings.form_heading_color }};
+        margin: 0 0 16px 0;
+        line-height: 1.3;
+      }
+
+      /* Form Groups */
+      .slideshow-form .form-group {
+        margin-bottom: 14px;
+      }
+
+      .slideshow-form .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .slideshow-form .form-label {
+        display: block;
+        font-size: {{ section.settings.label_font_size }}px;
+        font-weight: {{ section.settings.label_font_weight }};
+        color: {{ section.settings.label_color }};
+        margin-bottom: 6px;
+      }
+
+      .slideshow-form .form-label .required {
+        color: {{ section.settings.required_color }};
+      }
+
+      /* Input Styles */
+      .slideshow-form .form-input,
+      .slideshow-form .form-select,
+      .slideshow-form .form-textarea {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: {{ section.settings.input_font_size }}px;
+        color: {{ section.settings.input_text_color }};
+        background: {{ section.settings.input_background }};
+        border: {{ section.settings.input_border_width }}px solid {{ section.settings.input_border_color }};
+        border-radius: {{ section.settings.input_border_radius }}px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        font-family: inherit;
+        box-sizing: border-box;
+      }
+
+      .slideshow-form .form-input:focus,
+      .slideshow-form .form-select:focus,
+      .slideshow-form .form-textarea:focus {
+        outline: none;
+        border-color: {{ section.settings.input_focus_border_color }};
+        box-shadow: 0 0 0 3px {{ section.settings.input_focus_shadow_color }};
+      }
+
+      .slideshow-form .form-input::placeholder,
+      .slideshow-form .form-textarea::placeholder {
+        color: {{ section.settings.input_placeholder_color }};
+      }
+
+      .slideshow-form .form-select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 18px;
+        padding-right: 40px;
+        cursor: pointer;
+      }
+
+      .slideshow-form .form-select.pre-selected {
+        background-color: {{ section.settings.preselected_background }};
+        color: {{ section.settings.preselected_text_color }};
+      }
+
+      .slideshow-form .form-textarea {
+        min-height: 80px;
+        resize: vertical;
+        line-height: 1.5;
+      }
+
+      /* Pill Button Groups */
+      .slideshow-form .pill-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      .slideshow-form .pill-button {
+        padding: 8px 16px;
+        font-size: {{ section.settings.pill_font_size }}px;
+        font-weight: 500;
+        color: {{ section.settings.pill_text_color }};
+        background: {{ section.settings.pill_background }};
+        border: {{ section.settings.pill_border_width }}px solid {{ section.settings.pill_border_color }};
+        border-radius: {{ section.settings.pill_border_radius }}px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-family: inherit;
+        white-space: nowrap;
+      }
+
+      .slideshow-form .pill-button:hover {
+        background: {{ section.settings.pill_hover_background }};
+        border-color: {{ section.settings.pill_hover_border_color }};
+      }
+
+      .slideshow-form .pill-button.selected {
+        background: {{ section.settings.pill_selected_background }};
+        color: {{ section.settings.pill_selected_text_color }};
+        border-color: {{ section.settings.pill_selected_border_color }};
+      }
+
+      /* Hidden inputs */
+      .slideshow-form .hidden-input {
+        display: none;
+      }
+
+      /* Submit Button */
+      .slideshow-form .submit-button {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: {{ section.settings.button_font_size }}px;
+        font-weight: {{ section.settings.button_font_weight }};
+        color: {{ section.settings.button_text_color }};
+        background: {{ section.settings.button_background }};
+        border: none;
+        border-radius: {{ section.settings.button_border_radius }}px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 16px;
+        font-family: inherit;
+      }
+
+      .slideshow-form .submit-button:hover {
+        background: {{ section.settings.button_hover_background }};
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px {{ section.settings.button_shadow_color }};
+      }
+
+      /* Google Rating */
+      .slideshow-form .google-rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid {{ section.settings.rating_border_color }};
+      }
+
+      .slideshow-form .google-logo {
+        height: 24px;
+        width: auto;
+      }
+
+      .slideshow-form .rating-text {
+        font-size: {{ section.settings.rating_font_size }}px;
+        color: {{ section.settings.rating_text_color }};
+        font-weight: 500;
+      }
+
+      .slideshow-form .rating-score {
+        font-size: {{ section.settings.rating_score_font_size }}px;
+        font-weight: 700;
+        color: {{ section.settings.rating_score_color }};
+      }
+
+      .slideshow-form .rating-stars {
+        display: flex;
+        gap: 2px;
+      }
+
+      .slideshow-form .rating-stars svg {
+        width: 16px;
+        height: 16px;
+        fill: {{ section.settings.rating_star_color }};
+      }
+
+      .slideshow-form .rating-reviews {
+        font-size: 11px;
+        color: {{ section.settings.rating_reviews_color }};
+      }
+
+      /* Success/Error Messages */
+      .slideshow-form .form-message {
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 13px;
+      }
+
+      .slideshow-form .form-message.success {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .slideshow-form .form-message.error {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      /* Responsive adjustments for large screens */
+      @media screen and (min-width: 1024px) and (max-width: 1279px) {
+        .slideshow-consultation-overlay {
+          max-width: 360px;
+          right: 30px;
+        }
+
+        .slideshow-form-container {
+          padding: 24px;
+        }
+
+        .slideshow-form .form-heading {
+          font-size: 18px;
+        }
+
+        .slideshow-form .pill-button {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+
+      @media screen and (min-width: 1280px) and (max-width: 1439px) {
+        .slideshow-consultation-overlay {
+          max-width: 400px;
+          right: 50px;
+        }
+      }
+    </style>
+  {%- endif -%}
+
+  <div class="slideshow-with-form">
+    <slideshow-carousel id="{{ carousel_id }}" class="slideshow" allow-swipe {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} cell-selector=".slideshow__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %} {% if section.settings.autoplay_pause_on_video %}autoplay-pause-on-video{% endif %} role="region" style="{% render 'surface', background: section.settings.background %}">
+      {%- for block in section.blocks -%}
+        {%- capture slide -%}
+          <div class="content-over-media content-over-media--{{ section.settings.media_size }}" style="--content-over-media-content-max-width: {{ block.settings.content_max_width }}px; --content-over-media-gradient-overlay: {{ block.settings.gradient_overlay }}">
+            {%- comment -%}---------------- MEDIA ----------------{%- endcomment -%}
+            {%- if block.type == 'image' -%}
+              {%- if block.settings.image != blank -%}
+                {%- liquid
+                  if forloop.first
+                    assign loading_strategy = nil
+                    assign fetch_priority = 'high'
+                  else
+                    assign loading_strategy = 'lazy'
+                    assign fetch_priority = 'low'
+                  endif
+                -%}
+
+                <picture>
+                  {%- if block.settings.mobile_image != blank -%}
+                    <source
+                        media="(max-width: 699px)"
+                        srcset="{{ block.settings.mobile_image | image_url: width: '400x' }} 400w, {{ block.settings.mobile_image | image_url: width: '600x' }} 600w, {{ block.settings.mobile_image | image_url: width: '800x' }} 800w, {{ block.settings.mobile_image | image_url: width: '1000x' }} 1000w"
+                        width="{{ block.settings.mobile_image.width }}"
+                        height="{{ block.settings.mobile_image.height }}"
+                    >
+                  {%- endif -%}
+
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: '100vw', widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
+                </picture>
+              {%- else -%}
+                {%- capture placeholder_image -%}{% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
+                {{- placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
+              {%- endif -%}
+            {%- else -%}
               {%- liquid
-                if forloop.first
-                  assign loading_strategy = nil
-                  assign fetch_priority = 'high'
+                if block.settings.video != blank
+                  if block.settings.mobile_video == blank
+                    render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, preload: forloop.first
+                  else
+                    render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, preload: forloop.first, class: 'hidden sm:block'
+                    render 'media', media: block.settings.mobile_video, autoplay: true, loop: true, controls: false, preload: forloop.first, class: 'sm:hidden'
+                  endif
                 else
-                  assign loading_strategy = 'lazy'
-                  assign fetch_priority = 'low'
+                  capture placeholder_image
+                    cycle 'placeholder': 'lifestyle-1', 'lifestyle-2'
+                  endcapture
+
+                  echo placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"'
                 endif
               -%}
-
-              <picture>
-                {%- if block.settings.mobile_image != blank -%}
-                  <source
-                      media="(max-width: 699px)"
-                      srcset="{{ block.settings.mobile_image | image_url: width: '400x' }} 400w, {{ block.settings.mobile_image | image_url: width: '600x' }} 600w, {{ block.settings.mobile_image | image_url: width: '800x' }} 800w, {{ block.settings.mobile_image | image_url: width: '1000x' }} 1000w"
-                      width="{{ block.settings.mobile_image.width }}"
-                      height="{{ block.settings.mobile_image.height }}"
-                  >
-                {%- endif -%}
-
-                {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, fetchpriority: fetch_priority, sizes: '100vw', widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200' -}}
-              </picture>
-            {%- else -%}
-              {%- capture placeholder_image -%}{% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
-              {{- placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
             {%- endif -%}
-          {%- else -%}
-            {%- liquid
-              if block.settings.video != blank
-                if block.settings.mobile_video == blank
-                  render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, preload: forloop.first
-                else
-                  render 'media', media: block.settings.video, autoplay: true, loop: true, controls: false, preload: forloop.first, class: 'hidden sm:block'
-                  render 'media', media: block.settings.mobile_video, autoplay: true, loop: true, controls: false, preload: forloop.first, class: 'sm:hidden'
-                endif
-              else
-                capture placeholder_image
-                  cycle 'placeholder': 'lifestyle-1', 'lifestyle-2'
-                endcapture
 
-                echo placeholder_image | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"'
+            {%- comment -%}---------------- CONTENT ----------------{%- endcomment -%}
+            {% liquid
+              assign is_boxed = false
+              assign has_background = false
+              assign has_border = false
+              assign has_inside_offset = false
+
+              if block.settings.background_opacity > 0 and block.settings.background != blank and block.settings.background != 'rgba(0,0,0,0)'
+                assign has_background = true
               endif
-            -%}
-          {%- endif -%}
 
-          {%- comment -%}---------------- CONTENT ----------------{%- endcomment -%}
-          {% liquid
-            assign is_boxed = false
-            assign has_background = false
-            assign has_border = false
-            assign has_inside_offset = false
+              if block.settings.border_color != blank and block.settings.border_color != 'rgba(0,0,0,0)'
+                assign has_border = true
+              endif
 
-            if block.settings.background_opacity > 0 and block.settings.background != blank and block.settings.background != 'rgba(0,0,0,0)'
-              assign has_background = true
-            endif
+              if has_background and has_border
+                assign has_inside_offset = true
+              endif
 
-            if block.settings.border_color != blank and block.settings.border_color != 'rgba(0,0,0,0)'
-              assign has_border = true
-            endif
+              if has_background or has_border
+                assign is_boxed = true
+              endif
+            %}
 
-            if has_background and has_border
-              assign has_inside_offset = true
-            endif
-
-            if has_background or has_border
-              assign is_boxed = true
-            endif
-          %}
-
-          <div class="slideshow__slide-content {% if is_boxed %}slideshow__slide-content--boxed{% endif %} {% if has_border %}slideshow__slide-content--with-border{% endif %} {% if has_inside_offset %}slideshow__slide-content--with-border-offset{% endif %} {{ block.settings.mobile_text_position }} {{ block.settings.desktop_text_position }}" style="{% render 'surface', background: block.settings.background, background_opacity: block.settings.background_opacity, text_color: block.settings.text_color, border_color: block.settings.border_color %}">
-            <div class="prose">
-              {%- if block.settings.subheading != blank -%}
-                <p class="h6">{{ block.settings.subheading }}</p>
-              {%- endif -%}
-
-              {%- if block.settings.title != blank -%}
-                <p class="h1">{{ block.settings.title }}</p>
-              {%- endif -%}
-
-              {%- if block.settings.button_1_text != blank or block.settings.button_2_text != blank -%}
-                {%- assign button_mobile_position = block.settings.mobile_text_position | split: 'text-' | last -%}
-                {%- assign button_desktop_position = block.settings.desktop_text_position | split: 'text-' | last -%}
-
-                {%- if block.settings.button_1_style == 'link' or block.settings.button_2_style == 'link' or block.settings.button_1_text == blank or block.settings.button_2_text == blank -%}
-                  {%- capture button_wrapper_class -%}button-group justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
-                {%- else -%}
-                  {%- capture button_wrapper_class -%}button-group button-group--same-width justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
+            <div class="slideshow__slide-content {% if is_boxed %}slideshow__slide-content--boxed{% endif %} {% if has_border %}slideshow__slide-content--with-border{% endif %} {% if has_inside_offset %}slideshow__slide-content--with-border-offset{% endif %} {{ block.settings.mobile_text_position }} {{ block.settings.desktop_text_position }}" style="{% render 'surface', background: block.settings.background, background_opacity: block.settings.background_opacity, text_color: block.settings.text_color, border_color: block.settings.border_color %}">
+              <div class="prose">
+                {%- if block.settings.subheading != blank -%}
+                  <p class="h6">{{ block.settings.subheading }}</p>
                 {%- endif -%}
 
-                <div class="{{ button_wrapper_class }}">
-                  {%- if block.settings.button_1_text != blank -%}
-                    {%- render 'button', href: block.settings.button_1_link, content: block.settings.button_1_text, style: block.settings.button_1_style, background: block.settings.button_1_background, text_color: block.settings.button_1_text_color -%}
+                {%- if block.settings.title != blank -%}
+                  <p class="h1">{{ block.settings.title }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.button_1_text != blank or block.settings.button_2_text != blank -%}
+                  {%- assign button_mobile_position = block.settings.mobile_text_position | split: 'text-' | last -%}
+                  {%- assign button_desktop_position = block.settings.desktop_text_position | split: 'text-' | last -%}
+
+                  {%- if block.settings.button_1_style == 'link' or block.settings.button_2_style == 'link' or block.settings.button_1_text == blank or block.settings.button_2_text == blank -%}
+                    {%- capture button_wrapper_class -%}button-group justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
+                  {%- else -%}
+                    {%- capture button_wrapper_class -%}button-group button-group--same-width justify-{{ button_mobile_position }} sm:justify-{{ button_desktop_position }}{%- endcapture -%}
                   {%- endif -%}
 
-                  {%- if block.settings.button_2_text != blank -%}
-                    {%- render 'button', href: block.settings.button_2_link, content: block.settings.button_2_text, style: block.settings.button_2_style, background: block.settings.button_2_background, text_color: block.settings.button_2_text_color -%}
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
+                  <div class="{{ button_wrapper_class }}">
+                    {%- if block.settings.button_1_text != blank -%}
+                      {%- render 'button', href: block.settings.button_1_link, content: block.settings.button_1_text, style: block.settings.button_1_style, background: block.settings.button_1_background, text_color: block.settings.button_1_text_color -%}
+                    {%- endif -%}
+
+                    {%- if block.settings.button_2_text != blank -%}
+                      {%- render 'button', href: block.settings.button_2_link, content: block.settings.button_2_text, style: block.settings.button_2_style, background: block.settings.button_2_background, text_color: block.settings.button_2_text_color -%}
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
             </div>
           </div>
-        </div>
 
-        {%- if block.type == 'video' and block.settings.video != blank and block.settings.allow_sound -%}
-          <div class="slideshow__volume-control" style="{% render 'surface', text_color: section.settings.controls_color %}">
-            <button data-action="unmute">
-              <span class="sr-only">{{ 'general.accessibility.unmute_video' | t }}</span>
-              {%- render 'icon' with 'unmute' -%}
-            </button>
+          {%- if block.type == 'video' and block.settings.video != blank and block.settings.allow_sound -%}
+            <div class="slideshow__volume-control" style="{% render 'surface', text_color: section.settings.controls_color %}">
+              <button data-action="unmute">
+                <span class="sr-only">{{ 'general.accessibility.unmute_video' | t }}</span>
+                {%- render 'icon' with 'unmute' -%}
+              </button>
 
-            <button data-action="mute" hidden>
-              <span class="sr-only">{{ 'general.accessibility.mute_video' | t }}</span>
-              {%- render 'icon' with 'mute' -%}
-            </button>
+              <button data-action="mute" hidden>
+                <span class="sr-only">{{ 'general.accessibility.mute_video' | t }}</span>
+                {%- render 'icon' with 'mute' -%}
+              </button>
+            </div>
+          {%- endif -%}
+        {%- endcapture -%}
+
+        {%- if block.settings.button_1_link != blank and block.settings.button_1_text == blank and block.settings.button_2_text == blank -%}
+          <a href="{{ block.settings.button_1_link }}" class="slideshow__slide {% if forloop.first %}is-selected{% endif %}" media-type="{{ block.type }}" {% if forloop.first and section.settings.show_initial_transition %}reveal-on-scroll="true"{% endif %} role="group" {{ block.shopify_attributes }}>
+            {{- slide -}}
+          </a>
+        {%- else -%}
+          <div class="slideshow__slide {% if forloop.first %}is-selected{% endif %}" media-type="{{ block.type }}" {% if forloop.first and section.settings.show_initial_transition %}reveal-on-scroll="true"{% endif %} role="group" {{ block.shopify_attributes }}>
+            {{- slide -}}
           </div>
         {%- endif -%}
-      {%- endcapture -%}
+      {%- endfor -%}
 
-      {%- if block.settings.button_1_link != blank and block.settings.button_1_text == blank and block.settings.button_2_text == blank -%}
-        <a href="{{ block.settings.button_1_link }}" class="slideshow__slide {% if forloop.first %}is-selected{% endif %}" media-type="{{ block.type }}" {% if forloop.first and section.settings.show_initial_transition %}reveal-on-scroll="true"{% endif %} role="group" {{ block.shopify_attributes }}>
-          {{- slide -}}
-        </a>
-      {%- else -%}
-        <div class="slideshow__slide {% if forloop.first %}is-selected{% endif %}" media-type="{{ block.type }}" {% if forloop.first and section.settings.show_initial_transition %}reveal-on-scroll="true"{% endif %} role="group" {{ block.shopify_attributes }}>
-          {{- slide -}}
-        </div>
+      {%- if section.blocks.size > 1 -%}
+        <carousel-navigation aria-controls="{{ carousel_id }}" class="page-dots {% if section.settings.autoplay %}page-dots--autoplay{% endif %}" style="{% render 'surface', text_color: section.settings.controls_color %}">
+          {%- for i in (1..section.blocks.size) -%}
+            <button class="tap-area" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+              <span class="sr-only">{{ 'general.accessibility.go_to_item' | t: index: forloop.index }}</span>
+
+              {%- if section.settings.autoplay -%}
+                <svg class="circular-progress" height="8" width="8" viewBox="0 0 8 8" style="--stroke-dasharray: {{ 2 | times: 3.14159265359 | times: 3.25 }}">
+                  <circle cx="50%" cy="50%" fill="none" stroke-width="1.5" r="3.25" stroke="currentColor" stroke-opacity="0.2"></circle>
+                  <circle cx="50%" cy="50%" fill="none" stroke-width="1.5" r="3.25" stroke="currentColor" stroke-linecap="round"></circle>
+                </svg>
+              {%- endif -%}
+            </button>
+          {%- endfor -%}
+        </carousel-navigation>
       {%- endif -%}
-    {%- endfor -%}
 
-    {%- if section.blocks.size > 1 -%}
-      <carousel-navigation aria-controls="{{ carousel_id }}" class="page-dots {% if section.settings.autoplay %}page-dots--autoplay{% endif %}" style="{% render 'surface', text_color: section.settings.controls_color %}">
-        {%- for i in (1..section.blocks.size) -%}
-          <button class="tap-area" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
-            <span class="sr-only">{{ 'general.accessibility.go_to_item' | t: index: forloop.index }}</span>
+      {%- if section.settings.show_next_section_button -%}
+        <button data-action="navigate-next" class="slideshow__next-section-button circle-button circle-button--lg hover:animate-icon-block">
+          <span class="sr-only">{{ 'general.accessibility.navigate_to_next_section' | t }}</span>
+          {%- render 'icon' with 'arrow-down' -%}
+        </button>
+      {%- endif -%}
+    </slideshow-carousel>
 
-            {%- if section.settings.autoplay -%}
-              <svg class="circular-progress" height="8" width="8" viewBox="0 0 8 8" style="--stroke-dasharray: {{ 2 | times: 3.14159265359 | times: 3.25 }}">
-                <circle cx="50%" cy="50%" fill="none" stroke-width="1.5" r="3.25" stroke="currentColor" stroke-opacity="0.2"></circle>
-                <circle cx="50%" cy="50%" fill="none" stroke-width="1.5" r="3.25" stroke="currentColor" stroke-linecap="round"></circle>
-              </svg>
-            {%- endif -%}
-          </button>
-        {%- endfor -%}
-      </carousel-navigation>
+    {%- comment -%}---------------- CONSULTATION FORM OVERLAY ----------------{%- endcomment -%}
+    {%- if section.settings.show_consultation_form -%}
+      <div class="slideshow-consultation-overlay">
+        <div class="slideshow-form-container">
+          <div class="slideshow-form">
+            
+            {% comment %} Priority Banner {% endcomment %}
+            {% if section.settings.show_priority_banner %}
+              <div class="priority-banner">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="priority-banner-text">
+                  <strong>{{ section.settings.banner_highlight_text }}</strong> {{ section.settings.banner_text }}
+                </span>
+              </div>
+            {% endif %}
+
+            {% comment %} Form Heading {% endcomment %}
+            {% if section.settings.form_heading != blank %}
+              <h2 class="form-heading">{{ section.settings.form_heading }}</h2>
+            {% endif %}
+
+            {% comment %} Contact Form {% endcomment %}
+            {%- form 'contact', id: 'slideshow-consultation-form', class: 'consultation-form' -%}
+              
+              {% comment %} Success Message {% endcomment %}
+              {%- if form.posted_successfully? -%}
+                <div class="form-message success">
+                  {{ section.settings.success_message | default: 'Thank you! We will contact you within 24 hours.' }}
+                </div>
+              {%- endif -%}
+
+              {% comment %} Error Message {% endcomment %}
+              {%- if form.errors -%}
+                <div class="form-message error">
+                  {{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}
+                </div>
+              {%- endif -%}
+
+              {% comment %} Treatment/Service Selection {% endcomment %}
+              <div class="form-group">
+                <label class="form-label" for="slideshow-treatment-select">
+                  {{ section.settings.treatment_label }} {% if section.settings.treatment_required %}<span class="required">*</span>{% endif %}
+                </label>
+                <select 
+                  class="form-select pre-selected" 
+                  id="slideshow-treatment-select" 
+                  name="contact[note]"
+                  {% if section.settings.treatment_required %}required{% endif %}>
+                  {% if section.settings.show_treatment_dropdown %}
+                    <option value="">{{ section.settings.treatment_placeholder }}</option>
+                    {% assign treatment_options = section.settings.treatment_options | split: ',' %}
+                    {% for option in treatment_options %}
+                      {% assign option_clean = option | strip %}
+                      <option value="{{ option_clean }}" {% if product.title == option_clean %}selected{% endif %}>
+                        {{ option_clean }}
+                      </option>
+                    {% endfor %}
+                  {% else %}
+                    <option value="{{ product.title }}" selected>{{ product.title }}</option>
+                  {% endif %}
+                </select>
+              </div>
+
+              {% comment %} Name Fields {% endcomment %}
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="slideshow-first-name">
+                    {{ section.settings.first_name_label }} <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-input" 
+                    id="slideshow-first-name" 
+                    name="contact[first_name]"
+                    autocomplete="given-name"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="slideshow-last-name">
+                    {{ section.settings.last_name_label }} <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-input" 
+                    id="slideshow-last-name" 
+                    name="contact[last_name]"
+                    autocomplete="family-name"
+                    required>
+                </div>
+              </div>
+
+              {% comment %} Email {% endcomment %}
+              <div class="form-group">
+                <label class="form-label" for="slideshow-email">
+                  {{ section.settings.email_label }} <span class="required">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  class="form-input" 
+                  id="slideshow-email" 
+                  name="contact[email]"
+                  autocomplete="email"
+                  required>
+              </div>
+
+              {% comment %} Phone {% endcomment %}
+              <div class="form-group">
+                <label class="form-label" for="slideshow-phone">
+                  {{ section.settings.phone_label }} <span class="required">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  class="form-input" 
+                  id="slideshow-phone" 
+                  name="contact[phone]"
+                  autocomplete="tel"
+                  required>
+              </div>
+
+              {% comment %} Best Time to Contact - Pill Buttons {% endcomment %}
+              {% if section.settings.show_time_preference %}
+                <div class="form-group">
+                  <label class="form-label">
+                    {{ section.settings.time_label }} {% if section.settings.time_required %}<span class="required">*</span>{% endif %}
+                  </label>
+                  <div class="pill-group" data-pill-group="slideshow-time" data-single-select="true">
+                    {% assign time_options = section.settings.time_options | split: ',' %}
+                    {% for option in time_options %}
+                      {% assign option_clean = option | strip %}
+                      <button type="button" class="pill-button" data-value="{{ option_clean }}">
+                        {{ option_clean }}
+                      </button>
+                    {% endfor %}
+                  </div>
+                  <input type="hidden" name="contact[company]" id="slideshow-time-preference" value="" {% if section.settings.time_required %}required{% endif %}>
+                </div>
+              {% endif %}
+
+              {% comment %} Contact Method Preference - Pill Buttons (Multi-select) {% endcomment %}
+              {% if section.settings.show_contact_preference %}
+                <div class="form-group">
+                  <label class="form-label">
+                    {{ section.settings.contact_method_label }} {% if section.settings.contact_method_required %}<span class="required">*</span>{% endif %}
+                  </label>
+                  <div class="pill-group" data-pill-group="slideshow-contact-method" data-single-select="false">
+                    {% assign contact_options = section.settings.contact_method_options | split: ',' %}
+                    {% for option in contact_options %}
+                      {% assign option_clean = option | strip %}
+                      <button type="button" class="pill-button" data-value="{{ option_clean }}">
+                        {{ option_clean }}
+                      </button>
+                    {% endfor %}
+                  </div>
+                  <input type="hidden" name="contact[subject]" id="slideshow-contact-method" value="" {% if section.settings.contact_method_required %}required{% endif %}>
+                </div>
+              {% endif %}
+
+              {% comment %} Message {% endcomment %}
+              {% if section.settings.show_message_field %}
+                <div class="form-group">
+                  <label class="form-label" for="slideshow-message">
+                    {{ section.settings.message_label }}
+                  </label>
+                  <textarea 
+                    class="form-textarea" 
+                    id="slideshow-message" 
+                    name="contact[body]"
+                    placeholder="{{ section.settings.message_placeholder }}"></textarea>
+                </div>
+              {% endif %}
+
+              {% comment %} Submit Button {% endcomment %}
+              <button type="submit" class="submit-button">
+                {{ section.settings.button_text }}
+              </button>
+
+            {%- endform -%}
+
+            {% comment %} Google Rating {% endcomment %}
+            {% if section.settings.show_google_rating %}
+              <div class="google-rating">
+                <svg class="google-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span class="rating-text">Google Rating</span>
+                <span class="rating-score">{{ section.settings.google_rating_score }}</span>
+                <div class="rating-stars">
+                  {% for i in (1..5) %}
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% endfor %}
+                </div>
+                <span class="rating-reviews">{{ section.settings.google_rating_reviews }}</span>
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const slideshowForm = document.querySelector('.slideshow-form');
+          if (!slideshowForm) return;
+          
+          // Handle pill button groups
+          const pillGroups = slideshowForm.querySelectorAll('.pill-group');
+          
+          pillGroups.forEach(group => {
+            const isSingleSelect = group.dataset.singleSelect === 'true';
+            const groupType = group.dataset.pillGroup;
+            const buttons = group.querySelectorAll('.pill-button');
+            
+            // Find corresponding hidden input
+            let hiddenInput;
+            if (groupType === 'slideshow-time') {
+              hiddenInput = document.getElementById('slideshow-time-preference');
+            } else if (groupType === 'slideshow-contact-method') {
+              hiddenInput = document.getElementById('slideshow-contact-method');
+            }
+            
+            buttons.forEach(button => {
+              button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (isSingleSelect) {
+                  // Single select - deselect all others
+                  buttons.forEach(btn => btn.classList.remove('selected'));
+                  this.classList.add('selected');
+                  
+                  if (hiddenInput) {
+                    hiddenInput.value = this.dataset.value;
+                  }
+                } else {
+                  // Multi-select - toggle this button
+                  this.classList.toggle('selected');
+                  
+                  // Gather all selected values
+                  const selectedValues = [];
+                  buttons.forEach(btn => {
+                    if (btn.classList.contains('selected')) {
+                      selectedValues.push(btn.dataset.value);
+                    }
+                  });
+                  
+                  if (hiddenInput) {
+                    hiddenInput.value = selectedValues.join(', ');
+                  }
+                }
+              });
+            });
+          });
+
+          // Form validation
+          const form = slideshowForm.querySelector('.consultation-form');
+          if (form) {
+            form.addEventListener('submit', function(e) {
+              let isValid = true;
+              
+              // Check time preference if required
+              const timeInput = document.getElementById('slideshow-time-preference');
+              if (timeInput && timeInput.hasAttribute('required') && !timeInput.value) {
+                isValid = false;
+                const timeGroup = slideshowForm.querySelector('[data-pill-group="slideshow-time"]');
+                if (timeGroup) {
+                  timeGroup.style.outline = '2px solid #dc3545';
+                  timeGroup.style.outlineOffset = '4px';
+                  timeGroup.style.borderRadius = '8px';
+                }
+              }
+              
+              // Check contact method if required
+              const contactInput = document.getElementById('slideshow-contact-method');
+              if (contactInput && contactInput.hasAttribute('required') && !contactInput.value) {
+                isValid = false;
+                const contactGroup = slideshowForm.querySelector('[data-pill-group="slideshow-contact-method"]');
+                if (contactGroup) {
+                  contactGroup.style.outline = '2px solid #dc3545';
+                  contactGroup.style.outlineOffset = '4px';
+                  contactGroup.style.borderRadius = '8px';
+                }
+              }
+              
+              if (!isValid) {
+                e.preventDefault();
+                alert('Please select all required options.');
+              }
+            });
+          }
+
+          // Clear validation styling when pills are selected
+          slideshowForm.querySelectorAll('.pill-button').forEach(btn => {
+            btn.addEventListener('click', function() {
+              const group = this.closest('.pill-group');
+              if (group) {
+                group.style.outline = 'none';
+              }
+            });
+          });
+        });
+      </script>
     {%- endif -%}
-
-    {%- if section.settings.show_next_section_button -%}
-      <button data-action="navigate-next" class="slideshow__next-section-button circle-button circle-button--lg hover:animate-icon-block">
-        <span class="sr-only">{{ 'general.accessibility.navigate_to_next_section' | t }}</span>
-        {%- render 'icon' with 'arrow-down' -%}
-      </button>
-    {%- endif -%}
-  </slideshow-carousel>
+  </div>
 {%- endif -%}
 
 {% schema %}
@@ -273,6 +886,677 @@ may have important consequence on the section itself.
       "label": "t:sections.slideshow.controls_color",
       "info": "t:sections.slideshow.controls_color_info",
       "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Consultation Form Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_consultation_form",
+      "label": "Show consultation form (Desktop only)",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "form_right_position",
+      "label": "Form position from right",
+      "min": 20,
+      "max": 150,
+      "step": 10,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "form_max_width",
+      "label": "Form max width",
+      "min": 320,
+      "max": 500,
+      "step": 10,
+      "default": 420,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "form_background",
+      "label": "Form background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "form_border_radius",
+      "label": "Form border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "form_padding",
+      "label": "Form padding",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "form_shadow",
+      "label": "Form shadow",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "0 4px 16px rgba(0,0,0,0.1)", "label": "Subtle" },
+        { "value": "0 8px 30px rgba(0,0,0,0.15)", "label": "Medium" },
+        { "value": "0 12px 40px rgba(0,0,0,0.2)", "label": "Strong" }
+      ],
+      "default": "0 8px 30px rgba(0,0,0,0.15)"
+    },
+    {
+      "type": "header",
+      "content": "Priority Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_priority_banner",
+      "label": "Show priority banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "banner_highlight_text",
+      "label": "Banner highlight text",
+      "default": "Priority Response Guarantee:"
+    },
+    {
+      "type": "text",
+      "id": "banner_text",
+      "label": "Banner text",
+      "default": "We will contact you within 24 hours."
+    },
+    {
+      "type": "color",
+      "id": "banner_background",
+      "label": "Banner background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "banner_border_color",
+      "label": "Banner border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "banner_border_radius",
+      "label": "Banner border radius",
+      "min": 0,
+      "max": 16,
+      "step": 2,
+      "default": 6,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "banner_text_color",
+      "label": "Banner text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "banner_highlight_color",
+      "label": "Banner highlight color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "banner_icon_color",
+      "label": "Banner icon color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "banner_font_size",
+      "label": "Banner font size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Form Heading"
+    },
+    {
+      "type": "text",
+      "id": "form_heading",
+      "label": "Form heading",
+      "default": "Request Your Consultation"
+    },
+    {
+      "type": "color",
+      "id": "form_heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "form_heading_font_size",
+      "label": "Heading font size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "form_heading_font_weight",
+      "label": "Heading font weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "header",
+      "content": "Form Labels"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "label": "Label font size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "label_font_weight",
+      "label": "Label font weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "required_color",
+      "label": "Required asterisk color",
+      "default": "#dc3545"
+    },
+    {
+      "type": "header",
+      "content": "Input Fields"
+    },
+    {
+      "type": "color",
+      "id": "input_background",
+      "label": "Input background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border color",
+      "default": "#d0d0d0"
+    },
+    {
+      "type": "range",
+      "id": "input_border_width",
+      "label": "Input border width",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "label": "Input border radius",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "default": 4,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "input_placeholder_color",
+      "label": "Input placeholder color",
+      "default": "#999999"
+    },
+    {
+      "type": "range",
+      "id": "input_font_size",
+      "label": "Input font size",
+      "min": 12,
+      "max": 16,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_border_color",
+      "label": "Input focus border color",
+      "default": "#b8a164"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_shadow_color",
+      "label": "Input focus shadow color",
+      "default": "rgba(184, 161, 100, 0.15)"
+    },
+    {
+      "type": "color",
+      "id": "preselected_background",
+      "label": "Pre-selected field background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "preselected_text_color",
+      "label": "Pre-selected field text color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Treatment Field"
+    },
+    {
+      "type": "text",
+      "id": "treatment_label",
+      "label": "Treatment field label",
+      "default": "Which treatment are you interested in?"
+    },
+    {
+      "type": "text",
+      "id": "treatment_placeholder",
+      "label": "Treatment placeholder",
+      "default": "Select Service"
+    },
+    {
+      "type": "checkbox",
+      "id": "treatment_required",
+      "label": "Treatment required",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_treatment_dropdown",
+      "label": "Show treatment dropdown options",
+      "default": false,
+      "info": "Enable to show dropdown with all treatments. Disable to show only product title."
+    },
+    {
+      "type": "textarea",
+      "id": "treatment_options",
+      "label": "Treatment options (comma-separated)",
+      "default": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+      "info": "Only used if 'Show treatment dropdown options' is enabled"
+    },
+    {
+      "type": "header",
+      "content": "Name Fields"
+    },
+    {
+      "type": "text",
+      "id": "first_name_label",
+      "label": "First name label",
+      "default": "First Name"
+    },
+    {
+      "type": "text",
+      "id": "last_name_label",
+      "label": "Last name label",
+      "default": "Last Name"
+    },
+    {
+      "type": "header",
+      "content": "Contact Fields"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email label",
+      "default": "Email Address"
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "label": "Phone label",
+      "default": "Phone Number"
+    },
+    {
+      "type": "header",
+      "content": "Time Preference Buttons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_time_preference",
+      "label": "Show time preference",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "time_label",
+      "label": "Time preference label",
+      "default": "Best time to contact you?"
+    },
+    {
+      "type": "text",
+      "id": "time_options",
+      "label": "Time options (comma-separated)",
+      "default": "Morning, Afternoon, Evening"
+    },
+    {
+      "type": "checkbox",
+      "id": "time_required",
+      "label": "Time selection required",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Contact Method Buttons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact_preference",
+      "label": "Show contact method preference",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "contact_method_label",
+      "label": "Contact method label",
+      "default": "How may we reach you? (Select all that apply)"
+    },
+    {
+      "type": "text",
+      "id": "contact_method_options",
+      "label": "Contact method options (comma-separated)",
+      "default": "Email, WhatsApp, Phone Call"
+    },
+    {
+      "type": "checkbox",
+      "id": "contact_method_required",
+      "label": "Contact method required",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Pill Button Styling"
+    },
+    {
+      "type": "color",
+      "id": "pill_background",
+      "label": "Pill background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "pill_text_color",
+      "label": "Pill text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "pill_border_color",
+      "label": "Pill border color",
+      "default": "#d0d0d0"
+    },
+    {
+      "type": "range",
+      "id": "pill_border_width",
+      "label": "Pill border width",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "pill_border_radius",
+      "label": "Pill border radius",
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "pill_font_size",
+      "label": "Pill font size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "pill_hover_background",
+      "label": "Pill hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "pill_hover_border_color",
+      "label": "Pill hover border color",
+      "default": "#b8a164"
+    },
+    {
+      "type": "color",
+      "id": "pill_selected_background",
+      "label": "Pill selected background",
+      "default": "#b8a164"
+    },
+    {
+      "type": "color",
+      "id": "pill_selected_text_color",
+      "label": "Pill selected text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "pill_selected_border_color",
+      "label": "Pill selected border color",
+      "default": "#b8a164"
+    },
+    {
+      "type": "header",
+      "content": "Message Field"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_message_field",
+      "label": "Show message field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "message_label",
+      "label": "Message label",
+      "default": "How can we help you? (Optional Message)"
+    },
+    {
+      "type": "text",
+      "id": "message_placeholder",
+      "label": "Message placeholder",
+    },
+    {
+      "type": "header",
+      "content": "Submit Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Request Callback"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#b8a164"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#9a8654"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Button font size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button font weight",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 6,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "button_shadow_color",
+      "label": "Button hover shadow color",
+      "default": "rgba(184, 161, 100, 0.3)"
+    },
+    {
+      "type": "header",
+      "content": "Success Message"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thank you! We will contact you within 24 hours."
+    },
+    {
+      "type": "header",
+      "content": "Google Rating"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_google_rating",
+      "label": "Show Google rating",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "google_rating_score",
+      "label": "Rating score",
+      "default": "4.9"
+    },
+    {
+      "type": "text",
+      "id": "google_rating_reviews",
+      "label": "Reviews text",
+      "default": "based on over 200 reviews"
+    },
+    {
+      "type": "color",
+      "id": "rating_border_color",
+      "label": "Rating section border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "rating_text_color",
+      "label": "Rating text color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "rating_font_size",
+      "label": "Rating text font size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "default": 13,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "rating_score_color",
+      "label": "Rating score color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "rating_score_font_size",
+      "label": "Rating score font size",
+      "min": 14,
+      "max": 24,
+      "step": 2,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "rating_star_color",
+      "label": "Star color",
+      "default": "#f5c518"
+    },
+    {
+      "type": "color",
+      "id": "rating_reviews_color",
+      "label": "Reviews text color",
+      "default": "#888888"
     }
   ],
   "blocks": [
