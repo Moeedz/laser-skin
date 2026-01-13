@@ -1,29 +1,13 @@
 {% comment %}
   Consultation Request Form Section
   - Priority response guarantee banner
-  - Treatment dropdown pre-selected with product title
+  - Treatment dropdown pre-selected with product title (on product pages) or default value (on other pages)
   - Pill button selectors for time and contact preferences
   - Trust badges
   - Fully customizable from section settings
 {% endcomment %}
 
 <style>
-
-    /* --- visibility helpers (add to top of style block) --- */
-/* Hide when mobile (max-width: 768px) */
-@media screen and (max-width: 768px) {
-  .hide-on-mobile {
-    display: none !important;
-  }
-}
-
-/* Hide when desktop (min-width: 769px) */
-@media screen and (min-width: 769px) {
-  .hide-on-desktop {
-    display: none !important;
-  }
-}
-
   .consultation-form-section {
     max-width: {{ section.settings.section_width }}px;
     margin: 0 auto;
@@ -336,14 +320,7 @@
   }
 </style>
 
-<section
-  class="consultation-form-section
-    {% if section.settings.hide_on_mobile %} hide-on-mobile{% endif %}
-    {% if section.settings.hide_on_desktop %} hide-on-desktop{% endif %}"
-  id="consultation-form-{{ section.id }}"
-  {% comment %} Optional accessibility: add aria-hidden when both are true for all viewports {% endcomment %}
-  {% if section.settings.hide_on_mobile and section.settings.hide_on_desktop %} aria-hidden="true"{% endif %}
->
+<section class="consultation-form-section" id="consultation-form-{{ section.id }}">
   <div class="consultation-form-container">
     
     {% comment %} Priority Banner {% endcomment %}
@@ -381,6 +358,14 @@
       {%- endif -%}
 
       {% comment %} Treatment/Service Selection {% endcomment %}
+      {% comment %} Determine the pre-selected value {% endcomment %}
+      {%- liquid
+        if product.title != blank
+          assign preselected_treatment = product.title
+        else
+          assign preselected_treatment = section.settings.default_treatment_value
+        endif
+      -%}
       <div class="form-group">
         <label class="form-label" for="treatment-select-{{ section.id }}">
           {{ section.settings.treatment_label }} {% if section.settings.treatment_required %}<span class="required">*</span>{% endif %}
@@ -394,13 +379,13 @@
             <option value="">{{ section.settings.treatment_placeholder }}</option>
             {% for block in section.blocks %}
               {% if block.type == 'treatment_option' %}
-                <option value="{{ block.settings.treatment_name }}" {% if product.title == block.settings.treatment_name %}selected{% endif %}>
+                <option value="{{ block.settings.treatment_name }}" {% if preselected_treatment == block.settings.treatment_name %}selected{% endif %}>
                   {{ block.settings.treatment_name }}
                 </option>
               {% endif %}
             {% endfor %}
           {% else %}
-            <option value="{{ product.title }}" selected>{{ product.title }}</option>
+            <option value="{{ preselected_treatment }}" selected>{{ preselected_treatment }}</option>
           {% endif %}
         </select>
       </div>
@@ -685,19 +670,6 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       "type": "header",
       "content": "Section Layout"
-    },
-    {
-    "type": "checkbox",
-    "id": "hide_on_mobile",
-    "label": "Hide section on mobile",
-    "default": false
-    },
-    {
-    "type": "checkbox",
-    "id": "hide_on_desktop",
-    "label": "Hide section on desktop",
-    "default": true,
-    "info": "Desktop option is checked by default"
     },
     {
       "type": "range",
@@ -1057,7 +1029,14 @@ document.addEventListener('DOMContentLoaded', function() {
       "id": "show_all_treatments",
       "label": "Show All Treatment Options",
       "default": false,
-      "info": "Enable to show dropdown with all treatments. Disable to show only product title."
+      "info": "Enable to show dropdown with all treatments. Disable to show product title (on product pages) or default value (on other pages)."
+    },
+    {
+      "type": "text",
+      "id": "default_treatment_value",
+      "label": "Default Treatment Value (Non-Product Pages)",
+      "default": "Consultation",
+      "info": "This value is shown when the form is used on pages other than product pages"
     },
     {
       "type": "header",
