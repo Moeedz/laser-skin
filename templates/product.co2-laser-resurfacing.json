@@ -941,7 +941,7 @@
         "background": "#000000",
         "controls_color": "#ffffff",
         "show_consultation_form": true,
-        "form_right_position": 150,
+        "form_right_position": 20,
         "form_top_position": 50,
         "form_max_width": 420,
         "form_background": "#ffffff",
@@ -1058,6 +1058,8 @@
       ],
       "name": "Consultation Form",
       "settings": {
+        "hide_on_mobile": false,
+        "hide_on_desktop": true,
         "section_width": 1600,
         "section_padding_top": 50,
         "section_padding_bottom": 50,
