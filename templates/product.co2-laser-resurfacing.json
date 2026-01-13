@@ -2117,7 +2117,21 @@
           "type": "faq_item",
           "settings": {
             "question": "Is it safe for my skin type?",
-            "answer": "<p>Our treatments are suitable for all skin types. During your initial consultation, we'll assess your skin and discuss any specific concerns to ensure the treatment is safe and effective for you.</p>"
+            "answer": "<p>CO2 laser is incredibly effective, but it requires caution on darker skin tones (Fitzpatrick 4-6) due to the risk of pigmentation changes. We require a mandatory consultation and patch test for <em>every</em> client to ensure your safety before we proceed.</p>"
+          }
+        },
+        "faq_item_Ek4P3d": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the difference between \"Full Face\" and \"Half Face\"?",
+            "answer": "<p><strong>Full Face (£300):</strong> Covers the entire face, including forehead, cheeks, nose, chin, and around the mouth.</p><p><strong>Half Face (£175):</strong> Focuses on a specific problem area, typically the cheeks and jawline (for acne scarring) or the lower face (for smoker’s lines).</p>"
+          }
+        },
+        "faq_item_hcEF7D": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>The results are long-lasting. Because the laser stimulates your body's own collagen production, the improvements in skin tightness and texture can last for <strong>several years</strong>. Maintenance sessions once a year are recommended to keep your skin looking its best.</p>"
           }
         }
       },
@@ -2125,7 +2139,9 @@
         "faq_item_HrxNLf",
         "faq_item_ddfEcQ",
         "faq_item_cYExH8",
-        "faq_item_qJVU4c"
+        "faq_item_qJVU4c",
+        "faq_item_Ek4P3d",
+        "faq_item_hcEF7D"
       ],
       "name": "FAQ Accordion",
       "settings": {
