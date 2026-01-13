@@ -1270,6 +1270,79 @@
         "background": "#000000",
         "controls_color": "#ffffff"
       }
+    },
+    "faq_updated_kjbyB3": {
+      "type": "faq-updated",
+      "blocks": {
+        "faq_item_HrxNLf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the treatment painful?",
+            "answer": "<p>We use a powerful topical anaesthetic cream applied 45 minutes before your procedure to ensure maximum comfort. Most clients describe the sensation as a prickling heat, which is very manageable.</p>"
+          }
+        },
+        "faq_item_ddfEcQ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>The number of sessions varies depending on your individual needs and goals. Most clients see optimal results after 3-6 sessions, spaced 4-6 weeks apart. During your consultation, we'll create a personalized treatment plan tailored to you.</p>"
+          }
+        },
+        "faq_item_cYExH8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I wear makeup afterward?",
+            "answer": "<p>We recommend avoiding makeup for at least 24 hours after treatment to allow your skin to breathe and heal properly. After this period, you can resume your normal skincare and makeup routine.</p>"
+          }
+        },
+        "faq_item_qJVU4c": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it safe for my skin type?",
+            "answer": "<p>Our treatments are suitable for all skin types. During your initial consultation, we'll assess your skin and discuss any specific concerns to ensure the treatment is safe and effective for you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_HrxNLf",
+        "faq_item_ddfEcQ",
+        "faq_item_cYExH8",
+        "faq_item_qJVU4c"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "section_bg_color": "#f5f5f0",
+        "max_width": 1200,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "side_padding": 30,
+        "heading": "Frequently Asked Questions",
+        "heading_color": "#333333",
+        "heading_font_size": 36,
+        "heading_font_weight": "600",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 40,
+        "item_bg_color": "#ffffff",
+        "item_hover_bg_color": "#fafafa",
+        "accent_border_color": "#a69f6b",
+        "accent_border_width": 4,
+        "item_spacing": 12,
+        "item_border_radius": 4,
+        "item_padding_vertical": 20,
+        "item_padding_horizontal": 25,
+        "item_shadow": "0 1px 3px rgba(0,0,0,0.08)",
+        "question_color": "#333333",
+        "question_font_size": 18,
+        "question_font_weight": "600",
+        "answer_color": "#666666",
+        "answer_font_size": 16,
+        "answer_line_height": 1.6,
+        "icon_color": "#a69f6b",
+        "icon_active_color": "#333333",
+        "icon_size": 24,
+        "first_item_open": true,
+        "allow_multiple_open": false
+      }
     }
   },
   "order": [
@@ -1289,6 +1362,7 @@
     "slideshow_8xJq6t",
     "slideshow_qNz7Vp",
     "slideshow_FPDiUH",
-    "slideshow_epLFiN"
+    "slideshow_epLFiN",
+    "faq_updated_kjbyB3"
   ]
 }
