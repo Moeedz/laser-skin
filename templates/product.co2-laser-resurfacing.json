@@ -2179,8 +2179,8 @@
         "decoration_color": "#b8a164",
         "decoration_size": 40,
         "decoration_opacity": 0.6,
-        "all_items_open": true,
-        "first_item_open": true,
+        "all_items_open": false,
+        "first_item_open": false,
         "allow_multiple_open": false
       }
     },
