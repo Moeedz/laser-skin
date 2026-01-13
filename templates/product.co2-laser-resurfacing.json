@@ -2133,6 +2133,13 @@
             "question": "How long do results last?",
             "answer": "<p>The results are long-lasting. Because the laser stimulates your body's own collagen production, the improvements in skin tightness and texture can last for <strong>several years</strong>. Maintenance sessions once a year are recommended to keep your skin looking its best.</p>"
           }
+        },
+        "faq_item_x7jNzt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Location & Clinic Details",
+            "answer": "<p><strong>Laser Skin Clinics Wolverhampton</strong><br/>Located at: 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p><p><strong>Parking:</strong> Free private parking available.<br/><strong>Booking:</strong> All treatments require a prior consultation to assess skin suitability.</p><p></p><h3></h3>"
+          }
         }
       },
       "block_order": [
@@ -2141,7 +2148,8 @@
         "faq_item_cYExH8",
         "faq_item_qJVU4c",
         "faq_item_Ek4P3d",
-        "faq_item_hcEF7D"
+        "faq_item_hcEF7D",
+        "faq_item_x7jNzt"
       ],
       "name": "FAQ Accordion",
       "settings": {
@@ -2150,11 +2158,11 @@
         "padding_top": 60,
         "padding_bottom": 60,
         "side_padding": 30,
-        "heading": "Frequently Asked Questions",
+        "heading": "Your Questions. Answered",
         "heading_color": "#ffffff",
         "heading_font_size": 36,
         "heading_font_weight": "600",
-        "heading_font_style": "italic",
+        "heading_font_style": "normal",
         "heading_alignment": "center",
         "heading_margin_bottom": 40,
         "question_color": "#ffffff",
