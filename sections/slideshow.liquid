@@ -18,20 +18,27 @@ MODIFICATION: Added consultation form overlay option for desktop display
         position: relative;
       }
 
+      .slideshow-with-form .slideshow {
+        position: relative;
+      }
+
       .slideshow-consultation-overlay {
         display: none;
         position: absolute;
-        top: 50%;
+        top: {{ section.settings.form_top_position }}%;
         right: {{ section.settings.form_right_position }}px;
         transform: translateY(-50%);
-        z-index: 100;
+        z-index: 10;
         max-width: {{ section.settings.form_max_width }}px;
-        width: 100%;
+        width: calc(100% - 40px);
+        max-height: 90%;
+        overflow-y: auto;
       }
 
       @media screen and (min-width: 1024px) {
         .slideshow-consultation-overlay {
           display: block;
+          width: {{ section.settings.form_max_width }}px;
         }
       }
 
@@ -471,11 +478,10 @@ MODIFICATION: Added consultation form overlay option for desktop display
           {%- render 'icon' with 'arrow-down' -%}
         </button>
       {%- endif -%}
-    </slideshow-carousel>
 
-    {%- comment -%}---------------- CONSULTATION FORM OVERLAY ----------------{%- endcomment -%}
-    {%- if section.settings.show_consultation_form -%}
-      <div class="slideshow-consultation-overlay">
+      {%- comment -%}---------------- CONSULTATION FORM OVERLAY ----------------{%- endcomment -%}
+      {%- if section.settings.show_consultation_form -%}
+        <div class="slideshow-consultation-overlay">
         <div class="slideshow-form-container">
           <div class="slideshow-form">
             
@@ -780,7 +786,8 @@ MODIFICATION: Added consultation form overlay option for desktop display
           });
         });
       </script>
-    {%- endif -%}
+      {%- endif -%}
+    </slideshow-carousel>
   </div>
 {%- endif -%}
 
@@ -906,6 +913,17 @@ MODIFICATION: Added consultation form overlay option for desktop display
       "step": 10,
       "default": 60,
       "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "form_top_position",
+      "label": "Form vertical position",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "default": 50,
+      "unit": "%",
+      "info": "50% = centered vertically"
     },
     {
       "type": "range",
