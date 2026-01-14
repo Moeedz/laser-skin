@@ -1019,29 +1019,29 @@
         "faq_item_GrtaJp": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "Is the consultation really 100% free?",
+            "answer": "<p>Yes. We believe every patient deserves to understand their skin biology before spending money on treatments. You will receive our full 3-Step Analysis (including the UV Skin Scan) and a bespoke treatment plan with zero cost and zero obligation.</p>"
           }
         },
         "faq_item_UXezCX": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "question": "Am I obligated to book a treatment?",
+            "answer": "<p>Absolutely not. Our goal is to give you a clear roadmap. Whether you choose to start that journey with us or think it over at home is entirely your decision.</p>"
           }
         },
         "faq_item_XnW4hK": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "Do I need to remove my makeup?",
+            "answer": "<p>Ideally, yes.</p>"
           }
         },
         "faq_item_kcLLyP": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "question": "How long does it take?",
+            "answer": "<p>Please allow 30-45 minutes. Even though it is complimentary, this is a thorough medical-grade analysis, not a quick 5-minute chat. We take the time to understand your medical history and skin goals properly.</p>"
           }
         }
       },
