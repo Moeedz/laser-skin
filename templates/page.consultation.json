@@ -561,7 +561,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Testimonial_desktop.jpg",
-            "mobile_image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Testimonial_desktop.jpg",
+            "mobile_image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Testimonial.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -921,8 +921,6 @@
       ],
       "name": "Consultation Form",
       "settings": {
-        "hide_on_mobile": false,
-        "hide_on_desktop": false,
         "section_width": 1200,
         "section_padding_top": 50,
         "section_padding_bottom": 50,
@@ -966,6 +964,7 @@
         "treatment_placeholder": "Consultation",
         "treatment_required": true,
         "show_all_treatments": false,
+        "default_treatment_value": "Consultation",
         "first_name_label": "First Name",
         "last_name_label": "Last Name",
         "email_label": "Email Address",
