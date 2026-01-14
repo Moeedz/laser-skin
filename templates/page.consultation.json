@@ -1013,54 +1013,217 @@
         "trust_star_color": "#f5c518"
       }
     },
-    "ss_simple_faq_fzGQQA": {
-      "type": "ss-simple-faq",
+    "faq_updated_fQcMPC": {
+      "type": "faq-updated",
       "blocks": {
-        "text_mMVaiE": {
-          "type": "text",
+        "faq_item_GrtaJp": {
+          "type": "faq_item",
           "settings": {
-            "question": "How does the £49 redeemable fee work?",
-            "answer": "<p>We view this payment as a commitment to your skin, not a cost. To secure dedicated time with our skin experts for a deep-dive analysis we charge £49 <strong>This entire amount is credited back to you</strong> to use against any treatment you choose to move forward with. If you proceed with a treatment or product purchase, the consultation is effectively free.</p>"
+            "question": "How bad is the downtime, really?",
+            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
           }
         },
-        "text_jaEKh3": {
-          "type": "text",
+        "faq_item_UXezCX": {
+          "type": "faq_item",
           "settings": {
-            "question": "Am I obligated to book a treatment after the consultation?",
-            "answer": "<p>Absolutely not. Our goal is to give you a clear roadmap (your Bespoke Protocol). While most clients choose to start their treatment immediately using their £49 credit, you are free to go away and come back at a later date. The £49 will always be available to use against any of our treatments.</p>"
+            "question": "Does the treatment hurt?",
+            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
           }
         },
-        "text_qqHqf8": {
-          "type": "text",
+        "faq_item_XnW4hK": {
+          "type": "faq_item",
           "settings": {
-            "question": "When is the £49 paid?",
-            "answer": "<p>When we call you to book you in for your consultation we will take the £49 fee over the phone or we can send you a payment link so you can pay online.</p>"
+            "question": "How quickly will I see results?",
+            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
           }
         },
-        "text_GrLihx": {
-          "type": "text",
+        "faq_item_kcLLyP": {
+          "type": "faq_item",
           "settings": {
-            "question": "Where are you based?",
-            "answer": "<p>Our address is below<br/><br/>Laser Skin Clinics<br/>4 Perton Farm Barns <br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>"
+            "question": "Can I spread the cost?",
+            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
           }
         }
       },
       "block_order": [
-        "text_mMVaiE",
-        "text_jaEKh3",
-        "text_qqHqf8",
-        "text_GrLihx"
+        "faq_item_GrtaJp",
+        "faq_item_UXezCX",
+        "faq_item_XnW4hK",
+        "faq_item_kcLLyP"
       ],
-      "name": "SS - FAQ #1",
+      "name": "FAQ Dark Theme",
       "settings": {
-        "heading": "Frequently Asked Questions",
-        "icon_color": "#ffffff",
-        "hover_color": "#efefef",
+        "section_bg_color": "#1a1a1a",
+        "max_width": 900,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "side_padding": 30,
+        "heading": "Your Questions. Answered",
+        "heading_color": "#ffffff",
+        "heading_font_size": 48,
+        "heading_font_weight": "400",
+        "heading_font_style": "italic",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 50,
         "question_color": "#ffffff",
-        "background_color": "#e6b325",
-        "answer_color": "#000000",
-        "answer_bg_color": "#ffffff",
-        "questions-font-size": 0.8
+        "question_font_size": 22,
+        "question_font_weight": "600",
+        "show_underline": true,
+        "underline_color": "#b8a164",
+        "underline_width": 60,
+        "underline_height": 2,
+        "answer_color": "#b0b0b0",
+        "answer_font_size": 16,
+        "answer_line_height": 1.7,
+        "answer_margin_top": 16,
+        "divider_color": "#333333",
+        "item_padding_vertical": 30,
+        "icon_color": "#b8a164",
+        "icon_active_color": "#b8a164",
+        "icon_active_bg": "transparent",
+        "icon_size": 36,
+        "icon_border_width": 2,
+        "show_decoration": true,
+        "decoration_color": "#b8a164",
+        "decoration_size": 40,
+        "decoration_opacity": 0.6,
+        "all_items_open": false,
+        "first_item_open": true,
+        "allow_multiple_open": true
+      }
+    },
+    "slideshow_EpwJBR": {
+      "type": "slideshow",
+      "blocks": {
+        "image_3NDRmQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Location_And_contact.jpg",
+            "mobile_image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Contact.jpg",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_3NDRmQ"
+      ],
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
       }
     },
     "contact_info_form_R4TkEh": {
@@ -1235,7 +1398,8 @@
     "slideshow_QbVYQM",
     "slideshow_WTKLC8",
     "consultation_form_rAD6BV",
-    "ss_simple_faq_fzGQQA",
+    "faq_updated_fQcMPC",
+    "slideshow_EpwJBR",
     "contact_info_form_R4TkEh"
   ]
 }
