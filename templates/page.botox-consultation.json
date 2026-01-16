@@ -24,8 +24,8 @@
         "image_wVkcbx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_4_ce6891a6-9d24-45ba-87a6-2a5ab5849ce6.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_5_65c3c5be-c8d2-48ea-ac6c-369afd942d0c.jpg",
+            "image": "shopify://shop_images/unnamed_43.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_45.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -158,8 +158,8 @@
         "image_cTkBdP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_1_4ec5ab81-b2ec-41e2-adbb-6ca830bb2f1f.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_2_c0124b98-7c2a-4ef3-ba1c-712a641bc1d0.jpg",
+            "image": "shopify://shop_images/unnamed_46.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_47.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -292,7 +292,7 @@
         "image_ETLeKD": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_15_e7ce5434-2e21-4fd8-81da-39e6065bd2fd.jpg",
+            "image": "shopify://shop_images/unnamed_49.jpg",
             "mobile_image": "shopify://shop_images/unnamed_14_7ff6f570-7d02-4b6e-b720-9b04d0ad90fe.jpg",
             "subheading": "",
             "title": "",
@@ -426,8 +426,8 @@
         "image_MeUyje": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_90.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_89.jpg",
+            "image": "shopify://shop_images/unnamed_51.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_52.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -560,8 +560,8 @@
         "image_mUz8HW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_17.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_16_5505e270-b8dc-40ce-9e1d-c3915b185af3.jpg",
+            "image": "shopify://shop_images/unnamed_53.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_54.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1016,40 +1016,56 @@
     "faq_updated_fQcMPC": {
       "type": "faq-updated",
       "blocks": {
+        "faq_item_XUfciM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Why should I choose a medical doctor for anti-wrinkle injections?",
+            "answer": "<p>Dr Scotton is an appointed NHS Consultant and fully registered with the GMC. Unlike non-medical practitioners, a doctor understands the complex anatomy of facial muscles. This ensures that your anti-wrinkle treatment is not only safe but precisely targeted to reduce fine lines without compromising your natural facial expressions.</p>"
+          }
+        },
         "faq_item_GrtaJp": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the consultation really 100% free?",
-            "answer": "<p>Yes. We believe every patient deserves to understand their skin biology before spending money on treatments. You will receive our full 3-Step Analysis (including the UV Skin Scan) and a bespoke treatment plan with zero cost and zero obligation.</p>"
+            "question": "Does it hurt?",
+            "answer": "<p>Most patients describe it as a tiny pinch, similar to plucking an eyebrow hair. We use the finest invisible needles available (much smaller than a vaccination needle), and the actual injection process takes less than 5 minutes.</p>"
           }
         },
         "faq_item_UXezCX": {
           "type": "faq_item",
           "settings": {
-            "question": "Am I obligated to book a treatment?",
-            "answer": "<p>Absolutely not. Our goal is to give you a clear roadmap. Whether you choose to start that journey with us or think it over at home is entirely your decision.</p>"
+            "question": "is there any downtime?",
+            "answer": "<p>Very little. It is often called a \"lunchtime procedure.\" You may have small bumps at the injection sites for 10-20 minutes, but these go down quickly. You can return to work or normal activities immediately, though we advise avoiding heavy gym sessions for 24 hours.</p>"
           }
         },
         "faq_item_XnW4hK": {
           "type": "faq_item",
           "settings": {
-            "question": "Do I need to remove my makeup?",
-            "answer": "<p>Ideally, yes.</p>"
+            "question": "How long does it last?",
+            "answer": "<p>You will start to see results after 5-10 days, with the full effect visible at 2 weeks. The results typically last <strong>3 to 4 months</strong>. We recommend a top-up when you start to see movement returning to maintain the smooth skin.</p>"
           }
         },
         "faq_item_kcLLyP": {
           "type": "faq_item",
           "settings": {
-            "question": "How long does it take?",
-            "answer": "<p>Please allow 30-45 minutes. Even though it is complimentary, this is a thorough medical-grade analysis, not a quick 5-minute chat. We take the time to understand your medical history and skin goals properly.</p>"
+            "question": "What happens at the 2 week review?",
+            "answer": "<p>We invite you back 14 days post-treatment. This allows Dr. Scotton to check the symmetry and \"settling\" of the product. If any adjustments or small top-ups are needed to perfect the result, they are done at this appointment.</p>"
+          }
+        },
+        "faq_item_nVeFXW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will my anti-wrinkle results look natural?",
+            "answer": "<p>Absolutely. We specialise in the \"Natural Look.\" The goal of modern medical aesthetics is not to freeze the face, but to look well-rested. Dr Scotton calculates a bespoke micro-dose based on your muscle mass. You will still be able to smile and express yourself; the difference is that the lines won't etch deeply into your skin.</p>"
           }
         }
       },
       "block_order": [
+        "faq_item_XUfciM",
         "faq_item_GrtaJp",
         "faq_item_UXezCX",
         "faq_item_XnW4hK",
-        "faq_item_kcLLyP"
+        "faq_item_kcLLyP",
+        "faq_item_nVeFXW"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
@@ -1080,7 +1096,7 @@
         "item_padding_vertical": 30,
         "icon_color": "#a69f6b",
         "icon_active_color": "#b8a164",
-        "icon_active_bg": "transparent",
+        "icon_active_bg": "rgba(0,0,0,0)",
         "icon_size": 24,
         "icon_border_width": 2,
         "show_decoration": true,
