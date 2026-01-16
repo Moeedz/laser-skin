@@ -2066,7 +2066,7 @@
         "show_message_field": true,
         "message_label": "How can we help you? (Optional Message)",
         "message_placeholder": "",
-        "button_text": "Request Callback",
+        "button_text": "Send Your Enquiry",
         "button_background": "#b8a164",
         "button_hover_background": "#9a8654",
         "button_text_color": "#ffffff",
