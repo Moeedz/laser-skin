@@ -3863,6 +3863,13 @@
             "question": "How often can I use my unlimited pass?",
             "answer": "<p>\"Unlimited\" means you can book as many sessions as is medically safe within 18 months. For most body areas, this means a session every 4–6 weeks to align with your hair growth cycles. This ensures we catch the hair in the \"Anagen\" (growth) phase for effective removal.</p>"
           }
+        },
+        "faq_item_JJxdHi": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I customize the areas in my pass?",
+            "answer": "<p>Yes. While our <strong>Daily Essentials (£799)</strong> covers the most popular combination (Legs, Bikini, and Underarms), we know every body is different. If you need a specific area—like a Men's Back & Shoulders package or a custom facial combination—we can create a bespoke <strong>Unlimited Pass</strong> price just for you. Simply fill in the contact form to request a quote.</p>"
+          }
         }
       },
       "block_order": [
@@ -3870,7 +3877,8 @@
         "faq_item_JfEqi9",
         "faq_item_k9KQgb",
         "faq_item_jNKBDm",
-        "faq_item_UWVQCe"
+        "faq_item_UWVQCe",
+        "faq_item_JJxdHi"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
