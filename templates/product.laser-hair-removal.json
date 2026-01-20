@@ -3875,8 +3875,8 @@
       "settings": {
         "section_bg_color": "#ffffff",
         "max_width": 900,
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 20,
+        "padding_bottom": 20,
         "side_padding": 30,
         "heading": "Your Questions. Answered",
         "heading_color": "#222222",
