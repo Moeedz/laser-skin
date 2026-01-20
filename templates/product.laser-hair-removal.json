@@ -3374,6 +3374,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/section_6_desktopp.jpg",
+            "mobile_image": "shopify://shop_images/section_6_mobile.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
