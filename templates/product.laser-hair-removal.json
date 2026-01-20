@@ -2138,6 +2138,79 @@
         "button_text_color": "#ffffff"
       }
     },
+    "treatment_pricing_hjdUCE": {
+      "type": "treatment-pricing",
+      "blocks": {
+        "treatment_NbwzRR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Upper Lip Or Chin",
+            "treatment_name_column1": "",
+            "single_price": "75.00",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
+          }
+        },
+        "treatment_TWcErn": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Lower Face",
+            "treatment_name_column1": "",
+            "single_price": "105.00",
+            "treatment_name_column2": "",
+            "course_price": "472.50"
+          }
+        },
+        "treatment_DGUDpX": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Full Face",
+            "treatment_name_column1": "",
+            "single_price": "175.00",
+            "treatment_name_column2": "",
+            "course_price": "787.50"
+          }
+        },
+        "treatment_LWReLR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Treatment Name",
+            "treatment_name_column1": "",
+            "single_price": "75.00",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
+          }
+        }
+      },
+      "block_order": [
+        "treatment_NbwzRR",
+        "treatment_TWcErn",
+        "treatment_DGUDpX",
+        "treatment_LWReLR"
+      ],
+      "disabled": true,
+      "name": "Treatment Pricing",
+      "settings": {
+        "show_section_title": true,
+        "section_title": "Our Treatments",
+        "show_two_columns": true,
+        "column1_title": "Treatment (Single Price)",
+        "column1_subtitle": "Pay as you go",
+        "show_button_column1": true,
+        "button_text_column1": "BOOK NOW",
+        "button_link_column1": "",
+        "column2_title": "Course Of 6",
+        "column2_subtitle": "Save more with packages",
+        "show_button_column2": true,
+        "button_text_column2": "BOOK NOW",
+        "button_link_column2": "",
+        "header_color": "#c9a86a",
+        "accent_color": "#d4a574",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
+      }
+    },
     "ss_image_with_text_9_GLgAya": {
       "type": "ss-image-with-text-9",
       "blocks": {
@@ -3300,8 +3373,8 @@
         "image_qBrUy3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/section_6_desktopp.jpg",
-            "mobile_image": "shopify://shop_images/section_6_mobile.jpg",
+            "image": "shopify://shop_images/unnamed_3_48d87255-a1bb-4bc2-8bdc-41ca1d38e074.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_4_8e3a1b88-5ff2-454b-9fb8-f7cdab3a05a3.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -3426,18 +3499,6 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
-      }
-    },
-    "custom_liquid_adtJDq": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "liquid": "<style>\n  /* --- MAIN CONTAINER --- */\n  .pricing-tabs-container {\n    background-color: #E0F7FA; /* Matches your Ice Blue Background */\n    padding: 20px 20px 60px 20px;\n    font-family: 'Helvetica', 'Arial', sans-serif;\n    color: #333;\n    text-align: center;\n  }\n\n  .tabs-wrapper {\n    max-width: 1000px;\n    margin: 0 auto;\n    background: #ffffff;\n    border-radius: 12px;\n    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft Premium Shadow */\n    overflow: hidden;\n  }\n\n  /* --- TAB NAVIGATION --- */\n  .tab-nav {\n    display: flex;\n    justify-content: center;\n    border-bottom: 1px solid #eee;\n    background: #fff;\n    flex-wrap: wrap;\n  }\n\n  .tab-btn {\n    padding: 20px 30px;\n    cursor: pointer;\n    background: none;\n    border: none;\n    font-size: 16px;\n    font-weight: 500;\n    color: #888;\n    transition: all 0.3s ease;\n    border-bottom: 4px solid transparent;\n    font-family: inherit;\n  }\n\n  .tab-btn:hover {\n    color: #9F835D; /* Darker Gold Hover */\n  }\n\n  /* --- ACTIVE TAB STATE (MATCHES YOUR BUTTONS) --- */\n  .tab-btn.active {\n    color: #000;\n    font-weight: 700;\n    border-bottom: 4px solid #9F835D; /* GOLD ACCENT */\n  }\n\n  /* --- TAB CONTENT LISTS --- */\n  .tab-pane {\n    display: none;\n    padding: 40px;\n    text-align: left;\n    animation: fadeIn 0.4s ease;\n  }\n\n  .tab-pane.active {\n    display: block;\n  }\n\n  .price-row {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 18px 0;\n    border-bottom: 1px solid #f4f4f4;\n    font-size: 16px;\n  }\n\n  .price-row:last-child {\n    border-bottom: none;\n  }\n\n  .price-area {\n    font-weight: 500;\n    color: #333;\n  }\n\n  .price-cost {\n    font-weight: 700;\n    color: #9F835D; /* Gold text for price to stand out */\n  }\n\n  /* --- MOBILE TWEAKS --- */\n  @media (max-width: 768px) {\n    .tab-btn {\n      flex: 1 1 45%;\n      padding: 15px 10px;\n      font-size: 14px;\n    }\n    .price-row {\n      font-size: 14px;\n    }\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; transform: translateY(5px); }\n    to { opacity: 1; transform: translateY(0); }\n  }\n</style>\n\n<div class=\"pricing-tabs-container\">\n \n  <div class=\"tabs-wrapper\">\n    <div class=\"tab-nav\">\n      <button class=\"tab-btn active\" onclick=\"openTab(event, 'tab-face')\">Face</button>\n      <button class=\"tab-btn\" onclick=\"openTab(event, 'tab-body')\">Body</button>\n      <button class=\"tab-btn\" onclick=\"openTab(event, 'tab-bikini')\">Bikini</button>\n      <button class=\"tab-btn\" onclick=\"openTab(event, 'tab-legs')\">Legs</button>\n      <button class=\"tab-btn\" onclick=\"openTab(event, 'tab-mens')\">Men's</button>\n    </div>\n\n    <div id=\"tab-face\" class=\"tab-pane active\">\n      <div class=\"price-row\">\n        <span class=\"price-area\">Upper Lip & Chin</span>\n        <span class=\"price-cost\">Unlimited Pass: £250</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Full Face</span>\n        <span class=\"price-cost\">Unlimited Pass: £399</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Jawline & Neck</span>\n        <span class=\"price-cost\">Unlimited Pass: £280</span>\n      </div>\n    </div>\n\n    <div id=\"tab-body\" class=\"tab-pane\">\n      <div class=\"price-row\">\n        <span class=\"price-area\">Underarms</span>\n        <span class=\"price-cost\">Unlimited Pass: £200</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Full Arms</span>\n        <span class=\"price-cost\">Unlimited Pass: £450</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Full Back</span>\n        <span class=\"price-cost\">Unlimited Pass: £600</span>\n      </div>\n    </div>\n\n    <div id=\"tab-bikini\" class=\"tab-pane\">\n      <div class=\"price-row\">\n        <span class=\"price-area\">Standard Bikini Line</span>\n        <span class=\"price-cost\">Unlimited Pass: £250</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Hollywood / Brazilian</span>\n        <span class=\"price-cost\">Unlimited Pass: £350</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Buttocks</span>\n        <span class=\"price-cost\">Unlimited Pass: £250</span>\n      </div>\n    </div>\n\n    <div id=\"tab-legs\" class=\"tab-pane\">\n      <div class=\"price-row\">\n        <span class=\"price-area\">Lower Legs</span>\n        <span class=\"price-cost\">Unlimited Pass: £400</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Full Legs</span>\n        <span class=\"price-cost\">Unlimited Pass: £600</span>\n      </div>\n       <div class=\"price-row\">\n        <span class=\"price-area\">Toes & Feet</span>\n        <span class=\"price-cost\">Unlimited Pass: £80</span>\n      </div>\n    </div>\n\n    <div id=\"tab-mens\" class=\"tab-pane\">\n      <div class=\"price-row\">\n        <span class=\"price-area\">Back & Shoulders</span>\n        <span class=\"price-cost\">Unlimited Pass: £650</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Chest & Abs</span>\n        <span class=\"price-cost\">Unlimited Pass: £650</span>\n      </div>\n      <div class=\"price-row\">\n        <span class=\"price-area\">Beard Sculpting</span>\n        <span class=\"price-cost\">Unlimited Pass: £300</span>\n      </div>\n    </div>\n\n  </div>\n</div>\n\n<script>\n  function openTab(evt, tabName) {\n    var i, tabContent, tabBtns;\n   \n    // Hide all tab panes\n    tabContent = document.getElementsByClassName(\"tab-pane\");\n    for (i = 0; i < tabContent.length; i++) {\n      tabContent[i].style.display = \"none\";\n    }\n\n    // Remove active class from all buttons\n    tabBtns = document.getElementsByClassName(\"tab-btn\");\n    for (i = 0; i < tabBtns.length; i++) {\n      tabBtns[i].className = tabBtns[i].className.replace(\" active\", \"\");\n    }\n\n    // Show current tab and add active class\n    document.getElementById(tabName).style.display = \"block\";\n    evt.currentTarget.className += \" active\";\n  }\n</script>",
-        "text_alignment": "center"
       }
     },
     "consultation_form_8BeJtz": {
@@ -3994,6 +4055,7 @@
     "ss_image_with_text_12_gUF6fh",
     "treatment_pricing_enhanced_XUyycc",
     "treatment_pricing_enhanced_dtHQt9",
+    "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
     "ss_clothing_image_grid_bYwVtF",
     "before_after_FYP3MP",
@@ -4007,7 +4069,6 @@
     "slideshow_dQVHm7",
     "slideshow_Ay9DCi",
     "slideshow_TEgK4F",
-    "custom_liquid_adtJDq",
     "consultation_form_8BeJtz",
     "slideshow_6QxCtK",
     "slideshow_W6af3e",
