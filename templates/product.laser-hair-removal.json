@@ -3831,29 +3831,36 @@
         "faq_item_dNmCQy": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "Why do you offer an \"Unlimited Pass\" instead of a Course of 6",
+            "answer": "<p>Because biology isn't a math equation. While many clinics sell courses of 6, the reality is that hormonal fluctuations and hair cycles mean many clients actually need 8, 10, or 12 sessions for complete smoothness. We believe you shouldn't be penalized for your biology. Our 18-Month Pass guarantees you get as many sessions as you need to achieve the result, without paying a penny extra.</p>"
           }
         },
         "faq_item_JfEqi9": {
           "type": "faq_item",
           "settings": {
             "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "answer": "<p>This is not the old-fashioned \"rubber band snap\" laser. We use medical-grade, In-Motion Diode technology. The handpiece is constantly moving, gradually warming the hair follicles rather than zapping them instantly. Most clients describe the sensation as a \"hot stone massage.\" It is virtually pain-free.</p>"
           }
         },
         "faq_item_k9KQgb": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "Can I pay in installments?",
+            "answer": "<p>Yes. We have partnered with Klarna to split the cost of your Unlimited Pass into 3 interest-free payments. You can secure your pass today with just the first instalment.</p>"
           }
         },
         "faq_item_jNKBDm": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "question": "Is it safe for my skin tone?",
+            "answer": "<p>Our Diode technology is one of the few lasers medically cleared for all skin tones (Fitzpatrick 1-6), including darker skin and tanned skin. However, safety is our priority. We always conduct a mandatory Patch Test during your free consultation before any treatment begins.</p>"
+          }
+        },
+        "faq_item_UWVQCe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How often can I use my unlimited pass?",
+            "answer": "<p>\"Unlimited\" means you can book as many sessions as is medically safe within 18 months. For most body areas, this means a session every 4–6 weeks to align with your hair growth cycles. This ensures we catch the hair in the \"Anagen\" (growth) phase for effective removal.</p>"
           }
         }
       },
@@ -3861,23 +3868,24 @@
         "faq_item_dNmCQy",
         "faq_item_JfEqi9",
         "faq_item_k9KQgb",
-        "faq_item_jNKBDm"
+        "faq_item_jNKBDm",
+        "faq_item_UWVQCe"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#1a1a1a",
+        "section_bg_color": "#ffffff",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
         "heading": "Your Questions. Answered",
-        "heading_color": "#ffffff",
+        "heading_color": "#222222",
         "heading_font_size": 48,
         "heading_font_weight": "400",
         "heading_font_style": "italic",
         "heading_alignment": "center",
         "heading_margin_bottom": 50,
-        "question_color": "#ffffff",
+        "question_color": "#222222",
         "question_font_size": 22,
         "question_font_weight": "600",
         "show_underline": true,
