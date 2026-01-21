@@ -3829,6 +3829,13 @@
     "faq_updated_jAQg98": {
       "type": "faq-updated",
       "blocks": {
+        "faq_item_XfRDXX": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer single sessions or Pay-As-You-Go?",
+            "answer": "<p>Yes, we offer single session pricing for all body areas. This is a great option if you just need a maintenance top-up or prefer to pay per visit. Simply fill in the contact form to request single session.</p>"
+          }
+        },
         "faq_item_dNmCQy": {
           "type": "faq_item",
           "settings": {
@@ -3873,6 +3880,7 @@
         }
       },
       "block_order": [
+        "faq_item_XfRDXX",
         "faq_item_dNmCQy",
         "faq_item_JfEqi9",
         "faq_item_k9KQgb",
