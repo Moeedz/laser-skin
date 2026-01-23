@@ -1252,8 +1252,8 @@
         "image_XC7TUN": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_47.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_46.jpg",
+            "image": "shopify://shop_images/unnamed_46.jpg",
+            "mobile_image": "shopify://shop_images/unnamed_47.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
