@@ -1016,6 +1016,13 @@
     "faq_updated_fQcMPC": {
       "type": "faq-updated",
       "blocks": {
+        "faq_item_4ypCE6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you treat sweating and migraines?",
+            "answer": "<p>Yes we do, please fill in the consultation form and we'll assist you regarding this.</p>"
+          }
+        },
         "faq_item_XUfciM": {
           "type": "faq_item",
           "settings": {
@@ -1060,6 +1067,7 @@
         }
       },
       "block_order": [
+        "faq_item_4ypCE6",
         "faq_item_XUfciM",
         "faq_item_GrtaJp",
         "faq_item_UXezCX",
