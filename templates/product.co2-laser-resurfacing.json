@@ -2098,13 +2098,6 @@
             "answer": "<p><strong>The Science of Fractional CO2</strong><br/>We utilize advanced <strong>Fractional CO2 Laser technology</strong>, widely considered the \"Gold Standard\" in dermatology for treating textured acne scars and deep wrinkles. Unlike older lasers that burn the entire skin surface, our technology creates thousands of microscopic thermal channels deep into the dermis. This triggers the body’s natural healing response, stimulating massive collagen production to \"fill in\" scars and smooth texture from the inside out.</p><p><strong>One Laser. Three Intensities.</strong><br/>We customize the depth of the CO2 energy to match your skin concerns and downtime availability:<br/></p><ul><li><strong>Level 1: The 'Refresh' (Light)Best For:</strong> Sun damage, uneven tone, and open pores.<strong>Downtime:</strong> 3-4 days (Redness and mild dryness).<br/></li><li><strong>Level 2: The 'Resurface' (Medium)Best For:</strong> Fine lines, crepey skin, and mild atrophic scarring.<strong>Downtime:</strong> 5-7 days (Bronzing and peeling).<br/></li><li><strong>Level 3: The 'Scar Repair' (Deep)Best For:</strong> Deep rolling acne scars, boxcar scars, and surgical scar revision.<strong>Downtime:</strong> 7-10+ days (Requires social downtime for maximum results).</li></ul>"
           }
         },
-        "faq_item_UbaFJR": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is my consultation complimentary?",
-            "answer": "<p>Yes, we do not charge for a consultation for CO2</p>"
-          }
-        },
         "faq_item_HrxNLf": {
           "type": "faq_item",
           "settings": {
@@ -2124,6 +2117,13 @@
           "settings": {
             "question": "Can I wear makeup afterward?",
             "answer": "<p>We recommend avoiding makeup for at least 24 hours after treatment to allow your skin to breathe and heal properly. After this period, you can resume your normal skincare and makeup routine.</p>"
+          }
+        },
+        "faq_item_UbaFJR": {
+          "type": "faq_item",
+          "settings": {
+            "question": "I'm unsure if the treatment is right for me, what shall I do?",
+            "answer": "<p>We offer general consultations at no cost. Just fill out the enquiry form and let us know or click skin consultation in the menu</p>"
           }
         },
         "faq_item_qJVU4c": {
@@ -2151,16 +2151,16 @@
           "type": "faq_item",
           "settings": {
             "question": "Location & Clinic Details",
-            "answer": "<p><strong>Laser Skin Clinics Wolverhampton</strong><br/>Located at: 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p><p><strong>Parking:</strong> Free private parking available.<br/><strong>Booking:</strong> All treatments require a prior consultation to assess skin suitability.</p><p></p><h3></h3>"
+            "answer": "<p><strong>Laser Skin Clinics Wolverhampton</strong><br/>Located at: 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p><p><strong>Parking:</strong> Free private parking available.</p><p></p><h3></h3>"
           }
         }
       },
       "block_order": [
         "faq_item_PNmVFK",
-        "faq_item_UbaFJR",
         "faq_item_HrxNLf",
         "faq_item_ddfEcQ",
         "faq_item_cYExH8",
+        "faq_item_UbaFJR",
         "faq_item_qJVU4c",
         "faq_item_Ek4P3d",
         "faq_item_hcEF7D",
