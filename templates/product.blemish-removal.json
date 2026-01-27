@@ -2038,29 +2038,50 @@
         "faq_item_i6eLaB": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "Does the treatment hurt?",
+            "answer": "<p>Most clients describe the sensation as very mild—similar to a quick \"pin-prick\" or a snap of a rubber band. For sensitive areas, we can apply a topical numbing cream to ensure your complete comfort. The procedure is very quick, often lasting only a few minutes.</p>"
           }
         },
         "faq_item_VaKqwp": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "question": "How long is the downtime?",
+            "answer": "<p>here is minimal downtime with our laser and plasma treatments. You may experience a small scab or slight redness in the treated area for 5–10 days. You can typically return to work and wear makeup immediately after your appointment.</p>"
           }
         },
         "faq_item_iAWpyp": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "Are the results permanent?",
+            "answer": "<p>Yes. Once a specific skin tag, mole, wart, or broken vein is removed, it is gone for good. While we cannot prevent <em>new</em> blemishes from forming elsewhere on your body due to genetics or aging, the treated lesion will not return.</p>"
+          }
+        },
+        "faq_item_9m6Uie": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is your price match guarantee?",
+            "answer": "<p>Yes. We are confident in our expertise and fair pricing. If you find another registered clinic offering the same treatment using comparable technology for a lower price, simply show us their quote, and we will match it and give you a £50 voucher. We believe you shouldn't have to choose between quality and cost.</p>"
+          }
+        },
+        "faq_item_jFay7w": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I be treated on the same day as my appointment?",
+            "answer": "<p>Yes! We know your time is valuable. In most cases, we can perform your consultation and treatment in the same appointment. You can walk in with your blemish and walk out without it.</p>"
+          }
+        },
+        "faq_item_TT4CYc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you treat blemishes on sensitive areas?",
+            "answer": "<p>Yes. Our precision technology allows us to safely treat delicate areas, including eyelids (for milia/tags), underarms, and the bikini line. Because our method uses targeted energy, there is no risk to the surrounding skin or eyes.</p>"
           }
         },
         "faq_item_iiVhY9": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "question": "What specific conditions do you treat?",
+            "answer": "<p>We specialize in the removal of:</p><ul><li><strong>Skin Tags</strong> (Achrocordon)</li><li><strong>Milia</strong> (Milk Spots)</li><li><strong>Spider Veins</strong> (Telangiectasia) & Blood Spots (Campbell de Morgan spots)</li><li><strong>Moles</strong> (subject to GP check)</li><li><strong>Warts & Verrucas</strong></li><li><strong>Age Spots</strong> (Solar Lentigines) & Sun Damage</li></ul>"
           }
         }
       },
@@ -2068,6 +2089,9 @@
         "faq_item_i6eLaB",
         "faq_item_VaKqwp",
         "faq_item_iAWpyp",
+        "faq_item_9m6Uie",
+        "faq_item_jFay7w",
+        "faq_item_TT4CYc",
         "faq_item_iiVhY9"
       ],
       "name": "FAQ Dark Theme",
