@@ -3853,8 +3853,8 @@
         "faq_item_k9KQgb": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I pay in installments?",
-            "answer": "<p>Yes. We have partnered with Klarna to split the cost of your Unlimited Pass into 3 interest-free payments. You can secure your pass today with just the first instalment.</p>"
+            "question": "Do you offer finance?",
+            "answer": "<p>Yes, we offer flexible finance options through Klarna. Please enquire to learn more.<br/><br/><br/></p>"
           }
         },
         "faq_item_jNKBDm": {
@@ -3909,7 +3909,7 @@
         "underline_color": "#b8a164",
         "underline_width": 60,
         "underline_height": 2,
-        "answer_color": "#b0b0b0",
+        "answer_color": "#1c1c1c",
         "answer_font_size": 14,
         "answer_line_height": 1.7,
         "answer_margin_top": 16,
