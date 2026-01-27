@@ -942,6 +942,8 @@
         "image_H4hGMh": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/unnamed_14_6bda16e2-af28-4633-9e9a-f6429eeee6cd.jpg",
+            "mobile_image": "shopify://shop_images/image1.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1013,7 +1015,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1054,7 +1056,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1074,6 +1076,8 @@
         "image_EwQXLg": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2_93f427ff-638f-42b5-9438-ff4a78bbd63a.jpg",
+            "mobile_image": "shopify://shop_images/image4444.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1145,7 +1149,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1186,7 +1190,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1206,6 +1210,7 @@
         "image_tXc4Kx": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/unnamed_96587a30-cadf-4392-b6cd-8e8fd47bff74.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1277,7 +1282,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1318,7 +1323,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1338,6 +1343,8 @@
         "image_M3LWiM": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/unnamed_2_0562f645-f550-4d2d-9186-7a9f26242a84.jpg",
+            "mobile_image": "shopify://shop_images/image555.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1409,7 +1416,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1450,7 +1457,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1470,6 +1477,7 @@
         "image_6MadTr": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/unnamed_55_50833338-676f-48a9-8c6e-fec7e4550414.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1541,7 +1549,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1582,7 +1590,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1598,36 +1606,6 @@
     },
     "slideshow_PHn7xC": {
       "type": "slideshow",
-      "blocks": {
-        "image_XhGC3A": {
-          "type": "image",
-          "settings": {
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_XhGC3A"
-      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1673,7 +1651,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1714,7 +1692,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1793,7 +1771,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 15,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1834,7 +1812,7 @@
         "button_font_size": 15,
         "button_font_weight": "600",
         "button_border_radius": 8,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_trust_badges": true,
         "trust_border_color": "#e0e0e0",
@@ -1851,36 +1829,6 @@
     },
     "slideshow_EKcKVH": {
       "type": "slideshow",
-      "blocks": {
-        "image_rHkGJi": {
-          "type": "image",
-          "settings": {
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_rHkGJi"
-      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1926,7 +1874,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1967,7 +1915,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1983,36 +1931,6 @@
     },
     "slideshow_68LnRz": {
       "type": "slideshow",
-      "blocks": {
-        "image_xQQQHg": {
-          "type": "image",
-          "settings": {
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_xQQQHg"
-      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2058,7 +1976,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -2099,7 +2017,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -2113,12 +2031,93 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "faq_updated_8F7kX4": {
+      "type": "faq-updated",
+      "blocks": {
+        "faq_item_i6eLaB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How bad is the downtime, really?",
+            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+          }
+        },
+        "faq_item_VaKqwp": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the treatment hurt?",
+            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+          }
+        },
+        "faq_item_iAWpyp": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How quickly will I see results?",
+            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+          }
+        },
+        "faq_item_iiVhY9": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I spread the cost?",
+            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_i6eLaB",
+        "faq_item_VaKqwp",
+        "faq_item_iAWpyp",
+        "faq_item_iiVhY9"
+      ],
+      "name": "FAQ Dark Theme",
+      "settings": {
+        "section_bg_color": "#1a1a1a",
+        "max_width": 900,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "side_padding": 30,
+        "heading": "Your Questions. Answered",
+        "heading_color": "#ffffff",
+        "heading_font_size": 24,
+        "heading_font_weight": "400",
+        "heading_font_style": "italic",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 50,
+        "question_color": "#ffffff",
+        "question_font_size": 16,
+        "question_font_weight": "600",
+        "show_underline": true,
+        "underline_color": "#b8a164",
+        "underline_width": 60,
+        "underline_height": 2,
+        "answer_color": "#b0b0b0",
+        "answer_font_size": 16,
+        "answer_line_height": 1.7,
+        "answer_margin_top": 16,
+        "divider_color": "#333333",
+        "item_padding_vertical": 30,
+        "icon_color": "#b8a164",
+        "icon_active_color": "#b8a164",
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 24,
+        "icon_border_width": 2,
+        "show_decoration": true,
+        "decoration_color": "#b8a164",
+        "decoration_size": 40,
+        "decoration_opacity": 0.6,
+        "all_items_open": false,
+        "first_item_open": false,
+        "allow_multiple_open": true
+      }
+    },
     "slideshow_VnzURh": {
       "type": "slideshow",
       "blocks": {
         "image_PRzPPG": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Location_And_contact.jpg",
+            "mobile_image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Contact.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -2190,7 +2189,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -2231,7 +2230,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -2243,85 +2242,6 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
-      }
-    },
-    "faq_updated_8F7kX4": {
-      "type": "faq-updated",
-      "blocks": {
-        "faq_item_i6eLaB": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
-          }
-        },
-        "faq_item_VaKqwp": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
-          }
-        },
-        "faq_item_iAWpyp": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
-          }
-        },
-        "faq_item_iiVhY9": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_i6eLaB",
-        "faq_item_VaKqwp",
-        "faq_item_iAWpyp",
-        "faq_item_iiVhY9"
-      ],
-      "name": "FAQ Dark Theme",
-      "settings": {
-        "section_bg_color": "#1a1a1a",
-        "max_width": 900,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "side_padding": 30,
-        "heading": "Your Questions. Answered",
-        "heading_color": "#ffffff",
-        "heading_font_size": 48,
-        "heading_font_weight": "400",
-        "heading_font_style": "italic",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 50,
-        "question_color": "#ffffff",
-        "question_font_size": 22,
-        "question_font_weight": "600",
-        "show_underline": true,
-        "underline_color": "#b8a164",
-        "underline_width": 60,
-        "underline_height": 2,
-        "answer_color": "#b0b0b0",
-        "answer_font_size": 16,
-        "answer_line_height": 1.7,
-        "answer_margin_top": 16,
-        "divider_color": "#333333",
-        "item_padding_vertical": 30,
-        "icon_color": "#b8a164",
-        "icon_active_color": "#b8a164",
-        "icon_active_bg": "transparent",
-        "icon_size": 36,
-        "icon_border_width": 2,
-        "show_decoration": true,
-        "decoration_color": "#b8a164",
-        "decoration_size": 40,
-        "decoration_opacity": 0.6,
-        "all_items_open": false,
-        "first_item_open": false,
-        "allow_multiple_open": true
       }
     }
   },
