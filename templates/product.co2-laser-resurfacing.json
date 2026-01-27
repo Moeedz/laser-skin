@@ -2133,6 +2133,13 @@
             "answer": "<p>CO2 laser is incredibly effective, but it requires caution on darker skin tones (Fitzpatrick 4-6) due to the risk of pigmentation changes. We require a mandatory consultation and patch test for <em>every</em> client to ensure your safety before we proceed.</p>"
           }
         },
+        "faq_item_yVNnp8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you have finance options?",
+            "answer": "<p>Yes, we offer flexible finance options through Klarna. Please enquire to learn more.</p>"
+          }
+        },
         "faq_item_Ek4P3d": {
           "type": "faq_item",
           "settings": {
@@ -2162,6 +2169,7 @@
         "faq_item_cYExH8",
         "faq_item_UbaFJR",
         "faq_item_qJVU4c",
+        "faq_item_yVNnp8",
         "faq_item_Ek4P3d",
         "faq_item_hcEF7D",
         "faq_item_x7jNzt"
