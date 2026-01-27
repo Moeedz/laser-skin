@@ -2087,6 +2087,13 @@
             "answer": "<p>Most patients describe it as a mild stinging sensation rather than \"pain.\" We use a strong numbing cream beforehand to make the procedure as comfortable as possible. The product itself has a slightly different pH to your skin, which causes the short-lived sting, but this fades seconds after injection.</p>"
           }
         },
+        "faq_item_Rj9Dtr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you have finance options?",
+            "answer": "<p>Yes, we offer flexible finance options through Klarna. Please enquire to learn more.</p>"
+          }
+        },
         "faq_item_tncYma": {
           "type": "faq_item",
           "settings": {
@@ -2142,6 +2149,7 @@
         "faq_item_47CnaL",
         "faq_item_Qp9YEm",
         "faq_item_jaqGgh",
+        "faq_item_Rj9Dtr",
         "faq_item_tncYma",
         "faq_item_Lbdw7F",
         "faq_item_4yfrz3",
