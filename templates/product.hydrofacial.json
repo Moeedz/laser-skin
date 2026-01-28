@@ -2015,29 +2015,36 @@
         "faq_item_JHEwXH": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "What exactly does a Hydrofacial do for my skin?",
+            "answer": "<p>Think of it as a \"deep clean and reset\" for your complexion. It uses a unique vortex technology to simultaneously exfoliate dead skin cells, extract impurities (like blackheads), and infuse your skin with intense hydration and serums. It delivers the results of a medical facial with the relaxation of a spa treatment.</p>"
           }
         },
         "faq_item_W9fEyb": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "question": "Is there any downtime afterwards?",
+            "answer": "<p>Zero. This is often called the \"lunchtime facial\" because you can return to work or go out for dinner immediately after. You will leave with a noticeable glow, not red or irritated skin. It is perfect for prepping your skin 1-2 days before a big event or wedding.</p>"
           }
         },
         "faq_item_c8YeGG": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "Will it hurt or feel uncomfortable?",
+            "answer": "<p>Not at all. Most clients find it incredibly relaxing. You may feel a slight \"suction\" sensation during the extraction phase (as we clear out pores), but it is painless and non-invasive. There are no needles and no harsh peeling involved.</p>"
           }
         },
         "faq_item_KnTRzP": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "question": "Is it suitable for sensitive or acne prone skin?",
+            "answer": "<p>Yes. Because the Hydrofacial is customizable, we can adjust the suction strength and serum blend to suit your skin type. It is actually excellent for acne as it deeply cleanses congestion and bacteria from the pores without the aggression of manual squeezing.</p>"
+          }
+        },
+        "faq_item_WBwCLK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I wear makeup straight after?",
+            "answer": "<p>Yes, you can, although we love for you to let your skin breathe and soak up the serums for the rest of the day! If you do apply makeup, you'll likely find it sits smoother and looks better than usual thanks to the exfoliation.</p>"
           }
         }
       },
@@ -2045,7 +2052,8 @@
         "faq_item_JHEwXH",
         "faq_item_W9fEyb",
         "faq_item_c8YeGG",
-        "faq_item_KnTRzP"
+        "faq_item_KnTRzP",
+        "faq_item_WBwCLK"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
