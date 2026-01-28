@@ -130,6 +130,7 @@
         "liquid_NdwPrd",
         "complementary_products"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "container_size": "xl",
@@ -335,137 +336,6 @@
         "faq_link_url": ""
       }
     },
-    "ss_image_with_text_12_PPNnyT": {
-      "type": "ss-image-with-text-12",
-      "blocks": {
-        "slide_mTH4wq": {
-          "type": "slide",
-          "settings": {
-            "heading": "<p><strong>{{ product.title }}</strong></p>",
-            "text": "",
-            "button": "",
-            "button_url": "",
-            "button2": "",
-            "button2_url": "",
-            "video_autoplay": true,
-            "video_loop": true,
-            "video_muted": true,
-            "video_controls": false,
-            "image": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2-facial-social-media-graphics-3_70566a6d-802f-4622-b3bc-a2cd62512dbb.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_mTH4wq"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
-        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
-      ],
-      "name": "SS - Image With Text #12",
-      "settings": {
-        "slide_gap": 70,
-        "slide_gap_mobile": 24,
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "center",
-        "content_mt": 0,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 28,
-        "heading_height": 110,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 170,
-        "text_mt": 32,
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_mt": 32,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 38,
-        "button_padding_horizontal_mobile": 38,
-        "button_radius": 100,
-        "button_border_thickness": 0,
-        "button_style": "non_outline",
-        "button2_custom": false,
-        "button2_font": "josefin_sans_n4",
-        "button2_size": 16,
-        "button2_size_mobile": 16,
-        "button2_height": 100,
-        "button2_mt": 16,
-        "button2_mt_mobile": 16,
-        "button2_padding_vertical": 16,
-        "button2_padding_vertical_mobile": 16,
-        "button2_padding_horizontal": 38,
-        "button2_padding_horizontal_mobile": 38,
-        "button2_radius": 100,
-        "button2_border_thickness": 0,
-        "button2_style": "outline",
-        "images_position": "left",
-        "images_position_mobile": "bottom",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "image_shape": "none",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 13,
-        "number_size_mobile": 13,
-        "pagination_text": "",
-        "pagination_text_custom": false,
-        "pagination_text_font": "josefin_sans_n4",
-        "pagination_text_size": 16,
-        "pagination_text_size_mobile": 16,
-        "pagination_text_height": 130,
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#b59de3",
-        "button_bg_hover_color": "#b198de",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "button2_color": "#000000",
-        "button2_hover_color": "#ffffff",
-        "button2_bg_color": "rgba(0,0,0,0)",
-        "button2_bg_hover_color": "#000000",
-        "button2_border_color": "#000000",
-        "button2_border_hover_color": "#000000",
-        "image_border_color": "#000000",
-        "dots_bg_color": "",
-        "dots_bg_hover_color": "#000000",
-        "dots_border_color": "#000000",
-        "dots_border_hover_color": "#000000",
-        "number_color": "#000000",
-        "number_hover_color": "#ffffff",
-        "pagination_text_color": "#000000",
-        "background_color": "#645e5c",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 6,
-        "padding_horizontal_mobile": 1,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
-    },
     "ss_image_with_text_12_gUF6fh": {
       "type": "ss-image-with-text-12",
       "blocks": {
@@ -490,6 +360,7 @@
       "block_order": [
         "slide_4jhyPz"
       ],
+      "disabled": true,
       "custom_css": [
         "p {padding-top: 10px; padding-bottom: 5px;}",
         ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
@@ -596,79 +467,6 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
-      }
-    },
-    "treatment_pricing_hjdUCE": {
-      "type": "treatment-pricing",
-      "blocks": {
-        "treatment_NbwzRR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Hydfrofacial Express 30 Minute Treatment",
-            "treatment_name_column1": "",
-            "single_price": "60",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
-          }
-        },
-        "treatment_TWcErn": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Hydrofacial Full Hour Treatment",
-            "treatment_name_column1": "",
-            "single_price": "100",
-            "treatment_name_column2": "",
-            "course_price": "472.50"
-          }
-        },
-        "treatment_DGUDpX": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Express Course Of 3",
-            "treatment_name_column1": "",
-            "single_price": "150",
-            "treatment_name_column2": "",
-            "course_price": "787.50"
-          }
-        },
-        "treatment_LWReLR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Full Treatment Course Of 3",
-            "treatment_name_column1": "",
-            "single_price": "275",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
-          }
-        }
-      },
-      "block_order": [
-        "treatment_NbwzRR",
-        "treatment_TWcErn",
-        "treatment_DGUDpX",
-        "treatment_LWReLR"
-      ],
-      "disabled": true,
-      "name": "Treatment Pricing",
-      "settings": {
-        "show_section_title": true,
-        "section_title": "Pricing",
-        "show_two_columns": false,
-        "column1_title": "HYDROFACIAL",
-        "column1_subtitle": "Alternative Course Available On Request",
-        "show_button_column1": true,
-        "button_text_column1": "BOOK ONLINE",
-        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195382&services=2536812&location=4546",
-        "column2_title": "Course Of 6",
-        "column2_subtitle": "Save more with packages",
-        "show_button_column2": true,
-        "button_text_column2": "BOOK NOW",
-        "button_link_column2": "",
-        "header_color": "#c9a86a",
-        "accent_color": "#d4a574",
-        "header_text_color": "#ffffff",
-        "button_color": "#c9a86a",
-        "button_text_color": "#ffffff"
       }
     },
     "ss_image_with_text_9_GLgAya": {
@@ -791,6 +589,7 @@
         "button_HfVK4Q",
         "button_wtK88A"
       ],
+      "disabled": true,
       "name": "SS - Image With Text #9",
       "settings": {
         "body_gap": 50,
@@ -848,6 +647,7 @@
       "block_order": [
         "link_L4C8Dg"
       ],
+      "disabled": true,
       "name": "SS - Threads Image Grid",
       "settings": {
         "font_size": 24,
@@ -857,50 +657,6 @@
         "padding_bottom": 36,
         "padding_vertical": 0,
         "section-width": 200
-      }
-    },
-    "before_after_FYP3MP": {
-      "type": "before-after",
-      "blocks": {
-        "before_h3jXfm": {
-          "type": "before",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/3D-Brochure_ho2-results-1.jpg",
-            "text": "Before",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        },
-        "after_PymKJA": {
-          "type": "after",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
-            "text": "After",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "before_h3jXfm",
-        "after_PymKJA"
-      ],
-      "disabled": true,
-      "name": "t:sections.before_after.presets.before_after.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "subheading": "",
-        "title": "Before/after",
-        "content": "",
-        "cursor_direction": "horizontal",
-        "cursor_initial_position": 50,
-        "cursor_background": "#ffffff",
-        "cursor_arrows_color": "#000000"
       }
     },
     "rich_text_nziPUE": {
@@ -917,6 +673,7 @@
       "block_order": [
         "heading_U7EUj7"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
         "color_scheme": "",
@@ -959,6 +716,7 @@
         "step_jiiz8x",
         "step_6jaGgE"
       ],
+      "disabled": true,
       "name": "SS - Steps #11",
       "settings": {
         "layout": "image_content",
@@ -1054,6 +812,7 @@
       "block_order": [
         "appio_google_reviews_carousel1_qFMFmN"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -1140,6 +899,7 @@
         "text_C7wfEW",
         "text_GEizER"
       ],
+      "disabled": true,
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
@@ -1156,12 +916,9 @@
   "order": [
     "main",
     "treatment_tabs_section_9KfATQ",
-    "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
-    "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
     "ss_clothing_image_grid_h4nJGV",
-    "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
