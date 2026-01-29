@@ -459,13 +459,23 @@
             "border_radius": 0
           },
           "blocks": {}
+        },
+        "ai_gen_block_62c6a96_MLaHjY": {
+          "type": "ai_gen_block_62c6a96",
+          "settings": {
+            "image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Contact.jpg",
+            "desktop_width_percent": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "ai_gen_block_62c6a96_wV9DPa",
         "ai_gen_block_62c6a96_UmPNwb",
         "ai_gen_block_62c6a96_BgzCHg",
-        "ai_gen_block_62c6a96_arjXfm"
+        "ai_gen_block_62c6a96_arjXfm",
+        "ai_gen_block_62c6a96_MLaHjY"
       ],
       "settings": {}
     },
