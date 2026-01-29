@@ -573,7 +573,6 @@
         "question_DLzrmg",
         "question_3WxPfa"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 768px) {.faq__content {flex-basis: 100% !important; }}"
       ],
