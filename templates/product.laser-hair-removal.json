@@ -2838,7 +2838,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/image_caa0b88b-3b20-44f4-9624-1990af634949.png",
-            "mobile_image": "shopify://shop_images/2_469cc616-fa8f-4dbc-8da8-67c15f75d507.jpg",
+            "mobile_image": "shopify://shop_images/4444.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -2971,7 +2971,7 @@
         "image_eQ7z4k": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/desktop_4.jpg",
+            "image": "shopify://shop_images/4444.png",
             "mobile_image": "shopify://shop_images/3.png",
             "subheading": "",
             "title": "",
