@@ -1913,6 +1913,13 @@
             "question": "Does the test patch cost?",
             "answer": "<p>Yes. The test patch is <strong>£30</strong>.</p><p>This is carried out during your consultation and allows us to safely assess how your skin responds to the laser before full treatment. The test patch helps reduce risk and ensures the most effective and comfortable settings are used for your skin.</p>"
           }
+        },
+        "faq_item_BcULRn": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Where are you based?",
+            "answer": "<p>We’re based at <strong>Laser Skin Clinics & Aesthetics Wolverhampton</strong>, located at:</p><p><strong>4 Perton Farm Barns, Jenny Walkers Lane, Wolverhampton, WV6 7HB</strong></p><p>Our clinic is <strong>around 10 minutes from Wolverhampton town centre</strong> and easily accessible by car.</p><p>✔ <strong>Free on-site parking available</strong></p><p>✔ Quiet, private clinical setting</p><p>✔ Easy access without city-centre congestion</p><p>If you’d like directions or help finding us, WhatsApp is the quickest way to get in touch.</p>"
+          }
         }
       },
       "block_order": [
@@ -1922,7 +1929,8 @@
         "faq_item_QjrBUE",
         "faq_item_qpUa6i",
         "faq_item_fgttbn",
-        "faq_item_F7nydg"
+        "faq_item_F7nydg",
+        "faq_item_BcULRn"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
