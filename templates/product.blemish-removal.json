@@ -1210,8 +1210,8 @@
         "image_tXc4Kx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_96587a30-cadf-4392-b6cd-8e8fd47bff74.jpg",
-            "mobile_image": "shopify://shop_images/imagefffff.png",
+            "image": "shopify://shop_images/ST2D.png",
+            "mobile_image": "shopify://shop_images/ST2M.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
