@@ -942,8 +942,8 @@
         "image_H4hGMh": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_14_6bda16e2-af28-4633-9e9a-f6429eeee6cd.jpg",
-            "mobile_image": "shopify://shop_images/image1.png",
+            "image": "shopify://shop_images/STHD.png",
+            "mobile_image": "shopify://shop_images/STHM.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1076,8 +1076,8 @@
         "image_EwQXLg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_93f427ff-638f-42b5-9438-ff4a78bbd63a.jpg",
-            "mobile_image": "shopify://shop_images/image4444.png",
+            "image": "shopify://shop_images/ST1D.png",
+            "mobile_image": "shopify://shop_images/ST1M.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1806,7 +1806,7 @@
         "show_message_field": true,
         "message_label": "How can we help you? (Optional Message)",
         "message_placeholder": "",
-        "button_text": "Request Callback",
+        "button_text": "send your enquiry",
         "button_background": "#b8a164",
         "button_hover_background": "#9a8654",
         "button_text_color": "#ffffff",
