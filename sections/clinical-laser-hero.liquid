@@ -60,6 +60,11 @@
     max-width: var(--content-max-width, 580px);
   }
 
+  /* ---- Mobile Image (hidden on desktop) ---- */
+  .clh__mobile-image {
+    display: none;
+  }
+
   /* ---- Heading ---- */
   .clh__heading {
     font-family: 'Georgia', 'Times New Roman', serif;
@@ -282,57 +287,60 @@
   }
 
   /* ==========================================================================
-     Responsive — Mobile
+     Responsive — Mobile (stacked layout, no overlay)
      ========================================================================== */
   @media screen and (max-width: 768px) {
+    /* Hide the desktop overlay banner */
     .clh__banner {
-      height: var(--mobile-height);
-      align-items: flex-end;
+      display: none;
     }
 
-    .clh__overlay {
-      background: linear-gradient(
-        to top,
-        rgba(245, 237, 227, 0.95) 0%,
-        rgba(245, 237, 227, 0.8) 40%,
-        rgba(245, 237, 227, 0.3) 70%,
-        transparent 100%
-      );
+    /* Show the mobile stacked image */
+    .clh__mobile-image {
+      display: block;
+      width: 100%;
+      height: var(--mobile-height, 320px);
+      overflow: hidden;
     }
 
-    .clh__container {
-      padding: 0 24px 32px;
+    .clh__mobile-image .clh__mobile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--image-position);
+      display: block;
     }
 
-    .clh__content {
+    /* Mobile content block below image */
+    .clh__mobile-content {
+      display: block;
+      background-color: var(--hero-bg-color);
+      padding: 36px 24px 44px;
+    }
+
+    .clh__mobile-content .clh__content {
       max-width: 100%;
     }
 
-    .clh__heading {
-      font-size: calc(var(--heading-size, 48px) * 0.65);
+    .clh__mobile-content .clh__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.68);
     }
 
-    .clh__subheading {
-      font-size: calc(var(--subheading-size, 34px) * 0.7);
-      margin-bottom: 16px;
+    .clh__mobile-content .clh__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.72);
+      margin-bottom: 18px;
     }
 
-    .clh__description {
+    .clh__mobile-content .clh__description {
       max-width: 100%;
-      margin-bottom: 20px;
-      font-size: 15px;
+      margin-bottom: 22px;
     }
 
-    .clh__checklist {
-      margin-bottom: 24px;
-      gap: 10px;
+    .clh__mobile-content .clh__checklist {
+      margin-bottom: 28px;
     }
 
-    .clh__check-text {
-      font-size: 15px;
-    }
-
-    .clh__btn {
+    .clh__mobile-content .clh__btn {
       width: 100%;
       text-align: center;
       padding: 15px 28px;
@@ -368,23 +376,39 @@
     }
   }
 
+  /* Hide mobile markup on desktop */
+  @media screen and (min-width: 769px) {
+    .clh__mobile-image,
+    .clh__mobile-content {
+      display: none !important;
+    }
+  }
+
   /* ==========================================================================
      Responsive — Small Mobile
      ========================================================================== */
   @media screen and (max-width: 480px) {
-    .clh__container {
-      padding: 0 18px 28px;
+    .clh__mobile-content {
+      padding: 28px 18px 36px;
     }
 
-    .clh__heading {
-      font-size: calc(var(--heading-size, 48px) * 0.54);
+    .clh__mobile-content .clh__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.56);
     }
 
-    .clh__subheading {
-      font-size: calc(var(--subheading-size, 34px) * 0.6);
+    .clh__mobile-content .clh__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.62);
     }
 
-    .clh__btn {
+    .clh__mobile-content .clh__description {
+      font-size: 15px;
+    }
+
+    .clh__mobile-content .clh__check-text {
+      font-size: 15px;
+    }
+
+    .clh__mobile-content .clh__btn {
       font-size: 15px;
       padding: 14px 24px;
     }
@@ -435,11 +459,11 @@
     --overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --content-max-width: {{ section.settings.content_max_width }}px;
     --desktop-height: {{ section.settings.desktop_height }}px;
-    --mobile-height: {{ section.settings.mobile_height }}px;
+    --mobile-height: {{ section.settings.mobile_image_height }}px;
     --image-position: {{ section.settings.image_position }};
   "
 >
-  <!-- Hero Section -->
+  <!-- ===== DESKTOP: Overlay Banner ===== -->
   <div class="clh__banner">
     {% if section.settings.background_image != blank %}
       <div class="clh__image-wrapper">
@@ -455,9 +479,7 @@
     <div class="clh__container page-width">
       <div class="clh__content">
         {% if section.settings.heading != blank %}
-          <h2 class="clh__heading" data-clh-animate data-delay="0">
-            {{ section.settings.heading }}
-          </h2>
+          <h2 class="clh__heading" data-clh-animate data-delay="0">{{ section.settings.heading }}</h2>
         {% endif %}
 
         {% if section.settings.subheading_prefix != blank or section.settings.subheading_highlight != blank %}
@@ -468,17 +490,12 @@
         {% endif %}
 
         {% if section.settings.description != blank %}
-          <div class="clh__description" data-clh-animate data-delay="2">
-            {{ section.settings.description }}
-          </div>
+          <div class="clh__description" data-clh-animate data-delay="2">{{ section.settings.description }}</div>
         {% endif %}
 
         {% assign has_checks = false %}
         {% for block in section.blocks %}
-          {% if block.type == 'check_item' %}
-            {% assign has_checks = true %}
-            {% break %}
-          {% endif %}
+          {% if block.type == 'check_item' %}{% assign has_checks = true %}{% break %}{% endif %}
         {% endfor %}
 
         {% if has_checks %}
@@ -498,11 +515,7 @@
 
         {% if section.settings.button_label != blank %}
           <div class="clh__btn-wrapper" data-clh-animate data-delay="4">
-            <a
-              href="{{ section.settings.button_link }}"
-              class="clh__btn"
-              {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-            >
+            <a href="{{ section.settings.button_link }}" class="clh__btn" {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
               {{ section.settings.button_label }}
             </a>
           </div>
@@ -511,13 +524,63 @@
     </div>
   </div>
 
-  <!-- Trust Bar -->
+  <!-- ===== MOBILE: Stacked Layout (image top, content below) ===== -->
+  <div class="clh__mobile-image">
+    {% if section.settings.background_image != blank %}
+      {{
+        section.settings.background_image
+        | image_url: width: 800
+        | image_tag: loading: 'lazy', class: 'clh__mobile-img', widths: '400,600,800'
+      }}
+    {% endif %}
+  </div>
+
+  <div class="clh__mobile-content">
+    <div class="clh__content">
+      {% if section.settings.heading != blank %}
+        <h2 class="clh__heading" data-clh-animate data-delay="0">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.subheading_prefix != blank or section.settings.subheading_highlight != blank %}
+        <p class="clh__subheading" data-clh-animate data-delay="1">
+          {{ section.settings.subheading_prefix }}
+          <span class="clh__highlight">{{ section.settings.subheading_highlight }}</span>
+        </p>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="clh__description" data-clh-animate data-delay="2">{{ section.settings.description }}</div>
+      {% endif %}
+
+      {% if has_checks %}
+        <ul class="clh__checklist" data-clh-animate data-delay="3">
+          {% for block in section.blocks %}
+            {% if block.type == 'check_item' %}
+              <li class="clh__check-item" {{ block.shopify_attributes }}>
+                <span class="clh__check-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5L7.5 15L17 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="clh__check-text">{{ block.settings.text }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if section.settings.button_label != blank %}
+        <div class="clh__btn-wrapper" data-clh-animate data-delay="4">
+          <a href="{{ section.settings.button_link }}" class="clh__btn" {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- ===== Trust Bar ===== -->
   {% assign has_trust = false %}
   {% for block in section.blocks %}
-    {% if block.type == 'trust_item' %}
-      {% assign has_trust = true %}
-      {% break %}
-    {% endif %}
+    {% if block.type == 'trust_item' %}{% assign has_trust = true %}{% break %}{% endif %}
   {% endfor %}
 
   {% if has_trust %}
@@ -631,12 +694,12 @@
     },
     {
       "type": "range",
-      "id": "mobile_height",
-      "label": "Mobile Section Height",
-      "min": 400,
-      "max": 900,
+      "id": "mobile_image_height",
+      "label": "Mobile Image Height",
+      "min": 200,
+      "max": 500,
       "step": 10,
-      "default": 620,
+      "default": 320,
       "unit": "px"
     },
     {
@@ -646,7 +709,7 @@
     {
       "type": "color",
       "id": "background_color",
-      "label": "Fallback Background Color",
+      "label": "Background Color",
       "default": "#f5ede3"
     },
     {
