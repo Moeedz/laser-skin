@@ -1,0 +1,965 @@
+{% style %}
+  /* ==========================================================================
+     Clinical Laser Hero — Split Layout
+     ========================================================================== */
+
+  .clh {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* ---- Banner ---- */
+  .clh__banner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: var(--desktop-height);
+    background-color: var(--hero-bg-color);
+    overflow: hidden;
+  }
+
+  /* ---- Content Side ---- */
+  .clh__content-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: var(--section-padding-top) 0 var(--section-padding-bottom) 0;
+  }
+
+  .clh__content {
+    max-width: var(--content-max-width, 580px);
+    margin-left: auto;
+    padding: 40px 50px 40px 50px;
+  }
+
+  /* ---- Image Side ---- */
+  .clh__image-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .clh__bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--image-position);
+    display: block;
+  }
+
+  /* Soft gradient fade on the left edge of the image into the content bg */
+  .clh__image-fade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      to right,
+      var(--hero-bg-color) 0%,
+      rgba(255, 255, 255, 0) 18%
+    );
+  }
+
+  /* ---- Heading ---- */
+  .clh__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size, 48px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+
+  /* ---- Subheading ---- */
+  .clh__subheading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--subheading-size, 34px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--heading-color);
+    margin: 0 0 24px;
+  }
+
+  .clh__highlight {
+    color: var(--highlight-color);
+  }
+
+  /* ---- Description ---- */
+  .clh__description {
+    font-size: var(--body-size, 17px);
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0 0 28px;
+    max-width: 520px;
+  }
+
+  .clh__description p {
+    margin: 0;
+  }
+
+  /* ---- Checklist ---- */
+  .clh__checklist {
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .clh__check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .clh__check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--check-color);
+    flex-shrink: 0;
+  }
+
+  .clh__check-text {
+    font-size: calc(var(--body-size, 17px) + 1px);
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.4;
+  }
+
+  /* ---- Button ---- */
+  .clh__btn-wrapper {
+    margin-top: 8px;
+  }
+
+  .clh__btn {
+    display: inline-block;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 16px 36px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .clh__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    color: var(--btn-text);
+  }
+
+  .clh__btn:active {
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Trust Bar
+     ========================================================================== */
+  .clh__trust-bar {
+    background: var(--trust-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .clh__trust-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 22px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .clh__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  .clh__trust-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .clh__trust-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--trust-icon-color);
+    flex-shrink: 0;
+  }
+
+  .clh__trust-icon .trust-custom-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+
+  .clh__trust-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .clh__trust-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--trust-text);
+    line-height: 1.3;
+  }
+
+  .clh__trust-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--trust-text);
+    opacity: 0.75;
+    line-height: 1.3;
+  }
+
+  .clh__trust-stars {
+    display: flex;
+    gap: 2px;
+    color: var(--trust-icon-color);
+    margin-top: 2px;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-clh-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-clh-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .clh__banner {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .clh__content {
+      padding: 30px 36px 30px 36px;
+    }
+
+    .clh__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.8);
+    }
+
+    .clh__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.8);
+    }
+
+    .clh__trust-container {
+      gap: 16px;
+      padding: 20px 30px;
+    }
+
+    .clh__trust-item:not(:last-child)::after {
+      right: -12px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .clh__banner {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .clh__image-wrap {
+      height: var(--mobile-height, 320px);
+      order: -1;
+    }
+
+    .clh__image-fade {
+      background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        var(--hero-bg-color) 100%
+      );
+    }
+
+    .clh__content-wrap {
+      padding: 0;
+    }
+
+    .clh__content {
+      max-width: 100%;
+      margin: 0;
+      padding: 28px 24px 40px;
+    }
+
+    .clh__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.65);
+    }
+
+    .clh__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.7);
+      margin-bottom: 18px;
+    }
+
+    .clh__description {
+      max-width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .clh__checklist {
+      margin-bottom: 28px;
+    }
+
+    .clh__btn {
+      width: 100%;
+      text-align: center;
+      padding: 15px 28px;
+    }
+
+    /* Trust Bar Mobile — 2x2 grid */
+    .clh__trust-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 24px;
+      padding: 20px 24px;
+    }
+
+    .clh__trust-item:not(:last-child)::after {
+      display: none;
+    }
+
+    .clh__trust-item {
+      gap: 10px;
+    }
+
+    .clh__trust-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .clh__trust-title {
+      font-size: 13px;
+    }
+
+    .clh__trust-subtitle {
+      font-size: 12px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .clh__content {
+      padding: 24px 18px 36px;
+    }
+
+    .clh__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.54);
+    }
+
+    .clh__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.6);
+    }
+
+    .clh__description {
+      font-size: 15px;
+    }
+
+    .clh__check-text {
+      font-size: 15px;
+    }
+
+    .clh__btn {
+      font-size: 15px;
+      padding: 14px 24px;
+    }
+
+    .clh__trust-container {
+      gap: 14px 16px;
+      padding: 18px 18px;
+    }
+
+    .clh__trust-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .clh__trust-title {
+      font-size: 12px;
+    }
+
+    .clh__trust-subtitle {
+      font-size: 11px;
+    }
+
+    .clh__trust-stars svg {
+      width: 11px;
+      height: 11px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="clh"
+  id="clh-{{ section.id }}"
+  style="
+    --hero-bg-color: {{ section.settings.background_color }};
+    --heading-color: {{ section.settings.heading_color }};
+    --highlight-color: {{ section.settings.highlight_color }};
+    --text-color: {{ section.settings.text_color }};
+    --check-color: {{ section.settings.checkmark_color }};
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text_color }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --trust-bg: {{ section.settings.trust_bar_bg }};
+    --trust-text: {{ section.settings.trust_bar_text_color }};
+    --trust-icon-color: {{ section.settings.trust_icon_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --subheading-size: {{ section.settings.subheading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --content-max-width: {{ section.settings.content_max_width }}px;
+    --desktop-height: {{ section.settings.desktop_height }}px;
+    --mobile-height: {{ section.settings.mobile_image_height }}px;
+    --image-position: {{ section.settings.image_position }};
+  "
+>
+  <!-- Hero Banner — Split Layout -->
+  <div class="clh__banner">
+    <!-- Left: Content -->
+    <div class="clh__content-wrap">
+      <div class="clh__content">
+        {% if section.settings.heading != blank %}
+          <h2 class="clh__heading" data-clh-animate data-delay="0">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subheading_prefix != blank or section.settings.subheading_highlight != blank %}
+          <p class="clh__subheading" data-clh-animate data-delay="1">
+            {{ section.settings.subheading_prefix }}
+            <span class="clh__highlight">{{ section.settings.subheading_highlight }}</span>
+          </p>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="clh__description" data-clh-animate data-delay="2">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+
+        {% assign has_checks = false %}
+        {% for block in section.blocks %}
+          {% if block.type == 'check_item' %}
+            {% assign has_checks = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if has_checks %}
+          <ul class="clh__checklist" data-clh-animate data-delay="3">
+            {% for block in section.blocks %}
+              {% if block.type == 'check_item' %}
+                <li class="clh__check-item" {{ block.shopify_attributes }}>
+                  <span class="clh__check-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5L7.5 15L17 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="clh__check-text">{{ block.settings.text }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if section.settings.button_label != blank %}
+          <div class="clh__btn-wrapper" data-clh-animate data-delay="4">
+            <a
+              href="{{ section.settings.button_link }}"
+              class="clh__btn"
+              {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Right: Image (no crop) -->
+    <div class="clh__image-wrap">
+      {% if section.settings.background_image != blank %}
+        {{
+          section.settings.background_image
+          | image_url: width: 1400
+          | image_tag: loading: 'lazy', class: 'clh__bg-image', widths: '500,700,1000,1400'
+        }}
+      {% endif %}
+      <div class="clh__image-fade"></div>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  {% assign has_trust = false %}
+  {% for block in section.blocks %}
+    {% if block.type == 'trust_item' %}
+      {% assign has_trust = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_trust %}
+    <div class="clh__trust-bar">
+      <div class="clh__trust-container page-width">
+        {% for block in section.blocks %}
+          {% if block.type == 'trust_item' %}
+            <div class="clh__trust-item" {{ block.shopify_attributes }} data-clh-animate data-delay="{{ forloop.index }}">
+              <div class="clh__trust-icon">
+                {% if block.settings.custom_icon != blank %}
+                  {{ block.settings.custom_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'trust-custom-icon' }}
+                {% else %}
+                  {% case block.settings.icon %}
+                    {% when 'star' %}
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 3L22.09 11.26L31 12.57L24.5 18.88L26.18 27.73L18 23.44L9.82 27.73L11.5 18.88L5 12.57L13.91 11.26L18 3Z" fill="currentColor"/></svg>
+                    {% when 'medical' %}
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2"/><rect x="8" y="10" width="20" height="3" rx="1" fill="currentColor" opacity="0.3"/><rect x="8" y="15" width="14" height="2" rx="1" fill="currentColor" opacity="0.3"/><rect x="8" y="19" width="16" height="2" rx="1" fill="currentColor" opacity="0.3"/><rect x="22" y="15" width="6" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M25 18V22M23 20H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    {% when 'calendar' %}
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 14H32" stroke="currentColor" stroke-width="2"/><path d="M12 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="18" y="26" text-anchor="middle" fill="currentColor" font-size="12" font-weight="700" font-family="sans-serif">{{ block.settings.calendar_number }}</text></svg>
+                    {% when 'finance' %}
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="8" width="30" height="20" rx="3" stroke="currentColor" stroke-width="2"/><rect x="6" y="11" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="11" cy="22" r="2" fill="currentColor" opacity="0.4"/><circle cx="25" cy="22" r="2" fill="currentColor" opacity="0.4"/><path d="M20 14H30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><path d="M20 17H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                  {% endcase %}
+                {% endif %}
+              </div>
+              <div class="clh__trust-text">
+                {% if block.settings.title != blank %}
+                  <span class="clh__trust-title">{{ block.settings.title }}</span>
+                {% endif %}
+                {% if block.settings.subtitle != blank %}
+                  <span class="clh__trust-subtitle">{{ block.settings.subtitle }}</span>
+                {% endif %}
+                {% if block.settings.show_stars %}
+                  <div class="clh__trust-stars">
+                    {% for i in (1..5) %}
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1L8.59 4.22L12.1 4.73L9.55 7.22L10.18 10.72L7 9.04L3.82 10.72L4.45 7.22L1.9 4.73L5.41 4.22L7 1Z"/></svg>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('clh-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-clh-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Clinical Laser Hero",
+  "tag": "section",
+  "class": "clinical-hero-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Focus Point",
+      "options": [
+        { "value": "center center", "label": "Center" },
+        { "value": "center top", "label": "Top" },
+        { "value": "center bottom", "label": "Bottom" },
+        { "value": "left center", "label": "Left" },
+        { "value": "right center", "label": "Right" },
+        { "value": "left top", "label": "Top Left" },
+        { "value": "right top", "label": "Top Right" }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "header",
+      "content": "Section Height"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Desktop Height",
+      "min": 350,
+      "max": 900,
+      "step": 10,
+      "default": 560,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_image_height",
+      "label": "Mobile Image Height",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "default": 320,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f5ede3"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Stop guessing how many sessions you need."
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size (desktop)",
+      "min": 28,
+      "max": 72,
+      "step": 2,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "header",
+      "content": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "subheading_prefix",
+      "label": "Subheading Prefix",
+      "default": "Start with"
+    },
+    {
+      "type": "text",
+      "id": "subheading_highlight",
+      "label": "Subheading Highlight Text",
+      "default": "a clinical laser plan."
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size",
+      "label": "Subheading Font Size (desktop)",
+      "min": 20,
+      "max": 52,
+      "step": 2,
+      "default": 34,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Highlight / Accent Color",
+      "default": "#c8962e"
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description Text",
+      "default": "<p>We assess your skin and hair, then build a personalised laser hair removal plan using UK medical-grade technology for predictable, long-term reduction.</p>"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "default": 17,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Body / Description Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "checkmark_color",
+      "label": "Checkmark Color",
+      "default": "#c8962e"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Book your consultation"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Trust Bar"
+    },
+    {
+      "type": "color",
+      "id": "trust_bar_bg",
+      "label": "Trust Bar Background",
+      "default": "#faf6f1"
+    },
+    {
+      "type": "color",
+      "id": "trust_bar_text_color",
+      "label": "Trust Bar Text Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "trust_icon_color",
+      "label": "Trust Bar Icon Color",
+      "default": "#c8962e"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content Max Width",
+      "min": 400,
+      "max": 700,
+      "step": 10,
+      "default": 580,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 80,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 80,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "check_item",
+      "name": "Checklist Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Consultation-led"
+        }
+      ]
+    },
+    {
+      "type": "trust_item",
+      "name": "Trust Bar Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "star", "label": "Star (Rating)" },
+            { "value": "medical", "label": "Medical / Document" },
+            { "value": "calendar", "label": "Calendar" },
+            { "value": "finance", "label": "Finance / Card" }
+          ],
+          "default": "star"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon (overrides above)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Google 4.9/5"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_stars",
+          "label": "Show star rating below title",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "calendar_number",
+          "label": "Calendar Number (if calendar icon)",
+          "default": "7"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clinical Laser Hero",
+      "blocks": [
+        {
+          "type": "check_item",
+          "settings": { "text": "Consultation-led" }
+        },
+        {
+          "type": "check_item",
+          "settings": { "text": "Transparent treatment plans" }
+        },
+        {
+          "type": "check_item",
+          "settings": { "text": "No downtime for most areas" }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "show_stars": true
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "calendar_number": "7"
+          }
+        },
+        {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance",
+            "subtitle": "Available"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
