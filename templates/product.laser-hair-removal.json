@@ -2778,6 +2778,64 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "medical_technology_ct33BL": {
+      "type": "medical-technology",
+      "blocks": {
+        "feature_c4aXwb": {
+          "type": "feature",
+          "settings": {
+            "icon": "snowflake",
+            "title": "Advanced contact cooling",
+            "description": "The handpiece actively cools the skin before, during, and after each pulse to improve comfort and protect the skin barrier."
+          }
+        },
+        "feature_w7RykL": {
+          "type": "feature",
+          "settings": {
+            "icon": "arrow_right",
+            "title": "In-motion laser delivery",
+            "description": "Treatments are delivered in smooth, controlled passes to ensure even coverage and consistent energy distribution."
+          }
+        },
+        "feature_tyhfhJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "none",
+            "title": "Suitable for a wide range of skin tones",
+            "description": "Modern diode laser technology allows treatments to be adapted across different skin tones when clinically appropriate."
+          }
+        }
+      },
+      "block_order": [
+        "feature_c4aXwb",
+        "feature_w7RykL",
+        "feature_tyhfhJ"
+      ],
+      "name": "Medical Technology",
+      "settings": {
+        "heading": "Medical-grade technology. Thoughtfully delivered.",
+        "subtitle": "We use advanced diode laser systems and controlled treatment protocols to ensure safe, consistent treatment across skin types.",
+        "section_bg": "#ebcfc6",
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#9a8068",
+        "card_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.25) 100%)",
+        "card_border": "#d6cfc6",
+        "card_blur": 12,
+        "heading_font_size": 44,
+        "feature_title_font_size": 20,
+        "body_font_size": 16,
+        "disclaimer": "*Suitability confirmed during consultation.",
+        "button_label": "Book your consultation",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_dQVHm7": {
       "type": "slideshow",
       "blocks": {
@@ -3861,6 +3919,7 @@
     "slideshow_tiXh9k",
     "approach_comparison_rQT9KU",
     "slideshow_aatXMM",
+    "medical_technology_ct33BL",
     "slideshow_dQVHm7",
     "slideshow_Ay9DCi",
     "slideshow_TEgK4F",
