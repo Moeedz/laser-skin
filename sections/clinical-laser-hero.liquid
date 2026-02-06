@@ -1,6 +1,6 @@
 {% style %}
   /* ==========================================================================
-     Clinical Laser Hero Section
+     Clinical Laser Hero
      ========================================================================== */
 
   .clh {
@@ -58,11 +58,6 @@
 
   .clh__content {
     max-width: var(--content-max-width, 580px);
-  }
-
-  /* ---- Mobile Image (hidden on desktop) ---- */
-  .clh__mobile-image {
-    display: none;
   }
 
   /* ---- Heading ---- */
@@ -287,144 +282,102 @@
   }
 
   /* ==========================================================================
-     Responsive — Mobile (stacked layout, no overlay)
+     Responsive — Mobile: full-bleed overlay with bottom-up gradient
      ========================================================================== */
   @media screen and (max-width: 768px) {
-    /* Hide the desktop overlay banner */
     .clh__banner {
-      display: none;
+      height: var(--mobile-height);
+      align-items: flex-end;
     }
 
-    /* Show the mobile stacked image */
-    .clh__mobile-image {
-      display: block;
-      width: 100%;
-      height: var(--mobile-height, 320px);
-      overflow: hidden;
+    .clh__bg-image {
+      object-position: top center;
     }
 
-    .clh__mobile-image .clh__mobile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: var(--image-position);
-      display: block;
+    .clh__overlay {
+      background: linear-gradient(
+        to top,
+        rgba(245, 237, 227, 0.97) 0%,
+        rgba(245, 237, 227, 0.92) 25%,
+        rgba(245, 237, 227, 0.7) 45%,
+        rgba(245, 237, 227, 0.25) 65%,
+        transparent 80%
+      );
     }
 
-    /* Mobile content block below image */
-    .clh__mobile-content {
-      display: block;
-      background-color: var(--hero-bg-color);
-      padding: 36px 24px 44px;
+    .clh__container {
+      padding: 0 24px 24px;
     }
 
-    .clh__mobile-content .clh__content {
+    .clh__content {
       max-width: 100%;
     }
 
-    .clh__mobile-content .clh__heading {
+    .clh__heading {
       font-size: calc(var(--heading-size, 48px) * 0.68);
     }
 
-    .clh__mobile-content .clh__subheading {
+    .clh__subheading {
       font-size: calc(var(--subheading-size, 34px) * 0.72);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
-    .clh__mobile-content .clh__description {
+    .clh__description {
       max-width: 100%;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
+      font-size: 15px;
     }
 
-    .clh__mobile-content .clh__checklist {
-      margin-bottom: 28px;
+    .clh__checklist {
+      margin-bottom: 0;
+      gap: 10px;
     }
 
-    .clh__mobile-content .clh__btn {
+    .clh__check-text {
+      font-size: 15px;
+    }
+
+    .clh__btn {
       width: 100%;
       text-align: center;
       padding: 15px 28px;
     }
 
-    /* Trust Bar Mobile — 2x2 grid */
-    .clh__trust-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px 24px;
-      padding: 20px 24px;
+    /* Trust bar sits inside the banner on mobile */
+    .clh__trust-bar {
+      position: relative;
+      z-index: 2;
+      background: rgba(245, 237, 227, 0.85);
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
 
-    .clh__trust-item:not(:last-child)::after {
-      display: none;
+    .clh__trust-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      padding: 16px 20px;
     }
 
     .clh__trust-item {
       gap: 10px;
+      padding: 4px 0;
+    }
+
+    .clh__trust-item:not(:last-child)::after {
+      right: -16px;
+      height: 30px;
     }
 
     .clh__trust-icon svg {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
     }
 
     .clh__trust-title {
       font-size: 13px;
-    }
-
-    .clh__trust-subtitle {
-      font-size: 12px;
-    }
-  }
-
-  /* Hide mobile markup on desktop */
-  @media screen and (min-width: 769px) {
-    .clh__mobile-image,
-    .clh__mobile-content {
-      display: none !important;
-    }
-  }
-
-  /* ==========================================================================
-     Responsive — Small Mobile
-     ========================================================================== */
-  @media screen and (max-width: 480px) {
-    .clh__mobile-content {
-      padding: 28px 18px 36px;
-    }
-
-    .clh__mobile-content .clh__heading {
-      font-size: calc(var(--heading-size, 48px) * 0.56);
-    }
-
-    .clh__mobile-content .clh__subheading {
-      font-size: calc(var(--subheading-size, 34px) * 0.62);
-    }
-
-    .clh__mobile-content .clh__description {
-      font-size: 15px;
-    }
-
-    .clh__mobile-content .clh__check-text {
-      font-size: 15px;
-    }
-
-    .clh__mobile-content .clh__btn {
-      font-size: 15px;
-      padding: 14px 24px;
-    }
-
-    .clh__trust-container {
-      gap: 14px 16px;
-      padding: 18px 18px;
-    }
-
-    .clh__trust-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .clh__trust-title {
-      font-size: 12px;
     }
 
     .clh__trust-subtitle {
@@ -434,6 +387,60 @@
     .clh__trust-stars svg {
       width: 11px;
       height: 11px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .clh__container {
+      padding: 0 18px 20px;
+    }
+
+    .clh__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.56);
+    }
+
+    .clh__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.6);
+    }
+
+    .clh__description {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .clh__check-text {
+      font-size: 14px;
+    }
+
+    .clh__btn {
+      font-size: 15px;
+      padding: 14px 24px;
+    }
+
+    .clh__trust-container {
+      gap: 10px 20px;
+      padding: 14px 16px;
+    }
+
+    .clh__trust-item:not(:last-child)::after {
+      right: -12px;
+      height: 26px;
+    }
+
+    .clh__trust-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .clh__trust-title {
+      font-size: 12px;
+    }
+
+    .clh__trust-subtitle {
+      font-size: 10px;
     }
   }
 {% endstyle %}
@@ -459,11 +466,11 @@
     --overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --content-max-width: {{ section.settings.content_max_width }}px;
     --desktop-height: {{ section.settings.desktop_height }}px;
-    --mobile-height: {{ section.settings.mobile_image_height }}px;
+    --mobile-height: {{ section.settings.mobile_height }}px;
     --image-position: {{ section.settings.image_position }};
   "
 >
-  <!-- ===== DESKTOP: Overlay Banner ===== -->
+  <!-- Hero Banner -->
   <div class="clh__banner">
     {% if section.settings.background_image != blank %}
       <div class="clh__image-wrapper">
@@ -524,60 +531,7 @@
     </div>
   </div>
 
-  <!-- ===== MOBILE: Stacked Layout (image top, content below) ===== -->
-  <div class="clh__mobile-image">
-    {% if section.settings.background_image != blank %}
-      {{
-        section.settings.background_image
-        | image_url: width: 800
-        | image_tag: loading: 'lazy', class: 'clh__mobile-img', widths: '400,600,800'
-      }}
-    {% endif %}
-  </div>
-
-  <div class="clh__mobile-content">
-    <div class="clh__content">
-      {% if section.settings.heading != blank %}
-        <h2 class="clh__heading" data-clh-animate data-delay="0">{{ section.settings.heading }}</h2>
-      {% endif %}
-
-      {% if section.settings.subheading_prefix != blank or section.settings.subheading_highlight != blank %}
-        <p class="clh__subheading" data-clh-animate data-delay="1">
-          {{ section.settings.subheading_prefix }}
-          <span class="clh__highlight">{{ section.settings.subheading_highlight }}</span>
-        </p>
-      {% endif %}
-
-      {% if section.settings.description != blank %}
-        <div class="clh__description" data-clh-animate data-delay="2">{{ section.settings.description }}</div>
-      {% endif %}
-
-      {% if has_checks %}
-        <ul class="clh__checklist" data-clh-animate data-delay="3">
-          {% for block in section.blocks %}
-            {% if block.type == 'check_item' %}
-              <li class="clh__check-item" {{ block.shopify_attributes }}>
-                <span class="clh__check-icon">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5L7.5 15L17 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <span class="clh__check-text">{{ block.settings.text }}</span>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-
-      {% if section.settings.button_label != blank %}
-        <div class="clh__btn-wrapper" data-clh-animate data-delay="4">
-          <a href="{{ section.settings.button_link }}" class="clh__btn" {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
-            {{ section.settings.button_label }}
-          </a>
-        </div>
-      {% endif %}
-    </div>
-  </div>
-
-  <!-- ===== Trust Bar ===== -->
+  <!-- Trust Bar -->
   {% assign has_trust = false %}
   {% for block in section.blocks %}
     {% if block.type == 'trust_item' %}{% assign has_trust = true %}{% break %}{% endif %}
@@ -665,7 +619,7 @@
     {
       "type": "select",
       "id": "image_position",
-      "label": "Image Focus Point",
+      "label": "Image Focus Point (Desktop)",
       "options": [
         { "value": "center center", "label": "Center" },
         { "value": "center top", "label": "Top" },
@@ -685,7 +639,7 @@
     {
       "type": "range",
       "id": "desktop_height",
-      "label": "Desktop Section Height",
+      "label": "Desktop Height",
       "min": 350,
       "max": 900,
       "step": 10,
@@ -694,12 +648,12 @@
     },
     {
       "type": "range",
-      "id": "mobile_image_height",
-      "label": "Mobile Image Height",
-      "min": 200,
-      "max": 500,
+      "id": "mobile_height",
+      "label": "Mobile Height",
+      "min": 500,
+      "max": 1100,
       "step": 10,
-      "default": 320,
+      "default": 780,
       "unit": "px"
     },
     {
@@ -715,7 +669,7 @@
     {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Overlay Opacity (%)",
+      "label": "Desktop Overlay Opacity (%)",
       "min": 0,
       "max": 80,
       "step": 5,
