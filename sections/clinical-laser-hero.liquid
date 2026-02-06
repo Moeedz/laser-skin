@@ -1,68 +1,68 @@
 {% style %}
   /* ==========================================================================
-     Clinical Laser Hero — Split Layout
+     Clinical Laser Hero Section
      ========================================================================== */
 
-  .clh {
+  .clinical-hero {
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     width: 100%;
     overflow: hidden;
   }
 
   /* ---- Banner ---- */
-  .clh__banner {
+  .clinical-hero__banner {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: var(--desktop-height);
+    display: flex;
+    align-items: center;
+    min-height: 520px;
+    padding: var(--section-padding-top) 0 var(--section-padding-bottom);
     background-color: var(--hero-bg-color);
     overflow: hidden;
   }
 
-  /* ---- Content Side ---- */
-  .clh__content-wrap {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    padding: var(--section-padding-top) 0 var(--section-padding-bottom) 0;
+  .clinical-hero__image-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
   }
 
-  .clh__content {
-    max-width: var(--content-max-width, 580px);
-    margin-left: auto;
-    padding: 40px 50px 40px 50px;
-  }
-
-  /* ---- Image Side ---- */
-  .clh__image-wrap {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .clh__bg-image {
+  .clinical-hero__bg-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: var(--image-position);
-    display: block;
+    object-position: center right;
   }
 
-  /* Soft gradient fade on the left edge of the image into the content bg */
-  .clh__image-fade {
+  .clinical-hero__overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-    pointer-events: none;
     background: linear-gradient(
       to right,
-      var(--hero-bg-color) 0%,
-      rgba(255, 255, 255, 0) 18%
+      rgba(245, 237, 227, var(--overlay-opacity, 0.15)) 0%,
+      rgba(245, 237, 227, calc(var(--overlay-opacity, 0.15) * 2.5)) 10%,
+      rgba(245, 237, 227, calc(var(--overlay-opacity, 0.15) * 4)) 35%,
+      rgba(245, 237, 227, calc(var(--overlay-opacity, 0.15) * 1)) 70%,
+      transparent 100%
     );
   }
 
+  /* ---- Container ---- */
+  .clinical-hero__container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .clinical-hero__content {
+    max-width: var(--content-max-width, 580px);
+  }
+
   /* ---- Heading ---- */
-  .clh__heading {
+  .clinical-hero__heading {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: var(--heading-size, 48px);
     font-weight: 400;
@@ -74,7 +74,7 @@
   }
 
   /* ---- Subheading ---- */
-  .clh__subheading {
+  .clinical-hero__subheading {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: var(--subheading-size, 34px);
     font-weight: 400;
@@ -84,12 +84,12 @@
     margin: 0 0 24px;
   }
 
-  .clh__highlight {
+  .clinical-hero__highlight {
     color: var(--highlight-color);
   }
 
   /* ---- Description ---- */
-  .clh__description {
+  .clinical-hero__description {
     font-size: var(--body-size, 17px);
     line-height: 1.7;
     color: var(--text-color);
@@ -97,12 +97,12 @@
     max-width: 520px;
   }
 
-  .clh__description p {
+  .clinical-hero__description p {
     margin: 0;
   }
 
   /* ---- Checklist ---- */
-  .clh__checklist {
+  .clinical-hero__checklist {
     list-style: none;
     margin: 0 0 32px;
     padding: 0;
@@ -111,13 +111,13 @@
     gap: 12px;
   }
 
-  .clh__check-item {
+  .clinical-hero__check-item {
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
-  .clh__check-icon {
+  .clinical-hero__check-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +125,7 @@
     flex-shrink: 0;
   }
 
-  .clh__check-text {
+  .clinical-hero__check-text {
     font-size: calc(var(--body-size, 17px) + 1px);
     font-weight: 600;
     color: var(--heading-color);
@@ -133,11 +133,11 @@
   }
 
   /* ---- Button ---- */
-  .clh__btn-wrapper {
+  .clinical-hero__btn-wrapper {
     margin-top: 8px;
   }
 
-  .clh__btn {
+  .clinical-hero__btn {
     display: inline-block;
     background: var(--btn-bg);
     color: var(--btn-text);
@@ -151,26 +151,26 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
-  .clh__btn:hover {
+  .clinical-hero__btn:hover {
     background: var(--btn-bg-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     color: var(--btn-text);
   }
 
-  .clh__btn:active {
+  .clinical-hero__btn:active {
     transform: translateY(0);
   }
 
   /* ==========================================================================
      Trust Bar
      ========================================================================== */
-  .clh__trust-bar {
+  .clinical-hero__trust-bar {
     background: var(--trust-bg);
     border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  .clh__trust-container {
+  .clinical-hero__trust-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 22px 50px;
@@ -181,7 +181,7 @@
     flex-wrap: wrap;
   }
 
-  .clh__trust-item {
+  .clinical-hero__trust-item {
     display: flex;
     align-items: center;
     gap: 14px;
@@ -189,7 +189,7 @@
     position: relative;
   }
 
-  .clh__trust-item:not(:last-child)::after {
+  .clinical-hero__trust-item:not(:last-child)::after {
     content: '';
     position: absolute;
     right: -20px;
@@ -200,7 +200,7 @@
     background: rgba(0, 0, 0, 0.1);
   }
 
-  .clh__trust-icon {
+  .clinical-hero__trust-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,26 +208,26 @@
     flex-shrink: 0;
   }
 
-  .clh__trust-icon .trust-custom-icon {
+  .clinical-hero__trust-icon .trust-custom-icon {
     width: 36px;
     height: 36px;
     object-fit: contain;
   }
 
-  .clh__trust-text {
+  .clinical-hero__trust-text {
     display: flex;
     flex-direction: column;
     gap: 1px;
   }
 
-  .clh__trust-title {
+  .clinical-hero__trust-title {
     font-size: 15px;
     font-weight: 700;
     color: var(--trust-text);
     line-height: 1.3;
   }
 
-  .clh__trust-subtitle {
+  .clinical-hero__trust-subtitle {
     font-size: 14px;
     font-weight: 500;
     color: var(--trust-text);
@@ -235,7 +235,7 @@
     line-height: 1.3;
   }
 
-  .clh__trust-stars {
+  .clinical-hero__trust-stars {
     display: flex;
     gap: 2px;
     color: var(--trust-icon-color);
@@ -245,181 +245,176 @@
   /* ==========================================================================
      Animations
      ========================================================================== */
-  [data-clh-animate] {
+  [data-animate] {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
   }
 
-  [data-clh-animate].is-visible {
+  [data-animate].is-visible {
     opacity: 1;
     transform: translateY(0);
   }
 
   /* ==========================================================================
-     Responsive — Tablet
+     Responsive
      ========================================================================== */
   @media screen and (max-width: 1024px) {
-    .clh__banner {
-      grid-template-columns: 1.1fr 0.9fr;
+    .clinical-hero__banner {
+      min-height: 460px;
     }
 
-    .clh__content {
-      padding: 30px 36px 30px 36px;
+    .clinical-hero__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.82);
     }
 
-    .clh__heading {
-      font-size: calc(var(--heading-size, 48px) * 0.8);
+    .clinical-hero__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.82);
     }
 
-    .clh__subheading {
-      font-size: calc(var(--subheading-size, 34px) * 0.8);
-    }
-
-    .clh__trust-container {
+    .clinical-hero__trust-container {
       gap: 16px;
       padding: 20px 30px;
     }
 
-    .clh__trust-item:not(:last-child)::after {
+    .clinical-hero__trust-item:not(:last-child)::after {
       right: -12px;
     }
   }
 
-  /* ==========================================================================
-     Responsive — Mobile
-     ========================================================================== */
   @media screen and (max-width: 768px) {
-    .clh__banner {
-      grid-template-columns: 1fr;
+    .clinical-hero__banner {
       min-height: auto;
+      padding: 0;
+      flex-direction: column;
     }
 
-    .clh__image-wrap {
-      height: var(--mobile-height, 320px);
-      order: -1;
+    .clinical-hero__image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 320px;
     }
 
-    .clh__image-fade {
+    .clinical-hero__overlay {
       background: linear-gradient(
         to bottom,
-        transparent 60%,
-        var(--hero-bg-color) 100%
+        transparent 50%,
+        rgba(245, 237, 227, 0.6) 100%
       );
     }
 
-    .clh__content-wrap {
-      padding: 0;
+    .clinical-hero__container {
+      padding: 36px 24px 44px;
+      background-color: var(--hero-bg-color);
     }
 
-    .clh__content {
+    .clinical-hero__content {
       max-width: 100%;
-      margin: 0;
-      padding: 28px 24px 40px;
     }
 
-    .clh__heading {
-      font-size: calc(var(--heading-size, 48px) * 0.65);
+    .clinical-hero__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.68);
     }
 
-    .clh__subheading {
-      font-size: calc(var(--subheading-size, 34px) * 0.7);
+    .clinical-hero__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.72);
       margin-bottom: 18px;
     }
 
-    .clh__description {
+    .clinical-hero__description {
       max-width: 100%;
       margin-bottom: 22px;
     }
 
-    .clh__checklist {
+    .clinical-hero__checklist {
       margin-bottom: 28px;
     }
 
-    .clh__btn {
+    .clinical-hero__btn {
       width: 100%;
       text-align: center;
       padding: 15px 28px;
     }
 
-    /* Trust Bar Mobile — 2x2 grid */
-    .clh__trust-container {
+    .clinical-hero__trust-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px 24px;
       padding: 20px 24px;
     }
 
-    .clh__trust-item:not(:last-child)::after {
+    .clinical-hero__trust-item:not(:last-child)::after {
       display: none;
     }
 
-    .clh__trust-item {
+    .clinical-hero__trust-item {
       gap: 10px;
     }
 
-    .clh__trust-icon svg {
+    .clinical-hero__trust-icon svg {
       width: 28px;
       height: 28px;
     }
 
-    .clh__trust-title {
+    .clinical-hero__trust-title {
       font-size: 13px;
     }
 
-    .clh__trust-subtitle {
+    .clinical-hero__trust-subtitle {
       font-size: 12px;
     }
   }
 
-  /* ==========================================================================
-     Responsive — Small Mobile
-     ========================================================================== */
   @media screen and (max-width: 480px) {
-    .clh__content {
-      padding: 24px 18px 36px;
+    .clinical-hero__image-wrapper {
+      height: 260px;
     }
 
-    .clh__heading {
-      font-size: calc(var(--heading-size, 48px) * 0.54);
+    .clinical-hero__container {
+      padding: 28px 18px 36px;
     }
 
-    .clh__subheading {
-      font-size: calc(var(--subheading-size, 34px) * 0.6);
+    .clinical-hero__heading {
+      font-size: calc(var(--heading-size, 48px) * 0.56);
     }
 
-    .clh__description {
+    .clinical-hero__subheading {
+      font-size: calc(var(--subheading-size, 34px) * 0.62);
+    }
+
+    .clinical-hero__description {
       font-size: 15px;
     }
 
-    .clh__check-text {
+    .clinical-hero__check-text {
       font-size: 15px;
     }
 
-    .clh__btn {
+    .clinical-hero__btn {
       font-size: 15px;
       padding: 14px 24px;
     }
 
-    .clh__trust-container {
+    .clinical-hero__trust-container {
+      grid-template-columns: 1fr 1fr;
       gap: 14px 16px;
       padding: 18px 18px;
     }
 
-    .clh__trust-icon svg {
+    .clinical-hero__trust-icon svg {
       width: 24px;
       height: 24px;
     }
 
-    .clh__trust-title {
+    .clinical-hero__trust-title {
       font-size: 12px;
     }
 
-    .clh__trust-subtitle {
+    .clinical-hero__trust-subtitle {
       font-size: 11px;
     }
 
-    .clh__trust-stars svg {
+    .clinical-hero__trust-stars svg {
       width: 11px;
       height: 11px;
     }
@@ -427,8 +422,8 @@
 {% endstyle %}
 
 <section
-  class="clh"
-  id="clh-{{ section.id }}"
+  class="clinical-hero"
+  id="clinical-hero-{{ section.id }}"
   style="
     --hero-bg-color: {{ section.settings.background_color }};
     --heading-color: {{ section.settings.heading_color }};
@@ -444,38 +439,47 @@
     --heading-size: {{ section.settings.heading_font_size }}px;
     --subheading-size: {{ section.settings.subheading_font_size }}px;
     --body-size: {{ section.settings.body_font_size }}px;
+    --overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     --content-max-width: {{ section.settings.content_max_width }}px;
-    --desktop-height: {{ section.settings.desktop_height }}px;
-    --mobile-height: {{ section.settings.mobile_image_height }}px;
-    --image-position: {{ section.settings.image_position }};
   "
 >
-  <!-- Hero Banner — Split Layout -->
-  <div class="clh__banner">
-    <!-- Left: Content -->
-    <div class="clh__content-wrap">
-      <div class="clh__content">
+  <!-- Hero Section -->
+  <div class="clinical-hero__banner">
+    {% if section.settings.background_image != blank %}
+      <div class="clinical-hero__image-wrapper">
+        {{
+          section.settings.background_image
+          | image_url: width: 2000
+          | image_tag: loading: 'lazy', class: 'clinical-hero__bg-image', widths: '600,800,1200,1600,2000'
+        }}
+      </div>
+    {% endif %}
+    <div class="clinical-hero__overlay"></div>
+
+    <div class="clinical-hero__container page-width">
+      <div class="clinical-hero__content">
         {% if section.settings.heading != blank %}
-          <h2 class="clh__heading" data-clh-animate data-delay="0">
+          <h2 class="clinical-hero__heading" data-animate="fade-up">
             {{ section.settings.heading }}
           </h2>
         {% endif %}
 
         {% if section.settings.subheading_prefix != blank or section.settings.subheading_highlight != blank %}
-          <p class="clh__subheading" data-clh-animate data-delay="1">
+          <p class="clinical-hero__subheading" data-animate="fade-up" data-delay="1">
             {{ section.settings.subheading_prefix }}
-            <span class="clh__highlight">{{ section.settings.subheading_highlight }}</span>
+            <span class="clinical-hero__highlight">{{ section.settings.subheading_highlight }}</span>
           </p>
         {% endif %}
 
         {% if section.settings.description != blank %}
-          <div class="clh__description" data-clh-animate data-delay="2">
+          <div class="clinical-hero__description" data-animate="fade-up" data-delay="2">
             {{ section.settings.description }}
           </div>
         {% endif %}
 
+        <!-- Checklist Items -->
         {% assign has_checks = false %}
         {% for block in section.blocks %}
           {% if block.type == 'check_item' %}
@@ -485,14 +489,16 @@
         {% endfor %}
 
         {% if has_checks %}
-          <ul class="clh__checklist" data-clh-animate data-delay="3">
+          <ul class="clinical-hero__checklist" data-animate="fade-up" data-delay="3">
             {% for block in section.blocks %}
               {% if block.type == 'check_item' %}
-                <li class="clh__check-item" {{ block.shopify_attributes }}>
-                  <span class="clh__check-icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10.5L7.5 15L17 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <li class="clinical-hero__check-item" {{ block.shopify_attributes }}>
+                  <span class="clinical-hero__check-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 10.5L7.5 15L17 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </span>
-                  <span class="clh__check-text">{{ block.settings.text }}</span>
+                  <span class="clinical-hero__check-text">{{ block.settings.text }}</span>
                 </li>
               {% endif %}
             {% endfor %}
@@ -500,29 +506,19 @@
         {% endif %}
 
         {% if section.settings.button_label != blank %}
-          <div class="clh__btn-wrapper" data-clh-animate data-delay="4">
+          <div class="clinical-hero__btn-wrapper" data-animate="fade-up" data-delay="4">
             <a
               href="{{ section.settings.button_link }}"
-              class="clh__btn"
-              {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+              class="clinical-hero__btn"
+              {% if section.settings.button_open_new_tab %}
+                target="_blank" rel="noopener noreferrer"
+              {% endif %}
             >
               {{ section.settings.button_label }}
             </a>
           </div>
         {% endif %}
       </div>
-    </div>
-
-    <!-- Right: Image (no crop) -->
-    <div class="clh__image-wrap">
-      {% if section.settings.background_image != blank %}
-        {{
-          section.settings.background_image
-          | image_url: width: 1400
-          | image_tag: loading: 'lazy', class: 'clh__bg-image', widths: '500,700,1000,1400'
-        }}
-      {% endif %}
-      <div class="clh__image-fade"></div>
     </div>
   </div>
 
@@ -536,38 +532,62 @@
   {% endfor %}
 
   {% if has_trust %}
-    <div class="clh__trust-bar">
-      <div class="clh__trust-container page-width">
+    <div class="clinical-hero__trust-bar">
+      <div class="clinical-hero__trust-container page-width">
         {% for block in section.blocks %}
           {% if block.type == 'trust_item' %}
-            <div class="clh__trust-item" {{ block.shopify_attributes }} data-clh-animate data-delay="{{ forloop.index }}">
-              <div class="clh__trust-icon">
+            <div class="clinical-hero__trust-item" {{ block.shopify_attributes }} data-animate="fade-up" data-delay="{{ forloop.index }}">
+              <div class="clinical-hero__trust-icon">
                 {% if block.settings.custom_icon != blank %}
                   {{ block.settings.custom_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'trust-custom-icon' }}
                 {% else %}
                   {% case block.settings.icon %}
                     {% when 'star' %}
-                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 3L22.09 11.26L31 12.57L24.5 18.88L26.18 27.73L18 23.44L9.82 27.73L11.5 18.88L5 12.57L13.91 11.26L18 3Z" fill="currentColor"/></svg>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 3L22.09 11.26L31 12.57L24.5 18.88L26.18 27.73L18 23.44L9.82 27.73L11.5 18.88L5 12.57L13.91 11.26L18 3Z" fill="currentColor"/>
+                      </svg>
                     {% when 'medical' %}
-                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2"/><rect x="8" y="10" width="20" height="3" rx="1" fill="currentColor" opacity="0.3"/><rect x="8" y="15" width="14" height="2" rx="1" fill="currentColor" opacity="0.3"/><rect x="8" y="19" width="16" height="2" rx="1" fill="currentColor" opacity="0.3"/><rect x="22" y="15" width="6" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M25 18V22M23 20H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="6" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+                        <rect x="8" y="10" width="20" height="3" rx="1" fill="currentColor" opacity="0.3"/>
+                        <rect x="8" y="15" width="14" height="2" rx="1" fill="currentColor" opacity="0.3"/>
+                        <rect x="8" y="19" width="16" height="2" rx="1" fill="currentColor" opacity="0.3"/>
+                        <rect x="22" y="15" width="6" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M25 18V22M23 20H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
                     {% when 'calendar' %}
-                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 14H32" stroke="currentColor" stroke-width="2"/><path d="M12 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="18" y="26" text-anchor="middle" fill="currentColor" font-size="12" font-weight="700" font-family="sans-serif">{{ block.settings.calendar_number }}</text></svg>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="6" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 14H32" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M24 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <text x="18" y="26" text-anchor="middle" fill="currentColor" font-size="12" font-weight="700" font-family="sans-serif">{{ block.settings.calendar_number }}</text>
+                      </svg>
                     {% when 'finance' %}
-                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="8" width="30" height="20" rx="3" stroke="currentColor" stroke-width="2"/><rect x="6" y="11" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="11" cy="22" r="2" fill="currentColor" opacity="0.4"/><circle cx="25" cy="22" r="2" fill="currentColor" opacity="0.4"/><path d="M20 14H30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><path d="M20 17H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>
+                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="8" width="30" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+                        <rect x="6" y="11" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="11" cy="22" r="2" fill="currentColor" opacity="0.4"/>
+                        <circle cx="25" cy="22" r="2" fill="currentColor" opacity="0.4"/>
+                        <path d="M20 14H30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M20 17H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                      </svg>
                   {% endcase %}
                 {% endif %}
               </div>
-              <div class="clh__trust-text">
+              <div class="clinical-hero__trust-text">
                 {% if block.settings.title != blank %}
-                  <span class="clh__trust-title">{{ block.settings.title }}</span>
+                  <span class="clinical-hero__trust-title">{{ block.settings.title }}</span>
                 {% endif %}
                 {% if block.settings.subtitle != blank %}
-                  <span class="clh__trust-subtitle">{{ block.settings.subtitle }}</span>
+                  <span class="clinical-hero__trust-subtitle">{{ block.settings.subtitle }}</span>
                 {% endif %}
                 {% if block.settings.show_stars %}
-                  <div class="clh__trust-stars">
+                  <div class="clinical-hero__trust-stars">
                     {% for i in (1..5) %}
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1L8.59 4.22L12.1 4.73L9.55 7.22L10.18 10.72L7 9.04L3.82 10.72L4.45 7.22L1.9 4.73L5.41 4.22L7 1Z"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1L8.59 4.22L12.1 4.73L9.55 7.22L10.18 10.72L7 9.04L3.82 10.72L4.45 7.22L1.9 4.73L5.41 4.22L7 1Z"/>
+                      </svg>
                     {% endfor %}
                   </div>
                 {% endif %}
@@ -582,20 +602,29 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const section = document.getElementById('clh-{{ section.id }}');
-    if (!section) return;
-    const els = section.querySelectorAll('[data-clh-animate]');
-    if (!els.length) return;
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
-          setTimeout(() => e.target.classList.add('is-visible'), d * 120);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    els.forEach((el) => obs.observe(el));
+    const heroSection = document.getElementById('clinical-hero-{{ section.id }}');
+    if (!heroSection) return;
+
+    const animatedEls = heroSection.querySelectorAll('[data-animate]');
+    if (!animatedEls.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+            setTimeout(() => {
+              el.classList.add('is-visible');
+            }, delay * 120);
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    animatedEls.forEach((el) => observer.observe(el));
   });
 </script>
 
@@ -607,61 +636,28 @@
   "settings": [
     {
       "type": "header",
-      "content": "Image"
+      "content": "Background"
     },
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "Hero Image"
-    },
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Image Focus Point",
-      "options": [
-        { "value": "center center", "label": "Center" },
-        { "value": "center top", "label": "Top" },
-        { "value": "center bottom", "label": "Bottom" },
-        { "value": "left center", "label": "Left" },
-        { "value": "right center", "label": "Right" },
-        { "value": "left top", "label": "Top Left" },
-        { "value": "right top", "label": "Top Right" }
-      ],
-      "default": "center center"
-    },
-    {
-      "type": "header",
-      "content": "Section Height"
-    },
-    {
-      "type": "range",
-      "id": "desktop_height",
-      "label": "Desktop Height",
-      "min": 350,
-      "max": 900,
-      "step": 10,
-      "default": 560,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_image_height",
-      "label": "Mobile Image Height",
-      "min": 200,
-      "max": 500,
-      "step": 10,
-      "default": 320,
-      "unit": "px"
-    },
-    {
-      "type": "header",
-      "content": "Background"
+      "label": "Background Image"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background Color",
+      "label": "Fallback Background Color",
       "default": "#f5ede3"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity (%)",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 15,
+      "unit": "%"
     },
     {
       "type": "header",
