@@ -2142,8 +2142,8 @@
         "image_PRzPPG": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Location_And_contact.jpg",
-            "mobile_image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Contact.jpg",
+            "image": "shopify://shop_images/bottom_image.png",
+            "mobile_image": "shopify://shop_images/ContactOd_bab00ab4-2cfc-4f73-b57c-3b76139a4d12.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
