@@ -1,0 +1,952 @@
+{% style %}
+  /* ==========================================================================
+     Approach Comparison Section
+     ========================================================================== */
+
+  .apc {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .apc__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .apc__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .apc__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.25;
+    color: var(--heading-color);
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .apc__subtitle {
+    font-size: var(--body-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Cards Grid ---- */
+  .apc__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--cards-gap);
+    margin-bottom: 44px;
+  }
+
+  /* ---- Card Base ---- */
+  .apc__card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+  }
+
+  .apc__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Standard card */
+  .apc__card--standard {
+    background: var(--standard-bg);
+    border: 1px solid var(--standard-border);
+  }
+
+  /* Highlight card */
+  .apc__card--highlight {
+    background: var(--highlight-bg);
+    border: 1px solid var(--highlight-border);
+  }
+
+  /* ---- Card Header ---- */
+  .apc__card-header {
+    padding: 24px 28px 20px;
+    text-align: center;
+  }
+
+  .apc__card--standard .apc__card-header {
+    background: var(--standard-header-bg);
+    border-bottom: 1px solid var(--standard-border);
+  }
+
+  .apc__card--highlight .apc__card-header {
+    background: var(--highlight-header-bg);
+    border-bottom: 1px solid var(--highlight-border);
+    border-top: 3px solid var(--accent-color);
+  }
+
+  .apc__card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+    line-height: 1.4;
+  }
+
+  .apc__card--standard .apc__card-label {
+    color: var(--standard-label-color);
+  }
+
+  .apc__card--highlight .apc__card-label {
+    color: var(--accent-color);
+  }
+
+  .apc__card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .apc__card--standard .apc__card-title {
+    color: var(--heading-color);
+  }
+
+  .apc__card--highlight .apc__card-title {
+    color: var(--heading-color);
+  }
+
+  /* ---- Card Body / Items ---- */
+  .apc__card-body {
+    padding: 24px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .apc__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .apc__item-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .apc__card--standard .apc__item-icon {
+    color: var(--standard-icon-color);
+  }
+
+  .apc__card--highlight .apc__item-icon {
+    color: var(--accent-color);
+  }
+
+  .apc__item-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .apc__item-icon .apc__custom-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .apc__item-text {
+    font-size: var(--body-size);
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--heading-color);
+    padding-top: 6px;
+  }
+
+  /* Items without an icon */
+  .apc__item--no-icon .apc__item-text {
+    padding-left: 50px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  /* ---- CTA Button ---- */
+  .apc__btn-wrapper {
+    text-align: center;
+  }
+
+  .apc__btn {
+    display: inline-block;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 16px 48px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .apc__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    color: var(--btn-text);
+  }
+
+  .apc__btn:active {
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-apc-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-apc-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 900px) {
+    .apc__container {
+      padding: 0 28px;
+    }
+
+    .apc__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+
+    .apc__card-title {
+      font-size: calc(var(--card-title-size) * 0.88);
+    }
+
+    .apc__card-body {
+      padding: 20px 22px 24px;
+    }
+
+    .apc__card-header {
+      padding: 20px 22px 16px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .apc__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .apc__header {
+      margin-bottom: 32px;
+    }
+
+    .apc__heading {
+      font-size: calc(var(--heading-size) * 0.68);
+    }
+
+    .apc__subtitle {
+      font-size: 15px;
+    }
+
+    .apc__card-title {
+      font-size: calc(var(--card-title-size) * 0.82);
+    }
+
+    .apc__item-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .apc__item-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .apc__item-text {
+      font-size: 15px;
+    }
+
+    .apc__item--no-icon .apc__item-text {
+      padding-left: 44px;
+    }
+
+    .apc__btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .apc__container {
+      padding: 0 18px;
+    }
+
+    .apc__heading {
+      font-size: calc(var(--heading-size) * 0.56);
+    }
+
+    .apc__card-header {
+      padding: 18px 18px 14px;
+    }
+
+    .apc__card-body {
+      padding: 18px 18px 22px;
+      gap: 16px;
+    }
+
+    .apc__card-title {
+      font-size: calc(var(--card-title-size) * 0.75);
+    }
+
+    .apc__item-text {
+      font-size: 14px;
+    }
+
+    .apc__btn {
+      font-size: 15px;
+      padding: 14px 24px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="apc"
+  id="apc-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --cards-gap: {{ section.settings.cards_gap }}px;
+    --standard-bg: {{ section.settings.standard_bg }};
+    --standard-border: {{ section.settings.standard_border }};
+    --standard-header-bg: {{ section.settings.standard_header_bg }};
+    --standard-label-color: {{ section.settings.standard_label_color }};
+    --standard-icon-color: {{ section.settings.standard_icon_color }};
+    --highlight-bg: {{ section.settings.highlight_bg }};
+    --highlight-border: {{ section.settings.highlight_border }};
+    --highlight-header-bg: {{ section.settings.highlight_header_bg }};
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text_color }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="apc__container">
+    <!-- Header -->
+    <div class="apc__header" data-apc-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="apc__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="apc__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="apc__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'card' %}
+          {% assign card_style = block.settings.card_style %}
+          <div
+            class="apc__card apc__card--{{ card_style }}"
+            {{ block.shopify_attributes }}
+            data-apc-animate
+            data-delay="{{ forloop.index }}"
+          >
+            <div class="apc__card-header">
+              {% if block.settings.label != blank %}
+                <p class="apc__card-label">{{ block.settings.label }}</p>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="apc__card-title">{{ block.settings.title }}</h3>
+              {% endif %}
+            </div>
+            <div class="apc__card-body">
+              {% for i in (1..6) %}
+                {% assign text_key = 'item_' | append: i | append: '_text' %}
+                {% assign icon_key = 'item_' | append: i | append: '_icon' %}
+                {% assign custom_icon_key = 'item_' | append: i | append: '_custom_icon' %}
+                {% assign item_text = block.settings[text_key] %}
+                {% assign item_icon = block.settings[icon_key] %}
+                {% assign item_custom_icon = block.settings[custom_icon_key] %}
+
+                {% if item_text != blank %}
+                  <div class="apc__item{% if item_icon == 'none' and item_custom_icon == blank %} apc__item--no-icon{% endif %}">
+                    {% if item_custom_icon != blank %}
+                      <div class="apc__item-icon">
+                        {{ item_custom_icon | image_url: width: 60 | image_tag: loading: 'lazy', class: 'apc__custom-icon' }}
+                      </div>
+                    {% elsif item_icon != 'none' %}
+                      <div class="apc__item-icon">
+                        {% case item_icon %}
+                          {% when 'grid' %}
+                            <svg viewBox="0 0 30 30" fill="none"><rect x="3" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="17" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="17" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="17" y="17" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.8"/><line x1="6" y1="8" x2="10" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="6" y1="10.5" x2="10" y2="10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="8" x2="24" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="20" y1="10.5" x2="24" y2="10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                          {% when 'clock' %}
+                            <svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="currentColor" stroke-width="1.8"/><path d="M15 8V15L19.5 17.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          {% when 'coins' %}
+                            <svg viewBox="0 0 30 30" fill="none"><ellipse cx="15" cy="22" rx="9" ry="4" stroke="currentColor" stroke-width="1.8"/><path d="M6 18C6 20.2 10 22 15 22C20 22 24 20.2 24 18" stroke="currentColor" stroke-width="1.8"/><path d="M6 14C6 16.2 10 18 15 18C20 18 24 16.2 24 14" stroke="currentColor" stroke-width="1.8"/><ellipse cx="15" cy="10" rx="9" ry="4" stroke="currentColor" stroke-width="1.8"/></svg>
+                          {% when 'search_person' %}
+                            <svg viewBox="0 0 30 30" fill="none"><circle cx="13" cy="11" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M7 22C7 18.7 9.7 16 13 16C16.3 16 19 18.7 19 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="21" cy="14" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M24.5 17.5L28 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                          {% when 'clipboard' %}
+                            <svg viewBox="0 0 30 30" fill="none"><rect x="6" y="4" width="18" height="22" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M11 3V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M19 3V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10 13H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 21H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M18 19L20 21L24 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          {% when 'pound' %}
+                            <svg viewBox="0 0 30 30" fill="none"><rect x="4" y="4" width="22" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/><text x="15" y="20.5" text-anchor="middle" fill="currentColor" font-size="14" font-weight="600" font-family="serif">£</text></svg>
+                          {% when 'chart' %}
+                            <svg viewBox="0 0 30 30" fill="none"><rect x="4" y="4" width="22" height="22" rx="2" stroke="currentColor" stroke-width="1.8"/><polyline points="8,20 13,14 17,17 23,10" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 10H23V13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          {% when 'checkmark' %}
+                            <svg viewBox="0 0 30 30" fill="none"><path d="M6 15.5L12 21.5L24 9.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        {% endcase %}
+                      </div>
+                    {% endif %}
+                    <span class="apc__item-text">{{ item_text }}</span>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- CTA Button -->
+    {% if section.settings.button_label != blank %}
+      <div class="apc__btn-wrapper" data-apc-animate data-delay="3">
+        <a
+          href="{{ section.settings.button_link }}"
+          class="apc__btn"
+          {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('apc-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-apc-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Approach Comparison",
+  "tag": "section",
+  "class": "approach-comparison-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A smarter way to plan laser hair removal"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Why our consultation-led approach delivers more predictable outcomes."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#eee9e2"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent / Gold Color",
+      "default": "#c8962e"
+    },
+    {
+      "type": "header",
+      "content": "Standard Card Colors"
+    },
+    {
+      "type": "color",
+      "id": "standard_bg",
+      "label": "Standard Card Background",
+      "default": "#f5f3f0"
+    },
+    {
+      "type": "color",
+      "id": "standard_border",
+      "label": "Standard Card Border",
+      "default": "#e0ddd8"
+    },
+    {
+      "type": "color",
+      "id": "standard_header_bg",
+      "label": "Standard Card Header Background",
+      "default": "#eceae6"
+    },
+    {
+      "type": "color",
+      "id": "standard_label_color",
+      "label": "Standard Card Label Color",
+      "default": "#888888"
+    },
+    {
+      "type": "color",
+      "id": "standard_icon_color",
+      "label": "Standard Card Icon Color",
+      "default": "#999999"
+    },
+    {
+      "type": "header",
+      "content": "Highlight Card Colors"
+    },
+    {
+      "type": "color",
+      "id": "highlight_bg",
+      "label": "Highlight Card Background",
+      "default": "#f5ede0"
+    },
+    {
+      "type": "color",
+      "id": "highlight_border",
+      "label": "Highlight Card Border",
+      "default": "#d4c4a8"
+    },
+    {
+      "type": "color",
+      "id": "highlight_header_bg",
+      "label": "Highlight Card Header Background",
+      "default": "#efe3d0"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "default": 42,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card Title Font Size",
+      "min": 18,
+      "max": 36,
+      "step": 1,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Book your consultation"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "cards_gap",
+      "label": "Gap Between Cards",
+      "min": 12,
+      "max": 60,
+      "step": 4,
+      "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Comparison Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "card_style",
+          "label": "Card Style",
+          "options": [
+            { "value": "standard", "label": "Standard (Grey)" },
+            { "value": "highlight", "label": "Highlight (Gold)" }
+          ],
+          "default": "standard"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Card Label (uppercase)",
+          "default": "INDUSTRY STANDARD APPROACH"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Session-based pricing"
+        },
+        {
+          "type": "header",
+          "content": "Item 1"
+        },
+        {
+          "type": "select",
+          "id": "item_1_icon",
+          "label": "Item 1 Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "grid", "label": "Grid / Bundles" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "coins", "label": "Coins / Cost" },
+            { "value": "search_person", "label": "Search Person" },
+            { "value": "clipboard", "label": "Clipboard / Plan" },
+            { "value": "pound", "label": "Pound / Currency" },
+            { "value": "chart", "label": "Chart / Progress" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "grid"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_1_custom_icon",
+          "label": "Item 1 Custom Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_1_text",
+          "label": "Item 1 Text",
+          "default": "Pre-set session bundles"
+        },
+        {
+          "type": "header",
+          "content": "Item 2"
+        },
+        {
+          "type": "select",
+          "id": "item_2_icon",
+          "label": "Item 2 Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "grid", "label": "Grid / Bundles" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "coins", "label": "Coins / Cost" },
+            { "value": "search_person", "label": "Search Person" },
+            { "value": "clipboard", "label": "Clipboard / Plan" },
+            { "value": "pound", "label": "Pound / Currency" },
+            { "value": "chart", "label": "Chart / Progress" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "clock"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_2_custom_icon",
+          "label": "Item 2 Custom Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_2_text",
+          "label": "Item 2 Text",
+          "default": "Same number of sessions for everyone"
+        },
+        {
+          "type": "header",
+          "content": "Item 3"
+        },
+        {
+          "type": "select",
+          "id": "item_3_icon",
+          "label": "Item 3 Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "grid", "label": "Grid / Bundles" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "coins", "label": "Coins / Cost" },
+            { "value": "search_person", "label": "Search Person" },
+            { "value": "clipboard", "label": "Clipboard / Plan" },
+            { "value": "pound", "label": "Pound / Currency" },
+            { "value": "chart", "label": "Chart / Progress" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "coins"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_3_custom_icon",
+          "label": "Item 3 Custom Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_3_text",
+          "label": "Item 3 Text",
+          "default": "Extra sessions often needed later"
+        },
+        {
+          "type": "header",
+          "content": "Item 4"
+        },
+        {
+          "type": "select",
+          "id": "item_4_icon",
+          "label": "Item 4 Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "grid", "label": "Grid / Bundles" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "coins", "label": "Coins / Cost" },
+            { "value": "search_person", "label": "Search Person" },
+            { "value": "clipboard", "label": "Clipboard / Plan" },
+            { "value": "pound", "label": "Pound / Currency" },
+            { "value": "chart", "label": "Chart / Progress" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_4_custom_icon",
+          "label": "Item 4 Custom Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_4_text",
+          "label": "Item 4 Text",
+          "default": "Total cost can be hard to predict"
+        },
+        {
+          "type": "header",
+          "content": "Item 5"
+        },
+        {
+          "type": "select",
+          "id": "item_5_icon",
+          "label": "Item 5 Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "grid", "label": "Grid / Bundles" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "coins", "label": "Coins / Cost" },
+            { "value": "search_person", "label": "Search Person" },
+            { "value": "clipboard", "label": "Clipboard / Plan" },
+            { "value": "pound", "label": "Pound / Currency" },
+            { "value": "chart", "label": "Chart / Progress" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_5_custom_icon",
+          "label": "Item 5 Custom Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_5_text",
+          "label": "Item 5 Text"
+        },
+        {
+          "type": "header",
+          "content": "Item 6"
+        },
+        {
+          "type": "select",
+          "id": "item_6_icon",
+          "label": "Item 6 Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "grid", "label": "Grid / Bundles" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "coins", "label": "Coins / Cost" },
+            { "value": "search_person", "label": "Search Person" },
+            { "value": "clipboard", "label": "Clipboard / Plan" },
+            { "value": "pound", "label": "Pound / Currency" },
+            { "value": "chart", "label": "Chart / Progress" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_6_custom_icon",
+          "label": "Item 6 Custom Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_6_text",
+          "label": "Item 6 Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Approach Comparison",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "card_style": "standard",
+            "label": "INDUSTRY STANDARD APPROACH",
+            "title": "Session-based pricing",
+            "item_1_icon": "grid",
+            "item_1_text": "Pre-set session bundles",
+            "item_2_icon": "clock",
+            "item_2_text": "Same number of sessions for everyone",
+            "item_3_icon": "coins",
+            "item_3_text": "Extra sessions often needed later",
+            "item_4_icon": "none",
+            "item_4_text": "Total cost can be hard to predict"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "card_style": "highlight",
+            "label": "OUR APPROACH AT LASER SKIN CLINICS®",
+            "title": "Consultation-led treatment planning",
+            "item_1_icon": "search_person",
+            "item_1_text": "We assess your skin and hair before recommending a plan",
+            "item_2_icon": "clipboard",
+            "item_2_text": "Session numbers tailored to your growth pattern",
+            "item_3_icon": "pound",
+            "item_3_text": "Clear pricing agreed upfront",
+            "item_4_icon": "chart",
+            "item_4_text": "Reviewed and adjusted as your results progress"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
