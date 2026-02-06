@@ -1,0 +1,760 @@
+{% style %}
+  /* ==========================================================================
+     Medical Technology Section
+     ========================================================================== */
+
+  .mts {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .mts__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .mts__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .mts__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .mts__subtitle {
+    font-size: var(--body-size);
+    line-height: 1.65;
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 680px;
+  }
+
+  /* ---- Content Area (Image + Card) ---- */
+  .mts__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 460px;
+  }
+
+  /* ---- Product Image ---- */
+  .mts__image-wrap {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .mts__product-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* ---- Glassmorphism Card ---- */
+  .mts__card {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    width: 58%;
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--card-blur));
+    -webkit-backdrop-filter: blur(var(--card-blur));
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 36px 40px 32px;
+  }
+
+  /* ---- Feature Items ---- */
+  .mts__features {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+
+  .mts__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .mts__feature-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+  }
+
+  .mts__feature-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mts__feature-icon .mts__custom-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  .mts__feature--no-icon {
+    padding-left: 54px;
+  }
+
+  .mts__feature-content {
+    flex: 1;
+  }
+
+  .mts__feature-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--feature-title-size);
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+
+  .mts__feature-desc {
+    font-size: var(--body-size);
+    line-height: 1.65;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  /* ---- Disclaimer ---- */
+  .mts__disclaimer {
+    font-size: calc(var(--body-size) - 2px);
+    color: var(--text-color);
+    opacity: 0.7;
+    font-style: italic;
+    margin: 0 0 24px;
+    padding-left: 54px;
+  }
+
+  /* ---- Button ---- */
+  .mts__btn-wrapper {
+    padding-left: 54px;
+  }
+
+  .mts__btn {
+    display: inline-block;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 16px 44px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .mts__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    color: var(--btn-text);
+  }
+
+  .mts__btn:active {
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-mts-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-mts-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Image slides in from left */
+  [data-mts-animate="slide-left"] {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  }
+
+  [data-mts-animate="slide-left"].is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .mts__container {
+      padding: 0 28px;
+    }
+
+    .mts__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+
+    .mts__image-wrap {
+      width: 48%;
+    }
+
+    .mts__card {
+      width: 62%;
+      padding: 28px 30px 28px;
+    }
+
+    .mts__feature-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .mts__feature-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .mts__feature--no-icon {
+      padding-left: 48px;
+    }
+
+    .mts__disclaimer {
+      padding-left: 48px;
+    }
+
+    .mts__btn-wrapper {
+      padding-left: 48px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .mts__body {
+      flex-direction: column;
+      min-height: auto;
+      gap: 0;
+    }
+
+    .mts__image-wrap {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      width: 70%;
+      margin: 0 auto 24px;
+    }
+
+    .mts__card {
+      width: 100%;
+      margin-left: 0;
+      padding: 28px 24px 28px;
+    }
+
+    .mts__header {
+      margin-bottom: 32px;
+    }
+
+    .mts__heading {
+      font-size: calc(var(--heading-size) * 0.65);
+    }
+
+    .mts__subtitle {
+      font-size: 15px;
+    }
+
+    .mts__features {
+      gap: 24px;
+    }
+
+    .mts__feature--no-icon {
+      padding-left: 0;
+    }
+
+    .mts__disclaimer {
+      padding-left: 0;
+    }
+
+    .mts__btn-wrapper {
+      padding-left: 0;
+    }
+
+    .mts__btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .mts__feature-title {
+      font-size: calc(var(--feature-title-size) * 0.9);
+    }
+
+    .mts__feature-desc {
+      font-size: 15px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .mts__container {
+      padding: 0 18px;
+    }
+
+    .mts__heading {
+      font-size: calc(var(--heading-size) * 0.54);
+    }
+
+    .mts__image-wrap {
+      width: 85%;
+    }
+
+    .mts__card {
+      padding: 24px 18px 24px;
+    }
+
+    .mts__feature-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .mts__feature-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .mts__feature-title {
+      font-size: calc(var(--feature-title-size) * 0.82);
+    }
+
+    .mts__feature-desc {
+      font-size: 14px;
+    }
+
+    .mts__btn {
+      font-size: 15px;
+      padding: 14px 24px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="mts"
+  id="mts-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --icon-color: {{ section.settings.icon_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --feature-title-size: {{ section.settings.feature_title_font_size }}px;
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --card-blur: {{ section.settings.card_blur }}px;
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text_color }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="mts__container">
+    <!-- Header -->
+    <div class="mts__header" data-mts-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="mts__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="mts__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Body: Image + Card -->
+    <div class="mts__body">
+      <!-- Product Image -->
+      {% if section.settings.product_image != blank %}
+        <div class="mts__image-wrap" data-mts-animate="slide-left" data-delay="1">
+          {{
+            section.settings.product_image
+            | image_url: width: 900
+            | image_tag: loading: 'lazy', class: 'mts__product-img', widths: '400,600,900'
+          }}
+        </div>
+      {% endif %}
+
+      <!-- Glassmorphism Card -->
+      <div class="mts__card" data-mts-animate data-delay="2">
+        <div class="mts__features">
+          {% for block in section.blocks %}
+            {% if block.type == 'feature' %}
+              {% assign has_icon = false %}
+              {% if block.settings.custom_icon != blank or block.settings.icon != 'none' %}
+                {% assign has_icon = true %}
+              {% endif %}
+              <div class="mts__feature{% unless has_icon %} mts__feature--no-icon{% endunless %}" {{ block.shopify_attributes }}>
+                {% if block.settings.custom_icon != blank %}
+                  <div class="mts__feature-icon">
+                    {{ block.settings.custom_icon | image_url: width: 64 | image_tag: loading: 'lazy', class: 'mts__custom-icon' }}
+                  </div>
+                {% elsif block.settings.icon != 'none' %}
+                  <div class="mts__feature-icon">
+                    {% case block.settings.icon %}
+                      {% when 'snowflake' %}
+                        <svg viewBox="0 0 32 32" fill="none"><line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="6.1" y1="6.1" x2="25.9" y2="25.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="25.9" y1="6.1" x2="6.1" y2="25.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="2" x2="13" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="2" x2="19" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="30" x2="13" y2="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="30" x2="19" y2="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2" y1="16" x2="5" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="2" y1="16" x2="5" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="16" x2="27" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="16" x2="27" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      {% when 'arrow_right' %}
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M6 16C6 16 18 16 20 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 10C16 10 22 16 22 16L16 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.8"/></svg>
+                      {% when 'shield' %}
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M16 3L4 8V16C4 22.6 9.2 28.5 16 30C22.8 28.5 28 22.6 28 16V8L16 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M11 16L14.5 19.5L21 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      {% when 'pulse' %}
+                        <svg viewBox="0 0 32 32" fill="none"><polyline points="2,16 8,16 11,8 16,24 20,12 23,16 30,16" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      {% when 'target' %}
+                        <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="7" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+                      {% when 'checkmark' %}
+                        <svg viewBox="0 0 32 32" fill="none"><path d="M6 16.5L13 23.5L26 10.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% endcase %}
+                  </div>
+                {% endif %}
+                <div class="mts__feature-content">
+                  {% if block.settings.title != blank %}
+                    <h4 class="mts__feature-title">{{ block.settings.title }}</h4>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p class="mts__feature-desc">{{ block.settings.description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if section.settings.disclaimer != blank %}
+          <p class="mts__disclaimer">{{ section.settings.disclaimer }}</p>
+        {% endif %}
+
+        {% if section.settings.button_label != blank %}
+          <div class="mts__btn-wrapper">
+            <a
+              href="{{ section.settings.button_link }}"
+              class="mts__btn"
+              {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('mts-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-mts-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Medical Technology",
+  "tag": "section",
+  "class": "medical-technology-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Medical-grade technology. Thoughtfully delivered."
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "We use advanced diode laser systems and controlled treatment protocols to ensure safe, consistent treatment across skin types."
+    },
+    {
+      "type": "header",
+      "content": "Product Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product / Device Image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#e8ddd1"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#9a8068"
+    },
+    {
+      "type": "header",
+      "content": "Card Appearance"
+    },
+    {
+      "type": "color_background",
+      "id": "card_bg",
+      "label": "Card Background",
+      "default": "linear-gradient(135deg, rgba(255,255,255,0.45), rgba(255,255,255,0.25))"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card Border Color",
+      "default": "#d6cfc6"
+    },
+    {
+      "type": "range",
+      "id": "card_blur",
+      "label": "Card Blur Intensity",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "feature_title_font_size",
+      "label": "Feature Title Font Size",
+      "min": 16,
+      "max": 30,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Disclaimer"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "Disclaimer Text",
+      "default": "*Suitability confirmed during consultation."
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Book your consultation"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "snowflake", "label": "Snowflake / Cooling" },
+            { "value": "arrow_right", "label": "Arrow / Motion" },
+            { "value": "shield", "label": "Shield / Safety" },
+            { "value": "pulse", "label": "Pulse / Energy" },
+            { "value": "target", "label": "Target / Precision" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "snowflake"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon (overrides above)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Advanced contact cooling"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "The handpiece actively cools the skin before, during, and after each pulse to improve comfort and protect the skin barrier."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Medical Technology",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "snowflake",
+            "title": "Advanced contact cooling",
+            "description": "The handpiece actively cools the skin before, during, and after each pulse to improve comfort and protect the skin barrier."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "arrow_right",
+            "title": "In-motion laser delivery",
+            "description": "Treatments are delivered in smooth, controlled passes to ensure even coverage and consistent energy distribution."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "none",
+            "title": "Suitable for a wide range of skin tones",
+            "description": "Modern diode laser technology allows treatments to be adapted across different skin tones when clinically appropriate."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
