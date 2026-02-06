@@ -2403,7 +2403,7 @@
       "settings": {
         "background_image": "shopify://shop_images/Gemini_Generated_Image_miuersmiuersmiue.png",
         "background_color": "#f5ede3",
-        "overlay_opacity": 30,
+        "overlay_opacity": 25,
         "heading": "Stop guessing how many sessions you need.",
         "heading_font_size": 48,
         "heading_color": "#3a3a3a",
