@@ -2404,7 +2404,7 @@
         "background_image": "shopify://shop_images/Gemini_Generated_Image_miuersmiuersmiue.png",
         "image_position": "center center",
         "desktop_height": 900,
-        "mobile_image_height": 320,
+        "mobile_image_height": 360,
         "background_color": "#f5ede3",
         "overlay_opacity": 25,
         "heading": "Stop guessing how many sessions you need.",
