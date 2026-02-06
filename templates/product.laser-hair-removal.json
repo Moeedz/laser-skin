@@ -2402,6 +2402,9 @@
       "name": "Clinical Laser Hero",
       "settings": {
         "background_image": "shopify://shop_images/Gemini_Generated_Image_miuersmiuersmiue.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 620,
         "background_color": "#f5ede3",
         "overlay_opacity": 25,
         "heading": "Stop guessing how many sessions you need.",
@@ -2424,9 +2427,7 @@
         "trust_bar_bg": "#faf6f1",
         "trust_bar_text_color": "#3a3a3a",
         "trust_icon_color": "#c8962e",
-        "content_max_width": 580,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "content_max_width": 580
       }
     },
     "slideshow_tiXh9k": {
