@@ -45,20 +45,22 @@
   /* ---- Content Area (Image + Card) ---- */
   .mts__body {
     position: relative;
+    min-height: 520px;
     display: flex;
     align-items: center;
-    min-height: 460px;
+    justify-content: flex-end;
   }
 
-  /* ---- Product Image ---- */
+  /* ---- Product Image — Large, angled, bottom-left ---- */
   .mts__image-wrap {
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55%;
+    left: -8%;
+    bottom: -12%;
+    width: 60%;
     z-index: 0;
     pointer-events: none;
+    transform: rotate(var(--image-rotate)) scale(var(--image-scale));
+    transform-origin: center center;
   }
 
   .mts__product-img {
@@ -72,14 +74,13 @@
   .mts__card {
     position: relative;
     z-index: 1;
-    margin-left: auto;
-    width: 58%;
+    width: 56%;
     background: var(--card-bg);
     backdrop-filter: blur(var(--card-blur));
     -webkit-backdrop-filter: blur(var(--card-blur));
     border: 1px solid var(--card-border);
     border-radius: 16px;
-    padding: 36px 40px 32px;
+    padding: 40px 44px 36px;
   }
 
   /* ---- Feature Items ---- */
@@ -195,16 +196,15 @@
     transform: translateY(0);
   }
 
-  /* Image slides in from left */
   [data-mts-animate="slide-left"] {
     opacity: 0;
-    transform: translateX(-40px);
-    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+    transform: translateX(-50px) rotate(var(--image-rotate)) scale(var(--image-scale));
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
   }
 
   [data-mts-animate="slide-left"].is-visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) rotate(var(--image-rotate)) scale(var(--image-scale));
   }
 
   /* ==========================================================================
@@ -220,12 +220,14 @@
     }
 
     .mts__image-wrap {
-      width: 48%;
+      width: 55%;
+      left: -6%;
+      bottom: -8%;
     }
 
     .mts__card {
-      width: 62%;
-      padding: 28px 30px 28px;
+      width: 60%;
+      padding: 32px 32px 28px;
     }
 
     .mts__feature-icon {
@@ -258,21 +260,28 @@
     .mts__body {
       flex-direction: column;
       min-height: auto;
-      gap: 0;
+      gap: 24px;
     }
 
     .mts__image-wrap {
       position: relative;
       left: auto;
-      top: auto;
-      transform: none;
-      width: 70%;
-      margin: 0 auto 24px;
+      bottom: auto;
+      width: 75%;
+      margin: 0 auto;
+      transform: rotate(0deg) scale(1);
+    }
+
+    [data-mts-animate="slide-left"] {
+      transform: translateX(-50px) rotate(0deg) scale(1);
+    }
+
+    [data-mts-animate="slide-left"].is-visible {
+      transform: translateX(0) rotate(0deg) scale(1);
     }
 
     .mts__card {
       width: 100%;
-      margin-left: 0;
       padding: 28px 24px 28px;
     }
 
@@ -331,7 +340,7 @@
     }
 
     .mts__image-wrap {
-      width: 85%;
+      width: 90%;
     }
 
     .mts__card {
@@ -382,6 +391,8 @@
     --btn-bg-hover: {{ section.settings.button_bg_hover }};
     --padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --image-rotate: {{ section.settings.image_rotation }}deg;
+    --image-scale: {{ section.settings.image_scale | divided_by: 100.0 }};
   "
 >
   <div class="mts__container">
@@ -402,8 +413,8 @@
         <div class="mts__image-wrap" data-mts-animate="slide-left" data-delay="1">
           {{
             section.settings.product_image
-            | image_url: width: 900
-            | image_tag: loading: 'lazy', class: 'mts__product-img', widths: '400,600,900'
+            | image_url: width: 1200
+            | image_tag: loading: 'lazy', class: 'mts__product-img', widths: '500,800,1200'
           }}
         </div>
       {% endif %}
@@ -524,6 +535,26 @@
       "label": "Product / Device Image"
     },
     {
+      "type": "range",
+      "id": "image_rotation",
+      "label": "Image Rotation (Desktop)",
+      "min": -45,
+      "max": 45,
+      "step": 1,
+      "default": -35,
+      "unit": "deg"
+    },
+    {
+      "type": "range",
+      "id": "image_scale",
+      "label": "Image Scale",
+      "min": 80,
+      "max": 160,
+      "step": 5,
+      "default": 110,
+      "unit": "%"
+    },
+    {
       "type": "header",
       "content": "Colors"
     },
@@ -574,7 +605,7 @@
       "min": 0,
       "max": 30,
       "step": 2,
-      "default": 12,
+      "default": 14,
       "unit": "px"
     },
     {
