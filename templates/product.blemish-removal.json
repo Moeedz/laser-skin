@@ -2311,6 +2311,13 @@
             "answer": "<p>Most clients describe the sensation as very mild—similar to a quick \"pin-prick\" or a snap of a rubber band. For sensitive areas, we can apply a topical numbing cream to ensure your complete comfort. The procedure is very quick, often lasting only a few minutes.</p>"
           }
         },
+        "faq_item_Yqi3Jk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many blemishes can be treated in 15 minutes?",
+            "answer": "<p>In your 15-minute blemish-removal session is we'll be able to remove multiple if you have more than one.</p>"
+          }
+        },
         "faq_item_VaKqwp": {
           "type": "faq_item",
           "settings": {
@@ -2356,6 +2363,7 @@
       },
       "block_order": [
         "faq_item_i6eLaB",
+        "faq_item_Yqi3Jk",
         "faq_item_VaKqwp",
         "faq_item_iAWpyp",
         "faq_item_9m6Uie",
