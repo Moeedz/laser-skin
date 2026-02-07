@@ -3101,6 +3101,33 @@
     "pricing_by_area_36Fqyr": {
       "type": "pricing-by-area",
       "blocks": {
+        "category_JpbrWF": {
+          "type": "category",
+          "settings": {
+            "title": "Face",
+            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
+          }
+        },
+        "pricing_ULf3WF": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Upper Lip",
+            "display_title": "Upper Lip",
+            "price_subtitle": "Per area pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£35",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£120",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£150",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£180",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
         "pricing_EdnPFE": {
           "type": "pricing",
           "settings": {
@@ -3121,32 +3148,84 @@
             "tier_6_price": ""
           }
         },
-        "category_JpbrWF": {
-          "type": "category",
+        "pricing_37qTFp": {
+          "type": "pricing",
           "settings": {
-            "title": "Face",
-            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
+            "area_name": "Lip & Chin",
+            "display_title": "Lip & Chin",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
           }
         },
-        "popular_tab_aCYYp8": {
-          "type": "popular_tab",
+        "pricing_gEEtbM": {
+          "type": "pricing",
           "settings": {
-            "label": "Full Body",
-            "linked_area": "Full Body"
+            "area_name": "Sideburns",
+            "display_title": "Sideburns",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
           }
         },
-        "popular_tab_zPHMjG": {
-          "type": "popular_tab",
+        "pricing_7pJm3P": {
+          "type": "pricing",
           "settings": {
-            "label": "Underarms & Hollywood",
-            "linked_area": "Underarms & Hollywood"
+            "area_name": "Neck",
+            "display_title": "Neck",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
           }
         },
-        "popular_tab_djBhLV": {
-          "type": "popular_tab",
+        "pricing_YzK4Gk": {
+          "type": "pricing",
           "settings": {
-            "label": "Full Face (inc. Neck)",
-            "linked_area": "Full Face (inc. Neck)"
+            "area_name": "Ears",
+            "display_title": "Ears",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
           }
         },
         "category_EmaeNG": {
@@ -3197,24 +3276,25 @@
             "tier_6_price": ""
           }
         },
-        "pricing_ULf3WF": {
-          "type": "pricing",
+        "popular_tab_djBhLV": {
+          "type": "popular_tab",
           "settings": {
-            "area_name": "Upper Lip",
-            "display_title": "Upper Lip",
-            "price_subtitle": "Per area pricing",
-            "tier_1_name": "1 session",
-            "tier_1_price": "£35",
-            "tier_2_name": "Course of 6",
-            "tier_2_price": "£120",
-            "tier_3_name": "Course of 8",
-            "tier_3_price": "£150",
-            "tier_4_name": "Course of 10",
-            "tier_4_price": "£180",
-            "tier_5_name": "",
-            "tier_5_price": "",
-            "tier_6_name": "",
-            "tier_6_price": ""
+            "label": "Full Face (inc. Neck)",
+            "linked_area": "Full Face (inc. Neck)"
+          }
+        },
+        "popular_tab_zPHMjG": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Underarms & Hollywood",
+            "linked_area": "Underarms & Hollywood"
+          }
+        },
+        "popular_tab_aCYYp8": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Full Body",
+            "linked_area": "Full Body"
           }
         },
         "emphasis_Reb4jP": {
@@ -3231,17 +3311,21 @@
         }
       },
       "block_order": [
-        "pricing_EdnPFE",
         "category_JpbrWF",
-        "popular_tab_aCYYp8",
-        "popular_tab_zPHMjG",
-        "popular_tab_djBhLV",
+        "pricing_ULf3WF",
+        "pricing_EdnPFE",
+        "pricing_37qTFp",
+        "pricing_gEEtbM",
+        "pricing_7pJm3P",
+        "pricing_YzK4Gk",
         "category_EmaeNG",
         "category_NCbwDx",
         "category_kyV6Nw",
         "category_gLqY9N",
         "pricing_HkeaNx",
-        "pricing_ULf3WF",
+        "popular_tab_djBhLV",
+        "popular_tab_zPHMjG",
+        "popular_tab_aCYYp8",
         "emphasis_Reb4jP",
         "emphasis_rkGTeR"
       ],
