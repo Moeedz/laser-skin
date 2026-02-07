@@ -1,0 +1,739 @@
+{% style %}
+  /* ==========================================================================
+     Location & Contact Section
+     ========================================================================== */
+
+  .loc {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .loc__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 560px;
+  }
+
+  /* ---- Left Panel ---- */
+  .loc__info {
+    background-color: var(--info-bg);
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Paper Texture */
+  .loc__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .loc__texture::before,
+  .loc__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .loc__texture::before {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .loc__texture::after {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .loc__info-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+  }
+
+  /* Label */
+  .loc__label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: 0 0 8px;
+    opacity: 0.7;
+  }
+
+  /* Heading */
+  .loc__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 28px;
+    letter-spacing: -0.01em;
+  }
+
+  /* Address */
+  .loc__address {
+    font-size: var(--body-size);
+    line-height: 1.65;
+    color: var(--text-color);
+    margin: 0 0 24px;
+  }
+
+  .loc__address strong {
+    color: var(--heading-color);
+  }
+
+  /* Contact Items */
+  .loc__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .loc__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: var(--body-size);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a.loc__contact-item:hover {
+    color: var(--accent-color);
+  }
+
+  .loc__contact-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+  }
+
+  .loc__contact-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .loc__contact-label {
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  /* Opening Hours */
+  .loc__hours {
+    margin-bottom: 32px;
+  }
+
+  .loc__hours-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .loc__hours-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+  }
+
+  .loc__hours-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .loc__hours-title {
+    font-size: var(--body-size);
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0;
+  }
+
+  .loc__hours-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .loc__hours-item {
+    font-size: var(--body-size);
+    color: var(--text-color);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .loc__hours-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  /* CTA Button */
+  .loc__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .loc__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+    color: var(--btn-text);
+  }
+
+  .loc__btn:active {
+    transform: translateY(0);
+  }
+
+  .loc__btn-arrow {
+    display: flex;
+    align-items: center;
+  }
+
+  /* ---- Right Panel: Map ---- */
+  .loc__map {
+    position: relative;
+    min-height: 100%;
+  }
+
+  .loc__map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    border: 0;
+    display: block;
+  }
+
+  .loc__map-image {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-loc-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-loc-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .loc__info {
+      padding: 40px 36px;
+    }
+
+    .loc__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .loc__layout {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .loc__info {
+      padding: 36px 24px 40px;
+    }
+
+    .loc__heading {
+      font-size: calc(var(--heading-size) * 0.65);
+      margin-bottom: 22px;
+    }
+
+    .loc__map iframe,
+    .loc__map-image {
+      min-height: 360px;
+    }
+
+    .loc__btn {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .loc__contacts {
+      gap: 14px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .loc__info {
+      padding: 28px 18px 32px;
+    }
+
+    .loc__heading {
+      font-size: calc(var(--heading-size) * 0.55);
+    }
+
+    .loc__map iframe,
+    .loc__map-image {
+      min-height: 280px;
+    }
+
+    .loc__btn {
+      font-size: 14px;
+      padding: 14px 24px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="loc"
+  id="loc-{{ section.id }}"
+  style="
+    --info-bg: {{ section.settings.info_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text_color }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+  "
+>
+  <div class="loc__layout">
+    <!-- Left: Contact Info -->
+    <div class="loc__info">
+      {% if section.settings.show_texture %}
+        <div class="loc__texture"></div>
+      {% endif %}
+
+      <div class="loc__info-inner" data-loc-animate data-delay="0">
+        {% if section.settings.label != blank %}
+          <p class="loc__label">{{ section.settings.label }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="loc__heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.address != blank %}
+          <div class="loc__address">{{ section.settings.address }}</div>
+        {% endif %}
+
+        <!-- Contact Items -->
+        <div class="loc__contacts">
+          {% for block in section.blocks %}
+            {% if block.type == 'contact' %}
+              {% if block.settings.link != blank %}
+                <a href="{{ block.settings.link }}" class="loc__contact-item" {{ block.shopify_attributes }} {% if block.settings.open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              {% else %}
+                <div class="loc__contact-item" {{ block.shopify_attributes }}>
+              {% endif %}
+                <div class="loc__contact-icon">
+                  {% case block.settings.icon %}
+                    {% when 'phone' %}
+                      <svg viewBox="0 0 20 20" fill="none"><path d="M18 14.4V17C18 17.5 17.6 18 17 18C8.7 18 2 11.3 2 3C2 2.4 2.5 2 3 2H5.6C6.1 2 6.5 2.4 6.6 2.8L7.5 6.2C7.5 6.6 7.4 7 7.1 7.2L5.4 8.9C6.7 11.4 8.6 13.3 11.1 14.6L12.8 12.9C13 12.6 13.4 12.5 13.8 12.5L17.2 13.4C17.6 13.5 18 13.9 18 14.4Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'whatsapp' %}
+                      <svg viewBox="0 0 20 20" fill="none"><path d="M10 1.5C5.3 1.5 1.5 5.3 1.5 10C1.5 11.7 2 13.2 2.9 14.5L1.5 18.5L5.6 17.1C6.9 18 8.4 18.5 10 18.5C14.7 18.5 18.5 14.7 18.5 10C18.5 5.3 14.7 1.5 10 1.5Z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8.5C7 8.5 7.5 7 8 7C8.5 7 8.8 7.5 9 8C9.2 8.5 9.5 9 9 9.5C8.5 10 9.5 11.5 10.5 12C11.5 12.5 11.5 12 12 11.5C12.5 11 13 11.5 13.5 11.8C14 12.1 14 12.5 14 12.5C14 13.5 13 14 12 13.5C11 13 8.5 12 7.5 9.5C7 8.5 7 8.5 7 8.5Z" fill="currentColor" opacity="0.6"/></svg>
+                    {% when 'email' %}
+                      <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 6L10 11L18 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'location' %}
+                      <svg viewBox="0 0 20 20" fill="none"><path d="M10 18S4 12 4 8C4 4.7 6.7 2 10 2C13.3 2 16 4.7 16 8C16 12 10 18 10 18Z" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="8" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                  {% endcase %}
+                </div>
+                <span>
+                  {% if block.settings.label != blank %}<span class="loc__contact-label">{{ block.settings.label }}</span> {% endif %}{{ block.settings.value }}
+                </span>
+              {% if block.settings.link != blank %}
+                </a>
+              {% else %}
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Opening Hours -->
+        {% if section.settings.show_hours %}
+          <div class="loc__hours">
+            <div class="loc__hours-header">
+              <div class="loc__hours-icon">
+                <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M10 5V10L13.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h4 class="loc__hours-title">{{ section.settings.hours_title }}</h4>
+            </div>
+            <ul class="loc__hours-list">
+              {% assign hours = section.settings.hours_lines | split: '||' %}
+              {% for line in hours %}
+                {% assign line_stripped = line | strip %}
+                {% if line_stripped != blank %}
+                  <li class="loc__hours-item">{{ line_stripped }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        <!-- CTA Button -->
+        {% if section.settings.button_label != blank %}
+          <a
+            href="{{ section.settings.button_link }}"
+            class="loc__btn"
+            {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+          >
+            {{ section.settings.button_label }}
+            <span class="loc__btn-arrow">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Right: Map -->
+    <div class="loc__map" data-loc-animate data-delay="1">
+      {% if section.settings.map_embed != blank %}
+        {{ section.settings.map_embed }}
+      {% elsif section.settings.map_image != blank %}
+        {{ section.settings.map_image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'loc__map-image', widths: '600,900,1200' }}
+      {% else %}
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2418.5!2d-2.19!3d52.62!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDM3JzEyLjAiTiAywrAxMScyNC4wIlc!5e0!3m2!1sen!2suk!4v1"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('loc-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-loc-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 200);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Location & Contact",
+  "tag": "section",
+  "class": "location-contact-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Top Label",
+      "default": "Location & Contact"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find Us / Visit the Clinic"
+    },
+    {
+      "type": "header",
+      "content": "Address"
+    },
+    {
+      "type": "richtext",
+      "id": "address",
+      "label": "Full Address",
+      "default": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Opening Hours"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hours",
+      "label": "Show Opening Hours",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "hours_title",
+      "label": "Hours Title",
+      "default": "Opening Hours:"
+    },
+    {
+      "type": "textarea",
+      "id": "hours_lines",
+      "label": "Hours (separate with ||)",
+      "default": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)"
+    },
+    {
+      "type": "header",
+      "content": "Map"
+    },
+    {
+      "type": "html",
+      "id": "map_embed",
+      "label": "Google Maps Embed Code (paste full iframe)"
+    },
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Map Image (fallback if no embed)"
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "info_bg",
+      "label": "Info Panel Background",
+      "default": "#e8e3dc"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Paper Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 80,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent / Icon Color",
+      "default": "#b08d57"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 56,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "BOOK CONSULTATION"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#b08d57"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#97763e"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact",
+      "name": "Contact Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "phone", "label": "Phone" },
+            { "value": "whatsapp", "label": "WhatsApp" },
+            { "value": "email", "label": "Email" },
+            { "value": "location", "label": "Location Pin" }
+          ],
+          "default": "phone"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label (bold)",
+          "default": "Phone:"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "01902 256667"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_tab",
+          "label": "Open in new tab",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Location & Contact",
+      "blocks": [
+        {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667"
+          }
+        },
+        {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387"
+          }
+        },
+        {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
