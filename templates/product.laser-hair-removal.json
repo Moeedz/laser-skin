@@ -3326,6 +3326,9 @@
         "emphasis_Reb4jP",
         "emphasis_rkGTeR"
       ],
+      "custom_css": [
+        "li.prc__next-item {padding-left: 18px !important;}"
+      ],
       "name": "Pricing by Area",
       "settings": {
         "heading": "Laser hair removal pricing by area",
