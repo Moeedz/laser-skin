@@ -3200,6 +3200,160 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "pricing_by_area_36Fqyr": {
+      "type": "pricing-by-area",
+      "blocks": {
+        "popular_tab_aCYYp8": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Full Body",
+            "linked_area": "Full Body"
+          }
+        },
+        "popular_tab_zPHMjG": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Underarms & Hollywood",
+            "linked_area": "Underarms & Hollywood"
+          }
+        },
+        "popular_tab_djBhLV": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Full Face (inc. Neck)",
+            "linked_area": "Full Face (inc. Neck)"
+          }
+        },
+        "category_JpbrWF": {
+          "type": "category",
+          "settings": {
+            "title": "Face",
+            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
+          }
+        },
+        "category_EmaeNG": {
+          "type": "category",
+          "settings": {
+            "title": "Upper Body",
+            "areas": "Shoulders||Full Back||Lower Back||Chest||Stomach||Full Arms||Half Arms||Chest & Stomach||Back & Shoulders"
+          }
+        },
+        "category_NCbwDx": {
+          "type": "category",
+          "settings": {
+            "title": "Lower Body",
+            "areas": "Full Legs||Half Legs||Fingers & Toes||Feet & Toes||Toes"
+          }
+        },
+        "category_kyV6Nw": {
+          "type": "category",
+          "settings": {
+            "title": "Intimate",
+            "areas": "Bikini Line||Hollywood||Brazilian||Underarms||Areolas||Buttock||Behind (Peri Anal)"
+          }
+        },
+        "category_gLqY9N": {
+          "type": "category",
+          "settings": {
+            "title": "Packages",
+            "areas": "Full Body||Underarms & Hollywood||Full Face (inc. Neck)"
+          }
+        },
+        "pricing_HkeaNx": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Underarms & Hollywood",
+            "display_title": "Underarms & Hollywood",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_ULf3WF": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Upper Lip",
+            "display_title": "Upper Lip",
+            "price_subtitle": "Per area pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£35",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£120",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£150",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£180",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "emphasis_Reb4jP": {
+          "type": "emphasis",
+          "settings": {
+            "text": "Complimentary consultation & test patch included"
+          }
+        },
+        "emphasis_rkGTeR": {
+          "type": "emphasis",
+          "settings": {
+            "text": "Multi-area savings available – personalised at consultation"
+          }
+        }
+      },
+      "block_order": [
+        "popular_tab_aCYYp8",
+        "popular_tab_zPHMjG",
+        "popular_tab_djBhLV",
+        "category_JpbrWF",
+        "category_EmaeNG",
+        "category_NCbwDx",
+        "category_kyV6Nw",
+        "category_gLqY9N",
+        "pricing_HkeaNx",
+        "pricing_ULf3WF",
+        "emphasis_Reb4jP",
+        "emphasis_rkGTeR"
+      ],
+      "name": "Pricing by Area",
+      "settings": {
+        "heading": "Laser hair removal pricing by area",
+        "subtitle": "Transparent starting prices. Final plan confirmed after consultation.",
+        "default_title": "Select an area",
+        "default_price_subtitle": "Choose a treatment area to view pricing",
+        "next_title": "What happens next",
+        "next_steps": "Consultation & skin assessment||Complimentary test patch||Personalised treatment plan||Sessions scheduled around you",
+        "next_note": "Final session numbers and spacing confirmed during consultation based on hair growth and skin type.",
+        "button_label": "Book your consultation",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "section_bg": "#f0ece7",
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#4a4a4a",
+        "card_bg": "#ffffff",
+        "card_border": "#d8d4ce",
+        "button_bg": "#3a3a3a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#222222",
+        "emphasis_bg": "#f5f1ec",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_XzQigP": {
       "type": "slideshow",
       "blocks": {
@@ -3916,6 +4070,7 @@
     "results_testimonials_GtrNYg",
     "slideshow_Ay9DCi",
     "slideshow_TEgK4F",
+    "pricing_by_area_36Fqyr",
     "slideshow_XzQigP",
     "consultation_form_8BeJtz",
     "slideshow_6QxCtK",
