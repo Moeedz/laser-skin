@@ -3287,6 +3287,7 @@
         },
         "trust_point_NACqjc": {
           "type": "trust_point",
+          "disabled": true,
           "settings": {
             "icon": "parking",
             "text": "Free parking"
