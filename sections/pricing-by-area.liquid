@@ -1,0 +1,1149 @@
+{% style %}
+  /* ==========================================================================
+     Pricing Section
+     ========================================================================== */
+
+  .prc {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 0;
+  }
+
+  .prc__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .prc__header {
+    margin-bottom: 36px;
+  }
+
+  .prc__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 10px;
+  }
+
+  .prc__subtitle {
+    font-size: var(--body-size);
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  /* ---- Main Layout ---- */
+  .prc__layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: var(--padding-bottom);
+  }
+
+  /* ---- Left Panel ---- */
+  .prc__left {
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 28px 32px 32px;
+    background: var(--card-bg);
+  }
+
+  /* Most Popular Tabs */
+  .prc__popular-label {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 16px;
+  }
+
+  .prc__popular-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .prc__popular-tab {
+    padding: 10px 20px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--section-bg);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--heading-color);
+    cursor: pointer;
+    transition: all 0.25s var(--ease-out-expo);
+    white-space: nowrap;
+  }
+
+  .prc__popular-tab:hover,
+  .prc__popular-tab.is-active {
+    background: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+  }
+
+  /* Category Columns */
+  .prc__categories {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  .prc__category-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 12px;
+    line-height: 1.3;
+  }
+
+  .prc__area-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .prc__area-item {
+    font-size: var(--body-size);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+    line-height: 1.4;
+  }
+
+  .prc__area-item:hover {
+    color: var(--accent-color);
+  }
+
+  .prc__area-item.is-active {
+    color: var(--accent-color);
+    font-weight: 600;
+    position: relative;
+  }
+
+  .prc__area-item.is-active::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* Mobile Accordion (hidden on desktop) */
+  .prc__accordion {
+    display: none;
+  }
+
+  /* ---- Right Panel (Pricing Card) ---- */
+  .prc__right {
+    position: sticky;
+    top: 24px;
+  }
+
+  .prc__pricing-card {
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    background: var(--card-bg);
+  }
+
+  .prc__price-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+
+  .prc__price-subtitle {
+    font-size: 14px;
+    color: var(--text-color);
+    margin: 0 0 20px;
+    opacity: 0.75;
+  }
+
+  /* Pricing Tiers */
+  .prc__tiers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .prc__tier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--section-bg);
+  }
+
+  .prc__tier-name {
+    font-size: var(--body-size);
+    color: var(--heading-color);
+    font-weight: 500;
+  }
+
+  .prc__tier-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  /* What Happens Next */
+  .prc__next-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 14px;
+    line-height: 1.3;
+  }
+
+  .prc__next-list {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .prc__next-item {
+    font-size: var(--body-size);
+    color: var(--heading-color);
+    line-height: 1.5;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .prc__next-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  .prc__next-note {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0 0 24px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  /* CTA Button */
+  .prc__btn {
+    display: block;
+    width: 100%;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .prc__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    color: var(--btn-text);
+  }
+
+  /* ---- Bottom Emphasis Bar ---- */
+  .prc__emphasis-bar {
+    background: var(--emphasis-bg);
+    border-top: 2px solid var(--accent-color);
+    margin-top: 0;
+  }
+
+  .prc__emphasis-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .prc__emphasis-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .prc__emphasis-icon {
+    color: var(--accent-color);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-prc-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-prc-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .prc__pricing-card-inner {
+    transition: opacity 0.3s ease;
+  }
+
+  .prc__pricing-card-inner.is-updating {
+    opacity: 0.4;
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1100px) {
+    .prc__layout {
+      grid-template-columns: 1fr 340px;
+      gap: 28px;
+    }
+
+    .prc__categories {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .prc__left {
+      padding: 24px 24px 28px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .prc__container {
+      padding: 0 20px;
+    }
+
+    .prc__heading {
+      font-size: calc(var(--heading-size) * 0.65);
+    }
+
+    .prc__layout {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .prc__right {
+      position: static;
+    }
+
+    /* Hide desktop grid, show accordion */
+    .prc__categories {
+      display: none;
+    }
+
+    .prc__accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .prc__acc-item {
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .prc__acc-item:first-child {
+      border-top: 1px solid var(--card-border);
+    }
+
+    .prc__acc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .prc__acc-title {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin: 0;
+    }
+
+    .prc__acc-chevron {
+      width: 20px;
+      height: 20px;
+      color: var(--text-color);
+      transition: transform 0.3s var(--ease-out-expo);
+      flex-shrink: 0;
+    }
+
+    .prc__acc-item.is-open .prc__acc-chevron {
+      transform: rotate(180deg);
+    }
+
+    .prc__acc-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--ease-out-expo);
+    }
+
+    .prc__acc-item.is-open .prc__acc-body {
+      max-height: 600px;
+    }
+
+    .prc__acc-list {
+      list-style: none;
+      padding: 0 0 16px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .prc__acc-area {
+      font-size: 16px;
+      color: var(--text-color);
+      cursor: pointer;
+      padding: 6px 0;
+      transition: color 0.2s ease;
+    }
+
+    .prc__acc-area:hover,
+    .prc__acc-area.is-active {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .prc__popular-tabs {
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .prc__popular-tab {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+
+    .prc__left {
+      padding: 20px 20px 24px;
+    }
+
+    .prc__pricing-card {
+      padding: 24px 20px 20px;
+    }
+
+    .prc__price-title {
+      font-size: 21px;
+    }
+
+    .prc__next-title {
+      font-size: 19px;
+    }
+
+    .prc__emphasis-inner {
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .prc__emphasis-item {
+      font-size: 15px;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .prc__container {
+      padding: 0 16px;
+    }
+
+    .prc__heading {
+      font-size: calc(var(--heading-size) * 0.55);
+    }
+
+    .prc__popular-tab {
+      font-size: 13px;
+      padding: 7px 14px;
+    }
+
+    .prc__price-title {
+      font-size: 19px;
+    }
+
+    .prc__tier-price {
+      font-size: 16px;
+    }
+
+    .prc__emphasis-item {
+      font-size: 14px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="prc"
+  id="prc-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text_color }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --emphasis-bg: {{ section.settings.emphasis_bg }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="prc__container">
+    <!-- Header -->
+    <div class="prc__header" data-prc-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="prc__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="prc__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="prc__layout" data-prc-animate data-delay="1">
+      <!-- Left Panel -->
+      <div class="prc__left">
+        <!-- Most Popular -->
+        {% assign popular_blocks = section.blocks | where: 'type', 'popular_tab' %}
+        {% if popular_blocks.size > 0 %}
+          <p class="prc__popular-label">Most popular</p>
+          <div class="prc__popular-tabs">
+            {% for block in popular_blocks %}
+              <button
+                class="prc__popular-tab"
+                data-prc-select="{{ block.settings.linked_area }}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.label }}
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- Desktop: Category Columns -->
+        {% assign category_blocks = section.blocks | where: 'type', 'category' %}
+        <div class="prc__categories">
+          {% for block in category_blocks %}
+            <div class="prc__category" {{ block.shopify_attributes }}>
+              <h4 class="prc__category-title">{{ block.settings.title }}</h4>
+              <ul class="prc__area-list">
+                {% assign areas = block.settings.areas | split: '||' %}
+                {% for area in areas %}
+                  {% assign area_stripped = area | strip %}
+                  {% if area_stripped != blank %}
+                    <li class="prc__area-item" data-prc-select="{{ area_stripped }}">{{ area_stripped }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Mobile: Accordion -->
+        <div class="prc__accordion">
+          {% for block in category_blocks %}
+            <div class="prc__acc-item">
+              <div class="prc__acc-header">
+                <h4 class="prc__acc-title">{{ block.settings.title }}</h4>
+                <svg class="prc__acc-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="prc__acc-body">
+                <ul class="prc__acc-list">
+                  {% assign areas = block.settings.areas | split: '||' %}
+                  {% for area in areas %}
+                    {% assign area_stripped = area | strip %}
+                    {% if area_stripped != blank %}
+                      <li class="prc__acc-area" data-prc-select="{{ area_stripped }}">{{ area_stripped }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Right Panel: Pricing Card -->
+      <div class="prc__right">
+        <div class="prc__pricing-card">
+          <div class="prc__pricing-card-inner" id="prc-card-{{ section.id }}">
+            <h3 class="prc__price-title" id="prc-title-{{ section.id }}">{{ section.settings.default_title }}</h3>
+            <p class="prc__price-subtitle" id="prc-price-sub-{{ section.id }}">{{ section.settings.default_price_subtitle }}</p>
+            <div class="prc__tiers" id="prc-tiers-{{ section.id }}"></div>
+
+            {% if section.settings.next_title != blank %}
+              <h4 class="prc__next-title">{{ section.settings.next_title }}</h4>
+            {% endif %}
+
+            {% if section.settings.next_steps != blank %}
+              <ul class="prc__next-list">
+                {% assign steps = section.settings.next_steps | split: '||' %}
+                {% for step in steps %}
+                  {% assign step_stripped = step | strip %}
+                  {% if step_stripped != blank %}
+                    <li class="prc__next-item">{{ step_stripped }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+            {% if section.settings.next_note != blank %}
+              <p class="prc__next-note">{{ section.settings.next_note }}</p>
+            {% endif %}
+
+            {% if section.settings.button_label != blank %}
+              <a
+                href="{{ section.settings.button_link }}"
+                class="prc__btn"
+                {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+              >
+                {{ section.settings.button_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emphasis Bar -->
+  {% assign emphasis_blocks = section.blocks | where: 'type', 'emphasis' %}
+  {% if emphasis_blocks.size > 0 %}
+    <div class="prc__emphasis-bar">
+      <div class="prc__emphasis-inner">
+        {% for block in emphasis_blocks %}
+          <div class="prc__emphasis-item" {{ block.shopify_attributes }}>
+            <span class="prc__emphasis-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11.5L8.5 16L18 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            {{ block.settings.text }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const section = document.getElementById('prc-{{ section.id }}');
+  if (!section) return;
+
+  /* ---- Pricing Data (from blocks) ---- */
+  const pricingData = {};
+  {% assign pricing_blocks = section.blocks | where: 'type', 'pricing' %}
+  {% for block in pricing_blocks %}
+    pricingData['{{ block.settings.area_name | strip | escape }}'] = {
+      title: '{{ block.settings.display_title | default: block.settings.area_name | strip | escape }}',
+      subtitle: '{{ block.settings.price_subtitle | escape }}',
+      tiers: [
+        {% if block.settings.tier_1_name != blank %}{ name: '{{ block.settings.tier_1_name | escape }}', price: '{{ block.settings.tier_1_price | escape }}' },{% endif %}
+        {% if block.settings.tier_2_name != blank %}{ name: '{{ block.settings.tier_2_name | escape }}', price: '{{ block.settings.tier_2_price | escape }}' },{% endif %}
+        {% if block.settings.tier_3_name != blank %}{ name: '{{ block.settings.tier_3_name | escape }}', price: '{{ block.settings.tier_3_price | escape }}' },{% endif %}
+        {% if block.settings.tier_4_name != blank %}{ name: '{{ block.settings.tier_4_name | escape }}', price: '{{ block.settings.tier_4_price | escape }}' },{% endif %}
+        {% if block.settings.tier_5_name != blank %}{ name: '{{ block.settings.tier_5_name | escape }}', price: '{{ block.settings.tier_5_price | escape }}' },{% endif %}
+        {% if block.settings.tier_6_name != blank %}{ name: '{{ block.settings.tier_6_name | escape }}', price: '{{ block.settings.tier_6_price | escape }}' },{% endif %}
+      ]
+    };
+  {% endfor %}
+
+  const titleEl = document.getElementById('prc-title-{{ section.id }}');
+  const subEl = document.getElementById('prc-price-sub-{{ section.id }}');
+  const tiersEl = document.getElementById('prc-tiers-{{ section.id }}');
+  const cardInner = document.getElementById('prc-card-{{ section.id }}');
+
+  function updateCard(areaName) {
+    const data = pricingData[areaName];
+    if (!data) return;
+
+    cardInner.classList.add('is-updating');
+    setTimeout(() => {
+      titleEl.textContent = data.title;
+      subEl.textContent = data.subtitle;
+      tiersEl.innerHTML = data.tiers.map(t =>
+        '<div class="prc__tier"><span class="prc__tier-name">' + t.name + '</span><span class="prc__tier-price">' + t.price + '</span></div>'
+      ).join('');
+      cardInner.classList.remove('is-updating');
+    }, 150);
+
+    /* Update active states */
+    section.querySelectorAll('.prc__area-item, .prc__acc-area').forEach(el => {
+      el.classList.toggle('is-active', el.getAttribute('data-prc-select') === areaName);
+    });
+    section.querySelectorAll('.prc__popular-tab').forEach(el => {
+      el.classList.toggle('is-active', el.getAttribute('data-prc-select') === areaName);
+    });
+  }
+
+  /* Click handlers for area items + popular tabs */
+  section.querySelectorAll('[data-prc-select]').forEach(el => {
+    el.addEventListener('click', function () {
+      updateCard(this.getAttribute('data-prc-select'));
+    });
+  });
+
+  /* Accordion toggle */
+  section.querySelectorAll('.prc__acc-header').forEach(header => {
+    header.addEventListener('click', function () {
+      const item = this.closest('.prc__acc-item');
+      const wasOpen = item.classList.contains('is-open');
+      section.querySelectorAll('.prc__acc-item').forEach(i => i.classList.remove('is-open'));
+      if (!wasOpen) item.classList.add('is-open');
+    });
+  });
+
+  /* Load first pricing entry */
+  const firstKey = Object.keys(pricingData)[0];
+  if (firstKey) updateCard(firstKey);
+
+  /* Scroll animations */
+  const els = section.querySelectorAll('[data-prc-animate]');
+  if (els.length) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => obs.observe(el));
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Pricing by Area",
+  "tag": "section",
+  "class": "pricing-area-section",
+  "max_blocks": 50,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Laser hair removal pricing by area"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Transparent starting prices. Final plan confirmed after consultation."
+    },
+    {
+      "type": "header",
+      "content": "Default Pricing Card"
+    },
+    {
+      "type": "text",
+      "id": "default_title",
+      "label": "Default Title",
+      "default": "Select an area"
+    },
+    {
+      "type": "text",
+      "id": "default_price_subtitle",
+      "label": "Default Subtitle",
+      "default": "Choose a treatment area to view pricing"
+    },
+    {
+      "type": "header",
+      "content": "What Happens Next"
+    },
+    {
+      "type": "text",
+      "id": "next_title",
+      "label": "Title",
+      "default": "What happens next"
+    },
+    {
+      "type": "textarea",
+      "id": "next_steps",
+      "label": "Steps (separate with ||)",
+      "default": "Consultation & skin assessment||Complimentary test patch||Personalised treatment plan||Sessions scheduled around you"
+    },
+    {
+      "type": "textarea",
+      "id": "next_note",
+      "label": "Note Text",
+      "default": "Final session numbers and spacing confirmed during consultation based on hair growth and skin type."
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Book your consultation"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#f0ece7"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#2a2a2a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card Border",
+      "default": "#d8d4ce"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "emphasis_bg",
+      "label": "Emphasis Bar Background",
+      "default": "#f5f1ec"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 56,
+      "step": 2,
+      "default": 38,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "popular_tab",
+      "name": "Popular Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab Label",
+          "default": "Full Body"
+        },
+        {
+          "type": "text",
+          "id": "linked_area",
+          "label": "Linked Area Name (must match a pricing block area name exactly)",
+          "default": "Full Body"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "name": "Category Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Face"
+        },
+        {
+          "type": "textarea",
+          "id": "areas",
+          "label": "Area Names (separate with ||)",
+          "default": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
+        }
+      ]
+    },
+    {
+      "type": "pricing",
+      "name": "Pricing Data",
+      "settings": [
+        {
+          "type": "text",
+          "id": "area_name",
+          "label": "Area Name (must match exactly)",
+          "default": "Upper Lip"
+        },
+        {
+          "type": "text",
+          "id": "display_title",
+          "label": "Display Title (optional, overrides area name)"
+        },
+        {
+          "type": "text",
+          "id": "price_subtitle",
+          "label": "Price Subtitle",
+          "default": "Typical combined pricing"
+        },
+        {
+          "type": "header",
+          "content": "Tier 1"
+        },
+        {
+          "type": "text",
+          "id": "tier_1_name",
+          "label": "Tier 1 Name",
+          "default": "1 session"
+        },
+        {
+          "type": "text",
+          "id": "tier_1_price",
+          "label": "Tier 1 Price",
+          "default": "£60"
+        },
+        {
+          "type": "header",
+          "content": "Tier 2"
+        },
+        {
+          "type": "text",
+          "id": "tier_2_name",
+          "label": "Tier 2 Name",
+          "default": "Course of 6"
+        },
+        {
+          "type": "text",
+          "id": "tier_2_price",
+          "label": "Tier 2 Price",
+          "default": "£190"
+        },
+        {
+          "type": "header",
+          "content": "Tier 3"
+        },
+        {
+          "type": "text",
+          "id": "tier_3_name",
+          "label": "Tier 3 Name",
+          "default": "Course of 8"
+        },
+        {
+          "type": "text",
+          "id": "tier_3_price",
+          "label": "Tier 3 Price",
+          "default": "£290"
+        },
+        {
+          "type": "header",
+          "content": "Tier 4"
+        },
+        {
+          "type": "text",
+          "id": "tier_4_name",
+          "label": "Tier 4 Name",
+          "default": "Course of 10"
+        },
+        {
+          "type": "text",
+          "id": "tier_4_price",
+          "label": "Tier 4 Price",
+          "default": "£375"
+        },
+        {
+          "type": "header",
+          "content": "Tier 5 (optional)"
+        },
+        {
+          "type": "text",
+          "id": "tier_5_name",
+          "label": "Tier 5 Name"
+        },
+        {
+          "type": "text",
+          "id": "tier_5_price",
+          "label": "Tier 5 Price"
+        },
+        {
+          "type": "header",
+          "content": "Tier 6 (optional)"
+        },
+        {
+          "type": "text",
+          "id": "tier_6_name",
+          "label": "Tier 6 Name"
+        },
+        {
+          "type": "text",
+          "id": "tier_6_price",
+          "label": "Tier 6 Price"
+        }
+      ]
+    },
+    {
+      "type": "emphasis",
+      "name": "Emphasis Bar Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Complimentary consultation & test patch included"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pricing by Area",
+      "blocks": [
+        { "type": "popular_tab", "settings": { "label": "Full Body", "linked_area": "Full Body" } },
+        { "type": "popular_tab", "settings": { "label": "Underarms & Hollywood", "linked_area": "Underarms & Hollywood" } },
+        { "type": "popular_tab", "settings": { "label": "Full Face (inc. Neck)", "linked_area": "Full Face (inc. Neck)" } },
+        { "type": "category", "settings": { "title": "Face", "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears" } },
+        { "type": "category", "settings": { "title": "Upper Body", "areas": "Shoulders||Full Back||Lower Back||Chest||Stomach||Full Arms||Half Arms||Chest & Stomach||Back & Shoulders" } },
+        { "type": "category", "settings": { "title": "Lower Body", "areas": "Full Legs||Half Legs||Fingers & Toes||Feet & Toes||Toes" } },
+        { "type": "category", "settings": { "title": "Intimate", "areas": "Bikini Line||Hollywood||Brazilian||Underarms||Areolas||Buttock||Behind (Peri Anal)" } },
+        { "type": "category", "settings": { "title": "Packages", "areas": "Full Body||Underarms & Hollywood||Full Face (inc. Neck)" } },
+        { "type": "pricing", "settings": { "area_name": "Underarms & Hollywood", "display_title": "Underarms & Hollywood", "price_subtitle": "Typical combined pricing", "tier_1_name": "1 session", "tier_1_price": "£60", "tier_2_name": "Course of 6", "tier_2_price": "£190", "tier_3_name": "Course of 8", "tier_3_price": "£290", "tier_4_name": "Course of 10", "tier_4_price": "£375" } },
+        { "type": "pricing", "settings": { "area_name": "Upper Lip", "display_title": "Upper Lip", "price_subtitle": "Per area pricing", "tier_1_name": "1 session", "tier_1_price": "£35", "tier_2_name": "Course of 6", "tier_2_price": "£120", "tier_3_name": "Course of 8", "tier_3_price": "£150", "tier_4_name": "Course of 10", "tier_4_price": "£180" } },
+        { "type": "emphasis", "settings": { "text": "Complimentary consultation & test patch included" } },
+        { "type": "emphasis", "settings": { "text": "Multi-area savings available – personalised at consultation" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
