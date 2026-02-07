@@ -3256,14 +3256,14 @@
           "type": "category",
           "settings": {
             "title": "Packages",
-            "areas": "Full Body||Underarms & Hollywood||Full Face (inc. Neck)"
+            "areas": "Full Body||Underarms and Hollywood||Full Face (inc. Neck)"
           }
         },
         "pricing_HkeaNx": {
           "type": "pricing",
           "settings": {
-            "area_name": "Underarms & Hollywood",
-            "display_title": "Underarms & Hollywood",
+            "area_name": "Underarms and Hollywood",
+            "display_title": "Underarms and Hollywood",
             "price_subtitle": "Typical combined pricing",
             "tier_1_name": "1 session",
             "tier_1_price": "£60",
