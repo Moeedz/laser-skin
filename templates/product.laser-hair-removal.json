@@ -3125,7 +3125,7 @@
           "type": "category",
           "settings": {
             "title": "Face",
-            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears||Test"
+            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
           }
         },
         "category_EmaeNG": {
