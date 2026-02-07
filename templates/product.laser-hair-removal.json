@@ -3876,6 +3876,9 @@
         "contact_yEU4zy",
         "contact_AWRKce"
       ],
+      "custom_css": [
+        "li.loc__hours-item {padding-left: 14px !important;}"
+      ],
       "name": "Location & Contact",
       "settings": {
         "label": "Location & Contact",
