@@ -3121,6 +3121,13 @@
             "tier_6_price": ""
           }
         },
+        "category_JpbrWF": {
+          "type": "category",
+          "settings": {
+            "title": "Face",
+            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
+          }
+        },
         "popular_tab_aCYYp8": {
           "type": "popular_tab",
           "settings": {
@@ -3140,13 +3147,6 @@
           "settings": {
             "label": "Full Face (inc. Neck)",
             "linked_area": "Full Face (inc. Neck)"
-          }
-        },
-        "category_JpbrWF": {
-          "type": "category",
-          "settings": {
-            "title": "Face",
-            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
           }
         },
         "category_EmaeNG": {
@@ -3232,10 +3232,10 @@
       },
       "block_order": [
         "pricing_EdnPFE",
+        "category_JpbrWF",
         "popular_tab_aCYYp8",
         "popular_tab_zPHMjG",
         "popular_tab_djBhLV",
-        "category_JpbrWF",
         "category_EmaeNG",
         "category_NCbwDx",
         "category_kyV6Nw",
