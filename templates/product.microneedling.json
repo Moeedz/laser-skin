@@ -1994,29 +1994,36 @@
         "faq_item_fLCEtm": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "How is RF Micro different from regular microneedling?",
+            "answer": "<p>Traditional microneedling works mainly on the surface.</p><p>RF Micro delivers <strong>heat energy deep into the dermis</strong>, stimulating stronger collagen and elastin production, leading to <strong>firmer, longer-lasting results</strong>.</p>"
           }
         },
         "faq_item_3DFpRW": {
           "type": "faq_item",
           "settings": {
             "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "answer": "<p>Most clients describe it as <strong>uncomfortable rather than painful</strong>.</p><p>A strong numbing cream is applied beforehand, and sensations are usually felt as heat or pressure rather than sharp pain.</p>"
           }
         },
         "faq_item_NqGWCf": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "How long does a session last?",
+            "answer": "<p>A typical session lasts <strong>45–60 minutes</strong>, </p>"
           }
         },
         "faq_item_zLy9i4": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "question": "Do you offer interest free finance?",
+            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay</p>"
+          }
+        },
+        "faq_item_fLPNMj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the treatment safe for all skin types?",
+            "answer": "<p>Yes. RF Micro is considered safe for <strong>all skin tones</strong>, including darker skin, when performed by trained professionals.</p>"
           }
         }
       },
@@ -2024,7 +2031,8 @@
         "faq_item_fLCEtm",
         "faq_item_3DFpRW",
         "faq_item_NqGWCf",
-        "faq_item_zLy9i4"
+        "faq_item_zLy9i4",
+        "faq_item_fLPNMj"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
