@@ -3105,7 +3105,7 @@
           "type": "category",
           "settings": {
             "title": "Face",
-            "areas": "Upper Lip||Chin||Lip & Chin||Sideburns||Neck||Ears"
+            "areas": "Upper Lip||Chin||Lip and Chin||Sideburns||Neck||Ears"
           }
         },
         "pricing_ULf3WF": {
@@ -3151,8 +3151,8 @@
         "pricing_37qTFp": {
           "type": "pricing",
           "settings": {
-            "area_name": "Lip & Chin",
-            "display_title": "Lip & Chin",
+            "area_name": "Lip and Chin",
+            "display_title": "Lip and Chin",
             "price_subtitle": "Typical combined pricing",
             "tier_1_name": "1 session",
             "tier_1_price": "£60",
