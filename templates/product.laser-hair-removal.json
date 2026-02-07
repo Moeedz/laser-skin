@@ -3232,7 +3232,187 @@
           "type": "category",
           "settings": {
             "title": "Upper Body",
-            "areas": "Shoulders||Full Back||Lower Back||Chest||Stomach||Full Arms||Half Arms||Chest & Stomach||Back & Shoulders"
+            "areas": "Shoulders||Full Back||Lower Back||Chest||Stomach||Full Arms||Half Arms||Chest and Stomach||Back and Shoulders"
+          }
+        },
+        "pricing_Fa8q3B": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Shoulders",
+            "display_title": "Shoulders",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_yCn77A": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Back",
+            "display_title": "Full Back",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_yBVaEz": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Lower Back",
+            "display_title": "Lower Back",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_dFCAmH": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Chest",
+            "display_title": "Chest",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_UfQHaV": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Stomach",
+            "display_title": "Stomach",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_TWT6dn": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Arms",
+            "display_title": "Full Arms",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_MyErMi": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Half Arms",
+            "display_title": "Half Arms",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_eP8UPU": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Chest and Stomach",
+            "display_title": "Chest and Stomach",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_3xCfdh": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Back and Shoulders",
+            "display_title": "Back and Shoulders",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
           }
         },
         "category_NCbwDx": {
@@ -3319,6 +3499,15 @@
         "pricing_7pJm3P",
         "pricing_YzK4Gk",
         "category_EmaeNG",
+        "pricing_Fa8q3B",
+        "pricing_yCn77A",
+        "pricing_yBVaEz",
+        "pricing_dFCAmH",
+        "pricing_UfQHaV",
+        "pricing_TWT6dn",
+        "pricing_MyErMi",
+        "pricing_eP8UPU",
+        "pricing_3xCfdh",
         "category_NCbwDx",
         "category_kyV6Nw",
         "category_gLqY9N",
