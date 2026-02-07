@@ -2003,78 +2003,6 @@
         "lazy": true
       }
     },
-    "ss_clothing_image_grid_bYwVtF": {
-      "type": "ss-clothing-image-grid",
-      "blocks": {
-        "link_nHcmHA": {
-          "type": "link",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.40.17_f300e505.jpg",
-            "text": "",
-            "url": "",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "link_nHcmHA"
-      ],
-      "disabled": true,
-      "name": "SS - Threads Image Grid",
-      "settings": {
-        "font_size": 24,
-        "font_color": "#000000",
-        "background-color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_vertical": 0,
-        "section-width": 200
-      }
-    },
-    "before_after_FYP3MP": {
-      "type": "before-after",
-      "blocks": {
-        "before_h3jXfm": {
-          "type": "before",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
-            "text": "Before",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        },
-        "after_PymKJA": {
-          "type": "after",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
-            "text": "After",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "before_h3jXfm",
-        "after_PymKJA"
-      ],
-      "disabled": true,
-      "name": "t:sections.before_after.presets.before_after.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "subheading": "",
-        "title": "Before/after",
-        "content": "",
-        "cursor_direction": "horizontal",
-        "cursor_initial_position": 50,
-        "cursor_background": "#ffffff",
-        "cursor_arrows_color": "#000000"
-      }
-    },
     "rich_text_nziPUE": {
       "type": "rich-text",
       "blocks": {
@@ -2972,6 +2900,66 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
+      }
+    },
+    "results_testimonials_GtrNYg": {
+      "type": "results-testimonials",
+      "blocks": {
+        "result_EYWCtm": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Underarm (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I needed around 8 sessions, but it was worth every visit. The results have given me so much confidence.",
+            "session_label": "After 8 sessions"
+          }
+        },
+        "result_JNfrQ9": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Lower Legs (After 12 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I purchased a package for my legs, and it exceeded my expectations. I couldn't believe the difference!",
+            "session_label": "After 12 sessions"
+          }
+        },
+        "result_y6aERW": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Face (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "Very professional team, and the process was always comfortable. My skin is smooth and clear now.",
+            "session_label": "After 8 sessions"
+          }
+        }
+      },
+      "block_order": [
+        "result_EYWCtm",
+        "result_JNfrQ9",
+        "result_y6aERW"
+      ],
+      "name": "Results & Testimonials",
+      "settings": {
+        "heading": "Real Results from Our Medical-Grade Treatments",
+        "subtitle": "See genuine, natural results achieved safely by real clients, through personalized treatment plans.",
+        "section_bg": "#eae6e1",
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "star_color": "#c8962e",
+        "card_bg": "#f4f1ed",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 42,
+        "card_title_font_size": 18,
+        "body_font_size": 16,
+        "cards_gap": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "slideshow_Ay9DCi": {
@@ -3913,8 +3901,6 @@
     "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
     "ss_image_with_text_9_GLgAya",
-    "ss_clothing_image_grid_bYwVtF",
-    "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
@@ -3925,6 +3911,7 @@
     "slideshow_aatXMM",
     "medical_technology_ct33BL",
     "slideshow_dQVHm7",
+    "results_testimonials_GtrNYg",
     "slideshow_Ay9DCi",
     "slideshow_TEgK4F",
     "slideshow_XzQigP",
