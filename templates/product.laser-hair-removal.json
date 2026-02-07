@@ -3100,6 +3100,26 @@
     "pricing_by_area_36Fqyr": {
       "type": "pricing-by-area",
       "blocks": {
+        "pricing_EdnPFE": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Chin",
+            "display_title": "Chin",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
         "popular_tab_aCYYp8": {
           "type": "popular_tab",
           "settings": {
@@ -3210,6 +3230,7 @@
         }
       },
       "block_order": [
+        "pricing_EdnPFE",
         "popular_tab_aCYYp8",
         "popular_tab_zPHMjG",
         "popular_tab_djBhLV",
