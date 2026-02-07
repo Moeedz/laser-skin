@@ -3419,7 +3419,107 @@
           "type": "category",
           "settings": {
             "title": "Lower Body",
-            "areas": "Full Legs||Half Legs||Fingers & Toes||Feet & Toes||Toes"
+            "areas": "Full Legs||Half Legs||Fingers and Toes||Feet and Toes||Toes"
+          }
+        },
+        "pricing_4GJby7": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Legs",
+            "display_title": "Full Legs",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_877LjH": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Half Legs",
+            "display_title": "Half Legs",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_X87Mrk": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Fingers and Toes",
+            "display_title": "Fingers and Toes",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_mnBQVi": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Feet and Toes",
+            "display_title": "Feet and Toes",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_eMNkCQ": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Toes",
+            "display_title": "Toes",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
           }
         },
         "category_kyV6Nw": {
@@ -3509,6 +3609,11 @@
         "pricing_eP8UPU",
         "pricing_3xCfdh",
         "category_NCbwDx",
+        "pricing_4GJby7",
+        "pricing_877LjH",
+        "pricing_X87Mrk",
+        "pricing_mnBQVi",
+        "pricing_eMNkCQ",
         "category_kyV6Nw",
         "category_gLqY9N",
         "pricing_HkeaNx",
