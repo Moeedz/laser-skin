@@ -1,0 +1,729 @@
+{% style %}
+  /* ==========================================================================
+     Expectations Section
+     ========================================================================== */
+
+  .exp {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: var(--padding-top) 0 var(--padding-bottom);
+    background-color: var(--section-bg);
+  }
+
+  /* Paper / Fabric Texture (pure CSS) */
+  .exp__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .exp__texture::before,
+  .exp__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .exp__texture::before {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .exp__texture::after {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .exp__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .exp__header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  .exp__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .exp__subtitle {
+    font-size: var(--body-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 620px;
+  }
+
+  /* ---- Cards Layout ---- */
+  .exp__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 40px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  /* ---- Left Card: Description ---- */
+  .exp__desc-card {
+    background: var(--card-bg);
+    padding: 40px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .exp__desc-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--heading-color);
+    margin: 0 0 20px;
+  }
+
+  .exp__desc-text {
+    font-size: var(--body-size);
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .exp__desc-text p {
+    margin: 0 0 16px;
+  }
+
+  .exp__desc-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---- Right Card: Trust Grid ---- */
+  .exp__trust-card {
+    background: var(--card-bg);
+    border-left: 1px solid var(--card-border);
+    padding: 0;
+  }
+
+  .exp__trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+
+  .exp__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--card-border);
+    border-right: 1px solid var(--card-border);
+  }
+
+  .exp__trust-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  /* Remove bottom border on last row */
+  .exp__trust-grid-last-row .exp__trust-item {
+    border-bottom: none;
+  }
+
+  .exp__trust-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+  }
+
+  .exp__trust-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .exp__trust-icon .exp__custom-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+
+  .exp__trust-text {
+    font-size: var(--body-size);
+    font-weight: 600;
+    color: var(--heading-color);
+    line-height: 1.4;
+  }
+
+  /* Handle spanning item (odd count, last item spans full width) */
+  .exp__trust-item--span {
+    grid-column: 1 / -1;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  /* ---- CTA Button ---- */
+  .exp__btn-wrapper {
+    text-align: center;
+  }
+
+  .exp__btn {
+    display: inline-block;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 16px 48px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .exp__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    color: var(--btn-text);
+  }
+
+  .exp__btn:active {
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-exp-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-exp-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .exp__container {
+      padding: 0 28px;
+    }
+
+    .exp__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+
+    .exp__desc-card {
+      padding: 32px 32px;
+    }
+
+    .exp__trust-item {
+      padding: 20px 22px;
+    }
+
+    .exp__desc-title {
+      font-size: calc(var(--card-heading-size) * 0.88);
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .exp__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .exp__heading {
+      font-size: calc(var(--heading-size) * 0.62);
+    }
+
+    .exp__header {
+      margin-bottom: 32px;
+    }
+
+    .exp__desc-card {
+      padding: 28px 24px;
+    }
+
+    .exp__desc-title {
+      font-size: calc(var(--card-heading-size) * 0.82);
+    }
+
+    .exp__desc-text {
+      font-size: 15px;
+    }
+
+    .exp__trust-card {
+      border-left: none;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .exp__trust-item {
+      padding: 18px 20px;
+      gap: 12px;
+    }
+
+    .exp__trust-icon {
+      width: 34px;
+      height: 34px;
+    }
+
+    .exp__trust-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .exp__trust-text {
+      font-size: 15px;
+    }
+
+    .exp__btn {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .exp__container {
+      padding: 0 18px;
+    }
+
+    .exp__heading {
+      font-size: calc(var(--heading-size) * 0.52);
+    }
+
+    .exp__desc-card {
+      padding: 24px 18px;
+    }
+
+    .exp__trust-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .exp__trust-item {
+      border-right: none !important;
+    }
+
+    .exp__trust-text {
+      font-size: 14px;
+    }
+
+    .exp__btn {
+      font-size: 15px;
+      padding: 14px 24px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="exp"
+  id="exp-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --icon-color: {{ section.settings.icon_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-heading-size: {{ section.settings.card_heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text_color }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <!-- Paper Texture Overlay -->
+  {% if section.settings.show_texture %}
+    <div class="exp__texture"></div>
+  {% endif %}
+
+  <div class="exp__container">
+    <!-- Header -->
+    <div class="exp__header" data-exp-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="exp__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="exp__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Cards -->
+    <div class="exp__cards" data-exp-animate data-delay="1">
+      <!-- Left: Description -->
+      <div class="exp__desc-card">
+        {% if section.settings.card_title != blank %}
+          <h3 class="exp__desc-title">{{ section.settings.card_title }}</h3>
+        {% endif %}
+        {% if section.settings.card_description != blank %}
+          <div class="exp__desc-text">{{ section.settings.card_description }}</div>
+        {% endif %}
+      </div>
+
+      <!-- Right: Trust Grid -->
+      <div class="exp__trust-card">
+        <div class="exp__trust-grid">
+          {% assign trust_blocks = section.blocks | where: 'type', 'trust_point' %}
+          {% assign trust_count = trust_blocks.size %}
+          {% assign is_odd = trust_count | modulo: 2 %}
+
+          {% for block in trust_blocks %}
+            {% assign is_last = false %}
+            {% if forloop.last and is_odd == 1 %}
+              {% assign is_last = true %}
+            {% endif %}
+            <div
+              class="exp__trust-item{% if is_last %} exp__trust-item--span{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.custom_icon != blank %}
+                <div class="exp__trust-icon">
+                  {{ block.settings.custom_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'exp__custom-icon' }}
+                </div>
+              {% elsif block.settings.icon != 'none' %}
+                <div class="exp__trust-icon">
+                  {% case block.settings.icon %}
+                    {% when 'star' %}
+                      <svg viewBox="0 0 36 36" fill="none"><path d="M18 4L22.09 12.26L31 13.57L24.5 19.88L26.18 28.73L18 24.44L9.82 28.73L11.5 19.88L5 13.57L13.91 12.26L18 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    {% when 'calendar' %}
+                      <svg viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="26" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 14H32" stroke="currentColor" stroke-width="2"/><path d="M12 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 21L17 24L23 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'finance' %}
+                      <svg viewBox="0 0 36 36" fill="none"><rect x="3" y="8" width="30" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 14H33" stroke="currentColor" stroke-width="2"/><path d="M14 21L17 24L23 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'test_patch' %}
+                      <svg viewBox="0 0 36 36" fill="none"><path d="M12 4L8 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 4L16 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 14H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 22H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 10L26 12L30 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'parking' %}
+                      <svg viewBox="0 0 36 36" fill="none"><rect x="6" y="6" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="currentColor" font-size="16" font-weight="700" font-family="sans-serif">P</text></svg>
+                    {% when 'clock' %}
+                      <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="14" stroke="currentColor" stroke-width="2"/><path d="M18 8V18L24 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'shield' %}
+                      <svg viewBox="0 0 36 36" fill="none"><path d="M18 3L5 9V18C5 25.7 10.8 32.8 18 34C25.2 32.8 31 25.7 31 18V9L18 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 18L16 22L24 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'heart' %}
+                      <svg viewBox="0 0 36 36" fill="none"><path d="M18 30S4 22 4 13C4 8.6 7.6 5 12 5C14.8 5 17.2 6.5 18 8.5C18.8 6.5 21.2 5 24 5C28.4 5 32 8.6 32 13C32 22 18 30 18 30Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                  {% endcase %}
+                </div>
+              {% endif %}
+              <span class="exp__trust-text">{{ block.settings.text }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    {% if section.settings.button_label != blank %}
+      <div class="exp__btn-wrapper" data-exp-animate data-delay="2">
+        <a
+          href="{{ section.settings.button_link }}"
+          class="exp__btn"
+          {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('exp-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-exp-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Expectations & Trust",
+  "tag": "section",
+  "class": "expectations-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Clear pricing. Professional standards."
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Everything you need to feel confident booking your consultation."
+    },
+    {
+      "type": "header",
+      "content": "Left Card: Description"
+    },
+    {
+      "type": "text",
+      "id": "card_title",
+      "label": "Card Title",
+      "default": "What you can expect at Laser Skin Clinics"
+    },
+    {
+      "type": "richtext",
+      "id": "card_description",
+      "label": "Card Description",
+      "default": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background Color",
+      "default": "#e4dfd9"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Paper Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 80,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#777777"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card Background",
+      "default": "#f0ece7"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card Border",
+      "default": "#ddd9d3"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_heading_font_size",
+      "label": "Card Heading Font Size",
+      "min": 20,
+      "max": 40,
+      "step": 1,
+      "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Book your consultation"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open link in new tab",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#4a4a4a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_point",
+      "name": "Trust Point",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "star", "label": "Star / Rating" },
+            { "value": "calendar", "label": "Calendar / Appointment" },
+            { "value": "finance", "label": "Finance / Card" },
+            { "value": "test_patch", "label": "Test Patch" },
+            { "value": "parking", "label": "Parking" },
+            { "value": "clock", "label": "Clock / Established" },
+            { "value": "shield", "label": "Shield / Safety" },
+            { "value": "heart", "label": "Heart / Care" }
+          ],
+          "default": "star"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon (overrides above)"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "4.9 Google rating"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Expectations & Trust",
+      "blocks": [
+        { "type": "trust_point", "settings": { "icon": "star", "text": "4.9 Google rating" } },
+        { "type": "trust_point", "settings": { "icon": "calendar", "text": "7-day appointment guarantee" } },
+        { "type": "trust_point", "settings": { "icon": "finance", "text": "0% finance available" } },
+        { "type": "trust_point", "settings": { "icon": "test_patch", "text": "Test patch included" } },
+        { "type": "trust_point", "settings": { "icon": "parking", "text": "Free parking" } },
+        { "type": "trust_point", "settings": { "icon": "parking", "text": "Free parking" } },
+        { "type": "trust_point", "settings": { "icon": "clock", "text": "Established 10+ years" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
