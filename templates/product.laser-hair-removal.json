@@ -3529,6 +3529,146 @@
             "areas": "Bikini Line||Hollywood||Brazilian||Underarms||Areolas||Buttock||Behind (Peri Anal)"
           }
         },
+        "pricing_NHbXtk": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Bikini Line",
+            "display_title": "Bikini Line",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_dNYEJt": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Hollywood",
+            "display_title": "Hollywood",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_p4HXtc": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Brazilian",
+            "display_title": "Brazilian",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_9pQrke": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Underarms",
+            "display_title": "Underarms",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_jDChay": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Areolas",
+            "display_title": "Areolas",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_rXtwhj": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Buttock",
+            "display_title": "Buttock",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_chqPRE": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Behind (Peri Anal)",
+            "display_title": "Behind (Peri Anal)",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£290",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
         "category_gLqY9N": {
           "type": "category",
           "settings": {
@@ -3615,6 +3755,13 @@
         "pricing_mnBQVi",
         "pricing_eMNkCQ",
         "category_kyV6Nw",
+        "pricing_NHbXtk",
+        "pricing_dNYEJt",
+        "pricing_p4HXtc",
+        "pricing_9pQrke",
+        "pricing_jDChay",
+        "pricing_rXtwhj",
+        "pricing_chqPRE",
         "category_gLqY9N",
         "pricing_HkeaNx",
         "popular_tab_djBhLV",
