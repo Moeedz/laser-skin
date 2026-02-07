@@ -1,0 +1,629 @@
+{% style %}
+  /* ==========================================================================
+     Results & Testimonials Section
+     ========================================================================== */
+
+  .rts {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .rts__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .rts__header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .rts__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .rts__subtitle {
+    font-size: var(--body-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  /* ---- Grid ---- */
+  .rts__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--cards-gap);
+  }
+
+  /* ---- Column ---- */
+  .rts__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cards-gap);
+  }
+
+  /* ---- Card Base ---- */
+  .rts__card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+  }
+
+  .rts__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  /* ---- Before/After Card ---- */
+  .rts__ba-card {
+    padding: 20px 20px 16px;
+  }
+
+  .rts__ba-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size);
+    font-weight: 600;
+    color: var(--heading-color);
+    text-align: center;
+    margin: 0 0 16px;
+    line-height: 1.3;
+  }
+
+  .rts__ba-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .rts__ba-image-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .rts__ba-img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .rts__ba-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+    line-height: 1;
+  }
+
+  /* ---- Testimonial Card ---- */
+  .rts__testimonial-card {
+    padding: 24px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .rts__stars {
+    display: flex;
+    gap: 3px;
+    color: var(--star-color);
+    margin-bottom: 14px;
+  }
+
+  .rts__stars svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .rts__quote {
+    font-size: var(--body-size);
+    line-height: 1.65;
+    color: var(--heading-color);
+    margin: 0 0 14px;
+    flex: 1;
+  }
+
+  .rts__session-label {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--text-color);
+    opacity: 0.7;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-rts-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-rts-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .rts__container {
+      padding: 0 28px;
+    }
+
+    .rts__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+
+    .rts__ba-card {
+      padding: 16px 16px 14px;
+    }
+
+    .rts__testimonial-card {
+      padding: 20px 20px 16px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile: horizontal scroll
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .rts__header {
+      margin-bottom: 32px;
+    }
+
+    .rts__heading {
+      font-size: calc(var(--heading-size) * 0.62);
+    }
+
+    .rts__subtitle {
+      font-size: 15px;
+    }
+
+    .rts__grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      padding-bottom: 8px;
+      margin: 0 -24px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .rts__grid::-webkit-scrollbar {
+      display: none;
+    }
+
+    .rts__grid {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .rts__column {
+      min-width: 280px;
+      max-width: 320px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      gap: 12px;
+    }
+
+    .rts__ba-card {
+      padding: 14px 14px 12px;
+    }
+
+    .rts__ba-title {
+      font-size: calc(var(--card-title-size) * 0.88);
+      margin-bottom: 12px;
+    }
+
+    .rts__testimonial-card {
+      padding: 18px 18px 16px;
+    }
+
+    .rts__quote {
+      font-size: 15px;
+    }
+
+    .rts__stars svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .rts__container {
+      padding: 0 18px;
+    }
+
+    .rts__heading {
+      font-size: calc(var(--heading-size) * 0.52);
+    }
+
+    .rts__grid {
+      margin: 0 -18px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .rts__column {
+      min-width: 260px;
+    }
+
+    .rts__ba-title {
+      font-size: calc(var(--card-title-size) * 0.8);
+    }
+
+    .rts__quote {
+      font-size: 14px;
+    }
+
+    .rts__session-label {
+      font-size: 13px;
+    }
+  }
+{% endstyle %}
+
+<section
+  class="rts"
+  id="rts-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --star-color: {{ section.settings.star_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --cards-gap: {{ section.settings.cards_gap }}px;
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="rts__container">
+    <!-- Header -->
+    <div class="rts__header" data-rts-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="rts__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="rts__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Grid -->
+    <div class="rts__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'result' %}
+          <div class="rts__column" {{ block.shopify_attributes }} data-rts-animate data-delay="{{ forloop.index }}">
+            <!-- Before/After Card -->
+            <div class="rts__card rts__ba-card">
+              {% if block.settings.ba_title != blank %}
+                <h3 class="rts__ba-title">{{ block.settings.ba_title }}</h3>
+              {% endif %}
+              <div class="rts__ba-images">
+                <div class="rts__ba-image-wrap">
+                  {% if block.settings.before_image != blank %}
+                    {{ block.settings.before_image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'rts__ba-img', widths: '200,300,400' }}
+                  {% else %}
+                    <div class="rts__ba-img" style="background:#ddd;"></div>
+                  {% endif %}
+                  <span class="rts__ba-label">{{ block.settings.before_label }}</span>
+                </div>
+                <div class="rts__ba-image-wrap">
+                  {% if block.settings.after_image != blank %}
+                    {{ block.settings.after_image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'rts__ba-img', widths: '200,300,400' }}
+                  {% else %}
+                    <div class="rts__ba-img" style="background:#ddd;"></div>
+                  {% endif %}
+                  <span class="rts__ba-label">{{ block.settings.after_label }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card -->
+            <div class="rts__card rts__testimonial-card">
+              {% if block.settings.star_count > 0 %}
+                <div class="rts__stars">
+                  {% for i in (1..block.settings.star_count) %}
+                    <svg viewBox="0 0 18 18" fill="currentColor"><path d="M9 1.5L11.1 5.7L15.7 6.4L12.35 9.6L13.15 14.2L9 12L4.85 14.2L5.65 9.6L2.3 6.4L6.9 5.7L9 1.5Z"/></svg>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              {% if block.settings.quote != blank %}
+                <p class="rts__quote">"{{ block.settings.quote }}"</p>
+              {% endif %}
+              {% if block.settings.session_label != blank %}
+                <p class="rts__session-label">{{ block.settings.session_label }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('rts-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-rts-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Results & Testimonials",
+  "tag": "section",
+  "class": "results-testimonials-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real Results from Our Medical-Grade Treatments"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "See genuine, natural results achieved safely by real clients, through personalized treatment plans."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#eae6e1"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#c8962e"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card Background",
+      "default": "#f4f1ed"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card Border",
+      "default": "#ddd9d3"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "default": 42,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card Title Font Size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "cards_gap",
+      "label": "Gap Between Cards",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "result",
+      "name": "Result + Testimonial",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Before / After"
+        },
+        {
+          "type": "text",
+          "id": "ba_title",
+          "label": "Title",
+          "default": "Underarm (After 8 Sessions)"
+        },
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before Image"
+        },
+        {
+          "type": "text",
+          "id": "before_label",
+          "label": "Before Label",
+          "default": "Before"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After Image"
+        },
+        {
+          "type": "text",
+          "id": "after_label",
+          "label": "After Label",
+          "default": "After"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial"
+        },
+        {
+          "type": "range",
+          "id": "star_count",
+          "label": "Star Rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote Text",
+          "default": "I needed around 8 sessions, but it was worth every visit. The results have given me so much confidence."
+        },
+        {
+          "type": "text",
+          "id": "session_label",
+          "label": "Session Label",
+          "default": "After 8 sessions"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Results & Testimonials",
+      "blocks": [
+        {
+          "type": "result",
+          "settings": {
+            "ba_title": "Underarm (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I needed around 8 sessions, but it was worth every visit. The results have given me so much confidence.",
+            "session_label": "After 8 sessions"
+          }
+        },
+        {
+          "type": "result",
+          "settings": {
+            "ba_title": "Lower Legs (After 12 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I purchased a package for my legs, and it exceeded my expectations. I couldn't believe the difference!",
+            "session_label": "After 12 sessions"
+          }
+        },
+        {
+          "type": "result",
+          "settings": {
+            "ba_title": "Face (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "Very professional team, and the process was always comfortable. My skin is smooth and clear now.",
+            "session_label": "After 8 sessions"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
