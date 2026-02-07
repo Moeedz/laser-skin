@@ -2948,7 +2948,7 @@
       "settings": {
         "heading": "Real Results from Our Medical-Grade Treatments",
         "subtitle": "See genuine, natural results achieved safely by real clients, through personalized treatment plans.",
-        "section_bg": "#eae6e1",
+        "section_bg": "#f5f4f9",
         "heading_color": "#3a3a3a",
         "text_color": "#666666",
         "star_color": "#c8962e",
@@ -2964,6 +2964,7 @@
     },
     "slideshow_Ay9DCi": {
       "type": "slideshow",
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
