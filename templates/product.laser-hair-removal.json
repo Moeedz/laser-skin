@@ -4253,7 +4253,7 @@
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 20,
         "padding_bottom": 20,
