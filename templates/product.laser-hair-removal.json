@@ -4195,22 +4195,22 @@
         "faq_item_XfRDXX": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you offer single sessions or Pay-As-You-Go?",
-            "answer": "<p>Yes, we offer single session pricing for all body areas. This is a great option if you just need a maintenance top-up or prefer to pay per visit. Simply fill in the contact form to request single session.</p>"
+            "question": "what is laser hair removal?",
+            "answer": "<p>Laser hair removal uses <strong>controlled light energy</strong> to target the pigment in hair follicles, damaging them so future hair growth is significantly reduced. It offers long-term hair reduction rather than temporary removal.</p>"
           }
         },
         "faq_item_dNmCQy": {
           "type": "faq_item",
           "settings": {
-            "question": "Why do you offer an \"Unlimited Pass\" instead of a Course of 6",
-            "answer": "<p>Because biology isn't a math equation. While many clinics sell courses of 6, the reality is that hormonal fluctuations and hair cycles mean many clients actually need 8, 10, or 12 sessions for complete smoothness. We believe you shouldn't be penalized for your biology. Our Pass guarantees you get as many sessions as you need to achieve the result, without paying a penny extra.</p>"
+            "question": "How does laser hair removal work?",
+            "answer": "<p>The laser targets <strong>melanin</strong> in the hair. The heat travels down the hair shaft into the follicle, disrupting its ability to regrow hair while leaving the surrounding skin unharmed.</p>"
           }
         },
         "faq_item_JfEqi9": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>This is not the old-fashioned \"rubber band snap\" laser. We use medical-grade, In-Motion Diode technology. The handpiece is constantly moving, gradually warming the hair follicles rather than zapping them instantly. Most clients describe the sensation as a \"hot stone massage.\" It is virtually pain-free.</p>"
+            "question": "Is laser hair removal permanent?",
+            "answer": "<p>Laser hair removal provides <strong>permanent hair reduction</strong>, not 100% permanent removal.</p><p>Most clients experience a <strong>70–90% reduction</strong> after a full course, with occasional maintenance sessions if needed.</p>"
           }
         },
         "faq_item_k9KQgb": {
@@ -4230,15 +4230,15 @@
         "faq_item_UWVQCe": {
           "type": "faq_item",
           "settings": {
-            "question": "How often can I use my unlimited pass?",
-            "answer": "<p>\"Unlimited\" means you can book as many sessions as is medically safe. For most body areas, this means a session every 4–6 weeks to align with your hair growth cycles. This ensures we catch the hair in the \"Anagen\" (growth) phase for effective removal.</p>"
+            "question": "does the treatment hurt?",
+            "answer": "<p>Most clients describe the sensation as a <strong>quick snap or mild heat</strong>.</p><p>Modern machines include cooling systems to maximise comfort, and discomfort is usually brief.</p>"
           }
         },
         "faq_item_JJxdHi": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I customize the areas in my pass?",
-            "answer": "<p>Yes. While our <strong>Daily Essentials (£749)</strong> covers the most popular combination (Legs, hollywood, and Underarms), we know every body is different. If you need a specific area—like a Men's Back & Shoulders package or a custom facial combination—we can create a bespoke <strong>Unlimited Pass</strong> price just for you. Simply fill in the contact form to request a quote.</p>"
+            "question": "When will I see results?",
+            "answer": "<p></p><ul><li><br/>Hair begins to shed <strong>1–3 weeks</strong> after treatment<br/></li><li><br/>Growth becomes finer and patchier with each session<br/></li><li><br/>Results improve progressively over the course</li></ul>"
           }
         }
       },
@@ -4283,7 +4283,7 @@
         "icon_active_bg": "rgba(0,0,0,0)",
         "icon_size": 36,
         "icon_border_width": 2,
-        "show_decoration": true,
+        "show_decoration": false,
         "decoration_color": "#b8a164",
         "decoration_size": 40,
         "decoration_opacity": 0.6,
