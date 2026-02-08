@@ -853,6 +853,8 @@
         "image_bnCdXk": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/hd_796b1121-3040-48b7-b8c5-2190c38251f0.png",
+            "mobile_image": "shopify://shop_images/2m_fba00a11-7910-4c67-9e63-512bb94b8bc2.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -924,7 +926,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -965,7 +967,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -985,6 +987,8 @@
         "image_f7brUH": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2d_cefc0a42-e7f9-4805-882e-8ac1fda9f846.png",
+            "mobile_image": "shopify://shop_images/2gm.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1056,7 +1060,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1097,7 +1101,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1117,6 +1121,8 @@
         "image_fCWfmF": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/3d_0705902a-b9a5-4ea4-aedf-26941c63becf.png",
+            "mobile_image": "shopify://shop_images/3s.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1188,7 +1194,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1229,7 +1235,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1249,6 +1255,8 @@
         "image_8E6Qmr": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/4d_628267b3-89a7-4384-90c6-079de887d3cd.png",
+            "mobile_image": "shopify://shop_images/4m_c2edfb70-aabf-496b-b3c5-91e9df4fe80b.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1320,7 +1328,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1361,7 +1369,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1381,6 +1389,8 @@
         "image_RrT9Nf": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/5d_b5880570-a86b-4761-8e14-cff875afc149.png",
+            "mobile_image": "shopify://shop_images/5m_0d75eaf5-47b5-4c2c-914b-456ec396c980.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1452,7 +1462,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1493,7 +1503,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1513,6 +1523,8 @@
         "image_i6dtG3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/8d.png",
+            "mobile_image": "shopify://shop_images/8m.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1584,7 +1596,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1625,7 +1637,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1645,6 +1657,8 @@
         "image_MjX3jq": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/TrustD_47a38ed9-f8c4-4407-8593-1a51adbdbc2a.png",
+            "mobile_image": "shopify://shop_images/Trust_780a3dd4-f154-4565-b906-d92ced0e1fc5.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1716,7 +1730,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1757,7 +1771,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1836,7 +1850,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 15,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1877,7 +1891,7 @@
         "button_font_size": 15,
         "button_font_weight": "600",
         "button_border_radius": 8,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_trust_badges": true,
         "trust_border_color": "#e0e0e0",
@@ -1898,29 +1912,43 @@
         "faq_item_3e3YkH": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "What is EmLift?",
+            "answer": "<p>Facial Emlift is a <strong>non-invasive facial muscle-lifting treatment</strong> that uses electromagnetic stimulation to activate and strengthen the facial muscles. By targeting the underlying muscles, it helps improve facial tone, definition, and lift.</p>"
           }
         },
         "faq_item_zEeRQF": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "question": "What does the treatment help with?",
+            "answer": "<p>Facial Emlift is ideal for:</p><p></p><ul><li>Loss of facial tone<br/></li><li>Sagging or drooping features<br/></li><li>Reduced muscle definition<br/></li><li>A tired or heavy facial appearance<br/></li></ul><p></p>"
           }
         },
         "faq_item_Eb6g3R": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "Is Emlift painful?",
+            "answer": "<p>No.</p><p>Facial Emlift is <strong>not painful</strong>. You will feel rhythmic muscle contractions and tightening sensations, but most clients find the treatment comfortable and even relaxing.</p>"
           }
         },
         "faq_item_bfCEbU": {
           "type": "faq_item",
           "settings": {
+            "question": "When will I see results?",
+            "answer": "<p></p><ul><li>Some clients notice increased firmness after the first session<br/></li><li>Visible lifting and toning develops gradually over <strong>2–4 weeks</strong><br/></li><li>Results continue to improve as muscles strengthen<br/></li></ul><p></p>"
+          }
+        },
+        "faq_item_bbafBc": {
+          "type": "faq_item",
+          "settings": {
             "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+          }
+        },
+        "faq_item_taixeE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who shouldn't have Emlift?",
+            "answer": "<p>Facial Emlift may not be suitable if you:</p><p></p><ul><li>Are pregnant<br/></li><li>Have metal implants in the face or head<br/></li><li>Have implanted electronic medical devices<br/></li><li>Have certain medical conditions</li></ul>"
           }
         }
       },
@@ -1928,41 +1956,43 @@
         "faq_item_3e3YkH",
         "faq_item_zEeRQF",
         "faq_item_Eb6g3R",
-        "faq_item_bfCEbU"
+        "faq_item_bfCEbU",
+        "faq_item_bbafBc",
+        "faq_item_taixeE"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#1a1a1a",
+        "section_bg_color": "#efefef",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
         "heading": "Your Questions. Answered",
-        "heading_color": "#ffffff",
-        "heading_font_size": 48,
+        "heading_color": "#1c1c1c",
+        "heading_font_size": 24,
         "heading_font_weight": "400",
         "heading_font_style": "italic",
         "heading_alignment": "center",
         "heading_margin_bottom": 50,
-        "question_color": "#ffffff",
-        "question_font_size": 22,
+        "question_color": "#1c1c1c",
+        "question_font_size": 16,
         "question_font_weight": "600",
         "show_underline": true,
         "underline_color": "#b8a164",
         "underline_width": 60,
         "underline_height": 2,
-        "answer_color": "#b0b0b0",
-        "answer_font_size": 16,
+        "answer_color": "#1c1c1c",
+        "answer_font_size": 14,
         "answer_line_height": 1.7,
         "answer_margin_top": 16,
         "divider_color": "#333333",
         "item_padding_vertical": 30,
         "icon_color": "#b8a164",
         "icon_active_color": "#b8a164",
-        "icon_active_bg": "transparent",
-        "icon_size": 36,
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 24,
         "icon_border_width": 2,
-        "show_decoration": true,
+        "show_decoration": false,
         "decoration_color": "#b8a164",
         "decoration_size": 40,
         "decoration_opacity": 0.6,
@@ -1977,6 +2007,8 @@
         "image_e8eneR": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/bottom_image_grey_fa7641b3-4761-4ad0-89c6-221e4bf1594f.png",
+            "mobile_image": "shopify://shop_images/Contact_Grey_a815e837-5fa6-4eb9-9b35-0b72760ce5dd.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -2048,7 +2080,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -2089,7 +2121,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
