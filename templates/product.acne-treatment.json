@@ -861,6 +861,8 @@
         "image_9QcxC3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/1d_e1bbdc25-1119-45a9-85e1-af44457e3d00.png",
+            "mobile_image": "shopify://shop_images/1m_5dd16290-fdce-4c1b-8d2f-e9fde6afd5ac.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -932,7 +934,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -973,7 +975,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -993,6 +995,8 @@
         "image_K6RAEb": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2d_0527af4f-431c-4234-a4e5-3b60b4b1fd48.png",
+            "mobile_image": "shopify://shop_images/2m_2b5ae668-a53a-4aa4-b902-fa2161b9bd8c.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1064,7 +1068,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1105,7 +1109,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1125,6 +1129,8 @@
         "image_mxHpYa": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/3d_73623884-9fd4-47a6-9f7a-51efcf95070a.png",
+            "mobile_image": "shopify://shop_images/3m_fb4c59e8-a4ca-464a-966f-8b9d19818e9d.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1196,7 +1202,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1237,7 +1243,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1257,6 +1263,8 @@
         "image_UParAg": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/4d_2e13caa6-ea76-451d-bfe6-e338cf452945.png",
+            "mobile_image": "shopify://shop_images/4m_f89f87ca-0344-4e6b-8cc1-1092bb668425.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1328,7 +1336,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1369,7 +1377,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1389,6 +1397,8 @@
         "image_xzUQFj": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/5d_faec3f7d-8afb-41fe-babb-62fa83028b40.png",
+            "mobile_image": "shopify://shop_images/5m_ed0975f8-0de5-478c-a3f5-836de61f2d1c.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1460,7 +1470,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1501,7 +1511,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1521,6 +1531,8 @@
         "image_7UjMW8": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/6m_acdda55b-b408-48b8-b0e8-c56467f5b950.png",
+            "mobile_image": "shopify://shop_images/6d_1a0d9b62-5b05-4715-ae75-62133d4dd153.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1592,7 +1604,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1633,7 +1645,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1653,6 +1665,8 @@
         "image_aHhVVH": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/TrustD_d1440858-ea20-4789-924c-5c6ba08955ed.png",
+            "mobile_image": "shopify://shop_images/Trust_51dd1678-913a-4bf6-90bb-d3f931cba557.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1724,7 +1738,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1765,7 +1779,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
@@ -1844,7 +1858,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 15,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -1885,7 +1899,7 @@
         "button_font_size": 15,
         "button_font_weight": "600",
         "button_border_radius": 8,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_trust_badges": true,
         "trust_border_color": "#e0e0e0",
@@ -1906,29 +1920,36 @@
         "faq_item_M9pAhd": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "What is acne therapy?",
+            "answer": "<p>Our acne therapy is a <strong>personalised treatment programme</strong> designed to address active acne, minimise breakouts, soothe inflammation, and restore skin balance. Every plan is carefully tailored to your skin’s needs, because effective acne treatment is never one-size-fits-all.</p>"
           }
         },
         "faq_item_FbwQhi": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "question": "Is acne therapy suitable for adults?",
+            "answer": "<p>Yes. Acne therapy is suitable for <strong>teenage and adult acne</strong>, including late-onset and hormonal breakouts.</p>"
           }
         },
         "faq_item_tnGUTF": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "is there any downtime?",
+            "answer": "<p>Downtime is minimal:</p><p><br/>Mild redness may occur for a few hours.<br/>Skin may feel slightly sensitive.<br/>Most clients return to normal activities the same day or next day.</p>"
           }
         },
         "faq_item_BwVKj4": {
           "type": "faq_item",
           "settings": {
             "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+          }
+        },
+        "faq_item_LqAg8E": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the treatment help with acne scars?",
+            "answer": "<p>Acne therapy helps prevent future scarring and can improve <strong>early or superficial scarring</strong>.</p><p>Deeper scars may require treatments such as microneedling, RF microneedling, or laser therapy.</p>"
           }
         }
       },
@@ -1936,41 +1957,42 @@
         "faq_item_M9pAhd",
         "faq_item_FbwQhi",
         "faq_item_tnGUTF",
-        "faq_item_BwVKj4"
+        "faq_item_BwVKj4",
+        "faq_item_LqAg8E"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#1a1a1a",
+        "section_bg_color": "#efefef",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
         "heading": "Your Questions. Answered",
-        "heading_color": "#ffffff",
-        "heading_font_size": 48,
+        "heading_color": "#1c1c1c",
+        "heading_font_size": 24,
         "heading_font_weight": "400",
         "heading_font_style": "italic",
         "heading_alignment": "center",
         "heading_margin_bottom": 50,
-        "question_color": "#ffffff",
-        "question_font_size": 22,
+        "question_color": "#1c1c1c",
+        "question_font_size": 16,
         "question_font_weight": "600",
         "show_underline": true,
         "underline_color": "#b8a164",
         "underline_width": 60,
         "underline_height": 2,
-        "answer_color": "#b0b0b0",
-        "answer_font_size": 16,
+        "answer_color": "#1c1c1c",
+        "answer_font_size": 14,
         "answer_line_height": 1.7,
         "answer_margin_top": 16,
         "divider_color": "#333333",
         "item_padding_vertical": 30,
         "icon_color": "#b8a164",
         "icon_active_color": "#b8a164",
-        "icon_active_bg": "transparent",
-        "icon_size": 36,
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 24,
         "icon_border_width": 2,
-        "show_decoration": true,
+        "show_decoration": false,
         "decoration_color": "#b8a164",
         "decoration_size": 40,
         "decoration_opacity": 0.6,
@@ -1985,6 +2007,8 @@
         "image_4kRfVb": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/bottom_image_grey_bfc69fcc-cc39-474e-b427-579264015f60.png",
+            "mobile_image": "shopify://shop_images/Contact_Grey_0b8c706c-76ef-4609-b28a-e9a8a226fdd9.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -2056,7 +2080,7 @@
         "input_placeholder_color": "#999999",
         "input_font_size": 14,
         "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "rgba(184, 161, 100, 0.15)",
+        "input_focus_shadow_color": "#b8a16426",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
         "treatment_label": "Which treatment are you interested in?",
@@ -2097,7 +2121,7 @@
         "button_font_size": 14,
         "button_font_weight": "600",
         "button_border_radius": 6,
-        "button_shadow_color": "rgba(184, 161, 100, 0.3)",
+        "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
         "show_google_rating": true,
         "google_rating_score": "4.9",
