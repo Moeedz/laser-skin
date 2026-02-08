@@ -1986,29 +1986,43 @@
         "faq_item_h7yHHd": {
           "type": "faq_item",
           "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+            "question": "What is NCTF?",
+            "answer": "<p>NCTF 135HA is a <strong>revitalising injectable skin booster</strong> containing hyaluronic acid plus over 50 active ingredients including vitamins, amino acids, minerals, co-enzymes, and antioxidants. It’s designed to deeply nourish the skin and improve overall skin quality.</p>"
           }
         },
         "faq_item_heM8Uk": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>With our prescription-strength numbing cream applied for 60 minutes, most patients experience only a mild, prickly sensation. Comfort is our top priority.</p>"
+            "question": "How does it work?",
+            "answer": "<p>NCTF works by delivering a powerful cocktail of nutrients directly into the skin, stimulating:</p><ul><li><br/>Collagen production<br/></li><li><br/>Cellular regeneration<br/></li><li><br/>Improved hydration and elasticity<br/></li></ul><p>This leads to healthier, brighter, more youthful-looking skin.</p>"
           }
         },
         "faq_item_LP7eQR": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>You'll see a glow within a week as your skin heals, with collagen remodeling continuing for 4-6 weeks, with significant texture improvement visible after 2-3 months.</p>"
+            "question": "is NCTF a filler?",
+            "answer": "<p>No.</p><p>NCTF does <strong>not add volume or change facial shape</strong>. It focuses purely on <strong>skin quality, hydration, and rejuvenation</strong>.</p>"
           }
         },
         "faq_item_BAEKdm": {
           "type": "faq_item",
           "settings": {
             "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay, allowing you to pay in 3, 6, or 12 monthly installments. Find out more on our pricing page.</p>"
+            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+          }
+        },
+        "faq_item_F8jzNC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the treatment painful?",
+            "answer": "<p>Discomfort is minimal.</p><p>A fine needle is used, and numbing cream can be applied if required. Most clients describe the sensation as <strong>small pinches</strong>.</p>"
+          }
+        },
+        "faq_item_QA7HBU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is NCTF suitable for all skin types?",
+            "answer": "<p>Yes. NCTF is suitable for <strong>all skin types and tones</strong> and is especially popular for early anti-ageing or skin maintenance.</p>"
           }
         }
       },
@@ -2016,7 +2030,9 @@
         "faq_item_h7yHHd",
         "faq_item_heM8Uk",
         "faq_item_LP7eQR",
-        "faq_item_BAEKdm"
+        "faq_item_BAEKdm",
+        "faq_item_F8jzNC",
+        "faq_item_QA7HBU"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
