@@ -3736,7 +3736,7 @@
           "type": "category",
           "settings": {
             "title": "Packages",
-            "areas": "Full Body||Underarms and Hollywood||Full Face (inc. Neck)"
+            "areas": "Full Body||Underarms and Hollywood||Full Face (inc. Neck)||New1)||New2)||New3"
           }
         },
         "pricing_VUDBPm": {
@@ -3802,8 +3802,8 @@
         "pricing_fCUfhE": {
           "type": "pricing",
           "settings": {
-            "area_name": "Full Face (inc. Neck)",
-            "display_title": "Full Face (inc. Neck)",
+            "area_name": "New1",
+            "display_title": "New1",
             "price_subtitle": "Typical combined pricing",
             "tier_1_name": "1 session",
             "tier_1_price": "£60",
@@ -3822,8 +3822,8 @@
         "pricing_ppdNAa": {
           "type": "pricing",
           "settings": {
-            "area_name": "Full Face (inc. Neck)",
-            "display_title": "Full Face (inc. Neck)",
+            "area_name": "New2",
+            "display_title": "New2",
             "price_subtitle": "Typical combined pricing",
             "tier_1_name": "1 session",
             "tier_1_price": "£60",
@@ -3842,8 +3842,8 @@
         "pricing_YKcc3q": {
           "type": "pricing",
           "settings": {
-            "area_name": "Full Face (inc. Neck)",
-            "display_title": "Full Face (inc. Neck)",
+            "area_name": "New3",
+            "display_title": "New3",
             "price_subtitle": "Typical combined pricing",
             "tier_1_name": "1 session",
             "tier_1_price": "£60",
