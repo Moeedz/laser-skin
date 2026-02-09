@@ -1050,6 +1050,7 @@
       "block_order": [
         "image_Ffpz3d"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
