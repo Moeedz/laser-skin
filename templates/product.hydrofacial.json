@@ -1247,7 +1247,7 @@
         "texture_opacity": 80,
         "heading_color": "#3a3a3a",
         "text_color": "#666666",
-        "card_bg": "#ffffff",
+        "card_bg": "#ede8ee",
         "heading_font_size": 40,
         "card_title_font_size": 24,
         "body_font_size": 16,
