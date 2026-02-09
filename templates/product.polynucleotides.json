@@ -2298,6 +2298,13 @@
         "faq_item_xLnDXD": {
           "type": "faq_item",
           "settings": {
+            "question": "What brand of Polynucleotides do you use?",
+            "answer": "<p>We use <strong>Plinest</strong>, a high-quality, medical-grade polynucleotide treatment known for its purity, safety, and clinically proven results. Plinest is widely used in advanced aesthetic medicine to support skin regeneration, improve texture, and enhance overall skin quality.</p>"
+          }
+        },
+        "faq_item_Tjaig7": {
+          "type": "faq_item",
+          "settings": {
             "question": "Is this the same as Dermal Filler?",
             "answer": "<p>No, they are completely different. Dermal Fillers are made of Hyaluronic Acid gel and are designed to physically add volume or change the shape of your face immediately. Polynucleotides are <strong>biostimulators</strong>. They do not add artificial volume; instead, they communicate with your cells to regenerate your <em>own</em> skin, thickening it and smoothing it from the inside out. Think of Filler as \"contouring\" and Polynucleotides as \"repairing.</p>"
           }
@@ -2382,6 +2389,7 @@
       },
       "block_order": [
         "faq_item_xLnDXD",
+        "faq_item_Tjaig7",
         "faq_item_47CnaL",
         "faq_item_Qp9YEm",
         "faq_item_jaqGgh",
