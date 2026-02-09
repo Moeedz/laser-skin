@@ -1426,6 +1426,7 @@
       "block_order": [
         "image_HKVB3b"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
