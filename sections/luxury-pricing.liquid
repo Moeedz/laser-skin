@@ -1,0 +1,566 @@
+{% style %}
+  /* ==========================================================================
+     Luxury Pricing Section
+     ========================================================================== */
+
+  .lxp {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  /* Dark fabric texture */
+  .lxp__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .lxp__texture::before,
+  .lxp__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .lxp__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .lxp__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.015 0.06' numOctaves='4' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .lxp__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .lxp__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    color: var(--gold-color);
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+
+  .lxp__subtitle {
+    font-size: var(--body-size);
+    text-align: center;
+    color: var(--gold-color);
+    opacity: 0.8;
+    margin: 0 0 12px;
+    line-height: 1.5;
+  }
+
+  /* Ornamental divider */
+  .lxp__ornament {
+    text-align: center;
+    margin-bottom: 44px;
+    color: var(--gold-color);
+    opacity: 0.5;
+    line-height: 1;
+  }
+
+  .lxp__ornament::before {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: var(--gold-color);
+    vertical-align: middle;
+    margin-right: 12px;
+    opacity: 0.5;
+  }
+
+  .lxp__ornament::after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: var(--gold-color);
+    vertical-align: middle;
+    margin-left: 12px;
+    opacity: 0.5;
+  }
+
+  /* ---- Pricing Cards ---- */
+  .lxp__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 28px;
+    margin-bottom: 44px;
+  }
+
+  .lxp__card {
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 36px 28px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .lxp__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-color: var(--gold-color);
+  }
+
+  .lxp__card-name {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size);
+    font-weight: 400;
+    color: var(--gold-color);
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+
+  .lxp__card-sub {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--gold-color);
+    opacity: 0.65;
+    margin: 0 0 12px;
+    line-height: 1.4;
+  }
+
+  .lxp__card-price {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--price-size);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold-color);
+    margin: 0 0 4px;
+    line-height: 1.2;
+  }
+
+  .lxp__card-per {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--gold-color);
+    opacity: 0.7;
+    margin: 0 0 16px;
+    line-height: 1.4;
+  }
+
+  /* Card ornamental divider */
+  .lxp__card-divider {
+    width: 50px;
+    height: 1px;
+    background: var(--gold-color);
+    opacity: 0.3;
+    margin: 0 auto 16px;
+  }
+
+  .lxp__card-desc {
+    font-size: var(--body-size);
+    color: var(--gold-color);
+    opacity: 0.75;
+    margin: 0;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ---- Footer ---- */
+  .lxp__footer {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .lxp__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px);
+    font-style: italic;
+    color: var(--gold-color);
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ---- CTA Button ---- */
+  .lxp__btn-wrapper {
+    text-align: center;
+  }
+
+  .lxp__btn {
+    display: inline-block;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 16px 48px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .lxp__btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    color: var(--btn-text);
+  }
+
+  /* Animations */
+  [data-lxp-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-lxp-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .lxp__container { padding: 0 20px; }
+    .lxp__heading { font-size: calc(var(--heading-size) * 0.65); }
+    .lxp__cards { grid-template-columns: 1fr; gap: 16px; max-width: 400px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
+    .lxp__card { padding: 28px 24px; }
+    .lxp__card-price { font-size: calc(var(--price-size) * 0.85); }
+    .lxp__btn { width: 100%; max-width: 360px; text-align: center; }
+    .lxp__ornament::before, .lxp__ornament::after { width: 50px; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .lxp__container { padding: 0 16px; }
+    .lxp__heading { font-size: calc(var(--heading-size) * 0.52); }
+  }
+{% endstyle %}
+
+{% assign card_blocks = section.blocks | where: 'type', 'price_card' %}
+
+<section
+  class="lxp"
+  id="lxp-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --gold-color: {{ section.settings.gold_color }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --price-size: {{ section.settings.price_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ card_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}
+    <div class="lxp__texture"></div>
+  {% endif %}
+
+  <div class="lxp__container">
+    <div data-lxp-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="lxp__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="lxp__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+      <div class="lxp__ornament">✦</div>
+    </div>
+
+    {% if card_blocks.size > 0 %}
+      <div class="lxp__cards" data-lxp-animate data-delay="1">
+        {% for block in card_blocks %}
+          <div class="lxp__card" {{ block.shopify_attributes }}>
+            {% if block.settings.name != blank %}
+              <p class="lxp__card-name">{{ block.settings.name }}</p>
+            {% endif %}
+            {% if block.settings.card_subtitle != blank %}
+              <p class="lxp__card-sub">{{ block.settings.card_subtitle }}</p>
+            {% endif %}
+            {% if block.settings.price != blank %}
+              <p class="lxp__card-price">{{ block.settings.price }}</p>
+            {% endif %}
+            {% if block.settings.per_label != blank %}
+              <p class="lxp__card-per">{{ block.settings.per_label }}</p>
+            {% endif %}
+            <div class="lxp__card-divider"></div>
+            {% if block.settings.description != blank %}
+              <p class="lxp__card-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="lxp__footer" data-lxp-animate data-delay="2">
+        <p class="lxp__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if section.settings.button_label != blank %}
+      <div class="lxp__btn-wrapper" data-lxp-animate data-delay="3">
+        <a href="{{ section.settings.button_link }}" class="lxp__btn" {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('lxp-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-lxp-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Luxury Pricing",
+  "tag": "section",
+  "class": "luxury-pricing-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Hydrofacial Pricing"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Medical-grade skin treatment with immediate, visible results."
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "No downtime  •  Suitable for all skin types  •  Immediate glow"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Book your Hydrofacial"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_open_new_tab",
+      "label": "Open in new tab",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#3a3248"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Fabric Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 90,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "gold_color",
+      "label": "Gold / Text Color",
+      "default": "#d4be8a"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card Border",
+      "default": "#8a7a60"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Background",
+      "default": "#a89060"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover",
+      "label": "Button Hover Background",
+      "default": "#8e7848"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 56,
+      "step": 2,
+      "default": 44,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card Title Font Size",
+      "min": 16,
+      "max": 28,
+      "step": 1,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "price_font_size",
+      "label": "Price Font Size",
+      "min": 32,
+      "max": 72,
+      "step": 2,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "price_card",
+      "name": "Pricing Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Treatment Name",
+          "default": "Hydrofacial"
+        },
+        {
+          "type": "text",
+          "id": "card_subtitle",
+          "label": "Subtitle (optional)"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "£100"
+        },
+        {
+          "type": "text",
+          "id": "per_label",
+          "label": "Per Label",
+          "default": "per treatment"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Full medical-grade Hydrofacial performed in a clinical environment."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury Pricing",
+      "blocks": [
+        { "type": "price_card", "settings": { "name": "Hydrofacial", "price": "£100", "per_label": "per treatment", "description": "Full medical-grade Hydrofacial performed in a clinical environment." } },
+        { "type": "price_card", "settings": { "name": "Course of 3", "price": "£250", "per_label": "", "description": "For cumulative skin improvement and longer-lasting results." } },
+        { "type": "price_card", "settings": { "name": "Express Hydrofacial", "card_subtitle": "(30 minutes)", "price": "£65", "per_label": "per treatment", "description": "Course of 3 – £180" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
