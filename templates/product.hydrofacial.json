@@ -1212,7 +1212,7 @@
           "settings": {
             "icon": "droplet",
             "title": "Vortex Cleansing & Exfoliation",
-            "description": "Removes dead skin cells and impurities while gently resurfacing the skin to reveal a smoother texture."
+            "description": "A special solution is applied to soften dead skin cells and debris, then a gentle vacuum exfoliates and removes impurities."
           }
         },
         "step_xfrPYY": {
@@ -1220,15 +1220,15 @@
           "settings": {
             "icon": "vial",
             "title": "Gentle Extraction without Trauma",
-            "description": "Vacuum-assisted extraction clears pores without irritation or manual pressure."
+            "description": "Painless vortex suction extracts blackheads, oil and debris from congested pores without pinching or squeezing"
           }
         },
         "step_EQLYpG": {
           "type": "step",
           "settings": {
-            "icon": "shield",
+            "icon": "sparkle",
             "title": "Targeted Serum Infusion",
-            "description": "Infuses the skin with targeted serums to restore hydration, improve glow, and support skin health."
+            "description": "Skin is saturated with nourishing serums rich in antioxidants, peptides, and hyaluronic acid to instantly hydrate and revitalise."
           }
         }
       },
