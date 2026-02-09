@@ -24,8 +24,8 @@
         "image_wVkcbx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/unnamed_4_ce6891a6-9d24-45ba-87a6-2a5ab5849ce6.jpg",
-            "mobile_image": "shopify://shop_images/unnamed_5_65c3c5be-c8d2-48ea-ac6c-369afd942d0c.jpg",
+            "image": "shopify://shop_images/Newest.png",
+            "mobile_image": "shopify://shop_images/2_72f1a0c4-255d-4d4f-b8ce-991926f9585a.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -1080,7 +1080,7 @@
         "item_padding_vertical": 30,
         "icon_color": "#a69f6b",
         "icon_active_color": "#b8a164",
-        "icon_active_bg": "transparent",
+        "icon_active_bg": "rgba(0,0,0,0)",
         "icon_size": 24,
         "icon_border_width": 2,
         "show_decoration": true,
