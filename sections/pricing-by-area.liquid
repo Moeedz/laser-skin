@@ -12,7 +12,7 @@
   }
 
   .prc__container {
-    max-width: 1650px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 40px;
   }
@@ -729,9 +729,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* Click handlers for area items + popular tabs */
+  const rightPanel = section.querySelector('.prc__right');
   section.querySelectorAll('[data-prc-select]').forEach(el => {
     el.addEventListener('click', function () {
       updateCard(this.getAttribute('data-prc-select'));
+      /* Scroll to pricing card on mobile */
+      if (window.innerWidth <= 768 && rightPanel) {
+        setTimeout(() => {
+          rightPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 180);
+      }
     });
   });
 
