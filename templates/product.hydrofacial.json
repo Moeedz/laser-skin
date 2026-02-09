@@ -991,7 +991,7 @@
         "background_color": "#eddde0",
         "overlay_color_start": "#eddde0",
         "overlay_color_mid": "#eddde0",
-        "overlay_color_fade": "#eddde0",
+        "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "HydroFacial.",
         "subheading_highlight": "",
         "subheading": "Instantly clearer, healthier skin.",
