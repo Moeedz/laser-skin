@@ -1208,6 +1208,7 @@
         "card_GhpaPx": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-02-09_at_11.45.53_PM.jpg",
             "image_cover": false,
             "title": "Instant Glow",
             "description": "Skin looks radiant and refreshed after just one session."
@@ -1216,6 +1217,7 @@
         "card_7fRxdC": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-02-09_at_11.45.54_PM.jpg",
             "image_cover": true,
             "title": "Deep Improvement",
             "description": "Ongoing results for congestion, texture, and hydration."
@@ -1224,6 +1226,7 @@
         "card_iNA6h7": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/checked-1.png",
             "image_cover": false,
             "title": "No Downtime",
             "description": "Return to your day immediately, no recovery needed."
