@@ -286,13 +286,13 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/Antiwrinkle-3.jpg",
+            "image": "shopify://shop_images/image11.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "View Product",
-            "button_link": "shopify://products/botox-fillers-by-medical-professionals",
+            "button_text": "Laser Hair Removal",
+            "button_link": "shopify://products/laser-hair-removal",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -303,12 +303,12 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/MAR-VJU-INTRO-INSTAST-REV01_vju-stories-intro_44cb8a08-3621-465d-8dc9-3656da76e19b.jpg",
+            "image": "shopify://shop_images/C02HM_8a3ef4e8-5075-487e-a380-1da2fea14b86.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "View Product",
+            "button_text": "C02 Laser Resurfacing",
             "button_link": "shopify://products/co2-laser-resurfacing",
             "button_style": "solid",
             "overlay_color": "#000000",
@@ -320,13 +320,13 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro_ef4ae590-a69d-4dcc-916a-548d3e596bb6.jpg",
+            "image": "shopify://shop_images/PolyHM.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "View Product",
-            "button_link": "shopify://products/power-sculpt-hifem",
+            "button_text": "Polynucleotides",
+            "button_link": "shopify://products/polynucleotides",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 6
@@ -337,13 +337,13 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-06_at_20.12.27_d0e57b8b.jpg",
+            "image": "shopify://shop_images/Hero_M.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
-            "button_text": "View Product",
-            "button_link": "shopify://products/dermaforce-rf-microneedling",
+            "button_text": "Tattoo Removal",
+            "button_link": "shopify://products/laser-tattoo-removal",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -373,6 +373,57 @@
         "subheading": "",
         "title": "<strong>Treatments Our Clients Love</strong>",
         "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
+      }
+    },
+    "image_with_text_T4X7ef": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_RdX4w4": {
+          "type": "subheading",
+          "settings": {
+            "text": "BRAND NEW"
+          }
+        },
+        "heading_qcVXpj": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>A Free Skin Analysis, Tailored to You</strong>",
+            "heading_tag": "h4"
+          }
+        },
+        "button_VkywJc": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Learn More",
+            "url": "shopify://pages/consultation",
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "richtext_qBrf7F": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>A Personalised Skin Analysis to Assess Your Skin Completely Free Available At Laser Skin Clinics</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_RdX4w4",
+        "heading_qcVXpj",
+        "button_VkywJc",
+        "richtext_qBrf7F"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/unnamed_5_65c3c5be-c8d2-48ea-ac6c-369afd942d0c.jpg",
+        "mobile_image": "shopify://shop_images/unnamed_5_65c3c5be-c8d2-48ea-ac6c-369afd942d0c.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
       }
     },
     "featured_product_cXQqbT": {
@@ -472,7 +523,7 @@
       "name": "t:sections.featured_product.presets.featured_product.name",
       "settings": {
         "color_scheme": "",
-        "product": "sculpt-cleanse-glow-signature-package",
+        "product": "the-tighten-clean-glow-package",
         "separate_section_with_border": true,
         "container_size": "lg",
         "product_info_size": 45,
@@ -487,57 +538,6 @@
         "subheading": "",
         "title": "Featured product",
         "content": ""
-      }
-    },
-    "image_with_text_T4X7ef": {
-      "type": "image-with-text",
-      "blocks": {
-        "subheading_RdX4w4": {
-          "type": "subheading",
-          "settings": {
-            "text": "BRAND NEW"
-          }
-        },
-        "heading_qcVXpj": {
-          "type": "heading",
-          "settings": {
-            "text": "<strong>A Free Skin Analysis, Tailored to You</strong>",
-            "heading_tag": "h4"
-          }
-        },
-        "button_VkywJc": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "Learn More",
-            "url": "shopify://pages/consultation",
-            "background": "",
-            "text_color": ""
-          }
-        },
-        "richtext_qBrf7F": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>A Personalised Skin Analysis to Assess Your Skin Completely Free Available At Laser Skin Clinics</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_RdX4w4",
-        "heading_qcVXpj",
-        "button_VkywJc",
-        "richtext_qBrf7F"
-      ],
-      "name": "t:sections.image_with_text.presets.image_with_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "image": "shopify://shop_images/unnamed_5_65c3c5be-c8d2-48ea-ac6c-369afd942d0c.jpg",
-        "mobile_image": "shopify://shop_images/unnamed_5_65c3c5be-c8d2-48ea-ac6c-369afd942d0c.jpg",
-        "reveal_on_scroll": true,
-        "image_position": "start",
-        "content_width": "sm",
-        "remove_vertical_spacing": true
       }
     },
     "feature_cards_JKUWqd": {
@@ -835,8 +835,8 @@
     "176123897800c69b3c",
     "ss_scrolling_images_eTgjpG",
     "collection_list_yywqTr",
-    "featured_product_cXQqbT",
     "image_with_text_T4X7ef",
+    "featured_product_cXQqbT",
     "feature_cards_JKUWqd",
     "contact_info_form_heNtLy",
     "custom_liquid_PVemgx"
