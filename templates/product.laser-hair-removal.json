@@ -2746,7 +2746,7 @@
         "product_image": "shopify://shop_images/Gemini_Generated_Image_gtcc04gtcc04gtcc.png",
         "image_rotation": 0,
         "image_scale": 110,
-        "section_bg": "#ebcfc6",
+        "section_bg": "#f0ece7",
         "heading_color": "#3a3a3a",
         "text_color": "#555555",
         "icon_color": "#9a8068",
@@ -2763,6 +2763,69 @@
         "button_bg": "#4a4a4a",
         "button_text_color": "#ffffff",
         "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "how_it_works_timeline_LbeYDa": {
+      "type": "how-it-works-timeline",
+      "blocks": {
+        "step_X8TxQy": {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Immediately after treatment",
+            "points": "Skin may appear slightly red or warm||Hair follicles absorb laser energy"
+          }
+        },
+        "step_ebp9q3": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 1–2",
+            "points": "Treated hairs begin to shed naturally||Skin settles back to normal"
+          }
+        },
+        "step_XaQ6ma": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Weeks 3–6",
+            "points": "Hair regrowth becomes noticeably reduced||Hair returns finer and slower"
+          }
+        },
+        "step_DDGpr4": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "After multiple sessions",
+            "points": "Long-term hair reduction||Smoother skin with minimal regrowth"
+          }
+        }
+      },
+      "block_order": [
+        "step_X8TxQy",
+        "step_ebp9q3",
+        "step_XaQ6ma",
+        "step_DDGpr4"
+      ],
+      "name": "How It Works Timeline",
+      "settings": {
+        "heading": "How Laser Hair Removal Works & What to Expect",
+        "description": "<p><strong>Laser Hair Removal</strong> uses controlled pulses of laser energy to target pigment within the hair follicle. The energy heats and disables the follicle at the root, reducing its ability to regrow hair without damaging the surrounding skin.</p><p>Hair grows in cycles, which is why a course of treatments is required for best results.</p>",
+        "footer_text": "Results develop progressively and improve with each session.",
+        "section_bg": "#ebcfc6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#5a3e28",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b08d57",
+        "circle_bg": "#c4a87a",
+        "circle_icon_color": "#ffffff",
+        "line_color": "#d4ccc0",
+        "heading_font_size": 42,
+        "step_title_font_size": 18,
+        "body_font_size": 16,
         "padding_top": 72,
         "padding_bottom": 72
       }
@@ -4510,6 +4573,7 @@
     "approach_comparison_rQT9KU",
     "slideshow_aatXMM",
     "medical_technology_ct33BL",
+    "how_it_works_timeline_LbeYDa",
     "slideshow_dQVHm7",
     "results_testimonials_GtrNYg",
     "slideshow_TEgK4F",
