@@ -1204,6 +1204,59 @@
         "padding_bottom": 56
       }
     },
+    "treatment_steps_yQFCCA": {
+      "type": "treatment-steps",
+      "blocks": {
+        "step_JLBLiV": {
+          "type": "step",
+          "settings": {
+            "icon": "droplet",
+            "title": "Vortex Cleansing & Exfoliation",
+            "description": "Removes dead skin cells and impurities while gently resurfacing the skin to reveal a smoother texture."
+          }
+        },
+        "step_xfrPYY": {
+          "type": "step",
+          "settings": {
+            "icon": "vial",
+            "title": "Gentle Extraction without Trauma",
+            "description": "Vacuum-assisted extraction clears pores without irritation or manual pressure."
+          }
+        },
+        "step_EQLYpG": {
+          "type": "step",
+          "settings": {
+            "icon": "shield",
+            "title": "Targeted Serum Infusion",
+            "description": "Infuses the skin with targeted serums to restore hydration, improve glow, and support skin health."
+          }
+        }
+      },
+      "block_order": [
+        "step_JLBLiV",
+        "step_xfrPYY",
+        "step_EQLYpG"
+      ],
+      "name": "Treatment Steps",
+      "settings": {
+        "heading": "How HydroFacial Works",
+        "subtitle": "A gentle and effective multi-step process that deeply cleanses, extracts congestion, and infuses hydration without irritation or downtime.",
+        "footer_text": "Personalised to your skin concerns for immediate, visible results.",
+        "section_bg": "#eddde0",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#b5a08a",
+        "card_bg": "#f2ede7",
+        "card_border": "#ddd8d0",
+        "heading_font_size": 40,
+        "card_title_font_size": 22,
+        "body_font_size": 16,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
     "slideshow_tpECiq": {
       "type": "slideshow",
       "blocks": {
@@ -1238,6 +1291,7 @@
       "block_order": [
         "image_NTiU89"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2466,6 +2520,7 @@
     "product_hero_qGat7L",
     "slideshow_K9fWkm",
     "treatment_steps_nQAXdx",
+    "treatment_steps_yQFCCA",
     "slideshow_tpECiq",
     "slideshow_8DNqLE",
     "slideshow_aqPXUw",
