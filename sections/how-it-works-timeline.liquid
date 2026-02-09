@@ -1,0 +1,751 @@
+{% style %}
+  /* ==========================================================================
+     How It Works Section
+     ========================================================================== */
+
+  .hiw {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  /* Paper Texture */
+  .hiw__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .hiw__texture::before,
+  .hiw__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .hiw__texture::before {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .hiw__texture::after {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .hiw__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .hiw__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    text-align: center;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .hiw__divider {
+    width: 80px;
+    height: 1px;
+    background: var(--accent-color);
+    margin: 0 auto 32px;
+    opacity: 0.5;
+  }
+
+  /* ---- Description ---- */
+  .hiw__description {
+    font-size: var(--body-size);
+    line-height: 1.7;
+    color: var(--text-color);
+    max-width: 900px;
+    margin: 0 auto 52px;
+  }
+
+  .hiw__description p {
+    margin: 0 0 14px;
+  }
+
+  .hiw__description p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ==========================================================================
+     Timeline
+     ========================================================================== */
+  .hiw__timeline {
+    position: relative;
+    margin-bottom: 48px;
+  }
+
+  /* Connecting arrow line */
+  .hiw__timeline-line {
+    position: absolute;
+    top: 34px;
+    left: 8%;
+    right: 4%;
+    height: 2px;
+    background: linear-gradient(to right, var(--line-color) 95%, transparent 100%);
+    z-index: 0;
+  }
+
+  /* Arrowhead */
+  .hiw__timeline-line::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid var(--line-color);
+  }
+
+  /* Steps grid */
+  .hiw__steps {
+    display: grid;
+    grid-template-columns: repeat(var(--step-count, 4), 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hiw__step {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Circle icon */
+  .hiw__step-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: var(--circle-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--circle-icon-color);
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .hiw__step-circle svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hiw__step-circle .hiw__custom-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  /* Step title */
+  .hiw__step-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--step-title-size);
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0 0 14px;
+    line-height: 1.3;
+  }
+
+  /* Checkmark bullets */
+  .hiw__step-points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .hiw__step-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: var(--body-size);
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  .hiw__step-check {
+    flex-shrink: 0;
+    color: var(--accent-color);
+    margin-top: 2px;
+  }
+
+  .hiw__step-check svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ==========================================================================
+     Footer Text
+     ========================================================================== */
+  .hiw__footer {
+    text-align: center;
+    border-top: 1px solid var(--line-color);
+    padding-top: 28px;
+  }
+
+  .hiw__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--accent-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-hiw-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-hiw-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .hiw__container {
+      padding: 0 28px;
+    }
+
+    .hiw__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+
+    .hiw__step-circle {
+      width: 58px;
+      height: 58px;
+    }
+
+    .hiw__step-circle svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .hiw__timeline-line {
+      top: 29px;
+    }
+
+    .hiw__steps {
+      gap: 16px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile: vertical timeline
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .hiw__heading {
+      font-size: calc(var(--heading-size) * 0.62);
+    }
+
+    .hiw__description {
+      font-size: 15px;
+      margin-bottom: 36px;
+    }
+
+    /* Hide horizontal line */
+    .hiw__timeline-line {
+      display: none;
+    }
+
+    .hiw__steps {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .hiw__step {
+      flex-direction: row;
+      text-align: left;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .hiw__step:last-child {
+      border-bottom: none;
+    }
+
+    /* Vertical connecting line on mobile */
+    .hiw__step::before {
+      content: '';
+      position: absolute;
+      left: 29px;
+      top: 88px;
+      bottom: 0;
+      width: 2px;
+      background: var(--line-color);
+    }
+
+    .hiw__step:last-child::before {
+      display: none;
+    }
+
+    .hiw__step-circle {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 0;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hiw__step-content {
+      flex: 1;
+    }
+
+    .hiw__step-title {
+      font-size: calc(var(--step-title-size) * 0.9);
+      margin-bottom: 10px;
+    }
+
+    .hiw__step-point {
+      font-size: 15px;
+    }
+
+    .hiw__footer-text {
+      font-size: var(--body-size);
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .hiw__container {
+      padding: 0 18px;
+    }
+
+    .hiw__heading {
+      font-size: calc(var(--heading-size) * 0.52);
+    }
+
+    .hiw__step {
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .hiw__step-circle {
+      width: 50px;
+      height: 50px;
+    }
+
+    .hiw__step-circle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .hiw__step::before {
+      left: 25px;
+      top: 76px;
+    }
+
+    .hiw__step-title {
+      font-size: calc(var(--step-title-size) * 0.82);
+    }
+
+    .hiw__step-point {
+      font-size: 14px;
+    }
+  }
+{% endstyle %}
+
+{% assign step_blocks = section.blocks | where: 'type', 'step' %}
+
+<section
+  class="hiw"
+  id="hiw-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --circle-bg: {{ section.settings.circle_bg }};
+    --circle-icon-color: {{ section.settings.circle_icon_color }};
+    --line-color: {{ section.settings.line_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --step-title-size: {{ section.settings.step_title_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --step-count: {{ step_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}
+    <div class="hiw__texture"></div>
+  {% endif %}
+
+  <div class="hiw__container">
+    <!-- Header -->
+    <div data-hiw-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="hiw__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="hiw__divider"></div>
+    </div>
+
+    <!-- Description -->
+    {% if section.settings.description != blank %}
+      <div class="hiw__description" data-hiw-animate data-delay="1">
+        {{ section.settings.description }}
+      </div>
+    {% endif %}
+
+    <!-- Timeline -->
+    {% if step_blocks.size > 0 %}
+      <div class="hiw__timeline" data-hiw-animate data-delay="2">
+        <div class="hiw__timeline-line"></div>
+        <div class="hiw__steps">
+          {% for block in step_blocks %}
+            <div class="hiw__step" {{ block.shopify_attributes }}>
+              <div class="hiw__step-circle">
+                {% if block.settings.custom_icon != blank %}
+                  {{ block.settings.custom_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'hiw__custom-icon' }}
+                {% else %}
+                  {% case block.settings.icon %}
+                    {% when 'clock' %}
+                      <svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="11" stroke="currentColor" stroke-width="1.8"/><path d="M15 7V15L20 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="15" r="1.5" fill="currentColor"/></svg>
+                    {% when 'calendar_1' %}
+                      <svg viewBox="0 0 30 30" fill="none"><rect x="4" y="5" width="22" height="20" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 11H26" stroke="currentColor" stroke-width="1.8"/><path d="M10 2.5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 2.5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="17" r="1.2" fill="currentColor"/><circle cx="15" cy="17" r="1.2" fill="currentColor"/><circle cx="20" cy="17" r="1.2" fill="currentColor"/><circle cx="10" cy="21" r="1.2" fill="currentColor"/><circle cx="15" cy="21" r="1.2" fill="currentColor"/></svg>
+                    {% when 'calendar_2' %}
+                      <svg viewBox="0 0 30 30" fill="none"><rect x="4" y="5" width="22" height="20" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 11H26" stroke="currentColor" stroke-width="1.8"/><path d="M10 2.5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 2.5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="8" y="14" width="5" height="4" rx="0.5" fill="currentColor" opacity="0.25"/><rect x="8" y="19" width="5" height="4" rx="0.5" fill="currentColor" opacity="0.25"/><rect x="15" y="14" width="5" height="4" rx="0.5" fill="currentColor" opacity="0.4"/><rect x="15" y="19" width="5" height="4" rx="0.5" fill="currentColor" opacity="0.15"/></svg>
+                    {% when 'calendar_check' %}
+                      <svg viewBox="0 0 30 30" fill="none"><rect x="4" y="5" width="22" height="20" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 11H26" stroke="currentColor" stroke-width="1.8"/><path d="M10 2.5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 2.5V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 18L14 21L20 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'target' %}
+                      <svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="11" stroke="currentColor" stroke-width="1.8"/><circle cx="15" cy="15" r="6" stroke="currentColor" stroke-width="1.8"/><circle cx="15" cy="15" r="2" fill="currentColor"/></svg>
+                    {% when 'checkmark' %}
+                      <svg viewBox="0 0 30 30" fill="none"><path d="M7 15.5L12.5 21L23 10.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  {% endcase %}
+                {% endif %}
+              </div>
+              <div class="hiw__step-content">
+                {% if block.settings.title != blank %}
+                  <h4 class="hiw__step-title">{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.points != blank %}
+                  <ul class="hiw__step-points">
+                    {% assign points = block.settings.points | split: '||' %}
+                    {% for point in points %}
+                      {% assign point_stripped = point | strip %}
+                      {% if point_stripped != blank %}
+                        <li class="hiw__step-point">
+                          <span class="hiw__step-check">
+                            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </span>
+                          <span>{{ point_stripped }}</span>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Footer -->
+    {% if section.settings.footer_text != blank %}
+      <div class="hiw__footer" data-hiw-animate data-delay="3">
+        <p class="hiw__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('hiw-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-hiw-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "How It Works Timeline",
+  "tag": "section",
+  "class": "how-it-works-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How Laser Hair Removal Works & What to Expect"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p><strong>Laser Hair Removal</strong> uses controlled pulses of laser energy to target pigment within the hair follicle. The energy heats and disables the follicle at the root, reducing its ability to regrow hair without damaging the surrounding skin.</p><p>Hair grows in cycles, which is why a course of treatments is required for best results.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Footer"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "Results develop progressively and improve with each session."
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#f0e8de"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Paper Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 80,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#5a3e28"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#5a4a3a"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent / Check Color",
+      "default": "#b08d57"
+    },
+    {
+      "type": "color",
+      "id": "circle_bg",
+      "label": "Circle Background",
+      "default": "#c4a87a"
+    },
+    {
+      "type": "color",
+      "id": "circle_icon_color",
+      "label": "Circle Icon Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Timeline Line Color",
+      "default": "#d4ccc0"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 60,
+      "step": 2,
+      "default": 42,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "step_title_font_size",
+      "label": "Step Title Font Size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Timeline Step",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "clock", "label": "Clock" },
+            { "value": "calendar_1", "label": "Calendar (dots)" },
+            { "value": "calendar_2", "label": "Calendar (blocks)" },
+            { "value": "calendar_check", "label": "Calendar (checkmark)" },
+            { "value": "target", "label": "Target" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "clock"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom Icon (overrides above)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Immediately after treatment"
+        },
+        {
+          "type": "textarea",
+          "id": "points",
+          "label": "Bullet Points (separate with ||)",
+          "default": "Skin may appear slightly red or warm||Hair follicles absorb laser energy"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Works Timeline",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Immediately after treatment",
+            "points": "Skin may appear slightly red or warm||Hair follicles absorb laser energy"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 1–2",
+            "points": "Treated hairs begin to shed naturally||Skin settles back to normal"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Weeks 3–6",
+            "points": "Hair regrowth becomes noticeably reduced||Hair returns finer and slower"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "After multiple sessions",
+            "points": "Long-term hair reduction||Smoother skin with minimal regrowth"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
