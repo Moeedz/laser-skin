@@ -1,0 +1,618 @@
+{% style %}
+  /* ==========================================================================
+     Treatment Steps Section
+     ========================================================================== */
+
+  .tst {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  /* Paper Texture */
+  .tst__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .tst__texture::before,
+  .tst__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .tst__texture::before {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .tst__texture::after {
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .tst__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .tst__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .tst__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .tst__subtitle {
+    font-size: var(--body-size);
+    line-height: 1.65;
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  /* ---- Card Container ---- */
+  .tst__card-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 44px 0;
+    margin-bottom: 36px;
+  }
+
+  .tst__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+  }
+
+  /* ---- Individual Step Card ---- */
+  .tst__card {
+    text-align: center;
+    padding: 0 36px;
+    position: relative;
+  }
+
+  /* Vertical divider between cards */
+  .tst__card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: var(--card-border);
+  }
+
+  /* Icon */
+  .tst__card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tst__card-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .tst__card-icon svg {
+    width: 64px;
+    height: 64px;
+    color: var(--icon-color);
+  }
+
+  /* Title */
+  .tst__card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size);
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0 0 14px;
+    line-height: 1.3;
+  }
+
+  /* Description */
+  .tst__card-desc {
+    font-size: var(--body-size);
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  /* ---- Footer Text ---- */
+  .tst__footer {
+    text-align: center;
+  }
+
+  .tst__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--heading-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-tst-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-tst-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive — Tablet
+     ========================================================================== */
+  @media screen and (max-width: 1024px) {
+    .tst__container {
+      padding: 0 28px;
+    }
+
+    .tst__heading {
+      font-size: calc(var(--heading-size) * 0.82);
+    }
+
+    .tst__card {
+      padding: 0 24px;
+    }
+
+    .tst__card-wrap {
+      padding: 32px 0;
+    }
+
+    .tst__card-icon {
+      width: 68px;
+      height: 68px;
+    }
+
+    .tst__card-icon img {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Mobile
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .tst__heading {
+      font-size: calc(var(--heading-size) * 0.62);
+    }
+
+    .tst__header {
+      margin-bottom: 28px;
+    }
+
+    .tst__subtitle {
+      font-size: 15px;
+    }
+
+    .tst__cards {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .tst__card {
+      padding: 28px 28px;
+    }
+
+    .tst__card:not(:last-child)::after {
+      right: 15%;
+      left: 15%;
+      top: auto;
+      bottom: 0;
+      height: 1px;
+      width: 70%;
+    }
+
+    .tst__card-wrap {
+      padding: 0;
+      margin-bottom: 28px;
+    }
+
+    .tst__card-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 16px;
+    }
+
+    .tst__card-icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .tst__card-title {
+      font-size: calc(var(--card-title-size) * 0.9);
+    }
+
+    .tst__card-desc {
+      font-size: 15px;
+    }
+
+    .tst__footer-text {
+      font-size: var(--body-size);
+    }
+  }
+
+  /* ==========================================================================
+     Responsive — Small Mobile
+     ========================================================================== */
+  @media screen and (max-width: 480px) {
+    .tst__container {
+      padding: 0 18px;
+    }
+
+    .tst__heading {
+      font-size: calc(var(--heading-size) * 0.52);
+    }
+
+    .tst__card {
+      padding: 24px 20px;
+    }
+
+    .tst__card-desc {
+      font-size: 14px;
+    }
+  }
+{% endstyle %}
+
+{% assign step_blocks = section.blocks | where: 'type', 'step' %}
+
+<section
+  class="tst"
+  id="tst-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --icon-color: {{ section.settings.icon_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ step_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}
+    <div class="tst__texture"></div>
+  {% endif %}
+
+  <div class="tst__container">
+    <!-- Header -->
+    <div class="tst__header" data-tst-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="tst__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="tst__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Cards -->
+    {% if step_blocks.size > 0 %}
+      <div class="tst__card-wrap" data-tst-animate data-delay="1">
+        <div class="tst__cards">
+          {% for block in step_blocks %}
+            <div class="tst__card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon_image != blank %}
+                <div class="tst__card-icon">
+                  {{ block.settings.icon_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,120,160' }}
+                </div>
+              {% elsif block.settings.icon != 'none' %}
+                <div class="tst__card-icon">
+                  {% case block.settings.icon %}
+                    {% when 'droplet' %}
+                      <svg viewBox="0 0 64 64" fill="none"><path d="M32 6C32 6 12 28 12 40C12 51 21 58 32 58C43 58 52 51 52 40C52 28 32 6 32 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M24 42C24 46.4 27.6 50 32 50" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg>
+                    {% when 'vial' %}
+                      <svg viewBox="0 0 64 64" fill="none"><rect x="24" y="8" width="16" height="44" rx="4" stroke="currentColor" stroke-width="2"/><path d="M24 20H40" stroke="currentColor" stroke-width="2"/><path d="M28 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M36 4V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="30" cy="34" r="2" fill="currentColor" opacity="0.3"/><circle cx="34" cy="30" r="1.5" fill="currentColor" opacity="0.2"/><circle cx="32" cy="38" r="1.5" fill="currentColor" opacity="0.25"/></svg>
+                    {% when 'shield' %}
+                      <svg viewBox="0 0 64 64" fill="none"><path d="M32 6L10 16V32C10 46 19.5 56.5 32 60C44.5 56.5 54 46 54 32V16L32 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M32 22C32 22 26 30 26 36C26 39.3 28.7 42 32 42C35.3 42 38 39.3 38 36C38 30 32 22 32 22Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    {% when 'sparkle' %}
+                      <svg viewBox="0 0 64 64" fill="none"><path d="M32 8L36 24L52 20L40 32L52 44L36 40L32 56L28 40L12 44L24 32L12 20L28 24L32 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    {% when 'leaf' %}
+                      <svg viewBox="0 0 64 64" fill="none"><path d="M10 54C10 54 12 24 32 12C52 24 54 54 54 54" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M32 54V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M32 36C32 36 24 40 22 44" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/><path d="M32 42C32 42 40 44 42 48" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/></svg>
+                  {% endcase %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.title != blank %}
+                <h3 class="tst__card-title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <p class="tst__card-desc">{{ block.settings.description }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Footer -->
+    {% if section.settings.footer_text != blank %}
+      <div class="tst__footer" data-tst-animate data-delay="2">
+        <p class="tst__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('tst-{{ section.id }}');
+    if (!section) return;
+    const els = section.querySelectorAll('[data-tst-animate]');
+    if (!els.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(() => e.target.classList.add('is-visible'), d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach((el) => obs.observe(el));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Treatment Steps",
+  "tag": "section",
+  "class": "treatment-steps-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What is a HydroFacial?"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "A multi-step skin treatment designed to deeply cleanse, resurface, and hydrate in a single session."
+    },
+    {
+      "type": "header",
+      "content": "Footer"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "Suitable for all skin types. No downtime. Immediate visible results."
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#ede6df"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Paper Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 80,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Fallback Icon Color",
+      "default": "#b5a08a"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card Background",
+      "default": "#f2ede7"
+    },
+    {
+      "type": "color",
+      "id": "card_border",
+      "label": "Card Border / Dividers",
+      "default": "#ddd8d0"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 60,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card Title Font Size",
+      "min": 16,
+      "max": 32,
+      "step": 1,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image (recommended)"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Fallback Icon (if no image)",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "droplet", "label": "Droplet / Cleanse" },
+            { "value": "vial", "label": "Vial / Extract" },
+            { "value": "shield", "label": "Shield / Protect" },
+            { "value": "sparkle", "label": "Sparkle" },
+            { "value": "leaf", "label": "Leaf / Natural" }
+          ],
+          "default": "droplet"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Deep Cleanse & Exfoliate"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Removes dead skin cells and impurities while gently resurfacing the skin to reveal a smoother texture."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Steps",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "icon": "droplet",
+            "title": "Deep Cleanse & Exfoliate",
+            "description": "Removes dead skin cells and impurities while gently resurfacing the skin to reveal a smoother texture."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "vial",
+            "title": "Extract & Purify",
+            "description": "Vacuum-assisted extraction clears pores without irritation or manual pressure."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "icon": "shield",
+            "title": "Hydrate & Protect",
+            "description": "Infuses the skin with targeted serums to restore hydration, improve glow, and support skin health."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
