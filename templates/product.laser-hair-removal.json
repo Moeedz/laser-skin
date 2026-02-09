@@ -3098,6 +3098,69 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "how_it_works_timeline_Mx96KC": {
+      "type": "how-it-works-timeline",
+      "blocks": {
+        "step_Li4Yxf": {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Immediately after treatment",
+            "points": "Skin may appear slightly red or warm||Hair follicles absorb laser energy"
+          }
+        },
+        "step_khDAej": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 1–2",
+            "points": "Treated hairs begin to shed naturally||Skin settles back to normal"
+          }
+        },
+        "step_hdER3X": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Weeks 3–6",
+            "points": "Hair regrowth becomes noticeably reduced||Hair returns finer and slower"
+          }
+        },
+        "step_j77xNP": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "After multiple sessions",
+            "points": "Long-term hair reduction||Smoother skin with minimal regrowth"
+          }
+        }
+      },
+      "block_order": [
+        "step_Li4Yxf",
+        "step_khDAej",
+        "step_hdER3X",
+        "step_j77xNP"
+      ],
+      "name": "How It Works Timeline",
+      "settings": {
+        "heading": "How Laser Hair Removal Works & What to Expect",
+        "description": "<p><strong>Laser Hair Removal</strong> uses controlled pulses of laser energy to target pigment within the hair follicle. The energy heats and disables the follicle at the root, reducing its ability to regrow hair without damaging the surrounding skin.</p><p>Hair grows in cycles, which is why a course of treatments is required for best results.</p>",
+        "footer_text": "Results develop progressively and improve with each session.",
+        "section_bg": "#f0e8de",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#5a3e28",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b08d57",
+        "circle_bg": "#c4a87a",
+        "circle_icon_color": "#ffffff",
+        "line_color": "#d4ccc0",
+        "heading_font_size": 42,
+        "step_title_font_size": 18,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "pricing_by_area_36Fqyr": {
       "type": "pricing-by-area",
       "blocks": {
@@ -4513,6 +4576,7 @@
     "slideshow_dQVHm7",
     "results_testimonials_GtrNYg",
     "slideshow_TEgK4F",
+    "how_it_works_timeline_Mx96KC",
     "pricing_by_area_36Fqyr",
     "expectations_trust_VPKKkJ",
     "slideshow_XzQigP",
