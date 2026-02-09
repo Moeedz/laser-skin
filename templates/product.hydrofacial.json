@@ -1255,6 +1255,69 @@
         "padding_bottom": 72
       }
     },
+    "luxury_pricing_qDjTLm": {
+      "type": "luxury-pricing",
+      "blocks": {
+        "price_card_MPYDjm": {
+          "type": "price_card",
+          "settings": {
+            "name": "Hydrofacial",
+            "card_subtitle": "",
+            "price": "£100",
+            "per_label": "per treatment",
+            "description": "Full medical-grade Hydrofacial performed in a clinical environment."
+          }
+        },
+        "price_card_3ytUjd": {
+          "type": "price_card",
+          "settings": {
+            "name": "Course of 3",
+            "card_subtitle": "",
+            "price": "£250",
+            "per_label": "per treatment",
+            "description": "For cumulative skin improvement and longer-lasting results."
+          }
+        },
+        "price_card_Fwqwhn": {
+          "type": "price_card",
+          "settings": {
+            "name": "Express Hydrofacial",
+            "card_subtitle": "(30 minutes)",
+            "price": "£65",
+            "per_label": "per treatment",
+            "description": "Course of 3 – £180"
+          }
+        }
+      },
+      "block_order": [
+        "price_card_MPYDjm",
+        "price_card_3ytUjd",
+        "price_card_Fwqwhn"
+      ],
+      "name": "Luxury Pricing",
+      "settings": {
+        "heading": "Hydrofacial Pricing",
+        "subtitle": "Medical-grade skin treatment with immediate, visible results.",
+        "footer_text": "No downtime  •  Suitable for all skin types  •  Immediate glow",
+        "button_label": "Book your Hydrofacial",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "section_bg": "#3a3248",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "gold_color": "#d4be8a",
+        "card_border": "#8a7a60",
+        "button_bg": "#a89060",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#8e7848",
+        "heading_font_size": 44,
+        "card_title_font_size": 22,
+        "price_font_size": 48,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_aqPXUw": {
       "type": "slideshow",
       "blocks": {
@@ -1424,6 +1487,7 @@
       "block_order": [
         "image_bQr6Nd"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2129,6 +2193,7 @@
     "treatment_steps_yQFCCA",
     "journey_steps_9zjiyq",
     "results_cards_eXbjYz",
+    "luxury_pricing_qDjTLm",
     "slideshow_aqPXUw",
     "slideshow_cCad3W",
     "slideshow_KyKmLM",
