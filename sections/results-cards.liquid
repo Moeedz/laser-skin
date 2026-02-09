@@ -1,0 +1,401 @@
+{% style %}
+  /* ==========================================================================
+     Results Cards Section
+     ========================================================================== */
+
+  .rsc {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .rsc__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .rsc__texture::before,
+  .rsc__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .rsc__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .rsc__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .rsc__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .rsc__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    color: var(--heading-color);
+    margin: 0 0 44px;
+    line-height: 1.2;
+  }
+
+  /* ---- Cards Grid ---- */
+  .rsc__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .rsc__card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+
+  .rsc__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+  }
+
+  .rsc__card-visual {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rsc__card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .rsc__card-visual--cover img {
+    object-fit: cover;
+  }
+
+  .rsc__card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--heading-color);
+    margin: 0 0 12px;
+    line-height: 1.3;
+  }
+
+  .rsc__card-desc {
+    font-size: var(--body-size);
+    line-height: 1.65;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  /* Footer */
+  .rsc__footer {
+    text-align: center;
+  }
+
+  .rsc__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px);
+    font-style: italic;
+    color: var(--heading-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Animations */
+  [data-rsc-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  [data-rsc-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .rsc__container { padding: 0 20px; }
+    .rsc__heading { font-size: calc(var(--heading-size) * 0.65); margin-bottom: 32px; }
+    .rsc__cards { grid-template-columns: 1fr; gap: 16px; max-width: 380px; margin-left: auto; margin-right: auto; margin-bottom: 32px; }
+    .rsc__card { padding: 28px 24px 24px; }
+    .rsc__card-visual { width: 100px; height: 100px; margin-bottom: 18px; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .rsc__container { padding: 0 16px; }
+    .rsc__heading { font-size: calc(var(--heading-size) * 0.52); }
+  }
+{% endstyle %}
+
+{% assign card_blocks = section.blocks | where: 'type', 'card' %}
+
+<section
+  class="rsc"
+  id="rsc-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ card_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}
+    <div class="rsc__texture"></div>
+  {% endif %}
+
+  <div class="rsc__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="rsc__heading" data-rsc-animate data-delay="0">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if card_blocks.size > 0 %}
+      <div class="rsc__cards">
+        {% for block in card_blocks %}
+          <div class="rsc__card" {{ block.shopify_attributes }} data-rsc-animate data-delay="{{ forloop.index }}">
+            {% if block.settings.image != blank %}
+              <div class="rsc__card-visual{% if block.settings.image_cover %} rsc__card-visual--cover{% endif %}">
+                {{ block.settings.image | image_url: width: 260 | image_tag: loading: 'lazy', widths: '130,200,260' }}
+              </div>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="rsc__card-title">{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p class="rsc__card-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="rsc__footer" data-rsc-animate data-delay="{{ card_blocks.size | plus: 1 }}">
+        <p class="rsc__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('rsc-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-rsc-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Results Cards",
+  "tag": "section",
+  "class": "results-cards-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "HydroFacial Results"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "Zero irritation, zero recovery, see results immediately."
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#eae5df"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Paper Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 80,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 28,
+      "max": 56,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card Title Font Size",
+      "min": 18,
+      "max": 32,
+      "step": 1,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Result Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon / Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "image_cover",
+          "label": "Image fill (cover) instead of contain",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Instant Glow"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Skin looks radiant and refreshed after just one session."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Results Cards",
+      "blocks": [
+        { "type": "card", "settings": { "title": "Instant Glow", "description": "Skin looks radiant and refreshed after just one session." } },
+        { "type": "card", "settings": { "title": "Deep Improvement", "description": "Ongoing results for congestion, texture, and hydration.", "image_cover": true } },
+        { "type": "card", "settings": { "title": "No Downtime", "description": "Return to your day immediately, no recovery needed." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
