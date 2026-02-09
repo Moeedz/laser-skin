@@ -25,12 +25,12 @@
         "message_cxe74X"
       ],
       "custom_css": [
-        ".announcement-bar__link {background-color: #d4af37; /* Your Gold Color */ color: #000000 !important; /* Black text for contrast */ padding: 4px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-left: 10px; display: inline-block;}"
+        ".announcement-bar__link {background-color: #D4AF37; /* Your Gold Color */ color: #000000 !important; /* Black text for contrast */ padding: 4px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-left: 10px; display: inline-block;}"
       ],
       "settings": {
         "color_scheme": "scheme-29937063-0e25-4186-be5a-207a30c69b9f",
         "enable_sticky": true,
-        "autoplay": true,
+        "autoplay": false,
         "cycle_speed": 4,
         "desktop_font_size": 11,
         "mobile_font_size": 10
