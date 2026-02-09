@@ -291,67 +291,78 @@
     }
   }
 
+  /* ---- Mobile Image (hidden on desktop) ---- */
+  .prh__mobile-image {
+    display: none;
+  }
+
+  .prh__mobile-content {
+    display: none;
+  }
+
   /* ==========================================================================
-     Responsive — Mobile: overlay with bottom-up gradient
+     Responsive — Mobile: stacked (image top, content below)
      ========================================================================== */
   @media screen and (max-width: 768px) {
     .prh__banner {
-      height: var(--mobile-height);
-      align-items: flex-end;
+      display: none;
     }
 
-    .prh__bg-image {
-      object-position: top center;
+    .prh__mobile-image {
+      display: block;
+      width: 100%;
+      height: var(--mobile-height, 320px);
+      overflow: hidden;
     }
 
-    .prh__overlay {
-      background: linear-gradient(
-        to top,
-        var(--overlay-color-start) 0%,
-        var(--overlay-color-mid) 30%,
-        rgba(255, 255, 255, 0.3) 60%,
-        transparent 80%
-      );
+    .prh__mobile-image .prh__mobile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--image-position);
+      display: block;
     }
 
-    .prh__container {
-      padding: 0 24px 28px;
+    .prh__mobile-content {
+      display: block;
+      background-color: var(--hero-bg-color);
+      padding: 32px 24px 40px;
     }
 
-    .prh__content {
+    .prh__mobile-content .prh__content {
       max-width: 100%;
     }
 
-    .prh__heading {
+    .prh__mobile-content .prh__heading {
       font-size: calc(var(--heading-size) * 0.62);
     }
 
-    .prh__subheading {
+    .prh__mobile-content .prh__subheading {
       font-size: calc(var(--subheading-size) * 0.68);
       margin-bottom: 16px;
     }
 
-    .prh__description {
+    .prh__mobile-content .prh__description {
       max-width: 100%;
       margin-bottom: 20px;
       font-size: 15px;
     }
 
-    .prh__checklist {
+    .prh__mobile-content .prh__checklist {
       margin-bottom: 24px;
       gap: 10px;
     }
 
-    .prh__check-icon svg {
+    .prh__mobile-content .prh__check-icon svg {
       width: 22px;
       height: 22px;
     }
 
-    .prh__check-text {
+    .prh__mobile-content .prh__check-text {
       font-size: 15px;
     }
 
-    .prh__btn {
+    .prh__mobile-content .prh__btn {
       width: 100%;
       text-align: center;
       padding: 15px 28px;
@@ -394,31 +405,38 @@
     }
   }
 
+  @media screen and (min-width: 769px) {
+    .prh__mobile-image,
+    .prh__mobile-content {
+      display: none !important;
+    }
+  }
+
   /* ==========================================================================
      Responsive — Small Mobile
      ========================================================================== */
   @media screen and (max-width: 480px) {
-    .prh__container {
-      padding: 0 18px 22px;
+    .prh__mobile-content {
+      padding: 24px 18px 32px;
     }
 
-    .prh__heading {
+    .prh__mobile-content .prh__heading {
       font-size: calc(var(--heading-size) * 0.52);
     }
 
-    .prh__subheading {
+    .prh__mobile-content .prh__subheading {
       font-size: calc(var(--subheading-size) * 0.56);
     }
 
-    .prh__description {
+    .prh__mobile-content .prh__description {
       font-size: 14px;
     }
 
-    .prh__check-text {
+    .prh__mobile-content .prh__check-text {
       font-size: 14px;
     }
 
-    .prh__btn {
+    .prh__mobile-content .prh__btn {
       font-size: 15px;
       padding: 14px 24px;
     }
@@ -545,6 +563,72 @@
     </div>
   </div>
 
+  <!-- ===== MOBILE: Stacked Layout (image top, content below) ===== -->
+  <div class="prh__mobile-image">
+    {% if section.settings.background_image != blank %}
+      {{
+        section.settings.background_image
+        | image_url: width: 800
+        | image_tag: loading: 'lazy', class: 'prh__mobile-img', widths: '400,600,800'
+      }}
+    {% endif %}
+  </div>
+
+  <div class="prh__mobile-content">
+    <div class="prh__content">
+      {% if section.settings.heading != blank %}
+        <h2 class="prh__heading" data-prh-animate data-delay="0">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.subheading != blank %}
+        <p class="prh__subheading" data-prh-animate data-delay="1">
+          {% if section.settings.subheading_highlight != blank %}
+            <span class="prh__highlight">{{ section.settings.subheading_highlight }}</span>
+          {% endif %}
+          {{ section.settings.subheading }}
+        </p>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="prh__description" data-prh-animate data-delay="2">{{ section.settings.description }}</div>
+      {% endif %}
+
+      {% if has_checks %}
+        <ul class="prh__checklist" data-prh-animate data-delay="3">
+          {% for block in section.blocks %}
+            {% if block.type == 'check_item' %}
+              <li class="prh__check-item" {{ block.shopify_attributes }}>
+                <span class="prh__check-icon">
+                  {% case block.settings.icon %}
+                    {% when 'shield_check' %}
+                      <svg viewBox="0 0 26 26" fill="none"><path d="M13 2L3 6.5V12.5C3 18.3 7.5 23.7 13 25C18.5 23.7 23 18.3 23 12.5V6.5L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 13L11.5 16L17.5 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'checkmark' %}
+                      <svg viewBox="0 0 26 26" fill="none"><path d="M5 13.5L10 18.5L21 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {% when 'star' %}
+                      <svg viewBox="0 0 26 26" fill="none"><path d="M13 2L15.8 8.6L23 9.4L17.7 14.2L19.2 21.3L13 17.8L6.8 21.3L8.3 14.2L3 9.4L10.2 8.6L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    {% when 'heart' %}
+                      <svg viewBox="0 0 26 26" fill="none"><path d="M13 22S3 16 3 10C3 6.7 5.7 4 9 4C10.8 4 12.5 5 13 6C13.5 5 15.2 4 17 4C20.3 4 23 6.7 23 10C23 16 13 22 13 22Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    {% when 'sparkle' %}
+                      <svg viewBox="0 0 26 26" fill="none"><path d="M13 2V24M2 13H24M5.5 5.5L20.5 20.5M20.5 5.5L5.5 20.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="13" cy="13" r="2" fill="currentColor"/></svg>
+                  {% endcase %}
+                </span>
+                <span class="prh__check-text">{{ block.settings.text }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if section.settings.button_label != blank %}
+        <div class="prh__btn-wrapper" data-prh-animate data-delay="4">
+          <a href="{{ section.settings.button_link }}" class="prh__btn" {% if section.settings.button_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
   <!-- Trust Bar -->
   {% assign has_trust = false %}
   {% for block in section.blocks %}
@@ -663,11 +747,11 @@
     {
       "type": "range",
       "id": "mobile_height",
-      "label": "Mobile Height",
-      "min": 500,
-      "max": 1100,
+      "label": "Mobile Image Height",
+      "min": 200,
+      "max": 500,
       "step": 10,
-      "default": 800,
+      "default": 320,
       "unit": "px"
     },
     {
