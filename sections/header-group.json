@@ -17,23 +17,18 @@
         "message_cxe74X": {
           "type": "message",
           "settings": {
-            "text": "FREE SHIPPING ORDER NOW"
-          }
-        },
-        "message_DTKxkK": {
-          "type": "message",
-          "settings": {
-            "text": "NEW COLLECTION IS LIVE"
+            "text": "Unsure which treatment? <a href=\"/pages/consultation\" title=\"Skin Consultation\"><strong>Book Your Free Expert Skin Analysis</strong></a>"
           }
         }
       },
       "block_order": [
-        "message_cxe74X",
-        "message_DTKxkK"
+        "message_cxe74X"
       ],
-      "disabled": true,
+      "custom_css": [
+        ".announcement-bar__link {background-color: #d4af37; /* Your Gold Color */ color: #000000 !important; /* Black text for contrast */ padding: 4px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-left: 10px; display: inline-block;}"
+      ],
       "settings": {
-        "color_scheme": "scheme-83c8f934-b06b-498f-9443-09bcaf9992d7",
+        "color_scheme": "scheme-29937063-0e25-4186-be5a-207a30c69b9f",
         "enable_sticky": true,
         "autoplay": true,
         "cycle_speed": 4,
@@ -144,7 +139,7 @@
         "text_size_mobile": 15,
         "text_height": 150,
         "text_padding_top": 20,
-        "tab_bg_color": "#FFFFFF",
+        "tab_bg_color": "#ffffff",
         "tab_border_color": "#9e9e9e",
         "title_icon_color": "#000000",
         "title_color": "#000000",
