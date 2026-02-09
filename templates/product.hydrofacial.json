@@ -1202,6 +1202,56 @@
         "padding_bottom": 72
       }
     },
+    "results_cards_eXbjYz": {
+      "type": "results-cards",
+      "blocks": {
+        "card_GhpaPx": {
+          "type": "card",
+          "settings": {
+            "image_cover": false,
+            "title": "Instant Glow",
+            "description": "Skin looks radiant and refreshed after just one session."
+          }
+        },
+        "card_7fRxdC": {
+          "type": "card",
+          "settings": {
+            "image_cover": true,
+            "title": "Deep Improvement",
+            "description": "Ongoing results for congestion, texture, and hydration."
+          }
+        },
+        "card_iNA6h7": {
+          "type": "card",
+          "settings": {
+            "image_cover": false,
+            "title": "No Downtime",
+            "description": "Return to your day immediately, no recovery needed."
+          }
+        }
+      },
+      "block_order": [
+        "card_GhpaPx",
+        "card_7fRxdC",
+        "card_iNA6h7"
+      ],
+      "name": "Results Cards",
+      "settings": {
+        "heading": "HydroFacial Results",
+        "footer_text": "Zero irritation, zero recovery, see results immediately.",
+        "section_bg": "#e3e0e8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "card_bg": "#ffffff",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_aqPXUw": {
       "type": "slideshow",
       "blocks": {
@@ -1236,6 +1286,7 @@
       "block_order": [
         "image_eqeGgp"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2074,6 +2125,7 @@
     "treatment_steps_nQAXdx",
     "treatment_steps_yQFCCA",
     "journey_steps_9zjiyq",
+    "results_cards_eXbjYz",
     "slideshow_aqPXUw",
     "slideshow_cCad3W",
     "slideshow_KyKmLM",
