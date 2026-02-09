@@ -987,10 +987,10 @@
         "image_position": "center center",
         "desktop_height": 620,
         "mobile_height": 800,
-        "background_color": "#ede4dc",
-        "overlay_color_start": "#ece3dde6",
-        "overlay_color_mid": "#ece3ddb3",
-        "overlay_color_fade": "#ece3dd40",
+        "background_color": "#eddde0",
+        "overlay_color_start": "#eddde0",
+        "overlay_color_mid": "#eddde0",
+        "overlay_color_fade": "#eddde0",
         "heading": "HydroFacial.",
         "subheading_highlight": "",
         "subheading": "Instantly clearer, healthier skin.",
@@ -1049,7 +1049,6 @@
       "block_order": [
         "image_Ffpz3d"
       ],
-      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
