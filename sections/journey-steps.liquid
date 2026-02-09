@@ -1,0 +1,421 @@
+{% style %}
+  /* ==========================================================================
+     Journey Steps Section
+     ========================================================================== */
+
+  .jny {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .jny__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+
+  .jny__texture::before,
+  .jny__texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .jny__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .jny__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .jny__container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .jny__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--heading-color);
+    margin: 0 0 40px;
+    line-height: 1.3;
+  }
+
+  /* ---- Step Rows ---- */
+  .jny__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .jny__step {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    background: var(--row-bg);
+    border-radius: 10px;
+    padding: 20px 28px;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+
+  .jny__step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Number circle */
+  .jny__num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--num-bg);
+    color: var(--num-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+
+  /* Text content */
+  .jny__step-content {
+    min-width: 0;
+  }
+
+  .jny__step-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--step-title-size);
+    font-weight: 700;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+
+  .jny__step-desc {
+    font-size: var(--body-size);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Icon image */
+  .jny__step-icon {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .jny__step-icon img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  [data-jny-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+  }
+
+  [data-jny-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ==========================================================================
+     Responsive
+     ========================================================================== */
+  @media screen and (max-width: 768px) {
+    .jny__container { padding: 0 20px; }
+    .jny__heading { font-size: calc(var(--heading-size) * 0.65); margin-bottom: 28px; }
+    .jny__step { grid-template-columns: 42px 1fr 56px; gap: 14px; padding: 16px 18px; }
+    .jny__num { width: 42px; height: 42px; font-size: 19px; }
+    .jny__step-title { font-size: calc(var(--step-title-size) * 0.88); }
+    .jny__step-desc { font-size: 14px; }
+    .jny__step-icon { width: 56px; height: 56px; }
+    .jny__step-icon img { width: 56px; height: 56px; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .jny__container { padding: 0 16px; }
+    .jny__heading { font-size: calc(var(--heading-size) * 0.52); }
+    .jny__step { grid-template-columns: 36px 1fr 48px; gap: 10px; padding: 14px 14px; }
+    .jny__num { width: 36px; height: 36px; font-size: 16px; }
+    .jny__step-icon { width: 48px; height: 48px; }
+    .jny__step-icon img { width: 48px; height: 48px; }
+  }
+{% endstyle %}
+
+{% assign step_blocks = section.blocks | where: 'type', 'step' %}
+
+<section
+  class="jny"
+  id="jny-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --row-bg: {{ section.settings.row_bg }};
+    --num-bg: {{ section.settings.number_bg }};
+    --num-text: {{ section.settings.number_text }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --step-title-size: {{ section.settings.step_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}
+    <div class="jny__texture"></div>
+  {% endif %}
+
+  <div class="jny__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="jny__heading" data-jny-animate data-delay="0">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if step_blocks.size > 0 %}
+      <div class="jny__steps">
+        {% for block in step_blocks %}
+          <div class="jny__step" {{ block.shopify_attributes }} data-jny-animate data-delay="{{ forloop.index }}">
+            <div class="jny__num">{{ forloop.index }}</div>
+            <div class="jny__step-content">
+              {% if block.settings.title != blank %}
+                <h4 class="jny__step-title">{{ block.settings.title }}</h4>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <p class="jny__step-desc">{{ block.settings.description }}</p>
+              {% endif %}
+            </div>
+            {% if block.settings.icon_image != blank %}
+              <div class="jny__step-icon">
+                {{ block.settings.icon_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,120,160' }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('jny-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-jny-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 100);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Journey Steps",
+  "tag": "section",
+  "class": "journey-steps-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your 7-Step Journey to Glow"
+    },
+    {
+      "type": "header",
+      "content": "Background & Texture"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section Background",
+      "default": "#ece6df"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_texture",
+      "label": "Show Paper Texture",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "texture_opacity",
+      "label": "Texture Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 80,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "row_bg",
+      "label": "Row Background",
+      "default": "#f0ebe5"
+    },
+    {
+      "type": "color",
+      "id": "number_bg",
+      "label": "Number Circle Background",
+      "default": "#d8cfc4"
+    },
+    {
+      "type": "color",
+      "id": "number_text",
+      "label": "Number Circle Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 24,
+      "max": 52,
+      "step": 2,
+      "default": 34,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "step_title_font_size",
+      "label": "Step Title Font Size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 72,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "DETOX"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Lymphatic drainage improves circulation & removes toxins."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Journey Steps",
+      "blocks": [
+        { "type": "step", "settings": { "title": "DETOX", "description": "Lymphatic drainage improves circulation & removes toxins." } },
+        { "type": "step", "settings": { "title": "CLEANSE", "description": "Deep cleansing & exfoliation to uncover fresh skin." } },
+        { "type": "step", "settings": { "title": "PEEL", "description": "Gentle glycolic/salicylic peel loosens debris." } },
+        { "type": "step", "settings": { "title": "EXTRACT", "description": "Painless vacuum suction removes blackheads & impurities." } },
+        { "type": "step", "settings": { "title": "HYDRATE", "description": "Vortex-infusion of intense antioxidants & peptides." } },
+        { "type": "step", "settings": { "title": "REJUVENATION", "description": "LED Light Therapy stimulates collagen & reduces redness." } },
+        { "type": "step", "settings": { "title": "PROTECTION", "description": "SPF and skin barrier protection applied to finish." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
