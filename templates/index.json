@@ -461,6 +461,16 @@
           "type": "payment_terms",
           "settings": {}
         },
+        "button_U6UyBT": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://products/the-tighten-clean-glow-package",
+            "text": "VIEW BUNDLE",
+            "stretch": true,
+            "background": "",
+            "text_color": ""
+          }
+        },
         "separator_xB8RrQ": {
           "type": "separator",
           "disabled": true,
@@ -513,6 +523,7 @@
         "price_pN9hnH",
         "rating_WiMNhy",
         "payment_terms_gM3PzW",
+        "button_U6UyBT",
         "separator_xB8RrQ",
         "description_r9BKqK",
         "variant_picker_6hzQ6p",
