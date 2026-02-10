@@ -1134,6 +1134,57 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "treatment_comparison_jCJbxT": {
+      "type": "treatment-comparison",
+      "blocks": {
+        "comparison_column_GdFPXq": {
+          "type": "comparison_column",
+          "settings": {
+            "title": "Surface-level treatments",
+            "points": "Improve hydration and tone||Support daily skin health||Limited impact on scarring and texture",
+            "check_style": "muted",
+            "footer_note": "Only works at the surface"
+          }
+        },
+        "comparison_column_AP6JET": {
+          "type": "comparison_column",
+          "settings": {
+            "title": "Clinically led CO₂ laser",
+            "points": "Targets deeper skin layers responsibly||Stimulates new collagen production",
+            "check_style": "accent",
+            "footer_note": "Only works at the surface"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_column_GdFPXq",
+        "comparison_column_AP6JET"
+      ],
+      "name": "Treatment Comparison",
+      "settings": {
+        "heading": "<p>Skincare improves the surface.<br>CO₂ laser changes the structure.</p>",
+        "subtitle": "Most creams and treatments work at the surface of the skin. CO₂ laser resurfacing is designed to stimulate renewal where texture issues actually begin.",
+        "rec_title": "Why we recommend CO₂ laser for texture",
+        "rec_description": "<p>Skin texture concerns such as acne scarring and <strong>deeper lines</strong> are structural. CO₂ laser resurfacing works by triggering controlled skin renewal, allowing smoother, healthier skin to form gradually — under clinical supervision.</p>",
+        "rec_points": "Consultation-led||Medically trained clinicians||Personalised treatment plans",
+        "footer_text": "CO₂ laser treatments penetrate deep into the dermis where real skin repair and texture improvements happen.",
+        "section_bg": "#e5e0da",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "muted_check_color": "#999999",
+        "rec_bg": "#ece7e1",
+        "rec_border": "#b5a99a",
+        "heading_font_size": 38,
+        "col_title_font_size": 20,
+        "body_font_size": 16,
+        "rec_card_width": 340,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_9NBKXH": {
       "type": "slideshow",
       "name": "t:sections.slideshow.presets.slideshow.name",
@@ -2231,6 +2282,7 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_RqkdU3",
     "slideshow_89XALN",
+    "treatment_comparison_jCJbxT",
     "slideshow_9NBKXH",
     "slideshow_Lw9MKR",
     "slideshow_49kXaM",
