@@ -24,22 +24,22 @@
         "check_item_7KBqiA": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
+            "icon": "checkmark",
+            "text": "Medical-grade skin analysis"
           }
         },
         "check_item_6hBBYK": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
+            "icon": "checkmark",
+            "text": "Tailored recommendations, not sales script"
           }
         },
         "check_item_eyr49L": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "No downtime, immediate glow"
+            "icon": "checkmark",
+            "text": "No obligation to book treatment"
           }
         },
         "trust_item_7VyCp8": {
@@ -99,12 +99,12 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Your Skin, Properly Assessed By Skincare Specialists",
         "subheading_highlight": "",
-        "subheading": "Instantly clearer, healthier skin.",
+        "subheading": "",
         "heading_font_size": 38,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
         "highlight_color": "#c8962e",
-        "description": "<p>Deep cleansing, gentle exfoliation, and intense hydration in one medical-grade facial.</p>",
+        "description": "<p>A complimentary, medical-grade skin analysis designed to understand your skin, identify concerns, and recommend the right treatments</p>",
         "body_font_size": 17,
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
