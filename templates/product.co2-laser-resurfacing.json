@@ -1140,6 +1140,7 @@
         "comparison_column_GdFPXq": {
           "type": "comparison_column",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_4-removebg-preview.png",
             "title": "Surface-level treatments",
             "points": "Improve hydration and tone||Support daily skin health||Limited impact on scarring and texture",
             "check_style": "muted",
@@ -1162,7 +1163,7 @@
       ],
       "name": "Treatment Comparison",
       "settings": {
-        "heading": "<p>Skincare improves the surface.<br>CO₂ laser changes the structure.</p>",
+        "heading": "<p>Skincare improves the surface.<br/>CO₂ laser changes the structure.</p>",
         "subtitle": "Most creams and treatments work at the surface of the skin. CO₂ laser resurfacing is designed to stimulate renewal where texture issues actually begin.",
         "rec_title": "Why we recommend CO₂ laser for texture",
         "rec_description": "<p>Skin texture concerns such as acne scarring and <strong>deeper lines</strong> are structural. CO₂ laser resurfacing works by triggering controlled skin renewal, allowing smoother, healthier skin to form gradually — under clinical supervision.</p>",
