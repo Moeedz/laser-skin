@@ -427,6 +427,9 @@
         "step_QBjeaA",
         "step_8PE4ya"
       ],
+      "custom_css": [
+        ".tst__card-icon, .tst__card-icon img {width: 115px !important; height: 115px !important;}"
+      ],
       "name": "Treatment Steps",
       "settings": {
         "heading": "Why a Complimentary Skin Analysis is Worth Trying",
