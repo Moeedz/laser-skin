@@ -257,6 +257,78 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "analysis_steps_BrbHHJ": {
+      "type": "analysis-steps",
+      "blocks": {
+        "step_RahyJX": {
+          "type": "step",
+          "settings": {
+            "title": "Professional Skin Assessment",
+            "description": "Your skin is examined using advanced UV technology to reveal underlying issues like sun damage, pigmentation, and other concerns."
+          }
+        },
+        "step_kHDTP9": {
+          "type": "step",
+          "settings": {
+            "title": "Discussion of Concerns & Goals",
+            "description": "Together, we discuss your skin concerns, goals, and lifestyle to understand what your skin truly needs."
+          }
+        },
+        "step_7CGQ86": {
+          "type": "step",
+          "settings": {
+            "title": "Personalised Treatment Plan",
+            "description": "Based on your assessment, you'll receive a tailored skincare treatment plan designed specifically for your skin type and concerns."
+          }
+        },
+        "step_dxDYTN": {
+          "type": "step",
+          "settings": {
+            "title": "Clear Guidance, No Obligation",
+            "description": "You'll get straightforward advice and have plenty of time to ask questions. There's absolutely no obligation to book any treatment."
+          }
+        },
+        "image_QT884n": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_AqCiPw": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_XabErk": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "step_RahyJX",
+        "step_kHDTP9",
+        "step_7CGQ86",
+        "step_dxDYTN",
+        "image_QT884n",
+        "image_AqCiPw",
+        "image_XabErk"
+      ],
+      "name": "Analysis Steps",
+      "settings": {
+        "heading": "What Happens During Your Free Skin Analysis",
+        "subtitle": "Feel confident in your skin and your decisions with a private, obligation-free consultation led by a skincare expert.",
+        "footer_text": "We will never recommend treatments you don't need.",
+        "section_bg": "#ede6df",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "number_bg": "#d4a0a0",
+        "number_text": "#ffffff",
+        "heading_font_size": 40,
+        "step_title_font_size": 22,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_JTxgfE": {
       "type": "slideshow",
       "blocks": {
@@ -1461,6 +1533,7 @@
     "main",
     "product_hero_8MnEcK",
     "slideshow_dhJ4tD",
+    "analysis_steps_BrbHHJ",
     "slideshow_JTxgfE",
     "treatment_steps_FCx6DA",
     "slideshow_eJC4Rk",
