@@ -1567,6 +1567,7 @@
       "block_order": [
         "image_wiH6Rk"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1699,8 +1700,8 @@
       "settings": {
         "heading": "Fractional CO2 Laser Pricing",
         "subtitle": "Achieve Your Skin Goals with Safe, Professional Treatment",
-        "footer_text": "No downtime  •  Suitable for all skin types  •  Immediate glow",
-        "button_label": "Book your Hydrofacial",
+        "footer_text": "Final treatment plan and number of sessions confirmed during consultation",
+        "button_label": "Book your Consultation",
         "button_link": "",
         "button_open_new_tab": false,
         "section_bg": "#3a3248",
