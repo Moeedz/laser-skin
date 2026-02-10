@@ -1751,7 +1751,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "Medical grade technology"
           }
         },
         "trust_point_qgGbLL": {
@@ -1794,7 +1794,7 @@
         "heading_font_size": 44,
         "card_heading_font_size": 28,
         "body_font_size": 16,
-        "button_label": "Book your consultation",
+        "button_label": "Book your hydrofacial",
         "button_link": "#consultation-form-template--25630357324156__consultation_form_ipNyW4",
         "button_open_new_tab": false,
         "button_bg": "#4a4a4a",
