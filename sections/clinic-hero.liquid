@@ -1,0 +1,303 @@
+{% style %}
+  /* ==========================================================================
+     Clinic Hero Section
+     ========================================================================== */
+
+  .clh {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    min-height: var(--section-height);
+    display: flex;
+    align-items: center;
+  }
+
+  /* Background image */
+  .clh__bg {
+    position: absolute; inset: 0; z-index: 0;
+  }
+
+  .clh__bg img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+  }
+
+  .clh__bg-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, transparent 0%, var(--overlay-color) 30%, var(--overlay-color) 100%);
+  }
+
+  /* Person image */
+  .clh__person {
+    position: absolute; left: 0; bottom: 0; z-index: 1;
+    width: var(--person-width); max-width: 40%;
+    pointer-events: none;
+  }
+
+  .clh__person img {
+    width: 100%; height: auto; display: block; object-fit: contain;
+    object-position: bottom left;
+  }
+
+  /* Content */
+  .clh__container {
+    position: relative; z-index: 2;
+    max-width: 1300px; width: 100%; margin: 0 auto;
+    padding: 60px 50px 60px calc(var(--person-width) + 40px);
+  }
+
+  .clh__content { max-width: 780px; }
+
+  /* Logo */
+  .clh__logo { margin-bottom: 20px; }
+  .clh__logo img { height: var(--logo-height); width: auto; }
+
+  /* Heading */
+  .clh__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 700; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 6px;
+  }
+
+  .clh__subheading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--heading-size) * 0.55); font-weight: 400;
+    color: var(--heading-color); margin: 0 0 24px; line-height: 1.3;
+  }
+
+  /* Description */
+  .clh__description {
+    font-size: var(--body-size); line-height: 1.7;
+    color: var(--text-color); margin: 0 0 24px;
+  }
+
+  .clh__description strong { color: var(--heading-color); }
+
+  /* Checklist */
+  .clh__checklist {
+    list-style: none; margin: 0 0 36px; padding: 0;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+
+  .clh__check-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: var(--body-size); line-height: 1.6; color: var(--text-color);
+  }
+
+  .clh__check-icon {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 3px;
+  }
+
+  .clh__check-icon svg { width: 18px; height: 18px; }
+
+  /* Trust badges */
+  .clh__badges {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+
+  .clh__badge {
+    height: var(--badge-height); width: auto;
+  }
+
+  .clh__badge img {
+    height: var(--badge-height); width: auto; object-fit: contain;
+  }
+
+  /* Animations */
+  [data-clh-animate] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-clh-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 1024px) {
+    .clh__container { padding: 48px 36px 48px calc(var(--person-width) + 20px); }
+    .clh__heading { font-size: calc(var(--heading-size) * 0.82); }
+  }
+
+  @media screen and (max-width: 768px) {
+    .clh { min-height: auto; flex-direction: column; align-items: stretch; }
+    .clh__person {
+      position: relative; width: 60%; max-width: 60%; margin: 0 auto;
+      left: auto; bottom: auto;
+    }
+    .clh__bg-overlay {
+      background: linear-gradient(to top, var(--overlay-color) 50%, transparent 100%);
+    }
+    .clh__container { padding: 32px 24px 48px; }
+    .clh__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .clh__subheading { font-size: calc(var(--heading-size) * 0.32); }
+    .clh__badges { gap: 12px; justify-content: center; }
+    .clh__badge { height: calc(var(--badge-height) * 0.75); }
+    .clh__badge img { height: calc(var(--badge-height) * 0.75); }
+  }
+
+  @media screen and (max-width: 480px) {
+    .clh__container { padding: 24px 16px 36px; }
+    .clh__heading { font-size: calc(var(--heading-size) * 0.48); }
+    .clh__person { width: 70%; max-width: 70%; }
+  }
+{% endstyle %}
+
+{% assign badge_blocks = section.blocks | where: 'type', 'badge' %}
+{% assign check_blocks = section.blocks | where: 'type', 'check_item' %}
+
+<section
+  class="clh"
+  id="clh-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --overlay-color: {{ section.settings.overlay_color }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --section-height: {{ section.settings.section_height }}px;
+    --person-width: {{ section.settings.person_width }}px;
+    --logo-height: {{ section.settings.logo_height }}px;
+    --badge-height: {{ section.settings.badge_height }}px;
+  "
+>
+  {% if section.settings.bg_image != blank %}
+    <div class="clh__bg">
+      {{ section.settings.bg_image | image_url: width: 2000 | image_tag: loading: 'lazy', widths: '800,1200,1600,2000' }}
+      <div class="clh__bg-overlay"></div>
+    </div>
+  {% endif %}
+
+  {% if section.settings.person_image != blank %}
+    <div class="clh__person" data-clh-animate data-delay="0">
+      {{ section.settings.person_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,600,800' }}
+    </div>
+  {% endif %}
+
+  <div class="clh__container">
+    <div class="clh__content">
+      {% if section.settings.logo != blank %}
+        <div class="clh__logo" data-clh-animate data-delay="0">
+          {{ section.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy' }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="clh__heading" data-clh-animate data-delay="1">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.subheading != blank %}
+        <p class="clh__subheading" data-clh-animate data-delay="1">{{ section.settings.subheading }}</p>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="clh__description" data-clh-animate data-delay="2">{{ section.settings.description }}</div>
+      {% endif %}
+
+      {% if check_blocks.size > 0 %}
+        <ul class="clh__checklist" data-clh-animate data-delay="3">
+          {% for block in check_blocks %}
+            <li class="clh__check-item" {{ block.shopify_attributes }}>
+              <span class="clh__check-icon">
+                <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>{{ block.settings.text }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if badge_blocks.size > 0 %}
+        <div class="clh__badges" data-clh-animate data-delay="4">
+          {% for block in badge_blocks %}
+            {% if block.settings.image != blank %}
+              <div class="clh__badge" {{ block.shopify_attributes }}>
+                {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy' }}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('clh-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-clh-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Clinic Hero",
+  "tag": "section",
+  "class": "clinic-hero-section",
+  "settings": [
+    { "type": "header", "content": "Images" },
+    { "type": "image_picker", "id": "bg_image", "label": "Background Image" },
+    { "type": "image_picker", "id": "person_image", "label": "Person Image (cutout)" },
+    { "type": "image_picker", "id": "logo", "label": "Logo Image" },
+    { "type": "header", "content": "Content" },
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "Your Skin. Properly Understood." },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Clinically Led Skin Analysis" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Established in 2010, Laser Skin Clinics has been delivering medically led skin consultations for over <strong>15 years</strong>, making us one of the most experienced providers in the area.</p>" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "section_bg", "label": "Background Fallback", "default": "#c8c0b6" },
+    { "type": "color", "id": "overlay_color", "label": "Overlay Color", "default": "#c8c0b6e0" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#2a2a2a" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#444444" },
+    { "type": "color", "id": "accent_color", "label": "Checkmark Color", "default": "#b08d57" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 60, "step": 2, "default": 42, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 22, "step": 1, "default": 17, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "section_height", "label": "Section Height (desktop)", "min": 400, "max": 800, "step": 10, "default": 600, "unit": "px" },
+    { "type": "range", "id": "person_width", "label": "Person Image Width", "min": 200, "max": 500, "step": 10, "default": 340, "unit": "px" },
+    { "type": "range", "id": "logo_height", "label": "Logo Height", "min": 30, "max": 100, "step": 5, "default": 60, "unit": "px" },
+    { "type": "range", "id": "badge_height", "label": "Badge Height", "min": 40, "max": 120, "step": 5, "default": 75, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "check_item",
+      "name": "Checklist Item",
+      "settings": [
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Our consultations are carried out by fully qualified practitioners using an evidence-based, diagnostic approach." }
+      ]
+    },
+    {
+      "type": "badge",
+      "name": "Trust Badge",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Badge Image" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clinic Hero",
+      "blocks": [
+        { "type": "check_item", "settings": { "text": "Our consultations are carried out by fully qualified practitioners using an evidence-based, diagnostic approach to understand your skin properly before recommending any treatment." } },
+        { "type": "check_item", "settings": { "text": "We are fully registered and regulated, holding advanced Level 4 qualifications in both laser technology and skin science, ensuring every recommendation is safe, appropriate." } },
+        { "type": "check_item", "settings": { "text": "Every skin analysis results in a clear, personalised treatment plan, built around your skin, your goals, and long-term results, not trends or guesswork." } },
+        { "type": "badge" },
+        { "type": "badge" },
+        { "type": "badge" },
+        { "type": "badge" }
+      ]
+    }
+  ]
+}
+{% endschema %}
