@@ -24,14 +24,14 @@
         "check_item_7KBqiA": {
           "type": "check_item",
           "settings": {
-            "icon": "checkmark",
+            "icon": "shield_check",
             "text": "Medical-grade skin analysis"
           }
         },
         "check_item_6hBBYK": {
           "type": "check_item",
           "settings": {
-            "icon": "checkmark",
+            "icon": "shield_check",
             "text": "Tailored recommendations, not sales script"
           }
         },
@@ -90,6 +90,7 @@
       ],
       "name": "Product Hero",
       "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_32e9ft32e9ft32e9.png",
         "image_position": "center center",
         "desktop_height": 620,
         "mobile_height": 320,
