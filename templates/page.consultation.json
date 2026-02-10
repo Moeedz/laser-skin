@@ -317,7 +317,8 @@
         "image_XabErk"
       ],
       "custom_css": [
-        ".ans__image img {aspect-ratio: unset !important;}"
+        ".ans__image img {aspect-ratio: unset !important;}",
+        ".ans__step.is-visible {background: #FBDEDA !important; padding: 20px 10px !important; border-radius: 20px !important;}"
       ],
       "name": "Analysis Steps",
       "settings": {
