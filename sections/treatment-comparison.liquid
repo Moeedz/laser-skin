@@ -1,0 +1,410 @@
+{% style %}
+  /* ==========================================================================
+     Treatment Comparison Section
+     ========================================================================== */
+
+  .tcm {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .tcm__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .tcm__texture::before, .tcm__texture::after { content: ''; position: absolute; inset: 0; }
+  .tcm__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .tcm__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .tcm__container {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* ---- Header ---- */
+  .tcm__header { text-align: center; margin-bottom: 40px; }
+
+  .tcm__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 700;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 16px;
+  }
+
+  .tcm__subtitle {
+    font-size: var(--body-size); font-style: italic;
+    line-height: 1.65; color: var(--text-color); margin: 0 auto; max-width: 720px;
+  }
+
+  /* ---- 3-Column Layout ---- */
+  .tcm__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr var(--rec-width, 340px);
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+
+  /* ---- Comparison Column ---- */
+  .tcm__column {}
+
+  .tcm__col-image {
+    width: 100%; border-radius: 10px; overflow: hidden;
+    margin-bottom: 18px;
+  }
+
+  .tcm__col-image img {
+    width: 100%; height: auto; display: block;
+    object-fit: cover; aspect-ratio: 4 / 3;
+  }
+
+  .tcm__col-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--col-title-size); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 12px; line-height: 1.3;
+  }
+
+  .tcm__col-points {
+    list-style: none; margin: 0 0 14px; padding: 0;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  .tcm__col-point {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: var(--body-size); line-height: 1.55; color: var(--text-color);
+  }
+
+  .tcm__col-check {
+    flex-shrink: 0; margin-top: 3px;
+  }
+
+  .tcm__col-check svg { width: 16px; height: 16px; }
+
+  .tcm__col-check--accent { color: var(--accent-color); }
+  .tcm__col-check--muted { color: var(--muted-check); }
+
+  .tcm__col-footer {
+    font-size: calc(var(--body-size) - 1px); font-style: italic;
+    color: var(--text-color); opacity: 0.8;
+    display: flex; align-items: center; gap: 8px; margin-top: 4px;
+  }
+
+  .tcm__col-footer svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* ---- Recommendation Card ---- */
+  .tcm__rec-card {
+    border: 2px solid var(--rec-border);
+    border-radius: 10px;
+    padding: 4px;
+    background: var(--rec-bg);
+  }
+
+  .tcm__rec-inner {
+    border: 1px solid var(--rec-border);
+    border-radius: 7px;
+    padding: 28px 24px;
+  }
+
+  .tcm__rec-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--col-title-size); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 16px; line-height: 1.3;
+    text-align: center;
+  }
+
+  .tcm__rec-desc {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); margin: 0 0 20px;
+  }
+
+  .tcm__rec-desc strong { color: var(--heading-color); }
+
+  .tcm__rec-points {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  .tcm__rec-point {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: var(--body-size); line-height: 1.5; color: var(--text-color);
+    font-weight: 600;
+  }
+
+  .tcm__rec-check {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 3px;
+  }
+
+  .tcm__rec-check svg { width: 16px; height: 16px; }
+
+  /* ---- Footer ---- */
+  .tcm__footer { text-align: center; }
+
+  .tcm__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px); font-style: italic;
+    color: var(--heading-color); margin: 0; line-height: 1.5;
+  }
+
+  /* Animations */
+  [data-tcm-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-tcm-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* ---- Responsive ---- */
+  @media screen and (max-width: 1024px) {
+    .tcm__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .tcm__rec-card {
+      grid-column: 1 / -1;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .tcm__heading { font-size: calc(var(--heading-size) * 0.82); }
+  }
+
+  @media screen and (max-width: 768px) {
+    .tcm__container { padding: 0 20px; }
+    .tcm__heading { font-size: calc(var(--heading-size) * 0.62); }
+    .tcm__grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .tcm__rec-card { max-width: 100%; }
+    .tcm__col-image { max-width: 400px; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .tcm__container { padding: 0 16px; }
+    .tcm__heading { font-size: calc(var(--heading-size) * 0.52); }
+  }
+{% endstyle %}
+
+{% assign col_blocks = section.blocks | where: 'type', 'comparison_column' %}
+
+<section
+  class="tcm"
+  id="tcm-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --muted-check: {{ section.settings.muted_check_color }};
+    --rec-bg: {{ section.settings.rec_bg }};
+    --rec-border: {{ section.settings.rec_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --col-title-size: {{ section.settings.col_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --rec-width: {{ section.settings.rec_card_width }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="tcm__texture"></div>{% endif %}
+
+  <div class="tcm__container">
+    <!-- Header -->
+    <div class="tcm__header" data-tcm-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="tcm__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="tcm__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Grid -->
+    <div class="tcm__grid" data-tcm-animate data-delay="1">
+      <!-- Comparison Columns -->
+      {% for block in col_blocks %}
+        <div class="tcm__column" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <div class="tcm__col-image">
+              {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.title != blank %}
+            <h3 class="tcm__col-title">{{ block.settings.title }}</h3>
+          {% endif %}
+
+          {% if block.settings.points != blank %}
+            <ul class="tcm__col-points">
+              {% assign points = block.settings.points | split: '||' %}
+              {% for point in points %}
+                {% assign pt = point | strip %}
+                {% if pt != blank %}
+                  <li class="tcm__col-point">
+                    <span class="tcm__col-check {% if block.settings.check_style == 'accent' %}tcm__col-check--accent{% else %}tcm__col-check--muted{% endif %}">
+                      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span>{{ pt }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if block.settings.footer_note != blank %}
+            <div class="tcm__col-footer">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="{{ section.settings.muted_check_color }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {{ block.settings.footer_note }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      <!-- Recommendation Card -->
+      <div class="tcm__rec-card" data-tcm-animate data-delay="2">
+        <div class="tcm__rec-inner">
+          {% if section.settings.rec_title != blank %}
+            <h3 class="tcm__rec-title">{{ section.settings.rec_title }}</h3>
+          {% endif %}
+
+          {% if section.settings.rec_description != blank %}
+            <div class="tcm__rec-desc">{{ section.settings.rec_description }}</div>
+          {% endif %}
+
+          {% if section.settings.rec_points != blank %}
+            <ul class="tcm__rec-points">
+              {% assign rpoints = section.settings.rec_points | split: '||' %}
+              {% for rp in rpoints %}
+                {% assign rp_stripped = rp | strip %}
+                {% if rp_stripped != blank %}
+                  <li class="tcm__rec-point">
+                    <span class="tcm__rec-check">
+                      <svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span>{{ rp_stripped }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% if section.settings.footer_text != blank %}
+      <div class="tcm__footer" data-tcm-animate data-delay="3">
+        <p class="tcm__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('tcm-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-tcm-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Treatment Comparison",
+  "tag": "section",
+  "class": "treatment-comparison-section",
+  "settings": [
+    { "type": "header", "content": "Section Header" },
+    { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Skincare improves the surface.<br>CO₂ laser changes the structure.</p>" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Most creams and treatments work at the surface of the skin. CO₂ laser resurfacing is designed to stimulate renewal where texture issues actually begin." },
+    { "type": "header", "content": "Recommendation Card" },
+    { "type": "text", "id": "rec_title", "label": "Card Title", "default": "Why we recommend CO₂ laser for texture" },
+    { "type": "richtext", "id": "rec_description", "label": "Card Description", "default": "<p>Skin texture concerns such as acne scarring and <strong>deeper lines</strong> are structural. CO₂ laser resurfacing works by triggering controlled skin renewal, allowing smoother, healthier skin to form gradually — under clinical supervision.</p>" },
+    { "type": "textarea", "id": "rec_points", "label": "Card Checkmarks (separate with ||)", "default": "Consultation-led||Medically trained clinicians||Personalised treatment plans" },
+    { "type": "header", "content": "Footer" },
+    { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "CO₂ laser treatments penetrate deep into the dermis where real skin repair and texture improvements happen." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e5e0da" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#2a2a2a" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#555555" },
+    { "type": "color", "id": "accent_color", "label": "Accent Checkmark", "default": "#b08d57" },
+    { "type": "color", "id": "muted_check_color", "label": "Muted Checkmark", "default": "#999999" },
+    { "type": "color", "id": "rec_bg", "label": "Rec Card Background", "default": "#ece7e1" },
+    { "type": "color", "id": "rec_border", "label": "Rec Card Border", "default": "#b5a99a" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 38, "unit": "px" },
+    { "type": "range", "id": "col_title_font_size", "label": "Column Title Font Size", "min": 16, "max": 28, "step": 1, "default": 20, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "rec_card_width", "label": "Rec Card Width (desktop)", "min": 280, "max": 420, "step": 10, "default": 340, "unit": "px" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_column",
+      "name": "Comparison Column",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Illustration / Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Surface-level treatments" },
+        { "type": "textarea", "id": "points", "label": "Checkmark Points (separate with ||)", "default": "Improve hydration and tone||Support daily skin health||Limited impact on scarring and texture" },
+        {
+          "type": "select", "id": "check_style", "label": "Checkmark Style",
+          "options": [
+            { "value": "accent", "label": "Accent (gold)" },
+            { "value": "muted", "label": "Muted (grey)" }
+          ],
+          "default": "muted"
+        },
+        { "type": "text", "id": "footer_note", "label": "Footer Note (optional)", "default": "Only works at the surface" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Comparison",
+      "blocks": [
+        {
+          "type": "comparison_column",
+          "settings": {
+            "title": "Surface-level treatments",
+            "points": "Improve hydration and tone||Support daily skin health||Limited impact on scarring and texture",
+            "check_style": "muted",
+            "footer_note": "Only works at the surface"
+          }
+        },
+        {
+          "type": "comparison_column",
+          "settings": {
+            "title": "Clinically led CO₂ laser",
+            "points": "Targets deeper skin layers responsibly||Stimulates new collagen production",
+            "check_style": "accent",
+            "footer_note": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
