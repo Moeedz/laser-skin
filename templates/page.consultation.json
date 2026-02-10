@@ -715,6 +715,7 @@
         "badge_LG84gA",
         "badge_cKh9HA"
       ],
+      "disabled": true,
       "name": "Clinic Hero",
       "settings": {
         "person_image": "shopify://shop_images/5.png",
@@ -768,6 +769,7 @@
       "block_order": [
         "image_MeUyje"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
