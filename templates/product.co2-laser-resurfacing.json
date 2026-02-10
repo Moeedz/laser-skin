@@ -1189,6 +1189,7 @@
     },
     "slideshow_9NBKXH": {
       "type": "slideshow",
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1323,6 +1324,7 @@
       "block_order": [
         "image_3kgEeM"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
