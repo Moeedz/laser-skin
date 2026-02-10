@@ -1150,6 +1150,7 @@
         "comparison_column_AP6JET": {
           "type": "comparison_column",
           "settings": {
+            "image": "shopify://shop_images/Screenshot_5.png",
             "title": "Clinically led CO₂ laser",
             "points": "Targets deeper skin layers responsibly||Stimulates new collagen production",
             "check_style": "accent",
