@@ -296,7 +296,9 @@
         },
         "image_AqCiPw": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/2_eafed3bf-fa77-4142-a101-ade099215dc9.png"
+          }
         },
         "image_XabErk": {
           "type": "image",
