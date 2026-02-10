@@ -1743,6 +1743,63 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "treatment_tiers_cGjMRP": {
+      "type": "treatment-tiers",
+      "blocks": {
+        "tier_Tjm8yk": {
+          "type": "tier",
+          "settings": {
+            "title": "Light Resurfacing",
+            "best_for": "early texture, pores, dullness",
+            "downtime": "2–3 days",
+            "description": "<p>Gentle treatment surface-level concerns with minimal downtime.</p><p>Ideal for sun damage, open pores, and overall dullness.</p>"
+          }
+        },
+        "tier_Kn7Lge": {
+          "type": "tier",
+          "settings": {
+            "title": "Moderate Resurfacing",
+            "best_for": "fine lines, acne scarring",
+            "downtime": "5–7 days",
+            "description": "<p>Balanced treatment for deeper texture and scarring.</p><p>Good for fine lines, mild acne scars, and crepey skin.</p>"
+          }
+        },
+        "tier_7KwCNV": {
+          "type": "tier",
+          "settings": {
+            "title": "Deep Resurfacing",
+            "best_for": "deeper scars and wrinkles",
+            "downtime": "7–10+ days",
+            "description": "<p>Intensive treatment targeting significant skin damage.</p><p>Best for deep rolling scars, surgical scars, and deep wrinkles.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tier_Tjm8yk",
+        "tier_Kn7Lge",
+        "tier_7KwCNV"
+      ],
+      "name": "Treatment Tiers",
+      "settings": {
+        "heading": "<p>Personalised CO₂ laser resurfacing — tailored to your skin.</p>",
+        "subtitle": "We adjust treatment depth to match your goals, skin condition, and downtime preferences.",
+        "secondary_text": "Choose the depth of treatment that best suits your needs:",
+        "footer_text": "During your consultation, your clinician will recommend the safest and most effective option for your skin.",
+        "section_bg": "#e5dfda",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "card_bg": "#efebe6",
+        "card_border": "#ddd8d0",
+        "heading_font_size": 40,
+        "card_title_font_size": 22,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_epLFiN": {
       "type": "slideshow",
       "blocks": {
@@ -2342,6 +2399,7 @@
     "stacked_info_cards_Tc3JWJ",
     "slideshow_49kXaM",
     "slideshow_8xJq6t",
+    "treatment_tiers_cGjMRP",
     "slideshow_epLFiN",
     "luxury_pricing_TFtVXM",
     "expectations_trust_QaqgNy",
