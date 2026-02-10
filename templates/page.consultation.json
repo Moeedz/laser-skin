@@ -397,7 +397,7 @@
         "step_bxAAYL": {
           "type": "step",
           "settings": {
-            "icon_image": "shopify://shop_images/1_6852fe8d-2b86-41a6-8b80-2dd0adee5fb7.png",
+            "icon_image": "shopify://shop_images/1-removebg-preview.png",
             "icon": "droplet",
             "title": "Understand Your Skin",
             "description": "Get a clear picture of your skin's health and needs with advanced diagnostics."
@@ -406,7 +406,7 @@
         "step_QBjeaA": {
           "type": "step",
           "settings": {
-            "icon_image": "shopify://shop_images/2_bc407af3-78fd-4422-9edf-bdf20410b552.png",
+            "icon_image": "shopify://shop_images/2-removebg-preview.png",
             "icon": "vial",
             "title": "Personalized Advice",
             "description": "Receive skincare advice tailored specifically for you, from qualified skincare expert"
@@ -415,7 +415,7 @@
         "step_8PE4ya": {
           "type": "step",
           "settings": {
-            "icon_image": "shopify://shop_images/3_471948b0-1e31-44aa-a6df-4d803e7a35e2.png",
+            "icon_image": "shopify://shop_images/3-removebg-preview.png",
             "icon": "shield",
             "title": "Pressure-Free Experience",
             "description": "Enjoy a helpful consultation with no thard-sell and no obligation to book treatment"
@@ -484,6 +484,7 @@
       "block_order": [
         "image_ETLeKD"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
