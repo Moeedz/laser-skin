@@ -290,7 +290,9 @@
         },
         "image_QT884n": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/1_0aab7765-7f71-4a8d-bbe9-267ba19c8545.png"
+          }
         },
         "image_AqCiPw": {
           "type": "image",
