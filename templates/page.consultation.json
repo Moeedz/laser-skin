@@ -717,6 +717,7 @@
       ],
       "name": "Clinic Hero",
       "settings": {
+        "person_image": "shopify://shop_images/5.png",
         "heading": "Your Skin. Properly Understood.",
         "subheading": "Clinically Led Skin Analysis",
         "description": "<p>Established in 2010, Laser Skin Clinics has been delivering medically led skin consultations for over <strong>15 years</strong>, making us one of the most experienced providers in the area.</p>",
