@@ -1225,6 +1225,70 @@
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
       }
+    },
+    "location_contact_hprEgp": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_369NpP": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_9tRVA6": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_Dji7ah": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_369NpP",
+        "contact_9tRVA6",
+        "contact_Dji7ah"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "info_bg": "#e8e3dc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "#consultation-form-template--26151866466684__consultation_form_rAD6BV",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
     }
   },
   "order": [
@@ -1238,6 +1302,7 @@
     "slideshow_WTKLC8",
     "consultation_form_rAD6BV",
     "faq_updated_fQcMPC",
-    "slideshow_EpwJBR"
+    "slideshow_EpwJBR",
+    "location_contact_hprEgp"
   ]
 }
