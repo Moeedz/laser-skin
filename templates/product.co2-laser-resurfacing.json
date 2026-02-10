@@ -1425,6 +1425,55 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "stacked_info_cards_Tc3JWJ": {
+      "type": "stacked-info-cards",
+      "blocks": {
+        "card_W6UEpt": {
+          "type": "card",
+          "settings": {
+            "title": "Surface-level laser treatments",
+            "points": "Designed to improve tone and brightness||Limited impact on deeper texture and scarring"
+          }
+        },
+        "card_fVk8hH": {
+          "type": "card",
+          "settings": {
+            "title": "Fully ablative lasers",
+            "points": "Can produce strong results||Often involve longer downtime and higher recovery demands"
+          }
+        },
+        "card_8KLj9Y": {
+          "type": "card",
+          "settings": {
+            "title": "Fractional CO₂ laser resurfacing",
+            "points": "Targets damaged micro-zones while preserving healthy skin||Supports faster healing with long term texture improvement||Personalised, clinician-led treatment planning"
+          }
+        }
+      },
+      "block_order": [
+        "card_W6UEpt",
+        "card_fVk8hH",
+        "card_8KLj9Y"
+      ],
+      "name": "Stacked Info Cards",
+      "settings": {
+        "heading": "<p>Why fractional CO₂ is considered the gold standard</p>",
+        "subtitle": "Not all laser treatments work at the same depth or deliver the same balance of results and recovery.",
+        "section_bg": "#f9e8de",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3028",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "card_bg": "#ede8e2",
+        "card_border": "#ddd8d0",
+        "heading_font_size": 40,
+        "card_title_font_size": 21,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_49kXaM": {
       "type": "slideshow",
       "blocks": {
@@ -2289,6 +2338,7 @@
     "treatment_comparison_jCJbxT",
     "slideshow_9NBKXH",
     "slideshow_Lw9MKR",
+    "stacked_info_cards_Tc3JWJ",
     "slideshow_49kXaM",
     "slideshow_8xJq6t",
     "slideshow_epLFiN",
