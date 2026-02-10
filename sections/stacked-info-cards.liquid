@@ -1,0 +1,247 @@
+{% style %}
+  .sic {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .sic__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .sic__texture::before, .sic__texture::after { content: ''; position: absolute; inset: 0; }
+  .sic__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .sic__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .sic__container {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .sic__header { text-align: center; margin-bottom: 36px; }
+
+  .sic__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 16px;
+  }
+
+  /* Ornamental divider */
+  .sic__ornament {
+    text-align: center; margin-bottom: 16px;
+    color: var(--accent-color); opacity: 0.5; line-height: 1;
+  }
+  .sic__ornament::before {
+    content: ''; display: inline-block; width: 60px; height: 1px;
+    background: var(--accent-color); vertical-align: middle;
+    margin-right: 10px; opacity: 0.5;
+  }
+  .sic__ornament::after {
+    content: ''; display: inline-block; width: 60px; height: 1px;
+    background: var(--accent-color); vertical-align: middle;
+    margin-left: 10px; opacity: 0.5;
+  }
+
+  .sic__subtitle {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); margin: 0 auto; max-width: 620px;
+    text-align: center;
+  }
+
+  /* Cards */
+  .sic__cards {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+
+  .sic__card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 24px 28px;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+
+  .sic__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  .sic__card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 10px; line-height: 1.3;
+  }
+
+  .sic__card-points {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+
+  .sic__card-point {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: var(--body-size); line-height: 1.55; color: var(--text-color);
+  }
+
+  .sic__card-check {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 3px;
+  }
+  .sic__card-check svg { width: 16px; height: 16px; }
+
+  /* Animations */
+  [data-sic-animate] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+  }
+  [data-sic-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .sic__container { padding: 0 20px; }
+    .sic__heading { font-size: calc(var(--heading-size) * 0.65); }
+    .sic__card { padding: 20px 22px; }
+  }
+  @media screen and (max-width: 480px) {
+    .sic__container { padding: 0 16px; }
+    .sic__heading { font-size: calc(var(--heading-size) * 0.52); }
+    .sic__card { padding: 18px 18px; }
+  }
+{% endstyle %}
+
+{% assign card_blocks = section.blocks | where: 'type', 'card' %}
+
+<section
+  class="sic"
+  id="sic-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="sic__texture"></div>{% endif %}
+
+  <div class="sic__container">
+    <div class="sic__header" data-sic-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="sic__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="sic__ornament">✦</div>
+      {% if section.settings.subtitle != blank %}
+        <p class="sic__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if card_blocks.size > 0 %}
+      <div class="sic__cards">
+        {% for block in card_blocks %}
+          <div class="sic__card" {{ block.shopify_attributes }} data-sic-animate data-delay="{{ forloop.index }}">
+            {% if block.settings.title != blank %}
+              <h3 class="sic__card-title">{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.points != blank %}
+              <ul class="sic__card-points">
+                {% assign points = block.settings.points | split: '||' %}
+                {% for point in points %}
+                  {% assign pt = point | strip %}
+                  {% if pt != blank %}
+                    <li class="sic__card-point">
+                      <span class="sic__card-check">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <span>{{ pt }}</span>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('sic-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-sic-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Stacked Info Cards",
+  "tag": "section",
+  "class": "stacked-info-cards-section",
+  "settings": [
+    { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Why fractional CO₂ is considered the gold standard</p>" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Not all laser treatments work at the same depth or deliver the same balance of results and recovery." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e5dfda" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a3028" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#555555" },
+    { "type": "color", "id": "accent_color", "label": "Accent / Checkmark Color", "default": "#b08d57" },
+    { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#ede8e2" },
+    { "type": "color", "id": "card_border", "label": "Card Border", "default": "#ddd8d0" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 40, "unit": "px" },
+    { "type": "range", "id": "card_title_font_size", "label": "Card Title Font Size", "min": 16, "max": 28, "step": 1, "default": 21, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Info Card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Surface-level laser treatments" },
+        { "type": "textarea", "id": "points", "label": "Points (separate with ||)", "default": "Designed to improve tone and brightness||Limited impact on deeper texture and scarring" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stacked Info Cards",
+      "blocks": [
+        { "type": "card", "settings": { "title": "Surface-level laser treatments", "points": "Designed to improve tone and brightness||Limited impact on deeper texture and scarring" } },
+        { "type": "card", "settings": { "title": "Fully ablative lasers", "points": "Can produce strong results||Often involve longer downtime and higher recovery demands" } },
+        { "type": "card", "settings": { "title": "Fractional CO₂ laser resurfacing", "points": "Targets damaged micro-zones while preserving healthy skin||Supports faster healing with long term texture improvement||Personalised, clinician-led treatment planning" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
