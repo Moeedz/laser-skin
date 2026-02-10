@@ -302,7 +302,9 @@
         },
         "image_XabErk": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/3_6edf6f98-caa5-4e8a-a62f-29a97cc507fa.png"
+          }
         }
       },
       "block_order": [
@@ -314,12 +316,15 @@
         "image_AqCiPw",
         "image_XabErk"
       ],
+      "custom_css": [
+        ".ans__image img {aspect-ratio: unset !important;}"
+      ],
       "name": "Analysis Steps",
       "settings": {
         "heading": "What Happens During Your Free Skin Analysis",
         "subtitle": "Feel confident in your skin and your decisions with a private, obligation-free consultation led by a skincare expert.",
         "footer_text": "We will never recommend treatments you don't need.",
-        "section_bg": "#ede6df",
+        "section_bg": "#f3e1e0",
         "show_texture": true,
         "texture_opacity": 80,
         "heading_color": "#3a3a3a",
