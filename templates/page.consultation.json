@@ -391,6 +391,59 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "treatment_steps_FCx6DA": {
+      "type": "treatment-steps",
+      "blocks": {
+        "step_bxAAYL": {
+          "type": "step",
+          "settings": {
+            "icon": "droplet",
+            "title": "Deep Cleanse & Exfoliate",
+            "description": "Removes dead skin cells and impurities while gently resurfacing the skin to reveal a smoother texture."
+          }
+        },
+        "step_QBjeaA": {
+          "type": "step",
+          "settings": {
+            "icon": "vial",
+            "title": "Extract & Purify",
+            "description": "Vacuum-assisted extraction clears pores without irritation or manual pressure."
+          }
+        },
+        "step_8PE4ya": {
+          "type": "step",
+          "settings": {
+            "icon": "shield",
+            "title": "Hydrate & Protect",
+            "description": "Infuses the skin with targeted serums to restore hydration, improve glow, and support skin health."
+          }
+        }
+      },
+      "block_order": [
+        "step_bxAAYL",
+        "step_QBjeaA",
+        "step_8PE4ya"
+      ],
+      "name": "Treatment Steps",
+      "settings": {
+        "heading": "Why a Complimentary Skin Analysis is Worth Trying",
+        "subtitle": "Expert-led, pressure-free, and all about what's best for your skin",
+        "footer_text": "A friendly, professional way to learn what's truly best for your skin",
+        "section_bg": "#efdae8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#b5a08a",
+        "card_bg": "#f2ede7",
+        "card_border": "#ddd8d0",
+        "heading_font_size": 40,
+        "card_title_font_size": 22,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_eJC4Rk": {
       "type": "slideshow",
       "blocks": {
@@ -1402,6 +1455,7 @@
     "product_hero_8MnEcK",
     "slideshow_dhJ4tD",
     "slideshow_JTxgfE",
+    "treatment_steps_FCx6DA",
     "slideshow_eJC4Rk",
     "slideshow_N36fdB",
     "slideshow_9bK6iw",
