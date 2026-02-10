@@ -1673,7 +1673,7 @@
         "price_card_UQRhjj": {
           "type": "price_card",
           "settings": {
-            "name": "Hydrofacial",
+            "name": "Half Face",
             "card_subtitle": "",
             "price": "£100",
             "per_label": "per treatment",
@@ -1683,28 +1683,17 @@
         "price_card_6pE9fx": {
           "type": "price_card",
           "settings": {
-            "name": "Course of 3",
+            "name": "Full Face",
             "card_subtitle": "",
             "price": "£250",
             "per_label": "per treatment",
             "description": "For cumulative skin improvement and longer-lasting results."
           }
-        },
-        "price_card_7GJiYx": {
-          "type": "price_card",
-          "settings": {
-            "name": "Express Hydrofacial",
-            "card_subtitle": "(30 minutes)",
-            "price": "£65",
-            "per_label": "per treatment",
-            "description": "Course of 3 – £180"
-          }
         }
       },
       "block_order": [
         "price_card_UQRhjj",
-        "price_card_6pE9fx",
-        "price_card_7GJiYx"
+        "price_card_6pE9fx"
       ],
       "name": "Luxury Pricing",
       "settings": {
