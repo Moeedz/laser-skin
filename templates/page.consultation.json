@@ -809,7 +809,7 @@
         "quote": "<p>I genuinely cannot recommend Laser Skin Clinics enough.</p><p>From the moment I arrived, I was greeted by the lovely Angel. Friendly, professional and very informative from the get go! Maxine who is the loveliest of ladies has performed my 3 x treatments to date. Each time she has been incredible. Not only carrying out treatments, but offering her advice and expertise on other skincare. Neither Maxine nor Angel have ever tried to sell, quite the contrary!</p><p>Location is lovely. Facilities spotlessly clean. Prices I find are very reasonable and money has definitely been well spent here. I would not go anywhere else and recommend them to all my family and friends.</p>",
         "author": "Thank you :) x",
         "image": "shopify://shop_images/4.png",
-        "section_bg": "#ece6df",
+        "section_bg": "#e5d7e7",
         "show_texture": true,
         "texture_opacity": 80,
         "heading_color": "#3a3a3a",
@@ -855,6 +855,7 @@
       "block_order": [
         "image_mUz8HW"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
