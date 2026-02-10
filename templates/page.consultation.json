@@ -668,6 +668,71 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "clinic_hero_aG3cMi": {
+      "type": "clinic-hero",
+      "blocks": {
+        "check_item_ihC8Kf": {
+          "type": "check_item",
+          "settings": {
+            "text": "Our consultations are carried out by fully qualified practitioners using an evidence-based, diagnostic approach to understand your skin properly before recommending any treatment."
+          }
+        },
+        "check_item_9n384i": {
+          "type": "check_item",
+          "settings": {
+            "text": "We are fully registered and regulated, holding advanced Level 4 qualifications in both laser technology and skin science, ensuring every recommendation is safe, appropriate."
+          }
+        },
+        "check_item_GDK3P6": {
+          "type": "check_item",
+          "settings": {
+            "text": "Every skin analysis results in a clear, personalised treatment plan, built around your skin, your goals, and long-term results, not trends or guesswork."
+          }
+        },
+        "badge_khF8WK": {
+          "type": "badge",
+          "settings": {}
+        },
+        "badge_tK8nDH": {
+          "type": "badge",
+          "settings": {}
+        },
+        "badge_LG84gA": {
+          "type": "badge",
+          "settings": {}
+        },
+        "badge_cKh9HA": {
+          "type": "badge",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "check_item_ihC8Kf",
+        "check_item_9n384i",
+        "check_item_GDK3P6",
+        "badge_khF8WK",
+        "badge_tK8nDH",
+        "badge_LG84gA",
+        "badge_cKh9HA"
+      ],
+      "name": "Clinic Hero",
+      "settings": {
+        "heading": "Your Skin. Properly Understood.",
+        "subheading": "Clinically Led Skin Analysis",
+        "description": "<p>Established in 2010, Laser Skin Clinics has been delivering medically led skin consultations for over <strong>15 years</strong>, making us one of the most experienced providers in the area.</p>",
+        "section_bg": "#c8c0b6",
+        "overlay_color": "#c8c0b6e0",
+        "heading_color": "#2a2a2a",
+        "text_color": "#444444",
+        "accent_color": "#b08d57",
+        "heading_font_size": 42,
+        "body_font_size": 17,
+        "section_height": 600,
+        "person_width": 340,
+        "logo_height": 60,
+        "badge_height": 75
+      }
+    },
     "slideshow_N36fdB": {
       "type": "slideshow",
       "blocks": {
@@ -1364,6 +1429,7 @@
     "slideshow_JTxgfE",
     "treatment_steps_FCx6DA",
     "slideshow_eJC4Rk",
+    "clinic_hero_aG3cMi",
     "slideshow_N36fdB",
     "featured_review_EyXQFp",
     "slideshow_9bK6iw",
