@@ -895,6 +895,110 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_RqkdU3": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_VPPAXf": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Deeply cleanses and hydrates"
+          }
+        },
+        "check_item_h7D8Wh": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Improves texture, tone, and congestion"
+          }
+        },
+        "check_item_yWhkwq": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No downtime, immediate glow"
+          }
+        },
+        "trust_item_nrPAC8": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_z7z9at": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_GtRaHn": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_WU73Kn": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_VPPAXf",
+        "check_item_h7D8Wh",
+        "check_item_yWhkwq",
+        "trust_item_nrPAC8",
+        "trust_item_z7z9at",
+        "trust_item_GtRaHn",
+        "trust_item_WU73Kn"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_pnoqlgpnoqlgpnoq.png",
+        "image_position": "center center",
+        "desktop_height": 800,
+        "mobile_height": 320,
+        "background_color": "#f6dbcd",
+        "overlay_color_start": "#f6dbcd",
+        "overlay_color_mid": "#f6dbcd",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Reveal smoother, clearer skin",
+        "subheading_highlight": "Start with a clinical CO2 laser plan",
+        "subheading": "Reduce acne scarring, fine lines and skin texture concerns with clinically led CO2 laser resurfacing",
+        "heading_font_size": 54,
+        "subheading_font_size": 26,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Deep cleansing, gentle exfoliation, and intense hydration in one medical-grade facial.</p>",
+        "body_font_size": 15,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your Hydrofacial",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#c4a080",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_89XALN": {
       "type": "slideshow",
       "blocks": {
@@ -2124,6 +2228,7 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_RqkdU3",
     "slideshow_89XALN",
     "slideshow_9NBKXH",
     "slideshow_Lw9MKR",
