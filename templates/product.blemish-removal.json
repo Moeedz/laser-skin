@@ -1277,6 +1277,9 @@
         "how_item_LtCgXA",
         "how_item_b3hJFh"
       ],
+      "custom_css": [
+        ".wwt__tile-icon, .wwt__tile-icon img {width: 100px !important; height: 95px !important;}"
+      ],
       "name": "What We Treat",
       "settings": {
         "heading": "What we treat",
