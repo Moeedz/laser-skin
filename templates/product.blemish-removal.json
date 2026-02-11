@@ -1077,21 +1077,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
+            "text": "Eliminate spider veins, skin tags, moles, rosacea, and vascular blemishes"
           }
         },
         "check_item_gd9pqx": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
+            "text": "Targeted, non-invasive treatments tailored to your skin"
           }
         },
         "check_item_NezdGT": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No downtime, immediate glow"
+            "text": "Performed by highly trained medical professionals"
           }
         },
         "trust_item_TA4mUB": {
@@ -1142,9 +1142,10 @@
       ],
       "name": "Product Hero",
       "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_kupecfkupecfkupe.png",
         "image_position": "center center",
-        "desktop_height": 620,
-        "mobile_height": 320,
+        "desktop_height": 770,
+        "mobile_height": 210,
         "background_color": "#ebd0cf",
         "overlay_color_start": "#ebd0cf",
         "overlay_color_mid": "#ebd0cf",
@@ -1166,7 +1167,7 @@
         "button_bg": "#7c6861",
         "button_text_color": "#ffffff",
         "button_bg_hover": "#b08d66",
-        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_bg": "#ebd0cf",
         "trust_bar_text_color": "#3a3a3a",
         "trust_icon_color": "#999999",
         "trust_star_color": "#c8962e",
