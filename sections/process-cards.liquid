@@ -54,6 +54,7 @@
     grid-template-columns: repeat(var(--col-count, 3), 1fr);
     gap: 22px;
     position: relative;
+    align-items: stretch;
   }
 
   /* Timeline connector between cards */
@@ -64,6 +65,11 @@
   .hbr__cards--timeline .hbr__card-wrap {
     position: relative;
     padding: 0 11px;
+    display: flex;
+  }
+
+  .hbr__cards--timeline .hbr__card-wrap .hbr__card {
+    flex: 1;
   }
 
   .hbr__cards--timeline .hbr__card-wrap::after {
