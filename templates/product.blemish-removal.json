@@ -1278,7 +1278,7 @@
         "how_item_b3hJFh"
       ],
       "custom_css": [
-        ".wwt__tile-icon, .wwt__tile-icon img {width: 100px !important; height: 95px !important;}"
+        ".wwt__tile-icon,.wwt__tile-icon img {width: 100px !important; height: 95px !important;}"
       ],
       "name": "What We Treat",
       "settings": {
@@ -1334,6 +1334,7 @@
       "block_order": [
         "image_EwQXLg"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
