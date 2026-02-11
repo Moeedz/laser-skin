@@ -1253,7 +1253,7 @@
         "card_rj8JgH"
       ],
       "custom_css": [
-        ".hbr__card-icon, .hbr__card-icon img {width: 100px !important; height: 100px !important;}"
+        ".hbr__card-icon,.hbr__card-icon img {width: 100px !important; height: 100px !important;}"
       ],
       "name": "Process Cards",
       "settings": {
@@ -1442,6 +1442,7 @@
       "block_order": [
         "image_M3LWiM"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
