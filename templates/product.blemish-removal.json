@@ -1286,6 +1286,7 @@
           "type": "card",
           "settings": {
             "title": "Immediately after",
+            "icon_image": "shopify://shop_images/1-removebg-preview_2.png",
             "description": "Keep the treated area clean and dry||Avoid touching or picking at the area",
             "card_bg": "#f3d0c7"
           }
