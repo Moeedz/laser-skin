@@ -1300,6 +1300,56 @@
         "padding_bottom": 72
       }
     },
+    "process_cards_JqDfXG": {
+      "type": "process-cards",
+      "blocks": {
+        "card_DHiBXK": {
+          "type": "card",
+          "settings": {
+            "title": "Targeted precision",
+            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
+            "card_bg": "#e8ddd4"
+          }
+        },
+        "card_pFdYM4": {
+          "type": "card",
+          "settings": {
+            "title": "Clinician-controlled treatment",
+            "description": "Depth and intensity adjusted based on skin type and blemish type",
+            "card_bg": "#c8cedf"
+          }
+        },
+        "card_yMadKY": {
+          "type": "card",
+          "settings": {
+            "title": "Natural healing response",
+            "description": "The treated area heals gradually as the skin renews itself",
+            "card_bg": "#e8ddd4"
+          }
+        }
+      },
+      "block_order": [
+        "card_DHiBXK",
+        "card_pFdYM4",
+        "card_yMadKY"
+      ],
+      "name": "Process Cards",
+      "settings": {
+        "heading": "How blemish removal works",
+        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
+        "section_bg": "linear-gradient(180deg, rgba(201, 180, 176, 1), rgba(212, 191, 192, 1) 25%, rgba(200, 181, 192, 1) 50%, rgba(184, 168, 184, 1) 75%, rgba(194, 176, 168, 1) 100%)",
+        "shimmer_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a32",
+        "card_title_color": "#3a2820",
+        "card_text_color": "#5a4a42",
+        "heading_font_size": 42,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "slideshow_NRGB7J": {
       "type": "slideshow",
       "blocks": {
@@ -2674,6 +2724,7 @@
     "slideshow_QJgeH6",
     "product_hero_7M3RMk",
     "what_we_treat_VUEPya",
+    "process_cards_JqDfXG",
     "slideshow_NRGB7J",
     "slideshow_jjiVQG",
     "slideshow_etgJic",
