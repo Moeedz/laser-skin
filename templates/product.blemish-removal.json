@@ -1181,6 +1181,7 @@
         "tile_JRXAUn": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_1.png",
             "title": "Spider Veins",
             "subtitle": "Thread veins"
           }
@@ -1188,6 +1189,7 @@
         "tile_YB86fE": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_1.png",
             "title": "Skin Tags",
             "subtitle": "Thread veins"
           }
@@ -1195,6 +1197,7 @@
         "tile_N4YB8w": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_1.png",
             "title": "Moles",
             "subtitle": "(Only where suitable)"
           }
@@ -1202,6 +1205,7 @@
         "tile_rymfmK": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview.png",
             "title": "Skin Blemishes",
             "subtitle": "Thread veins"
           }
@@ -1209,6 +1213,7 @@
         "tile_RmYpgF": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/5-removebg-preview.png",
             "title": "Pigmentation",
             "subtitle": "Thread veins"
           }
@@ -1216,6 +1221,7 @@
         "tile_mpTFJe": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/6-removebg-preview.png",
             "title": "Warts",
             "subtitle": "Thread veins"
           }
@@ -1223,6 +1229,7 @@
         "tile_FBTa9q": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/7-removebg-preview.png",
             "title": "Verrucas",
             "subtitle": "Thread veins"
           }
@@ -1230,6 +1237,7 @@
         "tile_38xPCV": {
           "type": "tile",
           "settings": {
+            "icon_image": "shopify://shop_images/8-removebg-preview.png",
             "title": "Milia",
             "subtitle": "Thread veins"
           }
