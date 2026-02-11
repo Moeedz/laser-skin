@@ -53,6 +53,47 @@
     display: grid;
     grid-template-columns: repeat(var(--col-count, 3), 1fr);
     gap: 22px;
+    position: relative;
+  }
+
+  /* Timeline connector between cards */
+  .hbr__cards--timeline {
+    gap: 0;
+  }
+
+  .hbr__cards--timeline .hbr__card-wrap {
+    position: relative;
+    padding: 0 11px;
+  }
+
+  .hbr__cards--timeline .hbr__card-wrap::after {
+    content: '';
+    position: absolute;
+    right: -5px; top: 50%;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--connector-color, #b5a080);
+    border: 2px solid var(--connector-border, #ddd4c8);
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .hbr__cards--timeline .hbr__card-wrap:last-child::after {
+    display: none;
+  }
+
+  .hbr__cards--timeline .hbr__card-wrap::before {
+    content: '';
+    position: absolute;
+    right: -11px; top: 50%;
+    width: 22px; height: 0;
+    border-top: 2px dotted var(--connector-color, #b5a080);
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+
+  .hbr__cards--timeline .hbr__card-wrap:last-child::before {
+    display: none;
   }
 
   .hbr__card {
@@ -123,6 +164,10 @@
     .hbr__container { padding: 0 20px; }
     .hbr__heading { font-size: calc(var(--heading-size) * 0.65); }
     .hbr__cards { grid-template-columns: 1fr; gap: 16px; max-width: 420px; margin: 0 auto; }
+    .hbr__cards--timeline { gap: 16px; }
+    .hbr__cards--timeline .hbr__card-wrap { padding: 0; }
+    .hbr__cards--timeline .hbr__card-wrap::before,
+    .hbr__cards--timeline .hbr__card-wrap::after { display: none; }
     .hbr__card { padding: 28px 24px 24px; }
   }
   @media screen and (max-width: 480px) {
@@ -149,6 +194,8 @@
     --padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
     --col-count: {{ card_blocks.size }};
+    --connector-color: {{ section.settings.connector_color }};
+    --connector-border: {{ section.settings.connector_border }};
   "
 >
   <div class="hbr__shimmer"></div>
@@ -166,8 +213,11 @@
     <div class="hbr__divider"></div>
 
     {% if card_blocks.size > 0 %}
-      <div class="hbr__cards" data-hbr-animate data-delay="1">
+      <div class="hbr__cards{% if section.settings.show_timeline %} hbr__cards--timeline{% endif %}" data-hbr-animate data-delay="1">
         {% for block in card_blocks %}
+          {% if section.settings.show_timeline %}
+          <div class="hbr__card-wrap">
+          {% endif %}
           <div
             class="hbr__card"
             {{ block.shopify_attributes }}
@@ -195,6 +245,9 @@
               </div>
             {% endif %}
           </div>
+          {% if section.settings.show_timeline %}
+          </div>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
@@ -234,6 +287,10 @@
     { "type": "textarea", "id": "heading", "label": "Heading", "default": "How blemish removal works" },
     { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring." },
     { "type": "text", "id": "footer_text", "label": "Footer Text" },
+    { "type": "header", "content": "Timeline Connector" },
+    { "type": "checkbox", "id": "show_timeline", "label": "Show dotted timeline between cards", "default": false },
+    { "type": "color", "id": "connector_color", "label": "Connector Dot / Line Color", "default": "#b5a080" },
+    { "type": "color", "id": "connector_border", "label": "Connector Dot Border", "default": "#ddd4c8" },
     { "type": "header", "content": "Background" },
     { "type": "color_background", "id": "section_bg", "label": "Section Background (gradient)", "default": "linear-gradient(180deg, #c9b4b0 0%, #d4bfc0 25%, #c8b5c0 50%, #b8a8b8 75%, #c2b0a8 100%)" },
     { "type": "range", "id": "shimmer_opacity", "label": "Shimmer / Sparkle Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
