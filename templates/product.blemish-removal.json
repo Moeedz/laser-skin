@@ -1251,8 +1251,8 @@
       ],
       "name": "Process Cards",
       "settings": {
-        "heading": "How blemish removal works",
-        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
+        "heading": "Results & outcomes",
+        "subtitle": "What to expect after treatment",
         "section_bg": "linear-gradient(180deg, rgba(201, 180, 176, 1), rgba(212, 191, 192, 1) 25%, rgba(200, 181, 192, 1) 50%, rgba(184, 168, 184, 1) 75%, rgba(194, 176, 168, 1) 100%)",
         "shimmer_opacity": 80,
         "heading_color": "#3a2820",
