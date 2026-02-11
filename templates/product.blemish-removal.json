@@ -1323,9 +1323,9 @@
       ],
       "name": "Process Cards",
       "settings": {
-        "heading": "How blemish removal works",
-        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
-        "footer_text": "",
+        "heading": "Aftercare and healing timeline",
+        "subtitle": "What to do and what to expect after your blemish removal treatment",
+        "footer_text": "Follow any personalized advice given by your clinician for best results",
         "show_timeline": true,
         "connector_color": "#b5a080",
         "connector_border": "#ddd4c8",
