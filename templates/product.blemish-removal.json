@@ -1285,33 +1285,33 @@
         "card_TQh9bb": {
           "type": "card",
           "settings": {
-            "title": "Targeted precision",
-            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
-            "card_bg": "#e8ddd4"
+            "title": "Immediately after",
+            "description": "Keep the treated area clean and dry||Avoid touching or picking at the area",
+            "card_bg": "#f3d0c7"
           }
         },
         "card_bqrHzW": {
           "type": "card",
           "settings": {
-            "title": "Targeted precision",
-            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
-            "card_bg": "#e8ddd4"
+            "title": "Days 1–3",
+            "description": "Any redness or scabbing will begin to subside||Wear SPF if exposed to sunlight",
+            "card_bg": "#f4d7d4"
           }
         },
         "card_tfVeMf": {
           "type": "card",
           "settings": {
-            "title": "Clinician-controlled treatment",
-            "description": "Depth and intensity adjusted based on skin type and blemish type",
-            "card_bg": "#c8cedf"
+            "title": "Week 1+",
+            "description": "The area should be visibly healing and improving||Normal cleansing and skincare routine can be resumed",
+            "card_bg": "#cdc7dc"
           }
         },
         "card_zzy7Xj": {
           "type": "card",
           "settings": {
-            "title": "Natural healing response",
-            "description": "The treated area heals gradually as the skin renews itself",
-            "card_bg": "#e8ddd4"
+            "title": "When to contact us",
+            "description": "If you notice any unusual swelling or prolonged redness||For any concerns about healing or aftercare",
+            "card_bg": "#e9c6bf"
           }
         }
       },
