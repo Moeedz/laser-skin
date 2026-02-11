@@ -1223,6 +1223,7 @@
           "type": "card",
           "settings": {
             "title": "Immediately after",
+            "icon_image": "shopify://shop_images/1-removebg-preview_2.png",
             "description": "Mild redness possible||Area protected and healing begins",
             "card_bg": "#e8ddd4"
           }
@@ -1231,6 +1232,7 @@
           "type": "card",
           "settings": {
             "title": "7–14 days",
+            "icon_image": "shopify://shop_images/2-removebg-preview_2.png",
             "description": "Visible reduction in blemish||Skin surface normalising",
             "card_bg": "#c8cedf"
           }
@@ -1253,6 +1255,7 @@
       "settings": {
         "heading": "Results & outcomes",
         "subtitle": "What to expect after treatment",
+        "footer_text": "",
         "section_bg": "linear-gradient(180deg, rgba(229, 223, 232, 1), rgba(232, 212, 241, 1) 25%, rgba(217, 206, 222, 1) 50%, rgba(224, 202, 235, 1) 75%, rgba(213, 207, 216, 1) 100%)",
         "shimmer_opacity": 80,
         "heading_color": "#3a2820",
