@@ -1322,6 +1322,9 @@
         "card_tfVeMf",
         "card_zzy7Xj"
       ],
+      "custom_css": [
+        ".hbr__card-icon,.hbr__card-icon img {width: 100px !important; height: 100px !important;}"
+      ],
       "name": "Process Cards",
       "settings": {
         "heading": "Aftercare and healing timeline",
