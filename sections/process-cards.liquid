@@ -1,0 +1,232 @@
+{% style %}
+  .hbr {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  /* Shimmer/sparkle texture overlay */
+  .hbr__shimmer {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--shimmer-opacity);
+  }
+  .hbr__shimmer::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .hbr__shimmer::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+  }
+
+  .hbr__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .hbr__header { text-align: center; margin-bottom: 20px; }
+
+  .hbr__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 18px;
+  }
+
+  .hbr__subtitle {
+    font-size: var(--body-size); font-style: italic;
+    line-height: 1.65; color: var(--text-color); margin: 0 auto; max-width: 640px;
+  }
+
+  /* Divider line */
+  .hbr__divider {
+    width: 100%; max-width: 700px; height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 28px auto 40px;
+  }
+
+  /* Cards */
+  .hbr__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 22px;
+  }
+
+  .hbr__card {
+    border-radius: 14px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+
+  .hbr__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .hbr__card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size); font-weight: 400; font-style: italic;
+    color: var(--card-title-color);
+    margin: 0 0 14px; line-height: 1.3;
+  }
+
+  .hbr__card-line {
+    width: 40px; height: 2px; margin: 0 auto 18px;
+    background: currentColor; opacity: 0.25;
+  }
+
+  .hbr__card-desc {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--card-text-color); margin: 0;
+    text-align: left;
+  }
+
+  .hbr__card-desc::before {
+    content: '•'; margin-right: 8px; font-weight: 700;
+  }
+
+  /* Animations */
+  [data-hbr-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-hbr-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .hbr__container { padding: 0 20px; }
+    .hbr__heading { font-size: calc(var(--heading-size) * 0.65); }
+    .hbr__cards { grid-template-columns: 1fr; gap: 16px; max-width: 420px; margin: 0 auto; }
+    .hbr__card { padding: 28px 24px 24px; }
+  }
+  @media screen and (max-width: 480px) {
+    .hbr__container { padding: 0 16px; }
+    .hbr__heading { font-size: calc(var(--heading-size) * 0.52); }
+  }
+{% endstyle %}
+
+{% assign card_blocks = section.blocks | where: 'type', 'card' %}
+
+<section
+  class="hbr"
+  id="hbr-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --card-title-color: {{ section.settings.card_title_color }};
+    --card-text-color: {{ section.settings.card_text_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --shimmer-opacity: {{ section.settings.shimmer_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ card_blocks.size }};
+  "
+>
+  <div class="hbr__shimmer"></div>
+
+  <div class="hbr__container">
+    <div class="hbr__header" data-hbr-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="hbr__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="hbr__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="hbr__divider"></div>
+
+    {% if card_blocks.size > 0 %}
+      <div class="hbr__cards" data-hbr-animate data-delay="1">
+        {% for block in card_blocks %}
+          <div
+            class="hbr__card"
+            {{ block.shopify_attributes }}
+            style="background-color: {{ block.settings.card_bg }};"
+          >
+            {% if block.settings.title != blank %}
+              <h3 class="hbr__card-title">{{ block.settings.title }}</h3>
+            {% endif %}
+            <div class="hbr__card-line"></div>
+            {% if block.settings.description != blank %}
+              <p class="hbr__card-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('hbr-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-hbr-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Process Cards",
+  "tag": "section",
+  "class": "process-cards-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "How blemish removal works" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring." },
+    { "type": "header", "content": "Background" },
+    { "type": "color_background", "id": "section_bg", "label": "Section Background (gradient)", "default": "linear-gradient(180deg, #c9b4b0 0%, #d4bfc0 25%, #c8b5c0 50%, #b8a8b8 75%, #c2b0a8 100%)" },
+    { "type": "range", "id": "shimmer_opacity", "label": "Shimmer / Sparkle Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Subtitle Color", "default": "#4a3a32" },
+    { "type": "color", "id": "card_title_color", "label": "Card Title Color", "default": "#3a2820" },
+    { "type": "color", "id": "card_text_color", "label": "Card Text Color", "default": "#5a4a42" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 42, "unit": "px" },
+    { "type": "range", "id": "card_title_font_size", "label": "Card Title Font Size", "min": 18, "max": 30, "step": 1, "default": 24, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 80, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 80, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Process Card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Targeted precision" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin" },
+        { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#e8ddd4" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Process Cards",
+      "blocks": [
+        { "type": "card", "settings": { "title": "Targeted precision", "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin", "card_bg": "#e8ddd4" } },
+        { "type": "card", "settings": { "title": "Clinician-controlled treatment", "description": "Depth and intensity adjusted based on skin type and blemish type", "card_bg": "#c8cedf" } },
+        { "type": "card", "settings": { "title": "Natural healing response", "description": "The treated area heals gradually as the skin renews itself", "card_bg": "#e8ddd4" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
