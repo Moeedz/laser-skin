@@ -1295,6 +1295,7 @@
           "type": "card",
           "settings": {
             "title": "Days 1–3",
+            "icon_image": "shopify://shop_images/2-removebg-preview_3.png",
             "description": "Any redness or scabbing will begin to subside||Wear SPF if exposed to sunlight",
             "card_bg": "#f4d7d4"
           }
@@ -1303,6 +1304,7 @@
           "type": "card",
           "settings": {
             "title": "Week 1+",
+            "icon_image": "shopify://shop_images/2-removebg-preview_2.png",
             "description": "The area should be visibly healing and improving||Normal cleansing and skincare routine can be resumed",
             "card_bg": "#cdc7dc"
           }
@@ -1311,6 +1313,7 @@
           "type": "card",
           "settings": {
             "title": "When to contact us",
+            "icon_image": "shopify://shop_images/4-removebg-preview_1.png",
             "description": "If you notice any unusual swelling or prolonged redness||For any concerns about healing or aftercare",
             "card_bg": "#e9c6bf"
           }
