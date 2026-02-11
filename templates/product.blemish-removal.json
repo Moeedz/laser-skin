@@ -1308,7 +1308,7 @@
           "settings": {
             "title": "Targeted precision",
             "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
-            "card_bg": "#e8ddd4"
+            "card_bg": "#eccac6"
           }
         },
         "card_pFdYM4": {
@@ -1324,7 +1324,7 @@
           "settings": {
             "title": "Natural healing response",
             "description": "The treated area heals gradually as the skin renews itself",
-            "card_bg": "#e8ddd4"
+            "card_bg": "#eccac6"
           }
         }
       },
