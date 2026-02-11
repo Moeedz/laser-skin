@@ -1230,16 +1230,16 @@
         "card_TcWgmp": {
           "type": "card",
           "settings": {
-            "title": "Clinician-controlled treatment",
-            "description": "Depth and intensity adjusted based on skin type and blemish type",
+            "title": "7–14 days",
+            "description": "Visible reduction in blemish||Skin surface normalising",
             "card_bg": "#c8cedf"
           }
         },
         "card_rj8JgH": {
           "type": "card",
           "settings": {
-            "title": "Natural healing response",
-            "description": "The treated area heals gradually as the skin renews itself",
+            "title": "Long-term",
+            "description": "Clean healing||Minimal scarring when suitable",
             "card_bg": "#e8ddd4"
           }
         }
@@ -1253,7 +1253,7 @@
       "settings": {
         "heading": "Results & outcomes",
         "subtitle": "What to expect after treatment",
-        "section_bg": "linear-gradient(180deg, rgba(201, 180, 176, 1), rgba(212, 191, 192, 1) 25%, rgba(200, 181, 192, 1) 50%, rgba(184, 168, 184, 1) 75%, rgba(194, 176, 168, 1) 100%)",
+        "section_bg": "linear-gradient(180deg, rgba(229, 223, 232, 1), rgba(232, 212, 241, 1) 25%, rgba(217, 206, 222, 1) 50%, rgba(224, 202, 235, 1) 75%, rgba(213, 207, 216, 1) 100%)",
         "shimmer_opacity": 80,
         "heading_color": "#3a2820",
         "text_color": "#4a3a32",
