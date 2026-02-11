@@ -79,6 +79,19 @@
     background: currentColor; opacity: 0.25;
   }
 
+  .hbr__card-icon {
+    width: 50px; height: 50px; margin: 0 auto 18px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .hbr__card-icon img {
+    width: 50px; height: 50px; object-fit: contain;
+  }
+
+  .hbr__card-points {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
   .hbr__card-desc {
     font-size: var(--body-size); line-height: 1.65;
     color: var(--card-text-color); margin: 0;
@@ -87,6 +100,15 @@
 
   .hbr__card-desc::before {
     content: '•'; margin-right: 8px; font-weight: 700;
+  }
+
+  /* Footer */
+  .hbr__footer { text-align: center; margin-top: 44px; }
+
+  .hbr__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px); font-style: italic;
+    color: var(--text-color); margin: 0; line-height: 1.5;
   }
 
   /* Animations */
@@ -154,12 +176,32 @@
             {% if block.settings.title != blank %}
               <h3 class="hbr__card-title">{{ block.settings.title }}</h3>
             {% endif %}
-            <div class="hbr__card-line"></div>
+            {% if block.settings.icon_image != blank %}
+              <div class="hbr__card-icon">
+                {{ block.settings.icon_image | image_url: width: 100 | image_tag: loading: 'lazy', widths: '50,75,100' }}
+              </div>
+            {% else %}
+              <div class="hbr__card-line"></div>
+            {% endif %}
             {% if block.settings.description != blank %}
-              <p class="hbr__card-desc">{{ block.settings.description }}</p>
+              {% assign desc_points = block.settings.description | split: '||' %}
+              <div class="hbr__card-points">
+                {% for dp in desc_points %}
+                  {% assign dp_stripped = dp | strip %}
+                  {% if dp_stripped != blank %}
+                    <p class="hbr__card-desc">{{ dp_stripped }}</p>
+                  {% endif %}
+                {% endfor %}
+              </div>
             {% endif %}
           </div>
         {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="hbr__footer" data-hbr-animate data-delay="2">
+        <p class="hbr__footer-text">{{ section.settings.footer_text }}</p>
       </div>
     {% endif %}
   </div>
@@ -191,6 +233,7 @@
   "settings": [
     { "type": "textarea", "id": "heading", "label": "Heading", "default": "How blemish removal works" },
     { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring." },
+    { "type": "text", "id": "footer_text", "label": "Footer Text" },
     { "type": "header", "content": "Background" },
     { "type": "color_background", "id": "section_bg", "label": "Section Background (gradient)", "default": "linear-gradient(180deg, #c9b4b0 0%, #d4bfc0 25%, #c8b5c0 50%, #b8a8b8 75%, #c2b0a8 100%)" },
     { "type": "range", "id": "shimmer_opacity", "label": "Shimmer / Sparkle Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
@@ -213,6 +256,7 @@
       "name": "Process Card",
       "settings": [
         { "type": "text", "id": "title", "label": "Title", "default": "Targeted precision" },
+        { "type": "image_picker", "id": "icon_image", "label": "Icon Image (optional, replaces line)" },
         { "type": "textarea", "id": "description", "label": "Description", "default": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin" },
         { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#e8ddd4" }
       ]
