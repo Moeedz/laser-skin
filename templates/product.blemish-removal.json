@@ -1241,6 +1241,7 @@
           "type": "card",
           "settings": {
             "title": "Long-term",
+            "icon_image": "shopify://shop_images/3-removebg-preview_2.png",
             "description": "Clean healing||Minimal scarring when suitable",
             "card_bg": "#e8ddd4"
           }
@@ -1250,6 +1251,9 @@
         "card_9dXJMC",
         "card_TcWgmp",
         "card_rj8JgH"
+      ],
+      "custom_css": [
+        ".hbr__card-icon, .hbr__card-icon img {width: 100px !important; height: 100px !important;}"
       ],
       "name": "Process Cards",
       "settings": {
