@@ -1175,6 +1175,120 @@
         "content_max_width": 580
       }
     },
+    "what_we_treat_VUEPya": {
+      "type": "what-we-treat",
+      "blocks": {
+        "tile_JRXAUn": {
+          "type": "tile",
+          "settings": {
+            "title": "Spider Veins",
+            "subtitle": "Thread veins"
+          }
+        },
+        "tile_YB86fE": {
+          "type": "tile",
+          "settings": {
+            "title": "Skin Tags",
+            "subtitle": "Thread veins"
+          }
+        },
+        "tile_N4YB8w": {
+          "type": "tile",
+          "settings": {
+            "title": "Moles",
+            "subtitle": "(Only where suitable)"
+          }
+        },
+        "tile_rymfmK": {
+          "type": "tile",
+          "settings": {
+            "title": "Skin Blemishes",
+            "subtitle": "Thread veins"
+          }
+        },
+        "tile_RmYpgF": {
+          "type": "tile",
+          "settings": {
+            "title": "Pigmentation",
+            "subtitle": "Thread veins"
+          }
+        },
+        "tile_mpTFJe": {
+          "type": "tile",
+          "settings": {
+            "title": "Warts",
+            "subtitle": "Thread veins"
+          }
+        },
+        "tile_FBTa9q": {
+          "type": "tile",
+          "settings": {
+            "title": "Verrucas",
+            "subtitle": "Thread veins"
+          }
+        },
+        "tile_38xPCV": {
+          "type": "tile",
+          "settings": {
+            "title": "Milia",
+            "subtitle": "Thread veins"
+          }
+        },
+        "how_item_3L8tT7": {
+          "type": "how_item",
+          "settings": {
+            "icon": "clipboard",
+            "text": "Consultation-led and tailored to you"
+          }
+        },
+        "how_item_LtCgXA": {
+          "type": "how_item",
+          "settings": {
+            "icon": "medical",
+            "text": "Medical-grade technology"
+          }
+        },
+        "how_item_b3hJFh": {
+          "type": "how_item",
+          "settings": {
+            "icon": "heart",
+            "text": "Comprehensive aftercare guidance"
+          }
+        }
+      },
+      "block_order": [
+        "tile_JRXAUn",
+        "tile_YB86fE",
+        "tile_N4YB8w",
+        "tile_rymfmK",
+        "tile_RmYpgF",
+        "tile_mpTFJe",
+        "tile_FBTa9q",
+        "tile_38xPCV",
+        "how_item_3L8tT7",
+        "how_item_LtCgXA",
+        "how_item_b3hJFh"
+      ],
+      "name": "What We Treat",
+      "settings": {
+        "heading": "What we treat",
+        "subtitle": "Safe, targeted treatment designed to remove visible skin blemishes with precision and minimal disruption to surrounding skin.",
+        "how_title": "How it works",
+        "section_bg": "#f1e5e9",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3028",
+        "text_color": "#555555",
+        "icon_color": "#b09a70",
+        "accent_color": "#b08d57",
+        "tile_bg": "#efebe5",
+        "heading_font_size": 40,
+        "tile_title_font_size": 20,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_NRGB7J": {
       "type": "slideshow",
       "blocks": {
@@ -2546,6 +2660,7 @@
     "ss_simple_faq_jiYFWj",
     "slideshow_QJgeH6",
     "product_hero_7M3RMk",
+    "what_we_treat_VUEPya",
     "slideshow_NRGB7J",
     "slideshow_jjiVQG",
     "slideshow_etgJic",
