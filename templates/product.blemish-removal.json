@@ -1980,6 +1980,47 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "luxury_pricing_aywj3q": {
+      "type": "luxury-pricing",
+      "blocks": {
+        "price_card_UPTzBc": {
+          "type": "price_card",
+          "settings": {
+            "name": "Blemish Removal",
+            "card_subtitle": "(15 minutes)",
+            "price": "£75",
+            "per_label": "per session",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "price_card_UPTzBc"
+      ],
+      "name": "Luxury Pricing",
+      "settings": {
+        "heading": "Blemish Removal Treatment Pricing",
+        "subtitle": "",
+        "footer_text": "No downtime  •  Suitable for all skin types  •  Immediate glow",
+        "button_label": "Book your session",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "section_bg": "#3a3248",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "gold_color": "#d4be8a",
+        "card_border": "#8a7a60",
+        "button_bg": "#a89060",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#8e7848",
+        "heading_font_size": 44,
+        "card_title_font_size": 22,
+        "price_font_size": 48,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "expectations_trust_P34kGA": {
       "type": "expectations-trust",
       "blocks": {
@@ -2511,6 +2552,7 @@
     "slideshow_fTQmN7",
     "slideshow_8E7yKC",
     "slideshow_7w8Cjj",
+    "luxury_pricing_aywj3q",
     "expectations_trust_P34kGA",
     "consultation_form_6dTrjk",
     "faq_updated_8F7kX4",
