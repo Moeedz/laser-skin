@@ -1,0 +1,340 @@
+{% style %}
+  .tar {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .tar__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .tar__texture::before, .tar__texture::after { content: ''; position: absolute; inset: 0; }
+  .tar__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .tar__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)' opacity='0.03'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+  }
+
+  .tar__container {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Main layout */
+  .tar__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  /* Left content */
+  .tar__content {}
+
+  .tar__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 700;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 24px;
+  }
+
+  .tar__description {
+    font-size: var(--body-size); line-height: 1.7;
+    color: var(--text-color); margin: 0 0 32px; max-width: 420px;
+  }
+
+  /* Callout labels with lines */
+  .tar__callouts {
+    display: flex; flex-direction: column; gap: 20px;
+    align-items: flex-end; padding-right: 0;
+  }
+
+  .tar__callout {
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .tar__callout-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px);
+    color: var(--heading-color); white-space: nowrap;
+  }
+
+  .tar__callout-line {
+    width: 40px; height: 1px;
+    background: var(--accent-color);
+  }
+
+  .tar__callout-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--dot-color); flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(232, 180, 100, 0.3);
+  }
+
+  /* Right image */
+  .tar__image-wrap {
+    position: relative;
+    display: flex; justify-content: center;
+  }
+
+  .tar__image {
+    width: 100%; max-width: 500px;
+    border-radius: 0; overflow: hidden;
+  }
+
+  .tar__image img {
+    width: 100%; height: auto; display: block; object-fit: cover;
+  }
+
+  /* Positioned markers on image */
+  .tar__markers {
+    position: absolute; inset: 0;
+    pointer-events: none;
+  }
+
+  .tar__marker {
+    position: absolute;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .tar__marker-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--dot-color); flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(232, 180, 100, 0.3);
+  }
+
+  .tar__marker-label {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px);
+    color: var(--heading-color); white-space: nowrap;
+  }
+
+  /* Icon bar */
+  .tar__icon-bar {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 16px 0;
+    overflow: hidden;
+  }
+
+  .tar__icon-item {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; padding: 8px 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .tar__icon-item:last-child { border-right: none; }
+
+  .tar__icon-item-img {
+    width: 40px; height: 40px; flex-shrink: 0;
+  }
+
+  .tar__icon-item-img img {
+    width: 40px; height: 40px; object-fit: contain;
+  }
+
+  .tar__icon-item-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-weight: 500;
+    color: var(--heading-color);
+  }
+
+  /* Footer */
+  .tar__footer { text-align: center; }
+
+  .tar__footer-text {
+    font-size: calc(var(--body-size) - 2px); font-style: italic;
+    color: var(--text-color); opacity: 0.7; margin: 0;
+  }
+
+  /* Animations */
+  [data-tar-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-tar-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .tar__container { padding: 0 20px; }
+    .tar__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .tar__layout { grid-template-columns: 1fr; gap: 24px; }
+    .tar__callouts { align-items: flex-start; }
+    .tar__image-wrap { max-width: 360px; margin: 0 auto; }
+    .tar__icon-bar { flex-wrap: wrap; gap: 0; border-radius: 10px; }
+    .tar__icon-item { flex: 0 0 50%; border-right: none; padding: 10px 16px; justify-content: flex-start; }
+    .tar__icon-item:nth-child(odd) { border-right: 1px solid rgba(0, 0, 0, 0.08); }
+  }
+
+  @media screen and (max-width: 480px) {
+    .tar__container { padding: 0 16px; }
+    .tar__heading { font-size: calc(var(--heading-size) * 0.48); }
+    .tar__icon-item { flex: 0 0 100%; border-right: none; border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+    .tar__icon-item:last-child { border-bottom: none; }
+  }
+{% endstyle %}
+
+{% assign icon_blocks = section.blocks | where: 'type', 'icon_item' %}
+{% assign callout_blocks = section.blocks | where: 'type', 'callout' %}
+
+<section
+  class="tar"
+  id="tar-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --dot-color: {{ section.settings.dot_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="tar__texture"></div>{% endif %}
+
+  <div class="tar__container">
+    <div class="tar__layout" data-tar-animate data-delay="0">
+      <div class="tar__content">
+        {% if section.settings.heading != blank %}
+          <h2 class="tar__heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <p class="tar__description">{{ section.settings.description }}</p>
+        {% endif %}
+
+        {% if callout_blocks.size > 0 %}
+          <div class="tar__callouts">
+            {% for block in callout_blocks %}
+              <div class="tar__callout" {{ block.shopify_attributes }}>
+                <span class="tar__callout-text">{{ block.settings.label }}</span>
+                <span class="tar__callout-line"></span>
+                <span class="tar__callout-dot"></span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="tar__image-wrap">
+        {% if section.settings.main_image != blank %}
+          <div class="tar__image">
+            {{ section.settings.main_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,600,800' }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if icon_blocks.size > 0 %}
+      <div class="tar__icon-bar" data-tar-animate data-delay="1">
+        {% for block in icon_blocks %}
+          <div class="tar__icon-item" {{ block.shopify_attributes }}>
+            {% if block.settings.icon_image != blank %}
+              <div class="tar__icon-item-img">
+                {{ block.settings.icon_image | image_url: width: 80 | image_tag: loading: 'lazy', widths: '40,60,80' }}
+              </div>
+            {% endif %}
+            {% if block.settings.label != blank %}
+              <span class="tar__icon-item-text">{{ block.settings.label }}</span>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="tar__footer" data-tar-animate data-delay="2">
+        <p class="tar__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('tar-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-tar-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Treatment Areas",
+  "tag": "section",
+  "class": "treatment-areas-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "Where Are Polynucleotides Used?" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Polynucleotides are ideal for treating delicate areas and refined skin concerns where precision and safety are most important." },
+    { "type": "image_picker", "id": "main_image", "label": "Main Image (face/body)" },
+    { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "*Actual patients treated with polynucleotides. Results are individual and long-lasting." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#d8d2cc" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Shimmer Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a3028" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#555555" },
+    { "type": "color", "id": "accent_color", "label": "Line Color", "default": "#b5a080" },
+    { "type": "color", "id": "dot_color", "label": "Dot Color", "default": "#e8b870" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 40, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "callout",
+      "name": "Callout Label",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Under-eyes" }
+      ]
+    },
+    {
+      "type": "icon_item",
+      "name": "Icon Bar Item",
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Icon Image" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Eye area" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Areas",
+      "blocks": [
+        { "type": "callout", "settings": { "label": "Under-eyes" } },
+        { "type": "callout", "settings": { "label": "Around the mouth" } },
+        { "type": "callout", "settings": { "label": "Neck" } },
+        { "type": "icon_item", "settings": { "label": "Eye area" } },
+        { "type": "icon_item", "settings": { "label": "Mouth area" } },
+        { "type": "icon_item", "settings": { "label": "Neck" } },
+        { "type": "icon_item", "settings": { "label": "Crow's feet" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
