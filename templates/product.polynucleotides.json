@@ -1628,6 +1628,9 @@
         "icon_item_9D8t3n",
         "icon_item_jCWhTC"
       ],
+      "custom_css": [
+        ".tar__icon-item-img, .tar__icon-item-img img {width: 100px !important; height: 60px !important;}"
+      ],
       "name": "Treatment Areas",
       "settings": {
         "heading": "Where Are Polynucleotides Used?",
