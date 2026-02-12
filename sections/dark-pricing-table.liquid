@@ -1,0 +1,361 @@
+{% style %}
+  .dpt {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .dpt__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .dpt__texture::before, .dpt__texture::after { content: ''; position: absolute; inset: 0; }
+  .dpt__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .dpt__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.015 0.06' numOctaves='4' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .dpt__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  .dpt__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    text-align: center; color: var(--gold); margin: 0 0 48px; line-height: 1.2;
+  }
+
+  /* Grid */
+  .dpt__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 0;
+  }
+
+  /* Column */
+  .dpt__col {
+    padding: 0 24px;
+    display: flex; flex-direction: column;
+  }
+
+  /* Icon */
+  .dpt__icon {
+    width: 100px; height: 100px; margin: 0 auto 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .dpt__icon img { width: 100px; height: 100px; object-fit: contain; }
+
+  /* Name + timeline */
+  .dpt__name {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--name-size); font-weight: 400;
+    color: var(--gold); text-align: center; margin: 0 0 12px; line-height: 1.3;
+  }
+
+  .dpt__timeline {
+    position: relative; height: 20px; margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .dpt__timeline-line {
+    position: absolute; left: 0; right: 0; top: 50%;
+    height: 1px; background: var(--line-color);
+    transform: translateY(-50%);
+  }
+
+  .dpt__timeline-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--dot-color);
+    position: relative; z-index: 1;
+    flex-shrink: 0;
+  }
+
+  /* Price rows */
+  .dpt__prices {
+    display: flex; flex-direction: column; gap: 0;
+    margin-bottom: 20px;
+  }
+
+  .dpt__price-row {
+    display: flex; align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .dpt__price-row:last-child { border-bottom: none; }
+
+  .dpt__price-label {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--gold); opacity: 0.7;
+    flex: 1;
+  }
+
+  .dpt__price-divider {
+    width: 1px; height: 28px;
+    background: var(--gold); opacity: 0.2;
+    margin: 0 16px; flex-shrink: 0;
+  }
+
+  .dpt__price-value {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--price-size); font-weight: 400;
+    color: var(--gold);
+    min-width: 80px; text-align: right;
+  }
+
+  /* Benefits */
+  .dpt__benefits {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 6px;
+    margin-top: auto;
+  }
+
+  .dpt__benefit {
+    font-size: calc(var(--body-size) - 1px);
+    line-height: 1.5; color: var(--gold); opacity: 0.8;
+  }
+
+  .dpt__benefit::before {
+    content: '•'; margin-right: 8px; font-weight: 700;
+  }
+
+  /* Footer */
+  .dpt__footer { text-align: center; margin-top: 44px; }
+
+  .dpt__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px); font-style: italic;
+    color: var(--gold); opacity: 0.75; margin: 0; line-height: 1.5;
+  }
+
+  /* CTA */
+  .dpt__btn-wrap { text-align: center; margin-top: 32px; }
+
+  .dpt__btn {
+    display: inline-block;
+    background: var(--btn-bg); color: var(--btn-text);
+    font-size: 16px; font-weight: 500; letter-spacing: 0.03em;
+    padding: 16px 48px; border-radius: 6px; text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+  .dpt__btn:hover {
+    background: var(--btn-bg-hover); transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25); color: var(--btn-text);
+  }
+
+  /* Animations */
+  [data-dpt-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-dpt-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .dpt__container { padding: 0 20px; }
+    .dpt__heading { font-size: calc(var(--heading-size) * 0.65); margin-bottom: 36px; }
+    .dpt__grid { grid-template-columns: 1fr; gap: 32px; max-width: 400px; margin: 0 auto; }
+    .dpt__col { padding: 0; }
+    .dpt__timeline-line { display: none; }
+    .dpt__icon { width: 80px; height: 80px; }
+    .dpt__icon img { width: 80px; height: 80px; }
+    .dpt__btn { width: 100%; max-width: 360px; text-align: center; }
+  }
+  @media screen and (max-width: 480px) {
+    .dpt__container { padding: 0 16px; }
+    .dpt__heading { font-size: calc(var(--heading-size) * 0.52); }
+  }
+{% endstyle %}
+
+{% assign col_blocks = section.blocks | where: 'type', 'pricing_column' %}
+
+<section
+  class="dpt"
+  id="dpt-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --gold: {{ section.settings.gold_color }};
+    --line-color: {{ section.settings.line_color }};
+    --dot-color: {{ section.settings.dot_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --name-size: {{ section.settings.name_font_size }}px;
+    --price-size: {{ section.settings.price_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --btn-bg: {{ section.settings.button_bg }};
+    --btn-text: {{ section.settings.button_text }};
+    --btn-bg-hover: {{ section.settings.button_bg_hover }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ col_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="dpt__texture"></div>{% endif %}
+
+  <div class="dpt__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="dpt__heading" data-dpt-animate data-delay="0">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if col_blocks.size > 0 %}
+      <div class="dpt__grid" data-dpt-animate data-delay="1">
+        {% for block in col_blocks %}
+          <div class="dpt__col" {{ block.shopify_attributes }}>
+            {% if block.settings.icon_image != blank %}
+              <div class="dpt__icon">
+                {{ block.settings.icon_image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '100,150,200' }}
+              </div>
+            {% endif %}
+
+            {% if block.settings.name != blank %}
+              <p class="dpt__name">{{ block.settings.name }}</p>
+            {% endif %}
+
+            <div class="dpt__timeline">
+              <div class="dpt__timeline-line"></div>
+              <div class="dpt__timeline-dot"></div>
+            </div>
+
+            <div class="dpt__prices">
+              {% if block.settings.price_1_label != blank %}
+                <div class="dpt__price-row">
+                  <span class="dpt__price-label">{{ block.settings.price_1_label }}</span>
+                  <span class="dpt__price-divider"></span>
+                  <span class="dpt__price-value">{{ block.settings.price_1_value }}</span>
+                </div>
+              {% endif %}
+              {% if block.settings.price_2_label != blank %}
+                <div class="dpt__price-row">
+                  <span class="dpt__price-label">{{ block.settings.price_2_label }}</span>
+                  <span class="dpt__price-divider"></span>
+                  <span class="dpt__price-value">{{ block.settings.price_2_value }}</span>
+                </div>
+              {% endif %}
+              {% if block.settings.price_3_label != blank %}
+                <div class="dpt__price-row">
+                  <span class="dpt__price-label">{{ block.settings.price_3_label }}</span>
+                  <span class="dpt__price-divider"></span>
+                  <span class="dpt__price-value">{{ block.settings.price_3_value }}</span>
+                </div>
+              {% endif %}
+            </div>
+
+            {% if block.settings.benefits != blank %}
+              <ul class="dpt__benefits">
+                {% assign benefits = block.settings.benefits | split: '||' %}
+                {% for b in benefits %}
+                  {% assign bs = b | strip %}
+                  {% if bs != blank %}
+                    <li class="dpt__benefit">{{ bs }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="dpt__footer" data-dpt-animate data-delay="2">
+        <p class="dpt__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if section.settings.button_label != blank %}
+      <div class="dpt__btn-wrap" data-dpt-animate data-delay="3">
+        <a href="{{ section.settings.button_link }}" class="dpt__btn">{{ section.settings.button_label }}</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('dpt-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-dpt-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Dark Pricing Table",
+  "tag": "section",
+  "class": "dark-pricing-table-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "Polynucleotide Pricing" },
+    { "type": "text", "id": "footer_text", "label": "Footer Text" },
+    { "type": "header", "content": "Button" },
+    { "type": "text", "id": "button_label", "label": "Button Label" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#2e3038" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Fabric Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 90, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "gold_color", "label": "Gold / Text Color", "default": "#d4c4a0" },
+    { "type": "color", "id": "line_color", "label": "Timeline Line", "default": "#8a7a60" },
+    { "type": "color", "id": "dot_color", "label": "Timeline Dot", "default": "#c8b48a" },
+    { "type": "color", "id": "button_bg", "label": "Button Background", "default": "#a89060" },
+    { "type": "color", "id": "button_text", "label": "Button Text", "default": "#ffffff" },
+    { "type": "color", "id": "button_bg_hover", "label": "Button Hover BG", "default": "#8e7848" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 44, "unit": "px" },
+    { "type": "range", "id": "name_font_size", "label": "Treatment Name Size", "min": 18, "max": 32, "step": 1, "default": 24, "unit": "px" },
+    { "type": "range", "id": "price_font_size", "label": "Price Size", "min": 22, "max": 48, "step": 2, "default": 32, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "pricing_column",
+      "name": "Pricing Column",
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Icon / Illustration" },
+        { "type": "text", "id": "name", "label": "Treatment Name", "default": "Small Eye" },
+        { "type": "header", "content": "Price Row 1" },
+        { "type": "text", "id": "price_1_label", "label": "Label", "default": "1 Session" },
+        { "type": "text", "id": "price_1_value", "label": "Price", "default": "£150" },
+        { "type": "header", "content": "Price Row 2" },
+        { "type": "text", "id": "price_2_label", "label": "Label", "default": "3 Sessions" },
+        { "type": "text", "id": "price_2_value", "label": "Price", "default": "£400" },
+        { "type": "header", "content": "Price Row 3" },
+        { "type": "text", "id": "price_3_label", "label": "Label", "default": "6 Sessions" },
+        { "type": "text", "id": "price_3_value", "label": "Price", "default": "£750" },
+        { "type": "header", "content": "Benefits" },
+        { "type": "textarea", "id": "benefits", "label": "Benefits (separate with ||)", "default": "Targets delicate under-eye skin||Improves crepey texture & hydration||Brightens tired appearance" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dark Pricing Table",
+      "blocks": [
+        { "type": "pricing_column", "settings": { "name": "Small Eye", "price_1_label": "1 Session", "price_1_value": "£150", "price_2_label": "3 Sessions", "price_2_value": "£400", "price_3_label": "6 Sessions", "price_3_value": "£750", "benefits": "Targets delicate under-eye skin||Improves crepey texture & hydration||Brightens tired appearance" } },
+        { "type": "pricing_column", "settings": { "name": "Half Face", "price_1_label": "1 Session", "price_1_value": "£200", "price_2_label": "3 Sessions", "price_2_value": "£550", "price_3_label": "6 Sessions", "price_3_value": "£1,000", "benefits": "Upper or lower face focus||Improves elasticity & skin quality||Ideal for targeted regeneration" } },
+        { "type": "pricing_column", "settings": { "name": "Full Face", "price_1_label": "1 Session", "price_1_value": "£300", "price_2_label": "3 Sessions", "price_2_value": "£825", "price_3_label": "6 Sessions", "price_3_value": "£1,450", "benefits": "Whole-face regeneration||Improves texture, tone & hydration||Best long-term skin quality results" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
