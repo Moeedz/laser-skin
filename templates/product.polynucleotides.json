@@ -1065,6 +1065,7 @@
       "block_order": [
         "image_NAC6xV"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
