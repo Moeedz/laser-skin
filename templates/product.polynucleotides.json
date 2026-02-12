@@ -1334,6 +1334,7 @@
       "block_order": [
         "image_Q6QqUR"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
