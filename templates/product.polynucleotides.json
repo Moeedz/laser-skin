@@ -1738,6 +1738,9 @@
         "card_iGhFGx",
         "card_fX34fH"
       ],
+      "custom_css": [
+        ".hbr__card-icon,.hbr__card-icon img {width: 100px !important; height: 100px !important;}"
+      ],
       "name": "Process Cards",
       "settings": {
         "heading": "What to Expect After Treatment",
