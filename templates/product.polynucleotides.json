@@ -1166,6 +1166,60 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_8YnQfX": {
+      "type": "info-hero",
+      "blocks": {
+        "point_3Eibmj": {
+          "type": "point",
+          "settings": {
+            "text": "Stimulates collagen and tissue regeneration"
+          }
+        },
+        "point_MXymWr": {
+          "type": "point",
+          "settings": {
+            "text": "Improves skin texture, elasticity, and hydration"
+          }
+        },
+        "point_JykQGU": {
+          "type": "point",
+          "settings": {
+            "text": "Supports natural repair without altering facial structure"
+          }
+        },
+        "point_VqyB4g": {
+          "type": "point",
+          "settings": {
+            "text": "Suitable for delicate areas such as under-eyes and neck"
+          }
+        }
+      },
+      "block_order": [
+        "point_3Eibmj",
+        "point_MXymWr",
+        "point_JykQGU",
+        "point_VqyB4g"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What are Polynucleotides?",
+        "body": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd2c8ee",
+        "overlay_mid": "#ddd2c8b0",
+        "overlay_fade": "#ddd2c850",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_9JdM6g": {
       "type": "slideshow",
       "blocks": {
@@ -1506,13 +1560,13 @@
         "bg_position": "right center",
         "section_height": 900,
         "overlay_strong": "#ddd0c4e8",
-        "overlay_mid": "#ddd0c4a0",
+        "overlay_mid": "#ddd0c4a1",
         "overlay_fade": "#ddd0c440",
         "shimmer_opacity": 60,
         "heading_color": "#3a2820",
         "text_color": "#5a4a3a",
         "icon_color": "#8a7050",
-        "card_bg": "#ece5ddc0",
+        "card_bg": "#ece5ddbf",
         "heading_font_size": 42,
         "card_title_font_size": 20,
         "body_font_size": 16,
@@ -2573,6 +2627,7 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_WAnJpa",
     "slideshow_JfC7CP",
+    "info_hero_8YnQfX",
     "slideshow_9JdM6g",
     "slideshow_tdxwRM",
     "concern_grid_HJh4jY",
