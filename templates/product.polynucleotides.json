@@ -1440,6 +1440,7 @@
         "concern_gL87bc": {
           "type": "concern",
           "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_6.png",
             "title": "Dull, dehydrated skin",
             "subtitle": "Restores deep hydration"
           }
@@ -1447,6 +1448,7 @@
         "concern_wWnKL4": {
           "type": "concern",
           "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_7.png",
             "title": "Fine lines & wrinkles",
             "subtitle": "Smooths & refines texture"
           }
@@ -1454,6 +1456,7 @@
         "concern_nJKzAF": {
           "type": "concern",
           "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_6.png",
             "title": "Loss of elasticity",
             "subtitle": "Boosts skin firmness"
           }
@@ -1469,6 +1472,7 @@
         "concern_Jnakjc": {
           "type": "concern",
           "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview_3.png",
             "title": "Crepey skin",
             "subtitle": "Improves skin density"
           }
@@ -1476,6 +1480,7 @@
         "concern_4ffD3h": {
           "type": "concern",
           "settings": {
+            "icon_image": "shopify://shop_images/5-removebg-preview_1.png",
             "title": "Post-procedure skin repair",
             "subtitle": "Supports healing & recovery"
           }
@@ -1490,7 +1495,7 @@
         "concern_4ffD3h"
       ],
       "custom_css": [
-        ".cgd__card-icon, .cgd__card-icon img {width: 100px !important; height: 65px !important;}"
+        ".cgd__card-icon,.cgd__card-icon img {width: 100px !important; height: 65px !important;}"
       ],
       "name": "Concern Grid",
       "settings": {
