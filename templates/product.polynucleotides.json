@@ -1765,6 +1765,7 @@
       "block_order": [
         "image_nEXFWU"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1863,6 +1864,87 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
+      }
+    },
+    "expectations_trust_7eRTmn": {
+      "type": "expectations-trust",
+      "blocks": {
+        "trust_point_AnLPUt": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "star",
+            "text": "4.9 Google rating"
+          }
+        },
+        "trust_point_B9UnUK": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "calendar",
+            "text": "7-day appointment guarantee"
+          }
+        },
+        "trust_point_79FVzr": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "finance",
+            "text": "0% finance available"
+          }
+        },
+        "trust_point_tqVNHx": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "test_patch",
+            "text": "Test patch included"
+          }
+        },
+        "trust_point_mki8gm": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_Px76pC": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "clock",
+            "text": "Established 10+ years"
+          }
+        }
+      },
+      "block_order": [
+        "trust_point_AnLPUt",
+        "trust_point_B9UnUK",
+        "trust_point_79FVzr",
+        "trust_point_tqVNHx",
+        "trust_point_mki8gm",
+        "trust_point_Px76pC"
+      ],
+      "name": "Expectations & Trust",
+      "settings": {
+        "heading": "Clear pricing. Professional standards.",
+        "subtitle": "Everything you need to feel confident booking your consultation.",
+        "card_title": "What you can expect at Laser Skin Clinics",
+        "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
+        "section_bg": "#e4dfd9",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#777777",
+        "card_bg": "#f0ece7",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 44,
+        "card_heading_font_size": 28,
+        "body_font_size": 16,
+        "button_label": "Book your consultation",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "consultation_form_9Mt4E6": {
@@ -2137,6 +2219,70 @@
         "allow_multiple_open": true
       }
     },
+    "location_contact_tPrgA4": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_A8mVYe": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_4Wz34g": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_zpjkmH": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_A8mVYe",
+        "contact_4Wz34g",
+        "contact_zpjkmH"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "",
+        "info_bg": "#eedfd8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
+    },
     "slideshow_mgYpPJ": {
       "type": "slideshow",
       "blocks": {
@@ -2289,8 +2435,10 @@
     "slideshow_BHyrN9",
     "slideshow_nNHM68",
     "slideshow_Gqm3E4",
+    "expectations_trust_7eRTmn",
     "consultation_form_9Mt4E6",
     "faq_updated_hxcAQY",
+    "location_contact_tPrgA4",
     "slideshow_mgYpPJ"
   ]
 }
