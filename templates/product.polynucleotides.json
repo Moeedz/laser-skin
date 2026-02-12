@@ -1492,8 +1492,9 @@
       "settings": {
         "heading": "What Do Polynucleotides Treat?",
         "subtitle": "Polynucleotide treatments can improve a range of skin concerns at a deeper level, restoring your skin's quality and health",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_3pv3k23pv3k23pv3.png",
         "bg_position": "right center",
-        "section_height": 600,
+        "section_height": 900,
         "overlay_strong": "#ddd0c4e8",
         "overlay_mid": "#ddd0c4a0",
         "overlay_fade": "#ddd0c440",
