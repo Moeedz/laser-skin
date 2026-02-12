@@ -1434,6 +1434,81 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "concern_grid_HJh4jY": {
+      "type": "concern-grid",
+      "blocks": {
+        "concern_gL87bc": {
+          "type": "concern",
+          "settings": {
+            "title": "Dull, dehydrated skin",
+            "subtitle": "Restores deep hydration"
+          }
+        },
+        "concern_wWnKL4": {
+          "type": "concern",
+          "settings": {
+            "title": "Fine lines & wrinkles",
+            "subtitle": "Smooths & refines texture"
+          }
+        },
+        "concern_nJKzAF": {
+          "type": "concern",
+          "settings": {
+            "title": "Loss of elasticity",
+            "subtitle": "Boosts skin firmness"
+          }
+        },
+        "concern_rHfV6K": {
+          "type": "concern",
+          "settings": {
+            "title": "Under-eye area",
+            "subtitle": "Brightens & thickens skin"
+          }
+        },
+        "concern_Jnakjc": {
+          "type": "concern",
+          "settings": {
+            "title": "Crepey skin",
+            "subtitle": "Improves skin density"
+          }
+        },
+        "concern_4ffD3h": {
+          "type": "concern",
+          "settings": {
+            "title": "Post-procedure skin repair",
+            "subtitle": "Supports healing & recovery"
+          }
+        }
+      },
+      "block_order": [
+        "concern_gL87bc",
+        "concern_wWnKL4",
+        "concern_nJKzAF",
+        "concern_rHfV6K",
+        "concern_Jnakjc",
+        "concern_4ffD3h"
+      ],
+      "name": "Concern Grid",
+      "settings": {
+        "heading": "What Do Polynucleotides Treat?",
+        "subtitle": "Polynucleotide treatments can improve a range of skin concerns at a deeper level, restoring your skin's quality and health",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd0c4e8",
+        "overlay_mid": "#ddd0c4a0",
+        "overlay_fade": "#ddd0c440",
+        "shimmer_opacity": 60,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "icon_color": "#8a7050",
+        "card_bg": "#ece5ddc0",
+        "heading_font_size": 42,
+        "card_title_font_size": 20,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_mNnMHW": {
       "type": "slideshow",
       "blocks": {
@@ -2489,6 +2564,7 @@
     "slideshow_JfC7CP",
     "slideshow_9JdM6g",
     "slideshow_tdxwRM",
+    "concern_grid_HJh4jY",
     "slideshow_mNnMHW",
     "treatment_areas_zt7ywm",
     "slideshow_BHyrN9",
