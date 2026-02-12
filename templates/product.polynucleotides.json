@@ -933,22 +933,22 @@
         "check_item_4Yp7Pj": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
+            "icon": "star",
+            "text": "Reverse dark circles"
           }
         },
         "check_item_cf3aPd": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
+            "text": "Smooth fine lines"
           }
         },
         "check_item_p8jCfV": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "No downtime, immediate glow"
+            "icon": "heart",
+            "text": "Cellular rejuvenation"
           }
         },
         "trust_item_G4zeYG": {
@@ -1018,7 +1018,7 @@
         "body_font_size": 17,
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
-        "button_label": "Book your Hydrofacial",
+        "button_label": "Book your Consultation",
         "button_link": "",
         "button_open_new_tab": false,
         "button_bg": "#c4a080",
