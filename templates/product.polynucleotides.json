@@ -1708,7 +1708,7 @@
         "card_DFi8eq": {
           "type": "card",
           "settings": {
-            "title": "Targeted precision",
+            "title": "Day 0-3",
             "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
             "card_bg": "#e8ddd4"
           }
@@ -1716,7 +1716,7 @@
         "card_iGhFGx": {
           "type": "card",
           "settings": {
-            "title": "Clinician-controlled treatment",
+            "title": "Week 1-2",
             "description": "Depth and intensity adjusted based on skin type and blemish type",
             "card_bg": "#c8cedf"
           }
@@ -1724,7 +1724,7 @@
         "card_fX34fH": {
           "type": "card",
           "settings": {
-            "title": "Natural healing response",
+            "title": "Long-Term Regeneration",
             "description": "The treated area heals gradually as the skin renews itself",
             "card_bg": "#e8ddd4"
           }
@@ -1737,8 +1737,8 @@
       ],
       "name": "Process Cards",
       "settings": {
-        "heading": "How blemish removal works",
-        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
+        "heading": "What to Expect After Treatment",
+        "subtitle": "Polynucleotides wok gradually. Here's how regeneration typically unfolds.",
         "footer_text": "",
         "show_timeline": false,
         "connector_color": "#b5a080",
