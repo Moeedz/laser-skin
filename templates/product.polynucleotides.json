@@ -1568,6 +1568,79 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "treatment_areas_zt7ywm": {
+      "type": "treatment-areas",
+      "blocks": {
+        "callout_98Nyma": {
+          "type": "callout",
+          "settings": {
+            "label": "Under-eyes"
+          }
+        },
+        "callout_xbmbBp": {
+          "type": "callout",
+          "settings": {
+            "label": "Around the mouth"
+          }
+        },
+        "callout_JbiHPV": {
+          "type": "callout",
+          "settings": {
+            "label": "Neck"
+          }
+        },
+        "icon_item_4TrhpA": {
+          "type": "icon_item",
+          "settings": {
+            "label": "Eye area"
+          }
+        },
+        "icon_item_xkW9Ui": {
+          "type": "icon_item",
+          "settings": {
+            "label": "Mouth area"
+          }
+        },
+        "icon_item_9D8t3n": {
+          "type": "icon_item",
+          "settings": {
+            "label": "Neck"
+          }
+        },
+        "icon_item_jCWhTC": {
+          "type": "icon_item",
+          "settings": {
+            "label": "Crow's feet"
+          }
+        }
+      },
+      "block_order": [
+        "callout_98Nyma",
+        "callout_xbmbBp",
+        "callout_JbiHPV",
+        "icon_item_4TrhpA",
+        "icon_item_xkW9Ui",
+        "icon_item_9D8t3n",
+        "icon_item_jCWhTC"
+      ],
+      "name": "Treatment Areas",
+      "settings": {
+        "heading": "Where Are Polynucleotides Used?",
+        "description": "Polynucleotides are ideal for treating delicate areas and refined skin concerns where precision and safety are most important.",
+        "footer_text": "*Actual patients treated with polynucleotides. Results are individual and long-lasting.",
+        "section_bg": "#d8d2cc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3028",
+        "text_color": "#555555",
+        "accent_color": "#b5a080",
+        "dot_color": "#e8b870",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_BHyrN9": {
       "type": "slideshow",
       "blocks": {
@@ -1712,7 +1785,7 @@
             "title": "Day 0-3",
             "icon_image": "shopify://shop_images/1-removebg-preview_4.png",
             "description": "Mild redness or swelling possible||Skin may feel hydrated or firmer||Minimal downtime for most patients",
-            "card_bg": "#ffd6cdff"
+            "card_bg": "#ffd6cd"
           }
         },
         "card_iGhFGx": {
@@ -2678,6 +2751,7 @@
     "slideshow_9JdM6g",
     "slideshow_tdxwRM",
     "slideshow_mNnMHW",
+    "treatment_areas_zt7ywm",
     "slideshow_BHyrN9",
     "process_cards_LbK99L",
     "slideshow_nNHM68",
