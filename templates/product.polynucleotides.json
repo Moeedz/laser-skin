@@ -1866,6 +1866,77 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "dark_pricing_table_yY9YNn": {
+      "type": "dark-pricing-table",
+      "blocks": {
+        "pricing_column_VwFVPL": {
+          "type": "pricing_column",
+          "settings": {
+            "name": "Small Eye",
+            "price_1_label": "1 Session",
+            "price_1_value": "£150",
+            "price_2_label": "3 Sessions",
+            "price_2_value": "£400",
+            "price_3_label": "6 Sessions",
+            "price_3_value": "£750",
+            "benefits": "Targets delicate under-eye skin||Improves crepey texture & hydration||Brightens tired appearance"
+          }
+        },
+        "pricing_column_XzLFYN": {
+          "type": "pricing_column",
+          "settings": {
+            "name": "Half Face",
+            "price_1_label": "1 Session",
+            "price_1_value": "£200",
+            "price_2_label": "3 Sessions",
+            "price_2_value": "£550",
+            "price_3_label": "6 Sessions",
+            "price_3_value": "£1,000",
+            "benefits": "Upper or lower face focus||Improves elasticity & skin quality||Ideal for targeted regeneration"
+          }
+        },
+        "pricing_column_KXCaxh": {
+          "type": "pricing_column",
+          "settings": {
+            "name": "Full Face",
+            "price_1_label": "1 Session",
+            "price_1_value": "£300",
+            "price_2_label": "3 Sessions",
+            "price_2_value": "£825",
+            "price_3_label": "6 Sessions",
+            "price_3_value": "£1,450",
+            "benefits": "Whole-face regeneration||Improves texture, tone & hydration||Best long-term skin quality results"
+          }
+        }
+      },
+      "block_order": [
+        "pricing_column_VwFVPL",
+        "pricing_column_XzLFYN",
+        "pricing_column_KXCaxh"
+      ],
+      "name": "Dark Pricing Table",
+      "settings": {
+        "heading": "Polynucleotide Pricing",
+        "footer_text": "",
+        "button_label": "",
+        "button_link": "",
+        "section_bg": "#2e3038",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "gold_color": "#d4c4a0",
+        "line_color": "#8a7a60",
+        "dot_color": "#c8b48a",
+        "button_bg": "#a89060",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#8e7848",
+        "heading_font_size": 44,
+        "name_font_size": 24,
+        "price_font_size": 32,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "expectations_trust_7eRTmn": {
       "type": "expectations-trust",
       "blocks": {
@@ -2436,6 +2507,7 @@
     "slideshow_BHyrN9",
     "slideshow_nNHM68",
     "slideshow_Gqm3E4",
+    "dark_pricing_table_yY9YNn",
     "expectations_trust_7eRTmn",
     "consultation_form_9Mt4E6",
     "faq_updated_hxcAQY",
