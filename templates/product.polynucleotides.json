@@ -1204,8 +1204,9 @@
       "settings": {
         "heading": "What are Polynucleotides?",
         "body": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_fvlgaefvlgaefvlg.png",
         "bg_position": "right center",
-        "section_height": 600,
+        "section_height": 800,
         "overlay_strong": "#ddd2c8ee",
         "overlay_mid": "#ddd2c8b0",
         "overlay_fade": "#ddd2c850",
