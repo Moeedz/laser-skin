@@ -1872,6 +1872,7 @@
         "pricing_column_VwFVPL": {
           "type": "pricing_column",
           "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_3.png",
             "name": "Small Eye",
             "price_1_label": "1 Session",
             "price_1_value": "£150",
@@ -1885,6 +1886,7 @@
         "pricing_column_XzLFYN": {
           "type": "pricing_column",
           "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_4.png",
             "name": "Half Face",
             "price_1_label": "1 Session",
             "price_1_value": "£200",
@@ -1898,6 +1900,7 @@
         "pricing_column_KXCaxh": {
           "type": "pricing_column",
           "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_3.png",
             "name": "Full Face",
             "price_1_label": "1 Session",
             "price_1_value": "£300",
