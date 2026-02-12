@@ -1461,6 +1461,7 @@
         "concern_rHfV6K": {
           "type": "concern",
           "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_5.png",
             "title": "Under-eye area",
             "subtitle": "Brightens & thickens skin"
           }
