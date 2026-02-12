@@ -1709,6 +1709,7 @@
           "type": "card",
           "settings": {
             "title": "Day 0-3",
+            "icon_image": "shopify://shop_images/1-removebg-preview_4.png",
             "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
             "card_bg": "#e8ddd4"
           }
@@ -1717,6 +1718,7 @@
           "type": "card",
           "settings": {
             "title": "Week 1-2",
+            "icon_image": "shopify://shop_images/2-removebg-preview_5.png",
             "description": "Depth and intensity adjusted based on skin type and blemish type",
             "card_bg": "#c8cedf"
           }
@@ -1725,6 +1727,7 @@
           "type": "card",
           "settings": {
             "title": "Long-Term Regeneration",
+            "icon_image": "shopify://shop_images/3-removebg-preview_4.png",
             "description": "The treated area heals gradually as the skin renews itself",
             "card_bg": "#e8ddd4"
           }
