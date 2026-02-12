@@ -1,0 +1,250 @@
+{% style %}
+  .ifh {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    min-height: var(--section-height);
+  }
+
+  .ifh__bg {
+    position: absolute; inset: 0; z-index: 0;
+  }
+  .ifh__bg img {
+    width: 100%; height: 100%; object-fit: cover; object-position: var(--bg-position);
+  }
+  .ifh__bg-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--overlay-strong) 0%,
+      var(--overlay-mid) 50%,
+      var(--overlay-fade) 70%,
+      transparent 100%
+    );
+  }
+
+  .ifh__shimmer {
+    position: absolute; inset: 0; pointer-events: none; z-index: 1;
+    opacity: var(--shimmer-opacity);
+  }
+  .ifh__shimmer::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .ifh__container {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: var(--padding-top) 40px var(--padding-bottom);
+  }
+
+  .ifh__content {
+    max-width: var(--content-width);
+  }
+
+  .ifh__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 700;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 24px;
+  }
+
+  .ifh__body {
+    font-size: var(--body-size); line-height: 1.75;
+    color: var(--text-color); margin: 0 0 32px;
+  }
+
+  .ifh__body p { margin: 0 0 18px; }
+  .ifh__body p:last-child { margin-bottom: 0; }
+
+  /* Icon bullet points */
+  .ifh__points {
+    display: flex; flex-direction: column; gap: 14px;
+  }
+
+  .ifh__point {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: var(--body-size); line-height: 1.55; color: var(--text-color);
+  }
+
+  .ifh__point-icon {
+    flex-shrink: 0; width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--icon-color); margin-top: 1px;
+  }
+  .ifh__point-icon img { width: 28px; height: 28px; object-fit: contain; }
+
+  /* Fallback checkmark */
+  .ifh__point-icon svg { width: 20px; height: 20px; }
+
+  /* Animations */
+  [data-ifh-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-ifh-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .ifh { min-height: auto; }
+    .ifh__container { padding: var(--padding-top) 20px var(--padding-bottom); }
+    .ifh__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .ifh__content { max-width: 100%; }
+    .ifh__bg-overlay {
+      background: linear-gradient(
+        to bottom,
+        var(--overlay-strong) 0%,
+        var(--overlay-mid) 60%,
+        var(--overlay-fade) 85%,
+        transparent 100%
+      );
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ifh__container { padding: var(--padding-top) 16px var(--padding-bottom); }
+    .ifh__heading { font-size: calc(var(--heading-size) * 0.48); }
+    .ifh__point-icon { width: 24px; height: 24px; }
+    .ifh__point-icon img { width: 24px; height: 24px; }
+  }
+{% endstyle %}
+
+{% assign point_blocks = section.blocks | where: 'type', 'point' %}
+
+<section
+  class="ifh"
+  id="ifh-{{ section.id }}"
+  style="
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --icon-color: {{ section.settings.icon_color }};
+    --overlay-strong: {{ section.settings.overlay_strong }};
+    --overlay-mid: {{ section.settings.overlay_mid }};
+    --overlay-fade: {{ section.settings.overlay_fade }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --shimmer-opacity: {{ section.settings.shimmer_opacity | divided_by: 100.0 }};
+    --section-height: {{ section.settings.section_height }}px;
+    --content-width: {{ section.settings.content_width }}px;
+    --bg-position: {{ section.settings.bg_position }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.bg_image != blank %}
+    <div class="ifh__bg">
+      {{ section.settings.bg_image | image_url: width: 2000 | image_tag: loading: 'lazy', widths: '800,1200,1600,2000' }}
+      <div class="ifh__bg-overlay"></div>
+    </div>
+  {% endif %}
+  <div class="ifh__shimmer"></div>
+
+  <div class="ifh__container">
+    <div class="ifh__content">
+      {% if section.settings.heading != blank %}
+        <h2 class="ifh__heading" data-ifh-animate data-delay="0">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.body != blank %}
+        <div class="ifh__body" data-ifh-animate data-delay="1">{{ section.settings.body }}</div>
+      {% endif %}
+
+      {% if point_blocks.size > 0 %}
+        <div class="ifh__points" data-ifh-animate data-delay="2">
+          {% for block in point_blocks %}
+            <div class="ifh__point" {{ block.shopify_attributes }}>
+              <span class="ifh__point-icon">
+                {% if block.settings.icon_image != blank %}
+                  {{ block.settings.icon_image | image_url: width: 56 | image_tag: loading: 'lazy' }}
+                {% else %}
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M3 10.5L8 15.5L17 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                {% endif %}
+              </span>
+              <span>{{ block.settings.text }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('ifh-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-ifh-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Info Hero",
+  "tag": "section",
+  "class": "info-hero-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "What are Polynucleotides?" },
+    { "type": "richtext", "id": "body", "label": "Body Text", "default": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>" },
+    { "type": "header", "content": "Background Image" },
+    { "type": "image_picker", "id": "bg_image", "label": "Background Image" },
+    {
+      "type": "select", "id": "bg_position", "label": "Image Focus",
+      "options": [
+        { "value": "center center", "label": "Center" },
+        { "value": "center top", "label": "Top" },
+        { "value": "center bottom", "label": "Bottom" },
+        { "value": "right center", "label": "Right" },
+        { "value": "left center", "label": "Left" }
+      ],
+      "default": "right center"
+    },
+    { "type": "range", "id": "section_height", "label": "Min Section Height", "min": 400, "max": 900, "step": 10, "default": 600, "unit": "px" },
+    { "type": "header", "content": "Overlay" },
+    { "type": "color", "id": "overlay_strong", "label": "Overlay Strong (left)", "default": "#ddd2c8ee" },
+    { "type": "color", "id": "overlay_mid", "label": "Overlay Mid", "default": "#ddd2c8b0" },
+    { "type": "color", "id": "overlay_fade", "label": "Overlay Fade", "default": "#ddd2c850" },
+    { "type": "range", "id": "shimmer_opacity", "label": "Shimmer Intensity", "min": 0, "max": 100, "step": 5, "default": 50, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#4a3a30" },
+    { "type": "color", "id": "icon_color", "label": "Icon Color", "default": "#8a7050" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 60, "step": 2, "default": 44, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 22, "step": 1, "default": 17, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "content_width", "label": "Content Max Width", "min": 400, "max": 750, "step": 10, "default": 600, "unit": "px" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Bullet Point",
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Icon Image (optional)" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Stimulates collagen and tissue regeneration" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info Hero",
+      "blocks": [
+        { "type": "point", "settings": { "text": "Stimulates collagen and tissue regeneration" } },
+        { "type": "point", "settings": { "text": "Improves skin texture, elasticity, and hydration" } },
+        { "type": "point", "settings": { "text": "Supports natural repair without altering facial structure" } },
+        { "type": "point", "settings": { "text": "Suitable for delicate areas such as under-eyes and neck" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
