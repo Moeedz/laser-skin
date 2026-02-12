@@ -1631,6 +1631,7 @@
       "block_order": [
         "image_KhfDQh"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1918,7 +1919,7 @@
         "pricing_column_KXCaxh"
       ],
       "custom_css": [
-        ".dpt__icon, .dpt__icon img {width: 150px !important; height: 150px !important;}"
+        ".dpt__icon,.dpt__icon img {width: 150px !important; height: 150px !important;}"
       ],
       "name": "Dark Pricing Table",
       "settings": {
