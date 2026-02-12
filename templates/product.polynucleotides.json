@@ -1593,24 +1593,28 @@
         "icon_item_4TrhpA": {
           "type": "icon_item",
           "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_5.png",
             "label": "Eye area"
           }
         },
         "icon_item_xkW9Ui": {
           "type": "icon_item",
           "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_6.png",
             "label": "Mouth area"
           }
         },
         "icon_item_9D8t3n": {
           "type": "icon_item",
           "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_5.png",
             "label": "Neck"
           }
         },
         "icon_item_jCWhTC": {
           "type": "icon_item",
           "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview_2.png",
             "label": "Crow's feet"
           }
         }
