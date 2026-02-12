@@ -166,46 +166,20 @@
   /* Responsive */
   @media screen and (max-width: 768px) {
     .tar__container { padding: 0 20px; }
-    .tar__heading { font-size: calc(var(--heading-size) * 0.6); margin-bottom: 16px; }
-    .tar__layout { grid-template-columns: 1fr; gap: 28px; }
-    .tar__description { margin-bottom: 20px; max-width: 100%; }
-
-    /* Callouts: left-aligned, compact */
-    .tar__callouts {
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .tar__callout-line { width: 24px; }
-    .tar__callout-dot { width: 12px; height: 12px; }
-
-    /* Image: full width, centered */
-    .tar__image-wrap { max-width: 100%; margin: 0 auto; }
-    .tar__image { border-radius: 12px; }
-
-    /* Icon bar: vertical list */
-    .tar__icon-bar {
-      flex-direction: column;
-      gap: 0;
-      border-radius: 12px;
-      padding: 4px 0;
-    }
-    .tar__icon-item {
-      flex: none;
-      width: 100%;
-      padding: 14px 24px;
-      border-right: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      justify-content: flex-start;
-    }
-    .tar__icon-item:last-child { border-bottom: none; }
-    .tar__icon-item-img { width: 32px; height: 32px; }
-    .tar__icon-item-img img { width: 32px; height: 32px; }
+    .tar__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .tar__layout { grid-template-columns: 1fr; gap: 24px; }
+    .tar__callouts { align-items: flex-start; }
+    .tar__image-wrap { max-width: 360px; margin: 0 auto; }
+    .tar__icon-bar { flex-wrap: wrap; gap: 0; border-radius: 10px; }
+    .tar__icon-item { flex: 0 0 50%; border-right: none; padding: 10px 16px; justify-content: flex-start; }
+    .tar__icon-item:nth-child(odd) { border-right: 1px solid rgba(0, 0, 0, 0.08); }
   }
 
   @media screen and (max-width: 480px) {
     .tar__container { padding: 0 16px; }
-    .tar__heading { font-size: calc(var(--heading-size) * 0.5); }
-    .tar__callout-text { font-size: var(--body-size); }
+    .tar__heading { font-size: calc(var(--heading-size) * 0.48); }
+    .tar__icon-item { flex: 0 0 100%; border-right: none; border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+    .tar__icon-item:last-child { border-bottom: none; }
   }
 {% endstyle %}
 
