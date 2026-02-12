@@ -1702,6 +1702,60 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "process_cards_LbK99L": {
+      "type": "process-cards",
+      "blocks": {
+        "card_DFi8eq": {
+          "type": "card",
+          "settings": {
+            "title": "Targeted precision",
+            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
+            "card_bg": "#e8ddd4"
+          }
+        },
+        "card_iGhFGx": {
+          "type": "card",
+          "settings": {
+            "title": "Clinician-controlled treatment",
+            "description": "Depth and intensity adjusted based on skin type and blemish type",
+            "card_bg": "#c8cedf"
+          }
+        },
+        "card_fX34fH": {
+          "type": "card",
+          "settings": {
+            "title": "Natural healing response",
+            "description": "The treated area heals gradually as the skin renews itself",
+            "card_bg": "#e8ddd4"
+          }
+        }
+      },
+      "block_order": [
+        "card_DFi8eq",
+        "card_iGhFGx",
+        "card_fX34fH"
+      ],
+      "name": "Process Cards",
+      "settings": {
+        "heading": "How blemish removal works",
+        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
+        "footer_text": "",
+        "show_timeline": false,
+        "connector_color": "#b5a080",
+        "connector_border": "#ddd4c8",
+        "section_bg": "linear-gradient(180deg, rgba(201, 180, 176, 1), rgba(212, 191, 192, 1) 25%, rgba(200, 181, 192, 1) 50%, rgba(184, 168, 184, 1) 75%, rgba(194, 176, 168, 1) 100%)",
+        "shimmer_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a32",
+        "card_title_color": "#3a2820",
+        "card_text_color": "#5a4a42",
+        "heading_font_size": 42,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "slideshow_nNHM68": {
       "type": "slideshow",
       "blocks": {
@@ -2618,6 +2672,7 @@
     "slideshow_tdxwRM",
     "slideshow_mNnMHW",
     "slideshow_BHyrN9",
+    "process_cards_LbK99L",
     "slideshow_nNHM68",
     "slideshow_Gqm3E4",
     "dark_pricing_table_yY9YNn",
