@@ -1716,18 +1716,21 @@
       "blocks": {
         "callout_98Nyma": {
           "type": "callout",
+          "disabled": true,
           "settings": {
             "label": "Under-eyes"
           }
         },
         "callout_xbmbBp": {
           "type": "callout",
+          "disabled": true,
           "settings": {
             "label": "Around the mouth"
           }
         },
         "callout_JbiHPV": {
           "type": "callout",
+          "disabled": true,
           "settings": {
             "label": "Neck"
           }
