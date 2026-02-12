@@ -1917,6 +1917,9 @@
         "pricing_column_XzLFYN",
         "pricing_column_KXCaxh"
       ],
+      "custom_css": [
+        ".dpt__icon, .dpt__icon img {width: 150px !important; height: 150px !important;}"
+      ],
       "name": "Dark Pricing Table",
       "settings": {
         "heading": "Polynucleotide Pricing",
