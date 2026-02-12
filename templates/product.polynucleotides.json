@@ -1489,6 +1489,9 @@
         "concern_Jnakjc",
         "concern_4ffD3h"
       ],
+      "custom_css": [
+        ".cgd__card-icon, .cgd__card-icon img {width: 100px !important; height: 65px !important;}"
+      ],
       "name": "Concern Grid",
       "settings": {
         "heading": "What Do Polynucleotides Treat?",
