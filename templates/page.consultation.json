@@ -25,21 +25,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Medical-grade skin analysis"
+            "text": "Advanced, medical-grade skin analysis technology"
           }
         },
         "check_item_6hBBYK": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Tailored recommendations, not sales script"
+            "text": "Honest, tailored recommendations — never a sales pitch"
           }
         },
         "check_item_eyr49L": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No obligation to book treatment"
+            "text": "100% complimentary and no obligation to book treatment"
           }
         },
         "trust_item_7VyCp8": {
