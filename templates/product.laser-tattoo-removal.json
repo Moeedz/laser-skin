@@ -1507,7 +1507,6 @@
       "block_order": [
         "image_NLTWnz"
       ],
-      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1674,7 +1673,7 @@
         "heading_color": "#3a3a3a",
         "text_color": "#555555",
         "icon_color": "#777777",
-        "card_bg": "#f0ece7",
+        "card_bg": "#fae9e1",
         "card_border": "#ddd9d3",
         "heading_font_size": 44,
         "card_heading_font_size": 28,
