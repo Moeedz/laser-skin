@@ -1149,11 +1149,25 @@
     "faq_updated_fQcMPC": {
       "type": "faq-updated",
       "blocks": {
+        "faq_item_A8tT7M": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will I get treatment recommendations on the same day?",
+            "answer": "<p>Yes, your specialist will explain which treatments suit your skin and why. There’s no obligation to start, but many clients find it helpful to understand their options right away.</p>"
+          }
+        },
         "faq_item_GrtaJp": {
           "type": "faq_item",
           "settings": {
             "question": "Is the consultation really 100% free?",
             "answer": "<p>Yes. We believe every patient deserves to understand their skin biology before spending money on treatments. You will receive our full 3-Step Analysis (including the UV Skin Scan) and a bespoke treatment plan with zero cost and zero obligation.</p>"
+          }
+        },
+        "faq_item_VCjwkt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I prepare for my appointment?",
+            "answer": "<p>You don’t need to do anything special! We simply ask that you arrive with a clean face if possible, and our experts will take care of the rest.</p>"
           }
         },
         "faq_item_UXezCX": {
@@ -1179,7 +1193,9 @@
         }
       },
       "block_order": [
+        "faq_item_A8tT7M",
         "faq_item_GrtaJp",
+        "faq_item_VCjwkt",
         "faq_item_UXezCX",
         "faq_item_XnW4hK",
         "faq_item_kcLLyP"
