@@ -1227,7 +1227,7 @@
           "settings": {
             "title": "Immediately after",
             "icon_image": "shopify://shop_images/1-removebg-preview_2.png",
-            "description": "Mild redness possible||Area protected and healing begins",
+            "description": "Mild redness or tingling may appear for a few hours.||Healing begins as your skin naturally regenerates.",
             "card_bg": "#e8ddd4"
           }
         },
@@ -1236,7 +1236,7 @@
           "settings": {
             "title": "7–14 days",
             "icon_image": "shopify://shop_images/2-removebg-preview_2.png",
-            "description": "Visible reduction in blemish||Skin surface normalising",
+            "description": "Visible reduction in blemish with smooth, even skin beginning to return.||Natural healing continues beneath the surface.",
             "card_bg": "#c8cedf"
           }
         },
@@ -1245,7 +1245,7 @@
           "settings": {
             "title": "Long-term",
             "icon_image": "shopify://shop_images/3-removebg-preview_2.png",
-            "description": "Clean healing||Minimal scarring when suitable",
+            "description": "Clean, healthy healing with minimal scarring (when suitable).||Minimal scarring when suitable",
             "card_bg": "#e8ddd4"
           }
         }
