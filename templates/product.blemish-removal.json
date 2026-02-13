@@ -1260,8 +1260,8 @@
       ],
       "name": "Process Cards",
       "settings": {
-        "heading": "Results & outcomes",
-        "subtitle": "What to expect after treatment",
+        "heading": "Your results and what to expect",
+        "subtitle": "Here’s what most clients experience after treatment.",
         "footer_text": "",
         "show_timeline": false,
         "connector_color": "#b5a080",
