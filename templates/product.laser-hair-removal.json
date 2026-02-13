@@ -2262,13 +2262,13 @@
         "check_item_dNdmnA": {
           "type": "check_item",
           "settings": {
-            "text": "Consultation-led"
+            "text": "Consultation-led, personalised plans"
           }
         },
         "check_item_Uiy7rz": {
           "type": "check_item",
           "settings": {
-            "text": "Transparent treatment plans"
+            "text": "Transparent pricing and progress tracking"
           }
         },
         "check_item_9i4kXk": {
