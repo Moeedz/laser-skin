@@ -1172,7 +1172,7 @@
           "type": "card",
           "settings": {
             "title": "Targeted precision",
-            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
+            "description": "Energy is applied safely and precisely to the blemish, protecting healthy surrounding skin.",
             "card_bg": "#eccac6"
           }
         },
@@ -1180,7 +1180,7 @@
           "type": "card",
           "settings": {
             "title": "Clinician-controlled treatment",
-            "description": "Depth and intensity adjusted based on skin type and blemish type",
+            "description": "Your practitioner adjusts treatment depth and intensity to suit your skin and concern.",
             "card_bg": "#c8cedf"
           }
         },
@@ -1188,7 +1188,7 @@
           "type": "card",
           "settings": {
             "title": "Natural healing response",
-            "description": "The treated area heals gradually as the skin renews itself",
+            "description": "The treated area heals gradually, revealing smoother, clearer skin as it regenerates.",
             "card_bg": "#eccac6"
           }
         }
@@ -1201,7 +1201,7 @@
       "name": "Process Cards",
       "settings": {
         "heading": "How blemish removal works",
-        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
+        "subtitle": "Your treatment is carefully guided by skilled clinicians ensuring every step is safe, effective, and comfortable from start to finish.",
         "footer_text": "",
         "show_timeline": false,
         "connector_color": "#b5a080",
