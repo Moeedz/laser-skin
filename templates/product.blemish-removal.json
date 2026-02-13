@@ -1096,7 +1096,7 @@
           "settings": {
             "icon_image": "shopify://shop_images/7-removebg-preview.png",
             "title": "Verrucas",
-            "subtitle": "Precise treatment to remove verrucas and support natural healing"
+            "subtitle": "Precise treatment to remove verrucas and support natural healing."
           }
         },
         "tile_38xPCV": {
@@ -1111,21 +1111,21 @@
           "type": "how_item",
           "settings": {
             "icon": "clipboard",
-            "text": "Consultation-led and tailored to you"
+            "text": "Individual consultation tailored to your specific skin type"
           }
         },
         "how_item_LtCgXA": {
           "type": "how_item",
           "settings": {
             "icon": "medical",
-            "text": "Medical-grade technology"
+            "text": "Performed with advanced medical-grade technology"
           }
         },
         "how_item_b3hJFh": {
           "type": "how_item",
           "settings": {
             "icon": "heart",
-            "text": "Comprehensive aftercare guidance"
+            "text": "Expert aftercare and healing guidance included"
           }
         }
       },
@@ -1149,7 +1149,7 @@
       "settings": {
         "heading": "What we treat",
         "subtitle": "Our blemish removal treatments target unwanted marks with precision, restoring clear, healthy skin without damaging the surrounding area.",
-        "how_title": "How it works",
+        "how_title": "How your treatment works",
         "section_bg": "#f1e5e9",
         "show_texture": true,
         "texture_opacity": 80,
