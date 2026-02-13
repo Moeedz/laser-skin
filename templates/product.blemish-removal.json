@@ -943,21 +943,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Eliminate spider veins, skin tags, moles, rosacea, and vascular blemishes"
+            "text": "Eliminate visible concerns including spider veins, skin tags, moles, and vascular blemishes."
           }
         },
         "check_item_gd9pqx": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Targeted, non-invasive treatments tailored to your skin"
+            "text": "Non-invasive, tailored treatments with minimal discomfort or downtime."
           }
         },
         "check_item_NezdGT": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Performed by highly trained medical professionals"
+            "text": "Performed by experienced medical professionals for safe, lasting results."
           }
         },
         "trust_item_TA4mUB": {
