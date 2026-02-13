@@ -2146,7 +2146,7 @@
           "type": "pricing_column",
           "settings": {
             "icon_image": "shopify://shop_images/2-removebg-preview_4.png",
-            "name": "Half Face",
+            "name": "Upper or Lower Face Focus",
             "price_1_label": "1 Session",
             "price_1_value": "£200",
             "price_2_label": "3 Sessions",
