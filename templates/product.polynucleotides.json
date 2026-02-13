@@ -1938,7 +1938,7 @@
           "settings": {
             "title": "Day 0-3",
             "icon_image": "shopify://shop_images/1-removebg-preview_4.png",
-            "description": "Mild redness or swelling possible||Skin may feel hydrated or firmer||Minimal downtime for most patients",
+            "description": "Skin may feel slightly flushed or tight. Most clients experience minimal downtime and early hydration.",
             "card_bg": "#ffd6cd"
           }
         },
@@ -1972,7 +1972,7 @@
       "name": "Process Cards",
       "settings": {
         "heading": "What to Expect After Treatment",
-        "subtitle": "Polynucleotides wok gradually. Here's how regeneration typically unfolds.",
+        "subtitle": "Polynucleotides work gradually, enhancing your skin’s natural renewal with visible improvements week by week.",
         "footer_text": "",
         "show_timeline": false,
         "connector_color": "#b5a080",
