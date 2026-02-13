@@ -1873,6 +1873,7 @@
       "block_order": [
         "image_VqQwCA"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2030,7 +2031,7 @@
         "heading_font_size": 40,
         "body_font_size": 16,
         "button_label": "BOOK CONSULTATION",
-        "button_link": "",
+        "button_link": "#consultation-form-template--25630357356924__consultation_form_AfPiXn",
         "button_open_new_tab": false,
         "button_bg": "#b08d57",
         "button_text_color": "#ffffff",
