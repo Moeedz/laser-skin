@@ -1312,7 +1312,7 @@
         "card_zzy7Xj": {
           "type": "card",
           "settings": {
-            "title": "When to contact",
+            "title": "When to get in",
             "icon_image": "shopify://shop_images/4-removebg-preview_1.png",
             "description": "If you notice any unusual swelling or prolonged redness||For any concerns about healing or aftercare",
             "card_bg": "#e9c6bf"
@@ -2043,7 +2043,7 @@
       ],
       "name": "Luxury Pricing",
       "settings": {
-        "heading": "Blemish Removal Treatment Pricing",
+        "heading": "Simple, transparent pricing",
         "subtitle": "",
         "footer_text": "No downtime  •  Suitable for all skin types  •  Immediate glow",
         "button_label": "Book your session",
