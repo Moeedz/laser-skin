@@ -919,6 +919,13 @@
             "text": "Minimal downtime, lasting skin renewal"
           }
         },
+        "check_item_PH7QGW": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Visible results from your first session."
+          }
+        },
         "trust_item_nrPAC8": {
           "type": "trust_item",
           "settings": {
@@ -960,6 +967,7 @@
         "check_item_VPPAXf",
         "check_item_h7D8Wh",
         "check_item_yWhkwq",
+        "check_item_PH7QGW",
         "trust_item_nrPAC8",
         "trust_item_z7z9at",
         "trust_item_GtRaHn",
