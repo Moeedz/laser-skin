@@ -934,7 +934,7 @@
           "type": "check_item",
           "settings": {
             "icon": "star",
-            "text": "Reverse dark circles"
+            "text": "Fade dark circles"
           }
         },
         "check_item_cf3aPd": {
@@ -1018,7 +1018,7 @@
         "body_font_size": 17,
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
-        "button_label": "Book your Consultation",
+        "button_label": "Book your Skin Consultation",
         "button_link": "#consultation-form-template--25630315315580__consultation_form_9Mt4E6",
         "button_open_new_tab": false,
         "button_bg": "#c4a080",
