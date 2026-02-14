@@ -1600,6 +1600,66 @@
         "padding_bottom": 48
       }
     },
+    "results_testimonials_aAV6Rz": {
+      "type": "results-testimonials",
+      "blocks": {
+        "result_dxGwGH": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Underarm (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I needed around 8 sessions, but it was worth every visit. The results have given me so much confidence.",
+            "session_label": "After 8 sessions"
+          }
+        },
+        "result_PJnAwj": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Lower Legs (After 12 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I purchased a package for my legs, and it exceeded my expectations. I couldn't believe the difference!",
+            "session_label": "After 12 sessions"
+          }
+        },
+        "result_89zUNh": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Face (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "Very professional team, and the process was always comfortable. My skin is smooth and clear now.",
+            "session_label": "After 8 sessions"
+          }
+        }
+      },
+      "block_order": [
+        "result_dxGwGH",
+        "result_PJnAwj",
+        "result_89zUNh"
+      ],
+      "name": "Results & Testimonials",
+      "settings": {
+        "heading": "Real Results from Our Medical-Grade Treatments",
+        "subtitle": "See genuine, natural results achieved safely by real clients, through personalized treatment plans.",
+        "section_bg": "#f1f0f7",
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "star_color": "#c8962e",
+        "card_bg": "#f4f1ed",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 42,
+        "card_title_font_size": 18,
+        "body_font_size": 16,
+        "cards_gap": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "session_pricing_xLx8D9": {
       "type": "session-pricing",
       "blocks": {
@@ -2465,6 +2525,7 @@
     "slideshow_gwWg9J",
     "slideshow_yE94wt",
     "technology_features_A3Rp9A",
+    "results_testimonials_aAV6Rz",
     "session_pricing_xLx8D9",
     "slideshow_BWEini",
     "slideshow_QEhDaV",
