@@ -1,0 +1,338 @@
+{% style %}
+  .spr {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .spr__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .spr__texture::before, .spr__texture::after { content: ''; position: absolute; inset: 0; }
+  .spr__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .spr__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.015 0.06' numOctaves='4' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .spr__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .spr__header { text-align: center; margin-bottom: 40px; }
+
+  .spr__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--light-color); margin: 0 0 10px;
+  }
+
+  .spr__divider {
+    width: 80px; height: 1px; background: var(--light-color);
+    opacity: 0.3; margin: 0 auto 10px;
+  }
+
+  .spr__subtitle {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-style: italic;
+    color: var(--light-color); opacity: 0.75; margin: 0;
+  }
+
+  /* Cards */
+  .spr__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 24px; margin-bottom: 40px;
+  }
+
+  .spr__card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 32px 24px 28px;
+    text-align: center;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+
+  .spr__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+  }
+
+  .spr__card-name {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size); font-weight: 400; font-style: italic;
+    color: var(--light-color); margin: 0 0 16px;
+  }
+
+  /* Main price */
+  .spr__card-main-price {
+    margin: 0 0 18px; line-height: 1.3;
+  }
+
+  .spr__card-price-big {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--price-size); font-weight: 700; font-style: italic;
+    color: var(--light-color);
+  }
+
+  .spr__card-price-per {
+    font-size: var(--body-size);
+    color: var(--light-color); opacity: 0.7;
+    margin-left: 4px;
+  }
+
+  /* Session tier rows */
+  .spr__card-tiers {
+    display: flex; flex-direction: column; gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .spr__card-tier {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--light-color); opacity: 0.8;
+    line-height: 1.5;
+  }
+
+  .spr__card-tier strong {
+    font-weight: 700; opacity: 1;
+  }
+
+  /* Note */
+  .spr__card-note {
+    font-size: calc(var(--body-size) - 2px); font-style: italic;
+    color: var(--light-color); opacity: 0.55;
+    margin: 0; line-height: 1.5;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Footer */
+  .spr__footer {
+    text-align: center; margin-bottom: 36px;
+  }
+
+  .spr__footer-text {
+    font-size: var(--body-size); font-style: italic;
+    color: var(--light-color); opacity: 0.7;
+    margin: 0; line-height: 1.6;
+  }
+
+  /* CTA */
+  .spr__cta { text-align: center; }
+
+  .spr__cta-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--heading-size) * 0.7); font-weight: 700;
+    font-style: italic;
+    color: var(--light-color); margin: 0 0 18px;
+  }
+
+  .spr__btn {
+    display: inline-block;
+    background: transparent; color: var(--light-color);
+    font-size: 15px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 14px 52px; border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px; text-decoration: none;
+    transition: background 0.3s var(--ease-out-expo), border-color 0.3s ease, transform 0.3s var(--ease-out-expo);
+  }
+  .spr__btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px); color: var(--light-color);
+  }
+
+  /* Animations */
+  [data-spr-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-spr-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .spr__container { padding: 0 20px; }
+    .spr__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .spr__cards { grid-template-columns: 1fr; gap: 16px; max-width: 400px; margin: 0 auto 36px; }
+    .spr__card { padding: 28px 20px 24px; }
+    .spr__card-price-big { font-size: calc(var(--price-size) * 0.85); }
+    .spr__cta-heading { font-size: calc(var(--heading-size) * 0.45); }
+    .spr__btn { width: 100%; max-width: 320px; text-align: center; }
+  }
+  @media screen and (max-width: 480px) {
+    .spr__container { padding: 0 16px; }
+    .spr__heading { font-size: calc(var(--heading-size) * 0.48); }
+  }
+{% endstyle %}
+
+{% assign card_blocks = section.blocks | where: 'type', 'price_card' %}
+
+<section
+  class="spr"
+  id="spr-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --light-color: {{ section.settings.light_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --price-size: {{ section.settings.price_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ card_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="spr__texture"></div>{% endif %}
+
+  <div class="spr__container">
+    <div class="spr__header" data-spr-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="spr__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="spr__divider"></div>
+      {% if section.settings.subtitle != blank %}
+        <p class="spr__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if card_blocks.size > 0 %}
+      <div class="spr__cards" data-spr-animate data-delay="1">
+        {% for block in card_blocks %}
+          <div class="spr__card" {{ block.shopify_attributes }}>
+            {% if block.settings.name != blank %}
+              <p class="spr__card-name">{{ block.settings.name }}</p>
+            {% endif %}
+
+            {% if block.settings.main_price != blank %}
+              <div class="spr__card-main-price">
+                <span class="spr__card-price-big">{{ block.settings.main_price }}</span>
+                {% if block.settings.main_per != blank %}
+                  <span class="spr__card-price-per">{{ block.settings.main_per }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            <div class="spr__card-tiers">
+              {% if block.settings.tier_1 != blank %}
+                <p class="spr__card-tier">{{ block.settings.tier_1 }}</p>
+              {% endif %}
+              {% if block.settings.tier_2 != blank %}
+                <p class="spr__card-tier">{{ block.settings.tier_2 }}</p>
+              {% endif %}
+              {% if block.settings.tier_3 != blank %}
+                <p class="spr__card-tier">{{ block.settings.tier_3 }}</p>
+              {% endif %}
+            </div>
+
+            {% if block.settings.note != blank %}
+              <p class="spr__card-note">{{ block.settings.note }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="spr__footer" data-spr-animate data-delay="2">
+        <p class="spr__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if section.settings.cta_heading != blank or section.settings.button_label != blank %}
+      <div class="spr__cta" data-spr-animate data-delay="3">
+        {% if section.settings.cta_heading != blank %}
+          <p class="spr__cta-heading">{{ section.settings.cta_heading }}</p>
+        {% endif %}
+        {% if section.settings.button_label != blank %}
+          <a href="{{ section.settings.button_link }}" class="spr__btn">{{ section.settings.button_label }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('spr-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-spr-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Session Pricing",
+  "tag": "section",
+  "class": "session-pricing-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "Laser Tattoo Removal Pricing" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Restore Your Skin with Safe, Professional Care" },
+    { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "Course pricing applies when sessions are booked as a treatment plan. Single-session pricing available for pay-as-you-go treatments." },
+    { "type": "header", "content": "CTA" },
+    { "type": "text", "id": "cta_heading", "label": "CTA Heading", "default": "Book Your Test Patch Today" },
+    { "type": "text", "id": "button_label", "label": "Button Label", "default": "BOOK NOW" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "header", "content": "Background" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#5a5560" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Fabric Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 90, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "light_color", "label": "Text Color (light)", "default": "#e8e0d8" },
+    { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#6a6570b0" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 44, "unit": "px" },
+    { "type": "range", "id": "card_title_font_size", "label": "Card Title Size", "min": 18, "max": 32, "step": 1, "default": 24, "unit": "px" },
+    { "type": "range", "id": "price_font_size", "label": "Main Price Size", "min": 28, "max": 56, "step": 2, "default": 36, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "price_card",
+      "name": "Pricing Card",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Treatment Name", "default": "Small Tattoo" },
+        { "type": "text", "id": "main_price", "label": "Main Price", "default": "£40" },
+        { "type": "text", "id": "main_per", "label": "Per Label", "default": "Per Session" },
+        { "type": "header", "content": "Session Tiers (use HTML for bold: <strong>)" },
+        { "type": "text", "id": "tier_1", "label": "Tier 1", "default": "6 Sessions £35 per session • <strong>£210</strong>" },
+        { "type": "text", "id": "tier_2", "label": "Tier 2", "default": "10 Sessions £30 per session • <strong>£300</strong>" },
+        { "type": "text", "id": "tier_3", "label": "Tier 3" },
+        { "type": "textarea", "id": "note", "label": "Note", "default": "Final treatment plan and number of sessions confirmed during consultation." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Session Pricing",
+      "blocks": [
+        { "type": "price_card", "settings": { "name": "Small Tattoo", "main_price": "£40", "main_per": "Per Session", "tier_1": "6 Sessions £35 per session • <strong>£210</strong>", "tier_2": "10 Sessions £30 per session • <strong>£300</strong>", "note": "Final treatment plan and number of sessions confirmed during consultation." } },
+        { "type": "price_card", "settings": { "name": "Medium Tattoo", "main_price": "£55", "main_per": "Per Session", "tier_1": "6 Sessions £50 per session • <strong>£300</strong>", "tier_2": "10 Sessions £45 per session • <strong>£450</strong>", "note": "Final treatment plan and number of sessions confirmed during consultation." } },
+        { "type": "price_card", "settings": { "name": "Large Tattoo", "main_price": "£90", "main_per": "Per Session", "tier_1": "6 Sessions £80 per session • <strong>£480</strong>", "tier_2": "10 Sessions £75 per session • <strong>£750</strong>", "note": "Final treatment plan and number of sessions confirmed during consultation." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
