@@ -1607,7 +1607,9 @@
           "type": "result",
           "settings": {
             "ba_title": "Forearm (After 10 Sessions)",
+            "before_image": "shopify://shop_images/1_767bf8d6-ef6e-4554-88ac-a62a1757265c.png",
             "before_label": "Before",
+            "after_image": "shopify://shop_images/2_52c951e8-b7be-49b4-91b5-ee09021d1eec.png",
             "after_label": "After",
             "star_count": 5,
             "quote": "My Tattoo is gone after 10 sessions, and the process was easier than I feared. I can barely see any trace of it now",
@@ -1618,7 +1620,9 @@
           "type": "result",
           "settings": {
             "ba_title": "Upper Back (After 8 Sessions)",
+            "before_image": "shopify://shop_images/3_9cfe6e01-796f-40f7-a44b-15a25d0ad0d5.png",
             "before_label": "Before",
+            "after_image": "shopify://shop_images/4_493efb19-d7ce-4bcf-8360-d59338889bdc.png",
             "after_label": "After",
             "star_count": 5,
             "quote": "Incredible results in 8 sessions. The clinic was professional, and my skin looks as if nothing was ever there",
@@ -1629,7 +1633,9 @@
           "type": "result",
           "settings": {
             "ba_title": "Ankle (After 7 Sessions)",
+            "before_image": "shopify://shop_images/5_4bf0d4d1-1c4d-4434-b2f7-1702e554f04b.png",
             "before_label": "Before",
+            "after_image": "shopify://shop_images/6.png",
             "after_label": "After",
             "star_count": 5,
             "quote": "Amazing results! My ankle tattoo is basically gone after just 7 sessions. So relieved!",
