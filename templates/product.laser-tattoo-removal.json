@@ -1029,7 +1029,7 @@
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
         "button_label": "Book your Consultation",
-        "button_link": "",
+        "button_link": "#consultation-form-template--25630357356924__consultation_form_AfPiXn",
         "button_open_new_tab": false,
         "button_bg": "#585451",
         "button_text_color": "#ffffff",
@@ -1109,7 +1109,7 @@
         "card_title_font_size": 24,
         "body_font_size": 16,
         "button_label": "Book your consultation",
-        "button_link": "",
+        "button_link": "#consultation-form-template--25630357356924__consultation_form_AfPiXn",
         "button_open_new_tab": false,
         "button_bg": "#4a4a4a",
         "button_text_color": "#ffffff",
@@ -1288,6 +1288,7 @@
       "block_order": [
         "image_YGQ6ED"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1581,7 +1582,7 @@
         "side_image": "shopify://shop_images/Gemini_Generated_Image_fuofrtfuofrtfuof.png",
         "image_position": "center center",
         "button_label": "Book your consultation",
-        "button_link": "",
+        "button_link": "#consultation-form-template--25630357356924__consultation_form_AfPiXn",
         "section_bg": "#e7c7bd",
         "show_texture": true,
         "texture_opacity": 80,
@@ -1651,7 +1652,7 @@
         "footer_text": "Course pricing applies when sessions are booked as a treatment plan. Single-session pricing available for pay-as-you-go treatments.",
         "cta_heading": "Book Your Test Patch Today",
         "button_label": "BOOK NOW",
-        "button_link": "",
+        "button_link": "#consultation-form-template--25630357356924__consultation_form_AfPiXn",
         "section_bg": "#5a5560",
         "show_texture": true,
         "texture_opacity": 90,
