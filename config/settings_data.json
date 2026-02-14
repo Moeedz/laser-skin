@@ -48,6 +48,9 @@
     "sections": {
       "whatsapp-bubble": {
         "type": "whatsapp-bubble",
+        "custom_css": [
+          ".whatsapp-widget__bubble {display: none !important;}"
+        ],
         "settings": {
           "whatsapp_number": "447798983387",
           "bubble_text": "",
