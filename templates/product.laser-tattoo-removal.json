@@ -1018,7 +1018,7 @@
         "overlay_color_mid": "#f8e7df",
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Erase unwanted ink",
-        "subheading_highlight": "safely and effectively<br>",
+        "subheading_highlight": "safely and effectively",
         "subheading": "Start with safe laser tattoo removal",
         "heading_font_size": 54,
         "subheading_font_size": 38,
@@ -1174,6 +1174,76 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
+      }
+    },
+    "technology_features_A3Rp9A": {
+      "type": "technology-features",
+      "blocks": {
+        "feature_pbRANQ": {
+          "type": "feature",
+          "settings": {
+            "title": "Q-switched and picosecond lasers",
+            "description": "Fragment ink into tiny particles for faster removal"
+          }
+        },
+        "feature_fWp6jr": {
+          "type": "feature",
+          "settings": {
+            "title": "Multiple wavelengths",
+            "description": "Treats black and coloured inks effectively"
+          }
+        },
+        "feature_Nrjwnc": {
+          "type": "feature",
+          "settings": {
+            "title": "Advanced skin cooling",
+            "description": "Minimises discomfort and protects skin throughout the treatment."
+          }
+        },
+        "feature_zAQXDC": {
+          "type": "feature",
+          "settings": {
+            "title": "Personalised treatment design",
+            "description": "Tailored plans based on your tattoo and skin type"
+          }
+        },
+        "feature_NWacHR": {
+          "type": "feature",
+          "settings": {
+            "title": "Minimises scarring",
+            "description": "Trained clinicians use protocols to reduce risk"
+          }
+        }
+      },
+      "block_order": [
+        "feature_pbRANQ",
+        "feature_fWp6jr",
+        "feature_Nrjwnc",
+        "feature_zAQXDC",
+        "feature_NWacHR"
+      ],
+      "name": "Technology Features",
+      "settings": {
+        "heading": "Advanced technology. Superior tattoo removal.",
+        "subtitle": "We use the latest laser technology and gold-standard protocols to safely and effectively erase unwanted ink.",
+        "image_position": "center center",
+        "button_label": "Book your consultation",
+        "button_link": "",
+        "section_bg": "#ddd0c4",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "icon_color": "#7a6a50",
+        "panel_bg": "#ddd0c4c0",
+        "button_bg": "#6a6058",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#5a504a",
+        "heading_font_size": 40,
+        "feature_title_font_size": 20,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 48
       }
     },
     "slideshow_gwWg9J": {
@@ -2240,6 +2310,7 @@
     "slideshow_QhYwBR",
     "slideshow_gwWg9J",
     "slideshow_yE94wt",
+    "technology_features_A3Rp9A",
     "slideshow_BWEini",
     "slideshow_QEhDaV",
     "expectations_trust_MT7hgp",
