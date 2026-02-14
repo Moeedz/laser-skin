@@ -1041,6 +1041,84 @@
         "content_max_width": 580
       }
     },
+    "approach_comparison_MdLPnV": {
+      "type": "approach-comparison",
+      "blocks": {
+        "card_Yjc8MV": {
+          "type": "card",
+          "settings": {
+            "card_style": "standard",
+            "label": "INDUSTRY STANDARD APPROACH",
+            "title": "Session-based pricing",
+            "item_1_icon": "grid",
+            "item_1_text": "Pre-set session bundles",
+            "item_2_icon": "clock",
+            "item_2_text": "Same number of sessions for everyone",
+            "item_3_icon": "coins",
+            "item_3_text": "Extra sessions often needed later",
+            "item_4_icon": "none",
+            "item_4_text": "Total cost can be hard to predict",
+            "item_5_icon": "none",
+            "item_5_text": "",
+            "item_6_icon": "none",
+            "item_6_text": ""
+          }
+        },
+        "card_ADzMq7": {
+          "type": "card",
+          "settings": {
+            "card_style": "highlight",
+            "label": "OUR APPROACH AT LASER SKIN CLINICS®",
+            "title": "Consultation-led treatment planning",
+            "item_1_icon": "search_person",
+            "item_1_text": "We assess your skin and hair before recommending a plan",
+            "item_2_icon": "clipboard",
+            "item_2_text": "Session numbers tailored to your growth pattern",
+            "item_3_icon": "pound",
+            "item_3_text": "Clear pricing agreed upfront",
+            "item_4_icon": "chart",
+            "item_4_text": "Reviewed and adjusted as your results progress",
+            "item_5_icon": "none",
+            "item_5_text": "",
+            "item_6_icon": "none",
+            "item_6_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_Yjc8MV",
+        "card_ADzMq7"
+      ],
+      "name": "Approach Comparison",
+      "settings": {
+        "heading": "A smarter way to plan laser hair removal",
+        "subtitle": "Why our consultation-led approach delivers more predictable outcomes.",
+        "section_bg": "#e5dcdd",
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "accent_color": "#c8962e",
+        "standard_bg": "#f5f3f0",
+        "standard_border": "#e0ddd8",
+        "standard_header_bg": "#eceae6",
+        "standard_label_color": "#888888",
+        "standard_icon_color": "#999999",
+        "highlight_bg": "#f5ede0",
+        "highlight_border": "#d4c4a8",
+        "highlight_header_bg": "#efe3d0",
+        "heading_font_size": 42,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "button_label": "Book your consultation",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "cards_gap": 28,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_QhYwBR": {
       "type": "slideshow",
       "blocks": {
@@ -2381,6 +2459,7 @@
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
     "product_hero_jYbKDw",
+    "approach_comparison_MdLPnV",
     "slideshow_QhYwBR",
     "slideshow_gwWg9J",
     "slideshow_yE94wt",
