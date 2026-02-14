@@ -1606,7 +1606,7 @@
         "result_dxGwGH": {
           "type": "result",
           "settings": {
-            "ba_title": "Underarm (After 8 Sessions)",
+            "ba_title": "Forearm (After 10 Sessions)",
             "before_label": "Before",
             "after_label": "After",
             "star_count": 5,
@@ -1617,7 +1617,7 @@
         "result_PJnAwj": {
           "type": "result",
           "settings": {
-            "ba_title": "Lower Legs (After 12 Sessions)",
+            "ba_title": "Upper Back (After 8 Sessions)",
             "before_label": "Before",
             "after_label": "After",
             "star_count": 5,
@@ -1628,7 +1628,7 @@
         "result_89zUNh": {
           "type": "result",
           "settings": {
-            "ba_title": "Face (After 8 Sessions)",
+            "ba_title": "Ankle (After 7 Sessions)",
             "before_label": "Before",
             "after_label": "After",
             "star_count": 5,
