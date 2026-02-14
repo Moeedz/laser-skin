@@ -1450,6 +1450,7 @@
         "feature_pbRANQ": {
           "type": "feature",
           "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_7.png",
             "title": "Q-switched and picosecond lasers",
             "description": "Fragment ink into tiny particles for faster removal"
           }
@@ -1457,6 +1458,7 @@
         "feature_fWp6jr": {
           "type": "feature",
           "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_8.png",
             "title": "Multiple wavelengths",
             "description": "Treats black and coloured inks effectively"
           }
@@ -1464,6 +1466,7 @@
         "feature_Nrjwnc": {
           "type": "feature",
           "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_7.png",
             "title": "Advanced skin cooling",
             "description": "Minimises discomfort and protects skin throughout the treatment."
           }
@@ -1471,6 +1474,7 @@
         "feature_zAQXDC": {
           "type": "feature",
           "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview_4.png",
             "title": "Personalised treatment design",
             "description": "Tailored plans based on your tattoo and skin type"
           }
@@ -1478,6 +1482,7 @@
         "feature_NWacHR": {
           "type": "feature",
           "settings": {
+            "icon_image": "shopify://shop_images/5-removebg-preview_2.png",
             "title": "Minimises scarring",
             "description": "Trained clinicians use protocols to reduce risk"
           }
