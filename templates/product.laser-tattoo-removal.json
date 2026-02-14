@@ -944,21 +944,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
+            "text": "Consultation-led"
           }
         },
         "check_item_VpB8ew": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
+            "text": "Transparent treatment plans"
           }
         },
         "check_item_BYNqz7": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No downtime, immediate glow"
+            "text": "No downtime"
           }
         },
         "trust_item_gRWDRz": {
