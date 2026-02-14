@@ -1012,7 +1012,7 @@
         "background_image": "shopify://shop_images/Gemini_Generated_Image_fuofrtfuofrtfuof.png",
         "image_position": "center center",
         "desktop_height": 900,
-        "mobile_height": 320,
+        "mobile_height": 200,
         "background_color": "#f8e7df",
         "overlay_color_start": "#f8e7df",
         "overlay_color_mid": "#f8e7df",
