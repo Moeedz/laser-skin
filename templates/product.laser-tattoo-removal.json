@@ -1073,7 +1073,7 @@
             "item_1_icon": "search_person",
             "item_1_text": "We assess your skin and hair before recommending a plan",
             "item_2_icon": "clipboard",
-            "item_2_text": "Session numbers tailored to your growth pattern",
+            "item_2_text": "Session numbers tailored to your tattoo size and color.s",
             "item_3_icon": "pound",
             "item_3_text": "Clear pricing agreed upfront",
             "item_4_icon": "chart",
@@ -1091,7 +1091,7 @@
       ],
       "name": "Approach Comparison",
       "settings": {
-        "heading": "A smarter way to plan laser hair removal",
+        "heading": "A smarter way to plan laser tattoo removal",
         "subtitle": "Why our consultation-led approach delivers more predictable outcomes.",
         "section_bg": "#e5dcdd",
         "heading_color": "#3a3a3a",
