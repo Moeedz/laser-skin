@@ -45,6 +45,18 @@
     "social_instagram": "https://www.instagram.com/laserskinclinics/",
     "social_tiktok": "",
     "favicon": "shopify://shop_images/Flav.png",
+    "sections": {
+      "whatsapp-bubble": {
+        "type": "whatsapp-bubble",
+        "settings": {
+          "whatsapp_number": "447798983387",
+          "bubble_text": "",
+          "prefilled_message": "Hi, I'm looking for some advice about treatments and would like to speak to a skin specialist.",
+          "bottom_position": 30,
+          "right_position": 30
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "2611479755219051411": {
