@@ -1673,10 +1673,10 @@
           "type": "price_card",
           "settings": {
             "name": "Small Tattoo",
-            "main_price": "£40",
+            "main_price": "£45",
             "main_per": "Per Session",
-            "tier_1": "6 Sessions £35 per session • <strong>£210</strong>",
-            "tier_2": "10 Sessions £30 per session • <strong>£300</strong>",
+            "tier_1": "6 Sessions £35 per session • £210",
+            "tier_2": "10 Sessions £30 per session • £300",
             "tier_3": "",
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
@@ -1685,10 +1685,10 @@
           "type": "price_card",
           "settings": {
             "name": "Medium Tattoo",
-            "main_price": "£55",
+            "main_price": "£60",
             "main_per": "Per Session",
-            "tier_1": "6 Sessions £50 per session • <strong>£300</strong>",
-            "tier_2": "10 Sessions £45 per session • <strong>£450</strong>",
+            "tier_1": "6 Sessions £50 per session • £300",
+            "tier_2": "10 Sessions £45 per session • £450",
             "tier_3": "",
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
