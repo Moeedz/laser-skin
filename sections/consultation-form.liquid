@@ -543,10 +543,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let selectedMethod = '';
   let selectedWaOption = '';
+  const hideTimers = new Map();
 
   /* ---- Utility: show/hide with fade ---- */
   function showBlock(el) {
     if (!el) return;
+    /* Cancel any pending hide */
+    if (hideTimers.has(el)) {
+      clearTimeout(hideTimers.get(el));
+      hideTimers.delete(el);
+    }
     el.classList.add('visible');
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -555,16 +561,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  function hideBlock(el) {
+  function hideBlock(el, instant) {
     if (!el) return;
+    /* Cancel any pending hide */
+    if (hideTimers.has(el)) {
+      clearTimeout(hideTimers.get(el));
+      hideTimers.delete(el);
+    }
     el.classList.remove('fade-in');
-    setTimeout(() => {
+    if (instant) {
       el.classList.remove('visible');
-    }, 350);
+    } else {
+      const timer = setTimeout(() => {
+        el.classList.remove('visible');
+        hideTimers.delete(el);
+      }, 350);
+      hideTimers.set(el, timer);
+    }
   }
 
   function hideAllMethodBlocks() {
-    [emailBlock, whatsappBlock, callBlock].forEach(hideBlock);
+    [emailBlock, whatsappBlock, callBlock].forEach(el => hideBlock(el, true));
     hideAllWaSubs();
     selectedWaOption = '';
     if (waPills) {
@@ -573,7 +590,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function hideAllWaSubs() {
-    [waYouBlock, waWeBlock].forEach(hideBlock);
+    [waYouBlock, waWeBlock].forEach(el => hideBlock(el, true));
   }
 
   /* ---- Clear dynamic required / values ---- */
