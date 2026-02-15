@@ -1699,8 +1699,8 @@
             "name": "Large Tattoo",
             "main_price": "£90",
             "main_per": "Per Session",
-            "tier_1": "6 Sessions £80 per session • <strong>£480</strong>",
-            "tier_2": "10 Sessions £75 per session • <strong>£750</strong>",
+            "tier_1": "6 Sessions £80 per session • £480",
+            "tier_2": "10 Sessions £75 per session • £750",
             "tier_3": "",
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
@@ -2214,6 +2214,13 @@
             "answer": "<p>Most clients experience little to no downtime. You may notice temporary redness, mild swelling, or a warm sensation in the treated area, which typically settles within a few hours.</p><p>For tattoo removal, some areas may develop light blistering or scabbing as part of the normal healing process. We provide full aftercare guidance and adjust treatment settings carefully to minimise disruption.</p><p>Most clients return to normal activities the same day.</p>"
           }
         },
+        "faq_item_8tGC7q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you remove microblading and eyebrow tattoos?",
+            "answer": "<p>We use medical-grade laser technology specifically designed to shatter cosmetic pigments.</p>"
+          }
+        },
         "faq_item_bbzpbn": {
           "type": "faq_item",
           "settings": {
@@ -2266,6 +2273,7 @@
       },
       "block_order": [
         "faq_item_Ci3Xtq",
+        "faq_item_8tGC7q",
         "faq_item_bbzpbn",
         "faq_item_a63FCV",
         "faq_item_QjrBUE",
