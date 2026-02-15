@@ -944,21 +944,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Consultation-led"
+            "text": "Expert Consultation, Every Time"
           }
         },
         "check_item_VpB8ew": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Transparent treatment plans"
+            "text": "Clear, Honest Pricing"
           }
         },
         "check_item_BYNqz7": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No downtime"
+            "text": "Back to Routine Immediately"
           }
         },
         "trust_item_gRWDRz": {
