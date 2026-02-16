@@ -1573,6 +1573,7 @@
       "block_order": [
         "image_JDXdBL"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2738,13 +2739,13 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_UJrjgA",
     "slideshow_F8E8zn",
+    "info_hero_mXQgUU",
     "results_cards_UhJnGz",
     "slideshow_7xqREP",
     "slideshow_qhQQCg",
     "slideshow_JPbAAj",
     "doctor_profile_agYk3J",
     "slideshow_KBREUm",
-    "info_hero_mXQgUU",
     "slideshow_LLVXXg",
     "area_pricing_list_XmwMGm",
     "expectations_trust_LaadCg",
