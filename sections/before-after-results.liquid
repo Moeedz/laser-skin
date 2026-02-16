@@ -1,0 +1,340 @@
+{% style %}
+  .bar {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .bar__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .bar__texture::before, .bar__texture::after { content: ''; position: absolute; inset: 0; }
+  .bar__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .bar__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .bar__container {
+    position: relative; z-index: 1;
+    max-width: 1140px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .bar__header { text-align: center; margin-bottom: 10px; }
+
+  .bar__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 14px;
+  }
+
+  .bar__ornament {
+    text-align: center; margin-bottom: 14px;
+    color: var(--accent-color); line-height: 1;
+  }
+  .bar__ornament::before {
+    content: ''; display: inline-block; width: 60px; height: 1px;
+    background: var(--accent-color); vertical-align: middle;
+    margin-right: 10px; opacity: 0.4;
+  }
+  .bar__ornament::after {
+    content: ''; display: inline-block; width: 60px; height: 1px;
+    background: var(--accent-color); vertical-align: middle;
+    margin-left: 10px; opacity: 0.4;
+  }
+
+  .bar__subtitle {
+    font-size: var(--body-size); font-style: italic;
+    line-height: 1.6; color: var(--text-color);
+    margin: 0 auto 36px; max-width: 560px; text-align: center;
+  }
+
+  /* Cards */
+  .bar__cards {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+
+  .bar__card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 24px 22px 28px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+    display: flex; flex-direction: column;
+  }
+
+  .bar__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+  }
+
+  /* Gold double dash */
+  .bar__card-accent {
+    display: flex; gap: 5px; justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .bar__card-accent span {
+    width: 18px; height: 3px; border-radius: 2px;
+    background: var(--accent-color);
+  }
+
+  /* Title */
+  .bar__card-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--card-title-size); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 16px; line-height: 1.3;
+  }
+
+  /* Before/After images */
+  .bar__card-images {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-bottom: 6px;
+  }
+
+  .bar__card-img {
+    overflow: hidden; border-radius: 6px;
+    aspect-ratio: 3/4;
+  }
+
+  .bar__card-img img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  /* Before/After labels */
+  .bar__card-labels {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-bottom: 12px;
+  }
+
+  .bar__card-label {
+    font-size: calc(var(--body-size) - 2px);
+    color: var(--text-color); opacity: 0.6;
+    text-align: center;
+  }
+
+  /* Session info */
+  .bar__card-info {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--heading-color); margin: 0 0 14px;
+    line-height: 1.4;
+  }
+
+  /* Benefit with checkmark */
+  .bar__card-benefit {
+    display: flex; align-items: flex-start; gap: 8px;
+    text-align: left; margin-top: auto;
+  }
+
+  .bar__card-check {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 2px;
+  }
+  .bar__card-check svg { width: 17px; height: 17px; }
+
+  .bar__card-benefit-text {
+    font-size: calc(var(--body-size) - 1px);
+    line-height: 1.5; color: var(--text-color);
+  }
+
+  /* Footer */
+  .bar__footer { text-align: center; }
+
+  .bar__footer-text {
+    font-size: calc(var(--body-size) - 1px); font-style: italic;
+    color: var(--text-color); opacity: 0.6; margin: 0;
+  }
+
+  /* Animations */
+  [data-bar-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-bar-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .bar__container { padding: 0 20px; }
+    .bar__heading { font-size: calc(var(--heading-size) * 0.62); }
+    .bar__cards { grid-template-columns: 1fr; gap: 18px; max-width: 380px; margin: 0 auto 28px; }
+    .bar__card { padding: 22px 20px 24px; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .bar__container { padding: 0 16px; }
+    .bar__heading { font-size: calc(var(--heading-size) * 0.5); }
+  }
+{% endstyle %}
+
+{% assign card_blocks = section.blocks | where: 'type', 'result_card' %}
+
+<section
+  class="bar"
+  id="bar-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --card-title-size: {{ section.settings.card_title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ card_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="bar__texture"></div>{% endif %}
+
+  <div class="bar__container">
+    <div class="bar__header" data-bar-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="bar__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="bar__ornament">◆</div>
+      {% if section.settings.subtitle != blank %}
+        <p class="bar__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if card_blocks.size > 0 %}
+      <div class="bar__cards" data-bar-animate data-delay="1">
+        {% for block in card_blocks %}
+          <div class="bar__card" {{ block.shopify_attributes }}>
+            <div class="bar__card-accent">
+              <span></span><span></span>
+            </div>
+
+            {% if block.settings.title != blank %}
+              <h3 class="bar__card-title">{{ block.settings.title }}</h3>
+            {% endif %}
+
+            <div class="bar__card-images">
+              <div class="bar__card-img">
+                {% if block.settings.before_image != blank %}
+                  {{ block.settings.before_image | image_url: width: 400 | image_tag: loading: 'lazy', widths: '200,300,400' }}
+                {% else %}
+                  <div style="width:100%;height:100%;background:#ddd8d0;"></div>
+                {% endif %}
+              </div>
+              <div class="bar__card-img">
+                {% if block.settings.after_image != blank %}
+                  {{ block.settings.after_image | image_url: width: 400 | image_tag: loading: 'lazy', widths: '200,300,400' }}
+                {% else %}
+                  <div style="width:100%;height:100%;background:#ddd8d0;"></div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="bar__card-labels">
+              <span class="bar__card-label">{{ section.settings.before_label }}</span>
+              <span class="bar__card-label">{{ section.settings.after_label }}</span>
+            </div>
+
+            {% if block.settings.session_info != blank %}
+              <p class="bar__card-info">{{ block.settings.session_info }}</p>
+            {% endif %}
+
+            {% if block.settings.benefit != blank %}
+              <div class="bar__card-benefit">
+                <span class="bar__card-check">
+                  <svg viewBox="0 0 17 17" fill="none"><path d="M3 8.5L6.5 12L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="bar__card-benefit-text">{{ block.settings.benefit }}</span>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="bar__footer" data-bar-animate data-delay="2">
+        <p class="bar__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('bar-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-bar-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Before After Results",
+  "tag": "section",
+  "class": "before-after-results-section",
+  "settings": [
+    { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Real results, tailored by treatment depth.</p>" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Fractional CO₂ laser treatments adjusted to your skin's needs and tolerance for downtime." },
+    { "type": "text", "id": "before_label", "label": "Before Label", "default": "Before" },
+    { "type": "text", "id": "after_label", "label": "After Label", "default": "After" },
+    { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "*Individual results may vary." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e5dfda" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#2a2a2a" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#555555" },
+    { "type": "color", "id": "accent_color", "label": "Accent / Checkmark Color", "default": "#b09a60" },
+    { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#f5f0eb" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 40, "unit": "px" },
+    { "type": "range", "id": "card_title_font_size", "label": "Card Title Size", "min": 18, "max": 30, "step": 1, "default": 24, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "result_card",
+      "name": "Result Card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Glow Reset" },
+        { "type": "image_picker", "id": "before_image", "label": "Before Image" },
+        { "type": "image_picker", "id": "after_image", "label": "After Image" },
+        { "type": "text", "id": "session_info", "label": "Session Info", "default": "1 session · Minimal downtime" },
+        { "type": "textarea", "id": "benefit", "label": "Benefit Text", "default": "Targets sun damage, open pores, and dullness" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before After Results",
+      "blocks": [
+        { "type": "result_card", "settings": { "title": "Glow Reset", "session_info": "1 session · Minimal downtime", "benefit": "Targets sun damage, open pores, and dullness" } },
+        { "type": "result_card", "settings": { "title": "Texture Reset", "session_info": "1 session · Moderate downtime", "benefit": "Improves fine lines, mild acne scars and crepey skin" } },
+        { "type": "result_card", "settings": { "title": "Scar Reset", "session_info": "1 session · Deeper resurfacing", "benefit": "Treats deep rolling scars and surgical scars." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
