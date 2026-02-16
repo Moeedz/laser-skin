@@ -1184,9 +1184,10 @@
       ],
       "name": "Product Hero",
       "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_jcxzv9jcxzv9jcxz.png",
         "image_position": "center center",
-        "desktop_height": 620,
-        "mobile_height": 320,
+        "desktop_height": 880,
+        "mobile_height": 200,
         "background_color": "#f5d6d0",
         "overlay_color_start": "#f5d6d0",
         "overlay_color_mid": "#f5d6d0",
