@@ -1880,6 +1880,8 @@
           "type": "result_card",
           "settings": {
             "title": "Glow Reset",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.39.30.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.39.41.png",
             "session_info": "1 session · Minimal downtime",
             "benefit": "Targets sun damage, open pores, and dullness"
           }
