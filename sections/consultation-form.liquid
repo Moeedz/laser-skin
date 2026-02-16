@@ -104,6 +104,12 @@
     color: {{ section.settings.input_placeholder_color }};
   }
 
+  .cf-input-preselected {
+    background: {{ section.settings.preselected_background }};
+    color: {{ section.settings.preselected_text_color }};
+    cursor: default;
+  }
+
   .cf-textarea {
     min-height: 100px;
     resize: vertical;
@@ -388,6 +394,29 @@
         </div>
       {%- endif -%}
 
+      {% comment %} ===== TREATMENT / SERVICE (pre-selected) ===== {% endcomment %}
+      {% if section.settings.show_treatment_field %}
+        {%- liquid
+          if product.title != blank
+            assign preselected_treatment = product.title
+          else
+            assign preselected_treatment = section.settings.default_treatment_value
+          endif
+        -%}
+        <div class="cf-group">
+          <label class="cf-label" for="cf-treatment-{{ section.id }}">
+            {{ section.settings.treatment_label }}
+          </label>
+          <input
+            type="text"
+            class="cf-input cf-input-preselected"
+            id="cf-treatment-{{ section.id }}"
+            name="contact[note]"
+            value="{{ preselected_treatment }}"
+            readonly>
+        </div>
+      {% endif %}
+
       {% comment %} ===== NAME ===== {% endcomment %}
       <div class="cf-group">
         <label class="cf-label" for="cf-name-{{ section.id }}">
@@ -499,8 +528,8 @@
         </div>
       {% endif %}
 
-      {% comment %} Hidden field to store full contact path for the notification email {% endcomment %}
-      <input type="hidden" name="contact[note]" id="cf-contact-path-{{ section.id }}" value="">
+      {% comment %} Hidden field to store contact path for the notification email {% endcomment %}
+      <input type="hidden" name="contact[company]" id="cf-contact-path-{{ section.id }}" value="">
 
       {% comment %} ===== SUBMIT ===== {% endcomment %}
       <button type="submit" class="cf-submit" id="cf-submit-{{ section.id }}">
@@ -1040,6 +1069,41 @@ document.addEventListener('DOMContentLoaded', function() {
       "id": "input_focus_shadow_color",
       "label": "Input Focus Shadow Color",
       "default": "rgba(184, 161, 100, 0.15)"
+    },
+    {
+      "type": "header",
+      "content": "Treatment / Service Field"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_treatment_field",
+      "label": "Show Treatment Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "treatment_label",
+      "label": "Treatment Field Label",
+      "default": "Treatment"
+    },
+    {
+      "type": "text",
+      "id": "default_treatment_value",
+      "label": "Default Value (non-product pages)",
+      "default": "General Consultation",
+      "info": "On product pages this auto-fills with the product title. On other pages it uses this value."
+    },
+    {
+      "type": "color",
+      "id": "preselected_background",
+      "label": "Pre-selected Background",
+      "default": "#f5f4f1"
+    },
+    {
+      "type": "color",
+      "id": "preselected_text_color",
+      "label": "Pre-selected Text Color",
+      "default": "#555555"
     },
     {
       "type": "header",
