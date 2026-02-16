@@ -1941,6 +1941,60 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_mXQgUU": {
+      "type": "info-hero",
+      "blocks": {
+        "point_qTaDJh": {
+          "type": "point",
+          "settings": {
+            "text": "Stimulates collagen and tissue regeneration"
+          }
+        },
+        "point_384rfx": {
+          "type": "point",
+          "settings": {
+            "text": "Improves skin texture, elasticity, and hydration"
+          }
+        },
+        "point_3iXxHX": {
+          "type": "point",
+          "settings": {
+            "text": "Supports natural repair without altering facial structure"
+          }
+        },
+        "point_nBXjtA": {
+          "type": "point",
+          "settings": {
+            "text": "Suitable for delicate areas such as under-eyes and neck"
+          }
+        }
+      },
+      "block_order": [
+        "point_qTaDJh",
+        "point_384rfx",
+        "point_3iXxHX",
+        "point_nBXjtA"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What are Polynucleotides?",
+        "body": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd2c8ee",
+        "overlay_mid": "#ddd2c8b0",
+        "overlay_fade": "#ddd2c850",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_LLVXXg": {
       "type": "slideshow",
       "blocks": {
@@ -2765,6 +2819,7 @@
     "slideshow_qhQQCg",
     "slideshow_JPbAAj",
     "slideshow_KBREUm",
+    "info_hero_mXQgUU",
     "slideshow_LLVXXg",
     "area_pricing_list_XmwMGm",
     "slideshow_LUCXtJ",
