@@ -2021,6 +2021,66 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "area_pricing_list_XmwMGm": {
+      "type": "area-pricing-list",
+      "blocks": {
+        "price_row_YH6XWM": {
+          "type": "price_row",
+          "settings": {
+            "title": "1 Area – from £140.00",
+            "badge": "",
+            "subtitle": "Target Specific",
+            "description": "Ideal for treating a single concern, such as Crow's Feet (eyes) or Glabellar lines (frown). Includes review"
+          }
+        },
+        "price_row_g7qp79": {
+          "type": "price_row",
+          "settings": {
+            "title": "2 Areas – from £220.00",
+            "badge": "",
+            "subtitle": "The Refresh",
+            "description": "Treats two connected areas to maintain balance, typically the Frown and Forehead. Includes review"
+          }
+        },
+        "price_row_LRi7MD": {
+          "type": "price_row",
+          "settings": {
+            "title": "3 Areas – from £270.00",
+            "badge": "Most Popular",
+            "subtitle": "Complete Upper Face",
+            "description": "Treats the Forehead, Frown, and Eyes for a harmonious, lifted result. Includes review"
+          }
+        },
+        "price_row_BbUKck": {
+          "type": "price_row",
+          "settings": {
+            "title": "4 Areas – from £285.00",
+            "badge": "",
+            "subtitle": "Advanced Lift",
+            "description": "Includes the standard 3 areas plus an advanced zone (e.g. Bunny Lines or Gummy Smile). Includes review"
+          }
+        }
+      },
+      "block_order": [
+        "price_row_YH6XWM",
+        "price_row_g7qp79",
+        "price_row_LRi7MD",
+        "price_row_BbUKck"
+      ],
+      "name": "Area Pricing List",
+      "settings": {
+        "intro_text": "Following your complimentary medical assessment, these are the final prices should you wish to proceed with treatment.",
+        "section_bg": "#2e2e3a",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e0d8d0",
+        "gold_color": "#d4c4a0",
+        "title_font_size": 32,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_LUCXtJ": {
       "type": "slideshow",
       "blocks": {
@@ -2650,6 +2710,7 @@
     "slideshow_JPbAAj",
     "slideshow_KBREUm",
     "slideshow_LLVXXg",
+    "area_pricing_list_XmwMGm",
     "slideshow_LUCXtJ",
     "expectations_trust_LaadCg",
     "consultation_form_teXte8",
