@@ -1890,6 +1890,8 @@
           "type": "result_card",
           "settings": {
             "title": "Texture Reset",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.40.51.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.00.png",
             "session_info": "1 session · Moderate downtime",
             "benefit": "Improves fine lines, mild acne scars and crepey skin"
           }
