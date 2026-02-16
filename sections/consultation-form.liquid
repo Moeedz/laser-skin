@@ -160,14 +160,6 @@
     transform: translateY(0);
   }
 
-  /* Info Note */
-  .cf-info-note {
-    font-size: {{ section.settings.info_note_font_size }}px;
-    color: {{ section.settings.info_note_color }};
-    margin-bottom: 16px;
-    line-height: 1.5;
-  }
-
   /* WhatsApp Sub-question */
   .cf-sub-label {
     font-size: {{ section.settings.label_font_size }}px;
@@ -411,6 +403,21 @@
           required>
       </div>
 
+      {% comment %} ===== EMAIL (always visible) ===== {% endcomment %}
+      <div class="cf-group">
+        <label class="cf-label" for="cf-email-{{ section.id }}">
+          {{ section.settings.email_label }}
+        </label>
+        <input
+          type="email"
+          class="cf-input"
+          id="cf-email-{{ section.id }}"
+          name="contact[email]"
+          placeholder="{{ section.settings.email_placeholder }}"
+          autocomplete="email"
+          required>
+      </div>
+
       {% comment %} ===== PREFERRED CONTACT METHOD ===== {% endcomment %}
       <div class="cf-group">
         <label class="cf-label">{{ section.settings.contact_method_label }}</label>
@@ -422,22 +429,6 @@
           {% endfor %}
         </div>
         <input type="hidden" name="contact[subject]" id="cf-method-value-{{ section.id }}" value="">
-      </div>
-
-      {% comment %} ===== SINGLE EMAIL FIELD (always present, JS controls value) ===== {% endcomment %}
-      <input type="hidden" name="contact[email]" id="cf-email-real-{{ section.id }}" value="noreply@placeholder.com">
-
-      {% comment %} ===== EMAIL CONDITIONAL ===== {% endcomment %}
-      <div class="cf-conditional" id="cf-email-block-{{ section.id }}" data-method="email">
-        <div class="cf-info-note">{{ section.settings.email_info_note }}</div>
-        <div class="cf-group">
-          <input
-            type="email"
-            class="cf-input cf-email-visible"
-            id="cf-email-{{ section.id }}"
-            placeholder="{{ section.settings.email_placeholder }}"
-            autocomplete="email">
-        </div>
       </div>
 
       {% comment %} ===== WHATSAPP CONDITIONAL ===== {% endcomment %}
@@ -535,11 +526,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const methodValue = S.querySelector('#cf-method-value-{{ section.id }}');
   const contactPath = S.querySelector('#cf-contact-path-{{ section.id }}');
 
-  const emailBlock = S.querySelector('#cf-email-block-{{ section.id }}');
   const whatsappBlock = S.querySelector('#cf-whatsapp-block-{{ section.id }}');
   const callBlock = S.querySelector('#cf-call-block-{{ section.id }}');
-  const realEmail = S.querySelector('#cf-email-real-{{ section.id }}');
-  const visibleEmail = S.querySelector('#cf-email-{{ section.id }}');
 
   const waPills = S.querySelector('#cf-wa-pills-{{ section.id }}');
   const waYouBlock = S.querySelector('#cf-wa-you-{{ section.id }}');
@@ -585,7 +573,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function hideAllMethodBlocks() {
-    [emailBlock, whatsappBlock, callBlock].forEach(el => hideBlock(el, true));
+    [whatsappBlock, callBlock].forEach(el => hideBlock(el, true));
     hideAllWaSubs();
     selectedWaOption = '';
     if (waPills) {
@@ -600,14 +588,9 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ---- Clear dynamic required / values ---- */
   function clearConditionalInputs() {
     const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
-
     if (waPhone) {
       waPhone.removeAttribute('required');
       waPhone.value = '';
-    }
-    if (visibleEmail) {
-      visibleEmail.value = '';
-      visibleEmail.style.borderColor = '';
     }
   }
 
@@ -647,20 +630,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (methodValue) methodValue.value = this.textContent.trim();
 
         /* Show relevant block */
-        if (method === 'email') {
-          showBlock(emailBlock);
-          /* Clear fallback so user must enter real email */
-          if (realEmail) realEmail.value = '';
-        } else if (method === 'whatsapp') {
+        if (method === 'whatsapp') {
           showBlock(whatsappBlock);
-          /* Set fallback email for Shopify validation */
-          if (realEmail) realEmail.value = 'noreply@placeholder.com';
-          if (visibleEmail) visibleEmail.value = '';
         } else if (method === 'call') {
           showBlock(callBlock);
-          /* Set fallback email for Shopify validation */
-          if (realEmail) realEmail.value = 'noreply@placeholder.com';
-          if (visibleEmail) visibleEmail.value = '';
         }
 
         updateContactPath();
@@ -714,20 +687,6 @@ document.addEventListener('DOMContentLoaded', function() {
         methodPills.style.outlineOffset = '4px';
         methodPills.style.borderRadius = '8px';
         return;
-      }
-
-      /* If Email selected, sync visible input to hidden field and validate */
-      if (selectedMethod === 'email') {
-        if (visibleEmail && realEmail) {
-          const emailVal = visibleEmail.value.trim();
-          if (!emailVal || !visibleEmail.checkValidity()) {
-            e.preventDefault();
-            visibleEmail.style.borderColor = '#dc3545';
-            visibleEmail.focus();
-            return;
-          }
-          realEmail.value = emailVal;
-        }
       }
 
       /* Call — just a CTA, no server submission needed */
@@ -1106,46 +1065,30 @@ document.addEventListener('DOMContentLoaded', function() {
       "type": "text",
       "id": "contact_method_label",
       "label": "Contact Method Label",
-      "default": "Preferred contact method"
+      "default": "How may we reach you?"
     },
     {
       "type": "text",
       "id": "contact_method_options",
       "label": "Contact Method Options",
-      "default": "Email, WhatsApp, Call",
-      "info": "Comma-separated values. Must include Email, WhatsApp, and/or Call for conditional logic to work."
+      "default": "WhatsApp, Call",
+      "info": "Comma-separated values. WhatsApp and Call have built-in conditional logic."
     },
     {
       "type": "header",
-      "content": "Email Settings"
+      "content": "Email Field"
     },
     {
       "type": "text",
-      "id": "email_info_note",
-      "label": "Email Info Note",
-      "default": "We'll send everything clearly by email so you can review it in your own time."
+      "id": "email_label",
+      "label": "Email Label",
+      "default": "Email Address"
     },
     {
       "type": "text",
       "id": "email_placeholder",
       "label": "Email Placeholder",
       "default": "Email Address"
-    },
-    {
-      "type": "color",
-      "id": "info_note_color",
-      "label": "Info Note Text Color",
-      "default": "#888888"
-    },
-    {
-      "type": "range",
-      "id": "info_note_font_size",
-      "label": "Info Note Font Size",
-      "min": 12,
-      "max": 16,
-      "step": 1,
-      "default": 14,
-      "unit": "px"
     },
     {
       "type": "header",
