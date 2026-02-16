@@ -709,6 +709,31 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = S.querySelector('.cf-form');
   if (form) {
     form.addEventListener('submit', function(e) {
+      /* Helper: check required fields are filled */
+      function validateCoreFields() {
+        const name = S.querySelector('#cf-name-{{ section.id }}');
+        const email = S.querySelector('#cf-email-{{ section.id }}');
+        let valid = true;
+
+        if (name && !name.value.trim()) {
+          name.style.borderColor = '#dc3545';
+          name.focus();
+          valid = false;
+        } else if (name) {
+          name.style.borderColor = '';
+        }
+
+        if (email && (!email.value.trim() || !email.checkValidity())) {
+          email.style.borderColor = '#dc3545';
+          if (valid) email.focus();
+          valid = false;
+        } else if (email) {
+          email.style.borderColor = '';
+        }
+
+        return valid;
+      }
+
       /* Must have selected a contact method */
       if (!selectedMethod) {
         e.preventDefault();
@@ -718,19 +743,31 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      /* Call — just a CTA, no server submission needed */
+      /* Call — validate core fields, submit form, then open phone link */
       if (selectedMethod === 'call') {
-        e.preventDefault();
-        const callLink = S.querySelector('.cf-call-btn');
-        if (callLink) callLink.click();
+        if (!validateCoreFields()) {
+          e.preventDefault();
+          return;
+        }
+        /* Let form submit normally, then open call link */
+        setTimeout(() => {
+          const callLink = S.querySelector('.cf-call-btn');
+          if (callLink) window.location.href = callLink.href;
+        }, 100);
         return;
       }
 
-      /* WhatsApp > "You contact us" — no server submission needed */
+      /* WhatsApp > "You contact us" — validate core fields, submit form, then open WhatsApp */
       if (selectedMethod === 'whatsapp' && selectedWaOption === 'you-contact') {
-        e.preventDefault();
-        const waLink = S.querySelector('.cf-whatsapp-btn');
-        if (waLink) waLink.click();
+        if (!validateCoreFields()) {
+          e.preventDefault();
+          return;
+        }
+        /* Let form submit normally, then open WhatsApp link */
+        setTimeout(() => {
+          const waLink = S.querySelector('.cf-whatsapp-btn');
+          if (waLink) window.open(waLink.href, '_blank');
+        }, 100);
         return;
       }
 
@@ -743,6 +780,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
+      /* WhatsApp > "Message me" — validate core fields + phone */
+      if (selectedMethod === 'whatsapp' && selectedWaOption === 'we-contact') {
+        if (!validateCoreFields()) {
+          e.preventDefault();
+          return;
+        }
+        const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
+        if (waPhone && !waPhone.value.trim()) {
+          e.preventDefault();
+          waPhone.style.borderColor = '#dc3545';
+          waPhone.focus();
+          return;
+        }
+      }
+
       /* Consolidate: contact path is already in contact[note], no need to prepend to body */
     });
   }
@@ -752,6 +804,13 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', function() {
       const group = this.closest('.cf-pill-group');
       if (group) group.style.outline = 'none';
+    });
+  });
+
+  /* Clear red border on inputs when user starts typing */
+  S.querySelectorAll('.cf-input, .cf-textarea').forEach(input => {
+    input.addEventListener('input', function() {
+      this.style.borderColor = '';
     });
   });
 });
