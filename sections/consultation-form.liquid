@@ -233,6 +233,13 @@
     flex-shrink: 0;
   }
 
+  .cf-or-text {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999999;
+  }
+
   /* Submit Button */
   .cf-submit {
     width: 100%;
@@ -503,6 +510,18 @@
       {% comment %} ===== CALL CONDITIONAL ===== {% endcomment %}
       <div class="cf-conditional" id="cf-call-block-{{ section.id }}" data-method="call">
         <div class="cf-group">
+          <label class="cf-label" for="cf-call-phone-{{ section.id }}">
+            {{ section.settings.call_phone_label }}
+          </label>
+          <input
+            type="tel"
+            class="cf-input"
+            id="cf-call-phone-{{ section.id }}"
+            name="contact[phone]"
+            placeholder="{{ section.settings.phone_placeholder }}"
+            autocomplete="tel">
+        </div>
+        <div class="cf-group">
           <a
             href="tel:{{ section.settings.clinic_phone_number }}"
             class="cf-call-btn">
@@ -511,6 +530,7 @@
             </svg>
             {{ section.settings.call_button_text }}
           </a>
+          <span class="cf-or-text">or enter your number above and we'll call you</span>
         </div>
       </div>
 
@@ -617,10 +637,14 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ---- Clear dynamic required / values ---- */
   function clearConditionalInputs() {
     const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
-    if (waPhone) {
-      waPhone.removeAttribute('required');
-      waPhone.value = '';
-    }
+    const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
+    [waPhone, callPhone].forEach(input => {
+      if (input) {
+        input.removeAttribute('required');
+        input.value = '';
+        input.style.borderColor = '';
+      }
+    });
   }
 
   function setRequired(selector) {
@@ -743,17 +767,19 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      /* Call — validate core fields, submit form, then open phone link */
+      /* Call — validate core fields + phone, submit form, then open phone link */
       if (selectedMethod === 'call') {
         if (!validateCoreFields()) {
           e.preventDefault();
           return;
         }
-        /* Let form submit normally, then open call link */
-        setTimeout(() => {
-          const callLink = S.querySelector('.cf-call-btn');
-          if (callLink) window.location.href = callLink.href;
-        }, 100);
+        const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
+        if (callPhone && !callPhone.value.trim()) {
+          e.preventDefault();
+          callPhone.style.borderColor = '#dc3545';
+          callPhone.focus();
+          return;
+        }
         return;
       }
 
@@ -1288,6 +1314,12 @@ document.addEventListener('DOMContentLoaded', function() {
       "id": "call_button_text",
       "label": "Call Button Text",
       "default": "Call Us Now"
+    },
+    {
+      "type": "text",
+      "id": "call_phone_label",
+      "label": "Call Phone Field Label",
+      "default": "Your phone number"
     },
     {
       "type": "color",
