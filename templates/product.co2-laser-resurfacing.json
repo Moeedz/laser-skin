@@ -1900,6 +1900,8 @@
           "type": "result_card",
           "settings": {
             "title": "Scar Reset",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.49.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.54.png",
             "session_info": "1 session · Deeper resurfacing",
             "benefit": "Treats deep rolling scars and surgical scars."
           }
