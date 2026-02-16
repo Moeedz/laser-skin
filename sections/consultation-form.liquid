@@ -424,6 +424,9 @@
         <input type="hidden" name="contact[subject]" id="cf-method-value-{{ section.id }}" value="">
       </div>
 
+      {% comment %} Hidden fallback email for Shopify validation when Email is not selected {% endcomment %}
+      <input type="hidden" name="contact[email]" id="cf-fallback-email-{{ section.id }}" value="noreply@placeholder.com">
+
       {% comment %} ===== EMAIL CONDITIONAL ===== {% endcomment %}
       <div class="cf-conditional" id="cf-email-block-{{ section.id }}" data-method="email">
         <div class="cf-info-note">{{ section.settings.email_info_note }}</div>
@@ -536,6 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const emailBlock = S.querySelector('#cf-email-block-{{ section.id }}');
   const whatsappBlock = S.querySelector('#cf-whatsapp-block-{{ section.id }}');
   const callBlock = S.querySelector('#cf-call-block-{{ section.id }}');
+  const fallbackEmail = S.querySelector('#cf-fallback-email-{{ section.id }}');
 
   const waPills = S.querySelector('#cf-wa-pills-{{ section.id }}');
   const waYouBlock = S.querySelector('#cf-wa-you-{{ section.id }}');
@@ -645,10 +649,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (method === 'email') {
           showBlock(emailBlock);
           setRequired('#cf-email-{{ section.id }}');
+          /* Disable fallback so real email field is used */
+          if (fallbackEmail) fallbackEmail.disabled = true;
         } else if (method === 'whatsapp') {
           showBlock(whatsappBlock);
+          /* Re-enable fallback email */
+          if (fallbackEmail) fallbackEmail.disabled = false;
         } else if (method === 'call') {
           showBlock(callBlock);
+          /* Re-enable fallback email */
+          if (fallbackEmail) fallbackEmail.disabled = false;
         }
 
         updateContactPath();
