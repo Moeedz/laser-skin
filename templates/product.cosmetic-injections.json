@@ -2283,7 +2283,7 @@
         "preselected_text_color": "#333333",
         "name_label": "Name",
         "name_placeholder": "Your Name",
-        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_label": "How can we reach you?",
         "contact_method_options": "Email, WhatsApp, Phone Call",
         "email_label": "Email Address",
         "email_placeholder": "Email Address",
