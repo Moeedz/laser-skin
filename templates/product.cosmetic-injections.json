@@ -1112,6 +1112,109 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_UJrjgA": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_paKxgg": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Deeply cleanses and hydrates"
+          }
+        },
+        "check_item_bX4iLm": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Improves texture, tone, and congestion"
+          }
+        },
+        "check_item_qbLjVU": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No downtime, immediate glow"
+          }
+        },
+        "trust_item_VQqbQC": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_Kxr8jN": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_zDYz67": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_pCDbDJ": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_paKxgg",
+        "check_item_bX4iLm",
+        "check_item_qbLjVU",
+        "trust_item_VQqbQC",
+        "trust_item_Kxr8jN",
+        "trust_item_zDYz67",
+        "trust_item_pCDbDJ"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "image_position": "center center",
+        "desktop_height": 620,
+        "mobile_height": 320,
+        "background_color": "#f5d6d0",
+        "overlay_color_start": "#f5d6d0",
+        "overlay_color_mid": "#f5d6d0",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Smooth lines",
+        "subheading_highlight": "Natural expression preserved",
+        "subheading": "",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Deep cleansing, gentle exfoliation, and intense hydration in one medical-grade facial.</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your Hydrofacial",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#c4a080",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_F8E8zn": {
       "type": "slideshow",
       "blocks": {
@@ -1950,6 +2053,7 @@
       "block_order": [
         "image_AAgnYF"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2081,13 +2185,6 @@
             "text": "Test patch included"
           }
         },
-        "trust_point_ArfcYc": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "parking",
-            "text": "Free parking"
-          }
-        },
         "trust_point_edVakH": {
           "type": "trust_point",
           "settings": {
@@ -2108,7 +2205,6 @@
         "trust_point_myiikT",
         "trust_point_WRPjgJ",
         "trust_point_DRh74h",
-        "trust_point_ArfcYc",
         "trust_point_edVakH",
         "trust_point_aYeTAc"
       ],
@@ -2548,6 +2644,7 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_UJrjgA",
     "slideshow_F8E8zn",
     "slideshow_7xqREP",
     "slideshow_qhQQCg",
