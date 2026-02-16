@@ -755,12 +755,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      /* Consolidate body: include contact path summary */
-      const bodyField = S.querySelector('#cf-message-{{ section.id }}');
-      const pathSummary = 'Contact method: ' + (contactPath ? contactPath.value : selectedMethod);
-      if (bodyField) {
-        bodyField.value = pathSummary + '\n\n' + bodyField.value;
-      }
+      /* Consolidate: contact path is already in contact[note], no need to prepend to body */
     });
   }
 
