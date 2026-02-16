@@ -673,10 +673,10 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ---- Update the hidden contact path summary ---- */
   function updateContactPath() {
     let path = selectedMethod;
-    if (selectedMethod === 'whatsapp' && selectedWaOption) {
+    if (selectedMethod.includes('whatsapp') && selectedWaOption) {
       path += ' > ' + selectedWaOption;
     }
-    if (selectedMethod === 'call' && selectedCallOption) {
+    if (selectedMethod.includes('call') && selectedCallOption) {
       path += ' > ' + selectedCallOption;
     }
     if (contactPath) contactPath.value = path;
@@ -704,9 +704,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (methodValue) methodValue.value = this.textContent.trim();
 
         /* Show relevant block */
-        if (method === 'whatsapp') {
+        if (method.includes('whatsapp')) {
           showBlock(whatsappBlock);
-        } else if (method === 'call') {
+        } else if (method.includes('call')) {
           showBlock(callBlock);
         }
 
@@ -823,7 +823,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       /* Call — validate core fields, submit form, then open phone link */
-      if (selectedMethod === 'call') {
+      if (selectedMethod.includes('call')) {
         if (!selectedCallOption) {
           e.preventDefault();
           callPills.style.outline = '2px solid #dc3545';
@@ -859,7 +859,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       /* WhatsApp > "You contact us" — validate core fields, submit form, then open WhatsApp */
-      if (selectedMethod === 'whatsapp' && selectedWaOption === 'you-contact') {
+      if (selectedMethod.includes('whatsapp') && selectedWaOption === 'you-contact') {
         if (!validateCoreFields()) {
           e.preventDefault();
           return;
@@ -873,7 +873,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       /* WhatsApp requires a sub-selection */
-      if (selectedMethod === 'whatsapp' && !selectedWaOption) {
+      if (selectedMethod.includes('whatsapp') && !selectedWaOption) {
         e.preventDefault();
         waPills.style.outline = '2px solid #dc3545';
         waPills.style.outlineOffset = '4px';
@@ -882,7 +882,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       /* WhatsApp > "Message me" — validate core fields + phone */
-      if (selectedMethod === 'whatsapp' && selectedWaOption === 'we-contact') {
+      if (selectedMethod.includes('whatsapp') && selectedWaOption === 'we-contact') {
         if (!validateCoreFields()) {
           e.preventDefault();
           return;
