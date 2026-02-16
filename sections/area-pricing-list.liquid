@@ -1,0 +1,220 @@
+{% style %}
+  .apl {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .apl__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .apl__texture::before, .apl__texture::after { content: ''; position: absolute; inset: 0; }
+  .apl__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .apl__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.015 0.06' numOctaves='4' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .apl__container {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Intro */
+  .apl__intro {
+    text-align: center; margin-bottom: 40px;
+  }
+
+  .apl__intro-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-style: italic;
+    line-height: 1.6; color: var(--light-color); opacity: 0.8; margin: 0;
+  }
+
+  /* Rows */
+  .apl__rows {
+    display: flex; flex-direction: column; gap: 0;
+  }
+
+  .apl__row {
+    padding: 28px 0;
+  }
+
+  .apl__row-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent);
+  }
+
+  /* Title line: "1 Area – from £140.00 (Most Popular)" */
+  .apl__row-header {
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .apl__row-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--title-size); font-weight: 400;
+    color: var(--gold-color); margin: 0; line-height: 1.3;
+  }
+
+  .apl__row-badge {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px); font-style: italic;
+    color: var(--gold-color); opacity: 0.7;
+  }
+
+  /* Subtitle */
+  .apl__row-subtitle {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-weight: 400;
+    color: var(--light-color); margin: 0 0 8px; line-height: 1.3;
+  }
+
+  /* Description */
+  .apl__row-desc {
+    font-size: var(--body-size); line-height: 1.6;
+    color: var(--light-color); opacity: 0.7; margin: 0;
+  }
+
+  /* Animations */
+  [data-apl-animate] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+  }
+  [data-apl-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .apl__container { padding: 0 20px; }
+    .apl__row-title { font-size: calc(var(--title-size) * 0.78); }
+    .apl__row-header { gap: 8px; }
+  }
+  @media screen and (max-width: 480px) {
+    .apl__container { padding: 0 16px; }
+    .apl__row-title { font-size: calc(var(--title-size) * 0.65); }
+    .apl__row { padding: 22px 0; }
+  }
+{% endstyle %}
+
+{% assign row_blocks = section.blocks | where: 'type', 'price_row' %}
+
+<section
+  class="apl"
+  id="apl-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --light-color: {{ section.settings.light_color }};
+    --gold-color: {{ section.settings.gold_color }};
+    --title-size: {{ section.settings.title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="apl__texture"></div>{% endif %}
+
+  <div class="apl__container">
+    {% if section.settings.intro_text != blank %}
+      <div class="apl__intro" data-apl-animate data-delay="0">
+        <p class="apl__intro-text">{{ section.settings.intro_text }}</p>
+      </div>
+    {% endif %}
+
+    {% if row_blocks.size > 0 %}
+      <div class="apl__rows">
+        {% for block in row_blocks %}
+          <div class="apl__row" {{ block.shopify_attributes }} data-apl-animate data-delay="{{ forloop.index }}">
+            <div class="apl__row-header">
+              {% if block.settings.title != blank %}
+                <h3 class="apl__row-title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.badge != blank %}
+                <span class="apl__row-badge">({{ block.settings.badge }})</span>
+              {% endif %}
+            </div>
+            {% if block.settings.subtitle != blank %}
+              <p class="apl__row-subtitle">{{ block.settings.subtitle }}</p>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p class="apl__row-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+          {% unless forloop.last %}
+            <div class="apl__row-divider"></div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('apl-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-apl-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 100);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Area Pricing List",
+  "tag": "section",
+  "class": "area-pricing-list-section",
+  "settings": [
+    { "type": "textarea", "id": "intro_text", "label": "Intro Text", "default": "Following your complimentary medical assessment, these are the final prices should you wish to proceed with treatment." },
+    { "type": "header", "content": "Background" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#2e2e3a" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Fabric Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 90, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "light_color", "label": "Text Color", "default": "#e0d8d0" },
+    { "type": "color", "id": "gold_color", "label": "Title / Price Color", "default": "#d4c4a0" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "title_font_size", "label": "Title Font Size", "min": 24, "max": 48, "step": 2, "default": 32, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "price_row",
+      "name": "Pricing Row",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title + Price", "default": "1 Area – from £140.00" },
+        { "type": "text", "id": "badge", "label": "Badge (optional)", "info": "e.g. Most Popular" },
+        { "type": "text", "id": "subtitle", "label": "Treatment Name", "default": "Target Specific" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Ideal for treating a single concern, such as Crow's Feet (eyes) or Glabellar lines (frown). Includes review" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Area Pricing List",
+      "blocks": [
+        { "type": "price_row", "settings": { "title": "1 Area – from £140.00", "subtitle": "Target Specific", "description": "Ideal for treating a single concern, such as Crow's Feet (eyes) or Glabellar lines (frown). Includes review" } },
+        { "type": "price_row", "settings": { "title": "2 Areas – from £220.00", "subtitle": "The Refresh", "description": "Treats two connected areas to maintain balance, typically the Frown and Forehead. Includes review" } },
+        { "type": "price_row", "settings": { "title": "3 Areas – from £270.00", "badge": "Most Popular", "subtitle": "Complete Upper Face", "description": "Treats the Forehead, Frown, and Eyes for a harmonious, lifted result. Includes review" } },
+        { "type": "price_row", "settings": { "title": "4 Areas – from £285.00", "subtitle": "Advanced Lift", "description": "Includes the standard 3 areas plus an advanced zone (e.g. Bunny Lines or Gummy Smile). Includes review" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
