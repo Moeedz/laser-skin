@@ -116,6 +116,32 @@
     line-height: 1.5;
   }
 
+  .cf-select {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: {{ section.settings.input_font_size }}px;
+    color: {{ section.settings.input_text_color }};
+    background: {{ section.settings.input_background }};
+    border: {{ section.settings.input_border_width }}px solid {{ section.settings.input_border_color }};
+    border-radius: {{ section.settings.input_border_radius }}px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px;
+    padding-right: 44px;
+    cursor: pointer;
+  }
+
+  .cf-select:focus {
+    outline: none;
+    border-color: {{ section.settings.input_focus_border_color }};
+    box-shadow: 0 0 0 3px {{ section.settings.input_focus_shadow_color }};
+  }
+
   /* Pill Button Groups */
   .cf-pill-group {
     display: flex;
@@ -199,35 +225,6 @@
   }
 
   .cf-whatsapp-btn svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-  }
-
-  /* Call CTA Button */
-  .cf-call-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    background: {{ section.settings.call_button_background }};
-    color: {{ section.settings.call_button_text_color }};
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: {{ section.settings.button_border_radius }}px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-family: inherit;
-    margin-top: 4px;
-  }
-
-  .cf-call-btn:hover {
-    background: {{ section.settings.call_button_hover_background }};
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  .cf-call-btn svg {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
@@ -348,11 +345,6 @@
     }
 
     .cf-whatsapp-btn {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .cf-call-btn {
       width: 100%;
       justify-content: center;
     }
@@ -503,38 +495,32 @@
       {% comment %} ===== CALL CONDITIONAL ===== {% endcomment %}
       <div class="cf-conditional" id="cf-call-block-{{ section.id }}" data-method="call">
         <div class="cf-group">
-          <span class="cf-sub-label">{{ section.settings.call_sub_label }}</span>
-          <div class="cf-pill-group" id="cf-call-pills-{{ section.id }}">
-            <button type="button" class="cf-pill" data-call="you-call">{{ section.settings.call_you_call_text }}</button>
-            <button type="button" class="cf-pill" data-call="we-call">{{ section.settings.call_we_call_text }}</button>
-          </div>
+          <label class="cf-label" for="cf-call-phone-{{ section.id }}">
+            {{ section.settings.call_phone_label }}
+          </label>
+          <input
+            type="tel"
+            class="cf-input"
+            id="cf-call-phone-{{ section.id }}"
+            name="contact[phone]"
+            placeholder="{{ section.settings.phone_placeholder }}"
+            autocomplete="tel">
         </div>
-
-        {% comment %} Call > You call us {% endcomment %}
-        <div class="cf-conditional" id="cf-call-you-{{ section.id }}" data-call-sub="you-call">
-          <div class="cf-group">
-            <a
-              href="tel:{{ section.settings.clinic_phone_number }}"
-              class="cf-call-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              {{ section.settings.call_button_text }}
-            </a>
-          </div>
-        </div>
-
-        {% comment %} Call > We call you {% endcomment %}
-        <div class="cf-conditional" id="cf-call-we-{{ section.id }}" data-call-sub="we-call">
-          <div class="cf-group">
-            <input
-              type="tel"
-              class="cf-input"
-              id="cf-call-phone-{{ section.id }}"
-              name="contact[phone]"
-              placeholder="{{ section.settings.phone_placeholder }}"
-              autocomplete="tel">
-          </div>
+        <div class="cf-group">
+          <label class="cf-label" for="cf-call-time-{{ section.id }}">
+            {{ section.settings.call_time_label }}
+          </label>
+          <select
+            class="cf-select"
+            id="cf-call-time-{{ section.id }}"
+            name="contact[company]">
+            <option value="" disabled selected>{{ section.settings.call_time_placeholder }}</option>
+            {% assign time_options = section.settings.call_time_options | split: ',' %}
+            {% for option in time_options %}
+              {% assign opt = option | strip %}
+              <option value="{{ opt }}">{{ opt }}</option>
+            {% endfor %}
+          </select>
         </div>
       </div>
 
@@ -586,13 +572,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const waYouBlock = S.querySelector('#cf-wa-you-{{ section.id }}');
   const waWeBlock = S.querySelector('#cf-wa-we-{{ section.id }}');
 
-  const callPills = S.querySelector('#cf-call-pills-{{ section.id }}');
-  const callYouBlock = S.querySelector('#cf-call-you-{{ section.id }}');
-  const callWeBlock = S.querySelector('#cf-call-we-{{ section.id }}');
-
   let selectedMethod = '';
   let selectedWaOption = '';
-  let selectedCallOption = '';
   const hideTimers = new Map();
 
   /* ---- Utility: show/hide with fade ---- */
@@ -633,23 +614,14 @@ document.addEventListener('DOMContentLoaded', function() {
   function hideAllMethodBlocks() {
     [whatsappBlock, callBlock].forEach(el => hideBlock(el, true));
     hideAllWaSubs();
-    hideAllCallSubs();
     selectedWaOption = '';
-    selectedCallOption = '';
     if (waPills) {
       waPills.querySelectorAll('.cf-pill').forEach(p => p.classList.remove('active'));
-    }
-    if (callPills) {
-      callPills.querySelectorAll('.cf-pill').forEach(p => p.classList.remove('active'));
     }
   }
 
   function hideAllWaSubs() {
     [waYouBlock, waWeBlock].forEach(el => hideBlock(el, true));
-  }
-
-  function hideAllCallSubs() {
-    [callYouBlock, callWeBlock].forEach(el => hideBlock(el, true));
   }
 
   /* ---- Clear dynamic required / values ---- */
@@ -675,9 +647,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let path = selectedMethod;
     if (selectedMethod.includes('whatsapp') && selectedWaOption) {
       path += ' > ' + selectedWaOption;
-    }
-    if (selectedMethod.includes('call') && selectedCallOption) {
-      path += ' > ' + selectedCallOption;
     }
     if (contactPath) contactPath.value = path;
   }
@@ -750,40 +719,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* ---- CALL SUB-PILLS ---- */
-  if (callPills) {
-    callPills.querySelectorAll('.cf-pill').forEach(pill => {
-      pill.addEventListener('click', function(e) {
-        e.preventDefault();
-        const callOption = this.dataset.call;
-
-        if (selectedCallOption === callOption) return;
-
-        callPills.querySelectorAll('.cf-pill').forEach(p => p.classList.remove('active'));
-        this.classList.add('active');
-
-        hideAllCallSubs();
-
-        const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
-        if (callPhone) {
-          callPhone.removeAttribute('required');
-          callPhone.value = '';
-        }
-
-        selectedCallOption = callOption;
-
-        if (callOption === 'you-call') {
-          showBlock(callYouBlock);
-        } else if (callOption === 'we-call') {
-          showBlock(callWeBlock);
-          setRequired('#cf-call-phone-{{ section.id }}');
-        }
-
-        updateContactPath();
-      });
-    });
-  }
-
   /* ---- FORM VALIDATION ---- */
   const form = S.querySelector('.cf-form');
   if (form) {
@@ -822,38 +757,25 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      /* Call — validate core fields, submit form, then open phone link */
+      /* Call — validate phone + time */
       if (selectedMethod.includes('call')) {
-        if (!selectedCallOption) {
+        if (!validateCoreFields()) {
           e.preventDefault();
-          callPills.style.outline = '2px solid #dc3545';
-          callPills.style.outlineOffset = '4px';
-          callPills.style.borderRadius = '8px';
           return;
         }
-        if (selectedCallOption === 'you-call') {
-          if (!validateCoreFields()) {
-            e.preventDefault();
-            return;
-          }
-          setTimeout(() => {
-            const callLink = S.querySelector('.cf-call-btn');
-            if (callLink) window.location.href = callLink.href;
-          }, 100);
+        const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
+        const callTime = S.querySelector('#cf-call-time-{{ section.id }}');
+        if (callPhone && !callPhone.value.trim()) {
+          e.preventDefault();
+          callPhone.style.borderColor = '#dc3545';
+          callPhone.focus();
           return;
         }
-        if (selectedCallOption === 'we-call') {
-          if (!validateCoreFields()) {
-            e.preventDefault();
-            return;
-          }
-          const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
-          if (callPhone && !callPhone.value.trim()) {
-            e.preventDefault();
-            callPhone.style.borderColor = '#dc3545';
-            callPhone.focus();
-            return;
-          }
+        if (callTime && !callTime.value) {
+          e.preventDefault();
+          callTime.style.borderColor = '#dc3545';
+          callTime.focus();
+          return;
         }
         return;
       }
@@ -908,9 +830,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* Clear red border on inputs when user starts typing */
-  S.querySelectorAll('.cf-input, .cf-textarea').forEach(input => {
+  /* Clear red border on inputs when user starts typing/selecting */
+  S.querySelectorAll('.cf-input, .cf-textarea, .cf-select').forEach(input => {
     input.addEventListener('input', function() {
+      this.style.borderColor = '';
+    });
+    input.addEventListener('change', function() {
       this.style.borderColor = '';
     });
   });
@@ -1386,50 +1311,33 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       "type": "text",
-      "id": "call_button_text",
-      "label": "Call Button Text",
-      "default": "Call Us Now"
+      "id": "call_phone_label",
+      "label": "Call Phone Label",
+      "default": "Your phone number"
     },
     {
       "type": "text",
-      "id": "call_sub_label",
-      "label": "Call Sub-question",
-      "default": "How would you like to connect?"
+      "id": "call_time_label",
+      "label": "Call Time Label",
+      "default": "Best time to call you?"
     },
     {
       "type": "text",
-      "id": "call_you_call_text",
-      "label": "\"You call us\" button text",
-      "default": "I'll call you"
+      "id": "call_time_placeholder",
+      "label": "Call Time Placeholder",
+      "default": "Select a time"
     },
     {
       "type": "text",
-      "id": "call_we_call_text",
-      "label": "\"We call you\" button text",
-      "default": "Call me"
-    },
-    {
-      "type": "color",
-      "id": "call_button_background",
-      "label": "Call Button Background",
-      "default": "#3a3a3a"
-    },
-    {
-      "type": "color",
-      "id": "call_button_hover_background",
-      "label": "Call Button Hover Background",
-      "default": "#2a2a2a"
-    },
-    {
-      "type": "color",
-      "id": "call_button_text_color",
-      "label": "Call Button Text Color",
-      "default": "#ffffff"
+      "id": "call_time_options",
+      "label": "Call Time Options",
+      "default": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+      "info": "Comma-separated values"
     },
     {
       "type": "text",
       "id": "phone_placeholder",
-      "label": "Phone Placeholder (WhatsApp callback)",
+      "label": "Phone Placeholder",
       "default": "Phone Number"
     },
     {
