@@ -1947,25 +1947,25 @@
         "point_qTaDJh": {
           "type": "point",
           "settings": {
-            "text": "Stimulates collagen and tissue regeneration"
+            "text": "Looks at your unique facial anatomy to determine precise injection sites"
           }
         },
         "point_384rfx": {
           "type": "point",
           "settings": {
-            "text": "Improves skin texture, elasticity, and hydration"
+            "text": "Use the minimum effective units for a natural look, adjusted over time."
           }
         },
         "point_3iXxHX": {
           "type": "point",
           "settings": {
-            "text": "Supports natural repair without altering facial structure"
+            "text": "Maintain your natural movement and expression to ensure subtle enhancement"
           }
         },
         "point_nBXjtA": {
           "type": "point",
           "settings": {
-            "text": "Suitable for delicate areas such as under-eyes and neck"
+            "text": "Administered by an experienced doctor, with detailed side effect discussion and follow-up"
           }
         }
       },
@@ -1981,7 +1981,7 @@
         "body": "<p>Conservative approach for subtle, natural-looking results</p>",
         "bg_image": "shopify://shop_images/Gemini_Generated_Image_b3c5olb3c5olb3c5.png",
         "bg_position": "right center",
-        "section_height": 600,
+        "section_height": 900,
         "overlay_strong": "rgba(0,0,0,0)",
         "overlay_mid": "rgba(0,0,0,0)",
         "overlay_fade": "rgba(0,0,0,0)",
