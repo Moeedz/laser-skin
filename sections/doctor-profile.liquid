@@ -1,0 +1,365 @@
+{% style %}
+  .dpr {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .dpr__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .dpr__texture::before, .dpr__texture::after { content: ''; position: absolute; inset: 0; }
+  .dpr__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .dpr__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .dpr__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .dpr__header { text-align: center; margin-bottom: 40px; }
+
+  .dpr__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 12px;
+  }
+
+  .dpr__subtitle {
+    font-size: calc(var(--body-size) + 1px); font-style: italic;
+    color: var(--text-color); margin: 0;
+  }
+
+  /* Profile layout */
+  .dpr__profile {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 36px;
+  }
+
+  /* Photo card */
+  .dpr__photo-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .dpr__photo {
+    width: 100%; aspect-ratio: 4/5;
+    overflow: hidden;
+  }
+
+  .dpr__photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  }
+
+  .dpr__photo-info {
+    padding: 16px 16px 20px;
+  }
+
+  .dpr__doctor-name {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 6px); font-weight: 400;
+    color: var(--heading-color); margin: 0 0 4px;
+  }
+
+  .dpr__doctor-creds {
+    font-size: calc(var(--body-size) - 2px);
+    color: var(--text-color); opacity: 0.7; margin: 0 0 2px; line-height: 1.4;
+  }
+
+  .dpr__doctor-role {
+    font-size: calc(var(--body-size) - 2px);
+    color: var(--text-color); opacity: 0.7; margin: 0; line-height: 1.4;
+  }
+
+  /* Bio text */
+  .dpr__bio {
+    font-size: var(--body-size); line-height: 1.75;
+    color: var(--text-color);
+  }
+
+  .dpr__bio p { margin: 0 0 16px; }
+  .dpr__bio p:last-child { margin-bottom: 0; }
+
+  /* Mobile name repeat (shown below photo card on desktop too) */
+  .dpr__name-below {
+    margin-top: 20px;
+  }
+
+  .dpr__name-below-name {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 4px); font-weight: 400; font-style: italic;
+    color: var(--heading-color); margin: 0 0 2px;
+  }
+
+  .dpr__name-below-creds {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--text-color); opacity: 0.7; margin: 0 0 2px; line-height: 1.4;
+  }
+
+  .dpr__name-below-role {
+    font-size: calc(var(--body-size) - 1px);
+    color: var(--text-color); opacity: 0.7; margin: 0; line-height: 1.4;
+  }
+
+  /* Features row */
+  .dpr__features {
+    display: grid;
+    grid-template-columns: repeat(var(--feat-count, 3), 1fr);
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+
+  .dpr__feature {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+
+  .dpr__feature-header {
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+
+  .dpr__feature-check {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 3px;
+  }
+  .dpr__feature-check svg { width: 18px; height: 18px; }
+
+  .dpr__feature-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-weight: 700;
+    color: var(--heading-color); margin: 0; line-height: 1.3;
+  }
+
+  .dpr__feature-desc {
+    font-size: calc(var(--body-size) - 1px); line-height: 1.6;
+    color: var(--text-color); opacity: 0.8; margin: 0;
+    padding-left: 28px;
+  }
+
+  /* Footer texts */
+  .dpr__footer-bio {
+    font-size: var(--body-size); line-height: 1.7;
+    color: var(--text-color); opacity: 0.8; margin: 0 0 24px;
+  }
+
+  .dpr__closing {
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-style: italic;
+    color: var(--heading-color); margin: 0;
+  }
+
+  /* Animations */
+  [data-dpr-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-dpr-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .dpr__container { padding: 0 20px; }
+    .dpr__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .dpr__profile {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .dpr__photo-card { max-width: 280px; margin: 0 auto; }
+    .dpr__name-below { text-align: center; }
+    .dpr__features { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .dpr__container { padding: 0 16px; }
+    .dpr__heading { font-size: calc(var(--heading-size) * 0.48); }
+    .dpr__photo-card { max-width: 240px; }
+  }
+{% endstyle %}
+
+{% assign feat_blocks = section.blocks | where: 'type', 'feature' %}
+
+<section
+  class="dpr"
+  id="dpr-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --feat-count: {{ feat_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="dpr__texture"></div>{% endif %}
+
+  <div class="dpr__container">
+    <div class="dpr__header" data-dpr-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="dpr__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="dpr__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="dpr__profile" data-dpr-animate data-delay="1">
+      <div>
+        <div class="dpr__photo-card">
+          {% if section.settings.doctor_photo != blank %}
+            <div class="dpr__photo">
+              {{ section.settings.doctor_photo | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
+            </div>
+          {% endif %}
+          <div class="dpr__photo-info">
+            {% if section.settings.doctor_name != blank %}
+              <p class="dpr__doctor-name">{{ section.settings.doctor_name }}</p>
+            {% endif %}
+            {% if section.settings.doctor_credentials != blank %}
+              <p class="dpr__doctor-creds">{{ section.settings.doctor_credentials }}</p>
+            {% endif %}
+            {% if section.settings.doctor_role != blank %}
+              <p class="dpr__doctor-role">{{ section.settings.doctor_role }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if section.settings.show_name_below %}
+          <div class="dpr__name-below">
+            {% if section.settings.doctor_name != blank %}
+              <p class="dpr__name-below-name">{{ section.settings.doctor_name }}</p>
+            {% endif %}
+            {% if section.settings.doctor_credentials != blank %}
+              <p class="dpr__name-below-creds">{{ section.settings.doctor_credentials }}</p>
+            {% endif %}
+            {% if section.settings.doctor_role != blank %}
+              <p class="dpr__name-below-role">{{ section.settings.doctor_role }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="dpr__bio">{{ section.settings.bio_text }}</div>
+    </div>
+
+    {% if feat_blocks.size > 0 %}
+      <div class="dpr__features" data-dpr-animate data-delay="2">
+        {% for block in feat_blocks %}
+          <div class="dpr__feature" {{ block.shopify_attributes }}>
+            <div class="dpr__feature-header">
+              <span class="dpr__feature-check">
+                <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <h4 class="dpr__feature-title">{{ block.settings.title }}</h4>
+            </div>
+            {% if block.settings.description != blank %}
+              <p class="dpr__feature-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_bio != blank %}
+      <p class="dpr__footer-bio" data-dpr-animate data-delay="3">{{ section.settings.footer_bio }}</p>
+    {% endif %}
+
+    {% if section.settings.closing_text != blank %}
+      <p class="dpr__closing" data-dpr-animate data-delay="4">{{ section.settings.closing_text }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('dpr-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-dpr-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Doctor Profile",
+  "tag": "section",
+  "class": "doctor-profile-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "Doctor-led anti-wrinkle treatments" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Medical expertise. Subtle, natural results." },
+    { "type": "header", "content": "Doctor Info" },
+    { "type": "image_picker", "id": "doctor_photo", "label": "Doctor Photo" },
+    { "type": "text", "id": "doctor_name", "label": "Name", "default": "Dr Scotton" },
+    { "type": "text", "id": "doctor_credentials", "label": "Credentials", "default": "MBBS, MRCP (UK), BSc, MSc" },
+    { "type": "text", "id": "doctor_role", "label": "Role", "default": "NHS Consultant Physician" },
+    { "type": "checkbox", "id": "show_name_below", "label": "Show name repeated below card", "default": true },
+    { "type": "header", "content": "Bio" },
+    { "type": "richtext", "id": "bio_text", "label": "Bio Text", "default": "<p>All anti-wrinkle injections at Laser Skin Clinics are performed exclusively by <strong>Dr Scotton</strong>, an NHS Consultant with advanced aesthetic training.</p><p>Every treatment is guided by <strong>medical assessment</strong>, <strong>anatomical precision</strong>, and a commitment to preserving natural expression. The aim is not to change how you look, but to help your skin appear smoother, more relaxed, and well-rested.</p>" },
+    { "type": "textarea", "id": "footer_bio", "label": "Footer Bio Paragraph", "default": "Dr Scotton has completed advanced aesthetic training through the Royal Society of Medicine, and is experienced in wrinkle-relaxing treatments for both cosmetic and medical indications, including migraine and hyperhidrosis." },
+    { "type": "text", "id": "closing_text", "label": "Closing Statement", "default": "This is medical aesthetics performed with restraint, experience, and intention." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e4ddd6" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#2a2a2a" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#4a4a4a" },
+    { "type": "color", "id": "accent_color", "label": "Checkmark Color", "default": "#b09a60" },
+    { "type": "color", "id": "card_bg", "label": "Photo Card BG", "default": "#f5f0eb" },
+    { "type": "color", "id": "card_border", "label": "Photo Card Border", "default": "#ddd8d0" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 40, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Safety-led approach" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Every treatment is planned conservatively, prioritising long term skin health and facial balance." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Doctor Profile",
+      "blocks": [
+        { "type": "feature", "settings": { "title": "Safety-led approach", "description": "Every treatment is planned conservatively, prioritising long term skin health and facial balance." } },
+        { "type": "feature", "settings": { "title": "Clinically precise dosing", "description": "Muscle groups, depth, and placement are carefully selected for subtle, predictable outcomes." } },
+        { "type": "feature", "settings": { "title": "Medical environment", "description": "All treatments are delivered in a clinical setting, following strict medical protocols." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
