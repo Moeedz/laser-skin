@@ -1470,9 +1470,11 @@
         "result_card_ja7yVh": {
           "type": "result_card",
           "settings": {
-            "title": "Glow Reset",
-            "session_info": "1 session · Minimal downtime",
-            "benefit": "Targets sun damage, open pores, and dullness"
+            "title": "Forehead Lines",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-17_at_12.42.36.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-17_at_12.42.36.png",
+            "session_info": "",
+            "benefit": "Smooths horizontal forehead lines"
           }
         },
         "result_card_GQfVYf": {
