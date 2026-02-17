@@ -1139,7 +1139,7 @@
         "image_position": "center center",
         "desktop_height": 900,
         "mobile_height": 240,
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#e8ccc1",
         "overlay_color_start": "rgba(0,0,0,0)",
         "overlay_color_mid": "rgba(0,0,0,0)",
         "overlay_color_fade": "rgba(0,0,0,0)",
