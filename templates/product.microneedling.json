@@ -1865,12 +1865,12 @@
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
         },
-        "price_card_FtJDRz": {
+        "price_card_HGFKVB": {
           "type": "price_card",
           "settings": {
-            "name": "1 Session",
-            "main_price": "£270",
-            "main_per": "Per Session",
+            "name": "6 Sessions",
+            "main_price": "£225",
+            "main_per": "Per Session (Total £1.450)",
             "tier_1": "",
             "tier_2": "",
             "tier_3": "",
@@ -1881,7 +1881,7 @@
       "block_order": [
         "price_card_hwyPd3",
         "price_card_6PKRJ9",
-        "price_card_FtJDRz"
+        "price_card_HGFKVB"
       ],
       "name": "Session Pricing",
       "settings": {
