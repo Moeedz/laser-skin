@@ -1063,6 +1063,110 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "product_hero_F4NGGH": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_9CnVbn": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Deeply cleanses and hydrates"
+          }
+        },
+        "check_item_mkYXCk": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Improves texture, tone, and congestion"
+          }
+        },
+        "check_item_EmPbfk": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No downtime, immediate glow"
+          }
+        },
+        "trust_item_NpFrQe": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_mXrgy8": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_7EEX38": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_Jh8gxG": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_9CnVbn",
+        "check_item_mkYXCk",
+        "check_item_EmPbfk",
+        "trust_item_NpFrQe",
+        "trust_item_mXrgy8",
+        "trust_item_7EEX38",
+        "trust_item_Jh8gxG"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_ab8sf9ab8sf9ab8s.png",
+        "image_position": "center center",
+        "desktop_height": 620,
+        "mobile_height": 320,
+        "background_color": "#ede4dc",
+        "overlay_color_start": "#ece3dde6",
+        "overlay_color_mid": "#ece3ddb3",
+        "overlay_color_fade": "#ece3dd40",
+        "heading": "RF Microneedling for Firmer, Smoother Skin",
+        "subheading_highlight": "",
+        "subheading": "Instantly clearer, healthier skin.",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Deep cleansing, gentle exfoliation, and intense hydration in one medical-grade facial.</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your Hydrofacial",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#c4a080",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_NFL3rq": {
       "type": "slideshow",
       "blocks": {
@@ -2340,6 +2444,7 @@
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
     "slideshow_CcD8FM",
+    "product_hero_F4NGGH",
     "slideshow_NFL3rq",
     "slideshow_3wdWKq",
     "slideshow_hr36qc",
