@@ -1174,36 +1174,28 @@
         "point_gAfQQ7": {
           "type": "point",
           "settings": {
-            "title": "",
-            "text": "Stimulates collagen and tissue regeneration"
+            "title": "Why patients choose RF microneedling",
+            "text": "Targets deeper skin layers than microneedling alone"
           }
         },
         "point_LCP3Me": {
           "type": "point",
           "settings": {
             "title": "",
-            "text": "Improves skin texture, elasticity, and hydration"
-          }
-        },
-        "point_R6EyWh": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Supports natural repair without altering facial structure"
+            "text": "Improves texture, tone, and firmness"
           }
         },
         "point_pyr6gz": {
           "type": "point",
           "settings": {
             "title": "",
-            "text": "Suitable for delicate areas such as under-eyes and neck"
+            "text": "Supports long-term skin quality"
           }
         }
       },
       "block_order": [
         "point_gAfQQ7",
         "point_LCP3Me",
-        "point_R6EyWh",
         "point_pyr6gz"
       ],
       "name": "Info Hero",
