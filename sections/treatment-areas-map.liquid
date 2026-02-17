@@ -1,0 +1,1014 @@
+{% comment %}
+  Treatment Areas Section
+  - Main heading + subheading (dynamic with product title)
+  - Center image with positioned treatment area labels
+  - Dotted connector lines from labels to image areas
+  - Circular inset images for body areas
+  - Bottom note
+  - Desktop: positioned labels around image
+  - Mobile: falls back to stacked grid
+{% endcomment %}
+
+<style>
+  .ta-section {
+    max-width: {{ section.settings.section_width }}px;
+    margin: 0 auto;
+    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_side }}px {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.background_color }};
+    overflow: hidden;
+  }
+
+  .ta-inner {
+    max-width: {{ section.settings.content_max_width }}px;
+    margin: 0 auto;
+  }
+
+  /* Heading */
+  .ta-heading {
+    font-size: {{ section.settings.heading_font_size }}px;
+    font-weight: {{ section.settings.heading_font_weight }};
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+  }
+
+  .ta-subheading {
+    font-size: {{ section.settings.subheading_font_size }}px;
+    color: {{ section.settings.subheading_color }};
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+  }
+
+  /* Image Container - Desktop */
+  .ta-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+  }
+
+  .ta-main-image {
+    display: block;
+    width: 50%;
+    max-width: 420px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  /* Treatment Labels */
+  .ta-label {
+    position: absolute;
+    max-width: 220px;
+  }
+
+  .ta-label-title {
+    font-size: {{ section.settings.label_title_font_size }}px;
+    font-weight: {{ section.settings.label_title_font_weight }};
+    color: {{ section.settings.label_title_color }};
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .ta-label-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .ta-label-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .ta-label-check {
+    flex-shrink: 0;
+    width: {{ section.settings.check_size }}px;
+    height: {{ section.settings.check_size }}px;
+    color: {{ section.settings.check_color }};
+    margin-top: 2px;
+  }
+
+  .ta-label-text {
+    font-size: {{ section.settings.label_text_font_size }}px;
+    color: {{ section.settings.label_text_color }};
+    line-height: 1.5;
+  }
+
+  /* Dot Marker */
+  .ta-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: {{ section.settings.dot_color }};
+    border-radius: 50%;
+  }
+
+  /* Connector Lines (SVG overlay) */
+  .ta-connectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ta-connectors line {
+    stroke: {{ section.settings.connector_color }};
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+  }
+
+  .ta-label {
+    z-index: 2;
+  }
+
+  /* Circular Inset Images */
+  .ta-inset {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.6);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+
+  .ta-inset img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Positioned Labels - Desktop */
+  /* Left side */
+  .ta-label--forehead {
+    top: 8%;
+    left: 2%;
+  }
+
+  .ta-label--mouth {
+    bottom: 28%;
+    left: 0%;
+  }
+
+  /* Right side */
+  .ta-label--undereye {
+    top: 8%;
+    right: 2%;
+  }
+
+  .ta-label--cheeks {
+    top: 32%;
+    right: 0%;
+  }
+
+  .ta-label--jawline {
+    top: 55%;
+    right: 5%;
+  }
+
+  .ta-label--lowerface {
+    bottom: 20%;
+    right: 3%;
+  }
+
+  /* Dots on image */
+  .ta-dot--forehead {
+    top: 14%;
+    left: 37%;
+  }
+
+  .ta-dot--undereye {
+    top: 22%;
+    right: 33%;
+  }
+
+  .ta-dot--cheeks {
+    top: 40%;
+    right: 30%;
+  }
+
+  .ta-dot--jawline {
+    top: 58%;
+    right: 30%;
+  }
+
+  .ta-dot--mouth {
+    top: 52%;
+    left: 35%;
+  }
+
+  .ta-dot--lowerface {
+    bottom: 28%;
+    right: 28%;
+  }
+
+  /* Inset images */
+  .ta-inset--mouth {
+    bottom: 22%;
+    left: 5%;
+  }
+
+  .ta-inset--chest {
+    bottom: 2%;
+    left: 25%;
+  }
+
+  .ta-inset--knees {
+    bottom: 2%;
+    right: 18%;
+  }
+
+  /* Inset labels */
+  .ta-label--chest {
+    bottom: 0;
+    left: 20%;
+    text-align: center;
+  }
+
+  .ta-label--knees {
+    bottom: 8%;
+    right: 7%;
+  }
+
+  /* Bottom Note */
+  .ta-note {
+    text-align: center;
+    font-size: {{ section.settings.note_font_size }}px;
+    color: {{ section.settings.note_color }};
+    font-style: {{ section.settings.note_font_style }};
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  /* ===== MOBILE FALLBACK ===== */
+  .ta-mobile-grid {
+    display: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .ta-image-container {
+      display: none;
+    }
+
+    .ta-mobile-grid {
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    .ta-mobile-hero {
+      display: block;
+      width: 60%;
+      max-width: 280px;
+      margin: 0 auto 32px;
+      border-radius: 12px;
+    }
+
+    .ta-mobile-areas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 20px;
+    }
+
+    .ta-mobile-area {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ta-mobile-area-title {
+      font-size: {{ section.settings.label_title_font_size }}px;
+      font-weight: {{ section.settings.label_title_font_weight }};
+      color: {{ section.settings.label_title_color }};
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .ta-mobile-area-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .ta-mobile-area-check {
+      flex-shrink: 0;
+      width: {{ section.settings.check_size }}px;
+      height: {{ section.settings.check_size }}px;
+      color: {{ section.settings.check_color }};
+      margin-top: 1px;
+    }
+
+    .ta-mobile-area-text {
+      font-size: {{ section.settings.label_text_font_size | minus: 1 }}px;
+      color: {{ section.settings.label_text_color }};
+      line-height: 1.5;
+    }
+
+    .ta-mobile-insets {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .ta-mobile-inset {
+      text-align: center;
+    }
+
+    .ta-mobile-inset img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.6);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .ta-mobile-inset-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: {{ section.settings.label_title_color }};
+    }
+
+    .ta-heading {
+      font-size: {{ section.settings.heading_font_size | times: 0.72 | round }}px;
+    }
+
+    .ta-subheading {
+      font-size: {{ section.settings.subheading_font_size | times: 0.92 | round }}px;
+      margin-bottom: 28px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ta-mobile-areas {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>
+
+<section class="ta-section">
+  <div class="ta-inner">
+
+    {% comment %} Heading {% endcomment %}
+    {% if section.settings.heading != blank %}
+      {%- liquid
+        if product.title != blank
+          assign heading_text = section.settings.heading | replace: '[treatment]', product.title
+        else
+          assign heading_text = section.settings.heading | replace: '[treatment]', section.settings.default_treatment_name
+        endif
+      -%}
+      <h2 class="ta-heading">{{ heading_text }}</h2>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      {%- liquid
+        if product.title != blank
+          assign sub_text = section.settings.subheading | replace: '[treatment]', product.title
+        else
+          assign sub_text = section.settings.subheading | replace: '[treatment]', section.settings.default_treatment_name
+        endif
+      -%}
+      <p class="ta-subheading">{{ sub_text }}</p>
+    {% endif %}
+
+    {% comment %} ===== DESKTOP: Positioned Image Layout ===== {% endcomment %}
+    <div class="ta-image-container">
+
+      {% comment %} Main Center Image {% endcomment %}
+      {% if section.settings.main_image != blank %}
+        <img
+          class="ta-main-image"
+          src="{{ section.settings.main_image | image_url: width: 900 }}"
+          alt="{{ section.settings.main_image.alt | default: 'Treatment areas' }}"
+          loading="lazy"
+          width="420"
+          height="auto">
+      {% else %}
+        <div class="ta-main-image" style="height: 550px; background: #e8ddd8; border-radius: 8px;"></div>
+      {% endif %}
+
+      {% comment %} Treatment Area Labels {% endcomment %}
+      {% for block in section.blocks %}
+        {% if block.type == 'area_label' %}
+          <div class="ta-label ta-label--{{ block.settings.position_key }}" style="{% if block.settings.custom_top != blank %}top:{{ block.settings.custom_top }};{% endif %}{% if block.settings.custom_bottom != blank %}bottom:{{ block.settings.custom_bottom }};{% endif %}{% if block.settings.custom_left != blank %}left:{{ block.settings.custom_left }};{% endif %}{% if block.settings.custom_right != blank %}right:{{ block.settings.custom_right }};{% endif %}" {{ block.shopify_attributes }}>
+            <h4 class="ta-label-title">{{ block.settings.title }}</h4>
+            {% assign items = block.settings.items | split: '|' %}
+            {% for item in items %}
+              {% assign item_clean = item | strip %}
+              {% if item_clean != blank %}
+                <div class="ta-label-item">
+                  <svg class="ta-label-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="ta-label-text">{{ item_clean }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          {% comment %} Dot on image {% endcomment %}
+          {% if block.settings.dot_top != blank or block.settings.dot_bottom != blank %}
+            <div class="ta-dot" style="{% if block.settings.dot_top != blank %}top:{{ block.settings.dot_top }};{% endif %}{% if block.settings.dot_bottom != blank %}bottom:{{ block.settings.dot_bottom }};{% endif %}{% if block.settings.dot_left != blank %}left:{{ block.settings.dot_left }};{% endif %}{% if block.settings.dot_right != blank %}right:{{ block.settings.dot_right }};{% endif %}"></div>
+          {% endif %}
+        {% endif %}
+
+        {% comment %} Circular Inset Images {% endcomment %}
+        {% if block.type == 'inset_image' %}
+          <div class="ta-inset" style="{% if block.settings.custom_top != blank %}top:{{ block.settings.custom_top }};{% endif %}{% if block.settings.custom_bottom != blank %}bottom:{{ block.settings.custom_bottom }};{% endif %}{% if block.settings.custom_left != blank %}left:{{ block.settings.custom_left }};{% endif %}{% if block.settings.custom_right != blank %}right:{{ block.settings.custom_right }};{% endif %}" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url: width: 300 }}" alt="{{ block.settings.label }}" loading="lazy">
+            {% endif %}
+          </div>
+          <div class="ta-label" style="{% if block.settings.label_top != blank %}top:{{ block.settings.label_top }};{% endif %}{% if block.settings.label_bottom != blank %}bottom:{{ block.settings.label_bottom }};{% endif %}{% if block.settings.label_left != blank %}left:{{ block.settings.label_left }};{% endif %}{% if block.settings.label_right != blank %}right:{{ block.settings.label_right }};{% endif %}">
+            <h4 class="ta-label-title">{{ block.settings.label }}</h4>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+    {% comment %} ===== MOBILE: Grid Fallback ===== {% endcomment %}
+    <div class="ta-mobile-grid">
+
+      {% if section.settings.main_image != blank %}
+        <img
+          class="ta-mobile-hero"
+          src="{{ section.settings.main_image | image_url: width: 600 }}"
+          alt="{{ section.settings.main_image.alt | default: 'Treatment areas' }}"
+          loading="lazy">
+      {% endif %}
+
+      <div class="ta-mobile-areas">
+        {% for block in section.blocks %}
+          {% if block.type == 'area_label' %}
+            <div class="ta-mobile-area" {{ block.shopify_attributes }}>
+              <h4 class="ta-mobile-area-title">{{ block.settings.title }}</h4>
+              {% assign items = block.settings.items | split: '|' %}
+              {% for item in items %}
+                {% assign item_clean = item | strip %}
+                {% if item_clean != blank %}
+                  <div class="ta-mobile-area-item">
+                    <svg class="ta-mobile-area-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="ta-mobile-area-text">{{ item_clean }}</span>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% comment %} Mobile Inset Images {% endcomment %}
+      <div class="ta-mobile-insets">
+        {% for block in section.blocks %}
+          {% if block.type == 'inset_image' %}
+            <div class="ta-mobile-inset" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | image_url: width: 200 }}" alt="{{ block.settings.label }}" loading="lazy">
+              {% endif %}
+              <span class="ta-mobile-inset-label">{{ block.settings.label }}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+    {% comment %} Bottom Note {% endcomment %}
+    {% if section.settings.bottom_note != blank %}
+      <p class="ta-note">{{ section.settings.bottom_note }}</p>
+    {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Treatment Areas",
+  "tag": "section",
+  "class": "ta-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_width",
+      "label": "Section Width",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "default": 1400,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content Max Width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "default": 1100,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top Padding",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom Padding",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_side",
+      "label": "Side Padding",
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f0ebe6"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Treatment Areas: What [treatment] Can Target",
+      "info": "Use [treatment] to dynamically insert the product title."
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "default": 36,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3d1f1f"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "[treatment] can treat various areas of the face and body, addressing multiple skin concerns at once.",
+      "info": "Use [treatment] for dynamic product title."
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size",
+      "label": "Subheading Font Size",
+      "min": 13,
+      "max": 20,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#5a3a3a"
+    },
+    {
+      "type": "text",
+      "id": "default_treatment_name",
+      "label": "Default Treatment Name",
+      "default": "This Treatment",
+      "info": "Used on non-product pages"
+    },
+    {
+      "type": "header",
+      "content": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Center Image",
+      "info": "Portrait image of face/body. Recommended: 900x1100px"
+    },
+    {
+      "type": "header",
+      "content": "Labels & Items"
+    },
+    {
+      "type": "range",
+      "id": "label_title_font_size",
+      "label": "Label Title Font Size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "label_title_font_weight",
+      "label": "Label Title Font Weight",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "label_title_color",
+      "label": "Label Title Color",
+      "default": "#3d1f1f"
+    },
+    {
+      "type": "range",
+      "id": "label_text_font_size",
+      "label": "Label Text Font Size",
+      "min": 12,
+      "max": 16,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "label_text_color",
+      "label": "Label Text Color",
+      "default": "#3d1f1f"
+    },
+    {
+      "type": "range",
+      "id": "check_size",
+      "label": "Check Icon Size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "check_color",
+      "label": "Check Icon Color",
+      "default": "#8a6060"
+    },
+    {
+      "type": "header",
+      "content": "Dots & Connectors"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot Color",
+      "default": "#b8a090"
+    },
+    {
+      "type": "color",
+      "id": "connector_color",
+      "label": "Connector Line Color",
+      "default": "#b8a090"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Note"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_note",
+      "label": "Bottom Note",
+      "default": "Improves skin texture, tightness, and overall appearance for a smoother, more youthful look."
+    },
+    {
+      "type": "range",
+      "id": "note_font_size",
+      "label": "Note Font Size",
+      "min": 13,
+      "max": 18,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "note_color",
+      "label": "Note Color",
+      "default": "#5a3a3a"
+    },
+    {
+      "type": "select",
+      "id": "note_font_style",
+      "label": "Note Font Style",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "italic", "label": "Italic" }
+      ],
+      "default": "italic"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "area_label",
+      "name": "Treatment Area",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Area Title",
+          "default": "Forehead Lines"
+        },
+        {
+          "type": "textarea",
+          "id": "items",
+          "label": "Check Items",
+          "default": "Skin may appear mildly red or warm|Sensation of tightness or sensitivity",
+          "info": "Separate items with | character. Leave blank for title-only labels."
+        },
+        {
+          "type": "text",
+          "id": "position_key",
+          "label": "Position Key (CSS class)",
+          "default": "forehead",
+          "info": "Used for default CSS positioning. Options: forehead, undereye, cheeks, jawline, mouth, lowerface"
+        },
+        {
+          "type": "header",
+          "content": "Custom Position (overrides default)"
+        },
+        {
+          "type": "text",
+          "id": "custom_top",
+          "label": "Top",
+          "info": "e.g. 10% or 50px"
+        },
+        {
+          "type": "text",
+          "id": "custom_bottom",
+          "label": "Bottom"
+        },
+        {
+          "type": "text",
+          "id": "custom_left",
+          "label": "Left"
+        },
+        {
+          "type": "text",
+          "id": "custom_right",
+          "label": "Right"
+        },
+        {
+          "type": "header",
+          "content": "Dot Position (on image)"
+        },
+        {
+          "type": "text",
+          "id": "dot_top",
+          "label": "Dot Top"
+        },
+        {
+          "type": "text",
+          "id": "dot_bottom",
+          "label": "Dot Bottom"
+        },
+        {
+          "type": "text",
+          "id": "dot_left",
+          "label": "Dot Left"
+        },
+        {
+          "type": "text",
+          "id": "dot_right",
+          "label": "Dot Right"
+        }
+      ]
+    },
+    {
+      "type": "inset_image",
+      "name": "Inset Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Circular Image",
+          "info": "Square image recommended, 300x300px"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label Text",
+          "default": "Upper Chest"
+        },
+        {
+          "type": "header",
+          "content": "Circle Position"
+        },
+        {
+          "type": "text",
+          "id": "custom_top",
+          "label": "Top"
+        },
+        {
+          "type": "text",
+          "id": "custom_bottom",
+          "label": "Bottom",
+          "default": "2%"
+        },
+        {
+          "type": "text",
+          "id": "custom_left",
+          "label": "Left",
+          "default": "25%"
+        },
+        {
+          "type": "text",
+          "id": "custom_right",
+          "label": "Right"
+        },
+        {
+          "type": "header",
+          "content": "Label Position"
+        },
+        {
+          "type": "text",
+          "id": "label_top",
+          "label": "Label Top"
+        },
+        {
+          "type": "text",
+          "id": "label_bottom",
+          "label": "Label Bottom",
+          "default": "0%"
+        },
+        {
+          "type": "text",
+          "id": "label_left",
+          "label": "Label Left",
+          "default": "20%"
+        },
+        {
+          "type": "text",
+          "id": "label_right",
+          "label": "Label Right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Areas",
+      "blocks": [
+        {
+          "type": "area_label",
+          "settings": {
+            "title": "Forehead Lines",
+            "items": "Skin may appear mildly red or warm|Sensation of tightness or sensitivity",
+            "position_key": "forehead",
+            "custom_top": "8%",
+            "custom_left": "2%",
+            "dot_top": "14%",
+            "dot_left": "37%"
+          }
+        },
+        {
+          "type": "area_label",
+          "settings": {
+            "title": "Under Eye",
+            "items": "Skin may appear mildly red or warm",
+            "position_key": "undereye",
+            "custom_top": "8%",
+            "custom_right": "2%",
+            "dot_top": "22%",
+            "dot_right": "33%"
+          }
+        },
+        {
+          "type": "area_label",
+          "settings": {
+            "title": "Around the Mouth",
+            "items": "Upper Chest",
+            "position_key": "mouth",
+            "custom_bottom": "28%",
+            "custom_left": "0%",
+            "dot_top": "52%",
+            "dot_left": "35%"
+          }
+        },
+        {
+          "type": "area_label",
+          "settings": {
+            "title": "Cheeks",
+            "items": "Skin begins early repair and renewal|Texture may feel smoother as healing progresses",
+            "position_key": "cheeks",
+            "custom_top": "32%",
+            "custom_right": "0%",
+            "dot_top": "40%",
+            "dot_right": "30%"
+          }
+        },
+        {
+          "type": "area_label",
+          "settings": {
+            "title": "Jawline",
+            "items": "Neck",
+            "position_key": "jawline",
+            "custom_top": "55%",
+            "custom_right": "5%",
+            "dot_top": "58%",
+            "dot_right": "30%"
+          }
+        },
+        {
+          "type": "area_label",
+          "settings": {
+            "title": "Lower Face & Jowls",
+            "items": "",
+            "position_key": "lowerface",
+            "custom_bottom": "20%",
+            "custom_right": "3%",
+            "dot_bottom": "28%",
+            "dot_right": "28%"
+          }
+        },
+        {
+          "type": "inset_image",
+          "settings": {
+            "label": "Around the Mouth",
+            "custom_bottom": "30%",
+            "custom_left": "5%",
+            "label_bottom": "24%",
+            "label_left": "2%"
+          }
+        },
+        {
+          "type": "inset_image",
+          "settings": {
+            "label": "Upper Chest",
+            "custom_bottom": "5%",
+            "custom_left": "25%",
+            "label_bottom": "0%",
+            "label_left": "23%"
+          }
+        },
+        {
+          "type": "inset_image",
+          "settings": {
+            "label": "Knees",
+            "custom_bottom": "5%",
+            "custom_right": "18%",
+            "label_bottom": "2%",
+            "label_right": "16%"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
