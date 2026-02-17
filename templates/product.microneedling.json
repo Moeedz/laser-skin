@@ -1168,6 +1168,65 @@
         "content_max_width": 580
       }
     },
+    "info_hero_rKbjKd": {
+      "type": "info-hero",
+      "blocks": {
+        "point_gAfQQ7": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Stimulates collagen and tissue regeneration"
+          }
+        },
+        "point_LCP3Me": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Improves skin texture, elasticity, and hydration"
+          }
+        },
+        "point_R6EyWh": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Supports natural repair without altering facial structure"
+          }
+        },
+        "point_pyr6gz": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Suitable for delicate areas such as under-eyes and neck"
+          }
+        }
+      },
+      "block_order": [
+        "point_gAfQQ7",
+        "point_LCP3Me",
+        "point_R6EyWh",
+        "point_pyr6gz"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What are Polynucleotides?",
+        "body": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>",
+        "points_heading": "",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd2c8ee",
+        "overlay_mid": "#ddd2c8b0",
+        "overlay_fade": "#ddd2c850",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_NFL3rq": {
       "type": "slideshow",
       "blocks": {
@@ -1871,7 +1930,7 @@
           "settings": {
             "name": "6 Sessions",
             "main_price": "£225",
-            "main_per": "Per Session <br>(Total £1.450)",
+            "main_per": "Per Session (Total £1.450)",
             "tier_1": "",
             "tier_2": "",
             "tier_3": "",
@@ -2513,6 +2572,7 @@
     "ss_simple_faq_jiYFWj",
     "slideshow_CcD8FM",
     "product_hero_F4NGGH",
+    "info_hero_rKbjKd",
     "slideshow_NFL3rq",
     "slideshow_3wdWKq",
     "slideshow_hr36qc",
