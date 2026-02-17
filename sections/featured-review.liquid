@@ -1,13 +1,7 @@
 {% style %}
-  /* ==========================================================================
-     Featured Review Section
-     ========================================================================== */
-
   .frv {
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+    width: 100%; overflow: hidden; position: relative;
     background-color: var(--section-bg);
     padding: var(--padding-top) 0 var(--padding-bottom);
   }
@@ -37,26 +31,38 @@
     display: flex; flex-direction: column; align-items: center; gap: 10px;
   }
 
-  .frv__google-logo {
-    height: 36px; width: auto;
-  }
-
   .frv__google-text {
     font-size: 28px; font-weight: 500; color: var(--heading-color);
     display: flex; align-items: center; gap: 10px;
   }
 
-  .frv__google-g {
-    display: inline-flex; align-items: center;
-  }
-
+  .frv__google-g { display: inline-flex; align-items: center; }
   .frv__google-g svg { width: 28px; height: 28px; }
 
-  .frv__stars {
-    display: flex; gap: 4px; color: var(--star-color);
+  .frv__stars { display: flex; gap: 4px; color: var(--star-color); }
+  .frv__stars svg { width: 28px; height: 28px; }
+
+  /* Slider */
+  .frv__slider { position: relative; }
+
+  .frv__slides { position: relative; overflow: hidden; }
+
+  .frv__slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
 
-  .frv__stars svg { width: 28px; height: 28px; }
+  .frv__slide.is-active {
+    display: block;
+    opacity: 1;
+  }
+
+  .frv__slide.is-exiting {
+    display: block;
+    opacity: 0;
+    position: absolute; inset: 0;
+  }
 
   /* Layout: quote left, image right */
   .frv__layout {
@@ -109,6 +115,50 @@
     object-fit: cover; aspect-ratio: 4 / 3;
   }
 
+  /* Navigation arrows */
+  .frv__nav {
+    position: absolute; top: 50%; z-index: 5;
+    transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--section-bg); border: 1px solid rgba(0,0,0,0.1);
+    color: var(--heading-color);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s var(--ease-out-expo);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .frv__nav:hover {
+    background: var(--heading-color); color: var(--section-bg);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .frv__nav svg { width: 20px; height: 20px; }
+
+  .frv__nav--prev { left: -22px; }
+  .frv__nav--next { right: -22px; }
+
+  /* Dots */
+  .frv__dots {
+    display: flex; justify-content: center; gap: 10px;
+    margin-top: 32px;
+  }
+
+  .frv__dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--heading-color); opacity: 0.2;
+    cursor: pointer; border: none; padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-out-expo);
+  }
+
+  .frv__dot:hover { opacity: 0.4; }
+
+  .frv__dot.is-active {
+    opacity: 0.7;
+    transform: scale(1.25);
+  }
+
   /* Animations */
   [data-frv-animate] {
     opacity: 0; transform: translateY(24px);
@@ -126,14 +176,23 @@
     .frv__stars svg { width: 24px; height: 24px; }
     .frv__quote-mark { font-size: 60px; top: -14px; }
     .frv__quote-text { font-size: 15px; }
+    .frv__nav--prev { left: -6px; }
+    .frv__nav--next { right: -6px; }
+    .frv__nav { width: 38px; height: 38px; }
+    .frv__nav svg { width: 16px; height: 16px; }
   }
 
   @media screen and (max-width: 480px) {
     .frv__container { padding: 0 16px; }
     .frv__stars svg { width: 20px; height: 20px; }
     .frv__google-text { font-size: 20px; }
+    .frv__nav--prev { left: -4px; }
+    .frv__nav--next { right: -4px; }
+    .frv__nav { width: 34px; height: 34px; }
   }
 {% endstyle %}
+
+{% assign review_blocks = section.blocks | where: 'type', 'review' %}
 
 <section
   class="frv"
@@ -168,33 +227,58 @@
       </div>
     </div>
 
-    <!-- Layout -->
-    <div class="frv__layout">
-      <div class="frv__quote-wrap" data-frv-animate data-delay="1">
-        <span class="frv__quote-mark">"</span>
-        {% if section.settings.quote != blank %}
-          <div class="frv__quote-text">{{ section.settings.quote }}</div>
-        {% endif %}
-        {% if section.settings.author != blank %}
-          <p class="frv__author">{{ section.settings.author }}</p>
-        {% endif %}
-        <div class="frv__heart">♡</div>
-      </div>
+    {% if review_blocks.size > 0 %}
+      <div class="frv__slider" data-frv-animate data-delay="1">
+        <div class="frv__slides" data-frv-slides>
+          {% for block in review_blocks %}
+            <div class="frv__slide{% if forloop.first %} is-active{% endif %}" data-frv-slide="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              <div class="frv__layout">
+                <div class="frv__quote-wrap">
+                  <span class="frv__quote-mark">"</span>
+                  {% if block.settings.quote != blank %}
+                    <div class="frv__quote-text">{{ block.settings.quote }}</div>
+                  {% endif %}
+                  {% if block.settings.author != blank %}
+                    <p class="frv__author">{{ block.settings.author }}</p>
+                  {% endif %}
+                  <div class="frv__heart">♡</div>
+                </div>
 
-      {% if section.settings.image != blank %}
-        <div class="frv__image" data-frv-animate data-delay="2">
-          {{ section.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '400,550,700' }}
+                {% if block.settings.image != blank %}
+                  <div class="frv__image">
+                    {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '400,550,700' }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      {% endif %}
-    </div>
+
+        {% if review_blocks.size > 1 %}
+          <button class="frv__nav frv__nav--prev" data-frv-prev aria-label="Previous review">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="frv__nav frv__nav--next" data-frv-next aria-label="Next review">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="frv__dots">
+            {% for block in review_blocks %}
+              <button class="frv__dot{% if forloop.first %} is-active{% endif %}" data-frv-dot="{{ forloop.index0 }}" aria-label="Go to review {{ forloop.index }}"></button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </section>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var s = document.getElementById('frv-{{ section.id }}');
-    if (!s) return;
-    var els = s.querySelectorAll('[data-frv-animate]');
+    var sec = document.getElementById('frv-{{ section.id }}');
+    if (!sec) return;
+
+    var animEls = sec.querySelectorAll('[data-frv-animate]');
     var obs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
@@ -204,21 +288,96 @@
         }
       });
     }, { threshold: 0.1 });
-    els.forEach(function (el) { obs.observe(el); });
+    animEls.forEach(function (el) { obs.observe(el); });
+
+    var slides = sec.querySelectorAll('[data-frv-slide]');
+    var dots = sec.querySelectorAll('[data-frv-dot]');
+    var prevBtn = sec.querySelector('[data-frv-prev]');
+    var nextBtn = sec.querySelector('[data-frv-next]');
+    var total = slides.length;
+    if (total <= 1) return;
+
+    var current = 0;
+    var isAnimating = false;
+    var autoplayInterval = null;
+    var autoplayDelay = {{ section.settings.autoplay_speed }};
+    var autoplayEnabled = {{ section.settings.autoplay }};
+
+    function goTo(idx) {
+      if (isAnimating || idx === current) return;
+      isAnimating = true;
+
+      var oldSlide = slides[current];
+      var newSlide = slides[idx];
+
+      oldSlide.classList.remove('is-active');
+      oldSlide.classList.add('is-exiting');
+
+      newSlide.classList.add('is-active');
+
+      dots.forEach(function (d) { d.classList.remove('is-active'); });
+      if (dots[idx]) dots[idx].classList.add('is-active');
+
+      setTimeout(function () {
+        oldSlide.classList.remove('is-exiting');
+        isAnimating = false;
+      }, 520);
+
+      current = idx;
+    }
+
+    function next() { goTo((current + 1) % total); }
+    function prev() { goTo((current - 1 + total) % total); }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        goTo(parseInt(this.getAttribute('data-frv-dot'), 10));
+        resetAutoplay();
+      });
+    });
+
+    var startX = 0;
+    var slidesEl = sec.querySelector('[data-frv-slides]');
+    if (slidesEl) {
+      slidesEl.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+      slidesEl.addEventListener('touchend', function (e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) { next(); } else { prev(); }
+          resetAutoplay();
+        }
+      }, { passive: true });
+    }
+
+    function startAutoplay() {
+      if (!autoplayEnabled || total <= 1) return;
+      autoplayInterval = setInterval(next, autoplayDelay);
+    }
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+    startAutoplay();
+
+    sec.addEventListener('mouseenter', function () { clearInterval(autoplayInterval); });
+    sec.addEventListener('mouseleave', function () { startAutoplay(); });
   });
 </script>
 
 {% schema %}
 {
-  "name": "Featured Review",
+  "name": "Review Slider",
   "tag": "section",
   "class": "featured-review-section",
   "settings": [
-    { "type": "header", "content": "Review" },
-    { "type": "richtext", "id": "quote", "label": "Review Text", "default": "<p>I genuinely cannot recommend Laser Skin Clinics enough.</p><p>From the moment I arrived, I was greeted by the lovely Angel. Friendly, professional and very informative from the get go! Maxine who is the loveliest of ladies has performed my 3 x treatments to date. Each time she has been incredible. Not only carrying out treatments, but offering her advice and expertise on other skincare. Neither Maxine nor Angel have ever tried to sell, quite the contrary!</p><p>Location is lovely. Facilities spotlessly clean. Prices I find are very reasonable and money has definitely been well spent here. I would not go anywhere else and recommend them to all my family and friends.</p>" },
-    { "type": "text", "id": "author", "label": "Author", "default": "Thank you :) x" },
-    { "type": "header", "content": "Image" },
-    { "type": "image_picker", "id": "image", "label": "Side Image" },
+    { "type": "header", "content": "Slider Settings" },
+    { "type": "checkbox", "id": "autoplay", "label": "Autoplay", "default": true },
+    { "type": "range", "id": "autoplay_speed", "label": "Autoplay Speed", "min": 3000, "max": 8000, "step": 500, "default": 6000, "unit": "ms" },
     { "type": "header", "content": "Background & Texture" },
     { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#ece6df" },
     { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
@@ -234,8 +393,26 @@
     { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
     { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
   ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "richtext", "id": "quote", "label": "Review Text", "default": "<p>I genuinely cannot recommend Laser Skin Clinics enough.</p><p>From the moment I arrived, I was greeted by the lovely Angel. Friendly, professional and very informative from the get go!</p>" },
+        { "type": "text", "id": "author", "label": "Author", "default": "Thank you :) x" },
+        { "type": "image_picker", "id": "image", "label": "Side Image" }
+      ]
+    }
+  ],
   "presets": [
-    { "name": "Featured Review" }
+    {
+      "name": "Review Slider",
+      "blocks": [
+        { "type": "review", "settings": { "quote": "<p>I genuinely cannot recommend Laser Skin Clinics enough.</p><p>From the moment I arrived, I was greeted by the lovely Angel. Friendly, professional and very informative from the get go! Maxine who is the loveliest of ladies has performed my 3 x treatments to date. Each time she has been incredible.</p><p>Location is lovely. Facilities spotlessly clean. Prices I find are very reasonable. I would not go anywhere else.</p>", "author": "Thank you :) x" } },
+        { "type": "review", "settings": { "quote": "<p>Absolutely amazing experience from start to finish. The staff are so welcoming and professional.</p><p>I had my first treatment and the results were incredible. I felt so comfortable throughout the whole process and the aftercare advice was really thorough.</p>", "author": "Sarah M." } },
+        { "type": "review", "settings": { "quote": "<p>I was nervous about my first visit but the team put me completely at ease. They explained everything clearly and the results speak for themselves.</p><p>I've now had multiple sessions and each one has been just as good as the last. Highly recommend to anyone considering treatment.</p>", "author": "James K." } }
+      ]
+    }
   ]
 }
 {% endschema %}
