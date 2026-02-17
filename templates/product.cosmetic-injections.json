@@ -2210,7 +2210,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "NHS Consultant treated"
           }
         },
         "trust_point_edVakH": {
