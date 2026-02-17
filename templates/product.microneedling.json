@@ -1838,6 +1838,72 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "session_pricing_HPxac7": {
+      "type": "session-pricing",
+      "blocks": {
+        "price_card_hwyPd3": {
+          "type": "price_card",
+          "settings": {
+            "name": "Small Tattoo",
+            "main_price": "£40",
+            "main_per": "Per Session",
+            "tier_1": "6 Sessions £35 per session • <strong>£210</strong>",
+            "tier_2": "10 Sessions £30 per session • <strong>£300</strong>",
+            "tier_3": "",
+            "note": "Final treatment plan and number of sessions confirmed during consultation."
+          }
+        },
+        "price_card_LgXPTG": {
+          "type": "price_card",
+          "settings": {
+            "name": "Medium Tattoo",
+            "main_price": "£55",
+            "main_per": "Per Session",
+            "tier_1": "6 Sessions £50 per session • <strong>£300</strong>",
+            "tier_2": "10 Sessions £45 per session • <strong>£450</strong>",
+            "tier_3": "",
+            "note": "Final treatment plan and number of sessions confirmed during consultation."
+          }
+        },
+        "price_card_JfDL47": {
+          "type": "price_card",
+          "settings": {
+            "name": "Large Tattoo",
+            "main_price": "£90",
+            "main_per": "Per Session",
+            "tier_1": "6 Sessions £80 per session • <strong>£480</strong>",
+            "tier_2": "10 Sessions £75 per session • <strong>£750</strong>",
+            "tier_3": "",
+            "note": "Final treatment plan and number of sessions confirmed during consultation."
+          }
+        }
+      },
+      "block_order": [
+        "price_card_hwyPd3",
+        "price_card_LgXPTG",
+        "price_card_JfDL47"
+      ],
+      "name": "Session Pricing",
+      "settings": {
+        "heading": "Laser Tattoo Removal Pricing",
+        "subtitle": "Restore Your Skin with Safe, Professional Care",
+        "footer_text": "Course pricing applies when sessions are booked as a treatment plan. Single-session pricing available for pay-as-you-go treatments.",
+        "cta_heading": "Book Your Test Patch Today",
+        "button_label": "BOOK NOW",
+        "button_link": "",
+        "section_bg": "#5a5560",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e8e0d8",
+        "card_bg": "#6a6570b0",
+        "heading_font_size": 44,
+        "card_title_font_size": 24,
+        "price_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "slideshow_GBgMcb": {
       "type": "slideshow",
       "blocks": {
@@ -2451,6 +2517,7 @@
     "slideshow_hr36qc",
     "slideshow_iQEcrr",
     "slideshow_LKP7Db",
+    "session_pricing_HPxac7",
     "slideshow_GBgMcb",
     "expectations_trust_KAPJft",
     "consultation_form_pXBJRG",
