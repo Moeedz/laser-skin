@@ -626,15 +626,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* ---- Clear dynamic required / values ---- */
   function clearConditionalInputs() {
+    /* Remove required from ALL conditional inputs */
     const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
     const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
-    [waPhone, callPhone].forEach(input => {
+    const callTime = S.querySelector('#cf-call-time-{{ section.id }}');
+    [waPhone, callPhone, callTime].forEach(input => {
       if (input) {
         input.removeAttribute('required');
         input.value = '';
         input.style.borderColor = '';
       }
     });
+    /* Reset call time dropdown */
+    if (callTime) callTime.selectedIndex = 0;
   }
 
   function setRequired(selector) {
@@ -672,11 +676,13 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedMethod = method;
         if (methodValue) methodValue.value = this.textContent.trim();
 
-        /* Show relevant block */
+        /* Show relevant block and set required on its fields */
         if (method.includes('whatsapp')) {
           showBlock(whatsappBlock);
         } else if (method.includes('call')) {
           showBlock(callBlock);
+          setRequired('#cf-call-phone-{{ section.id }}');
+          setRequired('#cf-call-time-{{ section.id }}');
         }
 
         updateContactPath();
@@ -780,6 +786,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
+      /* WhatsApp requires a sub-selection */
+      if (selectedMethod.includes('whatsapp') && !selectedWaOption) {
+        e.preventDefault();
+        waPills.style.outline = '2px solid #dc3545';
+        waPills.style.outlineOffset = '4px';
+        waPills.style.borderRadius = '8px';
+        return;
+      }
+
       /* WhatsApp > "You contact us" — validate core fields, submit form, then open WhatsApp */
       if (selectedMethod.includes('whatsapp') && selectedWaOption === 'you-contact') {
         if (!validateCoreFields()) {
@@ -794,16 +809,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      /* WhatsApp requires a sub-selection */
-      if (selectedMethod.includes('whatsapp') && !selectedWaOption) {
-        e.preventDefault();
-        waPills.style.outline = '2px solid #dc3545';
-        waPills.style.outlineOffset = '4px';
-        waPills.style.borderRadius = '8px';
-        return;
-      }
-
-      /* WhatsApp > "Message me" — validate core fields + phone */
+      /* WhatsApp > "Message me" — validate core fields + phone required */
       if (selectedMethod.includes('whatsapp') && selectedWaOption === 'we-contact') {
         if (!validateCoreFields()) {
           e.preventDefault();
@@ -816,9 +822,8 @@ document.addEventListener('DOMContentLoaded', function() {
           waPhone.focus();
           return;
         }
+        return;
       }
-
-      /* Consolidate: contact path is already in contact[note], no need to prepend to body */
     });
   }
 
