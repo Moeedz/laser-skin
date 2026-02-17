@@ -1119,21 +1119,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Relax dynamic wrinkles – Soften frown lines and crow’s feet by gently relaxing overactive facial muscles."
+            "text": "<b>Relax dynamic wrinkles </b>– Soften frown lines and crow’s feet by gently relaxing overactive facial muscles."
           }
         },
         "check_item_bX4iLm": {
           "type": "check_item",
           "settings": {
             "icon": "sparkle",
-            "text": "Prevent deeper lines – Reduce repetitive muscle contraction to slow the formation of static wrinkles."
+            "text": "<b>Prevent deeper lines </b> – Reduce repetitive muscle contraction to slow the formation of static wrinkles."
           }
         },
         "check_item_qbLjVU": {
           "type": "check_item",
           "settings": {
             "icon": "star",
-            "text": "Maintain natural expression – Keep your facial balance and ease lines while preserving your individuality."
+            "text": "<b>Maintain natural expression <b></b> – Keep your facial balance and ease lines while preserving your individuality.</b>"
           }
         },
         "trust_item_VQqbQC": {
