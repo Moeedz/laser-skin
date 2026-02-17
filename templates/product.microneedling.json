@@ -1455,6 +1455,193 @@
         "note_border_color": "#d4a8a8"
       }
     },
+    "treatment_areas_map_F4yJcc": {
+      "type": "treatment-areas-map",
+      "blocks": {
+        "area_label_73agRw": {
+          "type": "area_label",
+          "settings": {
+            "title": "Forehead Lines",
+            "items": "Skin may appear mildly red or warm|Sensation of tightness or sensitivity",
+            "position_key": "forehead",
+            "custom_top": "8%",
+            "custom_bottom": "",
+            "custom_left": "2%",
+            "custom_right": "",
+            "dot_top": "14%",
+            "dot_bottom": "",
+            "dot_left": "37%",
+            "dot_right": ""
+          }
+        },
+        "area_label_jq6m4G": {
+          "type": "area_label",
+          "settings": {
+            "title": "Under Eye",
+            "items": "Skin may appear mildly red or warm",
+            "position_key": "undereye",
+            "custom_top": "8%",
+            "custom_bottom": "",
+            "custom_left": "",
+            "custom_right": "2%",
+            "dot_top": "22%",
+            "dot_bottom": "",
+            "dot_left": "",
+            "dot_right": "33%"
+          }
+        },
+        "area_label_mErg8n": {
+          "type": "area_label",
+          "settings": {
+            "title": "Around the Mouth",
+            "items": "Upper Chest",
+            "position_key": "mouth",
+            "custom_top": "",
+            "custom_bottom": "28%",
+            "custom_left": "0%",
+            "custom_right": "",
+            "dot_top": "52%",
+            "dot_bottom": "",
+            "dot_left": "35%",
+            "dot_right": ""
+          }
+        },
+        "area_label_azLVyU": {
+          "type": "area_label",
+          "settings": {
+            "title": "Cheeks",
+            "items": "Skin begins early repair and renewal|Texture may feel smoother as healing progresses",
+            "position_key": "cheeks",
+            "custom_top": "32%",
+            "custom_bottom": "",
+            "custom_left": "",
+            "custom_right": "0%",
+            "dot_top": "40%",
+            "dot_bottom": "",
+            "dot_left": "",
+            "dot_right": "30%"
+          }
+        },
+        "area_label_fLLLHw": {
+          "type": "area_label",
+          "settings": {
+            "title": "Jawline",
+            "items": "Neck",
+            "position_key": "jawline",
+            "custom_top": "55%",
+            "custom_bottom": "",
+            "custom_left": "",
+            "custom_right": "5%",
+            "dot_top": "58%",
+            "dot_bottom": "",
+            "dot_left": "",
+            "dot_right": "30%"
+          }
+        },
+        "area_label_9MpRCJ": {
+          "type": "area_label",
+          "settings": {
+            "title": "Lower Face & Jowls",
+            "items": "Skin may appear mildly red or warm|Sensation of tightness or sensitivity",
+            "position_key": "lowerface",
+            "custom_top": "",
+            "custom_bottom": "20%",
+            "custom_left": "",
+            "custom_right": "3%",
+            "dot_top": "",
+            "dot_bottom": "28%",
+            "dot_left": "",
+            "dot_right": "28%"
+          }
+        },
+        "inset_image_9ge8DQ": {
+          "type": "inset_image",
+          "settings": {
+            "image": "shopify://shop_images/1_e319c0d8-1b6e-4ec9-aa39-29b6c45141fa.png",
+            "label": "Around the Mouth",
+            "custom_top": "",
+            "custom_bottom": "30%",
+            "custom_left": "5%",
+            "custom_right": "",
+            "label_top": "",
+            "label_bottom": "24%",
+            "label_left": "2%",
+            "label_right": ""
+          }
+        },
+        "inset_image_6wc7Ef": {
+          "type": "inset_image",
+          "settings": {
+            "label": "Upper Chest",
+            "custom_top": "",
+            "custom_bottom": "5%",
+            "custom_left": "25%",
+            "custom_right": "",
+            "label_top": "",
+            "label_bottom": "0%",
+            "label_left": "23%",
+            "label_right": ""
+          }
+        },
+        "inset_image_rQEhfx": {
+          "type": "inset_image",
+          "settings": {
+            "label": "Knees",
+            "custom_top": "",
+            "custom_bottom": "5%",
+            "custom_left": "25%",
+            "custom_right": "18%",
+            "label_top": "",
+            "label_bottom": "2%",
+            "label_left": "20%",
+            "label_right": "16%"
+          }
+        }
+      },
+      "block_order": [
+        "area_label_73agRw",
+        "area_label_jq6m4G",
+        "area_label_mErg8n",
+        "area_label_azLVyU",
+        "area_label_fLLLHw",
+        "area_label_9MpRCJ",
+        "inset_image_9ge8DQ",
+        "inset_image_6wc7Ef",
+        "inset_image_rQEhfx"
+      ],
+      "disabled": true,
+      "name": "Treatment Areas",
+      "settings": {
+        "section_width": 1400,
+        "content_max_width": 1100,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_side": 20,
+        "background_color": "#f0ebe6",
+        "heading": "Treatment Areas: What [treatment] Can Target",
+        "heading_font_size": 36,
+        "heading_font_weight": "400",
+        "heading_color": "#3d1f1f",
+        "subheading": "[treatment] can treat various areas of the face and body, addressing multiple skin concerns at once.",
+        "subheading_font_size": 16,
+        "subheading_color": "#5a3a3a",
+        "default_treatment_name": "This Treatment",
+        "main_image": "shopify://shop_images/Gemini_Generated_Image_lj6u3flj6u3flj6u.png",
+        "label_title_font_size": 18,
+        "label_title_font_weight": "600",
+        "label_title_color": "#3d1f1f",
+        "label_text_font_size": 14,
+        "label_text_color": "#3d1f1f",
+        "check_size": 18,
+        "check_color": "#8a6060",
+        "dot_color": "#b8a090",
+        "connector_color": "#b8a090",
+        "bottom_note": "Improves skin texture, tightness, and overall appearance for a smoother, more youthful look.",
+        "note_font_size": 15,
+        "note_color": "#5a3a3a",
+        "note_font_style": "italic"
+      }
+    },
     "slideshow_3wdWKq": {
       "type": "slideshow",
       "blocks": {
@@ -2497,6 +2684,7 @@
     "info_hero_rKbjKd",
     "slideshow_NFL3rq",
     "how_it_works_expect_BQk3qz",
+    "treatment_areas_map_F4yJcc",
     "slideshow_3wdWKq",
     "slideshow_hr36qc",
     "aftercare_downtime_TaFrqi",
