@@ -1213,6 +1213,7 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 600,
@@ -1890,6 +1891,99 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
+      }
+    },
+    "aftercare_downtime_TaFrqi": {
+      "type": "aftercare-downtime",
+      "blocks": {
+        "left_item_LPtVWk": {
+          "type": "left_item",
+          "settings": {
+            "text": "Mild redness and swelling are normal within the first 24 hours and typically subside quickly."
+          }
+        },
+        "left_item_YYwnUb": {
+          "type": "left_item",
+          "settings": {
+            "text": "Most people resume normal activities within a day."
+          }
+        },
+        "left_item_QRErfb": {
+          "type": "left_item",
+          "settings": {
+            "text": "Makeup can usually be applied after 24 hours as skin begins to calm and recover."
+          }
+        },
+        "right_item_QKC4dR": {
+          "type": "right_item",
+          "settings": {
+            "text": "Avoid excessive heat, workouts, saunas, or intense sun exposure for the first 24 hours."
+          }
+        },
+        "right_item_wEeibG": {
+          "type": "right_item",
+          "settings": {
+            "text": "Wear SPF daily, minimum 30+ on treated areas to protect and prolong the results."
+          }
+        },
+        "right_item_FptBfX": {
+          "type": "right_item",
+          "settings": {
+            "text": "Use gentle skincare products and follow any specific aftercare advice from your practitioner."
+          }
+        },
+        "right_item_Dz4nFV": {
+          "type": "right_item",
+          "settings": {
+            "text": "Keep skin moisturised and hydrated for optimal healing."
+          }
+        }
+      },
+      "block_order": [
+        "left_item_LPtVWk",
+        "left_item_YYwnUb",
+        "left_item_QRErfb",
+        "right_item_QKC4dR",
+        "right_item_wEeibG",
+        "right_item_FptBfX",
+        "right_item_Dz4nFV"
+      ],
+      "name": "Aftercare & Downtime",
+      "settings": {
+        "section_width": 1400,
+        "content_max_width": 1000,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_side": 20,
+        "background_color": "#f4d6dc",
+        "heading": "Aftercare & Downtime",
+        "heading_font_size": 36,
+        "heading_font_weight": "400",
+        "heading_color": "#3d1f1f",
+        "subheading": "Learn how to care for your skin after [treatment] and what to expect during recovery.",
+        "subheading_font_size": 16,
+        "subheading_color": "#5a3a3a",
+        "default_treatment_name": "your treatment",
+        "left_title": "After treatment",
+        "right_title": "Aftercare guidance",
+        "column_title_font_size": 22,
+        "column_title_font_weight": "600",
+        "column_title_color": "#3d1f1f",
+        "column_title_underline_color": "#a07070",
+        "column_gap": 40,
+        "column_padding": 15,
+        "divider_width": 1,
+        "divider_style": "solid",
+        "divider_color": "#d4a8a8",
+        "check_size": 22,
+        "check_color": "#8a6060",
+        "item_font_size": 15,
+        "item_text_color": "#3d1f1f",
+        "bottom_note": "While downtime is minimal, proper aftercare ensures best results and supports skin recovery.",
+        "note_font_size": 15,
+        "note_color": "#5a3a3a",
+        "note_font_style": "italic",
+        "note_border_color": "#d4a8a8"
       }
     },
     "session_pricing_HPxac7": {
@@ -2572,6 +2666,7 @@
     "slideshow_hr36qc",
     "slideshow_iQEcrr",
     "slideshow_LKP7Db",
+    "aftercare_downtime_TaFrqi",
     "session_pricing_HPxac7",
     "slideshow_GBgMcb",
     "expectations_trust_KAPJft",
