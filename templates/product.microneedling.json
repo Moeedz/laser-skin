@@ -1867,6 +1867,87 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "expectations_trust_KAPJft": {
+      "type": "expectations-trust",
+      "blocks": {
+        "trust_point_QRbpAP": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "star",
+            "text": "4.9 Google rating"
+          }
+        },
+        "trust_point_MXdtT8": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "calendar",
+            "text": "7-day appointment guarantee"
+          }
+        },
+        "trust_point_cDrJ3y": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "finance",
+            "text": "0% finance available"
+          }
+        },
+        "trust_point_ghFdDj": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "test_patch",
+            "text": "Test patch included"
+          }
+        },
+        "trust_point_VXWnrn": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_BWpnpn": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "clock",
+            "text": "Established 10+ years"
+          }
+        }
+      },
+      "block_order": [
+        "trust_point_QRbpAP",
+        "trust_point_MXdtT8",
+        "trust_point_cDrJ3y",
+        "trust_point_ghFdDj",
+        "trust_point_VXWnrn",
+        "trust_point_BWpnpn"
+      ],
+      "name": "Expectations & Trust",
+      "settings": {
+        "heading": "Clear pricing. Professional standards.",
+        "subtitle": "Everything you need to feel confident booking your consultation.",
+        "card_title": "What you can expect at Laser Skin Clinics",
+        "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
+        "section_bg": "#efddd1",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#777777",
+        "card_bg": "#f0ece7",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 44,
+        "card_heading_font_size": 28,
+        "body_font_size": 16,
+        "button_label": "Book your consultation",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "consultation_form_pXBJRG": {
       "type": "consultation-form",
       "name": "Consultation Form",
@@ -2081,6 +2162,7 @@
       "block_order": [
         "image_UyAniQ"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2263,6 +2345,7 @@
     "slideshow_iQEcrr",
     "slideshow_LKP7Db",
     "slideshow_GBgMcb",
+    "expectations_trust_KAPJft",
     "consultation_form_pXBJRG",
     "faq_updated_naJWxF",
     "slideshow_EfMAnB",
