@@ -1870,7 +1870,7 @@
           "settings": {
             "name": "6 Sessions",
             "main_price": "£225",
-            "main_per": "Per Session (Total £1.450)",
+            "main_per": "Per Session <br>(Total £1.450)",
             "tier_1": "",
             "tier_2": "",
             "tier_3": "",
