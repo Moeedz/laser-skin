@@ -57,6 +57,14 @@
   .ifh__body p:last-child { margin-bottom: 0; }
 
   /* Icon bullet points */
+  .ifh__points-section { margin-top: 8px; }
+
+  .ifh__points-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 5px); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 16px; line-height: 1.3;
+  }
+
   .ifh__points {
     display: flex; flex-direction: column; gap: 14px;
   }
@@ -75,6 +83,15 @@
 
   /* Fallback checkmark */
   .ifh__point-icon svg { width: 20px; height: 20px; }
+
+  .ifh__point-text { display: flex; flex-direction: column; gap: 2px; }
+
+  .ifh__point-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-weight: 700;
+    color: var(--heading-color); display: block; line-height: 1.3;
+    margin-bottom: 2px;
+  }
 
   /* Animations */
   [data-ifh-animate] {
@@ -148,8 +165,13 @@
         <div class="ifh__body" data-ifh-animate data-delay="1">{{ section.settings.body }}</div>
       {% endif %}
 
-      {% if point_blocks.size > 0 %}
-        <div class="ifh__points" data-ifh-animate data-delay="2">
+      {% if point_blocks.size > 0 or section.settings.points_heading != blank %}
+        <div class="ifh__points-section" data-ifh-animate data-delay="2">
+          {% if section.settings.points_heading != blank %}
+            <h3 class="ifh__points-heading">{{ section.settings.points_heading }}</h3>
+          {% endif %}
+          {% if point_blocks.size > 0 %}
+            <div class="ifh__points">
           {% for block in point_blocks %}
             <div class="ifh__point" {{ block.shopify_attributes }}>
               <span class="ifh__point-icon">
@@ -159,9 +181,16 @@
                   <svg viewBox="0 0 20 20" fill="none"><path d="M3 10.5L8 15.5L17 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 {% endif %}
               </span>
-              <span>{{ block.settings.text }}</span>
+              <span class="ifh__point-text">
+                {% if block.settings.title != blank %}
+                  <strong class="ifh__point-title">{{ block.settings.title }}</strong>
+                {% endif %}
+                {{ block.settings.text }}
+              </span>
             </div>
           {% endfor %}
+            </div>
+          {% endif %}
         </div>
       {% endif %}
     </div>
@@ -194,6 +223,7 @@
   "settings": [
     { "type": "textarea", "id": "heading", "label": "Heading", "default": "What are Polynucleotides?" },
     { "type": "richtext", "id": "body", "label": "Body Text", "default": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>" },
+    { "type": "text", "id": "points_heading", "label": "Points Sub-heading", "info": "Optional heading above bullet points" },
     { "type": "header", "content": "Background Image" },
     { "type": "image_picker", "id": "bg_image", "label": "Background Image" },
     {
@@ -231,7 +261,8 @@
       "name": "Bullet Point",
       "settings": [
         { "type": "image_picker", "id": "icon_image", "label": "Icon Image (optional)" },
-        { "type": "text", "id": "text", "label": "Text", "default": "Stimulates collagen and tissue regeneration" }
+        { "type": "text", "id": "title", "label": "Title (optional)" },
+        { "type": "text", "id": "text", "label": "Description", "default": "Stimulates collagen and tissue regeneration" }
       ]
     }
   ],
