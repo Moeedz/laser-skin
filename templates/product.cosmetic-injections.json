@@ -1481,8 +1481,10 @@
           "type": "result_card",
           "settings": {
             "title": "Texture Reset",
-            "session_info": "1 session · Moderate downtime",
-            "benefit": "Improves fine lines, mild acne scars and crepey skin"
+            "before_image": "shopify://shop_images/Screenshot_2026-02-17_at_12.42.51.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-17_at_12.42.58.png",
+            "session_info": "",
+            "benefit": "Softens frown-lines between the eyebrows"
           }
         },
         "result_card_nV6q6D": {
