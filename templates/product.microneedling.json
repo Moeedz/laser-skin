@@ -1853,26 +1853,26 @@
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
         },
-        "price_card_LgXPTG": {
+        "price_card_6PKRJ9": {
           "type": "price_card",
           "settings": {
-            "name": "Medium Tattoo",
-            "main_price": "£55",
-            "main_per": "Per Session",
-            "tier_1": "6 Sessions £50 per session • <strong>£300</strong>",
-            "tier_2": "10 Sessions £45 per session • <strong>£450</strong>",
+            "name": "3 Sessions",
+            "main_price": "£250",
+            "main_per": "Per Session<br> (Total £750)",
+            "tier_1": "",
+            "tier_2": "",
             "tier_3": "",
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
         },
-        "price_card_JfDL47": {
+        "price_card_FtJDRz": {
           "type": "price_card",
           "settings": {
-            "name": "Large Tattoo",
-            "main_price": "£90",
+            "name": "1 Session",
+            "main_price": "£270",
             "main_per": "Per Session",
-            "tier_1": "6 Sessions £80 per session • <strong>£480</strong>",
-            "tier_2": "10 Sessions £75 per session • <strong>£750</strong>",
+            "tier_1": "",
+            "tier_2": "",
             "tier_3": "",
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
@@ -1880,8 +1880,8 @@
       },
       "block_order": [
         "price_card_hwyPd3",
-        "price_card_LgXPTG",
-        "price_card_JfDL47"
+        "price_card_6PKRJ9",
+        "price_card_FtJDRz"
       ],
       "name": "Session Pricing",
       "settings": {
