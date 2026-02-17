@@ -8,6 +8,7 @@
   .ifh__bg {
     position: absolute; inset: 0; z-index: 0;
   }
+  .ifh__bg--mobile { display: none; }
   .ifh__bg img {
     width: 100%; height: 100%; object-fit: cover; object-position: var(--bg-position);
   }
@@ -108,12 +109,14 @@
     }
 
     /* Image becomes a visible block at the top */
-    .ifh__bg {
+    .ifh__bg--desktop { display: none; }
+    .ifh__bg--mobile {
+      display: block;
       position: relative; inset: auto;
       width: 100%; height: 280px;
       flex-shrink: 0; order: -1;
     }
-    .ifh__bg img {
+    .ifh__bg--mobile img {
       width: 100%; height: 100%; object-fit: cover;
     }
     .ifh__bg-overlay { display: none; }
@@ -159,10 +162,19 @@
     --mobile-content-bg: {{ section.settings.mobile_content_bg }};
   "
 >
-  {% if section.settings.bg_image != blank %}
-    <div class="ifh__bg">
-      {{ section.settings.bg_image | image_url: width: 2000 | image_tag: loading: 'lazy', widths: '800,1200,1600,2000' }}
+  {% if section.settings.bg_image != blank or section.settings.bg_image_mobile != blank %}
+    <div class="ifh__bg ifh__bg--desktop">
+      {% if section.settings.bg_image != blank %}
+        {{ section.settings.bg_image | image_url: width: 2000 | image_tag: loading: 'lazy', widths: '800,1200,1600,2000' }}
+      {% endif %}
       <div class="ifh__bg-overlay"></div>
+    </div>
+    <div class="ifh__bg ifh__bg--mobile">
+      {% if section.settings.bg_image_mobile != blank %}
+        {{ section.settings.bg_image_mobile | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,600,800' }}
+      {% elsif section.settings.bg_image != blank %}
+        {{ section.settings.bg_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,600,800' }}
+      {% endif %}
     </div>
   {% endif %}
   <div class="ifh__shimmer"></div>
@@ -237,7 +249,8 @@
     { "type": "richtext", "id": "body", "label": "Body Text", "default": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>" },
     { "type": "text", "id": "points_heading", "label": "Points Sub-heading", "info": "Optional heading above bullet points" },
     { "type": "header", "content": "Background Image" },
-    { "type": "image_picker", "id": "bg_image", "label": "Background Image" },
+    { "type": "image_picker", "id": "bg_image", "label": "Background Image (Desktop)" },
+    { "type": "image_picker", "id": "bg_image_mobile", "label": "Background Image (Mobile)", "info": "Optional — falls back to desktop image if empty" },
     {
       "type": "select", "id": "bg_position", "label": "Image Focus",
       "options": [
