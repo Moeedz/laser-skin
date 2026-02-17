@@ -1948,9 +1948,12 @@
         "right_item_FptBfX",
         "right_item_Dz4nFV"
       ],
+      "custom_css": [
+        "section.aftercare-section {max-width: 100% !important;}"
+      ],
       "name": "Aftercare & Downtime",
       "settings": {
-        "section_width": 1400,
+        "section_width": 1600,
         "content_max_width": 1000,
         "padding_top": 60,
         "padding_bottom": 60,
