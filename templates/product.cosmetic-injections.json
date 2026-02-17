@@ -1119,21 +1119,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
+            "text": "Visibly softens expression lines"
           }
         },
         "check_item_bX4iLm": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
+            "icon": "sparkle",
+            "text": "Refines and rejuvenates facial contours"
           }
         },
         "check_item_qbLjVU": {
           "type": "check_item",
           "settings": {
-            "icon": "shield_check",
-            "text": "No downtime, immediate glow"
+            "icon": "star",
+            "text": "Quick, comfortable treatment with no downtime"
           }
         },
         "trust_item_VQqbQC": {
@@ -1357,24 +1357,28 @@
         "point_qTaDJh": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Looks at your unique facial anatomy to determine precise injection sites"
           }
         },
         "point_384rfx": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Use the minimum effective units for a natural look, adjusted over time."
           }
         },
         "point_3iXxHX": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Maintain your natural movement and expression to ensure subtle enhancement"
           }
         },
         "point_nBXjtA": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Administered by an experienced doctor, with detailed side effect discussion and follow-up"
           }
         }
@@ -1389,6 +1393,7 @@
       "settings": {
         "heading": "Safety, control & medical oversight",
         "body": "<p>Conservative approach for subtle, natural-looking results</p>",
+        "points_heading": "",
         "bg_image": "shopify://shop_images/Gemini_Generated_Image_b3c5olb3c5olb3c5.png",
         "bg_position": "right center",
         "section_height": 900,
