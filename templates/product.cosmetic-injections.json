@@ -1405,7 +1405,7 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
-        "mobile_content_bg": "#9e9e9e",
+        "mobile_content_bg": "#efefef",
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 600,
