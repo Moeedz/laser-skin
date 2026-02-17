@@ -1844,11 +1844,11 @@
         "price_card_hwyPd3": {
           "type": "price_card",
           "settings": {
-            "name": "Small Tattoo",
-            "main_price": "£40",
+            "name": "1 Session",
+            "main_price": "£270",
             "main_per": "Per Session",
-            "tier_1": "6 Sessions £35 per session • <strong>£210</strong>",
-            "tier_2": "10 Sessions £30 per session • <strong>£300</strong>",
+            "tier_1": "",
+            "tier_2": "",
             "tier_3": "",
             "note": "Final treatment plan and number of sessions confirmed during consultation."
           }
