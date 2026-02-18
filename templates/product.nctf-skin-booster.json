@@ -1830,6 +1830,64 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "treatment_pricing_table_zfB6Uk": {
+      "type": "treatment-pricing-table",
+      "blocks": {
+        "price_row_F3nCQz": {
+          "type": "price_row",
+          "settings": {
+            "area": "Standard Area",
+            "single_price": "£200",
+            "package_price": "£850",
+            "was_price": "£1,000"
+          }
+        },
+        "price_row_GJKpUy": {
+          "type": "price_row",
+          "settings": {
+            "area": "Half Face (Periocular)",
+            "single_price": "£230",
+            "package_price": "£975",
+            "was_price": "£1,150"
+          }
+        },
+        "price_row_GxdBhQ": {
+          "type": "price_row",
+          "settings": {
+            "area": "Full Face",
+            "single_price": "£260",
+            "package_price": "£1,105",
+            "was_price": "£1,300"
+          }
+        }
+      },
+      "block_order": [
+        "price_row_F3nCQz",
+        "price_row_GJKpUy",
+        "price_row_GxdBhQ"
+      ],
+      "name": "Treatment Pricing Table",
+      "settings": {
+        "heading": "<p>NCTF® Treatment Pricing</p>",
+        "subtitle": "We offer NCTF skin revitalisation treatments in package courses for optimal results. Each session is tailored to your skin's needs and goals.",
+        "col_1_label": "Treatment Area",
+        "col_2_label": "Single Session",
+        "col_3_label": "Package of 5 (Save 15%)*",
+        "note": "* A package of 5 provides optimal results and shows the best improvements in skin quality, hydration, and tone.",
+        "button_label": "Book Consultation",
+        "button_link": "",
+        "section_bg": "#4a4555",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e0d8d0",
+        "gold_color": "#d4c4a0",
+        "table_bg": "#55506080",
+        "heading_font_size": 42,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "expectations_trust_Y6WBNa": {
       "type": "expectations-trust",
       "blocks": {
@@ -2181,6 +2239,7 @@
     "slideshow_Wr8ijY",
     "slideshow_JhRaCw",
     "slideshow_dtTxx4",
+    "treatment_pricing_table_zfB6Uk",
     "expectations_trust_Y6WBNa",
     "consultation_form_8hkxJ6",
     "faq_updated_JENtQY",
