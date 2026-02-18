@@ -1172,7 +1172,7 @@
           "type": "card",
           "settings": {
             "title": "Targeted precision",
-            "description": "Energy is applied safely and precisely to the blemish, protecting healthy surrounding skin.\n• Protects surrounding healthy tissue\n• Controlled energy application for cosmetic safety",
+            "description": "Energy is applied safely and precisely to the blemish, protecting healthy surrounding skin.<br>\n• Protects surrounding healthy tissue<br>\n• Controlled energy application for cosmetic safety",
             "card_bg": "#eccac6"
           }
         },
@@ -1180,7 +1180,7 @@
           "type": "card",
           "settings": {
             "title": "Clinician-controlled treatment",
-            "description": "Your practitioner adjusts treatment depth and intensity to suit your skin and concern.",
+            "description": "Your practitioner adjusts treatment depth and intensity to suit your skin and concern.<br>\n• Adjusted to lesion depth and type<br>\n• Designed for optimal cosmetic healing",
             "card_bg": "#c8cedf"
           }
         },
@@ -1188,7 +1188,7 @@
           "type": "card",
           "settings": {
             "title": "Natural healing response",
-            "description": "The treated area heals gradually, revealing smoother, clearer skin as it regenerates.",
+            "description": "The treated area heals gradually, revealing smoother, clearer skin as it regenerates.<br>\n• Minimal scarring when clinically appropriate<br>\n• Gradual smoothing as skin regenerates",
             "card_bg": "#eccac6"
           }
         }
