@@ -1703,24 +1703,24 @@
           "type": "card",
           "settings": {
             "image_cover": false,
-            "title": "Instant Glow",
-            "description": "Skin looks radiant and refreshed after just one session."
+            "title": "Minor Redness",
+            "description": "Expect minor redness similar to light sunburn, fading within 24–48 hours."
           }
         },
         "card_dn9BEw": {
           "type": "card",
           "settings": {
             "image_cover": true,
-            "title": "Deep Improvement",
-            "description": "Ongoing results for congestion, texture, and hydration."
+            "title": "Hydrate & Protect",
+            "description": "Keep the skin hydrated with a quality moisturizer. Use SPF to protect against sun exposure."
           }
         },
         "card_PqUrkQ": {
           "type": "card",
           "settings": {
             "image_cover": false,
-            "title": "No Downtime",
-            "description": "Return to your day immediately, no recovery needed."
+            "title": "Quick Recovery",
+            "description": "You can usually resume normal activities the next day, avoiding makeup for 24 hours."
           }
         }
       },
