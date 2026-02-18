@@ -1285,26 +1285,30 @@
         "result_card_beNbrM": {
           "type": "result_card",
           "settings": {
-            "title": "Glow Reset",
+            "title": "Skin Tag Removal",
             "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.35.58.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.36.05.png",
-            "session_info": "1 session · Minimal downtime",
-            "benefit": "Targets sun damage, open pores, and dullness"
+            "session_info": "1 session",
+            "benefit": ""
           }
         },
         "result_card_89UUWP": {
           "type": "result_card",
           "settings": {
-            "title": "Texture Reset",
-            "session_info": "1 session · Moderate downtime",
+            "title": "Mole Removal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.38.07.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.38.13.png",
+            "session_info": "1 session",
             "benefit": "Improves fine lines, mild acne scars and crepey skin"
           }
         },
         "result_card_DtRfkr": {
           "type": "result_card",
           "settings": {
-            "title": "Scar Reset",
-            "session_info": "1 session · Deeper resurfacing",
+            "title": "Wart Removal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.39.32.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.39.40.png",
+            "session_info": "1 session",
             "benefit": "Treats deep rolling scars and surgical scars."
           }
         }
