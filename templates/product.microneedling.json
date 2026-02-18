@@ -1497,8 +1497,8 @@
             "items": "Upper Chest",
             "position_key": "mouth",
             "custom_top": "",
-            "custom_bottom": "28%",
-            "custom_left": "0%",
+            "custom_bottom": "25%",
+            "custom_left": "5%",
             "custom_right": "",
             "dot_top": "52%",
             "dot_bottom": "",
@@ -1558,9 +1558,9 @@
           "type": "inset_image",
           "settings": {
             "image": "shopify://shop_images/1_e319c0d8-1b6e-4ec9-aa39-29b6c45141fa.png",
-            "label": "Around the Mouth",
+            "label": "",
             "custom_top": "",
-            "custom_bottom": "30%",
+            "custom_bottom": "40%",
             "custom_left": "5%",
             "custom_right": "",
             "label_top": "",
@@ -1609,7 +1609,6 @@
         "inset_image_6wc7Ef",
         "inset_image_rQEhfx"
       ],
-      "disabled": true,
       "name": "Treatment Areas",
       "settings": {
         "section_width": 1400,
