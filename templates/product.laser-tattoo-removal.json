@@ -1678,7 +1678,7 @@
             "tier_1": "6 Sessions £35 per session • £210",
             "tier_2": "10 Sessions £30 per session • £300",
             "tier_3": "",
-            "note": "Final treatment plan and number of sessions confirmed during consultation."
+            "note": "Final pricing may vary based on ink density, colour complexity, and skin type confirmed during consultation."
           }
         },
         "price_card_XaJiBg": {
@@ -1690,7 +1690,7 @@
             "tier_1": "6 Sessions £50 per session • £300",
             "tier_2": "10 Sessions £45 per session • £450",
             "tier_3": "",
-            "note": "Final treatment plan and number of sessions confirmed during consultation."
+            "note": "Final pricing may vary based on ink density, colour complexity, and skin type confirmed during consultation."
           }
         },
         "price_card_6Eh6MR": {
@@ -1702,7 +1702,7 @@
             "tier_1": "6 Sessions £80 per session • £480",
             "tier_2": "10 Sessions £75 per session • £750",
             "tier_3": "",
-            "note": "Final treatment plan and number of sessions confirmed during consultation."
+            "note": "Final pricing may vary based on ink density, colour complexity, and skin type confirmed during consultation."
           }
         }
       },
@@ -1713,8 +1713,8 @@
       ],
       "name": "Session Pricing",
       "settings": {
-        "heading": "Personalised Tattoo Removal Pricing<br><br>\nTransparent pricing tailored to your tattoo size and goals.",
-        "subtitle": "Final pricing may vary based on ink density, colour complexity, and skin type confirmed during consultation.",
+        "heading": "Personalised Tattoo Removal Pricing",
+        "subtitle": "Transparent pricing tailored to your tattoo size and goals.",
         "footer_text": "Course pricing applies when sessions are booked as a treatment plan. Single-session pricing available for pay-as-you-go treatments.",
         "cta_heading": "Book Your Test Patch Today",
         "button_label": "BOOK NOW",
