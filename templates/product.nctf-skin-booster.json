@@ -1013,7 +1013,7 @@
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
         "button_label": "Book your NCTF treatment",
-        "button_link": "",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
         "button_open_new_tab": false,
         "button_bg": "#c4a080",
         "button_text_color": "#ffffff",
@@ -1310,6 +1310,7 @@
       "block_order": [
         "image_4hFBTc"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1476,7 +1477,8 @@
         "heading_font_size": 32,
         "body_font_size": 17,
         "padding_top": 60,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "image_height": 420
       }
     },
     "slideshow_JhRaCw": {
@@ -1712,7 +1714,7 @@
         "col_3_label": "Package of 5 (Save 15%)*",
         "note": "* A package of 5 provides optimal results and shows the best improvements in skin quality, hydration, and tone.",
         "button_label": "Book Consultation",
-        "button_link": "",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
         "section_bg": "#4a4555",
         "show_texture": true,
         "texture_opacity": 90,
@@ -2051,7 +2053,7 @@
         "heading_font_size": 40,
         "body_font_size": 16,
         "button_label": "BOOK CONSULTATION",
-        "button_link": "",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
         "button_open_new_tab": false,
         "button_bg": "#b08d57",
         "button_text_color": "#ffffff",
