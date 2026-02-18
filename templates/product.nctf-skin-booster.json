@@ -1213,6 +1213,65 @@
         "padding_bottom": 60
       }
     },
+    "timeline_circles_kL7kDh": {
+      "type": "timeline-circles",
+      "blocks": {
+        "step_YqXAAB": {
+          "type": "step",
+          "settings": {
+            "title": "Immediately after",
+            "description": "Skin feels hydrated and refreshed"
+          }
+        },
+        "step_j9i7RT": {
+          "type": "step",
+          "settings": {
+            "title": "Days 3–7",
+            "description": "Initial improvements in texture and brightness"
+          }
+        },
+        "step_qBG7pE": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 2–4",
+            "description": "Increased fibroblast activity as NCTF® nourishes the skin's cellular environment"
+          }
+        },
+        "step_6Knjm9": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 6–12",
+            "description": "Skin appears firmer, collagen-rich, and radiant"
+          }
+        }
+      },
+      "block_order": [
+        "step_YqXAAB",
+        "step_j9i7RT",
+        "step_qBG7pE",
+        "step_6Knjm9"
+      ],
+      "name": "Timeline Circles",
+      "settings": {
+        "heading": "How it works & what to expect",
+        "subtitle": "NCTF® involves a series of injections, tailored to your skin's needs. Results develop gradually and look natural.",
+        "footer_text": "Results develop gradually and look natural.",
+        "section_bg": "#e4dbd4",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "circle_border": "#ece5dd",
+        "heading_font_size": 40,
+        "title_font_size": 20,
+        "body_font_size": 16,
+        "circle_size": 160,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_ngVWnb": {
       "type": "slideshow",
       "blocks": {
@@ -2074,6 +2133,7 @@
     "product_hero_rpMfMw",
     "slideshow_GzPCLJ",
     "info_hero_E6fW7Q",
+    "timeline_circles_kL7kDh",
     "slideshow_ngVWnb",
     "slideshow_Wr8ijY",
     "slideshow_JhRaCw",
