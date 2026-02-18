@@ -1879,7 +1879,7 @@
         "result_card_DtNdVM": {
           "type": "result_card",
           "settings": {
-            "title": "Glow Reset",
+            "title": "Light CO₂ Resurfacing",
             "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.39.30.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.39.41.png",
             "session_info": "1 session · Minimal downtime",
@@ -1889,7 +1889,7 @@
         "result_card_KEif9R": {
           "type": "result_card",
           "settings": {
-            "title": "Texture Reset",
+            "title": "Moderate CO₂ Resurfacing",
             "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.40.51.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.00.png",
             "session_info": "1 session · Moderate downtime",
@@ -1899,7 +1899,7 @@
         "result_card_LG8eTG": {
           "type": "result_card",
           "settings": {
-            "title": "Scar Reset",
+            "title": "Deep CO₂ Resurfacing",
             "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.49.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.54.png",
             "session_info": "1 session · Deeper resurfacing",
