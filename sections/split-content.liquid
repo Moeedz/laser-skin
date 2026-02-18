@@ -1,0 +1,280 @@
+{% style %}
+  .spc {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .spc__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .spc__texture::before, .spc__texture::after { content: ''; position: absolute; inset: 0; }
+  .spc__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .spc__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .spc__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Two columns with divider */
+  .spc__grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0;
+    align-items: start;
+  }
+
+  .spc__divider {
+    background: var(--divider-color);
+    align-self: stretch;
+  }
+
+  /* Column */
+  .spc__col {
+    padding: 0 36px;
+    display: flex; flex-direction: column;
+  }
+
+  .spc__col:first-child { padding-left: 0; }
+  .spc__col:last-child { padding-right: 0; }
+
+  .spc__col-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 14px;
+  }
+
+  .spc__col-subtitle {
+    font-size: var(--body-size); line-height: 1.5;
+    color: var(--text-color); margin: 0 0 18px;
+  }
+
+  /* Checkmark list */
+  .spc__points {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .spc__point {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: var(--body-size); line-height: 1.5; color: var(--text-color);
+  }
+
+  .spc__point-check {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 2px;
+  }
+
+  .spc__point-check svg { width: 18px; height: 18px; }
+
+  /* Bottom image */
+  .spc__col-image {
+    margin-top: auto;
+    overflow: hidden;
+  }
+
+  .spc__col-image img {
+    width: 100%; height: auto; display: block;
+    object-fit: cover;
+  }
+
+  /* Animations */
+  [data-spc-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-spc-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .spc__container { padding: 0 24px; }
+    .spc__grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .spc__divider {
+      height: 1px; width: 100%;
+      margin: 28px 0;
+    }
+    .spc__col { padding: 0; }
+    .spc__col-heading { font-size: calc(var(--heading-size) * 0.7); }
+    .spc__col-image { max-width: 320px; margin: 0 auto; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .spc__container { padding: 0 16px; }
+    .spc__col-heading { font-size: calc(var(--heading-size) * 0.58); }
+    .spc__col-image { max-width: 260px; }
+  }
+{% endstyle %}
+
+{% assign left_blocks = section.blocks | where: 'type', 'left_point' %}
+{% assign right_blocks = section.blocks | where: 'type', 'right_point' %}
+
+<section
+  class="spc"
+  id="spc-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --divider-color: {{ section.settings.divider_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="spc__texture"></div>{% endif %}
+
+  <div class="spc__container">
+    <div class="spc__grid" data-spc-animate data-delay="0">
+      <!-- Left column -->
+      <div class="spc__col">
+        {% if section.settings.left_heading != blank %}
+          <h2 class="spc__col-heading">{{ section.settings.left_heading }}</h2>
+        {% endif %}
+        {% if section.settings.left_subtitle != blank %}
+          <p class="spc__col-subtitle">{{ section.settings.left_subtitle }}</p>
+        {% endif %}
+        {% if left_blocks.size > 0 %}
+          <div class="spc__points">
+            {% for block in left_blocks %}
+              <div class="spc__point" {{ block.shopify_attributes }}>
+                <span class="spc__point-check">
+                  <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span>{{ block.settings.text }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if section.settings.left_image != blank %}
+          <div class="spc__col-image">
+            {{ section.settings.left_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Divider -->
+      <div class="spc__divider"></div>
+
+      <!-- Right column -->
+      <div class="spc__col">
+        {% if section.settings.right_heading != blank %}
+          <h2 class="spc__col-heading">{{ section.settings.right_heading }}</h2>
+        {% endif %}
+        {% if section.settings.right_subtitle != blank %}
+          <p class="spc__col-subtitle">{{ section.settings.right_subtitle }}</p>
+        {% endif %}
+        {% if right_blocks.size > 0 %}
+          <div class="spc__points">
+            {% for block in right_blocks %}
+              <div class="spc__point" {{ block.shopify_attributes }}>
+                <span class="spc__point-check">
+                  <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span>{{ block.settings.text }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if section.settings.right_image != blank %}
+          <div class="spc__col-image">
+            {{ section.settings.right_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('spc-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-spc-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Split Content",
+  "tag": "section",
+  "class": "split-content-section",
+  "settings": [
+    { "type": "header", "content": "Left Column" },
+    { "type": "text", "id": "left_heading", "label": "Left Heading", "default": "What results can I expect?" },
+    { "type": "text", "id": "left_subtitle", "label": "Left Subtitle", "default": "NCTF® revitalisation benefits:" },
+    { "type": "image_picker", "id": "left_image", "label": "Left Image" },
+    { "type": "header", "content": "Right Column" },
+    { "type": "text", "id": "right_heading", "label": "Right Heading", "default": "Common treatment areas" },
+    { "type": "text", "id": "right_subtitle", "label": "Right Subtitle", "default": "NCTF® revitalisation can be at:" },
+    { "type": "image_picker", "id": "right_image", "label": "Right Image" },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e4ddd6" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#4a3a30" },
+    { "type": "color", "id": "accent_color", "label": "Checkmark Color", "default": "#b8886a" },
+    { "type": "color", "id": "divider_color", "label": "Divider Color", "default": "#c4b8aa" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 24, "max": 48, "step": 2, "default": 32, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 17, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 20, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "left_point",
+      "name": "Left Bullet Point",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Stronger hydration and elasticity" }
+      ]
+    },
+    {
+      "type": "right_point",
+      "name": "Right Bullet Point",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Forehead lines" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split Content",
+      "blocks": [
+        { "type": "left_point", "settings": { "text": "Stronger hydration and elasticity" } },
+        { "type": "left_point", "settings": { "text": "Improved skin texture and tone" } },
+        { "type": "left_point", "settings": { "text": "Brighter, more youthful appearance" } },
+        { "type": "right_point", "settings": { "text": "Forehead lines" } },
+        { "type": "right_point", "settings": { "text": "Eye contour (crow's feet)" } },
+        { "type": "right_point", "settings": { "text": "Neck and décolleté" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
