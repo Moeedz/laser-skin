@@ -1287,7 +1287,7 @@
           "settings": {
             "title": "Immediately after",
             "icon_image": "shopify://shop_images/1-removebg-preview_2.png",
-            "description": "Mild redness or tingling may appear for a few hours.||Healing begins as your skin naturally regenerates.",
+            "description": "Mild redness or sensitivity may occur for several hours.||Healing begins as your skin naturally regenerates.",
             "card_bg": "#e8ddd4"
           }
         },
@@ -1347,7 +1347,7 @@
           "settings": {
             "title": "Immediately after",
             "icon_image": "shopify://shop_images/1-removebg-preview_2.png",
-            "description": "Keep the treated area clean and dry||Avoid touching or picking at the area",
+            "description": "Keep the treated area clean and dry||Avoid touching or picking at the area|| No Sweating",
             "card_bg": "#f3d0c7"
           }
         },
