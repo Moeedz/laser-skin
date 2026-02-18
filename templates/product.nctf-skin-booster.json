@@ -1702,6 +1702,7 @@
         "card_DkzMQx": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/1-removebg-preview_9.png",
             "image_cover": false,
             "title": "Minor Redness",
             "description": "Expect minor redness similar to light sunburn, fading within 24–48 hours."
@@ -1710,6 +1711,7 @@
         "card_dn9BEw": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/2-removebg-preview_11.png",
             "image_cover": true,
             "title": "Hydrate & Protect",
             "description": "Keep the skin hydrated with a quality moisturizer. Use SPF to protect against sun exposure."
@@ -1718,6 +1720,7 @@
         "card_PqUrkQ": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/3_11039e48-27fb-4a17-aab7-2961f0a85a81.png",
             "image_cover": false,
             "title": "Quick Recovery",
             "description": "You can usually resume normal activities the next day, avoiding makeup for 24 hours."
