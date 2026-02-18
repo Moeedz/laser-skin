@@ -79,11 +79,13 @@
   .spc__col-image {
     margin-top: auto;
     overflow: hidden;
+    aspect-ratio: 3 / 4;
+    max-height: var(--image-height);
   }
 
   .spc__col-image img {
-    width: 100%; height: auto; display: block;
-    object-fit: cover;
+    width: 100%; height: 100%; display: block;
+    object-fit: cover; object-position: top center;
   }
 
   /* Animations */
@@ -133,6 +135,7 @@
     --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
     --padding-top: {{ section.settings.padding_top }}px;
     --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --image-height: {{ section.settings.image_height }}px;
   "
 >
   {% if section.settings.show_texture %}<div class="spc__texture"></div>{% endif %}
@@ -245,7 +248,8 @@
     { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 17, "unit": "px" },
     { "type": "header", "content": "Layout" },
     { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
-    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 20, "unit": "px" }
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 20, "unit": "px" },
+    { "type": "range", "id": "image_height", "label": "Image Height", "min": 250, "max": 550, "step": 10, "default": 420, "unit": "px" }
   ],
   "blocks": [
     {
