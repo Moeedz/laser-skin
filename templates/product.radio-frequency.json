@@ -1993,35 +1993,35 @@
             "note": ""
           }
         },
-        "price_card_dhiaLU": {
+        "price_card_FDj6Bj": {
           "type": "price_card",
           "settings": {
-            "name": "Medium Tattoo",
+            "name": "3 Sessions",
             "main_price": "£55",
-            "main_per": "Per Session",
-            "tier_1": "6 Sessions £50 per session • <strong>£300</strong>",
-            "tier_2": "10 Sessions £45 per session • <strong>£450</strong>",
+            "main_per": "per session",
+            "tier_1": "Total: £165",
+            "tier_2": "Improved firmness with cumulative collagen stimulation",
             "tier_3": "",
-            "note": "Final treatment plan and number of sessions confirmed during consultation."
+            "note": ""
           }
         },
-        "price_card_7rWCwT": {
+        "price_card_NwcLYR": {
           "type": "price_card",
           "settings": {
-            "name": "Large Tattoo",
-            "main_price": "£90",
-            "main_per": "Per Session",
-            "tier_1": "6 Sessions £80 per session • <strong>£480</strong>",
-            "tier_2": "10 Sessions £75 per session • <strong>£750</strong>",
+            "name": "6 Sessions",
+            "main_price": "£50",
+            "main_per": "per session",
+            "tier_1": "Total: £300",
+            "tier_2": "Best for long-term skin tightening and visible results.",
             "tier_3": "",
-            "note": "Final treatment plan and number of sessions confirmed during consultation."
+            "note": ""
           }
         }
       },
       "block_order": [
         "price_card_tCJKGt",
-        "price_card_dhiaLU",
-        "price_card_7rWCwT"
+        "price_card_FDj6Bj",
+        "price_card_NwcLYR"
       ],
       "name": "Session Pricing",
       "settings": {
