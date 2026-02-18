@@ -1279,66 +1279,6 @@
         "padding_bottom": 80
       }
     },
-    "before_after_results_EiCjp6": {
-      "type": "before-after-results",
-      "blocks": {
-        "result_card_beNbrM": {
-          "type": "result_card",
-          "settings": {
-            "title": "Skin Tag Removal",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.35.58.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.36.05.png",
-            "session_info": "1 session",
-            "benefit": ""
-          }
-        },
-        "result_card_89UUWP": {
-          "type": "result_card",
-          "settings": {
-            "title": "Mole Removal",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.38.07.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.38.13.png",
-            "session_info": "1 session",
-            "benefit": "Improves fine lines, mild acne scars and crepey skin"
-          }
-        },
-        "result_card_DtRfkr": {
-          "type": "result_card",
-          "settings": {
-            "title": "Wart Removal",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.39.32.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.39.40.png",
-            "session_info": "1 session",
-            "benefit": "Treats deep rolling scars and surgical scars."
-          }
-        }
-      },
-      "block_order": [
-        "result_card_beNbrM",
-        "result_card_89UUWP",
-        "result_card_DtRfkr"
-      ],
-      "name": "Before After Results",
-      "settings": {
-        "heading": "<p>Real results, tailored by treatment depth.</p>",
-        "subtitle": "Fractional CO₂ laser treatments adjusted to your skin's needs and tolerance for downtime.",
-        "before_label": "Before",
-        "after_label": "After",
-        "footer_text": "*Individual results may vary.",
-        "section_bg": "#e5dfda",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#2a2a2a",
-        "text_color": "#555555",
-        "accent_color": "#b09a60",
-        "card_bg": "#f5f0eb",
-        "heading_font_size": 40,
-        "card_title_font_size": 24,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "process_cards_PKn4Dp": {
       "type": "process-cards",
       "blocks": {
@@ -1407,6 +1347,66 @@
         "body_font_size": 16,
         "padding_top": 80,
         "padding_bottom": 80
+      }
+    },
+    "before_after_results_EiCjp6": {
+      "type": "before-after-results",
+      "blocks": {
+        "result_card_beNbrM": {
+          "type": "result_card",
+          "settings": {
+            "title": "Skin Tag Removal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.35.58.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.36.05.png",
+            "session_info": "1 session",
+            "benefit": ""
+          }
+        },
+        "result_card_89UUWP": {
+          "type": "result_card",
+          "settings": {
+            "title": "Mole Removal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.38.07.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.38.13.png",
+            "session_info": "1 session",
+            "benefit": "Improves fine lines, mild acne scars and crepey skin"
+          }
+        },
+        "result_card_DtRfkr": {
+          "type": "result_card",
+          "settings": {
+            "title": "Wart Removal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.39.32.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_11.39.40.png",
+            "session_info": "1 session",
+            "benefit": "Treats deep rolling scars and surgical scars."
+          }
+        }
+      },
+      "block_order": [
+        "result_card_beNbrM",
+        "result_card_89UUWP",
+        "result_card_DtRfkr"
+      ],
+      "name": "Before After Results",
+      "settings": {
+        "heading": "<p>Precision Lesion Removal. Immediate Cosmetic Improvement.</p>",
+        "subtitle": "Advanced, targeted removal of unwanted skin lesions with minimal downtime and excellent cosmetic outcomes.",
+        "before_label": "Before",
+        "after_label": "After",
+        "footer_text": "*Individual results may vary.",
+        "section_bg": "#e5dfda",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b09a60",
+        "card_bg": "#f5f0eb",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "slideshow_jjiVQG": {
@@ -2489,8 +2489,8 @@
     "what_we_treat_VUEPya",
     "process_cards_JqDfXG",
     "process_cards_BPYGkN",
-    "before_after_results_EiCjp6",
     "process_cards_PKn4Dp",
+    "before_after_results_EiCjp6",
     "slideshow_jjiVQG",
     "slideshow_etgJic",
     "slideshow_8E7yKC",
