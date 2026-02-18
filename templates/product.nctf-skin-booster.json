@@ -1160,6 +1160,59 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_E6fW7Q": {
+      "type": "info-hero",
+      "blocks": {
+        "point_zCiRyM": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Improves hydration & elasticity"
+          }
+        },
+        "point_c7ALmi": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Stimulates collagen & fibroblasts"
+          }
+        },
+        "point_bD7TcE": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Enhances overall skin quality over time"
+          }
+        }
+      },
+      "block_order": [
+        "point_zCiRyM",
+        "point_c7ALmi",
+        "point_bD7TcE"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What is NCTF® Skin Revitalisation?",
+        "body": "<p>NCTF® is a poly-revitalising injectable treatment that nourishes and rejuvenates your skin from within. Unlike dermal fillers that work by adding volume, this exclusive formula infuses your skin with over 50 revitalising ingredients to improve overall skin quality at a deep, cellular level.</p>",
+        "points_heading": "",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_vumknxvumknxvumk.png",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd2c8ee",
+        "overlay_mid": "#ddd2c8b0",
+        "overlay_fade": "#ddd2c850",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_U93jbb": {
       "type": "slideshow",
       "blocks": {
@@ -2154,6 +2207,7 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_rpMfMw",
     "slideshow_GzPCLJ",
+    "info_hero_E6fW7Q",
     "slideshow_U93jbb",
     "slideshow_ngVWnb",
     "slideshow_Wr8ijY",
