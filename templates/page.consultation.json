@@ -25,21 +25,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Advanced, medical-grade skin analysis technology"
+            "text": "Advanced diagnostic skin technology"
           }
         },
         "check_item_6hBBYK": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Honest, tailored recommendations — never a sales pitch"
+            "text": "Honest, tailored recommendations"
           }
         },
         "check_item_eyr49L": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "100% complimentary and no obligation to book treatment"
+            "text": "100% complimentary, no obligation"
           }
         },
         "trust_item_7VyCp8": {
@@ -323,8 +323,8 @@
       ],
       "name": "Analysis Steps",
       "settings": {
-        "heading": "What Happens During Your Free Skin Analysis",
-        "subtitle": "Feel confident in your skin with a private, no-pressure consultation, guided by one of our qualified skincare specialists.",
+        "heading": "What Happens During Your Visit",
+        "subtitle": "Feel completely at ease with a structured, expert-led consultation designed around clarity and reassurance.",
         "footer_text": "We will never recommend treatments you don't need.",
         "section_bg": "#f3e1e0",
         "show_texture": true,
