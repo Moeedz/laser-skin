@@ -1410,6 +1410,73 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "split_content_wbRbrP": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_aAcjUg": {
+          "type": "left_point",
+          "settings": {
+            "text": "Stronger hydration and elasticity"
+          }
+        },
+        "left_point_JUJNQJ": {
+          "type": "left_point",
+          "settings": {
+            "text": "Improved skin texture and tone"
+          }
+        },
+        "left_point_Q8QfMM": {
+          "type": "left_point",
+          "settings": {
+            "text": "Brighter, more youthful appearance"
+          }
+        },
+        "right_point_9prdpQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "Forehead lines"
+          }
+        },
+        "right_point_VXpJKz": {
+          "type": "right_point",
+          "settings": {
+            "text": "Eye contour (crow's feet)"
+          }
+        },
+        "right_point_gypQVb": {
+          "type": "right_point",
+          "settings": {
+            "text": "Neck and décolleté"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_aAcjUg",
+        "left_point_JUJNQJ",
+        "left_point_Q8QfMM",
+        "right_point_9prdpQ",
+        "right_point_VXpJKz",
+        "right_point_gypQVb"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "left_heading": "What results can I expect?",
+        "left_subtitle": "NCTF® revitalisation benefits:",
+        "right_heading": "Common treatment areas",
+        "right_subtitle": "NCTF® revitalisation can be at:",
+        "section_bg": "#e4ddd6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
     "slideshow_JhRaCw": {
       "type": "slideshow",
       "blocks": {
@@ -2005,6 +2072,7 @@
     "info_hero_E6fW7Q",
     "timeline_circles_kL7kDh",
     "slideshow_Wr8ijY",
+    "split_content_wbRbrP",
     "slideshow_JhRaCw",
     "results_cards_iPrXU8",
     "treatment_pricing_table_zfB6Uk",
