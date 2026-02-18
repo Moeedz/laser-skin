@@ -1069,6 +1069,110 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_Nic47e": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_bBFwQm": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Non-surgical skin tightening"
+          }
+        },
+        "check_item_aWTUGK": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Clinically proven collagen stimulation"
+          }
+        },
+        "check_item_bDQFF4": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No downtime or recovery"
+          }
+        },
+        "trust_item_A97HgP": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_mV9UHL": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_TMmNCV": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_QnyUgw": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_bBFwQm",
+        "check_item_aWTUGK",
+        "check_item_bDQFF4",
+        "trust_item_A97HgP",
+        "trust_item_mV9UHL",
+        "trust_item_TMmNCV",
+        "trust_item_QnyUgw"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_dlguk8dlguk8dlgu.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 200,
+        "background_color": "#fddbc9",
+        "overlay_color_start": "rgba(0,0,0,0)",
+        "overlay_color_mid": "rgba(0,0,0,0)",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Firm, Lift & Tighten Your Skin",
+        "subheading_highlight": "Naturally",
+        "subheading": "&nbsp;",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Non-invasive radio frequency treatment designed to improve skin firmness, stimulate collagen and restore a smoother, tighter appearance without surgery or  downtime</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your Hydrofacial",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#c68b5d",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#fddbc9",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_gw3R84": {
       "type": "slideshow",
       "blocks": {
@@ -2339,6 +2443,7 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_Nic47e",
     "slideshow_gw3R84",
     "slideshow_iHCjBg",
     "slideshow_LrFQYh",
