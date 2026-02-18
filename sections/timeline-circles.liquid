@@ -1,0 +1,318 @@
+{% style %}
+  .tlc {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .tlc__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .tlc__texture::before, .tlc__texture::after { content: ''; position: absolute; inset: 0; }
+  .tlc__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .tlc__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .tlc__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .tlc__header { margin-bottom: 40px; }
+
+  .tlc__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 16px;
+  }
+
+  .tlc__subtitle {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); margin: 0; max-width: 700px;
+  }
+
+  /* Timeline */
+  .tlc__timeline {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 4), 1fr);
+    gap: 0;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  /* Horizontal connector line — sits behind circles */
+  .tlc__timeline::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--title-area) + var(--circle-size) / 2);
+    left: calc(100% / var(--col-count) / 2);
+    right: calc(100% / var(--col-count) / 2);
+    height: 2px;
+    background: var(--line-color);
+    z-index: 0;
+  }
+
+  .tlc__step {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; position: relative; z-index: 1;
+  }
+
+  /* Title above circle */
+  .tlc__step-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--title-size); font-weight: 700;
+    color: var(--heading-color); margin: 0;
+    height: var(--title-area);
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  /* Circle image */
+  .tlc__step-circle {
+    width: var(--circle-size); height: var(--circle-size);
+    border-radius: 50%; overflow: hidden;
+    border: 3px solid var(--circle-border);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    background: var(--section-bg);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .tlc__step-circle img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  /* Dot on the line after each circle (except last) */
+  .tlc__step-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--dot-color);
+    margin-top: 0;
+    position: absolute;
+    top: calc(var(--title-area) + var(--circle-size) + 2px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    display: none;
+  }
+
+  /* Show dots between steps (not on last) */
+  .tlc__step:not(:last-child) .tlc__step-dot {
+    display: block;
+    left: auto;
+    right: calc(-2px);
+    top: calc(var(--title-area) + var(--circle-size) / 2);
+    transform: translateY(-50%);
+  }
+
+  /* Description below circle */
+  .tlc__step-desc {
+    font-size: calc(var(--body-size) - 1px); line-height: 1.6;
+    color: var(--text-color); margin: 16px 0 0;
+    max-width: 200px;
+  }
+
+  /* Footer */
+  .tlc__footer { text-align: center; }
+
+  .tlc__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--body-size); font-style: italic;
+    color: var(--heading-color); margin: 0;
+  }
+
+  /* Animations */
+  [data-tlc-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-tlc-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .tlc__container { padding: 0 20px; }
+    .tlc__heading { font-size: calc(var(--heading-size) * 0.6); }
+
+    .tlc__timeline {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .tlc__timeline::before {
+      top: 0; bottom: 0;
+      left: 40px;
+      right: auto;
+      width: 2px; height: auto;
+    }
+
+    .tlc__step {
+      flex-direction: row; text-align: left;
+      gap: 20px; align-items: flex-start;
+    }
+
+    .tlc__step-title {
+      height: auto; padding-bottom: 0;
+      font-size: calc(var(--title-size) - 2px);
+      justify-content: flex-start;
+    }
+
+    .tlc__step-circle {
+      width: 80px; height: 80px; flex-shrink: 0;
+    }
+
+    .tlc__step-dot { display: none !important; }
+
+    .tlc__step-info {
+      display: flex; flex-direction: column; gap: 4px;
+      flex: 1;
+    }
+
+    .tlc__step-desc { max-width: none; margin: 0; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .tlc__container { padding: 0 16px; }
+    .tlc__heading { font-size: calc(var(--heading-size) * 0.48); }
+    .tlc__step-circle { width: 64px; height: 64px; }
+    .tlc__timeline::before { left: 32px; }
+  }
+{% endstyle %}
+
+{% assign step_blocks = section.blocks | where: 'type', 'step' %}
+
+<section
+  class="tlc"
+  id="tlc-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --line-color: {{ section.settings.line_color }};
+    --dot-color: {{ section.settings.dot_color }};
+    --circle-border: {{ section.settings.circle_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --title-size: {{ section.settings.title_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --circle-size: {{ section.settings.circle_size }}px;
+    --title-area: 50px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ step_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="tlc__texture"></div>{% endif %}
+
+  <div class="tlc__container">
+    <div class="tlc__header" data-tlc-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="tlc__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="tlc__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if step_blocks.size > 0 %}
+      <div class="tlc__timeline" data-tlc-animate data-delay="1">
+        {% for block in step_blocks %}
+          <div class="tlc__step" {{ block.shopify_attributes }}>
+            <span class="tlc__step-title">{{ block.settings.title }}</span>
+            <div class="tlc__step-circle">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 300 | image_tag: loading: 'lazy', widths: '150,200,300' }}
+              {% endif %}
+            </div>
+            <span class="tlc__step-dot"></span>
+            <p class="tlc__step-desc">{{ block.settings.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="tlc__footer" data-tlc-animate data-delay="2">
+        <p class="tlc__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('tlc-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-tlc-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Timeline Circles",
+  "tag": "section",
+  "class": "timeline-circles-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "How it works & what to expect" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "NCTF® involves a series of injections, tailored to your skin's needs. Results develop gradually and look natural." },
+    { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "Results develop gradually and look natural." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e4dbd4" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#5a4a3a" },
+    { "type": "color", "id": "line_color", "label": "Timeline Line Color", "default": "#baa898" },
+    { "type": "color", "id": "dot_color", "label": "Dot Color", "default": "#baa898" },
+    { "type": "color", "id": "circle_border", "label": "Circle Border Color", "default": "#ece5dd" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 40, "unit": "px" },
+    { "type": "range", "id": "title_font_size", "label": "Step Title Font Size", "min": 16, "max": 28, "step": 1, "default": 20, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "circle_size", "label": "Circle Size", "min": 100, "max": 220, "step": 10, "default": 160, "unit": "px" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Timeline Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Immediately after" },
+        { "type": "image_picker", "id": "image", "label": "Circle Image" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Skin feels hydrated and refreshed" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline Circles",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Immediately after", "description": "Skin feels hydrated and refreshed" } },
+        { "type": "step", "settings": { "title": "Days 3–7", "description": "Initial improvements in texture and brightness" } },
+        { "type": "step", "settings": { "title": "Weeks 2–4", "description": "Increased fibroblast activity as NCTF® nourishes the skin's cellular environment" } },
+        { "type": "step", "settings": { "title": "Weeks 6–12", "description": "Skin appears firmer, collagen-rich, and radiant" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
