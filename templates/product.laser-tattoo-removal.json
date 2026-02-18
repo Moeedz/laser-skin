@@ -1713,8 +1713,8 @@
       ],
       "name": "Session Pricing",
       "settings": {
-        "heading": "Personalised Tattoo Removal Pricing<br>\nTransparent pricing tailored to your tattoo size and goals.",
-        "subtitle": "",
+        "heading": "Personalised Tattoo Removal Pricing<br><br>\nTransparent pricing tailored to your tattoo size and goals.",
+        "subtitle": "Final pricing may vary based on ink density, colour complexity, and skin type confirmed during consultation.",
         "footer_text": "Course pricing applies when sessions are booked as a treatment plan. Single-session pricing available for pay-as-you-go treatments.",
         "cta_heading": "Book Your Test Patch Today",
         "button_label": "BOOK NOW",
