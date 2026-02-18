@@ -1003,7 +1003,7 @@
         "overlay_color_fade": "#ece3dd40",
         "heading": "Revitalise Skin at a",
         "subheading_highlight": "Cellular Level",
-        "subheading": " ",
+        "subheading": " &nbsp;",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
@@ -1059,6 +1059,7 @@
       "block_order": [
         "image_rbP9Wg"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
