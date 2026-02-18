@@ -1056,10 +1056,10 @@
             "item_2_text": "One-size-fits-all session plans",
             "item_3_icon": "coins",
             "item_3_text": "Extra sessions often needed later",
-            "item_4_icon": "none",
+            "item_4_icon": "coins",
             "item_4_text": "<b>Total cost can be hard to predict</b>",
-            "item_5_icon": "none",
-            "item_5_text": "",
+            "item_5_icon": "checkmark",
+            "item_5_text": "No assessment of ink depth or colour mix",
             "item_6_icon": "none",
             "item_6_text": ""
           }
