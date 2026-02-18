@@ -1462,8 +1462,10 @@
       "settings": {
         "left_heading": "What results can I expect?",
         "left_subtitle": "NCTF® revitalisation benefits:",
+        "left_image": "shopify://shop_images/1-removebg-preview_10.png",
         "right_heading": "Common treatment areas",
         "right_subtitle": "NCTF® revitalisation can be at:",
+        "right_image": "shopify://shop_images/2-removebg-preview_12.png",
         "section_bg": "#f6ecf4",
         "show_texture": true,
         "texture_opacity": 80,
