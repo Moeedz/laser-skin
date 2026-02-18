@@ -1238,6 +1238,8 @@
           "type": "result_card",
           "settings": {
             "title": "Texture Correction",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.16.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.23.png",
             "session_info": "1 session · Mild redness 24–48 hours",
             "benefit": "✔ Softens fine lines <br>\n✔ Improves uneven skin texture <br>\n✔ Reduces mild acne scarring"
           }
