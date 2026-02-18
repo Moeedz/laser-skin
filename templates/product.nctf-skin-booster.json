@@ -997,7 +997,7 @@
         "image_position": "center center",
         "desktop_height": 900,
         "mobile_height": 200,
-        "background_color": "rgba(0,0,0,0)",
+        "background_color": "#f5dcd0",
         "overlay_color_start": "rgba(0,0,0,0)",
         "overlay_color_mid": "rgba(0,0,0,0)",
         "overlay_color_fade": "#ece3dd40",
