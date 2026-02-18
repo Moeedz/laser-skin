@@ -1007,7 +1007,7 @@
         "overlay_color_start": "#ece3dde6",
         "overlay_color_mid": "#ece3ddb3",
         "overlay_color_fade": "#ece3dd40",
-        "heading": "Regenerate your skin from within",
+        "heading": "Regenerate your skin from within with Polynucleotides",
         "subheading_highlight": "",
         "subheading": "",
         "heading_font_size": 54,
@@ -1172,24 +1172,28 @@
         "point_3Eibmj": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Stimulates collagen and tissue regeneration"
           }
         },
         "point_MXymWr": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Improves skin texture, elasticity, and hydration"
           }
         },
         "point_JykQGU": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Supports natural repair without altering facial structure"
           }
         },
         "point_VqyB4g": {
           "type": "point",
           "settings": {
+            "title": "",
             "text": "Suitable for delicate areas such as under-eyes and neck"
           }
         }
@@ -1204,6 +1208,7 @@
       "settings": {
         "heading": "What are Polynucleotides?",
         "body": "<p>A next-generation regenerative treatment that activates your skin’s own healing power, working <em>with your biology</em>, not against it.</p><p>Polynucleotides are purified DNA fragments that awaken your skin’s natural repair processes to restore hydration, firmness, and elasticity from deep within.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>",
+        "points_heading": "",
         "bg_image": "shopify://shop_images/Gemini_Generated_Image_fvlgaefvlgaefvlg.png",
         "bg_position": "right center",
         "section_height": 800,
@@ -1214,6 +1219,7 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 700,
