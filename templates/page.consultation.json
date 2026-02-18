@@ -286,7 +286,7 @@
           "type": "step",
           "settings": {
             "title": "Clear Guidance, No Obligation",
-            "description": "You’ll receive honest, professional advice with absolutely no obligation to proceed.\n\nWe will never recommend treatments you don’t need.\n\nYou are free to take time to consider your options."
+            "description": "You’ll receive honest, professional advice with absolutely no obligation to proceed.<br><br>\n\nWe will never recommend treatments you don’t need.<br><br>\n\nYou are free to take time to consider your options."
           }
         },
         "image_QT884n": {
@@ -516,8 +516,8 @@
       ],
       "name": "Treatment Steps",
       "settings": {
-        "heading": "Why a Free Skin Analysis Is the Best Place to Start",
-        "subtitle": "Expert-led, pressure-free, and focused entirely on what’s best for your skin.",
+        "heading": "Why a Professional Assessment Matters",
+        "subtitle": "",
         "footer_text": "",
         "section_bg": "#efdae8",
         "show_texture": true,
