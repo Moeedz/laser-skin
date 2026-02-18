@@ -25,21 +25,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Advanced diagnostic skin technology"
+            "text": "Advanced, medical-grade skin analysis technology"
           }
         },
         "check_item_6hBBYK": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Honest, tailored recommendations"
+            "text": "Honest, tailored recommendations — never a sales pitch"
           }
         },
         "check_item_eyr49L": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "100% complimentary, no obligation"
+            "text": "100% complimentary and no obligation to book treatment"
           }
         },
         "trust_item_7VyCp8": {
