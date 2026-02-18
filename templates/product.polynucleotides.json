@@ -1196,13 +1196,21 @@
             "title": "",
             "text": "Suitable for delicate areas such as under-eyes and neck"
           }
+        },
+        "point_V3BLMP": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Suitable for delicate areas such as under-eyes and neck"
+          }
         }
       },
       "block_order": [
         "point_3Eibmj",
         "point_MXymWr",
         "point_JykQGU",
-        "point_VqyB4g"
+        "point_VqyB4g",
+        "point_V3BLMP"
       ],
       "name": "Info Hero",
       "settings": {
