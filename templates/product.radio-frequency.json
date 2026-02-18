@@ -2034,7 +2034,7 @@
         "section_bg": "#4d505a",
         "show_texture": true,
         "texture_opacity": 90,
-        "light_color": "#e8e0d8",
+        "light_color": "#ffffff",
         "card_bg": "#363941",
         "heading_font_size": 44,
         "card_title_font_size": 24,
