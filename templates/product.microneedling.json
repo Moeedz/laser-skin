@@ -1228,6 +1228,8 @@
           "type": "result_card",
           "settings": {
             "title": "Surface Renewal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.53.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.01.png",
             "session_info": "1 session · Minimal downtime",
             "benefit": "✔ Enhances skin radiance and clarity<br>\n✔ Refines pores and smooths surface texture<br>\n✔ Stimulates early collagen response"
           }
