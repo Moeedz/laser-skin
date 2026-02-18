@@ -1956,10 +1956,10 @@
           "type": "price_card",
           "settings": {
             "name": "Blemish Removal",
-            "card_subtitle": "(15 minutes)",
+            "card_subtitle": "",
             "price": "£75",
             "per_label": "per session",
-            "description": "In most cases, skin tags can be removed in just one session.\n\nDuring your consultation, your specialist will assess your skin and confirm whether a single 15-minute treatment will be sufficient, or if any additional treatment is recommended.\n\n<br>\n<br>\n\nAll treatments are delivered by qualified practitioners using safe, clinically approved technology."
+            "description": "Price covers treatment of one lesion. Multiple lesions can be treated in the same appointment and will be quoted during consultation.\n\n<br>\n<br>\n\nAll treatments are delivered by qualified practitioners using safe, clinically approved technology."
           }
         }
       },
