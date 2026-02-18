@@ -1984,13 +1984,13 @@
         "price_card_tCJKGt": {
           "type": "price_card",
           "settings": {
-            "name": "Small Tattoo",
-            "main_price": "£40",
-            "main_per": "Per Session",
-            "tier_1": "6 Sessions £35 per session • <strong>£210</strong>",
-            "tier_2": "10 Sessions £30 per session • <strong>£300</strong>",
+            "name": "1 Session",
+            "main_price": "£60",
+            "main_per": "per session",
+            "tier_1": "Ideal for maintenance or first-time treatment",
+            "tier_2": "",
             "tier_3": "",
-            "note": "Final treatment plan and number of sessions confirmed during consultation."
+            "note": ""
           }
         },
         "price_card_dhiaLU": {
@@ -2025,13 +2025,13 @@
       ],
       "name": "Session Pricing",
       "settings": {
-        "heading": "Laser Tattoo Removal Pricing",
-        "subtitle": "Restore Your Skin with Safe, Professional Care",
-        "footer_text": "Course pricing applies when sessions are booked as a treatment plan. Single-session pricing available for pay-as-you-go treatments.",
-        "cta_heading": "Book Your Test Patch Today",
-        "button_label": "BOOK NOW",
+        "heading": "Radio Frequency Pricing",
+        "subtitle": "",
+        "footer_text": "Course pricing is recommended for optimal collagen stimulation and progressive skin tightening.",
+        "cta_heading": "",
+        "button_label": "",
         "button_link": "",
-        "section_bg": "#5a5560",
+        "section_bg": "#4d505a",
         "show_texture": true,
         "texture_opacity": 90,
         "light_color": "#e8e0d8",
