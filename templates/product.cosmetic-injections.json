@@ -2128,7 +2128,7 @@
         "price_row_YH6XWM": {
           "type": "price_row",
           "settings": {
-            "title": "1 Area – from £140.00",
+            "title": "1 Area – from £140",
             "badge": "",
             "subtitle": "Target Specific",
             "description": "Ideal for treating a single concern, such as Crow's Feet (eyes) or Glabellar lines (frown). Includes review"
@@ -2137,7 +2137,7 @@
         "price_row_g7qp79": {
           "type": "price_row",
           "settings": {
-            "title": "2 Areas – from £220.00",
+            "title": "2 Areas – from 220",
             "badge": "",
             "subtitle": "The Refresh",
             "description": "Treats two connected areas to maintain balance, typically the Frown and Forehead. Includes review"
@@ -2146,7 +2146,7 @@
         "price_row_LRi7MD": {
           "type": "price_row",
           "settings": {
-            "title": "3 Areas – from £270.00",
+            "title": "3 Areas – from £270",
             "badge": "Most Popular",
             "subtitle": "Complete Upper Face",
             "description": "Treats the Forehead, Frown, and Eyes for a harmonious, lifted result. Includes review"
