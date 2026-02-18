@@ -1572,6 +1572,7 @@
         "inset_image_6wc7Ef": {
           "type": "inset_image",
           "settings": {
+            "image": "shopify://shop_images/2_8db0ab82-b66a-4e29-b238-0dcb33e298d2.png",
             "label": "Upper Chest",
             "custom_top": "",
             "custom_bottom": "5%",
@@ -1586,6 +1587,7 @@
         "inset_image_rQEhfx": {
           "type": "inset_image",
           "settings": {
+            "image": "shopify://shop_images/3_203d13bf-0494-4fa9-bd01-37cf2b85ab2d.png",
             "label": "Knees",
             "custom_top": "",
             "custom_bottom": "5%",
