@@ -1392,7 +1392,7 @@
         "left_point_3aNRTf": {
           "type": "left_point",
           "settings": {
-            "text": "<b>Fine lines and crepey texture</b> - Improves skin density and texture over time."
+            "text": "Fine lines and crepey texture - Improves skin density and texture over time."
           }
         },
         "right_point_BJDdEe": {
@@ -1434,7 +1434,7 @@
       "name": "Split Content",
       "settings": {
         "heading": "Who Is Radio Frequency Best For?",
-        "subtitle": "Radio Frequency is ideal for clients looking to improve skin laxity and firmness without injectables or surgery.",
+        "subtitle": "Radio Frequency is ideal for clients looking to improve skin laxity and firmness without injectables or surgery.<br>",
         "footer_text": "Your clinician will design a personalised treatment plan to ensure optimal, natural-looking results.",
         "left_heading": "",
         "left_subtitle": "",
