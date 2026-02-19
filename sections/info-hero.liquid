@@ -103,12 +103,12 @@
 
   /* Responsive */
   @media screen and (max-width: 768px) {
+    /* DEFAULT: Image on top, content below */
     .ifh {
       min-height: auto;
       display: flex; flex-direction: column;
     }
 
-    /* Image becomes a visible block at the top */
     .ifh__bg--desktop { display: none; }
     .ifh__bg--mobile {
       display: block;
@@ -120,7 +120,6 @@
       width: 100%; height: 100%; object-fit: cover;
     }
     .ifh__bg-overlay { display: none; }
-
     .ifh__shimmer { display: none; }
 
     .ifh__container {
@@ -129,10 +128,43 @@
     }
     .ifh__heading { font-size: calc(var(--heading-size) * 0.6); }
     .ifh__content { max-width: 100%; }
+
+    /* OVERLAY MODE: image stays behind text on mobile */
+    .ifh--mobile-overlay {
+      display: block;
+      min-height: var(--section-height);
+    }
+
+    .ifh--mobile-overlay .ifh__bg--desktop { display: none; }
+    .ifh--mobile-overlay .ifh__bg--mobile {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      order: unset;
+    }
+    .ifh--mobile-overlay .ifh__bg--mobile img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: var(--bg-position);
+    }
+    .ifh--mobile-overlay .ifh__bg-overlay {
+      display: block;
+      background: linear-gradient(
+        to bottom,
+        var(--overlay-strong) 0%,
+        var(--overlay-mid) 60%,
+        var(--overlay-fade) 85%,
+        transparent 100%
+      );
+    }
+    .ifh--mobile-overlay .ifh__shimmer { display: block; }
+    .ifh--mobile-overlay .ifh__container {
+      background-color: transparent;
+      padding: var(--padding-top) 20px var(--padding-bottom);
+    }
   }
 
   @media screen and (max-width: 480px) {
     .ifh__container { padding: 28px 16px var(--padding-bottom); }
+    .ifh--mobile-overlay .ifh__container { padding: var(--padding-top) 16px var(--padding-bottom); }
     .ifh__heading { font-size: calc(var(--heading-size) * 0.48); }
     .ifh__point-icon { width: 24px; height: 24px; }
     .ifh__point-icon img { width: 24px; height: 24px; }
@@ -142,7 +174,7 @@
 {% assign point_blocks = section.blocks | where: 'type', 'point' %}
 
 <section
-  class="ifh"
+  class="ifh{% if section.settings.mobile_overlay %} ifh--mobile-overlay{% endif %}"
   id="ifh-{{ section.id }}"
   style="
     --heading-color: {{ section.settings.heading_color }};
@@ -272,7 +304,8 @@
     { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
     { "type": "color", "id": "text_color", "label": "Text Color", "default": "#4a3a30" },
     { "type": "color", "id": "icon_color", "label": "Icon Color", "default": "#8a7050" },
-    { "type": "color", "id": "mobile_content_bg", "label": "Mobile Content Background", "default": "#e4ddd6", "info": "Solid background for content area on mobile" },
+    { "type": "color", "id": "mobile_content_bg", "label": "Mobile Content Background", "default": "#e4ddd6", "info": "Solid background for content area on mobile (when overlay is off)" },
+    { "type": "checkbox", "id": "mobile_overlay", "label": "Enable Mobile Overlay", "default": false, "info": "When enabled, image stays behind text on mobile instead of stacking" },
     { "type": "header", "content": "Typography" },
     { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 60, "step": 2, "default": 44, "unit": "px" },
     { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 22, "step": 1, "default": 17, "unit": "px" },
