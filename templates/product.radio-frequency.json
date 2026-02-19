@@ -1209,6 +1209,7 @@
         "body": "<p>Radio Frequency (RF) skin tightening uses controlled thermal energy to stimulate collagen and elastin production within the deeper dermal layers of the skin.<br/>By targeting the dermis rather than the surface, RF strengthens skin structure from within improving firmness, texture, and elasticity without damaging surrounding tissue.</p>",
         "points_heading": "Why patients choose RF",
         "bg_image": "shopify://shop_images/image_bab0f273-a2be-4453-a646-6e030e5c533e.png",
+        "bg_image_mobile": "shopify://shop_images/image_bab0f273-a2be-4453-a646-6e030e5c533e.png",
         "bg_position": "right center",
         "section_height": 900,
         "overlay_strong": "rgba(0,0,0,0)",
