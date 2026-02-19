@@ -140,6 +140,9 @@
     color: var(--heading-color); margin: 0;
   }
 
+  /* Mobile combined stages — hidden on desktop */
+  .ptl__mobile-stages { display: none; }
+
   /* Animations */
   [data-ptl-animate] {
     opacity: 0; transform: translateY(24px);
@@ -152,27 +155,30 @@
     .ptl__container { padding: 0 24px; }
     .ptl__heading { font-size: calc(var(--heading-size) * 0.6); }
 
-    .ptl__stages {
-      grid-template-columns: 1fr;
+    /* Hide desktop-only elements */
+    .ptl__stages--desktop { display: none; }
+    .ptl__line-row { display: none; }
+
+    /* Show mobile combined stages */
+    .ptl__mobile-stages {
+      display: flex; flex-direction: column;
       gap: 24px;
     }
 
-    .ptl__line-row { display: none; }
-
-    .ptl__stage {
+    .ptl__mobile-stage {
       padding-left: 20px;
       border-left: 3px solid var(--line-color);
       position: relative;
     }
 
-    .ptl__stage::before {
+    .ptl__mobile-stage::before {
       content: '';
       width: 12px; height: 12px; border-radius: 50%;
       background: var(--dot-color);
       position: absolute; left: -7.5px; top: 4px;
     }
 
-    .ptl__stage-title { padding-right: 0; font-size: var(--body-size); }
+    .ptl__stage-title { padding-right: 0; font-size: var(--body-size); margin-bottom: 8px; }
     .ptl__stage-points { padding-right: 0; }
   }
 
@@ -225,8 +231,8 @@
           <h3 class="ptl__timeline-label">{{ section.settings.timeline_label }}</h3>
         {% endif %}
 
-        <!-- Stage titles row -->
-        <div class="ptl__stages">
+        <!-- Stage titles row (desktop) -->
+        <div class="ptl__stages ptl__stages--desktop">
           {% for block in stage_blocks %}
             <div style="display:contents;" {{ block.shopify_attributes }}>
               <h4 class="ptl__stage-title">{{ block.settings.title }}</h4>
@@ -246,10 +252,33 @@
           {% endfor %}
         </div>
 
-        <!-- Bullet points row -->
-        <div class="ptl__stages">
+        <!-- Bullet points row (desktop) -->
+        <div class="ptl__stages ptl__stages--desktop">
           {% for block in stage_blocks %}
             <div class="ptl__stage" {{ block.shopify_attributes }}>
+              <div class="ptl__stage-points">
+                {% assign points = block.settings.points | split: '||' %}
+                {% for point in points %}
+                  {% assign trimmed = point | strip %}
+                  {% if trimmed != blank %}
+                    <div class="ptl__stage-point">
+                      <span class="ptl__stage-check">
+                        <svg viewBox="0 0 17 17" fill="none"><path d="M3 8.5L6.5 12L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <span>{{ trimmed }}</span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Mobile combined stages -->
+        <div class="ptl__mobile-stages">
+          {% for block in stage_blocks %}
+            <div class="ptl__mobile-stage" {{ block.shopify_attributes }}>
+              <h4 class="ptl__stage-title">{{ block.settings.title }}</h4>
               <div class="ptl__stage-points">
                 {% assign points = block.settings.points | split: '||' %}
                 {% for point in points %}
