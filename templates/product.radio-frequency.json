@@ -1494,6 +1494,91 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_QPX3Bj": {
+      "type": "info-hero",
+      "blocks": {
+        "point_ypAeBn": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Face"
+          }
+        },
+        "point_RBRTah": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Jawline"
+          }
+        },
+        "point_aNLMCi": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Neck"
+          }
+        },
+        "point_WHEixE": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Decolletage"
+          }
+        },
+        "point_63mxaT": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Abdomen"
+          }
+        },
+        "point_GVETEf": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Arms"
+          }
+        },
+        "point_8CbkYk": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Thighs"
+          }
+        }
+      },
+      "block_order": [
+        "point_ypAeBn",
+        "point_RBRTah",
+        "point_aNLMCi",
+        "point_WHEixE",
+        "point_63mxaT",
+        "point_GVETEf",
+        "point_8CbkYk"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "Areas Commonly Treated",
+        "body": "<p>Radio Frequency can be used on both the face and the body to improve skin firmness</p>",
+        "points_heading": "Common treatment areas inlcude:",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_5zcy715zcy715zcy.png",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "rgba(0,0,0,0)",
+        "overlay_mid": "rgba(0,0,0,0)",
+        "overlay_fade": "rgba(0,0,0,0)",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#f5f4f9",
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "split_content_w38fcC": {
       "type": "split-content",
       "blocks": {
@@ -1966,6 +2051,7 @@
     "info_hero_AEPrYc",
     "slideshow_LrFQYh",
     "slideshow_KxDVXR",
+    "info_hero_QPX3Bj",
     "split_content_w38fcC",
     "session_pricing_hTLbwJ",
     "expectations_trust_peymri",
