@@ -1429,7 +1429,13 @@
         "left_point_Q8QfMM": {
           "type": "left_point",
           "settings": {
-            "text": "Brighter, more youthful appearance"
+            "text": "<b>Dehydrated or thinning skin</b> - Boosts deep hydration and strengthens the skin’s natural barrier."
+          }
+        },
+        "left_point_4n7TkH": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Dehydrated or thinning skin</b> - Boosts deep hydration and strengthens the skin’s natural barrier."
           }
         },
         "right_point_9prdpQ": {
@@ -1455,6 +1461,7 @@
         "left_point_aAcjUg",
         "left_point_JUJNQJ",
         "left_point_Q8QfMM",
+        "left_point_4n7TkH",
         "right_point_9prdpQ",
         "right_point_VXpJKz",
         "right_point_gypQVb"
