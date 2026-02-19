@@ -1407,10 +1407,16 @@
             "text": "<b>Microneedling</b> - To enhance collagen stimulation and texture refinement."
           }
         },
+        "right_point_UJjPC8": {
+          "type": "right_point",
+          "settings": {
+            "text": "<b>Microneedling</b> - To enhance collagen stimulation and texture refinement."
+          }
+        },
         "right_point_GGAqP8": {
           "type": "right_point",
           "settings": {
-            "text": "<b>CO₂ Laser</b> - For clients requiring deeper resurfacing alongside tightening."
+            "text": "CO₂ Laser - For clients requiring deeper resurfacing alongside tightening."
           }
         }
       },
@@ -1422,6 +1428,7 @@
         "left_point_3aNRTf",
         "right_point_BJDdEe",
         "right_point_fRhVEy",
+        "right_point_UJjPC8",
         "right_point_GGAqP8"
       ],
       "name": "Split Content",
