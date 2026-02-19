@@ -1368,19 +1368,19 @@
         "left_point_fcQmmj": {
           "type": "left_point",
           "settings": {
-            "text": "Resume normal activities immediately"
+            "text": "<b>Mild to moderate skin laxity</b> - For clients noticing early sagging around the jawline, cheeks, neck, or body."
           }
         },
         "left_point_B89WWD": {
           "type": "left_point",
           "settings": {
-            "text": "Mild warmth or redness may occur briefly"
+            "text": "<b>Loss of firmness after weight changes or pregnancy</b> - Supports collagen regeneration in areas that feel loose or stretched."
           }
         },
         "left_point_gb9tmQ": {
           "type": "left_point",
           "settings": {
-            "text": "No special recovery steps needed, but protecting treated skin is recommended."
+            "text": "<b>Fine lines and crepey texture</b> - Improves skin density and texture over time."
           }
         },
         "right_point_BJDdEe": {
@@ -1415,7 +1415,7 @@
         "heading": "Who Is Radio Frequency Best For?",
         "subtitle": "Radio Frequency is ideal for clients looking to improve skin laxity and firmness without injectables or surgery.",
         "footer_text": "RF fits easily into ongoing skin maintenance plans.",
-        "left_heading": "After treatment",
+        "left_heading": "",
         "left_subtitle": "",
         "right_heading": "Aftercare guidance",
         "right_subtitle": "",
