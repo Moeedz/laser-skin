@@ -1214,6 +1214,7 @@
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
         "mobile_content_bg": "#e4ddd6",
+        "mobile_overlay": false,
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 600,
@@ -1279,141 +1280,6 @@
         "body_font_size": 16,
         "padding_top": 60,
         "padding_bottom": 60
-      }
-    },
-    "slideshow_NFL3rq": {
-      "type": "slideshow",
-      "blocks": {
-        "image_w379WL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2d_d4ee6d78-597e-4fd2-af89-8d1565c581ea.png",
-            "mobile_image": "shopify://shop_images/2m_89073f97-78a4-4b71-b014-e14aa0b0ac56.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_w379WL"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
       }
     },
     "how_it_works_expect_BQk3qz": {
@@ -1513,6 +1379,79 @@
         "note_color": "#5a3a3a",
         "note_font_style": "italic",
         "note_border_color": "#d4a8a8"
+      }
+    },
+    "split_content_PLyyRt": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_hNrMkU": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p><strong>Acne scarring and uneven texture</strong> – Stimulates deep collagen remodelling to smooth and resurface scarred skin.</p>"
+          }
+        },
+        "left_point_hA3xC4": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p><strong>Fine lines and wrinkles</strong> – Targets the dermis to improve skin firmness and reduce visible signs of ageing.</p>"
+          }
+        },
+        "left_point_bNepRQ": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p><strong>Enlarged pores</strong> – Tightens pore structure for a smoother, more refined complexion.</p>"
+          }
+        },
+        "right_point_yGCA9E": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p><strong>Polynucleotides or NCTF®</strong> – To boost skin hydration and quality alongside collagen stimulation.</p>"
+          }
+        },
+        "right_point_4nYHdY": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p><strong>PRP (Platelet-Rich Plasma)</strong> – To enhance healing and accelerate skin regeneration post-treatment.</p>"
+          }
+        },
+        "right_point_EmtmNg": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p><strong>LED Light Therapy</strong> – To reduce inflammation and support recovery between sessions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_hNrMkU",
+        "left_point_hA3xC4",
+        "left_point_bNepRQ",
+        "right_point_yGCA9E",
+        "right_point_4nYHdY",
+        "right_point_EmtmNg"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Who Is RF Microneedling Best For?",
+        "subtitle": "RF Microneedling is ideal for clients looking to improve skin texture, scarring, and signs of ageing with minimal downtime.",
+        "footer_text": "Your clinician will design a personalised treatment plan to ensure optimal, natural-looking results.",
+        "enable_left": true,
+        "left_heading": "",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "Can RF Microneedling Be Combined With Other Treatments?",
+        "right_subtitle": "RF Microneedling works exceptionally well as part of a structured skin rejuvenation plan. It can be combined with:",
+        "section_bg": "#ece1e2",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
       }
     },
     "treatment_areas_map_F4yJcc": {
@@ -1672,6 +1611,7 @@
         "inset_image_6wc7Ef",
         "inset_image_rQEhfx"
       ],
+      "disabled": true,
       "custom_css": [
         "section.ta-section {max-width: 100% !important;}"
       ],
@@ -2614,8 +2554,8 @@
     "product_hero_F4NGGH",
     "info_hero_rKbjKd",
     "before_after_results_qHFYWr",
-    "slideshow_NFL3rq",
     "how_it_works_expect_BQk3qz",
+    "split_content_PLyyRt",
     "treatment_areas_map_F4yJcc",
     "slideshow_hr36qc",
     "aftercare_downtime_TaFrqi",
