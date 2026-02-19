@@ -1380,6 +1380,12 @@
         "left_point_gb9tmQ": {
           "type": "left_point",
           "settings": {
+            "text": "<b>Preventative anti-ageing</b> - Ideal for clients in their 30s and 40s wanting to maintain collagen levels."
+          }
+        },
+        "left_point_nQdQ3z": {
+          "type": "left_point",
+          "settings": {
             "text": "<b>Fine lines and crepey texture</b> - Improves skin density and texture over time."
           }
         },
@@ -1406,6 +1412,7 @@
         "left_point_fcQmmj",
         "left_point_B89WWD",
         "left_point_gb9tmQ",
+        "left_point_nQdQ3z",
         "right_point_BJDdEe",
         "right_point_fRhVEy",
         "right_point_GGAqP8"
