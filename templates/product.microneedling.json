@@ -1170,18 +1170,6 @@
     },
     "info_hero_rKbjKd": {
       "type": "info-hero",
-      "blocks": {
-        "point_LCP3Me": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Improves texture, tone, and firmness"
-          }
-        }
-      },
-      "block_order": [
-        "point_LCP3Me"
-      ],
       "name": "Info Hero",
       "settings": {
         "heading": "",
