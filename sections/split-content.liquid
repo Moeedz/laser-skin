@@ -110,6 +110,20 @@
     object-fit: cover; object-position: top center;
   }
 
+  /* Single column mode — when one side is disabled */
+  .spc__grid--single {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  .spc__grid--single .spc__divider { display: none; }
+  .spc__grid--single .spc__col { padding: 0; text-align: center; }
+  .spc__grid--single .spc__col-heading { text-align: center; }
+  .spc__grid--single .spc__col-subtitle { text-align: center; }
+  .spc__grid--single .spc__points { align-items: center; }
+  .spc__grid--single .spc__col-image { margin: 0 auto; }
+
   /* Animations */
   [data-spc-animate] {
     opacity: 0; transform: translateY(24px);
@@ -175,63 +189,75 @@
       </div>
     {% endif %}
 
-    <div class="spc__grid" data-spc-animate data-delay="0">
-      <!-- Left column -->
-      <div class="spc__col">
-        {% if section.settings.left_heading != blank %}
-          <h2 class="spc__col-heading">{{ section.settings.left_heading }}</h2>
-        {% endif %}
-        {% if section.settings.left_subtitle != blank %}
-          <p class="spc__col-subtitle">{{ section.settings.left_subtitle }}</p>
-        {% endif %}
-        {% if left_blocks.size > 0 %}
-          <div class="spc__points">
-            {% for block in left_blocks %}
-              <div class="spc__point" {{ block.shopify_attributes }}>
-                <span class="spc__point-check">
-                  <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <span>{{ block.settings.text }}</span>
-              </div>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% if section.settings.left_image != blank %}
-          <div class="spc__col-image">
-            {{ section.settings.left_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
-          </div>
-        {% endif %}
-      </div>
+    {% assign show_left = section.settings.enable_left %}
+    {% assign show_right = section.settings.enable_right %}
+    {% assign single_mode = false %}
+    {% if show_left and show_right == false %}{% assign single_mode = true %}{% endif %}
+    {% if show_right and show_left == false %}{% assign single_mode = true %}{% endif %}
 
-      <!-- Divider -->
-      <div class="spc__divider"></div>
+    <div class="spc__grid{% if single_mode %} spc__grid--single{% endif %}" data-spc-animate data-delay="0">
+      {% if show_left %}
+        <!-- Left column -->
+        <div class="spc__col">
+          {% if section.settings.left_heading != blank %}
+            <h2 class="spc__col-heading">{{ section.settings.left_heading }}</h2>
+          {% endif %}
+          {% if section.settings.left_subtitle != blank %}
+            <p class="spc__col-subtitle">{{ section.settings.left_subtitle }}</p>
+          {% endif %}
+          {% if left_blocks.size > 0 %}
+            <div class="spc__points">
+              {% for block in left_blocks %}
+                <div class="spc__point" {{ block.shopify_attributes }}>
+                  <span class="spc__point-check">
+                    <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span>{{ block.settings.text }}</span>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if section.settings.left_image != blank %}
+            <div class="spc__col-image">
+              {{ section.settings.left_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
 
-      <!-- Right column -->
-      <div class="spc__col">
-        {% if section.settings.right_heading != blank %}
-          <h2 class="spc__col-heading">{{ section.settings.right_heading }}</h2>
-        {% endif %}
-        {% if section.settings.right_subtitle != blank %}
-          <p class="spc__col-subtitle">{{ section.settings.right_subtitle }}</p>
-        {% endif %}
-        {% if right_blocks.size > 0 %}
-          <div class="spc__points">
-            {% for block in right_blocks %}
-              <div class="spc__point" {{ block.shopify_attributes }}>
-                <span class="spc__point-check">
-                  <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <span>{{ block.settings.text }}</span>
-              </div>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% if section.settings.right_image != blank %}
-          <div class="spc__col-image">
-            {{ section.settings.right_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
-          </div>
-        {% endif %}
-      </div>
+      {% if show_left and show_right %}
+        <!-- Divider -->
+        <div class="spc__divider"></div>
+      {% endif %}
+
+      {% if show_right %}
+        <!-- Right column -->
+        <div class="spc__col">
+          {% if section.settings.right_heading != blank %}
+            <h2 class="spc__col-heading">{{ section.settings.right_heading }}</h2>
+          {% endif %}
+          {% if section.settings.right_subtitle != blank %}
+            <p class="spc__col-subtitle">{{ section.settings.right_subtitle }}</p>
+          {% endif %}
+          {% if right_blocks.size > 0 %}
+            <div class="spc__points">
+              {% for block in right_blocks %}
+                <div class="spc__point" {{ block.shopify_attributes }}>
+                  <span class="spc__point-check">
+                    <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span>{{ block.settings.text }}</span>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if section.settings.right_image != blank %}
+            <div class="spc__col-image">
+              {{ section.settings.right_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300,450,600' }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
 
     {% if section.settings.footer_text != blank %}
@@ -271,10 +297,12 @@
     { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Radio Frequency requires minimal aftercare and no downtime." },
     { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "RF fits easily into ongoing skin maintenance plans." },
     { "type": "header", "content": "Left Column" },
+    { "type": "checkbox", "id": "enable_left", "label": "Enable Left Column", "default": true },
     { "type": "text", "id": "left_heading", "label": "Left Heading", "default": "What results can I expect?" },
     { "type": "text", "id": "left_subtitle", "label": "Left Subtitle", "default": "NCTF® revitalisation benefits:" },
     { "type": "image_picker", "id": "left_image", "label": "Left Image" },
     { "type": "header", "content": "Right Column" },
+    { "type": "checkbox", "id": "enable_right", "label": "Enable Right Column", "default": true },
     { "type": "text", "id": "right_heading", "label": "Right Heading", "default": "Common treatment areas" },
     { "type": "text", "id": "right_subtitle", "label": "Right Subtitle", "default": "NCTF® revitalisation can be at:" },
     { "type": "image_picker", "id": "right_image", "label": "Right Image" },
