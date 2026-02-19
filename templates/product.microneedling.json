@@ -1171,37 +1171,21 @@
     "info_hero_rKbjKd": {
       "type": "info-hero",
       "blocks": {
-        "point_gAfQQ7": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Targets deeper skin layers than microneedling alone"
-          }
-        },
         "point_LCP3Me": {
           "type": "point",
           "settings": {
             "title": "",
             "text": "Improves texture, tone, and firmness"
           }
-        },
-        "point_pyr6gz": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Supports long-term skin quality"
-          }
         }
       },
       "block_order": [
-        "point_gAfQQ7",
-        "point_LCP3Me",
-        "point_pyr6gz"
+        "point_LCP3Me"
       ],
       "name": "Info Hero",
       "settings": {
-        "heading": "What Is RF Microneedling?",
-        "body": "<p><strong>RF microneedling </strong>combines ultra-fine microneedles with radiofrequency energy to deliver controlled heat into the deeper layers of the skin. This dual-action approach stimulates collagen remodelling while preserving the skin surface, allowing for powerful skin renewal while preserving the surface of the skin.</p>",
+        "heading": "",
+        "body": "",
         "points_heading": "",
         "bg_image": "shopify://shop_images/image_36915e23-4d77-4e6e-a196-73f80be91945.png",
         "bg_image_mobile": "shopify://shop_images/image_36915e23-4d77-4e6e-a196-73f80be91945.png",
@@ -1353,12 +1337,12 @@
         "padding_bottom": 60,
         "padding_side": 20,
         "background_color": "#f8d2d1",
-        "heading": "How [treatment] Works & What to Expect",
+        "heading": "The [treatment] Timeline & What to Expect",
         "heading_font_size": 36,
         "heading_font_weight": "400",
         "heading_color": "#3d1f1f",
         "default_treatment_name": "This Treatment",
-        "subtitle": "How it works",
+        "subtitle": "What it does",
         "subtitle_font_size": 20,
         "subtitle_font_weight": "600",
         "subtitle_color": "#3d1f1f",
