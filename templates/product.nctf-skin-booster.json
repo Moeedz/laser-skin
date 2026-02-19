@@ -1438,6 +1438,12 @@
             "text": "<b>Loss of firmness or skin laxity - </b>Stimulates fibroblast activity to support collagen production over time."
           }
         },
+        "left_point_Jzd4Xp": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b> Preventative anti-ageing</b> - ideal for clients in their late 20s to 40s looking to maintain healthy, resilient skin."
+          }
+        },
         "right_point_9prdpQ": {
           "type": "right_point",
           "settings": {
@@ -1462,6 +1468,7 @@
         "left_point_JUJNQJ",
         "left_point_Q8QfMM",
         "left_point_4n7TkH",
+        "left_point_Jzd4Xp",
         "right_point_9prdpQ",
         "right_point_VXpJKz",
         "right_point_gypQVb"
