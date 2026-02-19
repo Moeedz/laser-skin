@@ -1,0 +1,348 @@
+{% style %}
+  .ptl {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .ptl__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .ptl__texture::before, .ptl__texture::after { content: ''; position: absolute; inset: 0; }
+  .ptl__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .ptl__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .ptl__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Main heading */
+  .ptl__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 28px;
+  }
+
+  /* Sub-heading (bold, not italic) */
+  .ptl__subheading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 4px); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 12px; line-height: 1.3;
+  }
+
+  /* Body text */
+  .ptl__body {
+    font-size: var(--body-size); line-height: 1.7;
+    color: var(--text-color); margin: 0 0 32px; max-width: 700px;
+  }
+
+  .ptl__body p { margin: 0 0 14px; }
+  .ptl__body p:last-child { margin-bottom: 0; }
+
+  /* Timeline */
+  .ptl__timeline { margin-bottom: 36px; }
+
+  .ptl__timeline-label {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 4px); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 16px; line-height: 1.3;
+  }
+
+  /* Timeline bar: titles, line with dots, bullet points */
+  .ptl__stages {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    gap: 0;
+  }
+
+  .ptl__stage { display: flex; flex-direction: column; }
+
+  /* Stage title */
+  .ptl__stage-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 12px; line-height: 1.3;
+    padding-right: 16px;
+  }
+
+  /* Timeline line row */
+  .ptl__line-row {
+    display: grid;
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  /* Continuous line behind dots */
+  .ptl__line-row::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 3px;
+    background: var(--line-color);
+    transform: translateY(-50%);
+  }
+
+  /* Dashed segments between dots */
+  .ptl__line-segment {
+    position: relative;
+    display: flex; align-items: center;
+  }
+
+  .ptl__line-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--dot-color);
+    position: relative; z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .ptl__line-dash {
+    flex: 1; height: 2px;
+    border-top: 2px dashed var(--line-color);
+    margin: 0 0 0 0;
+  }
+
+  /* First segment: solid line then dot */
+  .ptl__line-segment:first-child .ptl__line-dot { margin-left: 0; }
+
+  /* Checkmark points under each stage */
+  .ptl__stage-points {
+    display: flex; flex-direction: column; gap: 10px;
+    padding-right: 20px;
+  }
+
+  .ptl__stage-point {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: calc(var(--body-size) - 1px); line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  .ptl__stage-check {
+    flex-shrink: 0; color: var(--accent-color); margin-top: 2px;
+  }
+  .ptl__stage-check svg { width: 17px; height: 17px; }
+
+  /* Footer */
+  .ptl__footer { text-align: center; }
+
+  .ptl__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--body-size); font-weight: 700;
+    color: var(--heading-color); margin: 0;
+  }
+
+  /* Animations */
+  [data-ptl-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-ptl-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .ptl__container { padding: 0 24px; }
+    .ptl__heading { font-size: calc(var(--heading-size) * 0.6); }
+
+    .ptl__stages {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .ptl__line-row { display: none; }
+
+    .ptl__stage {
+      padding-left: 20px;
+      border-left: 3px solid var(--line-color);
+      position: relative;
+    }
+
+    .ptl__stage::before {
+      content: '';
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--dot-color);
+      position: absolute; left: -7.5px; top: 4px;
+    }
+
+    .ptl__stage-title { padding-right: 0; font-size: var(--body-size); }
+    .ptl__stage-points { padding-right: 0; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ptl__container { padding: 0 16px; }
+    .ptl__heading { font-size: calc(var(--heading-size) * 0.48); }
+  }
+{% endstyle %}
+
+{% assign stage_blocks = section.blocks | where: 'type', 'stage' %}
+
+<section
+  class="ptl"
+  id="ptl-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --line-color: {{ section.settings.line_color }};
+    --dot-color: {{ section.settings.dot_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --col-count: {{ stage_blocks.size }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="ptl__texture"></div>{% endif %}
+
+  <div class="ptl__container">
+    <div data-ptl-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="ptl__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.sub_heading != blank %}
+        <h3 class="ptl__subheading">{{ section.settings.sub_heading }}</h3>
+      {% endif %}
+
+      {% if section.settings.body != blank %}
+        <div class="ptl__body">{{ section.settings.body }}</div>
+      {% endif %}
+    </div>
+
+    {% if stage_blocks.size > 0 %}
+      <div class="ptl__timeline" data-ptl-animate data-delay="1">
+        {% if section.settings.timeline_label != blank %}
+          <h3 class="ptl__timeline-label">{{ section.settings.timeline_label }}</h3>
+        {% endif %}
+
+        <!-- Stage titles row -->
+        <div class="ptl__stages">
+          {% for block in stage_blocks %}
+            <div style="display:contents;" {{ block.shopify_attributes }}>
+              <h4 class="ptl__stage-title">{{ block.settings.title }}</h4>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Timeline line with dots -->
+        <div class="ptl__line-row">
+          {% for block in stage_blocks %}
+            <div class="ptl__line-segment">
+              <span class="ptl__line-dot"></span>
+              {% unless forloop.last %}
+                <span class="ptl__line-dash"></span>
+              {% endunless %}
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Bullet points row -->
+        <div class="ptl__stages">
+          {% for block in stage_blocks %}
+            <div class="ptl__stage" {{ block.shopify_attributes }}>
+              <div class="ptl__stage-points">
+                {% assign points = block.settings.points | split: '||' %}
+                {% for point in points %}
+                  {% assign trimmed = point | strip %}
+                  {% if trimmed != blank %}
+                    <div class="ptl__stage-point">
+                      <span class="ptl__stage-check">
+                        <svg viewBox="0 0 17 17" fill="none"><path d="M3 8.5L6.5 12L14 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <span>{{ trimmed }}</span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="ptl__footer" data-ptl-animate data-delay="2">
+        <p class="ptl__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('ptl-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-ptl-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Process Timeline",
+  "tag": "section",
+  "class": "process-timeline-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "How Radio Frequency Works & What to Expect" },
+    { "type": "text", "id": "sub_heading", "label": "Sub-heading", "default": "How it works" },
+    { "type": "richtext", "id": "body", "label": "Body Text", "default": "<p>RF energy gently heats the dermal layers of the skin, causing existing collagen fibres to contract while stimulating new collagen production.</p><p>This process strengthens skin structure and improves elasticity over time.</p>" },
+    { "type": "text", "id": "timeline_label", "label": "Timeline Label", "default": "What to expect" },
+    { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "Results develop gradually and look natural." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#ede4dc" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#5a4a3a" },
+    { "type": "color", "id": "accent_color", "label": "Checkmark Color", "default": "#b8886a" },
+    { "type": "color", "id": "line_color", "label": "Timeline Line Color", "default": "#baa898" },
+    { "type": "color", "id": "dot_color", "label": "Dot Color", "default": "#baa898" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 38, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "stage",
+      "name": "Timeline Stage",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Immediately after treatment" },
+        { "type": "textarea", "id": "points", "label": "Bullet Points (separate with ||)", "default": "Skin may feel warm or slightly flushed||Mild tightening sensation" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Process Timeline",
+      "blocks": [
+        { "type": "stage", "settings": { "title": "Immediately after treatment", "points": "Skin may feel warm or slightly flushed||Mild tightening sensation" } },
+        { "type": "stage", "settings": { "title": "Weeks 1–4", "points": "Collagen production increases||Skin texture and firmness begin to improve" } },
+        { "type": "stage", "settings": { "title": "Weeks 6–12", "points": "Continued collagen remodelling||Noticeable improvement in skin tightness and tone" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
