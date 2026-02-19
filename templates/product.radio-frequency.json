@@ -1386,7 +1386,13 @@
         "left_point_nQdQ3z": {
           "type": "left_point",
           "settings": {
-            "text": "<b>Fine lines and crepey texture</b> - Improves skin density and texture over time."
+            "text": "<b>Clients not ready for surgery</b> - A non-invasive option for gradual, natural tightening."
+          }
+        },
+        "left_point_3aNRTf": {
+          "type": "left_point",
+          "settings": {
+            "text": "Fine lines and crepey texture - Improves skin density and texture over time."
           }
         },
         "right_point_BJDdEe": {
@@ -1413,6 +1419,7 @@
         "left_point_B89WWD",
         "left_point_gb9tmQ",
         "left_point_nQdQ3z",
+        "left_point_3aNRTf",
         "right_point_BJDdEe",
         "right_point_fRhVEy",
         "right_point_GGAqP8"
