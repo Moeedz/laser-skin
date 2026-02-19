@@ -1360,6 +1360,57 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "process_timeline_TLTWFG": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_fcd6KM": {
+          "type": "stage",
+          "settings": {
+            "title": "Immediately after treatment",
+            "points": "Skin may feel warm or slightly flushed||Mild tightening sensation"
+          }
+        },
+        "stage_YJgaGD": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 1–4",
+            "points": "Collagen production increases||Skin texture and firmness begin to improve"
+          }
+        },
+        "stage_EthAx6": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 6–12",
+            "points": "Continued collagen remodelling||Noticeable improvement in skin tightness and tone"
+          }
+        }
+      },
+      "block_order": [
+        "stage_fcd6KM",
+        "stage_YJgaGD",
+        "stage_EthAx6"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "How Radio Frequency Works & What to Expect",
+        "sub_heading": "How it works",
+        "body": "<p>RF energy gently heats the dermal layers of the skin, causing existing collagen fibres to contract while stimulating new collagen production.</p><p>This process strengthens skin structure and improves elasticity over time.</p>",
+        "timeline_label": "What to expect",
+        "footer_text": "Results develop gradually and look natural.",
+        "section_bg": "#f3dee0",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "info_hero_QPX3Bj": {
       "type": "info-hero",
       "blocks": {
@@ -1916,6 +1967,7 @@
     "product_hero_Nic47e",
     "info_hero_AEPrYc",
     "slideshow_LrFQYh",
+    "process_timeline_TLTWFG",
     "info_hero_QPX3Bj",
     "split_content_w38fcC",
     "session_pricing_hTLbwJ",
