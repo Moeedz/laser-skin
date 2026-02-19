@@ -928,21 +928,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Deep skin revitalisation"
+            "text": " Improves skin texture and elasticity"
           }
         },
         "check_item_PJNL4k": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves texture, radiance, and firmness"
+            "text": "Stimulates collagen at a cellular level"
           }
         },
         "check_item_MJ7HUc": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No volumizing, natural results"
+            "text": "Subtle, natural-looking rejuvenation"
           }
         },
         "trust_item_KU3zHT": {
