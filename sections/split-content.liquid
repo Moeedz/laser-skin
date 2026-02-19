@@ -25,6 +25,28 @@
     max-width: 1100px; margin: 0 auto; padding: 0 40px;
   }
 
+  /* Section header */
+  .spc__header { text-align: center; margin-bottom: 36px; }
+
+  .spc__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--heading-size) + 8px); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 14px;
+  }
+
+  .spc__subtitle {
+    font-size: var(--body-size); line-height: 1.6;
+    color: var(--text-color); margin: 0;
+  }
+
+  /* Section footer */
+  .spc__footer { text-align: center; margin-top: 36px; }
+
+  .spc__footer-text {
+    font-size: var(--body-size); line-height: 1.6;
+    color: var(--text-color); margin: 0;
+  }
+
   /* Two columns with divider */
   .spc__grid {
     display: grid;
@@ -85,7 +107,7 @@
 
   .spc__col-image img {
     width: 100%; height: 100%; display: block;
-    object-fit: contain; object-position: top center;
+    object-fit: cover; object-position: top center;
   }
 
   /* Animations */
@@ -108,6 +130,7 @@
     }
     .spc__col { padding: 0; }
     .spc__col-heading { font-size: calc(var(--heading-size) * 0.7); }
+    .spc__heading { font-size: calc(var(--heading-size) * 0.8); }
     .spc__col-image { max-width: 320px; margin: 0 auto; }
   }
 
@@ -141,6 +164,17 @@
   {% if section.settings.show_texture %}<div class="spc__texture"></div>{% endif %}
 
   <div class="spc__container">
+    {% if section.settings.heading != blank or section.settings.subtitle != blank %}
+      <div class="spc__header" data-spc-animate data-delay="0">
+        {% if section.settings.heading != blank %}
+          <h2 class="spc__heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.subtitle != blank %}
+          <p class="spc__subtitle">{{ section.settings.subtitle }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
     <div class="spc__grid" data-spc-animate data-delay="0">
       <!-- Left column -->
       <div class="spc__col">
@@ -199,6 +233,12 @@
         {% endif %}
       </div>
     </div>
+
+    {% if section.settings.footer_text != blank %}
+      <div class="spc__footer" data-spc-animate data-delay="1">
+        <p class="spc__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -226,6 +266,10 @@
   "tag": "section",
   "class": "split-content-section",
   "settings": [
+    { "type": "header", "content": "Section Header" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Aftercare & Downtime" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "Radio Frequency requires minimal aftercare and no downtime." },
+    { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "RF fits easily into ongoing skin maintenance plans." },
     { "type": "header", "content": "Left Column" },
     { "type": "text", "id": "left_heading", "label": "Left Heading", "default": "What results can I expect?" },
     { "type": "text", "id": "left_subtitle", "label": "Left Subtitle", "default": "NCTF® revitalisation benefits:" },
