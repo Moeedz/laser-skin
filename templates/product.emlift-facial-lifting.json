@@ -1551,7 +1551,7 @@
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
         "mobile_content_bg": "#e4ddd6",
-        "mobile_overlay": false,
+        "mobile_overlay": true,
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 600,
