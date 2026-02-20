@@ -987,6 +987,110 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_6K8C8q": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_a63ffc": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Targets pigmentation, sun damage & redness"
+          }
+        },
+        "check_item_EwrNni": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Improves overall skin clarity and tone"
+          }
+        },
+        "check_item_BnpDyF": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No invasive procedures or downtime"
+          }
+        },
+        "trust_item_cMcNd6": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_Thz7tn": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_pFKehB": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_mgwPYy": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_a63ffc",
+        "check_item_EwrNni",
+        "check_item_BnpDyF",
+        "trust_item_cMcNd6",
+        "trust_item_Thz7tn",
+        "trust_item_pFKehB",
+        "trust_item_mgwPYy"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_5d79m5d79m5d79m5.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 200,
+        "background_color": "#fbeae7",
+        "overlay_color_start": "rgba(0,0,0,0)",
+        "overlay_color_mid": "rgba(0,0,0,0)",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Clear, Even Skin with",
+        "subheading_highlight": "Advanced IPL Technology",
+        "subheading": " ",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Intense Pulsed Light (IPL) treatment designed to target pigmentation, redness, and uneven tone safely and effectively, with minimal downtime.</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your IPL treatment",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#cc8e75",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#fbeae7",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_t3DTRQ": {
       "type": "slideshow",
       "blocks": {
@@ -1657,141 +1761,6 @@
         "rating_reviews_color": "#888888"
       }
     },
-    "slideshow_ExtMNg": {
-      "type": "slideshow",
-      "blocks": {
-        "image_L7Ayqp": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/6d_27e40a36-8956-4766-9a41-753e4c587556.png",
-            "mobile_image": "shopify://shop_images/6m_6c66233c-b817-4c80-9e99-3a53554f33e6.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_L7Ayqp"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
     "simple_pricing_rows_Ujrjtf": {
       "type": "simple-pricing-rows",
       "blocks": {
@@ -2171,12 +2140,12 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_6K8C8q",
     "slideshow_t3DTRQ",
     "slideshow_eDnBAR",
     "slideshow_WXFRip",
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
-    "slideshow_ExtMNg",
     "simple_pricing_rows_Ujrjtf",
     "expectations_trust_DiEwP7",
     "consultation_form_LbAXec",
