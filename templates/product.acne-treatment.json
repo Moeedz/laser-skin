@@ -1362,6 +1362,67 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "timeline_circles_XU8ktG": {
+      "type": "timeline-circles",
+      "blocks": {
+        "step_iCgdcK": {
+          "type": "step",
+          "settings": {
+            "title": "Immediately after treatment",
+            "description": "Skin may feel clean, refreshed, or slightly flushed. Congestion begins to reduce."
+          }
+        },
+        "step_JezhwW": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 1–4",
+            "description": "Inflammation decreases. Breakouts become less frequent"
+          }
+        },
+        "step_bDmhQP": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 4–8",
+            "description": "Oil balance improves. Skin texture appears smoother"
+          }
+        },
+        "step_yMM3Bx": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 8–12",
+            "description": "Continued skin regulation. Clearer, calmer complexion develops"
+          }
+        }
+      },
+      "block_order": [
+        "step_iCgdcK",
+        "step_JezhwW",
+        "step_bDmhQP",
+        "step_yMM3Bx"
+      ],
+      "name": "Timeline Circles",
+      "settings": {
+        "heading": "How Acne Therapy Works & What to Expect",
+        "subtitle": "",
+        "body": "<p>Acne therapy treatments work by deeply cleansing pores, reducing inflammation, controlling excess oil, and supporting skin repair. Depending on your skin, different treatment methods may be used to calm active acne while improving overall.</p>",
+        "footer_text": "Results develop gradually and appear natural.",
+        "connector_style": "arrows",
+        "section_bg": "#eed9d7",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "circle_border": "#ece5dd",
+        "heading_font_size": 40,
+        "title_font_size": 20,
+        "body_font_size": 16,
+        "circle_size": 160,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_XgTG9r": {
       "type": "slideshow",
       "blocks": {
@@ -2351,6 +2412,7 @@
     "slideshow_7HFKxn",
     "slideshow_kbBR6w",
     "slideshow_iWnACA",
+    "timeline_circles_XU8ktG",
     "slideshow_XgTG9r",
     "split_content_QQD39h",
     "slideshow_bTzhwf",
