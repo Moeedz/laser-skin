@@ -1220,6 +1220,61 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_nJHyJj": {
+      "type": "info-hero",
+      "blocks": {
+        "point_7pGJBQ": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Strengthens facial muscles naturally"
+          }
+        },
+        "point_Xr8QeC": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Enhances facial contour and definition"
+          }
+        },
+        "point_RR4wW8": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Supports long-term firmness, not temporary tightening"
+          }
+        }
+      },
+      "block_order": [
+        "point_7pGJBQ",
+        "point_Xr8QeC",
+        "point_RR4wW8"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What Is EM LIFT?",
+        "body": "<p>EM LIFT is an advanced facial treatment that uses focused electromagnetic energy to stimulate deep facial muscle contractions. Unlike treatments that work only on the skin's surface, EM LIFT targets the muscles responsible for facial structure and support—helping to lift, tone, and strengthen the face from within.</p>",
+        "points_heading": "Why patients choose EM LIFT",
+        "footer_text": "",
+        "bg_image": "shopify://shop_images/Untitled_design_25.png",
+        "bg_position": "right center",
+        "section_height": 900,
+        "overlay_strong": "rgba(0,0,0,0)",
+        "overlay_mid": "rgba(0,0,0,0)",
+        "overlay_fade": "rgba(0,0,0,0)",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_caw8Fb": {
       "type": "slideshow",
       "blocks": {
@@ -2378,6 +2433,7 @@
     "product_hero_rRYVdp",
     "slideshow_QV639T",
     "slideshow_4A9eXE",
+    "info_hero_nJHyJj",
     "slideshow_caw8Fb",
     "process_timeline_cktz78",
     "slideshow_UBR4i6",
