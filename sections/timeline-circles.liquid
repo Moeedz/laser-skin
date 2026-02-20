@@ -39,6 +39,14 @@
     color: var(--text-color); margin: 0; max-width: 700px;
   }
 
+  .tlc__body {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); margin: 12px 0 0; max-width: 800px;
+  }
+
+  .tlc__body p { margin: 0 0 10px; }
+  .tlc__body p:last-child { margin-bottom: 0; }
+
   /* Timeline */
   .tlc__timeline {
     display: grid;
@@ -113,6 +121,19 @@
     transform: translateY(-50%);
   }
 
+  /* Chevron arrows between steps */
+  .tlc__step-arrow {
+    position: absolute;
+    right: -14px; top: calc(var(--title-area) + var(--circle-size) / 2);
+    transform: translateY(-50%);
+    color: var(--line-color);
+    z-index: 3;
+    font-size: 20px;
+    opacity: 0.6;
+  }
+
+  .tlc__step-arrow svg { width: 20px; height: 20px; }
+
   /* Description below circle */
   .tlc__step-desc {
     font-size: calc(var(--body-size) - 1px); line-height: 1.6;
@@ -128,6 +149,11 @@
     font-size: var(--body-size); font-style: italic;
     color: var(--heading-color); margin: 0;
   }
+
+  /* Hide line + dots when using arrows */
+  .tlc--arrows .tlc__timeline::before { display: none; }
+  .tlc--arrows .tlc__step-dot { display: none !important; }
+  .tlc--arrows .tlc__step:not(:last-child) .tlc__step-dot { display: none; }
 
   /* Animations */
   [data-tlc-animate] {
@@ -164,7 +190,7 @@
       font-size: calc(var(--title-size) - 4px);
       justify-content: flex-end;
       text-align: right;
-      width: 100px; min-width: 100px; flex-shrink: 0;
+      width: 72px; min-width: 72px; flex-shrink: 0;
       line-height: 1.2;
     }
 
@@ -195,7 +221,7 @@
 {% assign step_blocks = section.blocks | where: 'type', 'step' %}
 
 <section
-  class="tlc"
+  class="tlc{% if section.settings.connector_style == 'arrows' %} tlc--arrows{% endif %}"
   id="tlc-{{ section.id }}"
   style="
     --section-bg: {{ section.settings.section_bg }};
@@ -225,6 +251,9 @@
       {% if section.settings.subtitle != blank %}
         <p class="tlc__subtitle">{{ section.settings.subtitle }}</p>
       {% endif %}
+      {% if section.settings.body != blank %}
+        <div class="tlc__body">{{ section.settings.body }}</div>
+      {% endif %}
     </div>
 
     {% if step_blocks.size > 0 %}
@@ -238,6 +267,13 @@
               {% endif %}
             </div>
             <span class="tlc__step-dot"></span>
+            {% if section.settings.connector_style == 'arrows' %}
+              {% unless forloop.last %}
+                <span class="tlc__step-arrow">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              {% endunless %}
+            {% endif %}
             <p class="tlc__step-desc">{{ block.settings.description }}</p>
           </div>
         {% endfor %}
@@ -277,8 +313,13 @@
   "class": "timeline-circles-section",
   "settings": [
     { "type": "textarea", "id": "heading", "label": "Heading", "default": "How it works & what to expect" },
-    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "NCTF® involves a series of injections, tailored to your skin's needs. Results develop gradually and look natural." },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle" },
+    { "type": "richtext", "id": "body", "label": "Body Text" },
     { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "Results develop gradually and look natural." },
+    { "type": "select", "id": "connector_style", "label": "Connector Style", "default": "line", "options": [
+      { "value": "line", "label": "Line with dots" },
+      { "value": "arrows", "label": "Chevron arrows" }
+    ] },
     { "type": "header", "content": "Background & Texture" },
     { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e4dbd4" },
     { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
