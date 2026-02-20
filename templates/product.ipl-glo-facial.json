@@ -1091,6 +1091,69 @@
         "content_max_width": 580
       }
     },
+    "info_hero_fHVYLH": {
+      "type": "info-hero",
+      "blocks": {
+        "point_EWjmNU": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Reduces sun damage and age spots"
+          }
+        },
+        "point_JXRMEN": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Improves redness and broken capillaries"
+          }
+        },
+        "point_EfF3BD": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Brightens dull or uneven skin"
+          }
+        },
+        "point_cTxT9Y": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Supports long-term skin clarity"
+          }
+        }
+      },
+      "block_order": [
+        "point_EWjmNU",
+        "point_JXRMEN",
+        "point_EfF3BD",
+        "point_cTxT9Y"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What Is IPL Skin Rejuvenation?",
+        "body": "<p>IPL uses controlled pulses of light to target excess pigment and visible redness within the skin, breaking them down safely while leaving surrounding tissue unharmed. Over time, the skin clears, brightens, and becomes more even in tone.</p>",
+        "points_heading": "Why patients choose IPL",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_iji1w6iji1w6iji1_6a35ef7e-f6a6-47d0-8192-ee02bf6ffba3.png",
+        "bg_image_mobile": "shopify://shop_images/Gemini_Generated_Image_iji1w6iji1w6iji1.png",
+        "bg_position": "right center",
+        "section_height": 900,
+        "overlay_strong": "rgba(0,0,0,0)",
+        "overlay_mid": "rgba(0,0,0,0)",
+        "overlay_fade": "rgba(0,0,0,0)",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#ebe1e3",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_eDnBAR": {
       "type": "slideshow",
       "blocks": {
@@ -2191,6 +2254,7 @@
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
     "product_hero_6K8C8q",
+    "info_hero_fHVYLH",
     "slideshow_eDnBAR",
     "slideshow_WXFRip",
     "process_timeline_gFy3jQ",
