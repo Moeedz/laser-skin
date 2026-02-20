@@ -1496,6 +1496,84 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "split_content_QQD39h": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_aHAfB6": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Stronger hydration and elasticity</p>"
+          }
+        },
+        "left_point_iV8AQH": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Improved skin texture and tone</p>"
+          }
+        },
+        "left_point_mWCUWT": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Brighter, more youthful appearance</p>"
+          }
+        },
+        "right_point_nR7ekQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Forehead lines</p>"
+          }
+        },
+        "right_point_GpDkAQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Eye contour (crow's feet)</p>"
+          }
+        },
+        "right_point_BaWway": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Neck and décolleté</p>"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_aHAfB6",
+        "left_point_iV8AQH",
+        "left_point_mWCUWT",
+        "right_point_nR7ekQ",
+        "right_point_GpDkAQ",
+        "right_point_BaWway"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Areas & Acne Types Treated",
+        "subtitle": "Acne therapy is tailored to both the <strong>location</strong> and type of acne, ensuring treatment is appropriate, targeted, and effective for your skin.",
+        "footer_text": "RF fits easily into ongoing skin maintenance plans.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "What results can I expect?",
+        "left_subtitle": "NCTF® revitalisation benefits:",
+        "enable_right": true,
+        "right_heading": "Common treatment areas",
+        "right_subtitle": "NCTF® revitalisation can be at:",
+        "section_bg": "#ede5e8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
     "slideshow_bTzhwf": {
       "type": "slideshow",
       "blocks": {
@@ -1530,6 +1608,7 @@
       "block_order": [
         "image_xzUQFj"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1673,7 +1752,7 @@
         "card_Ak8N37"
       ],
       "custom_css": [
-        ".afc__card-icon, .afc__card-icon img {width: 80px !important; height: 80px !important;}"
+        ".afc__card-icon,.afc__card-icon img {width: 80px !important; height: 80px !important;}"
       ],
       "name": "Aftercare Cards",
       "settings": {
@@ -2237,6 +2316,7 @@
     "slideshow_kbBR6w",
     "slideshow_iWnACA",
     "slideshow_XgTG9r",
+    "split_content_QQD39h",
     "slideshow_bTzhwf",
     "aftercare_cards_miereD",
     "session_pricing_78qRic",
