@@ -1672,6 +1672,9 @@
         "card_BUGAhz",
         "card_Ak8N37"
       ],
+      "custom_css": [
+        ".afc__card-icon, .afc__card-icon img {width: 80px !important; height: 80px !important;}"
+      ],
       "name": "Aftercare Cards",
       "settings": {
         "heading": "Aftercare & Downtime",
