@@ -847,6 +847,110 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_rRYVdp": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_waqcKm": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Targets facial muscles to enhance lift and tone"
+          }
+        },
+        "check_item_4HjGPG": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Improves firmness and facial definition"
+          }
+        },
+        "check_item_wHnTTh": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No needles, no downtime, no recovery"
+          }
+        },
+        "trust_item_eezKVd": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_mzVeXq": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_DpdVae": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_MTYmyN": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_waqcKm",
+        "check_item_4HjGPG",
+        "check_item_wHnTTh",
+        "trust_item_eezKVd",
+        "trust_item_mzVeXq",
+        "trust_item_DpdVae",
+        "trust_item_MTYmyN"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_2pc3gl2pc3gl2pc3.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 200,
+        "background_color": "#fae3e6",
+        "overlay_color_start": "rgba(0,0,0,0)",
+        "overlay_color_mid": "rgba(0,0,0,0)",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Lift, Tone & Strengthen the Face",
+        "subheading_highlight": "Naturally",
+        "subheading": " &nbsp;",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>EM LIFT is a non invasive facial treatment designed to strengthen the underlying facial muscles, improve skin firmness, and restore definition without injections, needles or downtime</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your EM LIFT facial treatment",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#d68b6f",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#d68b6f",
+        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_QV639T": {
       "type": "slideshow",
       "blocks": {
@@ -2062,6 +2166,7 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_rRYVdp",
     "slideshow_QV639T",
     "slideshow_4A9eXE",
     "slideshow_caw8Fb",
