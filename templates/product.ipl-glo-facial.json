@@ -1069,7 +1069,7 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Clear, Even Skin with",
         "subheading_highlight": "Advanced IPL Technology",
-        "subheading": " ",
+        "subheading": " &nbsp;",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
