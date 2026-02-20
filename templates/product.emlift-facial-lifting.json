@@ -1708,7 +1708,7 @@
         "show_texture": true,
         "texture_opacity": 90,
         "light_color": "#e8e0d8",
-        "card_bg": "#6a6570b0",
+        "card_bg": "#302e3c",
         "heading_font_size": 44,
         "card_title_font_size": 24,
         "price_font_size": 36,
