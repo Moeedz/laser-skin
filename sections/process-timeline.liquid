@@ -48,6 +48,17 @@
   .ptl__body p { margin: 0 0 14px; }
   .ptl__body p:last-child { margin-bottom: 0; }
 
+  /* Optional body card */
+  .ptl__body-card {
+    border: 1px solid var(--card-border, rgba(0,0,0,0.08));
+    border-radius: 10px;
+    padding: 24px 28px;
+    background: var(--card-bg, transparent);
+    margin-bottom: 32px;
+  }
+
+  .ptl__body-card .ptl__body { margin-bottom: 0; max-width: none; }
+
   /* Timeline */
   .ptl__timeline { margin-bottom: 36px; }
 
@@ -200,6 +211,8 @@
     --accent-color: {{ section.settings.accent_color }};
     --line-color: {{ section.settings.line_color }};
     --dot-color: {{ section.settings.dot_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
     --heading-size: {{ section.settings.heading_font_size }}px;
     --body-size: {{ section.settings.body_font_size }}px;
     --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
@@ -221,7 +234,13 @@
       {% endif %}
 
       {% if section.settings.body != blank %}
-        <div class="ptl__body">{{ section.settings.body }}</div>
+        {% if section.settings.show_body_card %}
+          <div class="ptl__body-card">
+            <div class="ptl__body">{{ section.settings.body }}</div>
+          </div>
+        {% else %}
+          <div class="ptl__body">{{ section.settings.body }}</div>
+        {% endif %}
       {% endif %}
     </div>
 
@@ -346,6 +365,10 @@
     { "type": "color", "id": "accent_color", "label": "Checkmark Color", "default": "#b8886a" },
     { "type": "color", "id": "line_color", "label": "Timeline Line Color", "default": "#baa898" },
     { "type": "color", "id": "dot_color", "label": "Dot Color", "default": "#baa898" },
+    { "type": "header", "content": "Body Card" },
+    { "type": "checkbox", "id": "show_body_card", "label": "Show Body Card Border", "default": false },
+    { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#f5efe9" },
+    { "type": "color", "id": "card_border", "label": "Card Border Color", "default": "#d8cfc5" },
     { "type": "header", "content": "Typography" },
     { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 38, "unit": "px" },
     { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
