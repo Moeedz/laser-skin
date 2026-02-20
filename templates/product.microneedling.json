@@ -2242,7 +2242,14 @@
           "type": "faq_item",
           "settings": {
             "question": "How is RF Micro different from regular microneedling?",
-            "answer": "<p>Traditional microneedling works mainly on the surface.</p><p>RF Micro delivers <strong>heat energy deep into the dermis</strong>, stimulating stronger collagen and elastin production, leading to <strong>firmer, longer-lasting results</strong>.</p>"
+            "answer": "<p>Traditional microneedling uses tiny needles to create controlled micro-injuries in the skin. This stimulates collagen and elastin production naturally.</p><p>RF microneedling does the same thing, but also delivers radiofrequency heat energy deep into the skin through the needles. This added heat significantly boosts skin tightening and collagen remodeling.</p><p>In simple terms:</p><p>• Microneedling = collagen stimulation</p><p>• RF microneedling = collagen stimulation + skin tightening</p>"
+          }
+        },
+        "faq_item_qKWjFm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Which treatment is stronger?",
+            "answer": "<p>RF microneedling is the more advanced and powerful treatment.</p><p>Because it combines mechanical needling with radiofrequency heat, it can treat deeper concerns such as:</p><p>• Skin laxity</p><p>• Deeper acne scarring</p><p>• More advanced wrinkles</p><p>• Loose jawline or lower face</p><p>Standard microneedling is excellent for:</p><p>• Early signs of ageing</p><p>• Mild acne scarring</p><p>• Enlarged pores</p><p>• Improving overall skin texture and skin tightening</p>"
           }
         },
         "faq_item_3DFpRW": {
@@ -2276,6 +2283,7 @@
       },
       "block_order": [
         "faq_item_fLCEtm",
+        "faq_item_qKWjFm",
         "faq_item_3DFpRW",
         "faq_item_NqGWCf",
         "faq_item_zLy9i4",
