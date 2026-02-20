@@ -1368,7 +1368,8 @@
         "step_iCgdcK": {
           "type": "step",
           "settings": {
-            "title": "Immediately after treatment",
+            "title": "Immediately after",
+            "image": "shopify://shop_images/1_d29a71b2-a127-42ca-a346-0677a5c4f5e5.png",
             "description": "Skin may feel clean, refreshed, or slightly flushed. Congestion begins to reduce."
           }
         },
@@ -1376,6 +1377,7 @@
           "type": "step",
           "settings": {
             "title": "Weeks 1–4",
+            "image": "shopify://shop_images/2_ebaf0a61-b235-4901-9360-8108b576994e.png",
             "description": "Inflammation decreases. Breakouts become less frequent"
           }
         },
@@ -1383,6 +1385,7 @@
           "type": "step",
           "settings": {
             "title": "Weeks 4–8",
+            "image": "shopify://shop_images/3_184a11ec-6494-4e06-9e0e-782da60c7318.png",
             "description": "Oil balance improves. Skin texture appears smoother"
           }
         },
@@ -1390,6 +1393,7 @@
           "type": "step",
           "settings": {
             "title": "Weeks 8–12",
+            "image": "shopify://shop_images/4_29fefe44-d040-4af4-ac9f-f1d074c27924.png",
             "description": "Continued skin regulation. Clearer, calmer complexion develops"
           }
         }
