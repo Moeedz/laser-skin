@@ -1634,6 +1634,7 @@
         "item_XFDhKw": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/1_5c148c64-8108-4025-b8ca-b4d6f5224a65.png",
             "title": "Face",
             "description": "Sun damage, age spots, redness, broken capillaries"
           }
@@ -1641,6 +1642,7 @@
         "item_FAPmVi": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2_973cb0bb-770c-4d11-b991-44e1d9496eac.png",
             "title": "Neck",
             "description": "Redness, age spots, fine lines"
           }
@@ -1648,6 +1650,7 @@
         "item_PGRwqw": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/3_3b25a424-70a4-40f8-ab65-089be6b9a412.png",
             "title": "Chest",
             "description": "Sun damage, redness, broken capillaries"
           }
@@ -1655,6 +1658,7 @@
         "item_iFCKic": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/4_d2358e17-771c-478b-b668-0da6e9ed51f3.png",
             "title": "Hands",
             "description": "Sun damage, age spots, freckles"
           }
@@ -1662,6 +1666,7 @@
         "item_eTq739": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/5_056aa4e5-42a1-419f-b962-735dda475cb7.png",
             "title": "Legs",
             "description": "Unwanted hair, visible veins, sun damage"
           }
@@ -1669,6 +1674,7 @@
         "item_QWmKtL": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/6_57e784f8-62db-4e4b-9e60-7855a1204bb2.png",
             "title": "Unwanted Hair",
             "description": "Reducing hair growth on face & body"
           }
