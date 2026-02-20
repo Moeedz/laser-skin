@@ -1242,7 +1242,7 @@
         "subtitle": "Advanced microneedling treatments designed to stimulate natural collagen production and restore smoother, firmer-looking skin with minimal disruption.",
         "before_label": "Before",
         "after_label": "After",
-        "footer_text": "*Individual results may vary.",
+        "footer_text": "Results are progressive and designed to look natural and not over-treated.",
         "section_bg": "#e5dfda",
         "show_texture": true,
         "texture_opacity": 80,
@@ -1269,7 +1269,7 @@
         "paragraph_bHBY9W": {
           "type": "paragraph",
           "settings": {
-            "text": "This dual action stimulate collagen and elastin production, tightens skin from within, and improves overall skin quality over time."
+            "text": "This dual action stimulates collagen and elastin production while tightening skin structure over time"
           }
         },
         "paragraph_Bpzrmq": {
