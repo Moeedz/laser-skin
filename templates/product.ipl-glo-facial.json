@@ -1628,6 +1628,78 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "icon_circles_grid_m6Ce7L": {
+      "type": "icon-circles-grid",
+      "blocks": {
+        "item_XFDhKw": {
+          "type": "item",
+          "settings": {
+            "title": "Face",
+            "description": "Sun damage, age spots, redness, broken capillaries"
+          }
+        },
+        "item_FAPmVi": {
+          "type": "item",
+          "settings": {
+            "title": "Neck",
+            "description": "Redness, age spots, fine lines"
+          }
+        },
+        "item_PGRwqw": {
+          "type": "item",
+          "settings": {
+            "title": "Chest",
+            "description": "Sun damage, redness, broken capillaries"
+          }
+        },
+        "item_iFCKic": {
+          "type": "item",
+          "settings": {
+            "title": "Hands",
+            "description": "Sun damage, age spots, freckles"
+          }
+        },
+        "item_eTq739": {
+          "type": "item",
+          "settings": {
+            "title": "Legs",
+            "description": "Unwanted hair, visible veins, sun damage"
+          }
+        },
+        "item_QWmKtL": {
+          "type": "item",
+          "settings": {
+            "title": "Unwanted Hair",
+            "description": "Reducing hair growth on face & body"
+          }
+        }
+      },
+      "block_order": [
+        "item_XFDhKw",
+        "item_FAPmVi",
+        "item_PGRwqw",
+        "item_iFCKic",
+        "item_eTq739",
+        "item_QWmKtL"
+      ],
+      "name": "Icon Circles Grid",
+      "settings": {
+        "heading": "IPL Treatment Areas",
+        "subtitle": "Effective for targeting pigmentation, redness and unwanted hair.",
+        "section_bg": "#f3e7eb",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "circle_border": "#ece5dd",
+        "circle_bg": "#f0e8e0",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "circle_size": 140,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "aftercare_cards_pYfVUM": {
       "type": "aftercare-cards",
       "blocks": {
@@ -2053,6 +2125,7 @@
     "slideshow_WXFRip",
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
+    "icon_circles_grid_m6Ce7L",
     "aftercare_cards_pYfVUM",
     "simple_pricing_rows_Ujrjtf",
     "expectations_trust_DiEwP7",
