@@ -1502,37 +1502,67 @@
         "left_point_aHAfB6": {
           "type": "left_point",
           "settings": {
-            "text": "<p>Stronger hydration and elasticity</p>"
+            "text": "<p>Face</p>"
           }
         },
         "left_point_iV8AQH": {
           "type": "left_point",
           "settings": {
-            "text": "<p>Improved skin texture and tone</p>"
+            "text": "<p>Jawline & chin</p>"
           }
         },
         "left_point_mWCUWT": {
           "type": "left_point",
           "settings": {
-            "text": "<p>Brighter, more youthful appearance</p>"
+            "text": "<p>Neck</p>"
+          }
+        },
+        "left_point_PeEKrc": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Chest</p>"
+          }
+        },
+        "left_point_UyDghF": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Back</p>"
+          }
+        },
+        "left_point_cLqdLV": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Shoulders</p>"
           }
         },
         "right_point_nR7ekQ": {
           "type": "right_point",
           "settings": {
-            "text": "<p>Forehead lines</p>"
+            "text": "<p>Active inflammatory acne</p>"
           }
         },
         "right_point_GpDkAQ": {
           "type": "right_point",
           "settings": {
-            "text": "<p>Eye contour (crow's feet)</p>"
+            "text": "<p>Congested and comedonal acne</p>"
           }
         },
         "right_point_BaWway": {
           "type": "right_point",
           "settings": {
-            "text": "<p>Neck and décolleté</p>"
+            "text": "<p>Hormonal breakouts</p>"
+          }
+        },
+        "right_point_hVycjU": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Post-inflammatory redness</p>"
+          }
+        },
+        "right_point_LGm8Tw": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Acne-prone, sensitised skin</p>"
           }
         }
       },
@@ -1540,26 +1570,31 @@
         "left_point_aHAfB6",
         "left_point_iV8AQH",
         "left_point_mWCUWT",
+        "left_point_PeEKrc",
+        "left_point_UyDghF",
+        "left_point_cLqdLV",
         "right_point_nR7ekQ",
         "right_point_GpDkAQ",
-        "right_point_BaWway"
+        "right_point_BaWway",
+        "right_point_hVycjU",
+        "right_point_LGm8Tw"
       ],
       "name": "Split Content",
       "settings": {
         "heading": "Areas & Acne Types Treated",
-        "subtitle": "Acne therapy is tailored to both the <strong>location</strong> and type of acne, ensuring treatment is appropriate, targeted, and effective for your skin.",
-        "footer_text": "RF fits easily into ongoing skin maintenance plans.",
+        "subtitle": "Acne therapy is tailored to both the location and type of acne, ensuring treatment is appropriate, targeted, and effective for your skin.",
+        "footer_text": "Treatment plans are personalised based on acne type, skin condition, and treatment response.",
         "show_card_wrap": false,
         "card_bg": "#f5efe9",
         "card_border": "#d8cfc5",
         "callout_title": "",
         "callout_text": "",
         "enable_left": true,
-        "left_heading": "What results can I expect?",
-        "left_subtitle": "NCTF® revitalisation benefits:",
+        "left_heading": "Areas Commonly Treated",
+        "left_subtitle": "",
         "enable_right": true,
-        "right_heading": "Common treatment areas",
-        "right_subtitle": "NCTF® revitalisation can be at:",
+        "right_heading": "Acne Types Addressed",
+        "right_subtitle": "",
         "section_bg": "#ede5e8",
         "show_texture": true,
         "texture_opacity": 80,
