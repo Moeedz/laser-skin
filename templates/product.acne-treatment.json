@@ -862,21 +862,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
+            "text": "Targets acne at the root, not just symptoms"
           }
         },
         "check_item_x8TVfN": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
+            "text": "Reduces inflammation, congestion and breakouts"
           }
         },
         "check_item_VtxdmB": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No downtime, immediate glow"
+            "text": "Personalised treatment approach for lasting results"
           }
         },
         "trust_item_C93Q74": {
@@ -942,7 +942,7 @@
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
         "highlight_color": "#c8962e",
-        "description": "<p>Deep cleansing, gentle exfoliation, and intense hydration in one medical-grade facial.</p>",
+        "description": "<p>Advanced acne therapy treatments designed to reduce active breakouts, calm inflammation, and support long-term skin clarity to your skin and acne type</p>",
         "body_font_size": 17,
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
