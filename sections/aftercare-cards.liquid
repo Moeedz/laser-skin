@@ -105,6 +105,9 @@
 
   .afc__card-check svg { width: 18px; height: 18px; }
 
+  /* Hide checkmarks option */
+  .afc--no-checks .afc__card-check { display: none; }
+
   .afc__card-point span p { margin: 0; }
 
   /* Footer */
@@ -143,7 +146,7 @@
 {% assign card_blocks = section.blocks | where: 'type', 'card' %}
 
 <section
-  class="afc"
+  class="afc{% unless section.settings.show_checkmarks %} afc--no-checks{% endunless %}"
   id="afc-{{ section.id }}"
   style="
     --section-bg: {{ section.settings.section_bg }};
@@ -248,6 +251,7 @@
     { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "To ensure safe, natural-looking results, patients should follow these key aftercare steps." },
     { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks." },
     { "type": "header", "content": "Background & Texture" },
+    { "type": "checkbox", "id": "show_checkmarks", "label": "Show Checkmarks", "default": false },
     { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#ede4dc" },
     { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
     { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
