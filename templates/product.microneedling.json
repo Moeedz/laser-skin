@@ -1374,7 +1374,13 @@
         "left_point_bNepRQ": {
           "type": "left_point",
           "settings": {
-            "text": "<p><strong>Enlarged pores</strong> – Tightens pore structure for a smoother, more refined complexion.</p>"
+            "text": "Enlarged pores – Tightens pore structure for a smoother, more refined complexion."
+          }
+        },
+        "left_point_NnzB9G": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Skin laxity in lower face or neck</b> – Enhances firmness where early sagging begins."
           }
         },
         "right_point_yGCA9E": {
@@ -1400,6 +1406,7 @@
         "left_point_hNrMkU",
         "left_point_hA3xC4",
         "left_point_bNepRQ",
+        "left_point_NnzB9G",
         "right_point_yGCA9E",
         "right_point_4nYHdY",
         "right_point_EmtmNg"
