@@ -1170,6 +1170,9 @@
     },
     "info_hero_rKbjKd": {
       "type": "info-hero",
+      "custom_css": [
+        ".ifh__container {display: none;}"
+      ],
       "name": "Info Hero",
       "settings": {
         "heading": "",
