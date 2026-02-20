@@ -1651,6 +1651,72 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "session_pricing_jTKfmK": {
+      "type": "session-pricing",
+      "blocks": {
+        "price_card_WPa9N9": {
+          "type": "price_card",
+          "settings": {
+            "name": "1 Session",
+            "main_price": "£200",
+            "main_per": "",
+            "tier_1": "",
+            "tier_2": "",
+            "tier_3": "",
+            "note": ""
+          }
+        },
+        "price_card_kBJprM": {
+          "type": "price_card",
+          "settings": {
+            "name": "3 Sessions",
+            "main_price": "£175",
+            "main_per": "Per Session",
+            "tier_1": "<strong>Total: £525</strong>",
+            "tier_2": "",
+            "tier_3": "",
+            "note": ""
+          }
+        },
+        "price_card_Lzeydb": {
+          "type": "price_card",
+          "settings": {
+            "name": "6 Sessions",
+            "main_price": "£150",
+            "main_per": "Per Session",
+            "tier_1": "<strong>Total: £900</strong>",
+            "tier_2": "",
+            "tier_3": "",
+            "note": ""
+          }
+        }
+      },
+      "block_order": [
+        "price_card_WPa9N9",
+        "price_card_kBJprM",
+        "price_card_Lzeydb"
+      ],
+      "name": "Session Pricing",
+      "settings": {
+        "heading": "EM LIFT Treatments",
+        "subtitle": "Strengthen, lift and tone the face using advanced electromagnetic muscle stimulation — non-invasive, no downtime, natural results.",
+        "footer_text": "Course pricing is recommended for optimal muscle strengthening, improved tone, and long-term facial definition.",
+        "cta_heading": "",
+        "button_label": "",
+        "button_link": "",
+        "section_bg": "#5a5560",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e8e0d8",
+        "card_bg": "#6a6570b0",
+        "heading_font_size": 44,
+        "card_title_font_size": 24,
+        "price_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "expectations_trust_zJgpxb": {
       "type": "expectations-trust",
       "blocks": {
@@ -2001,6 +2067,7 @@
     "slideshow_UBR4i6",
     "slideshow_QyLgeb",
     "slideshow_zidcLN",
+    "session_pricing_jTKfmK",
     "expectations_trust_zJgpxb",
     "consultation_form_gFVqk7",
     "faq_updated_MJj6Rh",
