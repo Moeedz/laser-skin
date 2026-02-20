@@ -1659,6 +1659,72 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "session_pricing_78qRic": {
+      "type": "session-pricing",
+      "blocks": {
+        "price_card_gH9AVh": {
+          "type": "price_card",
+          "settings": {
+            "name": "",
+            "main_price": "£130",
+            "main_per": "Per Session",
+            "tier_1": "",
+            "tier_2": "",
+            "tier_3": "",
+            "note": ""
+          }
+        },
+        "price_card_RFfNfE": {
+          "type": "price_card",
+          "settings": {
+            "name": "",
+            "main_price": "£120",
+            "main_per": "Per Session",
+            "tier_1": "(3 sessions)",
+            "tier_2": "",
+            "tier_3": "",
+            "note": ""
+          }
+        },
+        "price_card_VYNjJ4": {
+          "type": "price_card",
+          "settings": {
+            "name": "",
+            "main_price": "£110",
+            "main_per": "Per Session",
+            "tier_1": "(6 sessions)",
+            "tier_2": "",
+            "tier_3": "",
+            "note": ""
+          }
+        }
+      },
+      "block_order": [
+        "price_card_gH9AVh",
+        "price_card_RFfNfE",
+        "price_card_VYNjJ4"
+      ],
+      "name": "Session Pricing",
+      "settings": {
+        "heading": "Acne Therapy Pricing",
+        "subtitle": "",
+        "footer_text": "Follow all home care instructions provided by your therapist.",
+        "cta_heading": "Follow all home care instructions provided by your therapist.",
+        "button_label": "",
+        "button_link": "",
+        "section_bg": "#4a4555",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e8e0d8",
+        "card_bg": "#6a6570b0",
+        "heading_font_size": 44,
+        "card_title_font_size": 24,
+        "price_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "expectations_trust_ea8k96": {
       "type": "expectations-trust",
       "blocks": {
@@ -2136,6 +2202,7 @@
     "slideshow_XgTG9r",
     "slideshow_bTzhwf",
     "slideshow_m3AECD",
+    "session_pricing_78qRic",
     "expectations_trust_ea8k96",
     "consultation_form_hCy3JF",
     "faq_updated_VLGB7J",
