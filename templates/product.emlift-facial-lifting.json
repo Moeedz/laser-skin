@@ -1622,6 +1622,77 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "split_content_rQ3AKX": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_jAzaGQ": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>Resume normal activities immediately</p>"
+          }
+        },
+        "left_point_QBUxHT": {
+          "type": "left_point",
+          "settings": {
+            "text": "<p>No redness, swelling, or peeling</p>"
+          }
+        },
+        "right_point_w6QQk3": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Stay hydrated</p>"
+          }
+        },
+        "right_point_DRzCbG": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Maintain a consistent skincare routine</p>"
+          }
+        },
+        "right_point_JV7gVU": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p>Follow practitioner advice for optimal results</p>"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_jAzaGQ",
+        "left_point_QBUxHT",
+        "right_point_w6QQk3",
+        "right_point_DRzCbG",
+        "right_point_JV7gVU"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "subtitle": "EM LIFT requires no downtime and minimal aftercare, making it easy to fit into everyday routines.",
+        "footer_text": "",
+        "show_card_wrap": true,
+        "card_bg": "#f5d7dd",
+        "card_border": "#d8cfc5",
+        "callout_title": "Best practice",
+        "callout_text": "EM LIFT works best as part of an ongoing facial maintenance plan.",
+        "enable_left": true,
+        "left_heading": "After treatment",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "Aftercare guidance",
+        "right_subtitle": "",
+        "section_bg": "#ecc7d2",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
     "slideshow_zidcLN": {
       "type": "slideshow",
       "blocks": {
@@ -2173,6 +2244,7 @@
     "slideshow_caw8Fb",
     "slideshow_UBR4i6",
     "slideshow_QyLgeb",
+    "split_content_rQ3AKX",
     "slideshow_zidcLN",
     "session_pricing_jTKfmK",
     "expectations_trust_zJgpxb",
