@@ -1203,6 +1203,9 @@
         "point_zhmTTF",
         "point_ixikmB"
       ],
+      "custom_css": [
+        ".ifh__container {max-width: 1700px !important;}"
+      ],
       "name": "Info Hero",
       "settings": {
         "heading": "What Is Radio Frequency Skin Tightening?",
