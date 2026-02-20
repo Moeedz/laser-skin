@@ -1796,7 +1796,7 @@
           "settings": {
             "image": "shopify://shop_images/5_056aa4e5-42a1-419f-b962-735dda475cb7.png",
             "title": "Legs",
-            "description": "Unwanted hair, visible veins, sun damage"
+            "description": "Sun damage and pigmentation on lower legs"
           }
         },
         "item_QWmKtL": {
@@ -1860,7 +1860,7 @@
       "settings": {
         "heading": "IPL Aftercare & Downtime",
         "subtitle": "To ensure safe, natural-looking results, patients should follow these key aftercare steps.",
-        "footer_text": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks.",
+        "footer_text": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks.<br><br>Strict sun protection is essential following IPL treatment to protect results and prevent pigmentation recurrence.",
         "section_bg": "#f5dde5",
         "show_texture": true,
         "texture_opacity": 80,
@@ -1913,7 +1913,7 @@
       ],
       "name": "Simple Pricing Rows",
       "settings": {
-        "heading": "IPL Pricing",
+        "heading": "IPL Skin Rejuvenation Pricing",
         "footer_text": "A course of sessions delivers greater value and long-lasting results.",
         "section_bg": "#3a3a42",
         "show_texture": true,
