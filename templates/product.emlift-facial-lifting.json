@@ -1354,6 +1354,68 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "process_timeline_cktz78": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_xEpyMC": {
+          "type": "stage",
+          "settings": {
+            "title": "Immediately after treatment",
+            "points": "Muscles may feel activated or slightly worked.||Skin appears subtly firmer"
+          }
+        },
+        "stage_9hXbnP": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 1–4",
+            "points": "Facial muscles strengthen||Improved tone and lift begin to develop"
+          }
+        },
+        "stage_RpeekP": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 4–8",
+            "points": "Continued muscle engagement||Facial contours become more defined"
+          }
+        },
+        "stage_YnTNik": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 8–12",
+            "points": "Visible improvements in firmness and facial structure||Results look natural and progressive"
+          }
+        }
+      },
+      "block_order": [
+        "stage_xEpyMC",
+        "stage_9hXbnP",
+        "stage_RpeekP",
+        "stage_YnTNik"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "How EM LIFT Works & What to Expect",
+        "sub_heading": "",
+        "body": "<p>EM LIFT delivers targeted electromagnetic energy that triggers deep, involuntary muscle contractions in the face. These contractions strengthen facial muscles while supporting collagen stimulation, resulting in improved tone, firmness, and definition over time.</p>",
+        "timeline_label": "",
+        "footer_text": "Results develop gradually and appear natural.",
+        "section_bg": "#fbdade",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "show_body_card": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_UBR4i6": {
       "type": "slideshow",
       "blocks": {
@@ -2316,6 +2378,7 @@
     "slideshow_QV639T",
     "slideshow_4A9eXE",
     "slideshow_caw8Fb",
+    "process_timeline_cktz78",
     "slideshow_UBR4i6",
     "info_hero_Nn73dt",
     "slideshow_QyLgeb",
