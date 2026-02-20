@@ -1791,6 +1791,57 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "simple_pricing_rows_Ujrjtf": {
+      "type": "simple-pricing-rows",
+      "blocks": {
+        "price_row_kUCDPj": {
+          "type": "price_row",
+          "settings": {
+            "name": "1 Session",
+            "price": "£80",
+            "per_label": "",
+            "total": ""
+          }
+        },
+        "price_row_DHUjHm": {
+          "type": "price_row",
+          "settings": {
+            "name": "3 Sessions",
+            "price": "£70",
+            "per_label": "per session",
+            "total": "Total £210"
+          }
+        },
+        "price_row_HAaiWW": {
+          "type": "price_row",
+          "settings": {
+            "name": "6 Sessions",
+            "price": "£60",
+            "per_label": "per session",
+            "total": "Total £360"
+          }
+        }
+      },
+      "block_order": [
+        "price_row_kUCDPj",
+        "price_row_DHUjHm",
+        "price_row_HAaiWW"
+      ],
+      "name": "Simple Pricing Rows",
+      "settings": {
+        "heading": "IPL Pricing",
+        "footer_text": "A course of sessions delivers greater value and long-lasting results.",
+        "section_bg": "#3a3a42",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e0d8d0",
+        "gold_color": "#d4c4a0",
+        "heading_font_size": 42,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "expectations_trust_DiEwP7": {
       "type": "expectations-trust",
       "blocks": {
@@ -2125,6 +2176,7 @@
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
     "slideshow_ExtMNg",
+    "simple_pricing_rows_Ujrjtf",
     "expectations_trust_DiEwP7",
     "consultation_form_LbAXec",
     "faq_updated_XKLFYm",
