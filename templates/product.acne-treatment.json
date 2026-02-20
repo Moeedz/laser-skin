@@ -1228,6 +1228,53 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "text_image_text_4HkXgV": {
+      "type": "text-image-text",
+      "blocks": {
+        "point_riyx8x": {
+          "type": "point",
+          "settings": {
+            "text": "Targets acne at its root causes"
+          }
+        },
+        "point_GREQYt": {
+          "type": "point",
+          "settings": {
+            "text": "Helps calm inflammation and active breakouts"
+          }
+        },
+        "point_F84gYh": {
+          "type": "point",
+          "settings": {
+            "text": "Supports clearer, healthier skin over time"
+          }
+        }
+      },
+      "block_order": [
+        "point_riyx8x",
+        "point_GREQYt",
+        "point_F84gYh"
+      ],
+      "name": "Text Image Text",
+      "settings": {
+        "heading": "What Is Acne Therapy?",
+        "body": "<p>Acne therapy focuses on treating the underlying causes of breakouts rather than just surface symptoms. By addressing factors such as excess oil production, inflammation, blocked pores, and acne-causing bacteria, treatments are designed to restore skin balance and support long-term clarity. Depending on acne type, severity, and skin condition, different treatment approaches may be used to achieve the best outcome.</p>",
+        "sub_heading": "Why patients choose acne therapy",
+        "footer_text": "",
+        "bullet_style": "dot",
+        "section_bg": "#ddd6db",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "image_max_width": 800,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_iWnACA": {
       "type": "slideshow",
       "blocks": {
@@ -1262,6 +1309,7 @@
       "block_order": [
         "image_mxHpYa"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2415,6 +2463,7 @@
     "product_hero_QQgM39",
     "slideshow_7HFKxn",
     "slideshow_kbBR6w",
+    "text_image_text_4HkXgV",
     "slideshow_iWnACA",
     "timeline_circles_XU8ktG",
     "slideshow_XgTG9r",
