@@ -1396,6 +1396,7 @@
       "block_order": [
         "image_UParAg"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
