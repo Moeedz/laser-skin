@@ -1359,6 +1359,68 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "process_timeline_gFy3jQ": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_RGcHMK": {
+          "type": "stage",
+          "settings": {
+            "title": "Immediately after treatment",
+            "points": "Skin may feel warm or slightly flushed||Mild tightening sensation"
+          }
+        },
+        "stage_apBgqf": {
+          "type": "stage",
+          "settings": {
+            "title": "Days 3–7",
+            "points": "Pigment begins to break down and fade||Hair sheds naturally from the follicle||Skin tone starts to look clearer and more even"
+          }
+        },
+        "stage_DNEaYB": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 2–4",
+            "points": "Continued reduction in pigmentation or hair growth||Improved skin clarity and texture||Results become more noticeable with each session"
+          }
+        },
+        "stage_tCTxYa": {
+          "type": "stage",
+          "settings": {
+            "title": "Ongoing results",
+            "points": "Best results achieved through a course of treatments.||Skin appears clearer, more even, and refined over time"
+          }
+        }
+      },
+      "block_order": [
+        "stage_RGcHMK",
+        "stage_apBgqf",
+        "stage_DNEaYB",
+        "stage_tCTxYa"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "How IPL Works & What to Expect",
+        "sub_heading": "How it works",
+        "body": "<p>Intense Pulsed Light (IPL) delivers controlled light energy into the skin, where it targets pigment, redness, or unwanted hair at the root.&lt;/p&gt;&lt;p&gt;The light converts to heat within the targeted structure, allowing the body to naturally break it down over time while leaving surrounding skin unharmed.<br/></p>",
+        "timeline_label": "What to expect",
+        "footer_text": "Results develop gradually and appear natural.",
+        "section_bg": "#f8e3e8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "show_body_card": true,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_x36jLg": {
       "type": "slideshow",
       "blocks": {
@@ -2130,6 +2192,7 @@
     "product_hero_6K8C8q",
     "slideshow_eDnBAR",
     "slideshow_WXFRip",
+    "process_timeline_gFy3jQ",
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
     "icon_circles_grid_m6Ce7L",
