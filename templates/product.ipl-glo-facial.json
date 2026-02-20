@@ -1069,7 +1069,7 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Clear Skin with",
         "subheading_highlight": "Advanced IPL Technology",
-        "subheading": " &nbsp;",
+        "subheading": "  ",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
@@ -1627,6 +1627,47 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "aftercare_cards_pYfVUM": {
+      "type": "aftercare-cards",
+      "blocks": {
+        "card_Di89ih": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Aftercare Tips",
+            "points": "Apply gentle sunscreen daily, SPF 30+||Avoid retinoids & exfoliating products for 3–5 days||Avoid strenuous exercise, saunas, & hot tubs for 24–48 hours||Keep skin hydrated and don't pick or scratch at treated areas"
+          }
+        },
+        "card_FMe8i6": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Expected Downtime",
+            "points": "Mild redness and darkening of pigment||Any swelling is typically mild and short-lived||Within 3–7 days, treated areas will flake or fade||Makeup may be worn if skin isn't irritated; apply gently"
+          }
+        }
+      },
+      "block_order": [
+        "card_Di89ih",
+        "card_FMe8i6"
+      ],
+      "name": "Aftercare Cards",
+      "settings": {
+        "heading": "IPL Aftercare & Downtime",
+        "subtitle": "To ensure safe, natural-looking results, patients should follow these key aftercare steps.",
+        "footer_text": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks.",
+        "section_bg": "#f5dde5",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "simple_pricing_rows_Ujrjtf": {
       "type": "simple-pricing-rows",
       "blocks": {
@@ -2011,6 +2052,7 @@
     "slideshow_WXFRip",
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
+    "aftercare_cards_pYfVUM",
     "simple_pricing_rows_Ujrjtf",
     "expectations_trust_DiEwP7",
     "consultation_form_LbAXec",
