@@ -1374,7 +1374,7 @@
         "left_point_bNepRQ": {
           "type": "left_point",
           "settings": {
-            "text": "Enlarged pores – Tightens pore structure for a smoother, more refined complexion."
+            "text": "<b>Enlarged pores</b> – Tightens pore structure for a smoother, more refined complexion."
           }
         },
         "left_point_NnzB9G": {
@@ -1386,7 +1386,7 @@
         "right_point_yGCA9E": {
           "type": "right_point",
           "settings": {
-            "text": "<p><strong>Polynucleotides or NCTF®</strong> – To boost skin hydration and quality alongside collagen stimulation.</p>"
+            "text": "Polynucleotides or NCTF® – To boost skin hydration and quality alongside collagen stimulation."
           }
         },
         "right_point_4nYHdY": {
@@ -1415,7 +1415,7 @@
       "settings": {
         "heading": "Who Is RF Microneedling Best For?",
         "subtitle": "RF Microneedling is ideal for clients looking to improve skin texture, scarring, and signs of ageing with minimal downtime.",
-        "footer_text": "Your clinician will design a personalised treatment plan to ensure optimal, natural-looking results.",
+        "footer_text": "Combination therapy is often recommended for clients seeking accelerated or more dramatic rejuvenation results.",
         "enable_left": true,
         "left_heading": "",
         "left_subtitle": "",
