@@ -1488,6 +1488,77 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_Nn73dt": {
+      "type": "info-hero",
+      "blocks": {
+        "point_9MYLxG": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Forehead"
+          }
+        },
+        "point_Ke4zKg": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Brow area"
+          }
+        },
+        "point_iVpzin": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Cheeks"
+          }
+        },
+        "point_xQBUD4": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Jawline"
+          }
+        },
+        "point_99QEjY": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Lower face"
+          }
+        }
+      },
+      "block_order": [
+        "point_9MYLxG",
+        "point_Ke4zKg",
+        "point_iVpzin",
+        "point_xQBUD4",
+        "point_99QEjY"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "Areas Commonly Treated",
+        "body": "<p>EM LIFT targets the muscle groups responsible for facial support and expression, helping to restore lift and definition where it naturally diminishes over time. By strengthening these areas, the face appears more structured, toned, and balanced.</p>",
+        "points_heading": "",
+        "footer_text": "Treatment plans are tailored to facial anatomy and individual goals.",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_wwjbtnwwjbtnwwjb_1.png",
+        "bg_position": "right center",
+        "section_height": 700,
+        "overlay_strong": "rgba(0,0,0,0)",
+        "overlay_mid": "rgba(0,0,0,0)",
+        "overlay_fade": "rgba(0,0,0,0)",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_QyLgeb": {
       "type": "slideshow",
       "blocks": {
@@ -2244,6 +2315,7 @@
     "slideshow_4A9eXE",
     "slideshow_caw8Fb",
     "slideshow_UBR4i6",
+    "info_hero_Nn73dt",
     "slideshow_QyLgeb",
     "split_content_rQ3AKX",
     "slideshow_zidcLN",
