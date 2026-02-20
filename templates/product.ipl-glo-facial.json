@@ -1445,7 +1445,7 @@
           "type": "stage",
           "settings": {
             "title": "Weeks 2–4",
-            "points": "Continued reduction in pigmentation or hair growth||Improved skin clarity and texture||Results become more noticeable with each session"
+            "points": "Continued reduction in pigmentation ||Improved skin clarity and texture||Results become more noticeable with each session"
           }
         },
         "stage_tCTxYa": {
@@ -1468,7 +1468,7 @@
         "sub_heading": "How it works",
         "body": "<p>IPL delivers controlled pulses of light energy into the skin, targeting excess pigment and visible redness. The light converts to heat within the targeted structure, allowing the body to gradually break it down while surrounding tissue remains unaffected.</p>",
         "timeline_label": "What to expect",
-        "footer_text": "Results develop gradually and appear natural.",
+        "footer_text": "A course of 3–5 treatments spaced 4 weeks apart is typically recommended for optimal pigmentation correction.",
         "section_bg": "#f8e3e8",
         "show_texture": true,
         "texture_opacity": 80,
