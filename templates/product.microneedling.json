@@ -1170,48 +1170,12 @@
     },
     "info_hero_rKbjKd": {
       "type": "info-hero",
-      "blocks": {
-        "point_jDT9wy": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Specialised handpiece with ultra-fine insulated needles"
-          }
-        },
-        "point_FCYQmd": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Needles emit RF energy"
-          }
-        },
-        "point_YLcEmd": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Needles create controlled micro-channels in the skin"
-          }
-        },
-        "point_R7H7VT": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Triggers micro-injuries"
-          }
-        }
-      },
-      "block_order": [
-        "point_jDT9wy",
-        "point_FCYQmd",
-        "point_YLcEmd",
-        "point_R7H7VT"
-      ],
       "name": "Info Hero",
       "settings": {
-        "heading": "RF Microneedling - How it works",
-        "body": "",
+        "heading": "",
+        "body": "<p>s</p>",
         "points_heading": "",
-        "bg_image": "shopify://shop_images/Gemini_Generated_Image_bmlk67bmlk67bmlk.png",
+        "bg_image": "shopify://shop_images/RF_microneedling_text_margin_desktop.png",
         "bg_position": "right center",
         "section_height": 900,
         "overlay_strong": "rgba(0,0,0,0)",
@@ -1221,7 +1185,7 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
-        "mobile_content_bg": "#f4d6dc",
+        "mobile_content_bg": "#e4ddd6",
         "mobile_overlay": false,
         "heading_font_size": 44,
         "body_font_size": 17,
