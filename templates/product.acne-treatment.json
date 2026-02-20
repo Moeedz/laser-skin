@@ -1630,6 +1630,68 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "aftercare_cards_miereD": {
+      "type": "aftercare-cards",
+      "blocks": {
+        "card_W6fga6": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Keep Skin Hydrated",
+            "icon": "shopify://shop_images/1-removebg-preview_11.png",
+            "points": "Use a gentle, non-comedogenic moisturizer to keep the skin well-hydrated"
+          }
+        },
+        "card_WH3wpV": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Avoid Sun Exposure",
+            "icon": "shopify://shop_images/2-removebg-preview_13.png",
+            "points": "Apply broad-spectrum SPF daily and avoid direct sun exposure to protect healing skin"
+          }
+        },
+        "card_BUGAhz": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Skip Harsh Products",
+            "icon": "shopify://shop_images/3-removebg-preview_10.png",
+            "points": "Avoid exfoliants, alcohol-based toners, or strong skincare products that may irritate the skin."
+          }
+        },
+        "card_Ak8N37": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Prioritize Rest",
+            "icon": "shopify://shop_images/4-removebg-preview_5.png",
+            "points": "Get plenty of rest and allow your skin time to recover and rejuvenate"
+          }
+        }
+      },
+      "block_order": [
+        "card_W6fga6",
+        "card_WH3wpV",
+        "card_BUGAhz",
+        "card_Ak8N37"
+      ],
+      "name": "Aftercare Cards",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "subtitle": "Following acne therapy, gentle aftercare is key to supporting skin healing and maintaining results. Temporary redness or sensitivity may occur after some treatments but usually subsides within a few hours to a day.",
+        "footer_text": "Follow all home care instructions provided by your therapist.",
+        "show_checkmarks": false,
+        "section_bg": "#d9c9d3",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "session_pricing_78qRic": {
       "type": "session-pricing",
       "blocks": {
@@ -2173,6 +2235,7 @@
     "slideshow_iWnACA",
     "slideshow_XgTG9r",
     "slideshow_bTzhwf",
+    "aftercare_cards_miereD",
     "session_pricing_78qRic",
     "expectations_trust_ea8k96",
     "consultation_form_hCy3JF",
