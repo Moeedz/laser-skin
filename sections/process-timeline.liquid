@@ -116,6 +116,19 @@
     flex-shrink: 0;
   }
 
+  /* Icon circle (replaces dot when icon provided) */
+  .ptl__line-icon {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--dot-color);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .ptl__line-icon img {
+    width: 28px; height: 28px; object-fit: contain;
+  }
+
   .ptl__line-dash {
     flex: 1; height: 2px;
     border-top: 2px dashed var(--line-color);
@@ -189,6 +202,13 @@
       position: absolute; left: -7.5px; top: 4px;
     }
 
+    /* Hide default dot when icon is present */
+    .ptl__mobile-stage:has(.ptl__line-icon)::before { display: none; }
+    .ptl__mobile-stage .ptl__line-icon {
+      width: 40px; height: 40px;
+    }
+    .ptl__mobile-stage .ptl__line-icon img { width: 22px; height: 22px; }
+
     .ptl__stage-title { padding-right: 0; font-size: var(--body-size); margin-bottom: 8px; }
     .ptl__stage-points { padding-right: 0; }
   }
@@ -259,11 +279,17 @@
           {% endfor %}
         </div>
 
-        <!-- Timeline line with dots -->
+        <!-- Timeline line with dots/icons -->
         <div class="ptl__line-row">
           {% for block in stage_blocks %}
             <div class="ptl__line-segment">
-              <span class="ptl__line-dot"></span>
+              {% if block.settings.icon != blank %}
+                <span class="ptl__line-icon">
+                  {{ block.settings.icon | image_url: width: 56 | image_tag: loading: 'lazy' }}
+                </span>
+              {% else %}
+                <span class="ptl__line-dot"></span>
+              {% endif %}
               {% unless forloop.last %}
                 <span class="ptl__line-dash"></span>
               {% endunless %}
@@ -297,6 +323,11 @@
         <div class="ptl__mobile-stages">
           {% for block in stage_blocks %}
             <div class="ptl__mobile-stage" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <span class="ptl__line-icon" style="margin-bottom:8px;">
+                  {{ block.settings.icon | image_url: width: 56 | image_tag: loading: 'lazy' }}
+                </span>
+              {% endif %}
               <h4 class="ptl__stage-title">{{ block.settings.title }}</h4>
               <div class="ptl__stage-points">
                 {% assign points = block.settings.points | split: '||' %}
@@ -382,6 +413,7 @@
       "name": "Timeline Stage",
       "settings": [
         { "type": "text", "id": "title", "label": "Title", "default": "Immediately after treatment" },
+        { "type": "image_picker", "id": "icon", "label": "Icon Image", "info": "Optional — replaces the dot on the timeline" },
         { "type": "textarea", "id": "points", "label": "Bullet Points (separate with ||)", "default": "Skin may feel warm or slightly flushed||Mild tightening sensation" }
       ]
     }
