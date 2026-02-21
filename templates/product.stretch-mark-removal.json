@@ -962,7 +962,7 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Restore Skin Smoothness & Texture",
         "subheading_highlight": "Naturally",
-        "subheading": " &nbsp;",
+        "subheading": "  ",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
@@ -1789,6 +1789,103 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "dual_column_pricing_GziHjn": {
+      "type": "dual-column-pricing",
+      "blocks": {
+        "left_row_76ectf": {
+          "type": "left_row",
+          "settings": {
+            "name": "1 session",
+            "detail": "",
+            "price": "£175",
+            "total": ""
+          }
+        },
+        "left_row_tkjG3b": {
+          "type": "left_row",
+          "settings": {
+            "name": "3 sessions",
+            "detail": "per session",
+            "price": "£150.00",
+            "total": "total £450.00"
+          }
+        },
+        "left_row_8KGQjh": {
+          "type": "left_row",
+          "settings": {
+            "name": "6 sessions",
+            "detail": "total £750.00",
+            "price": "£125.00",
+            "total": "total £750.00"
+          }
+        },
+        "right_row_9q3J3D": {
+          "type": "right_row",
+          "settings": {
+            "name": "1 session",
+            "detail": "",
+            "price": "£100",
+            "total": ""
+          }
+        },
+        "right_row_hBpYmC": {
+          "type": "right_row",
+          "settings": {
+            "name": "3 sessions",
+            "detail": "",
+            "price": "£90",
+            "total": "per session"
+          }
+        },
+        "right_row_Xfnn7y": {
+          "type": "right_row",
+          "settings": {
+            "name": "6 sessions",
+            "detail": "total £480",
+            "price": "£80",
+            "total": "£480"
+          }
+        },
+        "note_RB9paW": {
+          "type": "note",
+          "settings": {
+            "text": "Course pricing available"
+          }
+        },
+        "note_JQFLYf": {
+          "type": "note",
+          "settings": {
+            "text": "Final pricing depends on treatment depth and area"
+          }
+        }
+      },
+      "block_order": [
+        "left_row_76ectf",
+        "left_row_tkjG3b",
+        "left_row_8KGQjh",
+        "right_row_9q3J3D",
+        "right_row_hBpYmC",
+        "right_row_Xfnn7y",
+        "note_RB9paW",
+        "note_JQFLYf"
+      ],
+      "name": "Dual Column Pricing",
+      "settings": {
+        "heading": "Scar & Stretch Mark Treatment Pricing",
+        "subtitle": "Advanced skin regeneration treatments tailored to your skin and goals.",
+        "left_heading": "Stretch Mark Removal",
+        "right_heading": "Scar Removal",
+        "footer_text": "Course treatments are recommended for optimal results.",
+        "section_bg": "#676676",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e0d8d0",
+        "heading_font_size": 38,
+        "body_font_size": 15,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "expectations_trust_Y7mU6V": {
       "type": "expectations-trust",
       "blocks": {
@@ -2132,6 +2229,7 @@
     "slideshow_EXyCqc",
     "slideshow_ULiUTA",
     "slideshow_94XMDd",
+    "dual_column_pricing_GziHjn",
     "expectations_trust_Y7mU6V",
     "consultation_form_e8XGzp",
     "faq_updated_HwHp3d",
