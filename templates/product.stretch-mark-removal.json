@@ -1324,6 +1324,9 @@
     },
     "text_image_text_mrjcA3": {
       "type": "text-image-text",
+      "custom_css": [
+        ".tit__body.is-visible {text-align: -webkit-center !important;}"
+      ],
       "name": "Text Image Text",
       "settings": {
         "heading": "Treatment Areas",
