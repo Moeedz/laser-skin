@@ -1119,7 +1119,7 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "<b>Relax dynamic wrinkles </b>– Soften frown lines and crow’s feet by gently relaxing overactive facial muscles."
+            "text": "Relax dynamic wrinkles – Soften frown lines and crow’s feet by gently relaxing overactive facial muscles."
           }
         },
         "check_item_bX4iLm": {
@@ -1194,7 +1194,7 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Doctor-led anti-wrinkle injections\nSubtle results. Medical precision.",
         "subheading_highlight": "Natural expression preserved",
-        "subheading": " ",
+        "subheading": " &nbsp;",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
@@ -1394,6 +1394,7 @@
         "heading": "Safety, control & medical oversight",
         "body": "<p>We take a conservative, doctor-led approach to deliver subtle, natural enhancements while ensuring absolute safety.</p>",
         "points_heading": "",
+        "footer_text": "",
         "bg_image": "shopify://shop_images/image_08396b01-61ea-4fd7-a9fc-38e205444e41.png",
         "bg_image_mobile": "shopify://shop_images/image_19321ee2-d74f-4d81-805e-4fd3480c02c6.png",
         "bg_position": "right center",
@@ -1406,6 +1407,7 @@
         "text_color": "#4a3a30",
         "icon_color": "#8a7050",
         "mobile_content_bg": "#efefef",
+        "mobile_overlay": false,
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 600,
