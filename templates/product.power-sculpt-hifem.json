@@ -1251,7 +1251,7 @@
         "footer_text": "",
         "bullet_style": "dot",
         "points_columns": "1",
-        "section_bg": "#f1f1f3",
+        "section_bg": "#dfdfe1",
         "show_texture": true,
         "texture_opacity": 80,
         "heading_color": "#3a2820",
