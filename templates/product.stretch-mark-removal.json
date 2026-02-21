@@ -1555,6 +1555,7 @@
       "block_order": [
         "image_QmYLQH"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1689,7 +1690,7 @@
         "column_qKmJVY"
       ],
       "custom_css": [
-        ".iic__col-icon, .iic__col-icon img {width: 100px !important; height: 100px !important;}"
+        ".iic__col-icon,.iic__col-icon img {width: 100px !important; height: 100px !important;}"
       ],
       "name": "Icon Info Columns",
       "settings": {
