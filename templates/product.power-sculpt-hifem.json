@@ -976,6 +976,110 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_PCRa3U": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_djpnrG": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Builds and tones muscle effectively"
+          }
+        },
+        "check_item_rPdr3z": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Supports fat reduction in targeted areas"
+          }
+        },
+        "check_item_AtyEWW": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "No needles, no surgery, no recovery"
+          }
+        },
+        "trust_item_f4CTa3": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_6A9CHX": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_kPgz3r": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_QBa3DD": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_djpnrG",
+        "check_item_rPdr3z",
+        "check_item_AtyEWW",
+        "trust_item_f4CTa3",
+        "trust_item_6A9CHX",
+        "trust_item_kPgz3r",
+        "trust_item_QBa3DD"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/ChatGPT_Image_Feb_21_2026_11_22_44_AM.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 200,
+        "background_color": "#fbdbc3",
+        "overlay_color_start": "rgba(0,0,0,0)",
+        "overlay_color_mid": "rgba(0,0,0,0)",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Build Muscle. Burn Fat",
+        "subheading_highlight": "Reshape Your Body",
+        "subheading": " &nbsp;",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>PowerSculpt is a non-invasive body sculpting treatment that uses high-intensity electromagnetic technology to stimulate powerful muscle contractions strengthening muscle and reducing fat without surgery or downtime </p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your PowerSculpt treatment",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#54433b",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f7e1cf",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_Cpngyt": {
       "type": "slideshow",
       "blocks": {
@@ -1680,6 +1784,7 @@
       "block_order": [
         "image_QN6nwX"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -2176,6 +2281,7 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_PCRa3U",
     "slideshow_Cpngyt",
     "slideshow_RxpVqU",
     "slideshow_CaYzrY",
