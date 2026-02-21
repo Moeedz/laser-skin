@@ -116,6 +116,14 @@
     margin: 0;
   }
 
+  .rsc__card-desc p {
+    margin: 0 0 14px;
+  }
+
+  .rsc__card-desc p:last-child {
+    margin-bottom: 0;
+  }
+
   /* Footer */
   .rsc__footer {
     text-align: center;
@@ -198,7 +206,7 @@
               <h3 class="rsc__card-title">{{ block.settings.title }}</h3>
             {% endif %}
             {% if block.settings.description != blank %}
-              <p class="rsc__card-desc">{{ block.settings.description }}</p>
+              <div class="rsc__card-desc">{{ block.settings.description }}</div>
             {% endif %}
           </div>
         {% endfor %}
@@ -379,10 +387,10 @@
           "default": "Instant Glow"
         },
         {
-          "type": "textarea",
+          "type": "richtext",
           "id": "description",
           "label": "Description",
-          "default": "Skin looks radiant and refreshed after just one session."
+          "default": "<p>Skin looks radiant and refreshed after just one session.</p>"
         }
       ]
     }
@@ -391,9 +399,9 @@
     {
       "name": "Results Cards",
       "blocks": [
-        { "type": "card", "settings": { "title": "Instant Glow", "description": "Skin looks radiant and refreshed after just one session." } },
-        { "type": "card", "settings": { "title": "Deep Improvement", "description": "Ongoing results for congestion, texture, and hydration.", "image_cover": true } },
-        { "type": "card", "settings": { "title": "No Downtime", "description": "Return to your day immediately, no recovery needed." } }
+        { "type": "card", "settings": { "title": "Instant Glow", "description": "<p>Skin looks radiant and refreshed after just one session.</p>" } },
+        { "type": "card", "settings": { "title": "Deep Improvement", "description": "<p>Ongoing results for congestion, texture, and hydration.</p>", "image_cover": true } },
+        { "type": "card", "settings": { "title": "No Downtime", "description": "<p>Return to your day immediately, no recovery needed.</p>" } }
       ]
     }
   ]
