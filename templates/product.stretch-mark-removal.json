@@ -1688,6 +1688,9 @@
         "column_7QfBUC",
         "column_qKmJVY"
       ],
+      "custom_css": [
+        ".iic__col-icon, .iic__col-icon img {width: 100px !important; height: 100px !important;}"
+      ],
       "name": "Icon Info Columns",
       "settings": {
         "heading": "Aftercare & Downtime",
