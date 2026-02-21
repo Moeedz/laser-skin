@@ -1483,6 +1483,65 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "image_process_timeline_DAWmeN": {
+      "type": "image-process-timeline",
+      "blocks": {
+        "stage_aRDK6B": {
+          "type": "stage",
+          "settings": {
+            "title": "Immediately after treatment",
+            "points": "Muscles feel activated or worked||Area may feel tight or fatigued"
+          }
+        },
+        "stage_XF6MTR": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 1–4",
+            "points": "Muscle strength increases||Early improvements in tone and firmness"
+          }
+        },
+        "stage_Xeh9KD": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 4–8",
+            "points": "Muscle definition becomes more visible||Fat reduction begins to show"
+          }
+        },
+        "stage_9L47mx": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 8–12",
+            "points": "Continued muscle strengthening||Noticeable improvements in shape and contour"
+          }
+        }
+      },
+      "block_order": [
+        "stage_aRDK6B",
+        "stage_XF6MTR",
+        "stage_Xeh9KD",
+        "stage_9L47mx"
+      ],
+      "name": "Image Process Timeline",
+      "settings": {
+        "heading": "How PowerSculpt Works & What to Expect",
+        "how_label": "How it works",
+        "how_text": "PowerSculpt delivers controlled electromagnetic energy that causes repeated, intense muscle contractions.",
+        "body": "<p>These contractions strengthen muscle fibres while increasing metabolic activity in the surrounding tissue, supporting fat reduction and improved muscle definition over time.</p>",
+        "footer_text": "Results develop gradually and appear natural.",
+        "section_bg": "#faded3",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#c4956a",
+        "card_bg": "#f0e8e0",
+        "card_border": "#ddd5cc",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_FWyDaE": {
       "type": "slideshow",
       "blocks": {
@@ -2404,6 +2463,7 @@
     "slideshow_Cpngyt",
     "slideshow_RxpVqU",
     "slideshow_CaYzrY",
+    "image_process_timeline_DAWmeN",
     "slideshow_FWyDaE",
     "areas_treated_circles_t78HbT",
     "slideshow_Kr87ad",
