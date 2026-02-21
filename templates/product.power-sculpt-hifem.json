@@ -1651,6 +1651,7 @@
       "block_order": [
         "image_3FQdhh"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1776,7 +1777,7 @@
         "card_qYqGUj"
       ],
       "custom_css": [
-        ".afc__card-icon, .afc__card-icon img {width: 60px !important; height: 60px !important;}"
+        ".afc__card-icon,.afc__card-icon img {width: 60px !important; height: 60px !important;}"
       ],
       "name": "Aftercare Cards",
       "settings": {
