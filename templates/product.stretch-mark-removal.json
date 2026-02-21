@@ -1209,6 +1209,7 @@
       "block_order": [
         "image_E3d7gh"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
