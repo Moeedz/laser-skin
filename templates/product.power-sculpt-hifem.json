@@ -1617,6 +1617,69 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "areas_treated_circles_t78HbT": {
+      "type": "areas-treated-circles",
+      "blocks": {
+        "area_cDh3gg": {
+          "type": "area",
+          "settings": {
+            "title": "Abdomen"
+          }
+        },
+        "area_eH3CCn": {
+          "type": "area",
+          "settings": {
+            "title": "Buttocks"
+          }
+        },
+        "area_ccYHhE": {
+          "type": "area",
+          "settings": {
+            "title": "Thighs"
+          }
+        },
+        "area_RpWqJP": {
+          "type": "area",
+          "settings": {
+            "title": "Arms"
+          }
+        },
+        "area_P8tw74": {
+          "type": "area",
+          "settings": {
+            "title": "Calves"
+          }
+        }
+      },
+      "block_order": [
+        "area_cDh3gg",
+        "area_eH3CCn",
+        "area_ccYHhE",
+        "area_RpWqJP",
+        "area_P8tw74"
+      ],
+      "name": "Areas Treated Circles",
+      "settings": {
+        "heading": "Areas Commonly Treated",
+        "subtitle": "PowerSculpt is designed to target key muscle groups responsible for strength, tone, and body definition.",
+        "summary_title": "PowerSculpt",
+        "summary_points": "Abdomen||Buttocks||Thighs||Arms||Calves",
+        "footer_text": "Treatment plans are tailored to the area being treated and individual body goals.",
+        "section_bg": "#e7e6ed",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "circle_border": "#ece5dd",
+        "circle_bg": "#f0e8e0",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "circle_size": 150,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_Kr87ad": {
       "type": "slideshow",
       "blocks": {
@@ -2336,6 +2399,7 @@
     "slideshow_RxpVqU",
     "slideshow_CaYzrY",
     "slideshow_FWyDaE",
+    "areas_treated_circles_t78HbT",
     "slideshow_Kr87ad",
     "aftercare_cards_DhWtgr",
     "slideshow_hUr9qN",
