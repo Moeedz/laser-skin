@@ -1296,7 +1296,7 @@
         "stage_gi8Tir"
       ],
       "custom_css": [
-        "span.ptl__line-icon, span.ptl__line-icon img {width: 75px !important; height: 75px !important;}"
+        "span.ptl__line-icon,span.ptl__line-icon img {width: 75px !important; height: 75px !important;}"
       ],
       "name": "Process Timeline",
       "settings": {
@@ -1356,6 +1356,7 @@
       "block_order": [
         "image_BtRGxE"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
