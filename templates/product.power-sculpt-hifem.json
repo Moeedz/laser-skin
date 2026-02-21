@@ -1521,6 +1521,9 @@
         "stage_Xeh9KD",
         "stage_9L47mx"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {img {display: none;}}"
+      ],
       "name": "Image Process Timeline",
       "settings": {
         "heading": "How PowerSculpt Works & What to Expect",
