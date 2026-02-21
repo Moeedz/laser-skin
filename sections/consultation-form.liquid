@@ -726,29 +726,36 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   /* ---- FORM VALIDATION ---- */
-  const form = S.querySelector('.cf-form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
+  const form = S.querySelector('.cf-form') || S.querySelector('#cf-form') || S.querySelector('form');
+  const submitBtn = S.querySelector('#cf-submit-{{ section.id }}');
+
+  function handleValidation(e) {
       /* Helper: check required fields are filled */
       function validateCoreFields() {
         const name = S.querySelector('#cf-name-{{ section.id }}');
         const email = S.querySelector('#cf-email-{{ section.id }}');
         let valid = true;
 
-        if (name && !name.value.trim()) {
-          name.style.borderColor = '#dc3545';
-          name.focus();
-          valid = false;
-        } else if (name) {
-          name.style.borderColor = '';
+        if (name) {
+          name.value = name.value.trim();
+          if (!name.value) {
+            name.style.borderColor = '#dc3545';
+            name.focus();
+            valid = false;
+          } else {
+            name.style.borderColor = '';
+          }
         }
 
-        if (email && (!email.value.trim() || !email.checkValidity())) {
-          email.style.borderColor = '#dc3545';
-          if (valid) email.focus();
-          valid = false;
-        } else if (email) {
-          email.style.borderColor = '';
+        if (email) {
+          email.value = email.value.trim();
+          if (!email.value || !email.checkValidity()) {
+            email.style.borderColor = '#dc3545';
+            if (valid) email.focus();
+            valid = false;
+          } else {
+            email.style.borderColor = '';
+          }
         }
 
         return valid;
@@ -760,30 +767,34 @@ document.addEventListener('DOMContentLoaded', function() {
         methodPills.style.outline = '2px solid #dc3545';
         methodPills.style.outlineOffset = '4px';
         methodPills.style.borderRadius = '8px';
-        return;
+        return false;
       }
 
       /* Call — validate phone + time */
       if (selectedMethod.includes('call')) {
         if (!validateCoreFields()) {
           e.preventDefault();
-          return;
+          return false;
         }
         const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
         const callTime = S.querySelector('#cf-call-time-{{ section.id }}');
-        if (callPhone && !callPhone.value.trim()) {
-          e.preventDefault();
-          callPhone.style.borderColor = '#dc3545';
-          callPhone.focus();
-          return;
+        if (callPhone) {
+          callPhone.value = callPhone.value.trim();
+          if (!callPhone.value || callPhone.value.length < 5) {
+            e.preventDefault();
+            callPhone.style.borderColor = '#dc3545';
+            callPhone.value = '';
+            callPhone.focus();
+            return false;
+          }
         }
         if (callTime && !callTime.value) {
           e.preventDefault();
           callTime.style.borderColor = '#dc3545';
           callTime.focus();
-          return;
+          return false;
         }
-        return;
+        return true;
       }
 
       /* WhatsApp requires a sub-selection */
@@ -792,37 +803,63 @@ document.addEventListener('DOMContentLoaded', function() {
         waPills.style.outline = '2px solid #dc3545';
         waPills.style.outlineOffset = '4px';
         waPills.style.borderRadius = '8px';
-        return;
+        return false;
       }
 
       /* WhatsApp > "You contact us" — validate core fields, submit form, then open WhatsApp */
       if (selectedMethod.includes('whatsapp') && selectedWaOption === 'you-contact') {
         if (!validateCoreFields()) {
           e.preventDefault();
-          return;
+          return false;
         }
         /* Let form submit normally, then open WhatsApp link */
         setTimeout(() => {
           const waLink = S.querySelector('.cf-whatsapp-btn');
           if (waLink) window.open(waLink.href, '_blank');
         }, 100);
-        return;
+        return true;
       }
 
       /* WhatsApp > "Message me" — validate core fields + phone required */
       if (selectedMethod.includes('whatsapp') && selectedWaOption === 'we-contact') {
         if (!validateCoreFields()) {
           e.preventDefault();
-          return;
+          return false;
         }
         const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
-        if (waPhone && !waPhone.value.trim()) {
-          e.preventDefault();
-          waPhone.style.borderColor = '#dc3545';
-          waPhone.focus();
-          return;
+        if (waPhone) {
+          waPhone.value = waPhone.value.trim();
+          if (!waPhone.value || waPhone.value.length < 5) {
+            e.preventDefault();
+            waPhone.style.borderColor = '#dc3545';
+            waPhone.value = '';
+            waPhone.focus();
+            return false;
+          }
         }
-        return;
+        return true;
+      }
+
+      /* Default: validate core fields */
+      if (!validateCoreFields()) {
+        e.preventDefault();
+        return false;
+      }
+      return true;
+  }
+
+  if (form) {
+    form.addEventListener('submit', handleValidation);
+  }
+
+  /* Backup: also intercept submit button click */
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function(e) {
+      if (!form) return;
+      const isValid = handleValidation(e);
+      if (!isValid) {
+        e.preventDefault();
+        e.stopPropagation();
       }
     });
   }
