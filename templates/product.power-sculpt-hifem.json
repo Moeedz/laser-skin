@@ -1489,7 +1489,7 @@
         "stage_aRDK6B": {
           "type": "stage",
           "settings": {
-            "title": "Immediately after treatment",
+            "title": "Immediately after",
             "points": "Muscles feel activated or worked||Area may feel tight or fatigued"
           }
         },
@@ -1535,7 +1535,7 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#c4956a",
-        "card_bg": "#f0e8e0",
+        "card_bg": "#eacabe",
         "card_border": "#ddd5cc",
         "heading_font_size": 38,
         "body_font_size": 16,
