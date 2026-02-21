@@ -1295,6 +1295,9 @@
         "stage_TKLtWY",
         "stage_gi8Tir"
       ],
+      "custom_css": [
+        "span.ptl__line-icon, span.ptl__line-icon img {width: 75px !important; height: 75px !important;}"
+      ],
       "name": "Process Timeline",
       "settings": {
         "heading": "How Treatment Works & What to Expect",
