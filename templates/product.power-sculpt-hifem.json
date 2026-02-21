@@ -1383,6 +1383,7 @@
       "block_order": [
         "image_aUYM7a"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": false,
@@ -1522,7 +1523,7 @@
         "stage_9L47mx"
       ],
       "custom_css": [
-        "@media screen and (max-width: 767px) {img {display: none;}}"
+        "@media screen and (max-width: 767px) {img {display: none; }}"
       ],
       "name": "Image Process Timeline",
       "settings": {
