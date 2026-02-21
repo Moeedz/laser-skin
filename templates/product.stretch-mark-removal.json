@@ -1119,6 +1119,61 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "info_hero_PtfX6m": {
+      "type": "info-hero",
+      "blocks": {
+        "point_rpQRW8": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Treats skin at the structural level"
+          }
+        },
+        "point_Xyk6RH": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Improves appearance without surgery"
+          }
+        },
+        "point_UJkjhx": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Personalised rather than one-size-fits-all"
+          }
+        }
+      },
+      "block_order": [
+        "point_rpQRW8",
+        "point_Xyk6RH",
+        "point_UJkjhx"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What Is Scar & Stretch Mark Treatment?",
+        "body": "<p>Scar and stretch mark treatments focus on stimulating the skin's natural repair mechanisms to improve texture, elasticity, and overall skin quality. Depending on skin type, depth, and location, different technologies may be used to deliver optimal results</p>",
+        "points_heading": "Why patients choose this approach",
+        "footer_text": "",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_8w9cre8w9cre8w9c.png",
+        "bg_position": "right center",
+        "section_height": 900,
+        "overlay_strong": "rgba(0,0,0,0)",
+        "overlay_mid": "rgba(0,0,0,0)",
+        "overlay_fade": "rgba(0,0,0,0)",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#ebe0ea",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_ReeVhx": {
       "type": "slideshow",
       "blocks": {
@@ -2378,6 +2433,7 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_tJ9h6Q",
     "slideshow_g3DFEm",
+    "info_hero_PtfX6m",
     "slideshow_ReeVhx",
     "process_timeline_mQbYkj",
     "text_image_text_mrjcA3",
