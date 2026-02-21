@@ -1260,6 +1260,7 @@
           "type": "stage",
           "settings": {
             "title": "Immediately after",
+            "icon": "shopify://shop_images/1-removebg-preview_14.png",
             "points": "Skin may feel warm or sensitised||Mild redness possible"
           }
         },
@@ -1267,6 +1268,7 @@
           "type": "stage",
           "settings": {
             "title": "Weeks 1–4",
+            "icon": "shopify://shop_images/2-removebg-preview_16.png",
             "points": "Collagen production increases.||Texture begins to improve"
           }
         },
@@ -1274,6 +1276,7 @@
           "type": "stage",
           "settings": {
             "title": "Weeks 4–8",
+            "icon": "shopify://shop_images/3-removebg-preview_12.png",
             "points": "Skin strength and elasticity improve.||Visible softening of scars or stretch marks."
           }
         },
@@ -1281,6 +1284,7 @@
           "type": "stage",
           "settings": {
             "title": "Weeks 8–12",
+            "icon": "shopify://shop_images/4-removebg-preview_6.png",
             "points": "Continued remodelling||Smoother, more even skin appearance."
           }
         }
