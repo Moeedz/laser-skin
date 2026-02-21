@@ -887,21 +887,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Targets scars and stretch marks at depth"
+            "text": "Stimulates collagen remodelling at depth"
           }
         },
         "check_item_BX8BG3": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves skin texture, tone, and resilience"
+            "text": "Improves texture, elasticity, and skin resilience"
           }
         },
         "check_item_nWQz6N": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Personalised treatment approach"
+            "text": "Customised to scar type, depth, and location"
           }
         },
         "trust_item_z3cH8m": {
@@ -960,7 +960,7 @@
         "overlay_color_start": "rgba(0,0,0,0)",
         "overlay_color_mid": "rgba(0,0,0,0)",
         "overlay_color_fade": "rgba(0,0,0,0)",
-        "heading": "Restore Skin Smoothness & Texture",
+        "heading": "Regenerative Skin Remodelling for Scars & Stretch Marks",
         "subheading_highlight": "Naturally",
         "subheading": "  ",
         "heading_font_size": 54,
