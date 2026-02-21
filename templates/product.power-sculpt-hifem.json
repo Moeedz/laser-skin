@@ -1775,6 +1775,9 @@
         "card_FAGdBE",
         "card_qYqGUj"
       ],
+      "custom_css": [
+        ".afc__card-icon, .afc__card-icon img {width: 60px !important; height: 60px !important;}"
+      ],
       "name": "Aftercare Cards",
       "settings": {
         "heading": "Aftercare & Downtime",
