@@ -1322,6 +1322,30 @@
         "padding_bottom": 60
       }
     },
+    "text_image_text_mrjcA3": {
+      "type": "text-image-text",
+      "name": "Text Image Text",
+      "settings": {
+        "heading": "Treatment Areas",
+        "body": "<p>Our advanced treatments can reduce scars and stretch marks on various areas of the body.</p>",
+        "image": "shopify://shop_images/Screenshot_4.png",
+        "sub_heading": "",
+        "footer_text": "Our advanced treatments can reduce scars and stretch marks on various areas of the body.",
+        "bullet_style": "dot",
+        "points_columns": "1",
+        "section_bg": "#f1e5e9",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "image_max_width": 800,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_aarUar": {
       "type": "slideshow",
       "blocks": {
@@ -2352,6 +2376,7 @@
     "slideshow_g3DFEm",
     "slideshow_ReeVhx",
     "process_timeline_mQbYkj",
+    "text_image_text_mrjcA3",
     "slideshow_aarUar",
     "slideshow_EXyCqc",
     "slideshow_ULiUTA",
