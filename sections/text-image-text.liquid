@@ -66,6 +66,10 @@
     display: flex; flex-direction: column; gap: 12px;
   }
 
+  .tit__points--two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px;
+  }
+
   .tit__point {
     display: flex; align-items: flex-start; gap: 10px;
     font-size: var(--body-size); line-height: 1.55; color: var(--text-color);
@@ -110,6 +114,7 @@
   @media screen and (max-width: 480px) {
     .tit__container { padding: 0 16px; }
     .tit__heading { font-size: calc(var(--heading-size) * 0.52); }
+    .tit__points--two-col { grid-template-columns: 1fr; }
   }
 {% endstyle %}
 
@@ -155,7 +160,7 @@
         {% endif %}
 
         {% if point_blocks.size > 0 %}
-          <div class="tit__points">
+          <div class="tit__points{% if section.settings.points_columns == '2' %} tit__points--two-col{% endif %}">
             {% for block in point_blocks %}
               <div class="tit__point" {{ block.shopify_attributes }}>
                 {% if section.settings.bullet_style == 'dot' %}
@@ -213,6 +218,10 @@
     { "type": "select", "id": "bullet_style", "label": "Bullet Style", "default": "dot", "options": [
       { "value": "dot", "label": "Plain dot" },
       { "value": "check", "label": "Checkmark" }
+    ] },
+    { "type": "select", "id": "points_columns", "label": "Points Columns", "default": "1", "options": [
+      { "value": "1", "label": "Single column" },
+      { "value": "2", "label": "Two columns" }
     ] },
     { "type": "header", "content": "Background & Texture" },
     { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e4ddd6" },
