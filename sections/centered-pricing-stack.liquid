@@ -1,0 +1,223 @@
+{% style %}
+  .cps {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .cps__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .cps__texture::before, .cps__texture::after { content: ''; position: absolute; inset: 0; }
+  .cps__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .cps__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.015 0.06' numOctaves='4' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .cps__container {
+    position: relative; z-index: 1;
+    max-width: 900px; margin: 0 auto; padding: 0 40px;
+    text-align: center;
+  }
+
+  /* Heading */
+  .cps__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--light-color); margin: 0 0 12px;
+  }
+
+  /* Subtitle */
+  .cps__subtitle {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--body-size); font-style: italic;
+    line-height: 1.6; color: var(--light-color); opacity: 0.65;
+    margin: 0 0 44px;
+  }
+
+  /* Pricing rows */
+  .cps__rows {
+    display: flex; flex-direction: column; gap: 28px;
+    margin-bottom: 44px;
+  }
+
+  .cps__row { text-align: center; }
+
+  .cps__row-main {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 12px);
+    color: var(--light-color); margin: 0 0 4px; line-height: 1.3;
+  }
+
+  .cps__row-name { font-weight: 400; }
+  .cps__row-price { font-weight: 400; }
+  .cps__row-per {
+    font-style: italic; font-weight: 400;
+    font-size: calc(var(--body-size) + 6px);
+  }
+
+  .cps__row-total {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px);
+    color: var(--light-color); opacity: 0.6;
+    margin: 4px 0 0;
+  }
+
+  /* Footer */
+  .cps__footer {
+    text-align: center;
+  }
+
+  .cps__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--body-size); font-style: italic;
+    color: var(--light-color); opacity: 0.6; margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Animations */
+  [data-cps-animate] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+  }
+  [data-cps-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .cps__container { padding: 0 20px; }
+    .cps__heading { font-size: calc(var(--heading-size) * 0.7); }
+    .cps__row-main { font-size: calc(var(--body-size) + 6px); }
+    .cps__row-per { font-size: calc(var(--body-size) + 2px); }
+  }
+
+  @media screen and (max-width: 480px) {
+    .cps__container { padding: 0 16px; }
+    .cps__heading { font-size: calc(var(--heading-size) * 0.55); }
+    .cps__row-main { font-size: calc(var(--body-size) + 4px); }
+  }
+{% endstyle %}
+
+{% assign row_blocks = section.blocks | where: 'type', 'price_row' %}
+
+<section
+  class="cps"
+  id="cps-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --light-color: {{ section.settings.light_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="cps__texture"></div>{% endif %}
+
+  <div class="cps__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="cps__heading" data-cps-animate data-delay="0">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p class="cps__subtitle" data-cps-animate data-delay="0">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    {% if row_blocks.size > 0 %}
+      <div class="cps__rows">
+        {% for block in row_blocks %}
+          <div class="cps__row" data-cps-animate data-delay="{{ forloop.index }}" {{ block.shopify_attributes }}>
+            <p class="cps__row-main">
+              <span class="cps__row-name">{{ block.settings.name }}</span>
+              –
+              <span class="cps__row-price">{{ block.settings.price }}</span>
+              {% if block.settings.per_label != blank %}
+                <span class="cps__row-per"> {{ block.settings.per_label }}</span>
+              {% endif %}
+            </p>
+            {% if block.settings.total != blank %}
+              <p class="cps__row-total">{{ block.settings.total }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="cps__footer" data-cps-animate data-delay="{{ row_blocks.size | plus: 1 }}">
+        <p class="cps__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('cps-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-cps-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Centered Pricing Stack",
+  "tag": "section",
+  "class": "centered-pricing-stack-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "PowerSculpt Treatment Pricing" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Targeted body sculpting using medical-grade electromagnetic technology" },
+    { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "Course pricing is recommended for optimal muscle strengthening and visible body contouring." },
+    { "type": "header", "content": "Background" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#3a3a42" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Fabric Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 90, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "light_color", "label": "Text Color", "default": "#e0d8d0" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 42, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "price_row",
+      "name": "Pricing Line",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Session Name", "default": "1 Session" },
+        { "type": "text", "id": "price", "label": "Price", "default": "£50" },
+        { "type": "text", "id": "per_label", "label": "Per Label (optional)", "info": "e.g. per session" },
+        { "type": "text", "id": "total", "label": "Total (optional)", "info": "e.g. Total £135" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Centered Pricing Stack",
+      "blocks": [
+        { "type": "price_row", "settings": { "name": "1 Session", "price": "£50" } },
+        { "type": "price_row", "settings": { "name": "3 Sessions", "price": "£45", "per_label": "per session", "total": "Total £135" } },
+        { "type": "price_row", "settings": { "name": "6 Sessions", "price": "£40", "per_label": "per session", "total": "Total £240" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
