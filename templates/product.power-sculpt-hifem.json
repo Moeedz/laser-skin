@@ -1916,31 +1916,6 @@
     },
     "consultation_form_ANA6YL": {
       "type": "consultation-form",
-      "blocks": {
-        "treatment_option_yMrdWz": {
-          "type": "treatment_option",
-          "settings": {
-            "treatment_name": "Face Treatment"
-          }
-        },
-        "treatment_option_EmYj4H": {
-          "type": "treatment_option",
-          "settings": {
-            "treatment_name": "Body Treatment"
-          }
-        },
-        "treatment_option_YctMTp": {
-          "type": "treatment_option",
-          "settings": {
-            "treatment_name": "Laser Hair Removal"
-          }
-        }
-      },
-      "block_order": [
-        "treatment_option_yMrdWz",
-        "treatment_option_EmYj4H",
-        "treatment_option_YctMTp"
-      ],
       "name": "Consultation Form",
       "settings": {
         "section_width": 1200,
@@ -1956,21 +1931,19 @@
         "show_priority_banner": true,
         "banner_highlight_text": "Priority Response Guarantee:",
         "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 8,
         "banner_text_color": "#333333",
         "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
         "banner_font_size": 14,
         "form_heading": "Request Your Consultation",
+        "form_subheading": "Fill out the form below and we'll guide you to the best next step.",
         "heading_color": "#000000",
         "heading_font_size": 26,
         "heading_font_weight": "500",
+        "subheading_color": "#777777",
+        "subheading_font_size": 15,
         "label_color": "#333333",
         "label_font_size": 14,
         "label_font_weight": "400",
-        "required_color": "#dc3545",
         "input_background": "#ffffff",
         "input_border_color": "#d0d0d0",
         "input_border_width": 1,
@@ -1980,25 +1953,32 @@
         "input_font_size": 15,
         "input_focus_border_color": "#b8a164",
         "input_focus_shadow_color": "#b8a16426",
+        "show_treatment_field": true,
+        "treatment_label": "Which treatment are you interested in?",
+        "default_treatment_value": "Consultation",
         "preselected_background": "#f5f5f5",
         "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_all_treatments": false,
-        "default_treatment_value": "Consultation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
+        "name_label": "Name",
+        "name_placeholder": "Your Name",
         "contact_method_label": "How may we reach you? (Select all that apply)",
         "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
+        "email_label": "Email Address",
+        "email_placeholder": "Email Address",
+        "whatsapp_number": "447798983387",
+        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
+        "wa_you_contact_text": "I'll message you",
+        "wa_we_contact_text": "Message me",
+        "whatsapp_button_text": "Chat on WhatsApp",
+        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
+        "whatsapp_button_background": "#25d366",
+        "whatsapp_button_hover_background": "#1fbe59",
+        "whatsapp_button_text_color": "#ffffff",
+        "clinic_phone_number": "01902256667",
+        "call_phone_label": "Your phone number",
+        "call_time_label": "Best time to call you?",
+        "call_time_placeholder": "Select a time",
+        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "phone_placeholder": "Phone Number",
         "pill_background": "#ffffff",
         "pill_text_color": "#333333",
         "pill_border_color": "#d0d0d0",
@@ -2022,17 +2002,9 @@
         "button_border_radius": 8,
         "button_shadow_color": "#b8a1644d",
         "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_trust_badges": true,
-        "trust_border_color": "#e0e0e0",
-        "trust_text_color": "#666666",
-        "trust_icon_color": "#888888",
-        "trust_font_size": 13,
-        "trust_badge_1_text": "100% Secure & Private",
-        "trust_badge_1_icon": "lock",
-        "trust_badge_2_text": "Medically Led Clinic",
-        "trust_badge_2_icon": "medical",
-        "trust_badge_3_text": "4.9 Star Rated",
-        "trust_star_color": "#f5c518"
+        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
+        "privacy_text_color": "#999999",
+        "privacy_font_size": 13
       }
     },
     "faq_updated_afMY7d": {
@@ -2263,6 +2235,70 @@
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
       }
+    },
+    "location_contact_tG6qTL": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_GqAa7X": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_8Tqagf": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_nXbLxN": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_GqAa7X",
+        "contact_8Tqagf",
+        "contact_nXbLxN"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "info_bg": "#d6d8d9",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
     }
   },
   "order": [
@@ -2285,6 +2321,7 @@
     "slideshow_LYgH8C",
     "consultation_form_ANA6YL",
     "faq_updated_afMY7d",
-    "slideshow_C7UNtN"
+    "slideshow_C7UNtN",
+    "location_contact_tG6qTL"
   ]
 }
