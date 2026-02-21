@@ -2116,7 +2116,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "Thousands of happy clients"
           }
         },
         "trust_point_gAyh8r": {
@@ -2189,8 +2189,8 @@
         "banner_text_color": "#333333",
         "banner_highlight_color": "#000000",
         "banner_font_size": 14,
-        "form_heading": "Request Your Consultation",
-        "form_subheading": "Fill out the form below and we'll guide you to the best next step.",
+        "form_heading": "Make an enquiry",
+        "form_subheading": "",
         "heading_color": "#000000",
         "heading_font_size": 26,
         "heading_font_weight": "500",
@@ -2215,7 +2215,7 @@
         "preselected_text_color": "#333333",
         "name_label": "Name",
         "name_placeholder": "Your Name",
-        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_label": "How can we reach you?",
         "contact_method_options": "Email, WhatsApp, Phone Call",
         "email_label": "Email Address",
         "email_placeholder": "Email Address",
