@@ -1,0 +1,332 @@
+{% style %}
+  .ipt {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .ipt__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .ipt__texture::before, .ipt__texture::after { content: ''; position: absolute; inset: 0; }
+  .ipt__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .ipt__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .ipt__container {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Heading */
+  .ipt__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color);
+    text-align: center; margin: 0 0 24px;
+  }
+
+  /* How it works row */
+  .ipt__how {
+    margin-bottom: 12px;
+  }
+
+  .ipt__how-label {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 3px); font-weight: 700;
+    color: var(--heading-color); margin: 0 0 4px; line-height: 1.3;
+    display: inline;
+  }
+
+  .ipt__how-text {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); display: inline; margin: 0;
+  }
+
+  /* Body text */
+  .ipt__body {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); margin: 0 0 28px;
+  }
+
+  .ipt__body p { margin: 0 0 12px; }
+  .ipt__body p:last-child { margin-bottom: 0; }
+
+  /* Banner image */
+  .ipt__image {
+    margin: 0 0 0; width: 100%;
+    border-radius: 0; overflow: hidden;
+  }
+
+  .ipt__image img {
+    width: 100%; height: auto; display: block;
+    object-fit: cover;
+  }
+
+  /* Stages grid (desktop) */
+  .ipt__stages {
+    display: grid;
+    grid-template-columns: repeat(var(--stage-count, 4), 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .ipt__stage {}
+
+  .ipt__stage-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-weight: 700;
+    color: var(--heading-color); margin: 14px 0 10px;
+    line-height: 1.3;
+  }
+
+  .ipt__stage-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .ipt__stage-points {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .ipt__stage-point {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: calc(var(--body-size) - 1px); line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  .ipt__stage-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent-color);
+    flex-shrink: 0; margin-top: 6px;
+  }
+
+  /* Mobile stages */
+  .ipt__stages--mobile { display: none; }
+
+  /* Footer */
+  .ipt__footer { text-align: center; }
+
+  .ipt__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 1px); font-weight: 700;
+    color: var(--heading-color); margin: 0; line-height: 1.6;
+  }
+
+  /* Animations */
+  [data-ipt-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-ipt-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .ipt__container { padding: 0 20px; }
+    .ipt__heading { font-size: calc(var(--heading-size) * 0.6); }
+    .ipt__stages--desktop { display: none; }
+    .ipt__stages--mobile {
+      display: flex; flex-direction: column; gap: 16px;
+      margin-bottom: 32px;
+    }
+    .ipt__mobile-stage {
+      padding-left: 16px;
+      border-left: 3px solid var(--accent-color);
+    }
+    .ipt__mobile-stage .ipt__stage-title { margin: 0 0 8px; }
+    .ipt__mobile-stage .ipt__stage-card {
+      border-left: none; border-radius: 6px;
+      padding: 12px 14px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ipt__container { padding: 0 16px; }
+    .ipt__heading { font-size: calc(var(--heading-size) * 0.48); }
+  }
+{% endstyle %}
+
+{% assign stage_blocks = section.blocks | where: 'type', 'stage' %}
+
+<section
+  class="ipt"
+  id="ipt-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --accent-color: {{ section.settings.accent_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --stage-count: {{ stage_blocks.size | at_most: 6 }};
+  "
+>
+  {% if section.settings.show_texture %}<div class="ipt__texture"></div>{% endif %}
+
+  <div class="ipt__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="ipt__heading" data-ipt-animate data-delay="0">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.how_label != blank or section.settings.how_text != blank %}
+      <p class="ipt__how" data-ipt-animate data-delay="0">
+        {% if section.settings.how_label != blank %}
+          <span class="ipt__how-label">{{ section.settings.how_label }}</span>&nbsp;&nbsp;
+        {% endif %}
+        {% if section.settings.how_text != blank %}
+          <span class="ipt__how-text">{{ section.settings.how_text }}</span>
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if section.settings.body != blank %}
+      <div class="ipt__body" data-ipt-animate data-delay="0">{{ section.settings.body }}</div>
+    {% endif %}
+
+    {% if section.settings.image != blank %}
+      <div class="ipt__image" data-ipt-animate data-delay="1">
+        {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600,800,1000,1200' }}
+      </div>
+    {% endif %}
+
+    {% if stage_blocks.size > 0 %}
+      <!-- Desktop stages -->
+      <div class="ipt__stages ipt__stages--desktop" data-ipt-animate data-delay="2">
+        {% for block in stage_blocks %}
+          <div class="ipt__stage" {{ block.shopify_attributes }}>
+            <h4 class="ipt__stage-title">{{ block.settings.title }}</h4>
+            <div class="ipt__stage-card">
+              <div class="ipt__stage-points">
+                {% assign points = block.settings.points | split: '||' %}
+                {% for point in points %}
+                  {% assign trimmed = point | strip %}
+                  {% if trimmed != blank %}
+                    <div class="ipt__stage-point">
+                      <span class="ipt__stage-dot"></span>
+                      <span>{{ trimmed }}</span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Mobile stages -->
+      <div class="ipt__stages--mobile" data-ipt-animate data-delay="2">
+        {% for block in stage_blocks %}
+          <div class="ipt__mobile-stage" {{ block.shopify_attributes }}>
+            <h4 class="ipt__stage-title">{{ block.settings.title }}</h4>
+            <div class="ipt__stage-card">
+              <div class="ipt__stage-points">
+                {% assign points = block.settings.points | split: '||' %}
+                {% for point in points %}
+                  {% assign trimmed = point | strip %}
+                  {% if trimmed != blank %}
+                    <div class="ipt__stage-point">
+                      <span class="ipt__stage-dot"></span>
+                      <span>{{ trimmed }}</span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="ipt__footer" data-ipt-animate data-delay="3">
+        <p class="ipt__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('ipt-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-ipt-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 150);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Image Process Timeline",
+  "tag": "section",
+  "class": "image-process-timeline-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "How PowerSculpt Works & What to Expect" },
+    { "type": "text", "id": "how_label", "label": "How It Works Label", "default": "How it works" },
+    { "type": "textarea", "id": "how_text", "label": "How It Works Text", "default": "PowerSculpt delivers controlled electromagnetic energy that causes repeated, intense muscle contractions." },
+    { "type": "richtext", "id": "body", "label": "Body Text", "default": "<p>These contractions strengthen muscle fibres while increasing metabolic activity in the surrounding tissue, supporting fat reduction and improved muscle definition over time.</p>" },
+    { "type": "image_picker", "id": "image", "label": "Banner Image" },
+    { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "Results develop gradually and appear natural." },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e4ddd6" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#4a3a30" },
+    { "type": "color", "id": "accent_color", "label": "Accent Color", "default": "#c4956a" },
+    { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#f0e8e0" },
+    { "type": "color", "id": "card_border", "label": "Card Border", "default": "#ddd5cc" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 38, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 16, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "stage",
+      "name": "Stage",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Immediately after treatment" },
+        { "type": "textarea", "id": "points", "label": "Points (separate with ||)", "default": "Muscles feel activated or worked||Area may feel tight or fatigued" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Process Timeline",
+      "blocks": [
+        { "type": "stage", "settings": { "title": "Immediately after treatment", "points": "Muscles feel activated or worked||Area may feel tight or fatigued" } },
+        { "type": "stage", "settings": { "title": "Weeks 1–4", "points": "Muscle strength increases||Early improvements in tone and firmness" } },
+        { "type": "stage", "settings": { "title": "Weeks 4–8", "points": "Muscle definition becomes more visible||Fat reduction begins to show" } },
+        { "type": "stage", "settings": { "title": "Weeks 8–12", "points": "Continued muscle strengthening||Noticeable improvements in shape and contour" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
