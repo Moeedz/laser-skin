@@ -1780,6 +1780,57 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "centered_pricing_stack_HUbtAd": {
+      "type": "centered-pricing-stack",
+      "blocks": {
+        "price_row_PUnRab": {
+          "type": "price_row",
+          "settings": {
+            "name": "1 Session",
+            "price": "£50",
+            "per_label": "",
+            "total": ""
+          }
+        },
+        "price_row_jeBhaT": {
+          "type": "price_row",
+          "settings": {
+            "name": "3 Sessions",
+            "price": "£45",
+            "per_label": "per session",
+            "total": "Total £135"
+          }
+        },
+        "price_row_QKqAfN": {
+          "type": "price_row",
+          "settings": {
+            "name": "6 Sessions",
+            "price": "£40",
+            "per_label": "per session",
+            "total": "Total £240"
+          }
+        }
+      },
+      "block_order": [
+        "price_row_PUnRab",
+        "price_row_jeBhaT",
+        "price_row_QKqAfN"
+      ],
+      "name": "Centered Pricing Stack",
+      "settings": {
+        "heading": "PowerSculpt Treatment Pricing",
+        "subtitle": "Targeted body sculpting using medical-grade electromagnetic technology",
+        "footer_text": "Course pricing is recommended for optimal muscle strengthening and visible body contouring.",
+        "section_bg": "#3a3a42",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e0d8d0",
+        "heading_font_size": 42,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "expectations_trust_zAAGzU": {
       "type": "expectations-trust",
       "blocks": {
@@ -2131,6 +2182,7 @@
     "slideshow_FWyDaE",
     "slideshow_Kr87ad",
     "slideshow_hUr9qN",
+    "centered_pricing_stack_HUbtAd",
     "expectations_trust_zAAGzU",
     "consultation_form_ANA6YL",
     "faq_updated_afMY7d",
