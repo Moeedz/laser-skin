@@ -854,21 +854,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Targets facial muscles to enhance lift and tone"
+            "text": "Targets deep facial muscles"
           }
         },
         "check_item_4HjGPG": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Improves firmness and facial definition"
+            "text": "Improves definition and contour"
           }
         },
         "check_item_wHnTTh": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No needles, no downtime, no recovery"
+            "text": "No needles, no recovery"
           }
         },
         "trust_item_eezKVd": {
