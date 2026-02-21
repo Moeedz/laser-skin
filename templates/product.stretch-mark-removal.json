@@ -880,6 +880,110 @@
         "questions-font-size": 1
       }
     },
+    "product_hero_tJ9h6Q": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_bjeP9q": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Targets scars and stretch marks at depth"
+          }
+        },
+        "check_item_BX8BG3": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Improves skin texture, tone, and resilience"
+          }
+        },
+        "check_item_nWQz6N": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Personalised treatment approach"
+          }
+        },
+        "trust_item_z3cH8m": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_d33ETm": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_B6Nj8M": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_BaDFVq": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_bjeP9q",
+        "check_item_BX8BG3",
+        "check_item_nWQz6N",
+        "trust_item_z3cH8m",
+        "trust_item_d33ETm",
+        "trust_item_B6Nj8M",
+        "trust_item_BaDFVq"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_7yluva7yluva7ylu.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 200,
+        "background_color": "#fae2dd",
+        "overlay_color_start": "rgba(0,0,0,0)",
+        "overlay_color_mid": "rgba(0,0,0,0)",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Restore Skin Smoothness & Texture",
+        "subheading_highlight": "Naturally",
+        "subheading": "&nbsp;",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Advanced treatment solutions designed to reduce the appearance of scars and stretch marks by stimulating skin regeneration </p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your Hydrofacial",
+        "button_link": "",
+        "button_open_new_tab": false,
+        "button_bg": "#c4a080",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
     "slideshow_g3DFEm": {
       "type": "slideshow",
       "blocks": {
@@ -2020,6 +2124,7 @@
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
+    "product_hero_tJ9h6Q",
     "slideshow_g3DFEm",
     "slideshow_ReeVhx",
     "slideshow_aarUar",
