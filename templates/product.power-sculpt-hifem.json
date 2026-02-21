@@ -1058,7 +1058,7 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Build Muscle. Burn Fat",
         "subheading_highlight": "Reshape Your Body",
-        "subheading": "  ",
+        "subheading": "&nbsp;",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
