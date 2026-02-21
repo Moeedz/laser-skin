@@ -1253,6 +1253,68 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "process_timeline_mQbYkj": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_EnRrgK": {
+          "type": "stage",
+          "settings": {
+            "title": "Immediately after",
+            "points": "Skin may feel warm or sensitised||Mild redness possible"
+          }
+        },
+        "stage_QzmC9K": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 1–4",
+            "points": "Collagen production increases.||Texture begins to improve"
+          }
+        },
+        "stage_TKLtWY": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 4–8",
+            "points": "Skin strength and elasticity improve.||Visible softening of scars or stretch marks."
+          }
+        },
+        "stage_gi8Tir": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 8–12",
+            "points": "Continued remodelling||Smoother, more even skin appearance."
+          }
+        }
+      },
+      "block_order": [
+        "stage_EnRrgK",
+        "stage_QzmC9K",
+        "stage_TKLtWY",
+        "stage_gi8Tir"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "How Treatment Works & What to Expect",
+        "sub_heading": "How it works",
+        "body": "<p>Advanced skin-remodelling techniques create controlled stimulation within the skin, triggering collagen production and structural renewal over time.</p>",
+        "timeline_label": "",
+        "footer_text": "Results develop gradually and appear natural.",
+        "section_bg": "#fbdcd6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "show_body_card": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_aarUar": {
       "type": "slideshow",
       "blocks": {
@@ -2281,6 +2343,7 @@
     "product_hero_tJ9h6Q",
     "slideshow_g3DFEm",
     "slideshow_ReeVhx",
+    "process_timeline_mQbYkj",
     "slideshow_aarUar",
     "slideshow_EXyCqc",
     "slideshow_ULiUTA",
