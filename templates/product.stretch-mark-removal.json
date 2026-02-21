@@ -1309,7 +1309,7 @@
         "text_color": "#5a4a3a",
         "accent_color": "#b8886a",
         "line_color": "#d78770",
-        "dot_color": "#d78770",
+        "dot_color": "rgba(0,0,0,0)",
         "show_body_card": false,
         "card_bg": "#f5efe9",
         "card_border": "#d8cfc5",
