@@ -48,6 +48,12 @@
     margin-bottom: 36px;
   }
 
+  /* Vertical stack layout */
+  .afc__cards--stacked {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+
   .afc__card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -109,6 +115,37 @@
   .afc--no-checks .afc__card-check { display: none; }
 
   .afc__card-point span p { margin: 0; }
+
+  /* Stacked layout: icon beside heading */
+  .afc__cards--stacked .afc__card { border: none; padding: 0 0 20px; border-radius: 0; background: transparent; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .afc__cards--stacked .afc__card:last-child { border-bottom: none; padding-bottom: 0; }
+  .afc__cards--stacked .afc__card-heading { text-align: left; margin-bottom: 12px; }
+  .afc__cards--stacked .afc__card-icon-row {
+    justify-content: flex-start; margin-bottom: 14px;
+  }
+  .afc__cards--stacked .afc__card-icon-line { display: none; }
+  .afc__cards--stacked .afc__card-icon { margin-right: 10px; }
+
+  /* Inline icon+heading row in stacked mode */
+  .afc__card-header-inline {
+    display: none;
+  }
+
+  .afc__cards--stacked .afc__card-header-inline {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .afc__cards--stacked .afc__card-header-inline .afc__card-icon {
+    width: 36px; height: 36px; margin: 0;
+  }
+
+  .afc__cards--stacked .afc__card-header-inline .afc__card-heading {
+    margin: 0; text-align: left;
+  }
+
+  .afc__cards--stacked .afc__card > .afc__card-heading { display: none; }
+  .afc__cards--stacked .afc__card > .afc__card-icon-row { display: none; }
 
   /* Footer */
   .afc__footer { text-align: center; }
@@ -177,9 +214,22 @@
     {% endif %}
 
     {% if card_blocks.size > 0 %}
-      <div class="afc__cards" data-afc-animate data-delay="1">
+      <div class="afc__cards{% if section.settings.layout == 'stacked' %} afc__cards--stacked{% endif %}" data-afc-animate data-delay="1">
         {% for block in card_blocks %}
           <div class="afc__card" {{ block.shopify_attributes }}>
+            <!-- Inline icon+heading for stacked mode -->
+            <div class="afc__card-header-inline">
+              {% if block.settings.icon != blank %}
+                <div class="afc__card-icon">
+                  {{ block.settings.icon | image_url: width: 72 | image_tag: loading: 'lazy' }}
+                </div>
+              {% endif %}
+              {% if block.settings.card_heading != blank %}
+                <h3 class="afc__card-heading">{{ block.settings.card_heading }}</h3>
+              {% endif %}
+            </div>
+
+            <!-- Standard heading + icon row for grid mode -->
             {% if block.settings.card_heading != blank %}
               <h3 class="afc__card-heading">{{ block.settings.card_heading }}</h3>
             {% endif %}
@@ -252,6 +302,10 @@
     { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks." },
     { "type": "header", "content": "Background & Texture" },
     { "type": "checkbox", "id": "show_checkmarks", "label": "Show Checkmarks", "default": false },
+    { "type": "select", "id": "layout", "label": "Layout", "default": "grid", "options": [
+      { "value": "grid", "label": "Side by side" },
+      { "value": "stacked", "label": "Stacked vertical" }
+    ] },
     { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#ede4dc" },
     { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
     { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
