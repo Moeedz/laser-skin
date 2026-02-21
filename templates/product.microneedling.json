@@ -1178,6 +1178,7 @@
         "heading": "",
         "body": "",
         "points_heading": "",
+        "footer_text": "",
         "bg_image": "shopify://shop_images/RF_microneedling_text_margin_desktop.png",
         "bg_position": "right center",
         "section_height": 900,
@@ -1416,6 +1417,11 @@
         "heading": "Who Is RF Microneedling Best For?",
         "subtitle": "RF Microneedling is ideal for clients looking to improve skin texture, scarring, and signs of ageing with minimal downtime.",
         "footer_text": "Combination therapy is often recommended for clients seeking accelerated or more dramatic rejuvenation results.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
         "enable_left": true,
         "left_heading": "",
         "left_subtitle": "",
@@ -2089,7 +2095,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "Clinically calibrated depth settings"
           }
         },
         "trust_point_VXWnrn": {
