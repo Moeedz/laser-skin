@@ -2062,7 +2062,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "Trusted by thousands"
           }
         },
         "trust_point_GbQYie": {
@@ -2105,7 +2105,7 @@
         "heading_font_size": 44,
         "card_heading_font_size": 28,
         "body_font_size": 16,
-        "button_label": "Book your consultation",
+        "button_label": "Enquire Now",
         "button_link": "#cf-template--25630341431676__consultation_form_ANA6YL",
         "button_open_new_tab": false,
         "button_bg": "#62493b",
@@ -2135,8 +2135,8 @@
         "banner_text_color": "#333333",
         "banner_highlight_color": "#000000",
         "banner_font_size": 14,
-        "form_heading": "Request Your Consultation",
-        "form_subheading": "Fill out the form below and we'll guide you to the best next step.",
+        "form_heading": "Make an enquiry",
+        "form_subheading": "",
         "heading_color": "#000000",
         "heading_font_size": 26,
         "heading_font_weight": "500",
@@ -2161,7 +2161,7 @@
         "preselected_text_color": "#333333",
         "name_label": "Name",
         "name_placeholder": "Your Name",
-        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_label": "How can we reach you?",
         "contact_method_options": "Email, WhatsApp, Phone Call",
         "email_label": "Email Address",
         "email_placeholder": "Email Address",
@@ -2194,7 +2194,7 @@
         "show_message_field": true,
         "message_label": "How can we help you? (Optional Message)",
         "message_placeholder": "",
-        "button_text": "Request Callback",
+        "button_text": "Submit Form",
         "button_background": "#b8a164",
         "button_hover_background": "#9a8654",
         "button_text_color": "#ffffff",
