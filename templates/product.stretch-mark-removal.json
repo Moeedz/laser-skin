@@ -1655,6 +1655,57 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "icon_info_columns_9VnEQh": {
+      "type": "icon-info-columns",
+      "blocks": {
+        "column_qcMMnU": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/1-removebg-preview_13.png",
+            "title": "Recovery Time",
+            "description": "Minimal downtime — most patients resume regular activities within 1-2 days."
+          }
+        },
+        "column_7QfBUC": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/2-removebg-preview_15.png",
+            "title": "What to Expect",
+            "description": "Temporary redness, tenderness, or swelling of treated areas, typically resolving within a few days."
+          }
+        },
+        "column_qKmJVY": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/3-removebg-preview_11.png",
+            "title": "Aftercare",
+            "description": "Keep the area hydrated and protected from sun exposure while allowing time for the skin to heal."
+          }
+        }
+      },
+      "block_order": [
+        "column_qcMMnU",
+        "column_7QfBUC",
+        "column_qKmJVY"
+      ],
+      "name": "Icon Info Columns",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "show_underline": true,
+        "footer_text": "Personalised aftercare advice will be provided following treatment.",
+        "section_bg": "#e4dee5",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#c4956a",
+        "divider_color": "#ccc4ba",
+        "heading_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_94XMDd": {
       "type": "slideshow",
       "blocks": {
@@ -2229,6 +2280,7 @@
     "slideshow_aarUar",
     "slideshow_EXyCqc",
     "slideshow_ULiUTA",
+    "icon_info_columns_9VnEQh",
     "slideshow_94XMDd",
     "dual_column_pricing_GziHjn",
     "expectations_trust_Y7mU6V",
