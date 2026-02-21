@@ -1,0 +1,344 @@
+{% style %}
+  .dcp {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%; overflow: hidden; position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .dcp__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .dcp__texture::before, .dcp__texture::after { content: ''; position: absolute; inset: 0; }
+  .dcp__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .dcp__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.015 0.06' numOctaves='4' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .dcp__container {
+    position: relative; z-index: 1;
+    max-width: 1000px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .dcp__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--light-color);
+    text-align: center; margin: 0 0 12px;
+  }
+
+  .dcp__subtitle {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--body-size); font-style: italic;
+    line-height: 1.6; color: var(--light-color); opacity: 0.65;
+    text-align: center; margin: 0 0 36px;
+  }
+
+  /* Two columns */
+  .dcp__columns {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 28px;
+  }
+
+  .dcp__col {}
+
+  .dcp__col-heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 4px); font-weight: 700;
+    color: var(--light-color); margin: 0 0 14px;
+    text-align: center; line-height: 1.3;
+  }
+
+  .dcp__col-rows {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  /* Price row */
+  .dcp__row {
+    display: flex; align-items: center;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .dcp__row-left {
+    flex: 1;
+  }
+
+  .dcp__row-name {
+    font-size: var(--body-size); color: var(--light-color);
+    margin: 0; line-height: 1.3;
+  }
+
+  .dcp__row-detail {
+    font-size: calc(var(--body-size) - 2px);
+    color: var(--light-color); opacity: 0.55;
+    margin: 2px 0 0;
+  }
+
+  .dcp__row-right {
+    text-align: right; flex-shrink: 0;
+  }
+
+  .dcp__row-price {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 10px); font-weight: 700;
+    color: var(--light-color); margin: 0; line-height: 1.2;
+  }
+
+  .dcp__row-total {
+    font-size: calc(var(--body-size) - 2px);
+    color: var(--light-color); opacity: 0.55;
+    margin: 2px 0 0;
+  }
+
+  /* Notes */
+  .dcp__notes {
+    display: flex; flex-direction: column; gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .dcp__note {
+    display: flex; align-items: center; gap: 8px;
+    font-size: var(--body-size); color: var(--light-color); opacity: 0.7;
+  }
+
+  .dcp__note-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--light-color); opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  /* Footer */
+  .dcp__footer { text-align: center; }
+
+  .dcp__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--body-size); font-style: italic;
+    color: var(--light-color); opacity: 0.6; margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Animations */
+  [data-dcp-animate] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+  }
+  [data-dcp-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .dcp__container { padding: 0 20px; }
+    .dcp__heading { font-size: calc(var(--heading-size) * 0.65); }
+    .dcp__columns { grid-template-columns: 1fr; gap: 28px; }
+    .dcp__row-price { font-size: calc(var(--body-size) + 6px); }
+  }
+
+  @media screen and (max-width: 480px) {
+    .dcp__container { padding: 0 16px; }
+    .dcp__heading { font-size: calc(var(--heading-size) * 0.52); }
+    .dcp__row { padding: 12px 14px; }
+    .dcp__row-price { font-size: calc(var(--body-size) + 4px); }
+  }
+{% endstyle %}
+
+{% assign left_rows = section.blocks | where: 'type', 'left_row' %}
+{% assign right_rows = section.blocks | where: 'type', 'right_row' %}
+{% assign note_blocks = section.blocks | where: 'type', 'note' %}
+
+<section
+  class="dcp"
+  id="dcp-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --light-color: {{ section.settings.light_color }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="dcp__texture"></div>{% endif %}
+
+  <div class="dcp__container">
+    {% if section.settings.heading != blank %}
+      <h2 class="dcp__heading" data-dcp-animate data-delay="0">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.subtitle != blank %}
+      <p class="dcp__subtitle" data-dcp-animate data-delay="0">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    <div class="dcp__columns" data-dcp-animate data-delay="1">
+      <!-- Left column -->
+      <div class="dcp__col">
+        {% if section.settings.left_heading != blank %}
+          <h3 class="dcp__col-heading">{{ section.settings.left_heading }}</h3>
+        {% endif %}
+        {% if left_rows.size > 0 %}
+          <div class="dcp__col-rows">
+            {% for block in left_rows %}
+              <div class="dcp__row" {{ block.shopify_attributes }}>
+                <div class="dcp__row-left">
+                  <p class="dcp__row-name">{{ block.settings.name }}</p>
+                  {% if block.settings.detail != blank %}
+                    <p class="dcp__row-detail">{{ block.settings.detail }}</p>
+                  {% endif %}
+                </div>
+                <div class="dcp__row-right">
+                  <p class="dcp__row-price">{{ block.settings.price }}</p>
+                  {% if block.settings.total != blank %}
+                    <p class="dcp__row-total">{{ block.settings.total }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Right column -->
+      <div class="dcp__col">
+        {% if section.settings.right_heading != blank %}
+          <h3 class="dcp__col-heading">{{ section.settings.right_heading }}</h3>
+        {% endif %}
+        {% if right_rows.size > 0 %}
+          <div class="dcp__col-rows">
+            {% for block in right_rows %}
+              <div class="dcp__row" {{ block.shopify_attributes }}>
+                <div class="dcp__row-left">
+                  <p class="dcp__row-name">{{ block.settings.name }}</p>
+                  {% if block.settings.detail != blank %}
+                    <p class="dcp__row-detail">{{ block.settings.detail }}</p>
+                  {% endif %}
+                </div>
+                <div class="dcp__row-right">
+                  <p class="dcp__row-price">{{ block.settings.price }}</p>
+                  {% if block.settings.total != blank %}
+                    <p class="dcp__row-total">{{ block.settings.total }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if note_blocks.size > 0 %}
+      <div class="dcp__notes" data-dcp-animate data-delay="2">
+        {% for block in note_blocks %}
+          <div class="dcp__note" {{ block.shopify_attributes }}>
+            <span class="dcp__note-dot"></span>
+            <span>{{ block.settings.text }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.footer_text != blank %}
+      <div class="dcp__footer" data-dcp-animate data-delay="3">
+        <p class="dcp__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('dcp-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-dcp-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Dual Column Pricing",
+  "tag": "section",
+  "class": "dual-column-pricing-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Scar & Stretch Mark Treatment Pricing" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Advanced skin regeneration treatments tailored to your skin and goals." },
+    { "type": "text", "id": "left_heading", "label": "Left Column Heading", "default": "Stretch Mark Removal" },
+    { "type": "text", "id": "right_heading", "label": "Right Column Heading", "default": "Scar Removal" },
+    { "type": "textarea", "id": "footer_text", "label": "Footer Text", "default": "Course treatments are recommended for optimal results." },
+    { "type": "header", "content": "Background" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#4a4a55" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Fabric Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 90, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "light_color", "label": "Text Color", "default": "#e0d8d0" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 38, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 14, "max": 20, "step": 1, "default": 15, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 60, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "left_row",
+      "name": "Left Price Row",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name", "default": "1 session" },
+        { "type": "text", "id": "detail", "label": "Detail (optional)", "info": "e.g. per session" },
+        { "type": "text", "id": "price", "label": "Price", "default": "£175" },
+        { "type": "text", "id": "total", "label": "Total (optional)" }
+      ]
+    },
+    {
+      "type": "right_row",
+      "name": "Right Price Row",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name", "default": "1 session" },
+        { "type": "text", "id": "detail", "label": "Detail (optional)" },
+        { "type": "text", "id": "price", "label": "Price", "default": "£100" },
+        { "type": "text", "id": "total", "label": "Total (optional)" }
+      ]
+    },
+    {
+      "type": "note",
+      "name": "Note",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Note Text", "default": "Course pricing available" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dual Column Pricing",
+      "blocks": [
+        { "type": "left_row", "settings": { "name": "1 session", "price": "£175" } },
+        { "type": "left_row", "settings": { "name": "3 sessions", "detail": "per session", "price": "£150.00", "total": "total £450.00" } },
+        { "type": "left_row", "settings": { "name": "6 sessions", "detail": "total £750.00", "price": "£125.00", "total": "total £750.00" } },
+        { "type": "right_row", "settings": { "name": "1 session", "price": "£100" } },
+        { "type": "right_row", "settings": { "name": "3 sessions", "price": "£90", "total": "per session" } },
+        { "type": "right_row", "settings": { "name": "6 sessions", "detail": "total £480", "price": "£80", "total": "£480" } },
+        { "type": "note", "settings": { "text": "Course pricing available" } },
+        { "type": "note", "settings": { "text": "Final pricing depends on treatment depth and area" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
