@@ -487,7 +487,8 @@
               id="cf-wa-phone-{{ section.id }}"
               name="contact[phone]"
               placeholder="{{ section.settings.phone_placeholder }}"
-              autocomplete="tel">
+              autocomplete="tel"
+              disabled>
           </div>
         </div>
       </div>
@@ -504,7 +505,8 @@
             id="cf-call-phone-{{ section.id }}"
             name="contact[phone]"
             placeholder="{{ section.settings.phone_placeholder }}"
-            autocomplete="tel">
+            autocomplete="tel"
+            disabled>
         </div>
         <div class="cf-group">
           <label class="cf-label" for="cf-call-time-{{ section.id }}">
@@ -626,13 +628,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* ---- Clear dynamic required / values ---- */
   function clearConditionalInputs() {
-    /* Remove required from ALL conditional inputs */
     const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
     const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
     const callTime = S.querySelector('#cf-call-time-{{ section.id }}');
     [waPhone, callPhone, callTime].forEach(input => {
       if (input) {
         input.removeAttribute('required');
+        input.disabled = true;
         input.value = '';
         input.style.borderColor = '';
       }
@@ -681,6 +683,10 @@ document.addEventListener('DOMContentLoaded', function() {
           showBlock(whatsappBlock);
         } else if (method.includes('call')) {
           showBlock(callBlock);
+          const callPhone = S.querySelector('#cf-call-phone-{{ section.id }}');
+          const callTime = S.querySelector('#cf-call-time-{{ section.id }}');
+          if (callPhone) { callPhone.disabled = false; }
+          if (callTime) { callTime.disabled = false; }
           setRequired('#cf-call-phone-{{ section.id }}');
           setRequired('#cf-call-time-{{ section.id }}');
         }
@@ -704,10 +710,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         hideAllWaSubs();
 
-        /* Clear wa-specific required */
+        /* Clear wa-specific required and disable */
         const waPhone = S.querySelector('#cf-wa-phone-{{ section.id }}');
         if (waPhone) {
           waPhone.removeAttribute('required');
+          waPhone.disabled = true;
           waPhone.value = '';
         }
 
@@ -717,6 +724,7 @@ document.addEventListener('DOMContentLoaded', function() {
           showBlock(waYouBlock);
         } else if (waOption === 'we-contact') {
           showBlock(waWeBlock);
+          if (waPhone) { waPhone.disabled = false; }
           setRequired('#cf-wa-phone-{{ section.id }}');
         }
 
