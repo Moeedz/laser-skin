@@ -1058,7 +1058,7 @@
         "overlay_color_fade": "rgba(0,0,0,0)",
         "heading": "Build Muscle. Burn Fat",
         "subheading_highlight": "Reshape Your Body",
-        "subheading": " &nbsp;",
+        "subheading": "  ",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
@@ -1751,6 +1751,51 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "aftercare_cards_DhWtgr": {
+      "type": "aftercare-cards",
+      "blocks": {
+        "card_FAGdBE": {
+          "type": "card",
+          "settings": {
+            "card_heading": "After treatment",
+            "icon": "shopify://shop_images/1-removebg-preview_12.png",
+            "points": "Resume daily activities immediately||Muscles may feel sore, similar to post-workout fatigue"
+          }
+        },
+        "card_qYqGUj": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Aftercare guidance",
+            "icon": "shopify://shop_images/2-removebg-preview_14.png",
+            "points": "Stay well hydrated||Maintain light activity between sessions||Follow practitioner advice for optimal results"
+          }
+        }
+      },
+      "block_order": [
+        "card_FAGdBE",
+        "card_qYqGUj"
+      ],
+      "name": "Aftercare Cards",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "subtitle": "PowerSculpt requires no downtime and minimal aftercare, allowing you to return to normal activities immediately after treatment.",
+        "footer_text": "PowerSculpt delivers the best results when completed as a structured treatment course.",
+        "show_checkmarks": false,
+        "layout": "stacked",
+        "section_bg": "#f9dad3",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_hUr9qN": {
       "type": "slideshow",
       "blocks": {
@@ -2288,6 +2333,7 @@
     "slideshow_CaYzrY",
     "slideshow_FWyDaE",
     "slideshow_Kr87ad",
+    "aftercare_cards_DhWtgr",
     "slideshow_hUr9qN",
     "centered_pricing_stack_HUbtAd",
     "expectations_trust_zAAGzU",
