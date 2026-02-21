@@ -1623,30 +1623,35 @@
         "area_cDh3gg": {
           "type": "area",
           "settings": {
+            "image": "shopify://shop_images/1_ba7382fe-b422-4e4a-896d-531790adea9c.png",
             "title": "Abdomen"
           }
         },
         "area_eH3CCn": {
           "type": "area",
           "settings": {
+            "image": "shopify://shop_images/2_84beb48c-72ab-4005-b19c-00ea78335aed.png",
             "title": "Buttocks"
           }
         },
         "area_ccYHhE": {
           "type": "area",
           "settings": {
+            "image": "shopify://shop_images/3_2c9741f4-9a3e-4c16-8eef-80912710b9df.png",
             "title": "Thighs"
           }
         },
         "area_RpWqJP": {
           "type": "area",
           "settings": {
+            "image": "shopify://shop_images/4_a6af428a-142a-4f74-9ddf-9cfd15a8cea6.png",
             "title": "Arms"
           }
         },
         "area_P8tw74": {
           "type": "area",
           "settings": {
+            "image": "shopify://shop_images/5_a71f70ed-8a7e-4635-8efc-8714cc02b6d4.png",
             "title": "Calves"
           }
         }
