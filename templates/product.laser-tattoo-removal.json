@@ -1119,6 +1119,82 @@
         "padding_bottom": 72
       }
     },
+    "technology_features_A3Rp9A": {
+      "type": "technology-features",
+      "blocks": {
+        "feature_pbRANQ": {
+          "type": "feature",
+          "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_7.png",
+            "title": "Q-switched and picosecond lasers",
+            "description": "Fragment ink into tiny particles for faster removal"
+          }
+        },
+        "feature_fWp6jr": {
+          "type": "feature",
+          "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_8.png",
+            "title": "Multiple wavelengths",
+            "description": "Treats black and coloured inks effectively"
+          }
+        },
+        "feature_Nrjwnc": {
+          "type": "feature",
+          "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_7.png",
+            "title": "Advanced skin cooling",
+            "description": "Most clients describe the sensation as brief, sharp pulses, with cooling applied throughout for comfort."
+          }
+        },
+        "feature_zAQXDC": {
+          "type": "feature",
+          "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview_4.png",
+            "title": "Personalised treatment design",
+            "description": "Tailored plans based on your tattoo and skin type"
+          }
+        },
+        "feature_NWacHR": {
+          "type": "feature",
+          "settings": {
+            "icon_image": "shopify://shop_images/5-removebg-preview_2.png",
+            "title": "Promotes clear, smooth skin",
+            "description": "Trained clinicians use protocols to reduce risk"
+          }
+        }
+      },
+      "block_order": [
+        "feature_pbRANQ",
+        "feature_fWp6jr",
+        "feature_Nrjwnc",
+        "feature_zAQXDC",
+        "feature_NWacHR"
+      ],
+      "name": "Technology Features",
+      "settings": {
+        "heading": "Advanced Technology for Precise, Safe Tattoo Removal",
+        "subtitle": "We use the latest laser technology and gold-standard protocols to safely and effectively erase unwanted ink.",
+        "side_image": "shopify://shop_images/image_3c41cc7f-2640-4e32-8461-7467764d7318.png",
+        "image_position": "center center",
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630357356924__consultation_form_AfPiXn",
+        "section_bg": "#e7c7bd",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "icon_color": "#7a6a50",
+        "panel_bg": "#eed3cf",
+        "button_bg": "#795f58",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#5a504a",
+        "heading_font_size": 40,
+        "feature_title_font_size": 20,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 48
+      }
+    },
     "split_content_6kVFPC": {
       "type": "split-content",
       "blocks": {
@@ -1216,82 +1292,6 @@
         "padding_top": 60,
         "padding_bottom": 20,
         "image_height": 420
-      }
-    },
-    "technology_features_A3Rp9A": {
-      "type": "technology-features",
-      "blocks": {
-        "feature_pbRANQ": {
-          "type": "feature",
-          "settings": {
-            "icon_image": "shopify://shop_images/1-removebg-preview_7.png",
-            "title": "Q-switched and picosecond lasers",
-            "description": "Fragment ink into tiny particles for faster removal"
-          }
-        },
-        "feature_fWp6jr": {
-          "type": "feature",
-          "settings": {
-            "icon_image": "shopify://shop_images/2-removebg-preview_8.png",
-            "title": "Multiple wavelengths",
-            "description": "Treats black and coloured inks effectively"
-          }
-        },
-        "feature_Nrjwnc": {
-          "type": "feature",
-          "settings": {
-            "icon_image": "shopify://shop_images/3-removebg-preview_7.png",
-            "title": "Advanced skin cooling",
-            "description": "Most clients describe the sensation as brief, sharp pulses, with cooling applied throughout for comfort."
-          }
-        },
-        "feature_zAQXDC": {
-          "type": "feature",
-          "settings": {
-            "icon_image": "shopify://shop_images/4-removebg-preview_4.png",
-            "title": "Personalised treatment design",
-            "description": "Tailored plans based on your tattoo and skin type"
-          }
-        },
-        "feature_NWacHR": {
-          "type": "feature",
-          "settings": {
-            "icon_image": "shopify://shop_images/5-removebg-preview_2.png",
-            "title": "Promotes clear, smooth skin",
-            "description": "Trained clinicians use protocols to reduce risk"
-          }
-        }
-      },
-      "block_order": [
-        "feature_pbRANQ",
-        "feature_fWp6jr",
-        "feature_Nrjwnc",
-        "feature_zAQXDC",
-        "feature_NWacHR"
-      ],
-      "name": "Technology Features",
-      "settings": {
-        "heading": "Advanced Technology for Precise, Safe Tattoo Removal",
-        "subtitle": "We use the latest laser technology and gold-standard protocols to safely and effectively erase unwanted ink.",
-        "side_image": "shopify://shop_images/image_3c41cc7f-2640-4e32-8461-7467764d7318.png",
-        "image_position": "center center",
-        "button_label": "Book your consultation",
-        "button_link": "#cf-template--25630357356924__consultation_form_AfPiXn",
-        "section_bg": "#e7c7bd",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "icon_color": "#7a6a50",
-        "panel_bg": "#eed3cf",
-        "button_bg": "#795f58",
-        "button_text": "#ffffff",
-        "button_bg_hover": "#5a504a",
-        "heading_font_size": 40,
-        "feature_title_font_size": 20,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 48
       }
     },
     "results_testimonials_aAV6Rz": {
@@ -2201,8 +2201,8 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_jYbKDw",
     "approach_comparison_MdLPnV",
-    "split_content_6kVFPC",
     "technology_features_A3Rp9A",
+    "split_content_6kVFPC",
     "results_testimonials_aAV6Rz",
     "session_pricing_xLx8D9",
     "slideshow_BWEini",
