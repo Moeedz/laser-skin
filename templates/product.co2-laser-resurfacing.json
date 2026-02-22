@@ -1551,7 +1551,7 @@
         "column_kjnQ93"
       ],
       "custom_css": [
-        ".iic__col-icon, .iic__col-icon img {width: 100px !important; height: 100px !important;}"
+        ".iic__col-icon,.iic__col-icon img {width: 100px !important; height: 100px !important;}"
       ],
       "name": "Icon Info Columns",
       "settings": {
@@ -1569,6 +1569,69 @@
         "body_font_size": 16,
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "how_it_works_timeline_Q4fGQe": {
+      "type": "how-it-works-timeline",
+      "blocks": {
+        "step_UJtFjE": {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Week 1",
+            "points": "Initial healing phase begins||Redness and peeling as damaged skin is replaced||New, fresher skin starts to emerge underneath"
+          }
+        },
+        "step_niXfMx": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 2–4",
+            "points": "Skin texture starts to improve noticeably||Redness gradually fades||Early smoothing of fine lines and scars becomes visible"
+          }
+        },
+        "step_MNdhUf": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Months 1–3",
+            "points": "Collagen remodelling accelerates||Scarring continues to soften and skin firmness improves||Tone becomes more even and balanced"
+          }
+        },
+        "step_DAYLXc": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "Months 3–6+",
+            "points": "Full results become apparent||Maximum collagen production achieved||Skin appears tighter, smoother, and significantly renewed"
+          }
+        }
+      },
+      "block_order": [
+        "step_UJtFjE",
+        "step_niXfMx",
+        "step_MNdhUf",
+        "step_DAYLXc"
+      ],
+      "name": "How It Works Timeline",
+      "settings": {
+        "heading": "Results Timeline",
+        "description": "<p>CO₂ laser results develop gradually as the skin heals and new collagen forms beneath the surface. The full extent of improvement continues for several months after treatment.</p>",
+        "footer_text": "Results vary depending on treatment depth, skin condition, and individual healing response. Deeper treatments produce more dramatic results but require longer recovery.",
+        "section_bg": "#f6e7dd",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#5a3e28",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b08d57",
+        "circle_bg": "#c4a87a",
+        "circle_icon_color": "#ffffff",
+        "line_color": "#d4ccc0",
+        "heading_font_size": 42,
+        "step_title_font_size": 18,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "how_it_works_timeline_xDyBNg": {
@@ -2140,6 +2203,7 @@
     "slideshow_49kXaM",
     "treatment_tiers_cGjMRP",
     "icon_info_columns_BdAaPx",
+    "how_it_works_timeline_Q4fGQe",
     "how_it_works_timeline_xDyBNg",
     "before_after_results_fdnWYz",
     "luxury_pricing_TFtVXM",
