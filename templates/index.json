@@ -16,14 +16,14 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/image_e6bc4132-6846-4148-bae1-cd836172d6b1.png",
-            "mobile_image": "shopify://shop_images/image_0fb7e9c6-6abd-48b7-a6d1-3735ed98730a.png",
+            "mobile_image": "shopify://shop_images/image_e6bc4132-6846-4148-bae1-cd836172d6b1.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 780,
             "button_1_text": "",
-            "button_1_link": "shopify://pages/free-skin-analysis",
+            "button_1_link": "shopify://pages/free-skin-assessment",
             "button_1_style": "link",
             "button_1_background": "#ffffff",
             "button_1_text_color": "#000000",
@@ -396,7 +396,7 @@
           "settings": {
             "style": "solid",
             "text": "Learn More",
-            "url": "shopify://pages/free-skin-analysis",
+            "url": "shopify://pages/free-skin-assessment",
             "background": "",
             "text_color": ""
           }
