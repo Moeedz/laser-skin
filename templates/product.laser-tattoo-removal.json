@@ -1400,7 +1400,7 @@
         "text_color": "#5a4a3a",
         "accent_color": "#b8886a",
         "line_color": "#e1927d",
-        "dot_color": "#1c1c1c",
+        "dot_color": "#e1927d",
         "show_body_card": false,
         "card_bg": "#f5efe9",
         "card_border": "#d8cfc5",
