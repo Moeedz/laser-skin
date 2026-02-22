@@ -1294,6 +1294,57 @@
         "image_height": 420
       }
     },
+    "icon_info_columns_c4t8Kg": {
+      "type": "icon-info-columns",
+      "blocks": {
+        "column_g8gceD": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/2-removebg-preview_16.png",
+            "title": "Immediately After",
+            "description": "The treated area may appear white or frosted, with redness and mild swelling. This is a normal response and typically settles within a few hours."
+          }
+        },
+        "column_hLhgkT": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/1-removebg-preview_9.png",
+            "title": "Days 1–7",
+            "description": "Blistering, scabbing, or tenderness may occur as the skin heals. Keep the area clean, dry, and protected. Avoid picking at any scabs."
+          }
+        },
+        "column_qLUDaT": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/2-removebg-preview_10.png",
+            "title": "Weeks 2–6",
+            "description": "The skin continues to heal and the body gradually flushes broken ink particles. Protect the area from sun exposure and allow full recovery before the next session."
+          }
+        }
+      },
+      "block_order": [
+        "column_g8gceD",
+        "column_hLhgkT",
+        "column_qLUDaT"
+      ],
+      "name": "Icon Info Columns",
+      "settings": {
+        "heading": "What to Expect After Each Session",
+        "show_underline": true,
+        "footer_text": "Aftercare instructions will be provided after every session to support healing and optimise fading.",
+        "section_bg": "#e5dcdd",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#c4956a",
+        "divider_color": "#ccc4ba",
+        "heading_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "results_testimonials_aAV6Rz": {
       "type": "results-testimonials",
       "blocks": {
@@ -2203,6 +2254,7 @@
     "approach_comparison_MdLPnV",
     "technology_features_A3Rp9A",
     "split_content_6kVFPC",
+    "icon_info_columns_c4t8Kg",
     "results_testimonials_aAV6Rz",
     "session_pricing_xLx8D9",
     "slideshow_BWEini",
