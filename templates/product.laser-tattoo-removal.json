@@ -2061,7 +2061,7 @@
         "heading": "Professional Care. Transparent Pricing.",
         "subtitle": "Everything you need to feel confident booking your consultation.",
         "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
+        "card_description": "<p>Tattoo removal is carefully planned and medically delivered using advanced multi-wavelength laser technology.</p><p>From your consultation, you’ll understand:</p><p>• Expected number of sessions</p><p>• Realistic clearance levels</p><p>• Ink colour response</p><p>• Structured aftercare guidance</p><p>We focus on controlled fading, skin safety, and transparent pricing with no pressure and no hidden surprises.</p>",
         "section_bg": "#f7e5d9",
         "show_texture": true,
         "texture_opacity": 80,
@@ -2182,64 +2182,64 @@
         "faq_item_Ci3Xtq": {
           "type": "faq_item",
           "settings": {
-            "question": "Is there any downtime?",
-            "answer": "<p>Most clients experience little to no downtime. You may notice temporary redness, mild swelling, or a warm sensation in the treated area, which typically settles within a few hours.</p><p>For tattoo removal, some areas may develop light blistering or scabbing as part of the normal healing process. We provide full aftercare guidance and adjust treatment settings carefully to minimise disruption.</p><p>Most clients return to normal activities the same day.</p>"
+            "question": "Will my tattoo completely disappear?",
+            "answer": "<p>Most professional tattoos require multiple sessions and can be significantly faded or fully removed.</p><p>Complete removal depends on:</p><p>• Ink depth</p><p>• Ink colour</p><p>• Tattoo age</p><p>• Skin type</p><p>Your consultation includes an honest assessment of expected clearance levels.</p>"
           }
         },
         "faq_item_8tGC7q": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you remove microblading and eyebrow tattoos?",
-            "answer": "<p>We use medical-grade laser technology specifically designed to shatter cosmetic pigments.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most tattoos require between 6–10 sessions, spaced 6–8 weeks apart.</p><p>Factors affecting session count include:</p><p>• Professional vs amateur ink</p><p>• Colour complexity</p><p>• Size</p><p>• Skin response</p><p>We tailor your treatment plan rather than selling fixed bundles.</p>"
           }
         },
         "faq_item_bbzpbn": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>Laser treatments are well tolerated by most clients. Sensation is often described as a brief snapping or warming feeling.</p><p>For tattoo removal, discomfort can be slightly stronger than hair removal due to ink density, but we use advanced cooling and controlled energy delivery to keep treatments as comfortable as possible.</p><p>A patch test is always carried out before treatment so you know exactly what to expect.</p>"
+            "question": "Does laser tattoo removal hurt?",
+            "answer": "<p>Clients describe the sensation as quick, sharp pulses  similar to an elastic band snap.</p><p>Cooling technology is used during treatment to improve comfort.</p><p>Sessions are typically short and highly controlled.</p>"
           }
         },
         "faq_item_a63FCV": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p>Results vary depending on the treatment and individual factors.</p><p>Ink fades gradually as the body clears fragmented pigment. Visible lightening is usually seen within a few weeks, with continued improvement between sessions.<br/><br/>We explain expected timelines clearly during your consultation.</p>"
+            "question": "Will it leave a scar?",
+            "answer": "<p>When performed correctly using medical-grade lasers and proper aftercare, the risk of scarring is very low.</p><p>We follow structured protocols and assess your skin before treatment to minimise complications.</p>"
           }
         },
         "faq_item_QjrBUE": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes. We offer <strong>0% finance options</strong> to help spread the cost of treatment over time, subject to eligibility.</p><p>This can be discussed during your consultation so you can choose what works best for you.</p>"
+            "question": "Is there downtime?",
+            "answer": "<p>You may experience:</p><p>• Redness</p><p>• Mild swelling</p><p>• Temporary blistering</p><p>These effects usually settle within several days.</p><p>Aftercare guidance is provided to support proper healing between sessions.</p>"
           }
         },
         "faq_item_qpUa6i": {
           "type": "faq_item",
           "settings": {
-            "question": "How many sessions will I need?",
-            "answer": "<p>This depends on several factors including skin type, hair or tattoo characteristics, treatment area, and how your body responds.</p><p>We don’t guess or sell fixed numbers unnecessarily. Your treatment plan is built after assessment and reviewed as results progress.</p>"
+            "question": "Can you remove coloured tattoos?",
+            "answer": "<p>Yes multiple wavelengths are used to target different ink colours.</p><p>Some colours (such as green or light blue) may require additional sessions, which is discussed during consultation.</p>"
           }
         },
         "faq_item_fgttbn": {
           "type": "faq_item",
           "settings": {
-            "question": "Why do I need a consultation first?",
-            "answer": "<p>A consultation ensures your treatment is safe, suitable, and properly planned.</p><p>During your appointment, we assess your skin, hair or tattoo, discuss your goals, and <strong>carry out a test patch where required</strong>. This allows us to confirm suitability, fine-tune settings, and explain realistic outcomes before treatment begins.</p>"
+            "question": "Can I fade my tattoo for a cover up?",
+            "answer": "<p>Yes. Many clients choose partial fading to prepare for new artwork.</p><p>We can tailor sessions specifically to lighten the tattoo rather than fully remove it.</p>"
           }
         },
         "faq_item_F7nydg": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the test patch cost?",
-            "answer": "<p>Yes. The test patch is <strong>£30</strong>.</p><p>This is carried out during your consultation and allows us to safely assess how your skin responds to the laser before full treatment. The test patch helps reduce risk and ensures the most effective and comfortable settings are used for your skin.</p>"
+            "question": "Is the test patch included?",
+            "answer": "<p>The test patch is <strong>£30</strong>.</p><p>This is carried out during your consultation and allows us to safely assess how your skin responds to the laser before full treatment. The test patch helps reduce risk and ensures the most effective and comfortable settings are used for your skin.</p>"
           }
         },
         "faq_item_BcULRn": {
           "type": "faq_item",
           "settings": {
-            "question": "Where are you based?",
-            "answer": "<p>We’re based at <strong>Laser Skin Clinics & Aesthetics Wolverhampton</strong>, located at:</p><p><strong>4 Perton Farm Barns, Jenny Walkers Lane, Wolverhampton, WV6 7HB</strong></p><p>Our clinic is <strong>around 10 minutes from Wolverhampton town centre</strong> and easily accessible by car.</p><p>✔ <strong>Free on-site parking available</strong></p><p>✔ Quiet, private clinical setting</p><p>✔ Easy access without city-centre congestion</p><p>If you’d like directions or help finding us, WhatsApp is the quickest way to get in touch.</p>"
+            "question": "What happens at my consultation?",
+            "answer": "<p>Your consultation includes:</p><p>• Ink and skin assessment</p><p>• Session estimate</p><p>• Patch test</p><p>• Clear pricing</p><p>• Discussion of expected outcome</p><p>You’ll leave knowing exactly what level of fading to expect.</p>"
           }
         }
       },
@@ -2256,12 +2256,12 @@
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#f2f2f2",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Laser Tattoo Removal. Your Questions, Answered.",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
