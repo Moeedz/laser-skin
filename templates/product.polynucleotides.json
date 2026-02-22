@@ -2387,6 +2387,13 @@
     "faq_updated_hxcAQY": {
       "type": "faq-updated",
       "blocks": {
+        "faq_item_ML3jDN": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are polynucleotides and how do they work?",
+            "answer": "<p>Polynucleotides are purified DNA fragments that stimulate cellular repair and collagen production.</p><p>Rather than adding volume like filler, they:</p><p>• Improve skin quality</p><p>• Support regeneration</p><p>• Increase hydration</p><p>• Strengthen the dermal structure</p><p>They work by activating your skin’s natural repair response.</p>"
+          }
+        },
         "faq_item_xLnDXD": {
           "type": "faq_item",
           "settings": {
@@ -2398,88 +2405,61 @@
           "type": "faq_item",
           "settings": {
             "question": "Is this the same as Dermal Filler?",
-            "answer": "<p>No, they are completely different. Dermal Fillers are made of Hyaluronic Acid gel and are designed to physically add volume or change the shape of your face immediately. Polynucleotides are <strong>biostimulators</strong>. They do not add artificial volume; instead, they communicate with your cells to regenerate your <em>own</em> skin, thickening it and smoothing it from the inside out. Think of Filler as \"contouring\" and Polynucleotides as \"repairing.</p>"
+            "answer": "<p>No.</p><p>Dermal fillers add volume immediately.</p><p>Polynucleotides improve skin quality gradually by stimulating regeneration and collagen remodelling.</p><p>The result is more natural and progressive.</p>"
           }
         },
         "faq_item_47CnaL": {
           "type": "faq_item",
           "settings": {
-            "question": "What are Polynucleotides actually made of?",
-            "answer": "<p>They are highly purified DNA fractions derived from salmon or trout sperm (which closely mirrors human DNA). Because they are so highly purified, there is no risk of allergic reaction to the protein. When injected, these DNA chains trigger your body’s wound-healing response, boosting collagen, elastin, and hydration without sparking inflammation.</p>"
+            "question": "What areas can be treated?",
+            "answer": "<p>Common areas include:</p><p>• Under-eyes</p><p>• Face</p><p>• Neck</p><p>• Décolletage</p><p>They are particularly popular for delicate under-eye rejuvenation.</p>"
           }
         },
         "faq_item_Qp9YEm": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I have this if I already have anti-wrinkle or Filler?",
-            "answer": "<p>Yes, absolutely. In fact, they work brilliantly together. Polynucleotides improve the \"canvas\" (your skin quality), while anti-wrinkle and Fillers improve the \"structure.\" We often recommend doing Polynucleotides first to strengthen the skin, which can actually make your filler results last longer.</p>"
+            "question": "Is it safe for the under eye?",
+            "answer": "<p>Yes when performed correctly.</p><p>Polynucleotides are often chosen specifically for under-eye treatment because they improve skin quality without adding heavy volume.</p><p>A consultation ensures correct placement and suitability.</p>"
           }
         },
         "faq_item_jaqGgh": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>Most patients describe it as a mild stinging sensation rather than \"pain.\" We use a strong numbing cream beforehand to make the procedure as comfortable as possible. The product itself has a slightly different pH to your skin, which causes the short-lived sting, but this fades seconds after injection.</p>"
+            "question": "How many sessions do I need?",
+            "answer": "<p>Most clients require 2–3 sessions spaced 2–4 weeks apart.</p><p>Maintenance may be recommended every 6–9 months depending on skin goals.</p>"
           }
         },
         "faq_item_Rj9Dtr": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you have finance options?",
-            "answer": "<p>Yes, we offer flexible finance options through Klarna. Please enquire to learn more.</p>"
+            "question": "When will I see results?",
+            "answer": "<p>Some improvement in hydration and glow can appear within weeks.</p><p>Collagen stimulation continues progressively over 8–12 weeks.</p><p>Results improve gradually rather than instantly.</p>"
           }
         },
         "faq_item_tncYma": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the downtime? Will I look normal straight away?",
-            "answer": "<p>There is minimal social downtime, but you will not look \"perfect\" immediately. Because we deposit the product in tiny droplets under the skin, you will likely have small, mosquito-bite-like bumps (papules) on the treated area. <strong>These typically flatten within 12–24 hours</strong> as the product absorbs. You may also experience mild redness or tiny bruises, which can be covered with makeup the next day.</p>"
+            "question": "What is the downtime?",
+            "answer": "<p>You may experience:</p><p>• Mild swelling</p><p>• Small injection bumps</p><p>• Light bruising</p><p>These typically settle within 24–72 hours.</p><p>Most clients return to normal activities quickly.</p>"
           }
         },
         "faq_item_Lbdw7F": {
           "type": "faq_item",
           "settings": {
-            "question": "Is it safe for the under-eye area?",
-            "answer": "<p>Yes, and it is arguably the <em>best</em> treatment for the under-eye. Unlike tear trough filler, which attracts water and can cause puffiness or \"tyndall effect\" (blueish tint), Polynucleotides strengthen the thin skin and reduce dark circles without adding bulk or puffiness..</p>"
+            "question": "Can I combine with other treatments?",
+            "answer": "<p>Yes.</p><p>Polynucleotides are often combined with:</p><p>• Anti-wrinkle treatments</p><p>• Skin boosters</p><p>• CO₂ resurfacing</p><p>• Microneedling</p><p>Your consultation determines safe sequencing.</p>"
           }
         },
         "faq_item_4yfrz3": {
           "type": "faq_item",
           "settings": {
-            "question": "How many sessions do I really need?",
-            "answer": "<p>This is a biological treatment, meaning it builds up over time. While one session triggers the process, <strong>we strongly recommend a course of 3 sessions</strong> (spaced 2–4 weeks apart) for visible, long-lasting results. For more mature skin or deep textural issues (like acne scarring), a course of 6 sessions provides the deepest regeneration.</p>"
-          }
-        },
-        "faq_item_D4ye9w": {
-          "type": "faq_item",
-          "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>This is not a \"quick fix.\" Because your body needs time to produce new collagen, you will start to see improvements in skin quality, brightness, and firmness around <strong>3–4 weeks after your second session</strong>. The peak results usually appear about 3 months after completing your course.</p>"
-          }
-        },
-        "faq_item_4WEDXH": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How long do results last?",
-            "answer": "<p>Once you complete your initial course, the cellular regeneration lasts for <strong>6–9 months</strong>. To maintain the \"glow\" and firmness, most patients book a single maintenance session every 6 months.</p>"
-          }
-        },
-        "faq_item_qEbgXc": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
-          }
-        },
-        "faq_item_Wn6zRj": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Location and clinic details",
-            "answer": "<p><strong>Laser Skin Clinics Wolverhampton</strong><br/>Located at: 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p><p><strong>Parking:</strong> Free private parking available.</p>"
+            "question": "Who may not be suitable?",
+            "answer": "<p>This treatment may not be suitable if:</p><p>• Pregnant or breastfeeding</p><p>• Active infection in treatment area</p><p>• Certain autoimmune conditions</p><p>A consultation ensures safety.</p>"
           }
         }
       },
       "block_order": [
+        "faq_item_ML3jDN",
         "faq_item_xLnDXD",
         "faq_item_Tjaig7",
         "faq_item_47CnaL",
@@ -2488,20 +2468,16 @@
         "faq_item_Rj9Dtr",
         "faq_item_tncYma",
         "faq_item_Lbdw7F",
-        "faq_item_4yfrz3",
-        "faq_item_D4ye9w",
-        "faq_item_4WEDXH",
-        "faq_item_qEbgXc",
-        "faq_item_Wn6zRj"
+        "faq_item_4yfrz3"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#efefef",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Polynucleotides. Your Questions, Answered.",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
