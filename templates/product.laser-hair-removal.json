@@ -4037,7 +4037,7 @@
         "heading": "Clear pricing. Clinically delivered care.",
         "subtitle": "Everything you need to feel confident booking your consultation.",
         "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>From your first consultation, you’ll know exactly what to expect, clear planning, clinical care, and no hidden surprises.</p><p>Every treatment plan is built around your consultation, your skin, and your goals with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
+        "card_description": "<p>From your first laser consultation, you’ll have full clarity on your treatment plan, expected sessions, and long-term hair reduction goals.</p><p>Every laser treatment course is tailored to your skin tone, hair type, and growth cycle  with no hidden costs and no pressure.</p><p>We focus on safe protocols, consistent results, and professional clinical standards throughout your course.</p>",
         "section_bg": "#e5dde0",
         "show_texture": true,
         "texture_opacity": 100,
@@ -4294,49 +4294,84 @@
           "type": "faq_item",
           "settings": {
             "question": "what is laser hair removal?",
-            "answer": "<p>Laser hair removal uses <strong>controlled light energy</strong> to target the pigment in hair follicles, damaging them so future hair growth is significantly reduced. It offers long-term hair reduction rather than temporary removal.</p>"
+            "answer": "<p>Laser hair removal is a medical-grade treatment that uses targeted light energy to reduce unwanted hair growth at the root. The laser safely heats the hair follicle, disrupting future growth while protecting the surrounding skin.</p>"
           }
         },
         "faq_item_dNmCQy": {
           "type": "faq_item",
           "settings": {
             "question": "How does laser hair removal work?",
-            "answer": "<p>The laser targets <strong>melanin</strong> in the hair. The heat travels down the hair shaft into the follicle, disrupting its ability to regrow hair while leaving the surrounding skin unharmed.</p>"
+            "answer": "<p>The laser emits controlled pulses of light that are absorbed by pigment in the hair. This energy travels down to the follicle and reduces its ability to produce new hair.</p><p>Because hair grows in cycles, only active follicles can be treated at each session which is why a structured course is required.</p>"
           }
         },
         "faq_item_JfEqi9": {
           "type": "faq_item",
           "settings": {
-            "question": "Is laser hair removal permanent?",
-            "answer": "<p>Laser hair removal provides <strong>permanent hair reduction</strong>, not 100% permanent removal.</p><p>Most clients experience a <strong>70–90% reduction</strong> after a full course, with occasional maintenance sessions if needed.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients require a course of 6–8 sessions spaced 4–6 weeks apart, depending on:</p><p>• Area treated</p><p>• Hair thickness</p><p>• Hair growth cycle</p><p>• Hormonal influences</p><p>Your personalised treatment plan is discussed at consultation so you know exactly what to expect.</p>"
           }
         },
         "faq_item_k9KQgb": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you offer finance?",
-            "answer": "<p>Yes, we offer flexible finance options through Klarna. Please enquire to learn more.<br/><br/><br/></p>"
+            "question": "Why are multiple sessions required?",
+            "answer": "<p>Hair grows in different phases. The laser is most effective during the active growth phase.</p><p>Each session targets a new group of follicles entering that phase, which is why treatments are spaced out in a structured course.</p><p>This approach delivers safe, long-term reduction rather than short-term results.</p>"
           }
         },
         "faq_item_jNKBDm": {
           "type": "faq_item",
           "settings": {
-            "question": "Is it safe for my skin tone?",
-            "answer": "<p>Our Diode technology is one of the few lasers medically cleared for all skin tones (Fitzpatrick 1-6), including darker skin and tanned skin. However, safety is our priority. We always conduct a mandatory Patch Test during your free consultation before any treatment begins.</p>"
+            "question": "Is laser hair removal permanent?",
+            "answer": "<p>Laser hair removal provides long-term hair reduction.</p><p>Most clients experience significant, lasting reduction in treated areas. Some may require occasional maintenance sessions depending on hormonal factors or hair type.</p><p>We focus on realistic, transparent expectations from the start.</p>"
           }
         },
         "faq_item_UWVQCe": {
           "type": "faq_item",
           "settings": {
             "question": "does the treatment hurt?",
-            "answer": "<p>Most clients describe the sensation as a <strong>quick snap or mild heat</strong>.</p><p>Modern machines include cooling systems to maximise comfort, and discomfort is usually brief.</p>"
+            "answer": "<p>Most clients describe the sensation as a quick, warm snap against the skin.</p><p>Modern medical lasers include built-in cooling systems to improve comfort. Treatment settings are adjusted to your tolerance while maintaining effectiveness.</p>"
           }
         },
         "faq_item_JJxdHi": {
           "type": "faq_item",
           "settings": {
-            "question": "When will I see results?",
-            "answer": "<p></p><ul><li><br/>Hair begins to shed <strong>1–3 weeks</strong> after treatment<br/></li><li><br/>Growth becomes finer and patchier with each session<br/></li><li><br/>Results improve progressively over the course</li></ul>"
+            "question": "Is it safe for my skin tone?",
+            "answer": "<p>Yes. We use advanced medical-grade laser systems suitable for a wide range of skin tones.</p><p>Your consultation includes a skin assessment and patch test to ensure safe, appropriate settings before full treatment begins.</p>"
+          }
+        },
+        "faq_item_NgkbpJ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can hormonal hair growth affect results?",
+            "answer": "<p>Yes. Conditions such as PCOS or hormonal fluctuations can influence hair growth patterns.</p><p>Laser can still be highly effective, but some clients may require maintenance sessions. This is discussed clearly during consultation so you have realistic expectations.</p>"
+          }
+        },
+        "faq_item_C4qTxP": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What areas can be treated?",
+            "answer": "<p>Common areas include:</p><p>• Underarms</p><p>• Bikini & Hollywood</p><p>• Legs</p><p>• Face (upper lip, chin, jawline)</p><p>• Back & chest</p><p>We tailor settings depending on the area and hair type.</p>"
+          }
+        },
+        "faq_item_aaTc4h": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What happens at my consultation?",
+            "answer": "<p>Your consultation includes:</p><p>• Skin and hair assessment</p><p>• Medical history review</p><p>• Patch test</p><p>• Discussion of expected sessions</p><p>• Clear pricing overview</p><p>You’ll leave knowing exactly how the process works and whether laser is right for you.</p>"
+          }
+        },
+        "faq_item_cYUUPK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I shave between sessions?",
+            "answer": "<p>Yes shaving is recommended between treatments.</p><p>Avoid waxing, plucking, or threading during your course, as these remove the follicle needed for the laser to work effectively.</p>"
+          }
+        },
+        "faq_item_4pHAKh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will I need maintenance sessions?",
+            "answer": "<p>Some clients choose occasional maintenance treatments once or twice per year, especially in hormonally sensitive areas.</p><p>Your long-term plan is discussed openly so there are no surprises.</p>"
           }
         }
       },
@@ -4347,7 +4382,12 @@
         "faq_item_k9KQgb",
         "faq_item_jNKBDm",
         "faq_item_UWVQCe",
-        "faq_item_JJxdHi"
+        "faq_item_JJxdHi",
+        "faq_item_NgkbpJ",
+        "faq_item_C4qTxP",
+        "faq_item_aaTc4h",
+        "faq_item_cYUUPK",
+        "faq_item_4pHAKh"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
