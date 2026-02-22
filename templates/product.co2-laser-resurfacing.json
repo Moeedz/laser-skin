@@ -2044,7 +2044,7 @@
         "heading": "Transparent pricing. Trusted clinical standards.",
         "subtitle": "Everything you need to feel confident booking your consultation.",
         "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>You’ll always know what to expect - care, clarity, and confidence from your very first visit.</p><p>Every treatment plan is built around your consultation, your skin, and your goals – with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
+        "card_description": "<p>CO₂ resurfacing is carefully planned and medically delivered with structured aftercare.</p><p>From your consultation, you’ll understand:</p><p>• Your appropriate treatment depth</p><p>• Expected downtime</p><p>• Recovery timeline</p><p>• Long-term collagen benefits</p><p>Every resurfacing treatment is built around safety, clarity, and realistic outcomes with no pressure and no hidden surprises.</p><p>We prioritise controlled results over aggressive treatments.</p>",
         "section_bg": "#fbe8dc",
         "show_texture": true,
         "texture_opacity": 80,
@@ -2173,64 +2173,71 @@
         "faq_item_HrxNLf": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the treatment painful?",
-            "answer": "<p>We use a powerful topical anaesthetic cream applied 45 minutes before your procedure to ensure maximum comfort. Most clients describe the sensation as a prickling heat, which is very manageable.</p>"
+            "question": "Is CO₂ laser resurfacing painful?",
+            "answer": "<p>A topical anaesthetic is applied before treatment to minimise discomfort. Most clients describe the sensation as heat and pressure rather than sharp pain.</p><p>Treatment intensity can be adjusted depending on your goals and downtime tolerance.</p>"
           }
         },
         "faq_item_ddfEcQ": {
           "type": "faq_item",
           "settings": {
-            "question": "How many sessions will I need?",
-            "answer": "<p>The number of sessions varies depending on your individual needs and goals. Most clients see optimal results after 3-6 sessions, spaced 4-6 weeks apart. During your consultation, we'll create a personalized treatment plan tailored to you.</p>"
+            "question": "What level of downtime should I expect?",
+            "answer": "<p>Downtime depends on treatment intensity:</p><p>• Light resurfacing: 3–5 days redness and mild peeling</p><p>• Moderate resurfacing: 5–7 days redness and flaking</p><p>• Deep resurfacing: 7–10+ days visible peeling and recovery</p><p>We tailor depth based on your goals and your ability to accommodate downtime.</p>"
           }
         },
         "faq_item_cYExH8": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I wear makeup afterward?",
-            "answer": "<p>We recommend avoiding makeup for at least 24 hours after treatment to allow your skin to breathe and heal properly. After this period, you can resume your normal skincare and makeup routine.</p>"
+            "question": "How many sesisons will I need?",
+            "answer": "<p>Many clients achieve significant improvement from one well-planned session.</p><p>However, deeper scarring or advanced ageing concerns may require a structured treatment plan.</p><p>Your consultation determines the correct approach.</p>"
           }
         },
         "faq_item_UbaFJR": {
           "type": "faq_item",
           "settings": {
-            "question": "I'm unsure if the treatment is right for me, what shall I do?",
-            "answer": "<p>We offer general consultations at no cost. Just fill out the enquiry form and let us know or click skin consultation in the menu</p>"
+            "question": "When will I see results?",
+            "answer": "<p>Initial smoothing appears once healing completes.</p><p>Collagen remodelling continues for 8–12 weeks after treatment, with progressive improvements in texture, tone, and firmness.</p>"
           }
         },
         "faq_item_qJVU4c": {
           "type": "faq_item",
           "settings": {
-            "question": "Is it safe for my skin type?",
-            "answer": "<p>CO2 laser is incredibly effective, but it requires caution on darker skin tones (Fitzpatrick 4-6) due to the risk of pigmentation changes. We require a mandatory consultation and patch test for <em>every</em> client to ensure your safety before we proceed.</p>"
+            "question": "Is CO₂ resurfacing safe for my skin type?",
+            "answer": "<p>CO₂ is best suited for lighter to medium skin tones.</p><p>A full assessment is carried out before treatment to ensure suitability and minimise risks.</p><p>We never proceed without confirming safety.</p>"
           }
         },
         "faq_item_yVNnp8": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you have finance options?",
-            "answer": "<p>Yes, we offer flexible finance options through Klarna. Please enquire to learn more.</p>"
+            "question": "Can I wear makeup after treatment?",
+            "answer": "<p>Makeup can usually be applied once the skin surface has fully healed, typically 5–7 days depending on depth.</p><p>Aftercare guidance is provided to ensure optimal healing.</p>"
           }
         },
         "faq_item_Ek4P3d": {
           "type": "faq_item",
           "settings": {
             "question": "What is the difference between \"Full Face\" and \"Half Face\"?",
-            "answer": "<p><strong>Full Face (£300):</strong> Covers the entire face, including forehead, cheeks, nose, chin, and around the mouth.</p><p><strong>Half Face (£175):</strong> Focuses on a specific problem area, typically the cheeks and jawline (for acne scarring) or the lower face (for smoker’s lines).</p>"
+            "answer": "<p>Full Face treats the entire facial surface.</p><p>Half Face targets a specific area of concern, such as:</p><p>• Lower face</p><p>• Cheeks</p><p>• Perioral lines</p><p>• Forehead</p><p>The approach is customised depending on your primary concern.</p>"
           }
         },
         "faq_item_hcEF7D": {
           "type": "faq_item",
           "settings": {
             "question": "How long do results last?",
-            "answer": "<p>The results are long-lasting. Because the laser stimulates your body's own collagen production, the improvements in skin tightness and texture can last for <strong>several years</strong>. Maintenance sessions once a year are recommended to keep your skin looking its best.</p>"
+            "answer": "<p>CO₂ stimulates deep collagen renewal.</p><p>Results can last several years, depending on:</p><p>• Age</p><p>• Lifestyle</p><p>• Skincare</p><p>• Sun exposure</p><p>Maintenance treatments may be recommended to preserve results.</p>"
           }
         },
         "faq_item_x7jNzt": {
           "type": "faq_item",
           "settings": {
-            "question": "Location & Clinic Details",
-            "answer": "<p><strong>Laser Skin Clinics Wolverhampton</strong><br/>Located at: 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p><p><strong>Parking:</strong> Free private parking available.</p><p></p><h3></h3>"
+            "question": "Who is CO₂ resurfacing best for?",
+            "answer": "<p>CO₂ may be ideal if you have:</p><p>• Acne scarring</p><p>• Deep lines</p><p>• Texture irregularities</p><p>• Sun damage</p><p>• Skin laxity</p><p>It may not be suitable if you require zero downtime or have certain medical contraindications.</p><p></p><h3></h3>"
+          }
+        },
+        "faq_item_QwXbyn": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What happens at my consultation?",
+            "answer": "<p>Your consultation includes:</p><p>• Skin assessment</p><p>• Downtime discussion</p><p>• Depth planning (light, moderate, deep)</p><p>• Clear pricing</p><p>• Aftercare planning</p><p>You’ll leave knowing exactly what recovery involves.</p>"
           }
         }
       },
@@ -2244,7 +2251,8 @@
         "faq_item_yVNnp8",
         "faq_item_Ek4P3d",
         "faq_item_hcEF7D",
-        "faq_item_x7jNzt"
+        "faq_item_x7jNzt",
+        "faq_item_QwXbyn"
       ],
       "name": "FAQ Accordion",
       "settings": {
@@ -2253,9 +2261,9 @@
         "padding_top": 60,
         "padding_bottom": 60,
         "side_padding": 30,
-        "heading": "C02 Laser Skin Resurfacing. Your Questions. Answered",
+        "heading": "C02 Laser Resurfacing. Your Questions. Answered",
         "heading_color": "#1c1c1c",
-        "heading_font_size": 36,
+        "heading_font_size": 24,
         "heading_font_weight": "600",
         "heading_font_style": "normal",
         "heading_alignment": "center",
