@@ -1328,7 +1328,7 @@
         "column_qLUDaT"
       ],
       "custom_css": [
-        ".iic__col-icon, .iic__col-icon img {width: 100px !important; height: 100px !important;}"
+        ".iic__col-icon,.iic__col-icon img {width: 100px !important; height: 100px !important;}"
       ],
       "name": "Icon Info Columns",
       "settings": {
@@ -1343,6 +1343,68 @@
         "accent_color": "#c4956a",
         "divider_color": "#ccc4ba",
         "heading_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "process_timeline_F9qWxL": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_833hxE": {
+          "type": "stage",
+          "settings": {
+            "title": "Sessions 1–2",
+            "points": "Initial ink disruption begins||Surface layers of ink start to break down||Fading may be subtle at this stage"
+          }
+        },
+        "stage_9c3RmL": {
+          "type": "stage",
+          "settings": {
+            "title": "Sessions 3–5",
+            "points": "Visible fading becomes noticeable||Lighter areas of the tattoo respond first||Outline and shading start to soften"
+          }
+        },
+        "stage_9gyVfD": {
+          "type": "stage",
+          "settings": {
+            "title": "Sessions 6–8",
+            "points": "Significant fading across the tattoo||Deeper ink layers continue to fragment||Skin texture remains largely unaffected"
+          }
+        },
+        "stage_wmYepq": {
+          "type": "stage",
+          "settings": {
+            "title": "Sessions 9–12+",
+            "points": "Maximum fading or full removal achieved||Stubborn ink colours may require additional sessions||Skin appears clear with minimal residual marking"
+          }
+        }
+      },
+      "block_order": [
+        "stage_833hxE",
+        "stage_9c3RmL",
+        "stage_9gyVfD",
+        "stage_wmYepq"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "How Fading Progresses Over Time",
+        "sub_heading": "",
+        "body": "<p>Tattoo ink is broken down gradually over multiple sessions. The body's immune system clears fragmented ink particles between treatments, with visible fading building over time.</p>",
+        "timeline_label": "What to expect",
+        "footer_text": "Results depend on ink colour, depth, tattoo age, and individual immune response. Most tattoos require 6–12 sessions spaced 6–8 weeks apart.",
+        "section_bg": "#e5c6bc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "show_body_card": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
         "body_font_size": 16,
         "padding_top": 60,
         "padding_bottom": 60
@@ -2258,6 +2320,7 @@
     "technology_features_A3Rp9A",
     "split_content_6kVFPC",
     "icon_info_columns_c4t8Kg",
+    "process_timeline_F9qWxL",
     "results_testimonials_aAV6Rz",
     "session_pricing_xLx8D9",
     "slideshow_BWEini",
