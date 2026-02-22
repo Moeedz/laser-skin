@@ -2248,7 +2248,7 @@
       ],
       "name": "FAQ Accordion",
       "settings": {
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#ededed",
         "max_width": 1200,
         "padding_top": 60,
         "padding_bottom": 60,
