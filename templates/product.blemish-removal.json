@@ -2048,8 +2048,8 @@
       "settings": {
         "heading": "Clear pricing. Professional standards.",
         "subtitle": "Everything you need to feel confident booking your consultation.",
-        "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
+        "card_title": "What you can expect with blemish removal?",
+        "card_description": "<p>Blemish removal is performed using precise, medically controlled techniques designed to target unwanted lesions while protecting surrounding skin.</p><p>From your consultation, you’ll understand:</p><p>• Whether your lesion is suitable for treatment</p><p>• Expected healing timeline</p><p>• Realistic cosmetic outcome</p><p>• Structured aftercare guidance</p><p>We focus on safe removal, cosmetic precision, and transparent pricing delivered in a professional clinical environment.</p>",
         "section_bg": "#e4dfd9",
         "show_texture": true,
         "texture_opacity": 80,
@@ -2170,57 +2170,57 @@
         "faq_item_i6eLaB": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>Most clients describe the sensation as very mild—similar to a quick \"pin-prick\" or a snap of a rubber band. For sensitive areas, we can apply a topical numbing cream to ensure your complete comfort. The procedure is very quick, often lasting only a few minutes.</p>"
+            "question": "What type of blemishes do you treat?",
+            "answer": "<p>We treat a range of superficial skin lesions including:</p><p>• Skin tags</p><p>• Cherry angiomas</p><p>• Seborrhoeic keratosis</p><p>• Age spots</p><p>• Milia</p><p>• Certain benign moles</p><p>All treatments follow clinical assessment to confirm suitability.</p>"
           }
         },
         "faq_item_Yqi3Jk": {
           "type": "faq_item",
           "settings": {
-            "question": "How many blemishes can be treated in 15 minutes?",
-            "answer": "<p>In a 15-minute blemish-removal session we can remove <strong>multiple small blemishes.</strong></p><p>On average, we can remove <strong>between 5 and 15 blemishes</strong> in a single session. The exact number depends on:</p><p>The <strong>size</strong> of each blemish<br/><br/>The <strong>type</strong> of blemish (skin tags, milia, cherry angiomas, age spots, etc.)<br/><br/>Their <strong>location</strong> on the body<br/><br/>How quickly each one responds to treatment<br/><br/>Very small blemishes can often be treated quickly, while larger or more stubborn ones may take longer and reduce the total number that can be treated in one session.</p>"
+            "question": "Is the treatment painful?",
+            "answer": "<p>Most clients describe the sensation as brief and manageable.</p><p>Treatment is fast and highly targeted, typically lasting only minutes depending on the number of lesions.</p>"
           }
         },
         "faq_item_VaKqwp": {
           "type": "faq_item",
           "settings": {
-            "question": "How long is the downtime?",
-            "answer": "<p>here is minimal downtime with our laser and plasma treatments. You may experience a small scab or slight redness in the treated area for 5–10 days. You can typically return to work and wear makeup immediately after your appointment.</p>"
+            "question": "How many blemishes can be treated in one session?",
+            "answer": "<p>Multiple blemishes can often be treated within a short appointment.</p><p>Your consultation determines safe treatment limits for your skin type and area.</p>"
           }
         },
         "faq_item_iAWpyp": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the results permanent?",
-            "answer": "<p>Yes. Once a specific skin tag, mole, wart, or broken vein is removed, it is gone for good. While we cannot prevent <em>new</em> blemishes from forming elsewhere on your body due to genetics or aging, the treated lesion will not return.</p>"
+            "question": "Is there downtime?",
+            "answer": "<p>You may experience:</p><p>• Mild redness</p><p>• Small scab formation</p><p>• Temporary darkening</p><p>This is part of the natural healing process and usually settles within 7–14 days.</p>"
           }
         },
         "faq_item_9m6Uie": {
           "type": "faq_item",
           "settings": {
-            "question": "What is your price match guarantee?",
-            "answer": "<p>Yes. We are confident in our expertise and fair pricing. If you find another registered clinic offering the same treatment using comparable technology for a lower price, simply show us their quote, and we will match it and give you a £50 voucher. We believe you shouldn't have to choose between quality and cost.</p>"
+            "question": "Will it leave a scar?",
+            "answer": "<p>When performed correctly on suitable lesions, scarring risk is very low.</p><p>Aftercare guidance is provided to support optimal healing.</p>"
           }
         },
         "faq_item_jFay7w": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I be treated on the same day as my appointment?",
-            "answer": "<p>Yes! We know your time is valuable. In most cases, we can perform your consultation and treatment in the same appointment. You can walk in with your blemish and walk out without it.</p>"
+            "question": "Are results permanent?",
+            "answer": "<p>Once successfully removed, most benign lesions do not return.</p><p>However, new lesions can develop over time due to genetics, age, or sun exposure.</p>"
           }
         },
         "faq_item_TT4CYc": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you treat blemishes on sensitive areas?",
-            "answer": "<p>Yes. Our precision technology allows us to safely treat delicate areas, including eyelids (for milia/tags), underarms, and the bikini line. Because our method uses targeted energy, there is no risk to the surrounding skin or eyes.</p>"
+            "question": "Can I be treated on the same day as my consultation?",
+            "answer": "<p>In many cases, yes — following proper assessment.</p><p>Certain lesions may require additional checks before treatment.</p>"
           }
         },
         "faq_item_iiVhY9": {
           "type": "faq_item",
           "settings": {
-            "question": "What specific conditions do you treat?",
-            "answer": "<p>We specialize in the removal of:</p><ul><li><strong>Skin Tags</strong> (Achrocordon)</li><li><strong>Milia</strong> (Milk Spots)</li><li><strong>Spider Veins</strong> (Telangiectasia) & Blood Spots (Campbell de Morgan spots)</li><li><strong>Moles</strong> (subject to GP check)</li><li><strong>Warts & Verrucas</strong></li><li><strong>Age Spots</strong> (Solar Lentigines) & Sun Damage</li></ul>"
+            "question": "Do you treat sensitive areas?",
+            "answer": "<p>Yes. We regularly treat areas such as:</p><p>• Face</p><p>• Neck</p><p>• Décolletage</p><p>• Underarms</p><p>Each area is assessed carefully to ensure safe treatment.</p>"
           }
         }
       },
@@ -2236,12 +2236,12 @@
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#e0e0e0",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Blemish Removal. Your Questions, Answered.",
         "heading_color": "#000000",
         "heading_font_size": 24,
         "heading_font_weight": "400",
