@@ -1599,6 +1599,18 @@
             "text": "Improves skin quality at a cellular level"
           }
         },
+        "left_point_B4pyE3": {
+          "type": "left_point",
+          "settings": {
+            "text": "Improves skin quality at a cellular level"
+          }
+        },
+        "left_point_Tt8Aq9": {
+          "type": "left_point",
+          "settings": {
+            "text": "Improves skin quality at a cellular level"
+          }
+        },
         "left_point_3VyEEn": {
           "type": "left_point",
           "settings": {
@@ -1627,6 +1639,8 @@
       "block_order": [
         "left_point_EAf6pi",
         "left_point_GjFKYq",
+        "left_point_B4pyE3",
+        "left_point_Tt8Aq9",
         "left_point_3VyEEn",
         "right_point_JdCVK4",
         "right_point_RxC8Ej",
@@ -1644,7 +1658,7 @@
         "callout_text": "",
         "enable_left": true,
         "left_heading": "What results can I expect?",
-        "left_subtitle": "NCTF® revitalisation benefits:",
+        "left_subtitle": "Polynucleotides",
         "enable_right": true,
         "right_heading": "Common treatment areas",
         "right_subtitle": "NCTF® revitalisation can be at:",
