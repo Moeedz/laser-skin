@@ -1620,19 +1620,31 @@
         "right_point_JdCVK4": {
           "type": "right_point",
           "settings": {
-            "text": "Forehead lines"
+            "text": "Restores lost volume"
           }
         },
         "right_point_RxC8Ej": {
           "type": "right_point",
           "settings": {
-            "text": "Eye contour (crow's feet)"
+            "text": "Defines facial contours"
           }
         },
         "right_point_8TkbEQ": {
           "type": "right_point",
           "settings": {
-            "text": "Neck and décolleté"
+            "text": "Immediate visible change"
+          }
+        },
+        "right_point_AEHdPb": {
+          "type": "right_point",
+          "settings": {
+            "text": "Adds support to specific facial areas"
+          }
+        },
+        "right_point_ErVhJT": {
+          "type": "right_point",
+          "settings": {
+            "text": "Immediate visible change"
           }
         }
       },
@@ -1644,7 +1656,9 @@
         "left_point_3VyEEn",
         "right_point_JdCVK4",
         "right_point_RxC8Ej",
-        "right_point_8TkbEQ"
+        "right_point_8TkbEQ",
+        "right_point_AEHdPb",
+        "right_point_ErVhJT"
       ],
       "name": "Split Content",
       "settings": {
