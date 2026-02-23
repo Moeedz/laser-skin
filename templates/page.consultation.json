@@ -877,14 +877,32 @@
         "review_UUNkzq": {
           "type": "review",
           "settings": {
-            "quote": "<p>I genuinely cannot recommend Laser Skin Clinics enough.</p><p>From the moment I arrived, I was greeted by the lovely Angel. Friendly, professional and very informative from the get go!</p>",
-            "author": "Thank you :) x",
+            "quote": "<p>Maxine was absolutely amazing. She made me feel so welcome and was incredibly solution focused towards my needs. She offered a range of options and her expertise was out of this world. One of the best clinics I've ever been to.</p>",
+            "author": "Anisha",
+            "image": "shopify://shop_images/4.png"
+          }
+        },
+        "review_WnkEN8": {
+          "type": "review",
+          "settings": {
+            "quote": "<p>I was honestly a bit nervous about trying laser treatments, but from the first appointment I felt completely at ease. Everything was explained clearly, I never felt rushed, and Maxine checked in constantly to make sure I was comfortable. The peace of mind I've gained has been worth it. I just wish I'd started sooner.</p>",
+            "author": "Dalia",
+            "image": "shopify://shop_images/4.png"
+          }
+        },
+        "review_P7Wkxz": {
+          "type": "review",
+          "settings": {
+            "quote": "<p>Highly recommend Maxine. She goes above and beyond to make you feel comfortable and explains everything in detail about the services she provides. I had laser done on my nose for rosacea and the results are amazing, it has made me feel so much more confident within myself. I will continue my laser journey with Maxine and would not recommend a better lady for the job.</p>",
+            "author": "Joanna",
             "image": "shopify://shop_images/4.png"
           }
         }
       },
       "block_order": [
-        "review_UUNkzq"
+        "review_UUNkzq",
+        "review_WnkEN8",
+        "review_P7Wkxz"
       ],
       "name": "Featured Review",
       "settings": {
