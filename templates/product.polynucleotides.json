@@ -1672,7 +1672,7 @@
         "heading": "Is Polynucleotides Right For You?",
         "subtitle": "Polynucleotides are ideal for patients who want skin improvement that looks natural, refined, and gradual.",
         "footer_text": "During your consultation, we will assess your skin carefully and advise honestly on whether polynucleotides are appropriate for your goals.",
-        "show_card_wrap": true,
+        "show_card_wrap": false,
         "card_bg": "#efefef",
         "card_border": "#d8cfc5",
         "callout_title": "",
