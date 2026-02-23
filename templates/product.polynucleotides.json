@@ -1635,9 +1635,9 @@
       "name": "Split Content",
       "settings": {
         "heading": "Polynucleotides vs Dermal Filler",
-        "subtitle": "Two different approaches. Two different outcomes.Short intro line:Both treatments improve the appearance of ageing skin — but they work in very different ways.",
+        "subtitle": "Two different approaches. Two different outcomes.<br><br>\n\nBoth treatments improve the appearance of ageing skin but they work in very different ways.",
         "footer_text": "RF fits easily into ongoing skin maintenance plans.",
-        "show_card_wrap": false,
+        "show_card_wrap": true,
         "card_bg": "#f5efe9",
         "card_border": "#d8cfc5",
         "callout_title": "",
