@@ -265,21 +265,24 @@
           "type": "step",
           "settings": {
             "title": "Professional Skin Assessment",
-            "description": "Using advanced diagnostic technology, we assess your skin beneath the surface to identify concerns such as:<br><br>\n\n• Pigmentation and sun damage<br>\n• Redness and vascular visibility<br>\n• Texture irregularities<br>\n• Early signs of ageing<br><br>\n\nThis allows us to understand not just what you see but what’s developing underneath."
+            "description": "Using advanced diagnostic technology, we assess your skin beneath the surface to identify concerns such as:<br><br>\n\n• Pigmentation and sun damage<br>\n• Redness and vascular visibility<br>\n• Texture irregularities<br>\n• Early signs of ageing<br><br>\n\nThis allows us to understand not just what you see but what’s developing underneath.",
+            "image": "shopify://shop_images/1_0aab7765-7f71-4a8d-bbe9-267ba19c8545.png"
           }
         },
         "step_kHDTP9": {
           "type": "step",
           "settings": {
             "title": "Discussion of Concerns & Goals",
-            "description": "We take time to understand:<br><br>\n\n• What’s currently bothering you<br>\n• What treatments you’ve tried before<br>\n• What kind of results feel natural and right for you<br>\n<br>\nThis ensures your recommendations are tailored and never generic."
+            "description": "We take time to understand:<br><br>\n\n• What’s currently bothering you<br>\n• What treatments you’ve tried before<br>\n• What kind of results feel natural and right for you<br>\n<br>\nThis ensures your recommendations are tailored and never generic.",
+            "image": "shopify://shop_images/2_eafed3bf-fa77-4142-a101-ade099215dc9.png"
           }
         },
         "step_7CGQ86": {
           "type": "step",
           "settings": {
             "title": "Personalised Recommendations",
-            "description": "Based on your assessment, we’ll explain:<br><br>\n\n• Which treatments would genuinely benefit you<br>\n• What results you can realistically expect<br>\n• How many sessions may be required<br>\n• Estimated investment and timeline<br><br>\n\nEverything is explained clearly, with no jargon and no pressure."
+            "description": "Based on your assessment, we’ll explain:<br><br>\n\n• Which treatments would genuinely benefit you<br>\n• What results you can realistically expect<br>\n• How many sessions may be required<br>\n• Estimated investment and timeline<br><br>\n\nEverything is explained clearly, with no jargon and no pressure.",
+            "image": "shopify://shop_images/3_6edf6f98-caa5-4e8a-a62f-29a97cc507fa.png"
           }
         },
         "step_dxDYTN": {
@@ -288,34 +291,13 @@
             "title": "Clear Guidance, No Obligation",
             "description": "You’ll receive honest, professional advice with absolutely no obligation to proceed.<br><br>\n\nWe will never recommend treatments you don’t need.<br><br>\n\nYou are free to take time to consider your options."
           }
-        },
-        "image_QT884n": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/1_0aab7765-7f71-4a8d-bbe9-267ba19c8545.png"
-          }
-        },
-        "image_AqCiPw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2_eafed3bf-fa77-4142-a101-ade099215dc9.png"
-          }
-        },
-        "image_XabErk": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/3_6edf6f98-caa5-4e8a-a62f-29a97cc507fa.png"
-          }
         }
       },
       "block_order": [
         "step_RahyJX",
         "step_kHDTP9",
         "step_7CGQ86",
-        "step_dxDYTN",
-        "image_QT884n",
-        "image_AqCiPw",
-        "image_XabErk"
+        "step_dxDYTN"
       ],
       "custom_css": [
         ".ans__image img {aspect-ratio: unset !important;}",
