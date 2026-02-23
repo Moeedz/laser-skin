@@ -1584,82 +1584,82 @@
         "padding_bottom": 60
       }
     },
-    "approach_comparison_PFyWnx": {
-      "type": "approach-comparison",
+    "split_content_pxXzzN": {
+      "type": "split-content",
       "blocks": {
-        "card_TBVgjT": {
-          "type": "card",
+        "left_point_EAf6pi": {
+          "type": "left_point",
           "settings": {
-            "card_style": "standard",
-            "label": "INDUSTRY STANDARD APPROACH",
-            "title": "Session-based pricing",
-            "item_1_icon": "grid",
-            "item_1_text": "Pre-set session bundles",
-            "item_2_icon": "clock",
-            "item_2_text": "Same number of sessions for everyone",
-            "item_3_icon": "coins",
-            "item_3_text": "Extra sessions often needed later",
-            "item_4_icon": "none",
-            "item_4_text": "Total cost can be hard to predict",
-            "item_5_icon": "none",
-            "item_5_text": "",
-            "item_6_icon": "none",
-            "item_6_text": ""
+            "text": "Stronger hydration and elasticity"
           }
         },
-        "card_WxHqaY": {
-          "type": "card",
+        "left_point_GjFKYq": {
+          "type": "left_point",
           "settings": {
-            "card_style": "highlight",
-            "label": "OUR APPROACH AT LASER SKIN CLINICS®",
-            "title": "Consultation-led treatment planning",
-            "item_1_icon": "search_person",
-            "item_1_text": "We assess your skin and hair before recommending a plan",
-            "item_2_icon": "clipboard",
-            "item_2_text": "Session numbers tailored to your growth pattern",
-            "item_3_icon": "pound",
-            "item_3_text": "Clear pricing agreed upfront",
-            "item_4_icon": "chart",
-            "item_4_text": "Reviewed and adjusted as your results progress",
-            "item_5_icon": "none",
-            "item_5_text": "",
-            "item_6_icon": "none",
-            "item_6_text": ""
+            "text": "Improved skin texture and tone"
+          }
+        },
+        "left_point_3VyEEn": {
+          "type": "left_point",
+          "settings": {
+            "text": "Brighter, more youthful appearance"
+          }
+        },
+        "right_point_JdCVK4": {
+          "type": "right_point",
+          "settings": {
+            "text": "Forehead lines"
+          }
+        },
+        "right_point_RxC8Ej": {
+          "type": "right_point",
+          "settings": {
+            "text": "Eye contour (crow's feet)"
+          }
+        },
+        "right_point_8TkbEQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "Neck and décolleté"
           }
         }
       },
       "block_order": [
-        "card_TBVgjT",
-        "card_WxHqaY"
+        "left_point_EAf6pi",
+        "left_point_GjFKYq",
+        "left_point_3VyEEn",
+        "right_point_JdCVK4",
+        "right_point_RxC8Ej",
+        "right_point_8TkbEQ"
       ],
-      "name": "Approach Comparison",
+      "name": "Split Content",
       "settings": {
-        "heading": "A smarter way to plan laser hair removal",
-        "subtitle": "Why our consultation-led approach delivers more predictable outcomes.",
-        "section_bg": "#eee9e2",
-        "heading_color": "#3a3a3a",
-        "text_color": "#666666",
-        "accent_color": "#c8962e",
-        "standard_bg": "#f5f3f0",
-        "standard_border": "#e0ddd8",
-        "standard_header_bg": "#eceae6",
-        "standard_label_color": "#888888",
-        "standard_icon_color": "#999999",
-        "highlight_bg": "#f5ede0",
-        "highlight_border": "#d4c4a8",
-        "highlight_header_bg": "#efe3d0",
-        "heading_font_size": 42,
-        "card_title_font_size": 24,
-        "body_font_size": 16,
-        "button_label": "Book your consultation",
-        "button_link": "",
-        "button_open_new_tab": false,
-        "button_bg": "#4a4a4a",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#333333",
-        "cards_gap": 28,
-        "padding_top": 72,
-        "padding_bottom": 72
+        "heading": "Aftercare & Downtime",
+        "subtitle": "Radio Frequency requires minimal aftercare and no downtime.",
+        "footer_text": "RF fits easily into ongoing skin maintenance plans.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "What results can I expect?",
+        "left_subtitle": "NCTF® revitalisation benefits:",
+        "enable_right": true,
+        "right_heading": "Common treatment areas",
+        "right_subtitle": "NCTF® revitalisation can be at:",
+        "section_bg": "#e4ddd6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
       }
     },
     "treatment_areas_zt7ywm": {
@@ -2535,7 +2535,7 @@
     "slideshow_9JdM6g",
     "slideshow_tdxwRM",
     "concern_grid_HJh4jY",
-    "approach_comparison_PFyWnx",
+    "split_content_pxXzzN",
     "treatment_areas_zt7ywm",
     "slideshow_BHyrN9",
     "process_cards_LbK99L",
