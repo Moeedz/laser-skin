@@ -2198,42 +2198,63 @@
           "type": "faq_item",
           "settings": {
             "question": "How is RF Micro different from regular microneedling?",
-            "answer": "<p>Traditional microneedling uses tiny needles to create controlled micro-injuries in the skin. This stimulates collagen and elastin production naturally.</p><p>RF microneedling does the same thing, but also delivers radiofrequency heat energy deep into the skin through the needles. This added heat significantly boosts skin tightening and collagen remodeling.</p><p>In simple terms:</p><p>• Microneedling = collagen stimulation</p><p>• RF microneedling = collagen stimulation + skin tightening</p>"
+            "answer": "<p>RF microneedling combines precision microneedling with radiofrequency energy delivered beneath the surface of the skin. While traditional microneedling stimulates surface collagen, RF allows controlled energy delivery into the dermis for deeper, more targeted structural remodelling.</p>"
           }
         },
         "faq_item_qKWjFm": {
           "type": "faq_item",
           "settings": {
-            "question": "Which treatment is stronger?",
-            "answer": "<p>RF microneedling is the more advanced and powerful treatment.</p><p>Because it combines mechanical needling with radiofrequency heat, it can treat deeper concerns such as:</p><p>• Skin laxity</p><p>• Deeper acne scarring</p><p>• More advanced wrinkles</p><p>• Loose jawline or lower face</p><p>Standard microneedling is excellent for:</p><p>• Early signs of ageing</p><p>• Mild acne scarring</p><p>• Enlarged pores</p><p>• Improving overall skin texture and skin tightening</p>"
+            "question": "Does RF Microneedling hurt?",
+            "answer": "<p>Most clients describe the treatment as tolerable. A topical numbing cream is applied beforehand to maximise comfort. You may feel warmth or pressure during treatment, but discomfort is typically mild and short-lived.</p>"
           }
         },
         "faq_item_3DFpRW": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>Most clients describe it as <strong>uncomfortable rather than painful</strong>.</p><p>A strong numbing cream is applied beforehand, and sensations are usually felt as heat or pressure rather than sharp pain.</p>"
+            "question": "What does the skin look like immediately after treatment?",
+            "answer": "<p>The skin may appear mildly red or warm, similar to light sun exposure. Redness usually settles within 24–48 hours depending on treatment depth.</p>"
           }
         },
         "faq_item_NqGWCf": {
           "type": "faq_item",
           "settings": {
-            "question": "How long does a session last?",
-            "answer": "<p>A typical session lasts <strong>45–60 minutes</strong>, </p>"
+            "question": "How many sessions do I need?",
+            "answer": "<p>Most clients benefit from a course of 3–6 sessions spaced 4–6 weeks apart. The exact number depends on your skin condition, goals, and treatment depth.</p>"
           }
         },
         "faq_item_zLy9i4": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you offer interest free finance?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay</p>"
+            "question": "When will I see results?",
+            "answer": "<p>Early improvements in skin texture may be visible within 2–3 weeks. Collagen production continues to increase over several months, with progressive improvements in firmness and tone.</p>"
           }
         },
         "faq_item_fLPNMj": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the treatment safe for all skin types?",
-            "answer": "<p>Yes. RF Micro is considered safe for <strong>all skin tones</strong>, including darker skin, when performed by trained professionals.</p>"
+            "question": "How long do results last?",
+            "answer": "<p>Results can last many months, especially when delivered as a structured course. Maintenance treatments may be recommended depending on your skin goals and ageing profile.</p>"
+          }
+        },
+        "faq_item_B6efyA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is there downtime?",
+            "answer": "<p>Most clients experience mild social downtime of 24–48 hours. Light dryness or flaking may occur in the days following treatment.</p>"
+          }
+        },
+        "faq_item_3Ark46": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is RF Microneedling safe for all skin types?",
+            "answer": "<p>RF microneedling is suitable for most skin types when assessed and delivered correctly. Suitability is confirmed during your consultation and medical review.</p>"
+          }
+        },
+        "faq_item_LxcCwt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who should avoid RF Microneedling?",
+            "answer": "<p>Treatment may not be suitable if you:</p><p>• Are pregnant or breastfeeding</p><p>• Have active skin infections or open wounds</p><p>• Have certain implanted electronic devices</p><p>• Have a history of abnormal scarring (assessed individually)</p>"
           }
         }
       },
@@ -2243,7 +2264,10 @@
         "faq_item_3DFpRW",
         "faq_item_NqGWCf",
         "faq_item_zLy9i4",
-        "faq_item_fLPNMj"
+        "faq_item_fLPNMj",
+        "faq_item_B6efyA",
+        "faq_item_3Ark46",
+        "faq_item_LxcCwt"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
@@ -2252,7 +2276,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Your RF Microneedling Questions. Answered",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
