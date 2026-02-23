@@ -1231,6 +1231,98 @@
         "padding_bottom": 60
       }
     },
+    "split_content_t7f7LU": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_fAiXTY": {
+          "type": "left_point",
+          "settings": {
+            "text": "Red or purple stretch marks (newer, more responsive)"
+          }
+        },
+        "left_point_6QmBbb": {
+          "type": "left_point",
+          "settings": {
+            "text": "White or silver stretch marks (older, still treatable)"
+          }
+        },
+        "left_point_iqFfxT": {
+          "type": "left_point",
+          "settings": {
+            "text": "Post-pregnancy stretch marks on the abdomen or hips"
+          }
+        },
+        "left_point_MFVKGT": {
+          "type": "left_point",
+          "settings": {
+            "text": "Stretch marks from weight gain or loss"
+          }
+        },
+        "left_point_hK4JgL": {
+          "type": "left_point",
+          "settings": {
+            "text": "A commitment to a structured course of treatments"
+          }
+        },
+        "right_point_79inTg": {
+          "type": "right_point",
+          "settings": {
+            "text": "You are expecting complete removal of stretch marks"
+          }
+        },
+        "right_point_TtbpW7": {
+          "type": "right_point",
+          "settings": {
+            "text": "You are pregnant or planning to become pregnant soon"
+          }
+        },
+        "right_point_8g9NLB": {
+          "type": "right_point",
+          "settings": {
+            "text": "You have unrealistic expectations about outcomes"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_fAiXTY",
+        "left_point_6QmBbb",
+        "left_point_iqFfxT",
+        "left_point_MFVKGT",
+        "left_point_hK4JgL",
+        "right_point_79inTg",
+        "right_point_TtbpW7",
+        "right_point_8g9NLB"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Is Stretch Mark Treatment Right for You?",
+        "subtitle": "Stretch mark treatments work by stimulating collagen beneath the skin's surface. Results depend on the age, colour, and depth of the stretch marks — assessed during your consultation.",
+        "footer_text": "Stretch mark treatment focuses on significant visible improvement, not complete removal. Setting realistic expectations is an important part of your consultation.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "Treatment May Help If You Have",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "May Not Be Suitable If",
+        "right_subtitle": "",
+        "section_bg": "#f8e5da",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
     "slideshow_ReeVhx": {
       "type": "slideshow",
       "blocks": {
@@ -1953,6 +2045,7 @@
     "text_image_text_W7rUqE",
     "slideshow_g3DFEm",
     "info_hero_PtfX6m",
+    "split_content_t7f7LU",
     "slideshow_ReeVhx",
     "process_timeline_mQbYkj",
     "text_image_text_mrjcA3",
