@@ -979,8 +979,8 @@
         "button_bg_hover": "#b08d66",
         "trust_bar_bg": "#fae2dd",
         "trust_bar_text_color": "#1c1c1c",
-        "trust_icon_color": "#1c1c1c",
-        "trust_star_color": "#c8962e",
+        "trust_icon_color": "#c8962e",
+        "trust_star_color": "#1c1c1c",
         "content_max_width": 650
       }
     },
