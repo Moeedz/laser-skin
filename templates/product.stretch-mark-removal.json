@@ -1733,7 +1733,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "Thousands of happy clients"
           }
         },
         "trust_point_bHc7mm": {
@@ -1763,7 +1763,7 @@
       "settings": {
         "heading": "Clear pricing. Professional standards.",
         "subtitle": "Everything you need to feel confident booking your consultation.",
-        "card_title": "What you can expect at Laser Skin Clinics",
+        "card_title": "What you can expect with Scar & Stretch Mark Treatment",
         "card_description": "<p>Scar and stretch mark treatments are carefully planned and clinically delivered using advanced resurfacing and regenerative technologies.</p><p>From your consultation, you’ll understand:</p><p>• The depth and type of scarring being treated</p><p>• Which technology is most appropriate (CO₂, RF, or combination)</p><p>• Expected downtime</p><p>• Number of sessions recommended</p><p>• Realistic improvement outcomes</p><p><br/>Every treatment plan is tailored to your skin type, scar age, and location with clarity and no pressure.</p><p>We focus on visible improvement and structural regeneration, not unrealistic promises.</p>",
         "section_bg": "#fae7db",
         "show_texture": true,
