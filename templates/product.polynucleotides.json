@@ -1617,6 +1617,12 @@
             "text": "Want to improve overall skin quality, not just specific lines"
           }
         },
+        "left_point_bC66K6": {
+          "type": "left_point",
+          "settings": {
+            "text": "Value long-term skin health over quick fixes"
+          }
+        },
         "right_point_JdCVK4": {
           "type": "right_point",
           "settings": {
@@ -1654,6 +1660,7 @@
         "left_point_B4pyE3",
         "left_point_Tt8Aq9",
         "left_point_3VyEEn",
+        "left_point_bC66K6",
         "right_point_JdCVK4",
         "right_point_RxC8Ej",
         "right_point_8TkbEQ",
