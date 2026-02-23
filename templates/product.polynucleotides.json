@@ -1688,7 +1688,7 @@
         "texture_opacity": 80,
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
+        "accent_color": "#efefef",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
