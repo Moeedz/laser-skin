@@ -1,6 +1,6 @@
 {% style %}
   /* ==========================================================================
-     Analysis Steps Section
+     Analysis Steps Section — Inline Image Per Step
      ========================================================================== */
 
   .ans {
@@ -45,18 +45,18 @@
     line-height: 1.6; color: var(--text-color); margin: 0 auto; max-width: 620px;
   }
 
-  /* Main layout: steps left, images right */
-  .ans__layout {
+  /* Steps list */
+  .ans__steps { display: flex; flex-direction: column; gap: 36px; }
+
+  /* Each step row: text + image side by side */
+  .ans__step-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
+    gap: 40px;
+    align-items: center;
   }
 
-  /* Steps */
-  .ans__steps { display: flex; flex-direction: column; gap: 28px; }
-
-  .ans__step {
+  .ans__step-text {
     display: flex; align-items: flex-start; gap: 18px;
   }
 
@@ -82,24 +82,25 @@
     color: var(--text-color); margin: 0;
   }
 
-  /* Images stack */
-  .ans__images {
-    display: flex; flex-direction: column; gap: 14px;
-  }
-
-  .ans__image {
+  /* Step image */
+  .ans__step-image {
     width: 100%; border-radius: 10px; overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
 
-  .ans__image img {
+  .ans__step-image img {
     width: 100%; height: auto; display: block; object-fit: cover;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* No image — text spans full width */
+  .ans__step-row--no-image {
+    grid-template-columns: 1fr;
   }
 
   /* Footer quote */
   .ans__footer {
-    margin-top: 24px; text-align: right;
+    margin-top: 32px; text-align: right;
   }
 
   .ans__footer-text {
@@ -115,12 +116,18 @@
   }
   [data-ans-animate].is-visible { opacity: 1; transform: translateY(0); }
 
-  /* Responsive */
+  /* Responsive — Tablet */
+  @media screen and (max-width: 900px) {
+    .ans__step-row { gap: 28px; }
+    .ans__step-image img { aspect-ratio: 4 / 3; }
+  }
+
+  /* Responsive — Mobile */
   @media screen and (max-width: 768px) {
     .ans__container { padding: 0 20px; }
     .ans__heading { font-size: calc(var(--heading-size) * 0.62); }
-    .ans__layout { grid-template-columns: 1fr; gap: 32px; }
-    .ans__images { order: -1; }
+    .ans__step-row { grid-template-columns: 1fr; gap: 16px; }
+    .ans__step-image { order: -1; }
     .ans__footer { text-align: center; }
     .ans__step-num { width: 38px; height: 38px; font-size: 17px; }
   }
@@ -128,12 +135,9 @@
   @media screen and (max-width: 480px) {
     .ans__container { padding: 0 16px; }
     .ans__heading { font-size: calc(var(--heading-size) * 0.52); }
-    .ans__step { gap: 14px; }
+    .ans__step-text { gap: 14px; }
   }
 {% endstyle %}
-
-{% assign step_blocks = section.blocks | where: 'type', 'step' %}
-{% assign image_blocks = section.blocks | where: 'type', 'image' %}
 
 <section
   class="ans"
@@ -164,38 +168,39 @@
       {% endif %}
     </div>
 
-    <div class="ans__layout">
-      <div class="ans__steps">
-        {% for block in step_blocks %}
-          <div class="ans__step" {{ block.shopify_attributes }} data-ans-animate data-delay="{{ forloop.index }}">
-            <div class="ans__step-num">{{ forloop.index }}</div>
-            <div class="ans__step-content">
-              {% if block.settings.title != blank %}
-                <h4 class="ans__step-title">{{ block.settings.title }}</h4>
-              {% endif %}
-              {% if block.settings.description != blank %}
-                <p class="ans__step-desc">{{ block.settings.description }}</p>
-              {% endif %}
+    <div class="ans__steps">
+      {% assign step_index = 0 %}
+      {% for block in section.blocks %}
+        {% if block.type == 'step' %}
+          {% assign step_index = step_index | plus: 1 %}
+          {% assign has_image = false %}
+          {% if block.settings.image != blank %}
+            {% assign has_image = true %}
+          {% endif %}
+          <div class="ans__step-row{% unless has_image %} ans__step-row--no-image{% endunless %}" {{ block.shopify_attributes }} data-ans-animate data-delay="{{ step_index }}">
+            <div class="ans__step-text">
+              <div class="ans__step-num">{{ step_index }}</div>
+              <div class="ans__step-content">
+                {% if block.settings.title != blank %}
+                  <h4 class="ans__step-title">{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="ans__step-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
-
-        {% if section.settings.footer_text != blank %}
-          <div class="ans__footer" data-ans-animate data-delay="{{ step_blocks.size | plus: 1 }}">
-            <p class="ans__footer-text">{{ section.settings.footer_text }}</p>
-          </div>
-        {% endif %}
-      </div>
-
-      {% if image_blocks.size > 0 %}
-        <div class="ans__images" data-ans-animate data-delay="1">
-          {% for block in image_blocks %}
-            {% if block.settings.image != blank %}
-              <div class="ans__image" {{ block.shopify_attributes }}>
+            {% if has_image %}
+              <div class="ans__step-image">
                 {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '400,550,700' }}
               </div>
             {% endif %}
-          {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      {% if section.settings.footer_text != blank %}
+        <div class="ans__footer" data-ans-animate data-delay="{{ step_index | plus: 1 }}">
+          <p class="ans__footer-text">{{ section.settings.footer_text }}</p>
         </div>
       {% endif %}
     </div>
@@ -252,14 +257,8 @@
       "name": "Step",
       "settings": [
         { "type": "text", "id": "title", "label": "Title", "default": "Professional Skin Assessment" },
-        { "type": "textarea", "id": "description", "label": "Description", "default": "Your skin is examined using advanced UV technology to reveal underlying issues like sun damage, pigmentation, and other concerns." }
-      ]
-    },
-    {
-      "type": "image",
-      "name": "Side Image",
-      "settings": [
-        { "type": "image_picker", "id": "image", "label": "Image" }
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Your skin is examined using advanced UV technology to reveal underlying issues like sun damage, pigmentation, and other concerns." },
+        { "type": "image_picker", "id": "image", "label": "Step Image" }
       ]
     }
   ],
@@ -270,10 +269,7 @@
         { "type": "step", "settings": { "title": "Professional Skin Assessment", "description": "Your skin is examined using advanced UV technology to reveal underlying issues like sun damage, pigmentation, and other concerns." } },
         { "type": "step", "settings": { "title": "Discussion of Concerns & Goals", "description": "Together, we discuss your skin concerns, goals, and lifestyle to understand what your skin truly needs." } },
         { "type": "step", "settings": { "title": "Personalised Treatment Plan", "description": "Based on your assessment, you'll receive a tailored skincare treatment plan designed specifically for your skin type and concerns." } },
-        { "type": "step", "settings": { "title": "Clear Guidance, No Obligation", "description": "You'll get straightforward advice and have plenty of time to ask questions. There's absolutely no obligation to book any treatment." } },
-        { "type": "image" },
-        { "type": "image" },
-        { "type": "image" }
+        { "type": "step", "settings": { "title": "Clear Guidance, No Obligation", "description": "You'll get straightforward advice and have plenty of time to ask questions. There's absolutely no obligation to book any treatment." } }
       ]
     }
   ]
