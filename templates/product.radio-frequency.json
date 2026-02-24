@@ -1090,6 +1090,13 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
+            "text": "Suitable for face and body"
+          }
+        },
+        "check_item_FWKhpJ": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
             "text": "No downtime or recovery"
           }
         },
@@ -1134,6 +1141,7 @@
         "check_item_bBFwQm",
         "check_item_aWTUGK",
         "check_item_bDQFF4",
+        "check_item_FWKhpJ",
         "trust_item_A97HgP",
         "trust_item_mV9UHL",
         "trust_item_TMmNCV",
