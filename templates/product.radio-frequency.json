@@ -1840,29 +1840,57 @@
         "faq_item_U4y3Fc": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the treatment suitable for all skin types?",
-            "answer": "<p>Yes. RF is safe for <strong>all skin tones</strong>, as it does not target pigment in the skin.</p>"
+            "question": "Is Radio Frequency suitable for all skin types?",
+            "answer": "<p>Radio Frequency is suitable for most skin types and tones.</p><p>During your consultation, we assess your skin condition, medical history and treatment goals to ensure it is appropriate and safe for you.</p>"
           }
         },
         "faq_item_9jiNwy": {
           "type": "faq_item",
           "settings": {
             "question": "Does the treatment hurt?",
-            "answer": "<p>RF is generally <strong>comfortable and well tolerated</strong>.</p><p>Most clients describe a warm sensation rather than pain. Treatment settings can be adjusted to ensure comfort.</p>"
+            "answer": "<p>Most clients describe the treatment as warm and comfortable.</p><p>You may feel a gentle heating sensation as the energy stimulates the deeper layers of the skin, but it is generally well tolerated.</p>"
           }
         },
         "faq_item_wcyw3c": {
           "type": "faq_item",
           "settings": {
             "question": "When will I see results?",
-            "answer": "<p></p><ul><li>Some tightening may be felt immediately<br/></li><li>Visible results develop gradually over <strong>4–12 weeks</strong> as collagen rebuilds<br/></li><li>Improvements continue for several months after the course</li></ul>"
+            "answer": "<p>Some clients notice a subtle tightening effect shortly after treatment.</p><p>However, the most noticeable improvements develop gradually over several weeks as collagen production increases.</p><p>Results continue improving for up to 12 weeks.</p>"
           }
         },
         "faq_item_ifgJXa": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+            "question": "Is there any downtime?",
+            "answer": "<p>There is minimal to no downtime.</p><p>You may experience slight redness or warmth immediately after treatment, which typically settles within a few hours.</p><p>Most clients return to normal activities the same day.</p>"
+          }
+        },
+        "faq_item_33xQj3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>For optimal results, a course of 3–6 sessions is usually recommended, spaced 3–4 weeks apart.</p><p>Your exact plan will depend on your skin condition and desired outcome.</p>"
+          }
+        },
+        "faq_item_FUQPUE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results vary depending on age, skin condition and lifestyle.</p><p>Many clients maintain results for 6–12 months, with maintenance sessions recommended to support ongoing collagen stimulation.</p>"
+          }
+        },
+        "faq_item_8eVQFq": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can Radio Frequency treat the body as well as the face?",
+            "answer": "<p>Yes.</p><p>Radio Frequency can be used on areas such as the face, jawline, neck, abdomen, arms and thighs to improve firmness and skin quality.</p>"
+          }
+        },
+        "faq_item_ja8AYE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can Radio Frequency be combined with other treatments?",
+            "answer": "<p>Yes.</p><p>Radio Frequency can be incorporated into a structured treatment plan and works particularly well alongside treatments such as:</p><p>• Polynucleotides</p><p>• Microneedling</p><p>• CO₂ Laser</p><p>Your clinician will advise on the safest and most effective combination for your goals.</p>"
           }
         }
       },
@@ -1870,16 +1898,20 @@
         "faq_item_U4y3Fc",
         "faq_item_9jiNwy",
         "faq_item_wcyw3c",
-        "faq_item_ifgJXa"
+        "faq_item_ifgJXa",
+        "faq_item_33xQj3",
+        "faq_item_FUQPUE",
+        "faq_item_8eVQFq",
+        "faq_item_ja8AYE"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#f6ecf4",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Radio Frequency. Your Questions. Answered",
         "heading_color": "#000000",
         "heading_font_size": 24,
         "heading_font_weight": "400",
