@@ -1155,6 +1155,13 @@
             "answer": "<p>We commonly assess:</p><p>• Pigmentation & sun damage</p><p>• Redness & rosacea</p><p>• Acne & congestion</p><p>• Texture irregularities</p><p>• Early signs of ageing</p><p>• Under-eye concerns</p><p><br/>If you’re unsure whether we can help, we’ll advise honestly.</p><p>If you’re unsure whether we can help — we’ll advise honestly.</p>"
           }
         },
+        "faq_item_zfXdhP": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What makes your assessment different?",
+            "answer": "<p>We combine:</p><p>• Advanced diagnostic imaging</p><p>• Clinical expertise</p><p>• Honest, tailored recommendations</p><p>We focus on long-term skin health, not quick fixes.</p>"
+          }
+        },
         "faq_item_VCjwkt": {
           "type": "faq_item",
           "settings": {
@@ -1188,6 +1195,7 @@
         "faq_item_A8tT7M",
         "faq_item_GrtaJp",
         "faq_item_YQgQpK",
+        "faq_item_zfXdhP",
         "faq_item_VCjwkt",
         "faq_item_UXezCX",
         "faq_item_XnW4hK",
