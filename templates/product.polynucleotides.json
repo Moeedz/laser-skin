@@ -1982,25 +1982,25 @@
         "result_card_BygMHh": {
           "type": "result_card",
           "settings": {
-            "title": "Glow Reset",
-            "session_info": "1 session · Minimal downtime",
-            "benefit": "Targets sun damage, open pores, and dullness"
+            "title": "Under-Eye Renewal",
+            "session_info": "2 sessions · 8–10 weeks",
+            "benefit": "Improves crepey under-eye texture\nStrengthens thinning skin\nReduces hollow, tired appearance\nEnhances skin resilience"
           }
         },
         "result_card_wQqY3d": {
           "type": "result_card",
           "settings": {
-            "title": "Texture Reset",
-            "session_info": "1 session · Moderate downtime",
-            "benefit": "Improves fine lines, mild acne scars and crepey skin"
+            "title": "Skin Quality Reset",
+            "session_info": "3 sessions · 10–12 weeks",
+            "benefit": "Improves overall skin texture\nRestores hydration and elasticity\nSoftens fine lines naturally\nEnhances skin tone clarity"
           }
         },
         "result_card_U4jtz7": {
           "type": "result_card",
           "settings": {
-            "title": "Scar Reset",
-            "session_info": "1 session · Deeper resurfacing",
-            "benefit": "Treats deep rolling scars and surgical scars."
+            "title": "Delicate Area Repair",
+            "session_info": "2 sessions · 8–12 weeks",
+            "benefit": "Supports fragile or thin skin\nImproves neck and décolleté texture\nStrengthens compromised skin barrier\nPromotes long-term collagen regeneration"
           }
         }
       },
