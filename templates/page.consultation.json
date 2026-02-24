@@ -1066,7 +1066,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Clinically led consultation"
+            "text": "Test patch included"
           }
         },
         "trust_point_YbBJ8t": {
@@ -1080,7 +1080,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "parking",
-            "text": "No obligation to book treatment"
+            "text": "Free parking"
           }
         },
         "trust_point_jxabWC": {
@@ -1105,7 +1105,7 @@
         "heading": "Clinical Expertise. Clear Guidance. No Obligation.",
         "subtitle": "Everything you need to feel confident at Laser Skin Clinics",
         "card_title": "What you can expect from your skin assessment",
-        "card_description": "<p>We believe clarity builds confidence.</p><p>Your consultation is focused entirely on understanding your skin — not selling to you.</p><p>Using advanced diagnostic technology and clinical expertise, we assess your skin beneath the surface and provide honest, tailored recommendations.</p><p>You’ll leave with a clear understanding of:</p><p>• What’s happening within your skin</p><p>• What treatment options are suitable</p><p>• Realistic timelines and expectations</p><p>• Transparent pricing</p><p>With no pressure to proceed.</p>",
+        "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
         "section_bg": "#e4dfd9",
         "show_texture": true,
         "texture_opacity": 80,
