@@ -1294,6 +1294,60 @@
         "padding_bottom": 60
       }
     },
+    "before_after_results_FDfdhq": {
+      "type": "before-after-results",
+      "blocks": {
+        "result_card_zi98Ht": {
+          "type": "result_card",
+          "settings": {
+            "title": "Glow Reset",
+            "session_info": "1 session · Minimal downtime",
+            "benefit": "Targets sun damage, open pores, and dullness"
+          }
+        },
+        "result_card_xB4zbf": {
+          "type": "result_card",
+          "settings": {
+            "title": "Texture Reset",
+            "session_info": "1 session · Moderate downtime",
+            "benefit": "Improves fine lines, mild acne scars and crepey skin"
+          }
+        },
+        "result_card_gqiYFq": {
+          "type": "result_card",
+          "settings": {
+            "title": "Scar Reset",
+            "session_info": "1 session · Deeper resurfacing",
+            "benefit": "Treats deep rolling scars and surgical scars."
+          }
+        }
+      },
+      "block_order": [
+        "result_card_zi98Ht",
+        "result_card_xB4zbf",
+        "result_card_gqiYFq"
+      ],
+      "name": "Before After Results",
+      "settings": {
+        "heading": "<p>Real results, tailored by treatment depth.</p>",
+        "subtitle": "Fractional CO₂ laser treatments adjusted to your skin's needs and tolerance for downtime.",
+        "before_label": "Before",
+        "after_label": "After",
+        "footer_text": "*Individual results may vary.",
+        "section_bg": "#e5dfda",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b09a60",
+        "card_bg": "#f5f0eb",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "info_hero_QPX3Bj": {
       "type": "info-hero",
       "blocks": {
@@ -2027,6 +2081,7 @@
     "product_hero_Nic47e",
     "info_hero_AEPrYc",
     "process_timeline_TLTWFG",
+    "before_after_results_FDfdhq",
     "info_hero_QPX3Bj",
     "split_content_BxrEmk",
     "split_content_w38fcC",
