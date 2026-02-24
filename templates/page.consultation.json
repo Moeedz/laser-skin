@@ -289,7 +289,8 @@
           "type": "step",
           "settings": {
             "title": "Clear Guidance, No Obligation",
-            "description": "You’ll receive honest, professional advice with absolutely no obligation to proceed.<br><br>\n\nWe will never recommend treatments you don’t need.<br><br>\n\nYou are free to take time to consider your options."
+            "description": "You’ll receive honest, professional advice with absolutely no obligation to proceed.<br><br>\n\nWe will never recommend treatments you don’t need.<br><br>\n\nYou are free to take time to consider your options.",
+            "image": "shopify://shop_images/image_70b6396a-f12d-4cd3-827f-be8a1f93363c.png"
           }
         }
       },
