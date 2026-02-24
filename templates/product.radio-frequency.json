@@ -1294,6 +1294,84 @@
         "padding_bottom": 60
       }
     },
+    "split_content_Cq6aDt": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_xKA8EJ": {
+          "type": "left_point",
+          "settings": {
+            "text": "Stronger hydration and elasticity"
+          }
+        },
+        "left_point_PiFAGf": {
+          "type": "left_point",
+          "settings": {
+            "text": "Improved skin texture and tone"
+          }
+        },
+        "left_point_XQq8pY": {
+          "type": "left_point",
+          "settings": {
+            "text": "Brighter, more youthful appearance"
+          }
+        },
+        "right_point_j46TM6": {
+          "type": "right_point",
+          "settings": {
+            "text": "Forehead lines"
+          }
+        },
+        "right_point_jNzL6X": {
+          "type": "right_point",
+          "settings": {
+            "text": "Eye contour (crow's feet)"
+          }
+        },
+        "right_point_HbEerG": {
+          "type": "right_point",
+          "settings": {
+            "text": "Neck and décolleté"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_xKA8EJ",
+        "left_point_PiFAGf",
+        "left_point_XQq8pY",
+        "right_point_j46TM6",
+        "right_point_jNzL6X",
+        "right_point_HbEerG"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "subtitle": "Radio Frequency requires minimal aftercare and no downtime.",
+        "footer_text": "RF fits easily into ongoing skin maintenance plans.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "What results can I expect?",
+        "left_subtitle": "NCTF® revitalisation benefits:",
+        "enable_right": true,
+        "right_heading": "Common treatment areas",
+        "right_subtitle": "NCTF® revitalisation can be at:",
+        "section_bg": "#e4ddd6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
     "info_hero_QPX3Bj": {
       "type": "info-hero",
       "blocks": {
@@ -1881,6 +1959,7 @@
     "product_hero_Nic47e",
     "info_hero_AEPrYc",
     "process_timeline_TLTWFG",
+    "split_content_Cq6aDt",
     "info_hero_QPX3Bj",
     "split_content_w38fcC",
     "session_pricing_hTLbwJ",
