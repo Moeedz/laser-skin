@@ -1983,6 +1983,8 @@
           "type": "result_card",
           "settings": {
             "title": "Under-Eye Renewal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.17.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.17.png",
             "session_info": "2 sessions · 8–10 weeks",
             "benefit": "Improves crepey under-eye texture\nStrengthens thinning skin\nReduces hollow, tired appearance\nEnhances skin resilience"
           }
@@ -1991,6 +1993,8 @@
           "type": "result_card",
           "settings": {
             "title": "Skin Quality Reset",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.35.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.43.png",
             "session_info": "3 sessions · 10–12 weeks",
             "benefit": "Improves overall skin texture\nRestores hydration and elasticity\nSoftens fine lines naturally\nEnhances skin tone clarity"
           }
@@ -1999,6 +2003,8 @@
           "type": "result_card",
           "settings": {
             "title": "Delicate Area",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.21.00.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.54.png",
             "session_info": "2 sessions · 8–12 weeks",
             "benefit": "Supports fragile or thin skin\nImproves neck and décolleté texture\nStrengthens compromised skin barrier\nPromotes long-term collagen regeneration"
           }
