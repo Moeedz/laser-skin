@@ -1301,6 +1301,8 @@
           "type": "result_card",
           "settings": {
             "title": "Jawline Tightening",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.06.38.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.06.49.png",
             "session_info": "4 sessions · 12 weeks",
             "benefit": "Improved jawline definition\nReduction in mild jowling\nSmoother lower face contour"
           }
@@ -1309,6 +1311,8 @@
           "type": "result_card",
           "settings": {
             "title": "Neck Firming",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.07.00.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.07.11.png",
             "session_info": "3 sessions · 9 weeks",
             "benefit": "Improved skin firmness\nReduction in crepey texture\nSmoother appearance of fine lines"
           }
@@ -1317,6 +1321,8 @@
           "type": "result_card",
           "settings": {
             "title": "Abdominal Tightening",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.07.19.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.07.27.png",
             "session_info": "6 sessions · 16 weeks",
             "benefit": "Visible tightening of lax skin\nImproved skin density\nNoticeable firming over time"
           }
@@ -1333,7 +1339,7 @@
         "subtitle": "See how Radio Frequency can improve skin firmness and definition with gradual, natural-looking results.",
         "before_label": "Before",
         "after_label": "After",
-        "footer_text": "*Individual results may vary.",
+        "footer_text": "Individual results vary. A consultation will determine what is achievable based on your skin condition and goals.",
         "section_bg": "#e5dfda",
         "show_texture": true,
         "texture_opacity": 80,
