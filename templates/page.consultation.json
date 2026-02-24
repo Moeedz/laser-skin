@@ -1069,13 +1069,6 @@
             "text": "Test patch included"
           }
         },
-        "trust_point_YbBJ8t": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "parking",
-            "text": "Free parking"
-          }
-        },
         "trust_point_ppiytd": {
           "type": "trust_point",
           "settings": {
@@ -1096,14 +1089,13 @@
         "trust_point_3Y7nF7",
         "trust_point_KjXeKi",
         "trust_point_7Q4teK",
-        "trust_point_YbBJ8t",
         "trust_point_ppiytd",
         "trust_point_jxabWC"
       ],
       "name": "Expectations & Trust",
       "settings": {
         "heading": "Clinical Expertise. Clear Guidance. No Obligation.",
-        "subtitle": "Everything you need to feel confident at Laser Skin Clinics",
+        "subtitle": "Everything you need to feel confident booking your skin assessment.",
         "card_title": "What you can expect from your skin assessment",
         "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
         "section_bg": "#e4dfd9",
