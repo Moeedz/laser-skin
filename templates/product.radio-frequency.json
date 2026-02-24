@@ -1424,19 +1424,31 @@
         "right_point_g8hhzn": {
           "type": "right_point",
           "settings": {
-            "text": "Forehead lines"
+            "text": "Have significant or severe skin laxity that may require surgical intervention"
           }
         },
         "right_point_WwGF7V": {
           "type": "right_point",
           "settings": {
-            "text": "Eye contour (crow's feet)"
+            "text": "Have certain implanted medical devices such as a pacemaker"
+          }
+        },
+        "right_point_PYCPti": {
+          "type": "right_point",
+          "settings": {
+            "text": "Are currently pregnant"
+          }
+        },
+        "right_point_FRwkwD": {
+          "type": "right_point",
+          "settings": {
+            "text": "Have an active skin infection, inflammation, or open wound in the treatment area"
           }
         },
         "right_point_Ftk9m9": {
           "type": "right_point",
           "settings": {
-            "text": "Neck and décolleté"
+            "text": "Are seeking immediate or dramatic lifting results"
           }
         }
       },
@@ -1449,6 +1461,8 @@
         "left_point_8Unj4A",
         "right_point_g8hhzn",
         "right_point_WwGF7V",
+        "right_point_PYCPti",
+        "right_point_FRwkwD",
         "right_point_Ftk9m9"
       ],
       "name": "Split Content",
