@@ -1066,7 +1066,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "test_patch",
-            "text": "Test patch included"
+            "text": "Clinically led consultation"
           }
         },
         "trust_point_YbBJ8t": {
@@ -1080,7 +1080,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "parking",
-            "text": "Free parking"
+            "text": "No obligation to book treatment"
           }
         },
         "trust_point_jxabWC": {
