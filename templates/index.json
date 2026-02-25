@@ -337,14 +337,14 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/Hero_M.png",
+            "image": "shopify://shop_images/E9B97EC9-C788-4977-9CAA-25FD8C5E4457.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
             "button_text": "Tattoo Removal",
             "button_link": "shopify://products/laser-tattoo-removal",
-            "button_style": "solid",
+            "button_style": "link",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
