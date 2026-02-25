@@ -303,14 +303,14 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/C02HM_8a3ef4e8-5075-487e-a380-1da2fea14b86.png",
+            "image": "shopify://shop_images/4DA4A248-6D8C-40D8-B4C8-9949D4A7682C.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
             "button_text": "C02 Laser Resurfacing",
             "button_link": "shopify://products/co2-laser-resurfacing",
-            "button_style": "solid",
+            "button_style": "link",
             "overlay_color": "#000000",
             "overlay_opacity": 10
           }
@@ -320,14 +320,14 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/PolyHM.png",
+            "image": "shopify://shop_images/4C490E3F-A529-4096-A7AB-65E7FDB073A6.png",
             "expand_collection": false,
             "content_position": "place-self-end-start text-start",
             "subheading": "",
             "title": "",
             "button_text": "Polynucleotides",
             "button_link": "shopify://products/polynucleotides",
-            "button_style": "solid",
+            "button_style": "link",
             "overlay_color": "#000000",
             "overlay_opacity": 6
           }
