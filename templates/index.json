@@ -387,7 +387,7 @@
         "heading_qcVXpj": {
           "type": "heading",
           "settings": {
-            "text": "<strong>A Free Skin Analysis, Tailored to You</strong>",
+            "text": "<strong>A free complimentary skin analysis tailored to you</strong>",
             "heading_tag": "h4"
           }
         },
@@ -418,8 +418,8 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
-        "image": "shopify://shop_images/Newest.png",
-        "mobile_image": "shopify://shop_images/2_72f1a0c4-255d-4d4f-b8ce-991926f9585a.png",
+        "image": "shopify://shop_images/72EE5ADE-0973-454D-808A-343C0012391E.png",
+        "mobile_image": "shopify://shop_images/72EE5ADE-0973-454D-808A-343C0012391E.png",
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "sm",
