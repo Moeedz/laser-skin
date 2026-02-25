@@ -293,7 +293,7 @@
             "title": "",
             "button_text": "Laser Hair Removal",
             "button_link": "shopify://products/laser-hair-removal",
-            "button_style": "solid",
+            "button_style": "link",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
