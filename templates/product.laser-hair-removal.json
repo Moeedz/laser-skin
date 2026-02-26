@@ -3195,26 +3195,6 @@
             "tier_6_price": ""
           }
         },
-        "pricing_WzRTqm": {
-          "type": "pricing",
-          "settings": {
-            "area_name": "Lower Face",
-            "display_title": "Lower Face",
-            "price_subtitle": "Typical combined pricing",
-            "tier_1_name": "1 session",
-            "tier_1_price": "£35",
-            "tier_2_name": "Course of 6",
-            "tier_2_price": "£180",
-            "tier_3_name": "Course of 8",
-            "tier_3_price": "£240",
-            "tier_4_name": "Course of 10",
-            "tier_4_price": "£300",
-            "tier_5_name": "",
-            "tier_5_price": "",
-            "tier_6_name": "",
-            "tier_6_price": ""
-          }
-        },
         "pricing_gEEtbM": {
           "type": "pricing",
           "settings": {
@@ -3269,6 +3249,26 @@
             "tier_3_price": "£130",
             "tier_4_name": "Course of 10",
             "tier_4_price": "£170",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_WzRTqm": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Lower Face",
+            "display_title": "Lower Face",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£35",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£180",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£240",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£300",
             "tier_5_name": "",
             "tier_5_price": "",
             "tier_6_name": "",
@@ -3882,10 +3882,10 @@
         "pricing_ULf3WF",
         "pricing_EdnPFE",
         "pricing_37qTFp",
-        "pricing_WzRTqm",
         "pricing_gEEtbM",
         "pricing_7pJm3P",
         "pricing_YzK4Gk",
+        "pricing_WzRTqm",
         "category_EmaeNG",
         "pricing_Fa8q3B",
         "pricing_yCn77A",
