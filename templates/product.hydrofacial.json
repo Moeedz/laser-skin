@@ -2006,35 +2006,77 @@
           "type": "faq_item",
           "settings": {
             "question": "What exactly does a Hydrofacial do for my skin?",
-            "answer": "<p>Think of it as a \"deep clean and reset\" for your complexion. It uses a unique vortex technology to simultaneously exfoliate dead skin cells, extract impurities (like blackheads), and infuse your skin with intense hydration and serums. It delivers the results of a medical facial with the relaxation of a spa treatment.</p>"
+            "answer": "<p>HydroFacial is a multi-step medical-grade treatment that deeply cleanses, exfoliates, extracts congestion, and infuses the skin with targeted hydrating serums. It improves texture, clarity, and hydration in a single session while supporting overall skin health.</p>"
           }
         },
         "faq_item_W9fEyb": {
           "type": "faq_item",
           "settings": {
             "question": "Is there any downtime afterwards?",
-            "answer": "<p>Zero. This is often called the \"lunchtime facial\" because you can return to work or go out for dinner immediately after. You will leave with a noticeable glow, not red or irritated skin. It is perfect for prepping your skin 1-2 days before a big event or wedding.</p>"
+            "answer": "<p>No. HydroFacial requires no downtime. You may experience mild redness immediately after treatment, which typically settles within a few hours. Most patients return to normal activities straight away.</p>"
           }
         },
         "faq_item_c8YeGG": {
           "type": "faq_item",
           "settings": {
             "question": "Will it hurt or feel uncomfortable?",
-            "answer": "<p>Not at all. Most clients find it incredibly relaxing. You may feel a slight \"suction\" sensation during the extraction phase (as we clear out pores), but it is painless and non-invasive. There are no needles and no harsh peeling involved.</p>"
+            "answer": "<p>HydroFacial is generally described as comfortable and gentle. The vortex technology uses light suction to remove impurities without squeezing or manual pressure. Most patients find it relaxing.</p>"
+          }
+        },
+        "faq_item_jABFyM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How often should I have a HydroFacial?",
+            "answer": "<p>For maintenance, many patients choose treatment every 4–6 weeks. If addressing specific concerns such as congestion or dullness, a short course may be recommended before moving to maintenance sessions.</p>"
+          }
+        },
+        "faq_item_LYNTfr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What skin concerns does HydroFacial help with?",
+            "answer": "<p>HydroFacial can help improve dullness, dehydration, congestion, enlarged pores, uneven texture, and mild acne. It is also commonly used before events for an immediate skin refresh.</p>"
+          }
+        },
+        "faq_item_VPLEW8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is HydroFacial different from a regular facial?",
+            "answer": "<p>Unlike traditional facials, HydroFacial uses medical-grade vortex technology to exfoliate and extract impurities without manual squeezing. It delivers controlled, consistent results in a clinical environment.</p>"
+          }
+        },
+        "faq_item_yWYwhq": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>You will notice immediate improvement in hydration and glow. Results typically last several weeks, depending on your skin type, lifestyle, and skincare routine. Regular treatments support longer-term skin clarity and texture improvement.</p>"
           }
         },
         "faq_item_KnTRzP": {
           "type": "faq_item",
           "settings": {
-            "question": "Is it suitable for sensitive or acne prone skin?",
-            "answer": "<p>Yes. Because the Hydrofacial is customizable, we can adjust the suction strength and serum blend to suit your skin type. It is actually excellent for acne as it deeply cleanses congestion and bacteria from the pores without the aggression of manual squeezing.</p>"
+            "question": "Is HydroFacial suitable for sensitive or acne prone skin?",
+            "answer": "<p>Yes. The treatment can be tailored to suit sensitive, congested, or acne-prone skin. The gentle exfoliation and vacuum-assisted extraction help clear pores without causing trauma. Suitability is confirmed during consultation.</p>"
+          }
+        },
+        "faq_item_DjYwJG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is HydroFacial safe during pregnancy?",
+            "answer": "<p>HydroFacial is generally considered safe, but certain active ingredients may be avoided during pregnancy. Please inform us during consultation so the treatment can be adjusted appropriately.</p>"
+          }
+        },
+        "faq_item_ggbRkk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How bad is the downtime, really?",
+            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
           }
         },
         "faq_item_WBwCLK": {
           "type": "faq_item",
           "settings": {
             "question": "Can I wear makeup straight after?",
-            "answer": "<p>Yes, you can, although we love for you to let your skin breathe and soak up the serums for the rest of the day! If you do apply makeup, you'll likely find it sits smoother and looks better than usual thanks to the exfoliation.</p>"
+            "answer": "<p>Yes. Makeup can usually be applied the same day if desired. However, many patients prefer to leave the skin makeup-free to enjoy the natural post-treatment glow.</p>"
           }
         }
       },
@@ -2042,7 +2084,13 @@
         "faq_item_JHEwXH",
         "faq_item_W9fEyb",
         "faq_item_c8YeGG",
+        "faq_item_jABFyM",
+        "faq_item_LYNTfr",
+        "faq_item_VPLEW8",
+        "faq_item_yWYwhq",
         "faq_item_KnTRzP",
+        "faq_item_DjYwJG",
+        "faq_item_ggbRkk",
         "faq_item_WBwCLK"
       ],
       "name": "FAQ Dark Theme",
