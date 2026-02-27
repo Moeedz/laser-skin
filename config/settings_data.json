@@ -339,7 +339,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "header {border-bottom: solid 10px #e6b325;}"
+      "header {border-bottom: solid 10px #C5A059;}"
     ]
   }
 }
