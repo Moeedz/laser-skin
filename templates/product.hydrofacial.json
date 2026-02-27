@@ -1265,7 +1265,7 @@
             "card_subtitle": "",
             "price": "£100",
             "per_label": "per treatment",
-            "description": "Full medical-grade Hydrofacial performed in a clinical environment."
+            "description": "Full medical-grade HydroFacial performed in a clinical environment."
           }
         },
         "price_card_3ytUjd": {
@@ -1281,7 +1281,7 @@
         "price_card_Fwqwhn": {
           "type": "price_card",
           "settings": {
-            "name": "Express Hydrofacial",
+            "name": "Express HydroFacial",
             "card_subtitle": "(30 minutes)",
             "price": "£65",
             "per_label": "per treatment",
