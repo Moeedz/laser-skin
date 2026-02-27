@@ -1149,8 +1149,8 @@
           "type": "trust_item",
           "settings": {
             "icon": "medical",
-            "title": "Medical-grade",
-            "subtitle": "technology",
+            "title": "NHS Consultant Physician",
+            "subtitle": "Performed by",
             "show_stars": false
           }
         },
