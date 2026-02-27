@@ -1219,7 +1219,7 @@
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2026-02-09_at_11.45.54_PM.jpg",
             "image_cover": true,
-            "title": "Deep Improvement",
+            "title": "Improved texture & congestion",
             "description": "Ongoing results for congestion, texture, and hydration."
           }
         },
@@ -1241,7 +1241,7 @@
       "name": "Results Cards",
       "settings": {
         "heading": "HydroFacial Results",
-        "footer_text": "Zero irritation, zero recovery, see results immediately.",
+        "footer_text": "Immediate glow. No downtime.",
         "section_bg": "#e3e0e8",
         "show_texture": true,
         "texture_opacity": 80,
