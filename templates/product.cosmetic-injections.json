@@ -2417,6 +2417,41 @@
             "question": "Is there any downtime?",
             "answer": "<p>There is minimal downtime. You may experience mild redness, small bumps at the injection sites, or slight bruising, which typically resolves within a few hours to a few days. Most patients return to normal activities immediately.</p>"
           }
+        },
+        "faq_item_3Y3WJw": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What happens at the two-week review?",
+            "answer": "<p>At your two-week review, results are assessed once the treatment has fully developed. If minor adjustments are clinically appropriate, these can be discussed and addressed to ensure balanced, natural outcomes.</p>"
+          }
+        },
+        "faq_item_V8CLQB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are anti-wrinkle injections safe?",
+            "answer": "<p>When prescribed and administered by a qualified medical professional, anti-wrinkle injections have an established safety profile. As with any medical procedure, potential risks and side effects will be discussed during consultation before treatment proceeds.</p>"
+          }
+        },
+        "faq_item_Q9cRpB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who may not be suitable for anti-wrinkle injections?",
+            "answer": "<p>Treatment may not be suitable if you are pregnant or breastfeeding, have certain neuromuscular conditions, active infection at the treatment site, or known allergy to botulinum toxin. Suitability is always confirmed during medical consultation.</p>"
+          }
+        },
+        "faq_item_9xniKy": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I have treatment on the same day as my consultation?",
+            "answer": "<p>If medically appropriate and following full assessment and prescription, treatment can often be performed on the same day. Suitability is always confirmed during consultation.</p>"
+          }
+        },
+        "faq_item_68LXQM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are possible side effects?",
+            "answer": "<p>Temporary side effects may include mild swelling, redness, bruising, or headache. Rare complications will be discussed during consultation. Choosing a medically qualified injector significantly reduces risk.</p>"
+          }
         }
       },
       "block_order": [
@@ -2426,7 +2461,12 @@
         "faq_item_cBjnD3",
         "faq_item_6aeB6j",
         "faq_item_iAXLU6",
-        "faq_item_pHWzVg"
+        "faq_item_pHWzVg",
+        "faq_item_3Y3WJw",
+        "faq_item_V8CLQB",
+        "faq_item_Q9cRpB",
+        "faq_item_9xniKy",
+        "faq_item_68LXQM"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
