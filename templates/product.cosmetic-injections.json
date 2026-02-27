@@ -2180,7 +2180,7 @@
       ],
       "name": "Area Pricing List",
       "settings": {
-        "intro_text": "Following your complimentary medical assessment, the final price will be confirmed before treatment proceeds.",
+        "intro_text": "All prices confirmed following medical assessment. Two-week review included.",
         "section_bg": "#2e2e3a",
         "show_texture": true,
         "texture_opacity": 90,
