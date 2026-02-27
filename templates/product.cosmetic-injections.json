@@ -1381,13 +1381,21 @@
             "title": "",
             "text": "Every treatment is personally performed and reviewed by Dr. Scotton."
           }
+        },
+        "point_F6P33x": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "All treatments follow full medical consultation and facial anatomy assessment before prescription."
+          }
         }
       },
       "block_order": [
         "point_qTaDJh",
         "point_384rfx",
         "point_3iXxHX",
-        "point_nBXjtA"
+        "point_nBXjtA",
+        "point_F6P33x"
       ],
       "name": "Info Hero",
       "settings": {
