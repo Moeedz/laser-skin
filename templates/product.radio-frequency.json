@@ -1926,13 +1926,6 @@
             "answer": "<p>There is minimal to no downtime.</p><p>You may experience slight redness or warmth immediately after treatment, which typically settles within a few hours.</p><p>Most clients return to normal activities the same day.</p>"
           }
         },
-        "faq_item_33xQj3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>For optimal results, a course of 3–6 sessions is usually recommended, spaced 3–4 weeks apart.</p><p>Your exact plan will depend on your skin condition and desired outcome.</p>"
-          }
-        },
         "faq_item_FUQPUE": {
           "type": "faq_item",
           "settings": {
@@ -1960,7 +1953,6 @@
         "faq_item_9jiNwy",
         "faq_item_wcyw3c",
         "faq_item_ifgJXa",
-        "faq_item_33xQj3",
         "faq_item_FUQPUE",
         "faq_item_8eVQFq",
         "faq_item_ja8AYE"
