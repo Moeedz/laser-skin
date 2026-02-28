@@ -2100,29 +2100,92 @@
         "faq_item_TrKUay": {
           "type": "faq_item",
           "settings": {
-            "question": "Is IPL Safe?",
-            "answer": "<p>Yes, when performed by trained professionals using medical-grade equipment. IPL has a long safety history when correct settings and protocols are followed.</p>"
+            "question": "What is IPL?",
+            "answer": "<p>IPL (Intense Pulsed Light) is a non-invasive light-based treatment used to reduce pigmentation, sun damage, redness and uneven skin tone. It works by delivering controlled pulses of light energy into the skin, targeting pigment and blood vessels without damaging surrounding tissue.</p>"
           }
         },
         "faq_item_ekAyff": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>Most clients describe IPL as <strong>mild to moderately uncomfortable</strong>, often compared to a quick snap or warm flick on the skin. Discomfort is brief and well tolerated.</p>"
+            "question": "What skin concerns can IPL treat?",
+            "answer": "<p>• Sun damage</p><p>• Age spots and pigmentation</p><p>• Freckles</p><p>• Redness and flushing</p><p>• Broken capillaries</p><p>• Uneven skin tone</p><p>• Rosacea-type symptoms</p><p>• Dull skin</p><p>A consultation will confirm whether IPL is suitable for your specific concern.</p>"
           }
         },
         "faq_item_LnPdp6": {
           "type": "faq_item",
           "settings": {
-            "question": "How quickly will I see results?",
-            "answer": "<p></p><ul><li>Pigmentation may darken and flake off within <strong>7–14 days</strong><br/></li><li>Redness reduction can be seen gradually<br/></li><li>Overall skin clarity improves with each session<br/></li></ul>"
+            "question": "How does IPL work?",
+            "answer": "<p>IPL delivers broad-spectrum light energy into the skin. The light is absorbed by pigment (melanin) or blood vessels, which are then naturally broken down and cleared by the body over time. This results in a clearer, more even complexion.</p>"
           }
         },
         "faq_item_p7xyra": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+            "question": "How does IPL differ from laser treatments?",
+            "answer": "<p>Unlike traditional lasers that use a single wavelength of light, IPL uses broad-spectrum light. This allows it to treat multiple concerns such as pigmentation and redness in the same session.</p><p>Your clinician will recommend the most appropriate treatment for your skin type and concern.</p>"
+          }
+        },
+        "faq_item_AwE9mm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is IPL safe?",
+            "answer": "<p>Yes. IPL is considered a safe and well-established treatment when performed using medical-grade equipment in a clinical environment. A consultation and, where appropriate, a test patch are carried out before treatment.</p>"
+          }
+        },
+        "faq_item_8J4FVT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is IPL safe for all skin types?",
+            "answer": "<p>IPL is generally most suitable for lighter skin tones with pigmentation or redness concerns. It may not be appropriate for darker skin tones due to the way light interacts with melanin. A full assessment will determine suitability.</p>"
+          }
+        },
+        "faq_item_feHCMU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>Downtime is typically minimal. You may experience:</p><p>• Mild redness</p><p>• Slight warmth</p><p>• Temporary darkening of pigmentation</p><p>These effects usually settle within a few days.</p>"
+          }
+        },
+        "faq_item_6Qbapq": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can IPL treat Rosacea?",
+            "answer": "<p>IPL can help reduce visible redness and broken capillaries associated with certain types of rosacea. However, suitability depends on your individual skin condition and will be assessed during consultation.</p>"
+          }
+        },
+        "faq_item_RGQkYd": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What should I avoid after IPL?",
+            "answer": "<p>You should avoid:</p><p>• Direct sun exposure</p><p>• Tanning</p><p>• Retinoids and strong exfoliants for several days</p><p>• Heat treatments such as saunas or hot tubs for 24–48 hours</p><p>Strict sun protection is essential.</p>"
+          }
+        },
+        "faq_item_mGagE4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can be long-lasting when combined with good sun protection and skincare. Maintenance sessions may be recommended depending on your skin type and lifestyle.</p>"
+          }
+        },
+        "faq_item_MJqLKK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does IPL hurt?",
+            "answer": "<p>Most clients describe IPL as a quick, warm flicking sensation on the skin. Discomfort is usually brief and well tolerated.</p>"
+          }
+        },
+        "faq_item_XriMjF": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Some improvement may be visible after the first session. Pigmented areas often darken slightly before flaking away within 3–7 days. Results continue to improve gradually with each session.</p>"
+          }
+        },
+        "faq_item_n8aeTB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients require a course of 3–5 treatments spaced approximately 4 weeks apart for optimal results. The exact number depends on the severity of pigmentation or redness and your skin type.</p>"
           }
         }
       },
@@ -2130,16 +2193,25 @@
         "faq_item_TrKUay",
         "faq_item_ekAyff",
         "faq_item_LnPdp6",
-        "faq_item_p7xyra"
+        "faq_item_p7xyra",
+        "faq_item_AwE9mm",
+        "faq_item_8J4FVT",
+        "faq_item_feHCMU",
+        "faq_item_6Qbapq",
+        "faq_item_RGQkYd",
+        "faq_item_mGagE4",
+        "faq_item_MJqLKK",
+        "faq_item_XriMjF",
+        "faq_item_n8aeTB"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#e4e4e4",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Your IPL Questions. Answered",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
