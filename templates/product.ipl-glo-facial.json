@@ -1846,14 +1846,14 @@
           "type": "result_card",
           "settings": {
             "title": "Targeted IPL Correction",
-            "session_info": "After 2 sessions. 4–6 weeks post treatment. Minimal downtime (1–3 days).",
+            "session_info": "After 2 sessions. <br>4–6 weeks post treatment.<br> Minimal downtime (1–3 days).",
             "benefit": "✔ Reduces mild sun damage and freckles<br>\n✔ Softens visible redness<br>\n✔ Brightens dull, uneven tone\n✔ Ideal for early pigmentation concerns"
           }
         },
         "result_card_zKGdd7": {
           "type": "result_card",
           "settings": {
-            "title": "Texture Reset",
+            "title": "Progressive IPL Course",
             "session_info": "1 session · Moderate downtime",
             "benefit": "Improves fine lines, mild acne scars and crepey skin"
           }
