@@ -2011,7 +2011,7 @@
           "type": "price_row",
           "settings": {
             "name": "1 Session",
-            "price": "£80",
+            "price": "£120",
             "per_label": "",
             "total": ""
           }
@@ -2020,18 +2020,18 @@
           "type": "price_row",
           "settings": {
             "name": "3 Sessions",
-            "price": "£70",
+            "price": "£110",
             "per_label": "per session",
-            "total": "Total £210"
+            "total": "Total £230"
           }
         },
         "price_row_HAaiWW": {
           "type": "price_row",
           "settings": {
             "name": "6 Sessions",
-            "price": "£60",
+            "price": "£100",
             "per_label": "per session",
-            "total": "Total £360"
+            "total": "Total £600"
           }
         }
       },
