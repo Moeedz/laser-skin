@@ -1846,7 +1846,9 @@
           "type": "result_card",
           "settings": {
             "title": "Mild pigmentation or redness",
-            "session_info": "After 2 sessions.<br>4–6 weeks post treatment.<br> Minimal downtime",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.52.48.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.52.59.png",
+            "session_info": "After 2 sessions.4–6 weeks post treatment. Minimal downtime",
             "benefit": "Reduces mild sun damage and freckles.<br>\nSoftens visible redness.<br>\nBrightens dull, uneven tone.<br>\nIdeal for early pigmentation concerns.<br>"
           }
         },
