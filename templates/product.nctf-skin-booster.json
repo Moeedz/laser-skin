@@ -1943,42 +1943,49 @@
           "type": "faq_item",
           "settings": {
             "question": "What is NCTF?",
-            "answer": "<p>NCTF 135HA is a <strong>revitalising injectable skin booster</strong> containing hyaluronic acid plus over 50 active ingredients including vitamins, amino acids, minerals, co-enzymes, and antioxidants. It’s designed to deeply nourish the skin and improve overall skin quality.</p>"
+            "answer": "<p>NCTF® is a clinically formulated injectable skin booster containing over 50 active ingredients including hyaluronic acid, vitamins, amino acids and antioxidants. It improves hydration, elasticity and overall skin quality without adding volume like dermal fillers.</p>"
           }
         },
         "faq_item_heM8Uk": {
           "type": "faq_item",
           "settings": {
-            "question": "How does it work?",
-            "answer": "<p>NCTF works by delivering a powerful cocktail of nutrients directly into the skin, stimulating:</p><ul><li><br/>Collagen production<br/></li><li><br/>Cellular regeneration<br/></li><li><br/>Improved hydration and elasticity<br/></li></ul><p>This leads to healthier, brighter, more youthful-looking skin.</p>"
+            "question": "How is NCTF different to derma fillers?",
+            "answer": "<p>Dermal fillers are designed to restore or add facial volume. NCTF does not add volume. Instead, it improves the quality, hydration and firmness of the skin itself.</p>"
           }
         },
         "faq_item_LP7eQR": {
           "type": "faq_item",
           "settings": {
-            "question": "is NCTF a filler?",
-            "answer": "<p>No.</p><p>NCTF does <strong>not add volume or change facial shape</strong>. It focuses purely on <strong>skin quality, hydration, and rejuvenation</strong>.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients benefit from a course of 3–5 sessions spaced 2–3 weeks apart. Your clinician will assess your skin and recommend a personalised treatment plan during consultation.</p>"
           }
         },
         "faq_item_BAEKdm": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+            "question": "Is there any downtime?",
+            "answer": "<p>You may experience mild redness or small injection marks for 24–48 hours. Minor bruising is possible. Most clients return to normal activities the following day.</p>"
           }
         },
         "faq_item_F8jzNC": {
           "type": "faq_item",
           "settings": {
             "question": "Is the treatment painful?",
-            "answer": "<p>Discomfort is minimal.</p><p>A fine needle is used, and numbing cream can be applied if required. Most clients describe the sensation as <strong>small pinches</strong>.</p>"
+            "answer": "<p>NCTF is delivered using very fine needles. Most clients describe the treatment as mildly uncomfortable rather than painful. A topical numbing cream can be applied if needed.</p>"
+          }
+        },
+        "faq_item_KYFgra": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Hydration and glow often improve within the first week. Collagen stimulation and firmness develop gradually over several weeks.</p>"
           }
         },
         "faq_item_QA7HBU": {
           "type": "faq_item",
           "settings": {
             "question": "Is NCTF suitable for all skin types?",
-            "answer": "<p>Yes. NCTF is suitable for <strong>all skin types and tones</strong> and is especially popular for early anti-ageing or skin maintenance.</p>"
+            "answer": "<p>Yes. NCTF is suitable for most skin types and tones. A consultation will confirm suitability and identify any contraindications.</p>"
           }
         }
       },
@@ -1988,18 +1995,19 @@
         "faq_item_LP7eQR",
         "faq_item_BAEKdm",
         "faq_item_F8jzNC",
+        "faq_item_KYFgra",
         "faq_item_QA7HBU"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#d6d2d2",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Your NCTF Questions. Answered",
         "heading_color": "#1c1c1c",
-        "heading_font_size": 48,
+        "heading_font_size": 24,
         "heading_font_weight": "400",
         "heading_font_style": "italic",
         "heading_alignment": "center",
