@@ -1990,6 +1990,13 @@
     "faq_updated_MnGbM8": {
       "type": "faq-updated",
       "blocks": {
+        "faq_item_KgETRM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What laser do you use for Laser Tattoo Removal?",
+            "answer": "<p>We use Nanosure QSwitch ND YAG</p>"
+          }
+        },
         "faq_item_Ci3Xtq": {
           "type": "faq_item",
           "settings": {
@@ -2055,6 +2062,7 @@
         }
       },
       "block_order": [
+        "faq_item_KgETRM",
         "faq_item_Ci3Xtq",
         "faq_item_8tGC7q",
         "faq_item_bbzpbn",
