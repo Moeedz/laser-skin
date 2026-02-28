@@ -1132,7 +1132,7 @@
       "name": "Info Hero",
       "settings": {
         "heading": "What Is IPL Skin Rejuvenation?",
-        "body": "<p>IPL (Intense Pulsed Light) is a non-invasive treatment designed to improve overall skin tone and clarity. It is commonly used to treat sun damage, pigmentation, redness, and uneven skin tone helping restore a brighter, more even complexion over time.<br/></p>",
+        "body": "<p>IPL (Intense Pulsed Light) is a non-invasive treatment designed to improve overall skin tone and clarity. It is commonly used to treat sun damage, pigmentation, redness, and uneven skin tone helping restore a brighter, more even complexion over time.<br/><br/>Unlike lasers, IPL uses broad-spectrum light to treat multiple pigment and vascular concerns simultaneously.<br/></p>",
         "points_heading": "Why patients choose IPL",
         "footer_text": "",
         "bg_image": "shopify://shop_images/Untitled_design_21.png",
@@ -1467,7 +1467,7 @@
       "settings": {
         "heading": "How IPL Works & What to Expect",
         "sub_heading": "How it works",
-        "body": "<p>IPL delivers controlled pulses of light energy into the skin, targeting excess pigment and visible redness. The light converts to heat within the targeted structure, allowing the body to gradually break it down while surrounding tissue remains unaffected.</p>",
+        "body": "<p>IPL delivers controlled pulses of light energy into the skin, targeting excess pigment and visible redness. The light energy is absorbed by pigment or blood vessels, which are then naturally broken down by the body over time. </p>",
         "timeline_label": "What to expect",
         "footer_text": "A course of 3–5 treatments spaced 4 weeks apart is typically recommended for optimal pigmentation correction.",
         "section_bg": "#f8e3e8",
