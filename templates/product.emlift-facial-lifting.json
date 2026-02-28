@@ -1015,6 +1015,49 @@
         "padding_bottom": 60
       }
     },
+    "aftercare_cards_gAf9Uh": {
+      "type": "aftercare-cards",
+      "blocks": {
+        "card_jcUcMa": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Aftercare Tips",
+            "points": "Apply gentle sunscreen daily, SPF 30+||Avoid retinoids & exfoliating products for 3–5 days||Avoid strenuous exercise, saunas, & hot tubs for 24–48 hours||Keep skin hydrated and don't pick or scratch at treated areas"
+          }
+        },
+        "card_LUY68k": {
+          "type": "card",
+          "settings": {
+            "card_heading": "Expected Downtime",
+            "points": "Mild redness and darkening of pigment||Any swelling is typically mild and short-lived||Within 3–7 days, treated areas will flake or fade||Makeup may be worn if skin isn't irritated; apply gently"
+          }
+        }
+      },
+      "block_order": [
+        "card_jcUcMa",
+        "card_LUY68k"
+      ],
+      "name": "Aftercare Cards",
+      "settings": {
+        "heading": "IPL Aftercare & Downtime",
+        "subtitle": "To ensure safe, natural-looking results, patients should follow these key aftercare steps.",
+        "footer_text": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks.",
+        "show_checkmarks": false,
+        "layout": "grid",
+        "section_bg": "#ede4dc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "aftercare_downtime_hGykXx": {
       "type": "aftercare-downtime",
       "blocks": {
@@ -1127,68 +1170,6 @@
         "note_color": "#5a3a3a",
         "note_font_style": "italic",
         "note_border_color": "#d4a8a8"
-      }
-    },
-    "process_timeline_cktz78": {
-      "type": "process-timeline",
-      "blocks": {
-        "stage_xEpyMC": {
-          "type": "stage",
-          "settings": {
-            "title": "Immediately after treatment",
-            "points": "Muscles may feel activated or slightly worked.||Skin appears subtly firmer"
-          }
-        },
-        "stage_9hXbnP": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 1–4",
-            "points": "Facial muscles strengthen||Improved tone and lift begin to develop"
-          }
-        },
-        "stage_RpeekP": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 4–8",
-            "points": "Continued muscle engagement||Facial contours become more defined"
-          }
-        },
-        "stage_YnTNik": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 8–12",
-            "points": "Visible improvements in firmness and facial structure||Results look natural and progressive"
-          }
-        }
-      },
-      "block_order": [
-        "stage_xEpyMC",
-        "stage_9hXbnP",
-        "stage_RpeekP",
-        "stage_YnTNik"
-      ],
-      "name": "Process Timeline",
-      "settings": {
-        "heading": "How EM LIFT Works & What to Expect",
-        "sub_heading": "",
-        "body": "<p>EM LIFT delivers targeted electromagnetic energy that triggers deep, involuntary muscle contractions in the face. These contractions strengthen facial muscles while supporting collagen stimulation, resulting in improved tone, firmness, and definition over time.</p>",
-        "timeline_label": "",
-        "footer_text": "Most clients complete a course of 4–6 sessions for optimal lifting and contour definition.",
-        "section_bg": "#fbdade",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "accent_color": "#b8886a",
-        "line_color": "#baa898",
-        "dot_color": "#baa898",
-        "show_body_card": false,
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "slideshow_UBR4i6": {
@@ -1541,6 +1522,60 @@
         "rating_reviews_color": "#888888"
       }
     },
+    "process_timeline_WDXag7": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_VNnDNf": {
+          "type": "stage",
+          "settings": {
+            "title": "Structured Treatment Course",
+            "points": "• 4–6 sessions||\n• 1 session per week||\n• 20–30 minutes per session"
+          }
+        },
+        "stage_WkMHRR": {
+          "type": "stage",
+          "settings": {
+            "title": "Progressive Results",
+            "points": "Subtle firmness may be felt after the first session||\nVisible lift develops across weeks 4–8||\nMaximum contour definition typically seen by week 12"
+          }
+        },
+        "stage_eJCeGe": {
+          "type": "stage",
+          "settings": {
+            "title": "Maintenance",
+            "points": "Top-up sessions every 3–6 months may be recommended||\nMany clients incorporate EM LIFT into a long-term facial maintenance plan"
+          }
+        }
+      },
+      "block_order": [
+        "stage_VNnDNf",
+        "stage_WkMHRR",
+        "stage_eJCeGe"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "Your EM LIFT Treatment Plan",
+        "sub_heading": "Every treatment plan is tailored to your facial structure, muscle tone, and aesthetic goals. Below is a typical protocol.",
+        "body": "<p>EM LIFT delivers focused electromagnetic energy to trigger deep, targeted facial muscle contractions strengthening the underlying muscles that support natural lift and contour. These contractions retrain and tone facial structure over time, resulting in improved definition and firmness.<br/><br/><em>During your consultation we assess facial muscle tone, areas of laxity, and overall structure to determine whether EM LIFT is appropriate and how many sessions are recommended.</em></p>",
+        "timeline_label": "What to expect",
+        "footer_text": "EM LIFT strengthens facial muscles. It does not add volume or dramatically change facial shape. Results are subtle, structured, and progressive.",
+        "section_bg": "#ede4dc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "show_body_card": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "split_content_rQ3AKX": {
       "type": "split-content",
       "blocks": {
@@ -1745,60 +1780,6 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
-      }
-    },
-    "process_timeline_WDXag7": {
-      "type": "process-timeline",
-      "blocks": {
-        "stage_VNnDNf": {
-          "type": "stage",
-          "settings": {
-            "title": "Structured Treatment Course",
-            "points": "• 4–6 sessions||\n• 1 session per week||\n• 20–30 minutes per session"
-          }
-        },
-        "stage_WkMHRR": {
-          "type": "stage",
-          "settings": {
-            "title": "Progressive Results",
-            "points": "Subtle firmness may be felt after the first session||\nVisible lift develops across weeks 4–8||\nMaximum contour definition typically seen by week 12"
-          }
-        },
-        "stage_eJCeGe": {
-          "type": "stage",
-          "settings": {
-            "title": "Maintenance",
-            "points": "Top-up sessions every 3–6 months may be recommended||\nMany clients incorporate EM LIFT into a long-term facial maintenance plan"
-          }
-        }
-      },
-      "block_order": [
-        "stage_VNnDNf",
-        "stage_WkMHRR",
-        "stage_eJCeGe"
-      ],
-      "name": "Process Timeline",
-      "settings": {
-        "heading": "Your EM LIFT Treatment Plan",
-        "sub_heading": "Every treatment plan is tailored to your facial structure, muscle tone, and aesthetic goals. Below is a typical protocol.",
-        "body": "<p>EM LIFT delivers focused electromagnetic energy to trigger deep, targeted facial muscle contractions strengthening the underlying muscles that support natural lift and contour. These contractions retrain and tone facial structure over time, resulting in improved definition and firmness.<br/><br/><em>During your consultation we assess facial muscle tone, areas of laxity, and overall structure to determine whether EM LIFT is appropriate and how many sessions are recommended.</em></p>",
-        "timeline_label": "What to expect",
-        "footer_text": "EM LIFT strengthens facial muscles. It does not add volume or dramatically change facial shape. Results are subtle, structured, and progressive.",
-        "section_bg": "#ede4dc",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "accent_color": "#b8886a",
-        "line_color": "#baa898",
-        "dot_color": "#baa898",
-        "show_body_card": false,
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
       }
     },
     "session_pricing_jTKfmK": {
@@ -2213,14 +2194,14 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_rRYVdp",
     "info_hero_nJHyJj",
+    "aftercare_cards_gAf9Uh",
     "aftercare_downtime_hGykXx",
-    "process_timeline_cktz78",
     "slideshow_UBR4i6",
     "info_hero_Nn73dt",
     "slideshow_QyLgeb",
+    "process_timeline_WDXag7",
     "split_content_rQ3AKX",
     "slideshow_zidcLN",
-    "process_timeline_WDXag7",
     "session_pricing_jTKfmK",
     "expectations_trust_zJgpxb",
     "consultation_form_gFVqk7",
