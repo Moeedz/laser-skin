@@ -1479,6 +1479,9 @@
         "concern_GfRVVK",
         "concern_YGkmWb"
       ],
+      "custom_css": [
+        ".cgd__grid {max-width: 100% !important;}"
+      ],
       "name": "Concern Grid",
       "settings": {
         "heading": "Who Is IPL Best For?",
@@ -1486,13 +1489,13 @@
         "bg_position": "left center",
         "section_height": 600,
         "overlay_strong": "#ddd0c4e8",
-        "overlay_mid": "#ddd0c4a0",
+        "overlay_mid": "#ddd0c4a1",
         "overlay_fade": "#ddd0c440",
         "shimmer_opacity": 60,
         "heading_color": "#3a2820",
         "text_color": "#5a4a3a",
         "icon_color": "#8a7050",
-        "card_bg": "#ece5ddc0",
+        "card_bg": "#ece5ddbf",
         "heading_font_size": 42,
         "card_title_font_size": 20,
         "body_font_size": 16,
