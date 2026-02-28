@@ -1754,7 +1754,7 @@
           "type": "price_card",
           "settings": {
             "name": "1 Session",
-            "main_price": "225",
+            "main_price": "£225",
             "main_per": "",
             "tier_1": "",
             "tier_2": "",
@@ -1778,9 +1778,9 @@
           "type": "price_card",
           "settings": {
             "name": "6 Sessions",
-            "main_price": "£150",
+            "main_price": "£180",
             "main_per": "Per Session",
-            "tier_1": "Total: £900",
+            "tier_1": "Total: £880",
             "tier_2": "",
             "tier_3": "",
             "note": ""
