@@ -938,7 +938,7 @@
         "body_font_size": 17,
         "text_color": "#5a5a5a",
         "checkmark_color": "#c4a080",
-        "button_label": "Book your EM LIFT facial treatment",
+        "button_label": "Book your consultation",
         "button_link": "#cf-template--25630346576252__consultation_form_gFVqk7",
         "button_open_new_tab": false,
         "button_bg": "#d68b6f",
@@ -991,7 +991,7 @@
       ],
       "name": "Info Hero",
       "settings": {
-        "heading": "What Is EM LIFT?",
+        "heading": "What Is Structural Lift Therapy?",
         "body": "<p>EM LIFT uses focused electromagnetic energy to trigger thousands of deep muscle contractions in the face.</p><p>These contractions strengthen and retrain facial muscles that support natural lift and contour improving definition from within.</p><p>Unlike treatments that only tighten the skin surface, EM LIFT works at a muscular level to restore structural support.</p>",
         "points_heading": "Why patients choose EM LIFT",
         "footer_text": "",
