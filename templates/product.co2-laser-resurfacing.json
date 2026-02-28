@@ -1995,6 +1995,13 @@
             "answer": "<p><strong>The Science of Fractional CO2</strong><br/>We utilize advanced <strong>Fractional CO2 Laser technology</strong>, widely considered the \"Gold Standard\" in dermatology for treating textured acne scars and deep wrinkles. Unlike older lasers that burn the entire skin surface, our technology creates thousands of microscopic thermal channels deep into the dermis. This triggers the body’s natural healing response, stimulating massive collagen production to \"fill in\" scars and smooth texture from the inside out.</p><p><strong>One Laser. Three Intensities.</strong><br/>We customize the depth of the CO2 energy to match your skin concerns and downtime availability:<br/></p><ul><li><strong>Level 1: The 'Refresh' (Light)Best For:</strong> Sun damage, uneven tone, and open pores.<strong>Downtime:</strong> 3-4 days (Redness and mild dryness).<br/></li><li><strong>Level 2: The 'Resurface' (Medium)Best For:</strong> Fine lines, crepey skin, and mild atrophic scarring.<strong>Downtime:</strong> 5-7 days (Bronzing and peeling).<br/></li><li><strong>Level 3: The 'Scar Repair' (Deep)Best For:</strong> Deep rolling acne scars, boxcar scars, and surgical scar revision.<strong>Downtime:</strong> 7-10+ days (Requires social downtime for maximum results).</li></ul>"
           }
         },
+        "faq_item_MTQ7HM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What skin concerns can CO₂ laser resurfacing treat?",
+            "answer": "<p>CO₂ laser resurfacing is a versatile treatment that can address multiple skin concerns in a single procedure. It works by removing damaged surface layers of skin while stimulating collagen production deeper within the dermis.</p><p>It can help improve:</p><p>• Fine lines and deeper wrinkles</p><p>• Sun damage and pigmentation irregularities</p><p>• Acne scarring and surgical scars</p><p>• Enlarged pores</p><p>• Uneven skin tone and texture</p><p>• Crepey or thinning skin</p><p>• Stretch marks (in selected areas)</p><p>• Age spots and sun spots</p><p>• Skin laxity in mild to moderate cases</p><p>During your consultation, we assess your skin type, concerns, and downtime tolerance to determine whether CO₂ is the most appropriate treatment for you.</p>"
+          }
+        },
         "faq_item_HrxNLf": {
           "type": "faq_item",
           "settings": {
@@ -2012,7 +2019,7 @@
         "faq_item_cYExH8": {
           "type": "faq_item",
           "settings": {
-            "question": "How many sesisons will I need?",
+            "question": "How many sessions will I need?",
             "answer": "<p>Many clients achieve significant improvement from one well-planned session.</p><p>However, deeper scarring or advanced ageing concerns may require a structured treatment plan.</p><p>Your consultation determines the correct approach.</p>"
           }
         },
@@ -2068,6 +2075,7 @@
       },
       "block_order": [
         "faq_item_PNmVFK",
+        "faq_item_MTQ7HM",
         "faq_item_HrxNLf",
         "faq_item_ddfEcQ",
         "faq_item_cYExH8",
