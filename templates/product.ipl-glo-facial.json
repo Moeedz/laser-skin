@@ -1848,7 +1848,7 @@
             "title": "Mild pigmentation or redness",
             "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.52.48.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.52.59.png",
-            "session_info": "After 2 sessions.4–6 weeks post treatment. Minimal downtime",
+            "session_info": "After 2 sessions.<br>4–6 weeks post treatment.",
             "benefit": "Reduces mild sun damage and freckles.<br>\nSoftens visible redness.<br>\nBrightens dull, uneven tone.<br>\nIdeal for early pigmentation concerns.<br>"
           }
         },
@@ -1858,7 +1858,7 @@
             "title": "Moderate pigmentation or persistent redness",
             "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.13.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.19.png",
-            "session_info": "After 3 sessions.8–12 weeks post treatment. Mild downtime.",
+            "session_info": "After 3 sessions.<br>8–12 weeks post treatment.",
             "benefit": "Fades deeper sun spots and age spots.<br>\nImproves diffuse redness and flushing.<br>\nRefines overall skin clarity.<br>\nBuilds gradual, cumulative improvement."
           }
         },
@@ -1866,7 +1866,9 @@
           "type": "result_card",
           "settings": {
             "title": "Advanced pigmentation or vascular concerns",
-            "session_info": "After 6 sessions.<br>Results develop progressively over 3–4 months.",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.24.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.29.png",
+            "session_info": "After 6 sessions.Results develop progressively over 3–4 months.",
             "benefit": "Targets stubborn pigmentation.<br>\nImproves visible capillaries.<br>\nSupports long-term tone correction.<br>\nDesigned for structured treatment plans."
           }
         }
