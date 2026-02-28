@@ -1634,6 +1634,13 @@
             "text": "Brow area"
           }
         },
+        "point_V3Ymh4": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Mid-face support"
+          }
+        },
         "point_iVpzin": {
           "type": "point",
           "settings": {
@@ -1659,6 +1666,7 @@
       "block_order": [
         "point_9MYLxG",
         "point_Ke4zKg",
+        "point_V3Ymh4",
         "point_iVpzin",
         "point_xQBUD4",
         "point_99QEjY"
