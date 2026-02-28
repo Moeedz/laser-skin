@@ -1487,6 +1487,81 @@
         "padding_bottom": 60
       }
     },
+    "concern_grid_RprEnc": {
+      "type": "concern-grid",
+      "blocks": {
+        "concern_zafiNp": {
+          "type": "concern",
+          "settings": {
+            "title": "Dull, dehydrated skin",
+            "subtitle": "Restores deep hydration"
+          }
+        },
+        "concern_3WEp33": {
+          "type": "concern",
+          "settings": {
+            "title": "Fine lines & wrinkles",
+            "subtitle": "Smooths & refines texture"
+          }
+        },
+        "concern_YUBmhr": {
+          "type": "concern",
+          "settings": {
+            "title": "Loss of elasticity",
+            "subtitle": "Boosts skin firmness"
+          }
+        },
+        "concern_yHTdPi": {
+          "type": "concern",
+          "settings": {
+            "title": "Under-eye area",
+            "subtitle": "Brightens & thickens skin"
+          }
+        },
+        "concern_GfRVVK": {
+          "type": "concern",
+          "settings": {
+            "title": "Crepey skin",
+            "subtitle": "Improves skin density"
+          }
+        },
+        "concern_YGkmWb": {
+          "type": "concern",
+          "settings": {
+            "title": "Post-procedure skin repair",
+            "subtitle": "Supports healing & recovery"
+          }
+        }
+      },
+      "block_order": [
+        "concern_zafiNp",
+        "concern_3WEp33",
+        "concern_YUBmhr",
+        "concern_yHTdPi",
+        "concern_GfRVVK",
+        "concern_YGkmWb"
+      ],
+      "name": "Concern Grid",
+      "settings": {
+        "heading": "What Do Polynucleotides Treat?",
+        "subtitle": "Polynucleotide treatments can improve a range of skin concerns at a deeper level, restoring your skin's quality and health",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd0c4e8",
+        "overlay_mid": "#ddd0c4a0",
+        "overlay_fade": "#ddd0c440",
+        "shimmer_opacity": 60,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "icon_color": "#8a7050",
+        "card_bg": "#ece5ddc0",
+        "heading_font_size": 42,
+        "card_title_font_size": 20,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_x36jLg": {
       "type": "slideshow",
       "blocks": {
@@ -2325,6 +2400,7 @@
     "slideshow_eDnBAR",
     "slideshow_WXFRip",
     "process_timeline_gFy3jQ",
+    "concern_grid_RprEnc",
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
     "icon_circles_grid_m6Ce7L",
