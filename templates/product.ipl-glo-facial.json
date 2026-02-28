@@ -1871,7 +1871,7 @@
             "title": "Advanced pigmentation or vascular concerns",
             "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.24.png",
             "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.29.png",
-            "session_info": "After 6 sessions.<br>Results develop progressively over 3–4 months.",
+            "session_info": "After 6 sessions.<br>Results develop over 3–4 months.",
             "benefit": "Targets stubborn pigmentation.<br>\nImproves visible capillaries.<br>\nSupports long-term tone correction.<br>\nDesigned for structured treatment plans."
           }
         }
@@ -1880,6 +1880,9 @@
         "result_card_P4GC4q",
         "result_card_zKGdd7",
         "result_card_gNi7Nm"
+      ],
+      "custom_css": [
+        ".bar__card-benefit {margin-top: 0 !important;}"
       ],
       "name": "Before After Results",
       "settings": {
