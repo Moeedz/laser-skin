@@ -1387,7 +1387,7 @@
       ],
       "name": "Before After Results",
       "settings": {
-        "heading": "<p>Real results, tailored by treatment depth.</p>",
+        "heading": "<p>Real results, tailored by muscle activation level</p>",
         "subtitle": "Fractional CO₂ laser treatments adjusted to your skin's needs and tolerance for downtime.",
         "before_label": "Before",
         "after_label": "After",
