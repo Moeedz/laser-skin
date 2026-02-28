@@ -2053,43 +2053,85 @@
         "faq_item_3e3YkH": {
           "type": "faq_item",
           "settings": {
-            "question": "What is EmLift?",
-            "answer": "<p>Facial Emlift is a <strong>non-invasive facial muscle-lifting treatment</strong> that uses electromagnetic stimulation to activate and strengthen the facial muscles. By targeting the underlying muscles, it helps improve facial tone, definition, and lift.</p>"
+            "question": "What is Structural Lift Therapy?",
+            "answer": "<p>Structural Lift Therapy is a non-surgical face lift treatment powered by EM LIFT technology. It uses targeted electromagnetic energy to stimulate deep facial muscle contractions, strengthening and toning the muscles that support facial structure.</p><p>Unlike treatments that add volume, this approach enhances your natural facial support from within.</p>"
           }
         },
         "faq_item_zEeRQF": {
           "type": "faq_item",
           "settings": {
-            "question": "What does the treatment help with?",
-            "answer": "<p>Facial Emlift is ideal for:</p><p></p><ul><li>Loss of facial tone<br/></li><li>Sagging or drooping features<br/></li><li>Reduced muscle definition<br/></li><li>A tired or heavy facial appearance<br/></li></ul><p></p>"
+            "question": "How is this different from fillers or other injectables?",
+            "answer": "<p>Structural Lift Therapy does not add volume or freeze muscles.</p><p>• Fillers add volume</p><p>• Anti-wrinkle injections relax muscles</p><p>• Structural Lift Therapy strengthens muscles</p><p>It improves contour and lift naturally by working on the underlying facial structure rather than altering facial expression or shape.</p>"
           }
         },
         "faq_item_Eb6g3R": {
           "type": "faq_item",
           "settings": {
-            "question": "Is Emlift painful?",
-            "answer": "<p>No.</p><p>Facial Emlift is <strong>not painful</strong>. You will feel rhythmic muscle contractions and tightening sensations, but most clients find the treatment comfortable and even relaxing.</p>"
+            "question": "Is EM LIFT Safe?",
+            "answer": "<p>Yes. EM LIFT technology is non-invasive and does not involve needles, injections, or surgery.</p><p>The treatment is delivered in a controlled clinical environment and tailored to your facial anatomy during consultation.</p>"
           }
         },
         "faq_item_bfCEbU": {
           "type": "faq_item",
           "settings": {
-            "question": "When will I see results?",
-            "answer": "<p></p><ul><li>Some clients notice increased firmness after the first session<br/></li><li>Visible lifting and toning develops gradually over <strong>2–4 weeks</strong><br/></li><li>Results continue to improve as muscles strengthen<br/></li></ul><p></p>"
+            "question": "Does the treatment hurt?",
+            "answer": "<p>Most patients describe the sensation as strong but comfortable muscle contractions.</p><p>You will feel the muscles working, similar to an intense facial workout, but it should not be painful. Intensity can be adjusted to suit your comfort level.</p>"
           }
         },
         "faq_item_bbafBc": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
+            "question": "Is there any downtime?",
+            "answer": "<p>No.</p><p>You can return to normal activities immediately after treatment. There is typically no redness, swelling, bruising, or peeling.</p>"
           }
         },
         "faq_item_taixeE": {
           "type": "faq_item",
           "settings": {
-            "question": "Who shouldn't have Emlift?",
-            "answer": "<p>Facial Emlift may not be suitable if you:</p><p></p><ul><li>Are pregnant<br/></li><li>Have metal implants in the face or head<br/></li><li>Have implanted electronic medical devices<br/></li><li>Have certain medical conditions</li></ul>"
+            "question": "How many sessions do I need?",
+            "answer": "<p>For visible lifting and contour improvement, a course of 4–6 sessions is typically recommended.</p><p>Some patients choose maintenance sessions after completing their initial course to sustain results.</p><p>Your practitioner will recommend a personalised plan during consultation.</p>"
+          }
+        },
+        "faq_item_Dprfmq": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>You may feel muscle activation immediately.</p><p>Visible lifting and contour improvement usually develops progressively over 4–12 weeks as muscle tone improves.</p><p>Results build gradually rather than appearing suddenly.</p>"
+          }
+        },
+        "faq_item_Np4bdJ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can last several months after a full treatment course.</p><p>Maintenance sessions are often recommended every few months to support long-term muscle tone and facial structure.</p>"
+          }
+        },
+        "faq_item_xHN3BB": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who is a non surgical face lift best for?",
+            "answer": "<p>It is ideal for patients who:</p><p>• Notice mild to moderate facial laxity</p><p>• Want jawline or cheek definition</p><p>• Prefer a non-surgical face lift</p><p>• Do not want injectables</p><p>• Want natural-looking improvement</p>"
+          }
+        },
+        "faq_item_X6VmJe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it make my face look unnatural?",
+            "answer": "<p>No.</p><p>Structural Lift Therapy works by strengthening your own facial muscles. It does not change facial volume or freeze expression, so results appear natural and progressive.</p>"
+          }
+        },
+        "faq_item_6JkCLb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this a replacement for a surgical facelift?",
+            "answer": "<p>No.</p><p>Structural Lift Therapy is a non-surgical face lift option designed for patients who want improvement without surgery. It will not replicate the results of a surgical facelift but can significantly improve contour and support for the right candidate.</p>"
+          }
+        },
+        "faq_item_FDzrh6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I prepare for treatment?",
+            "answer": "<p>No special preparation is required. You should attend with clean skin and follow any practitioner advice given during consultation.</p>"
           }
         }
       },
@@ -2099,7 +2141,13 @@
         "faq_item_Eb6g3R",
         "faq_item_bfCEbU",
         "faq_item_bbafBc",
-        "faq_item_taixeE"
+        "faq_item_taixeE",
+        "faq_item_Dprfmq",
+        "faq_item_Np4bdJ",
+        "faq_item_xHN3BB",
+        "faq_item_X6VmJe",
+        "faq_item_6JkCLb",
+        "faq_item_FDzrh6"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
