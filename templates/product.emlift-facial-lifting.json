@@ -927,9 +927,9 @@
         "overlay_color_start": "rgba(0,0,0,0)",
         "overlay_color_mid": "rgba(0,0,0,0)",
         "overlay_color_fade": "rgba(0,0,0,0)",
-        "heading": "Non-Invasive Facial Muscle Lifting & Contour Definition",
+        "heading": "Structural Lift Therapy\nPowered by EM LIFT Technology",
         "subheading_highlight": "Naturally",
-        "subheading": "  ",
+        "subheading": " Non-Invasive Facial Muscle Lifting & Contour Definition",
         "heading_font_size": 54,
         "subheading_font_size": 38,
         "heading_color": "#3a3a3a",
@@ -1011,49 +1011,6 @@
         "heading_font_size": 44,
         "body_font_size": 17,
         "content_width": 600,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "aftercare_cards_gAf9Uh": {
-      "type": "aftercare-cards",
-      "blocks": {
-        "card_jcUcMa": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Aftercare Tips",
-            "points": "Apply gentle sunscreen daily, SPF 30+||Avoid retinoids & exfoliating products for 3–5 days||Avoid strenuous exercise, saunas, & hot tubs for 24–48 hours||Keep skin hydrated and don't pick or scratch at treated areas"
-          }
-        },
-        "card_LUY68k": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Expected Downtime",
-            "points": "Mild redness and darkening of pigment||Any swelling is typically mild and short-lived||Within 3–7 days, treated areas will flake or fade||Makeup may be worn if skin isn't irritated; apply gently"
-          }
-        }
-      },
-      "block_order": [
-        "card_jcUcMa",
-        "card_LUY68k"
-      ],
-      "name": "Aftercare Cards",
-      "settings": {
-        "heading": "IPL Aftercare & Downtime",
-        "subtitle": "To ensure safe, natural-looking results, patients should follow these key aftercare steps.",
-        "footer_text": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks.",
-        "show_checkmarks": false,
-        "layout": "grid",
-        "section_bg": "#ede4dc",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -2194,7 +2151,6 @@
     "ss_simple_faq_jiYFWj",
     "product_hero_rRYVdp",
     "info_hero_nJHyJj",
-    "aftercare_cards_gAf9Uh",
     "aftercare_downtime_hGykXx",
     "slideshow_UBR4i6",
     "info_hero_Nn73dt",
