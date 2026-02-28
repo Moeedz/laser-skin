@@ -1545,7 +1545,7 @@
       "settings": {
         "heading": "Who Is IPL Best For?",
         "subtitle": "IPL is ideal for clients who want clearer, more even-looking skin without invasive procedures or significant downtime.",
-        "bg_position": "center center",
+        "bg_position": "left center",
         "section_height": 600,
         "overlay_strong": "#ddd0c4e8",
         "overlay_mid": "#ddd0c4a0",
