@@ -1425,68 +1425,6 @@
         "rating_reviews_color": "#888888"
       }
     },
-    "process_timeline_gFy3jQ": {
-      "type": "process-timeline",
-      "blocks": {
-        "stage_RGcHMK": {
-          "type": "stage",
-          "settings": {
-            "title": "Immediately after treatment",
-            "points": "Skin may feel warm or slightly flushed||Mild tightening sensation"
-          }
-        },
-        "stage_apBgqf": {
-          "type": "stage",
-          "settings": {
-            "title": "Days 3–7",
-            "points": "Pigmented areas may darken temporarily before flaking away.||Skin tone begins to appear clearer and brighter"
-          }
-        },
-        "stage_DNEaYB": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 2–4",
-            "points": "Continued reduction in pigmentation ||Improved skin clarity and texture||Results become more noticeable with each session"
-          }
-        },
-        "stage_tCTxYa": {
-          "type": "stage",
-          "settings": {
-            "title": "Ongoing results",
-            "points": "Best results achieved through a course of treatments.||Skin appears clearer, more even, and refined over time"
-          }
-        }
-      },
-      "block_order": [
-        "stage_RGcHMK",
-        "stage_apBgqf",
-        "stage_DNEaYB",
-        "stage_tCTxYa"
-      ],
-      "name": "Process Timeline",
-      "settings": {
-        "heading": "How IPL Works & What to Expect",
-        "sub_heading": "How it works",
-        "body": "<p>IPL delivers controlled pulses of light energy into the skin, targeting excess pigment and visible redness. The light energy is absorbed by pigment or blood vessels, which are then naturally broken down by the body over time. </p>",
-        "timeline_label": "What to expect",
-        "footer_text": "A course of 3–5 treatments spaced 4 weeks apart is typically recommended for optimal pigmentation correction.",
-        "section_bg": "#f8e3e8",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "accent_color": "#b8886a",
-        "line_color": "#baa898",
-        "dot_color": "#baa898",
-        "show_body_card": true,
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "concern_grid_RprEnc": {
       "type": "concern-grid",
       "blocks": {
@@ -1830,6 +1768,68 @@
         "rating_score_font_size": 18,
         "rating_star_color": "#f5c518",
         "rating_reviews_color": "#888888"
+      }
+    },
+    "process_timeline_gFy3jQ": {
+      "type": "process-timeline",
+      "blocks": {
+        "stage_RGcHMK": {
+          "type": "stage",
+          "settings": {
+            "title": "Immediately after treatment",
+            "points": "Skin may feel warm or slightly flushed||Mild tightening sensation"
+          }
+        },
+        "stage_apBgqf": {
+          "type": "stage",
+          "settings": {
+            "title": "Days 3–7",
+            "points": "Pigmented areas may darken temporarily before flaking away.||Skin tone begins to appear clearer and brighter"
+          }
+        },
+        "stage_DNEaYB": {
+          "type": "stage",
+          "settings": {
+            "title": "Weeks 2–4",
+            "points": "Continued reduction in pigmentation ||Improved skin clarity and texture||Results become more noticeable with each session"
+          }
+        },
+        "stage_tCTxYa": {
+          "type": "stage",
+          "settings": {
+            "title": "Ongoing results",
+            "points": "Best results achieved through a course of treatments.||Skin appears clearer, more even, and refined over time"
+          }
+        }
+      },
+      "block_order": [
+        "stage_RGcHMK",
+        "stage_apBgqf",
+        "stage_DNEaYB",
+        "stage_tCTxYa"
+      ],
+      "name": "Process Timeline",
+      "settings": {
+        "heading": "How IPL Works & What to Expect",
+        "sub_heading": "How it works",
+        "body": "<p>IPL delivers controlled pulses of light energy into the skin, targeting excess pigment and visible redness. The light energy is absorbed by pigment or blood vessels, which are then naturally broken down by the body over time. </p>",
+        "timeline_label": "What to expect",
+        "footer_text": "A course of 3–5 treatments spaced 4 weeks apart is typically recommended for optimal pigmentation correction.",
+        "section_bg": "#f8e3e8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b8886a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "show_body_card": true,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "icon_circles_grid_m6Ce7L": {
@@ -2399,11 +2399,11 @@
     "info_hero_fHVYLH",
     "slideshow_eDnBAR",
     "slideshow_WXFRip",
-    "process_timeline_gFy3jQ",
     "concern_grid_RprEnc",
     "slideshow_x36jLg",
     "slideshow_FDrTDa",
     "icon_circles_grid_m6Ce7L",
+    "process_timeline_gFy3jQ",
     "aftercare_cards_pYfVUM",
     "simple_pricing_rows_Ujrjtf",
     "expectations_trust_DiEwP7",
