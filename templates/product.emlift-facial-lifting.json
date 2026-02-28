@@ -1359,7 +1359,9 @@
           "type": "result_card",
           "settings": {
             "title": "Foundation Activation",
-            "session_info": "Best for early lifting support or maintenance.<br><br>After 2 sessions<br><br>Subtle muscle engagement and contour refinement",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_19.06.05.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_19.06.12.png",
+            "session_info": "Best for early lifting support or maintenance.After 2 sessionsSubtle muscle engagement and contour refinement",
             "benefit": "✔ Gently activates deep facial muscles<br>\n✔ Improves jawline tone<br>\n✔ Ideal for prevention and early laxity"
           }
         },
@@ -1367,7 +1369,9 @@
           "type": "result_card",
           "settings": {
             "title": "Strength & Definition Protocol",
-            "session_info": "For visible contour improvement<br><br>After 3–4 sessions<br><br>Progressive lifting effect.<br>Muscle strength and tone improve noticeably",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_19.06.55.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_19.07.02.png",
+            "session_info": "For visible contour improvementAfter 3–4 sessionsProgressive lifting effect.Muscle strength and tone improve noticeably",
             "benefit": "✔ Enhances cheek support<br>\n✔ Improves lower face definition<br>\n✔ Refines natural facial contours"
           }
         },
@@ -1375,7 +1379,9 @@
           "type": "result_card",
           "settings": {
             "title": "Full Structural Lift Course",
-            "session_info": "Maximum lifting and long-term structural support<br><br>After 6 sessions<br><br>Most visible contour and firmness improvement. Results build progressively over 8–12 weeks",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_19.08.34.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_19.08.44.png",
+            "session_info": "Maximum lifting and long-term structural supportAfter 6 sessionsMost visible contour and firmness improvement. Results build progressively over 8–12 weeks",
             "benefit": "✔ Strengthens underlying facial structure<br>\n✔ Improves mid-face and jawline definition<br>\n✔ Supports long-term muscle tone and lift"
           }
         }
