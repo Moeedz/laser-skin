@@ -1244,12 +1244,20 @@
             "title": "",
             "text": "Supports natural lift without altering facial volume"
           }
+        },
+        "point_jwQUY3": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "No needles, no recovery time"
+          }
         }
       },
       "block_order": [
         "point_7pGJBQ",
         "point_Xr8QeC",
-        "point_RR4wW8"
+        "point_RR4wW8",
+        "point_jwQUY3"
       ],
       "name": "Info Hero",
       "settings": {
