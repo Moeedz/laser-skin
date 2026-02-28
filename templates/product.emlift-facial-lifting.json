@@ -958,28 +958,35 @@
           "type": "point",
           "settings": {
             "title": "",
-            "text": "Improves jawline definition"
+            "text": "Strengthens deep facial muscles, not just surface skin"
           }
         },
         "point_Xr8QeC": {
           "type": "point",
           "settings": {
             "title": "",
-            "text": "Enhances cheek support"
+            "text": "  Improves jawline definition and lower face contour"
           }
         },
         "point_RR4wW8": {
           "type": "point",
           "settings": {
             "title": "",
-            "text": "Supports natural lift without altering facial volume"
+            "text": "Enhances cheek support and mid-face lift"
           }
         },
         "point_jwQUY3": {
           "type": "point",
           "settings": {
             "title": "",
-            "text": "No needles, no recovery time"
+            "text": " Delivers natural lift without adding volume"
+          }
+        },
+        "point_jyxBVp": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "No needles, no downtime, no facial distortion"
           }
         }
       },
@@ -987,7 +994,8 @@
         "point_7pGJBQ",
         "point_Xr8QeC",
         "point_RR4wW8",
-        "point_jwQUY3"
+        "point_jwQUY3",
+        "point_jyxBVp"
       ],
       "name": "Info Hero",
       "settings": {
