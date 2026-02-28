@@ -1799,14 +1799,6 @@
             "title": "Legs",
             "description": "Sun damage and pigmentation on lower legs"
           }
-        },
-        "item_QWmKtL": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/6_57e784f8-62db-4e4b-9e60-7855a1204bb2.png",
-            "title": "Hair Reduction",
-            "description": "Selective light targeting of unwanted hair"
-          }
         }
       },
       "block_order": [
@@ -1814,8 +1806,7 @@
         "item_FAPmVi",
         "item_PGRwqw",
         "item_iFCKic",
-        "item_eTq739",
-        "item_QWmKtL"
+        "item_eTq739"
       ],
       "name": "Icon Circles Grid",
       "settings": {
