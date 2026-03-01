@@ -1818,9 +1818,9 @@
       ],
       "name": "Expectations & Trust",
       "settings": {
-        "heading": "Clear pricing. Professional standards.",
-        "subtitle": "Everything you need to feel confident booking your consultation.",
-        "card_title": "What you can expect at Laser Skin Clinics",
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What to expect with NCTF skin revitalisation",
         "card_description": "<p>Your NCTF treatment is delivered in a regulated clinical environment using genuine medical-grade products.</p><p>All injectable treatments are performed under strict medical protocols with full consultation prior to treatment.</p><p>We focus on skin health, safety, and long-term results not quick cosmetic fixes.</p>",
         "section_bg": "#ecd7cc",
         "show_texture": true,
@@ -1863,7 +1863,7 @@
         "banner_text_color": "#333333",
         "banner_highlight_color": "#000000",
         "banner_font_size": 14,
-        "form_heading": "Request Your Consultation",
+        "form_heading": "Make an enquiry",
         "form_subheading": "Fill out the form below and we'll guide you to the best next step.",
         "heading_color": "#000000",
         "heading_font_size": 26,
@@ -1889,7 +1889,7 @@
         "preselected_text_color": "#333333",
         "name_label": "Name",
         "name_placeholder": "Your Name",
-        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_label": "How can we reach you?",
         "contact_method_options": "Email, WhatsApp, Phone Call",
         "email_label": "Email Address",
         "email_placeholder": "Email Address",
@@ -1922,7 +1922,7 @@
         "show_message_field": true,
         "message_label": "How can we help you? (Optional Message)",
         "message_placeholder": "",
-        "button_text": "Request Callback",
+        "button_text": "Submit Form",
         "button_background": "#b8a164",
         "button_hover_background": "#9a8654",
         "button_text_color": "#ffffff",
@@ -1987,6 +1987,13 @@
             "question": "Is NCTF suitable for all skin types?",
             "answer": "<p>Yes. NCTF is suitable for most skin types and tones. A consultation will confirm suitability and identify any contraindications.</p>"
           }
+        },
+        "faq_item_zrX6iW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
         }
       },
       "block_order": [
@@ -1996,7 +2003,8 @@
         "faq_item_BAEKdm",
         "faq_item_F8jzNC",
         "faq_item_KYFgra",
-        "faq_item_QA7HBU"
+        "faq_item_QA7HBU",
+        "faq_item_zrX6iW"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
