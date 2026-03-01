@@ -1823,7 +1823,7 @@
         "trust_point_fP88EX": {
           "type": "trust_point",
           "settings": {
-            "icon": "calendar",
+            "icon": "shield",
             "text": "Medically delivered resurfacing"
           }
         },
@@ -1837,7 +1837,7 @@
         "trust_point_iJxRmP": {
           "type": "trust_point",
           "settings": {
-            "icon": "shield",
+            "icon": "heart",
             "text": "Structured recovery & aftercare planning"
           }
         },
