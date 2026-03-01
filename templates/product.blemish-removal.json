@@ -2017,8 +2017,8 @@
         "trust_point_ciVCVf": {
           "type": "trust_point",
           "settings": {
-            "icon": "test_patch",
-            "text": "Test patch included"
+            "icon": "shield",
+            "text": "Clinically assessed & safely delivered"
           }
         },
         "trust_point_KpE6pc": {
