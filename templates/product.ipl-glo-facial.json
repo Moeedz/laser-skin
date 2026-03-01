@@ -2328,6 +2328,13 @@
             "question": "How many sessions will I need?",
             "answer": "<p>Most clients require a course of 3–5 treatments spaced approximately 4 weeks apart for optimal results. The exact number depends on the severity of pigmentation or redness and your skin type.</p>"
           }
+        },
+        "faq_item_gaapAz": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
         }
       },
       "block_order": [
@@ -2343,7 +2350,8 @@
         "faq_item_mGagE4",
         "faq_item_MJqLKK",
         "faq_item_XriMjF",
-        "faq_item_n8aeTB"
+        "faq_item_n8aeTB",
+        "faq_item_gaapAz"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
