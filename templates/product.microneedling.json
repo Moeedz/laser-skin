@@ -2256,6 +2256,13 @@
             "question": "Who should avoid RF Microneedling?",
             "answer": "<p>Treatment may not be suitable if you:</p><p>• Are pregnant or breastfeeding</p><p>• Have active skin infections or open wounds</p><p>• Have certain implanted electronic devices</p><p>• Have a history of abnormal scarring (assessed individually)</p>"
           }
+        },
+        "faq_item_npA9Tt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
         }
       },
       "block_order": [
@@ -2267,7 +2274,8 @@
         "faq_item_fLPNMj",
         "faq_item_B6efyA",
         "faq_item_3Ark46",
-        "faq_item_LxcCwt"
+        "faq_item_LxcCwt",
+        "faq_item_npA9Tt"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
