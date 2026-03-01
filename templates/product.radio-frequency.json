@@ -1734,8 +1734,8 @@
         "trust_point_xYp3TR": {
           "type": "trust_point",
           "settings": {
-            "icon": "calendar",
-            "text": "7-day appointment guarantee"
+            "icon": "shield",
+            "text": "Controlled dermal heating technology"
           }
         },
         "trust_point_EnXjwh": {
@@ -1748,8 +1748,8 @@
         "trust_point_AJ8nTN": {
           "type": "trust_point",
           "settings": {
-            "icon": "test_patch",
-            "text": "Clinically led treatment"
+            "icon": "heart",
+            "text": "Progressive collagen stimulation"
           }
         },
         "trust_point_jBwzyL": {
