@@ -2075,7 +2075,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "shield",
-            "text": " Medical-grade light technology"
+            "text": "Medical-grade light technology"
           }
         },
         "trust_point_hngUqH": {
@@ -2088,8 +2088,8 @@
         "trust_point_Mfb3Hy": {
           "type": "trust_point",
           "settings": {
-            "icon": "test_patch",
-            "text": "Test patch included"
+            "icon": "heart",
+            "text": "Minimal downtime treatment"
           }
         },
         "trust_point_dr4kBU": {
