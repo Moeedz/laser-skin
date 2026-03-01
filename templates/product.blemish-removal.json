@@ -2222,6 +2222,13 @@
             "question": "Do you treat sensitive areas?",
             "answer": "<p>Yes. We regularly treat areas such as:</p><p>• Face</p><p>• Neck</p><p>• Décolletage</p><p>• Underarms</p><p>Each area is assessed carefully to ensure safe treatment.</p>"
           }
+        },
+        "faq_item_KFQfKN": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
         }
       },
       "block_order": [
@@ -2232,7 +2239,8 @@
         "faq_item_9m6Uie",
         "faq_item_jFay7w",
         "faq_item_TT4CYc",
-        "faq_item_iiVhY9"
+        "faq_item_iiVhY9",
+        "faq_item_KFQfKN"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
