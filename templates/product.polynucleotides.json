@@ -2169,10 +2169,10 @@
       ],
       "name": "Expectations & Trust",
       "settings": {
-        "heading": "Regenerative treatment. Transparent pricing. Natural results.",
-        "subtitle": "Everything you need to feel confident booking your consultation.",
-        "card_title": "What you can expect with Polynucleotides",
-        "card_description": "<p>Polynucleotides are regenerative treatments designed to improve skin quality at a cellular level.</p><p>From your consultation, you’ll understand:</p><p>• How the treatment stimulates collagen</p><p>• Expected session structure</p><p>• Timeline for visible improvement</p><p>• How it integrates with other treatments</p><p>We focus on subtle, natural-looking improvement delivered with structured planning and transparent pricing.</p>",
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What to expect with polynucleotide treatment",
+        "card_description": "<p>Polynucleotides are regenerative skin treatments designed to support cellular repair, improve elasticity, and enhance overall skin quality through targeted microinjections.</p><p>This advanced bio-stimulatory approach works beneath the surface to encourage natural tissue repair and collagen support over time.</p><p>We prioritise subtle, progressive improvement and medically delivered precision.</p>",
         "section_bg": "#e4dfd9",
         "show_texture": true,
         "texture_opacity": 80,
@@ -2359,6 +2359,13 @@
             "question": "Who may not be suitable?",
             "answer": "<p>This treatment may not be suitable if:</p><p>• Pregnant or breastfeeding</p><p>• Active infection in treatment area</p><p>• Certain autoimmune conditions</p><p>A consultation ensures safety.</p>"
           }
+        },
+        "faq_item_8qqQjG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you during your consultation.</p>"
+          }
         }
       },
       "block_order": [
@@ -2371,7 +2378,8 @@
         "faq_item_Rj9Dtr",
         "faq_item_tncYma",
         "faq_item_Lbdw7F",
-        "faq_item_4yfrz3"
+        "faq_item_4yfrz3",
+        "faq_item_8qqQjG"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
