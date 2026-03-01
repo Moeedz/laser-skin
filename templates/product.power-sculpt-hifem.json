@@ -983,21 +983,21 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Builds and tones muscle effectively"
+            "text": "Stimulates high-intensity muscle activation"
           }
         },
         "check_item_rPdr3z": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Supports fat reduction in targeted areas"
+            "text": "Supports improved tone and definition"
           }
         },
         "check_item_AtyEWW": {
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "No needles, no surgery, no recovery"
+            "text": "No needles. No surgery. No downtime."
           }
         },
         "trust_item_f4CTa3": {
