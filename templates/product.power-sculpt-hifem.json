@@ -2214,36 +2214,85 @@
         "faq_item_XryWre": {
           "type": "faq_item",
           "settings": {
-            "question": "How does powersculpt work?",
-            "answer": "<p>PowerSculpt stimulates <strong>supramaximal muscle contractions</strong>, far stronger than those achieved through voluntary exercise.</p><p>In one session, the muscles contract thousands of times, leading to:</p><ul><li>Increased muscle density<br/></li><li>Improved tone and strength<br/></li><li>Fat reduction in the treated area<br/></li></ul>"
+            "question": "What is PowerSculpt?",
+            "answer": "<p>PowerSculpt is a non-invasive body contouring treatment that uses advanced electromagnetic stimulation to trigger powerful muscle contractions in targeted areas such as the abdomen, glutes, or thighs.</p><p>These contractions are significantly stronger than those achieved through voluntary exercise.</p>"
           }
         },
         "faq_item_JcGn7T": {
           "type": "faq_item",
           "settings": {
-            "question": "Is powersculpt a weight loss treatment?",
-            "answer": "<p>No.</p><p>PowerSculpt is <strong>not a weight-loss solution</strong>. It is designed to <strong>build muscle and tone the body</strong>, which may lead to fat reduction and improved body shape.</p>"
+            "question": "How does PowerSculpt Work?",
+            "answer": "<p>PowerSculpt delivers high-intensity electromagnetic energy to targeted muscle groups, causing repeated supra maximal contractions.</p><p>This stimulates muscle strengthening and toning while supporting improved contour over a structured treatment course.</p>"
           }
         },
         "faq_item_jkhbFw": {
           "type": "faq_item",
           "settings": {
-            "question": "Does powersculpt hurt?",
-            "answer": "<p>No.</p><p>The treatment is <strong>not painful</strong>. You will feel strong muscle contractions, similar to an intense workout, but without strain or discomfort.</p>"
+            "question": "Does PowerSculpt burn fat?",
+            "answer": "<p>PowerSculpt primarily stimulates muscle strengthening and toning.</p><p>Some patients may experience mild fat reduction in treated areas due to increased metabolic demand, but it is not a weight loss treatment.</p><p>It is best suited for body contouring and muscle definition rather than fat loss alone.</p>"
           }
         },
         "faq_item_w7pDUm": {
           "type": "faq_item",
           "settings": {
-            "question": "How long does a session last?",
-            "answer": "<p>No.</p><p>The treatment is <strong>not painful</strong>. You will feel strong muscle contractions, similar to an intense workout, but without strain or discomfort.</p>"
+            "question": "Is this a replacement for the gym?",
+            "answer": "<p>No.</p><p>PowerSculpt supports muscle activation and contour improvement but does not replace exercise, healthy nutrition, or overall lifestyle management.</p><p>It works best as a complement to an active routine.</p>"
           }
         },
         "faq_item_xRiTy3": {
           "type": "faq_item",
           "settings": {
+            "question": "Does the treatment hurt?",
+            "answer": "<p>Most patients describe the sensation as intense but tolerable muscle contractions.</p><p>You will feel your muscles working strongly. The intensity can be adjusted to suit comfort levels.</p>"
+          }
+        },
+        "faq_item_LGwkby": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How bad is the downtime, really?",
+            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+          }
+        },
+        "faq_item_F6EEgL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>No.</p><p>You can return to normal activities immediately after treatment. Mild muscle soreness similar to a workout may occur.</p>"
+          }
+        },
+        "faq_item_8ANgXM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions do I need?",
+            "answer": "<p>A course of 4–6 sessions is typically recommended for visible improvement.</p><p>Treatment plans are structured to allow progressive muscle adaptation over time.</p>"
+          }
+        },
+        "faq_item_WcfHzi": {
+          "type": "faq_item",
+          "settings": {
             "question": "When will I see results?",
-            "answer": "<p></p><ul><li>Some clients feel increased firmness after the first session<br/></li><li>Visible results typically develop <strong>2–4 weeks</strong> after the final session<br/></li><li>Muscle continues to strengthen for several weeks post-treatment</li></ul>"
+            "answer": "<p>Some patients feel increased muscle activation immediately.</p><p>Visible contour improvement typically develops gradually over several weeks as muscle tone improves.</p>"
+          }
+        },
+        "faq_item_b7JdRA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is PowerSculpt suitable for everyone?",
+            "answer": "<p>PowerSculpt may not be suitable if you:</p><p>• Have a pacemaker or implanted electronic device</p><p>• Are pregnant</p><p>• Have certain medical conditions</p><p>• Have metal implants in the treatment area</p><p>A medical assessment will determine suitability.</p>"
+          }
+        },
+        "faq_item_g6HcMe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can it help after pregnancy?",
+            "answer": "<p>PowerSculpt may support abdominal muscle strengthening after pregnancy, particularly for mild muscle laxity.</p><p>However, it is not a medical treatment for diastasis recti and suitability must be assessed individually.</p>"
+          }
+        },
+        "faq_item_Xn3tqH": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long is a session?",
+            "answer": "<p>Sessions typically last around 30 minutes depending on the treatment area.</p>"
           }
         },
         "faq_item_eTA3dT": {
@@ -2260,16 +2309,23 @@
         "faq_item_jkhbFw",
         "faq_item_w7pDUm",
         "faq_item_xRiTy3",
+        "faq_item_LGwkby",
+        "faq_item_F6EEgL",
+        "faq_item_8ANgXM",
+        "faq_item_WcfHzi",
+        "faq_item_b7JdRA",
+        "faq_item_g6HcMe",
+        "faq_item_Xn3tqH",
         "faq_item_eTA3dT"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
-        "section_bg_color": "#efefef",
+        "section_bg_color": "#ededed",
         "max_width": 900,
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Questions. Answered",
+        "heading": "Your Powersculpt Questions. Answered",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
