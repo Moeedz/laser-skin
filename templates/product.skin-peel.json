@@ -1,0 +1,2231 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "button_PUkJNb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "text": "View Pricing",
+            "stretch": false,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 2,
+            "show_below_gallery": true,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "button_PUkJNb",
+        "price",
+        "payment_terms",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "complementary_products"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "full",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "treatment_tabs_section_krrqjg": {
+      "type": "treatment-tabs-section",
+      "blocks": {
+        "tab_RjxKk3": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "co2",
+            "tab_name": "CO2 Laser Resurfacing",
+            "heading": "CO2 Laser Resurfacing",
+            "top_description": "<p>CO2 laser resurfacing uses precise, controlled light energy to remove damaged skin layers, revealing smoother, brighter, and more youthful skin beneath. It targets fine lines, acne scars, uneven texture, and pigmentation for a deeply rejuvenated complexion.</p>",
+            "image_1": "shopify://shop_images/MAR-VJU-INTRO-INSTAST-REV01_vju-stories-intro_b3dd17bb-0198-47d6-a676-d05adf7148d7.jpg",
+            "image_1_aspect_ratio": "original",
+            "consultation_heading": "Speak to a specialist",
+            "consultation_badge": "",
+            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "View prices and make an enquiry",
+            "package_description": "Pay per session or buy multiple and save"
+          }
+        },
+        "package_nWXBMp": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "co2",
+            "package_name": "Half Face",
+            "price": "from £125",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£175",
+            "session_1_total": "total £175.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982515552636&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£150.00",
+            "session_3_total": "total £450.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982640234876&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£125",
+            "session_6_total": "total £750",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982640267644&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_MiAJUJ": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "co2",
+            "package_name": "Full Face",
+            "price": "from £250",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£300",
+            "session_1_total": "total £300.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982515585404&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£275",
+            "session_3_total": "total £825",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982515618172&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£250.00",
+            "session_6_total": "total £1,500",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982515650940&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_RjxKk3",
+        "package_nWXBMp",
+        "package_MiAJUJ"
+      ],
+      "disabled": true,
+      "name": "Treatment Tabs",
+      "settings": {
+        "section_width": 1400,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "tab_alignment": "center",
+        "tab_gap": 12,
+        "tab_font_size": 15,
+        "tab_font_weight": "500",
+        "tab_border_radius": 50,
+        "tab_border_width": 2,
+        "tab_background": "#ffffff",
+        "tab_text_color": "#000000",
+        "tab_border_color": "#333333",
+        "tab_hover_background": "#f5f5f5",
+        "tab_hover_text_color": "#000000",
+        "tab_active_background": "#e6b325",
+        "tab_active_text_color": "#ffffff",
+        "tab_active_border_color": "#e6b325",
+        "heading_font_size": 42,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 15,
+        "text_color": "#333333",
+        "cta_card_gap": 16,
+        "cta_border_radius": 16,
+        "cta_border_width": 2,
+        "cta_background": "#ffffff",
+        "cta_border_color": "#333333",
+        "cta_hover_background": "#f9f9f9",
+        "cta_heading_color": "#000000",
+        "cta_text_color": "#666666",
+        "badge_background": "#f0f0f0",
+        "badge_text_color": "#000000",
+        "price_text_color": "#666666",
+        "package_border_radius": 12,
+        "package_border_width": 2,
+        "package_background": "#ffffff",
+        "package_border_color": "#333333",
+        "package_heading_color": "#000000",
+        "package_price_color": "#666666",
+        "package_button_radius": 8,
+        "package_button_background": "#e6b325",
+        "package_button_text_color": "#ffffff",
+        "package_button_hover_background": "#e6b325",
+        "image_border_radius": 8,
+        "show_collapsible_1": true,
+        "collapsible_1_title": "7-Day Appointment Guarantee",
+        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
+        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers can be seen within 7 days of their enquiry.</p>",
+        "show_collapsible_2": true,
+        "collapsible_2_title": "C02 Price match guarantee",
+        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_2_content": "<p>C02 is our go-to treatment for so many skin concerns because we believe it delivers unmatched, transformative results. We want every client to experience the brilliance of C02, which is why we offer a <strong>Price Match Guarantee</strong> on both <strong>single sessions and multi-session bookings</strong>.</p><p>If you find a <strong>like-for-like C02 treatment</strong> at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong>  and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
+        "show_collapsible_3": false,
+        "collapsible_3_title": "Booking Process",
+        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
+        "collapsible_3_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your appointment.</p>",
+        "show_collapsible_4": true,
+        "collapsible_4_title": "Securing your booking",
+        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_4_content": "<p>A small deposit of £30 will be required to secure your booking. Should you wish to go ahead we will take the £30 off the total price of your treatment cost. </p>",
+        "show_collapsible_5": true,
+        "collapsible_5_title": "Payment Options & Finance",
+        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
+        "collapsible_5_content": "<p>Treatments can be paid for by cash or card on the day of your appointment. We also offer Klarna Finance and Shopify instalment options for added flexibility. If you’d like to pay using one of these methods, just let us know and we’ll guide you through it.</p>",
+        "show_collapsible_6": true,
+        "collapsible_6_title": "Contact and address",
+        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
+        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
+        "show_faq_link": true,
+        "faq_pre_text": "Have more questions?",
+        "faq_link_text": "View FAQs",
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
+      }
+    },
+    "ss_image_with_text_12_gUF6fh": {
+      "type": "ss-image-with-text-12",
+      "blocks": {
+        "slide_4jhyPz": {
+          "type": "slide",
+          "settings": {
+            "heading": "<h3><strong>Advanced Skin Renewal for Smoother, Firmer, More Youthful Skin</strong></h3>",
+            "text": "<p>CO2 Laser Resurfacing is one of the most effective treatments available for advanced skin renewal.</p><p>It uses concentrated beams of carbon dioxide laser energy to remove damaged skin cells, stimulate collagen production, and trigger the body’s natural healing response.</p><p>The result is smoother, tighter, and more even skin with a visible reduction in fine lines, pigmentation, scarring, and sun damage.</p><p>At Laser Skin Clinics, we offer both <strong>ablative</strong> and <strong>non-ablative</strong> CO2 laser resurfacing.</p><p>Ablative treatments precisely remove the outermost layers of the skin to deliver dramatic results for deeper wrinkles, texture irregularities, and scars.</p><p>Non-ablative treatments gently heat the deeper layers of the skin without removing surface tissue, ideal for those seeking noticeable rejuvenation with minimal downtime.</p><p>Your practitioner will advise which approach best suits your skin type, goals, and recovery preferences.<br/></p>",
+            "button": "Book Online",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3552096&location=4546",
+            "button2": "Get more information",
+            "button2_url": "shopify://pages/contact",
+            "video": "shopify://files/videos/03 - 3D Vjuve Face.mp4",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": false,
+            "image": "shopify://shop_images/laser-hair-removal.webp"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4jhyPz"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {padding-top: 10px; padding-bottom: 5px;}",
+        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
+      ],
+      "name": "SS - Image With Text #12",
+      "settings": {
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "start",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 12,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 12,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "right",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#e6b325",
+        "button_bg_hover_color": "#deac21",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#ffffff",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "#000000",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "ss_image_with_text_9_GLgAya": {
+      "type": "ss-image-with-text-9",
+      "blocks": {
+        "text_zqNDU6": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Benefits of CO2 Laser Resurfacing</strong></h3>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 34,
+            "text_size_mobile": 26,
+            "text_height": 150,
+            "text_mt": 0,
+            "text_align": "left",
+            "text_align_mobile": "left",
+            "text_color": "#e6b325"
+          }
+        },
+        "icon_text_UxfF9a": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Refines texture and reduces fine lines, wrinkles, and scarring"
+          }
+        },
+        "icon_text_LJCxHi": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Improves firmness, elasticity, and overall skin tone"
+          }
+        },
+        "icon_text_dEUWkb": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Brightens uneven pigmentation and sun damage"
+          }
+        },
+        "icon_text_WwkP3M": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Stimulates deep collagen renewal for lasting rejuvenation"
+          }
+        },
+        "button_HfVK4Q": {
+          "type": "button",
+          "settings": {
+            "button": "Book Online",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3552096&location=4546",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 200,
+            "button_width_mobile": 700,
+            "button_mt": 52,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#e6b325",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "button_6bHTKw": {
+          "type": "button",
+          "settings": {
+            "button": "Get more Information",
+            "button_url": "shopify://pages/contact",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 270,
+            "button_width_mobile": 700,
+            "button_mt": 12,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_zqNDU6",
+        "icon_text_UxfF9a",
+        "icon_text_LJCxHi",
+        "icon_text_dEUWkb",
+        "icon_text_WwkP3M",
+        "button_HfVK4Q",
+        "button_6bHTKw"
+      ],
+      "disabled": true,
+      "name": "SS - Image With Text #9",
+      "settings": {
+        "body_gap": 50,
+        "body_gap_mobile": 0,
+        "image": "shopify://shop_images/MAR-VJU-VISREJU-INSTAST-REV01_vju-stories-visual-rejuvenation.jpg",
+        "image_position": "left",
+        "image_position_mobile": "top",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "content_maxwidth": 700,
+        "content_padding_vertical": 40,
+        "content_padding_vertical_mobile": 20,
+        "content_padding_horizontal": 24,
+        "content_padding_horizontal_mobile": 16,
+        "row_gap": 16,
+        "row_mt": 20,
+        "row_align": "left",
+        "row_align_mobile": "left",
+        "icon_size": 30,
+        "icon_size_mobile": 26,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 18,
+        "text_size_mobile": 16,
+        "text_height": 180,
+        "icon_color": "#000000",
+        "text_color": "#2b1a1a",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_clothing_image_grid_4XaYjQ": {
+      "type": "ss-clothing-image-grid",
+      "blocks": {
+        "link_ML94CQ": {
+          "type": "link",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_21.22.38_1a2b0d45.jpg",
+            "text": "",
+            "url": "",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "link_ML94CQ"
+      ],
+      "disabled": true,
+      "name": "SS - Threads Image Grid",
+      "settings": {
+        "font_size": 24,
+        "font_color": "#000000",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_vertical": 0,
+        "section-width": 200
+      }
+    },
+    "rich_text_nziPUE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U7EUj7": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>The CO2 Laser 3-Step Process</strong>",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U7EUj7"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": true
+      }
+    },
+    "ss_steps_11_7cMyRT": {
+      "type": "ss-steps-11",
+      "blocks": {
+        "step_jmRN9F": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 1",
+            "title": "CONSULTATION",
+            "text": "<p>Your consultation will be done on the day of your treatment, an extra consultation session is not needed.<br/><br/>We will begin with a detailed consultation by one of our qualified professionals.<br/><br/>We evaluate your skin type, texture, and areas of concern to decide whether this treatment is suitable for you<br/><br/>Your personalised plan is designed to deliver maximum improvement safely and effectively.</p>"
+          }
+        },
+        "step_jiiz8x": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 2",
+            "title": "PROCEDURE",
+            "text": "<p>During the treatment, targeted pulses of CO2 laser energy penetrate the skin to remove or heat specific layers.<br/><br/>The treatment removes damaged cells from the surface and remodels collagen beneath the surface.</p>"
+          }
+        },
+        "step_6jaGgE": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 3",
+            "title": "RECOVERY",
+            "text": "<p>Following your session, the skin naturally begins its healing process.<br/><br/>With ablative resurfacing, you can expect redness and light peeling for several days as new, fresh skin emerges.<br/><br/>With non-ablative resurfacing, recovery is quicker, with only mild redness for a day or two.<br/><br/>Over the coming weeks, new collagen is produced, improving skin firmness, smoothness, and overall radiance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_jmRN9F",
+        "step_jiiz8x",
+        "step_6jaGgE"
+      ],
+      "disabled": true,
+      "name": "SS - Steps #11",
+      "settings": {
+        "layout": "image_content",
+        "layout_mobile": "image_content",
+        "layout_gap": 64,
+        "layout_gap_mobile": 32,
+        "image": "shopify://shop_images/MAR-VJU-INTRO-INSTAST-REV01_vju-stories-intro-2.jpg",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "steps_custom": false,
+        "steps_font": "josefin_sans_n4",
+        "steps_size": 12,
+        "steps_size_mobile": 12,
+        "steps_height": 100,
+        "steps_padding_horizontal": 8,
+        "steps_padding_horizontal_mobile": 8,
+        "steps_padding_vertical": 4,
+        "steps_padding_vertical_mobile": 4,
+        "steps_radius": 100,
+        "steps_border_thickness": 1,
+        "steps_content_align": "left",
+        "steps_content_align_mobile": "left",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 24,
+        "title_size_mobile": 20,
+        "title_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 8,
+        "text_mt_mobile": 8,
+        "steps_color": "#ffffff",
+        "steps_bg_color": "#e6b325",
+        "steps_border_color": "#e6b325",
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "image_border_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "175993612397035c9e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_qFMFmN": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+          "settings": {
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
+          }
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_qFMFmN"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_Dpx4Qh": {
+          "type": "text",
+          "settings": {
+            "question": "What is the difference between ablative and non-ablative CO2 laser?",
+            "answer": "<p>Ablative resurfacing removes damaged cells on the surface, while non-ablative treatment works deeper to remodel collagen without breaking the skin barrier. </p><p></p>"
+          }
+        },
+        "text_zWknmA": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+          }
+        },
+        "text_AYYwGh": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_Najw7q": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_iapnQM": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if you determine the treatment is not for me?",
+            "answer": "<p>You will be issued a full refund.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
+          "settings": {
+            "question": "Who is CO2 Laser Resurfacing suitable for?",
+            "answer": "<p>It is suitable for those looking to address fine lines, sun damage, scarring, or uneven texture.<br/><br/>Ablative resurfacing is best for moderate to advanced skin concerns, while non-ablative suits those seeking a gentler option with less downtime.</p>"
+          }
+        },
+        "text_UiGdVT": {
+          "type": "text",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>Ablative CO2 resurfacing typically involves 5 to 7 days of recovery, while non-ablative treatments have little to no downtime.</p><p>Your practitioner will advise on post-treatment care and the expected healing period.</p>"
+          }
+        },
+        "text_P8rQpD": {
+          "type": "text",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>You will begin to notice improvements within 4-6 weeks.<br/><br/>Collagen production continues to increase for several months, enhancing firmness and clarity over time.</p>"
+          }
+        },
+        "text_XUDYHP": {
+          "type": "text",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can last several years depending on skin type, age, and lifestyle.<br/><br/>Annual maintenance treatments and good sun protection help prolong results.</p>"
+          }
+        },
+        "text_nPeQJz": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions do I need?",
+            "answer": "<p>Most clients see significant improvement after a single session.<br/><br/>However, a course of 3-6 treatments may be recommended for deeper concerns.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Dpx4Qh",
+        "text_zWknmA",
+        "text_AYYwGh",
+        "text_Najw7q",
+        "text_iapnQM",
+        "text_JMUbWR",
+        "text_UiGdVT",
+        "text_P8rQpD",
+        "text_XUDYHP",
+        "text_nPeQJz"
+      ],
+      "disabled": true,
+      "name": "SS - FAQ #1",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 1
+      }
+    },
+    "product_hero_RqkdU3": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_VPPAXf": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Personalised, clinician‑designed plan"
+          }
+        },
+        "check_item_h7D8Wh": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Proven CO₂ technology with medical precision"
+          }
+        },
+        "check_item_yWhkwq": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Controlled downtime, long-term skin renewal"
+          }
+        },
+        "check_item_PH7QGW": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Visible improvements as your skin heals and renews."
+          }
+        },
+        "trust_item_nrPAC8": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_z7z9at": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_GtRaHn": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_WU73Kn": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_VPPAXf",
+        "check_item_h7D8Wh",
+        "check_item_yWhkwq",
+        "check_item_PH7QGW",
+        "trust_item_nrPAC8",
+        "trust_item_z7z9at",
+        "trust_item_GtRaHn",
+        "trust_item_WU73Kn"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_pnoqlgpnoqlgpnoq.png",
+        "image_position": "center center",
+        "desktop_height": 800,
+        "mobile_height": 240,
+        "background_color": "#f6dbcd",
+        "overlay_color_start": "#f6dbcd",
+        "overlay_color_mid": "#f6dbcd",
+        "overlay_color_fade": "rgba(0,0,0,0)",
+        "heading": "Transform your skin’s texture with advanced CO₂ laser resurfacing.",
+        "subheading_highlight": "Start with a clinical CO2 laser plan",
+        "subheading": " ",
+        "heading_font_size": 54,
+        "subheading_font_size": 28,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Reduce scarring, lines and uneven texture with expert‑led CO₂ laser resurfacing. Safe, clinical, and results‑focused.</p>",
+        "body_font_size": 15,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book Your CO₂ Consultation",
+        "button_link": "#cf-template--25630315217276__consultation_form_NRQDDA",
+        "button_open_new_tab": false,
+        "button_bg": "#605d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#fbdcce",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
+    "treatment_comparison_jCJbxT": {
+      "type": "treatment-comparison",
+      "blocks": {
+        "comparison_column_GdFPXq": {
+          "type": "comparison_column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_4-removebg-preview.png",
+            "title": "Surface-level treatments",
+            "points": "Improve hydration and tone||Support daily skin health||Primarily targets tone and surface clarity, with limited impact on deeper texture.",
+            "check_style": "muted",
+            "footer_note": ""
+          }
+        },
+        "comparison_column_AP6JET": {
+          "type": "comparison_column",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_5.png",
+            "title": "Clinically led CO₂ laser",
+            "points": "Targets deeper skin layers responsibly||Stimulates new collagen production",
+            "check_style": "accent",
+            "footer_note": "Works below the surface"
+          }
+        }
+      },
+      "block_order": [
+        "comparison_column_GdFPXq",
+        "comparison_column_AP6JET"
+      ],
+      "name": "Treatment Comparison",
+      "settings": {
+        "heading": "<p>Topical care can only do so much. CO₂ laser renews skin where it matters most.</p>",
+        "subtitle": "While most treatments only reach the surface, CO₂ laser resurfacing revitalises the deeper layers where real skin renewal begins.",
+        "rec_title": "Why we recommend CO₂ laser for texture",
+        "rec_description": "<p>Concerns like acne scarring and deeper lines start below the surface. CO₂ laser stimulates controlled dermal renewal, rebuilding smoother, stronger skin at its foundation.</p>",
+        "rec_points": "Consultation-led||Medically trained clinicians||Personalised treatment planning",
+        "footer_text": "CO₂ laser treatments penetrate deep into the dermis where real skin repair and texture improvements happen.",
+        "section_bg": "#e5e0da",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "muted_check_color": "#999999",
+        "rec_bg": "#ece7e1",
+        "rec_border": "#b5a99a",
+        "heading_font_size": 38,
+        "col_title_font_size": 20,
+        "body_font_size": 16,
+        "rec_card_width": 340,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "slideshow_9NBKXH": {
+      "type": "slideshow",
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "stacked_info_cards_Tc3JWJ": {
+      "type": "stacked-info-cards",
+      "blocks": {
+        "card_W6UEpt": {
+          "type": "card",
+          "settings": {
+            "title": "Surface-level laser treatments",
+            "points": "Designed to improve tone and brightness. Ideal for mild surface concerns.||Limited impact on deeper texture and scaring."
+          }
+        },
+        "card_fVk8hH": {
+          "type": "card",
+          "settings": {
+            "title": "Fully ablative lasers",
+            "points": "Can produce strong results||Often involve longer downtime and higher recovery demands"
+          }
+        },
+        "card_8KLj9Y": {
+          "type": "card",
+          "settings": {
+            "title": "Fractional CO₂ laser resurfacing",
+            "points": "Targets damaged micro-zones while preserving healthy skin, promoting faster healing with lasting results.||Supports faster healing with long term texture improvement||Personalised, clinician-led treatment planning"
+          }
+        }
+      },
+      "block_order": [
+        "card_W6UEpt",
+        "card_fVk8hH",
+        "card_8KLj9Y"
+      ],
+      "name": "Stacked Info Cards",
+      "settings": {
+        "heading": "<p>Why fractional CO₂ laser is the gold standard for skin renewal</p>",
+        "subtitle": "Not all laser treatments work at the same depth or deliver the same balance of results and recovery.",
+        "section_bg": "#f9e8de",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3028",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "card_bg": "#fbefe8",
+        "card_border": "#ddd8d0",
+        "heading_font_size": 40,
+        "card_title_font_size": 21,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "split_content_CrNMyU": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_xMdVEP": {
+          "type": "left_point",
+          "settings": {
+            "text": "Acne scarring, surgical scars, or stretch marks"
+          }
+        },
+        "left_point_UUBD9p": {
+          "type": "left_point",
+          "settings": {
+            "text": "Fine lines, wrinkles, and skin laxity"
+          }
+        },
+        "left_point_7fAXBm": {
+          "type": "left_point",
+          "settings": {
+            "text": "Uneven texture, enlarged pores, or sun damage"
+          }
+        },
+        "left_point_J6AFEp": {
+          "type": "left_point",
+          "settings": {
+            "text": "Clients wanting significant skin resurfacing results"
+          }
+        },
+        "left_point_QwDLpk": {
+          "type": "left_point",
+          "settings": {
+            "text": "Those prepared for a structured recovery period"
+          }
+        },
+        "left_point_3rG7RF": {
+          "type": "left_point",
+          "settings": {
+            "text": "Skin tones confirmed as suitable during consultation"
+          }
+        },
+        "right_point_GCcjD6": {
+          "type": "right_point",
+          "settings": {
+            "text": "You are pregnant or breastfeeding"
+          }
+        },
+        "right_point_GwC6gB": {
+          "type": "right_point",
+          "settings": {
+            "text": "You have active skin infections or open wounds in the treatment area"
+          }
+        },
+        "right_point_apapdG": {
+          "type": "right_point",
+          "settings": {
+            "text": "You are using isotretinoin (Roaccutane) or have recently stopped"
+          }
+        },
+        "right_point_nX4YQQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "You have a history of keloid scarring"
+          }
+        },
+        "right_point_FBrGDA": {
+          "type": "right_point",
+          "settings": {
+            "text": "Darker skin tones require an individual assessment for safety and settings. (assessed individually)"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_xMdVEP",
+        "left_point_UUBD9p",
+        "left_point_7fAXBm",
+        "left_point_J6AFEp",
+        "left_point_QwDLpk",
+        "left_point_3rG7RF",
+        "right_point_GCcjD6",
+        "right_point_GwC6gB",
+        "right_point_apapdG",
+        "right_point_nX4YQQ",
+        "right_point_FBrGDA"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Is CO₂ Right For You?",
+        "subtitle": "Fractional CO₂ laser works by creating controlled micro-injuries in the skin to stimulate deep collagen remodelling. Suitability depends on skin type, condition, and treatment goals assessed during your consultation.",
+        "footer_text": "Suitability is always confirmed during your consultation and patch test.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "Ideal For",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "May Not Be Suitable If",
+        "right_subtitle": "",
+        "section_bg": "#ece3e0",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
+    "slideshow_49kXaM": {
+      "type": "slideshow",
+      "blocks": {
+        "image_4Fnxpp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/C023D.png",
+            "mobile_image": "shopify://shop_images/C023M_52eecc87-22a7-445f-a437-6fb09d55fe7e.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4Fnxpp"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "treatment_tiers_cGjMRP": {
+      "type": "treatment-tiers",
+      "blocks": {
+        "tier_Tjm8yk": {
+          "type": "tier",
+          "settings": {
+            "title": "Light Resurfacing",
+            "best_for": "early texture, pores, dullness",
+            "downtime": "2–3 days",
+            "description": "<p>A gentle, surface-level refresh designed to smooth uneven texture and revive dull, tired-looking skin.</p><p>Ideal for sun exposure, open pores, and mild imperfections — revealing a healthy, natural glow with minimal downtime.<br/><br/><em><strong>Suitable for those wanting minimal disruption to routine.</strong></em></p>"
+          }
+        },
+        "tier_Kn7Lge": {
+          "type": "tier",
+          "settings": {
+            "title": "Moderate Resurfacing",
+            "best_for": "fine lines, acne scarring, early signs of ageing",
+            "downtime": "5–7 days",
+            "description": "<p>A balanced treatment targeting the deeper layers of skin to reduce fine lines and mild scarring while improving firmness and tone.<br/><br/>Perfect for those wanting visible rejuvenation without extended recovery. The smooth step between light and deep resurfacing.<br/><br/><em><strong>Balanced approach between visible results and manageable downtime.</strong></em></p>"
+          }
+        },
+        "tier_7KwCNV": {
+          "type": "tier",
+          "settings": {
+            "title": "Deep Resurfacing",
+            "best_for": "deeper scars, wrinkles, and advanced texture concerns.",
+            "downtime": "7–10+ days",
+            "description": "<p>An intensive, transformational treatment designed for significant texture correction.<br/>Targets deep lines, surgical and acne scars, and wrinkles by stimulating collagen renewal deep within the dermis delivering long‑term improvements to firmness, texture, and overall skin quality.<br/><br/><em><strong>Recommended for those prioritising maximum correction over downtime.</strong></em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "tier_Tjm8yk",
+        "tier_Kn7Lge",
+        "tier_7KwCNV"
+      ],
+      "name": "Treatment Tiers",
+      "settings": {
+        "heading": "<p>Personalised CO₂ laser resurfacing — tailored to your skin.</p>",
+        "subtitle": "Every skin type, every goal - your treatment is tailored with clinical precision.",
+        "secondary_text": "Choose the depth of treatment that best suits your needs:",
+        "footer_text": "During your consultation, your clinician will recommend the safest and most effective option for your skin.",
+        "section_bg": "#eae5e9",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "card_bg": "#e5e5e5",
+        "card_border": "#ddd8d0",
+        "heading_font_size": 40,
+        "card_title_font_size": 22,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "icon_info_columns_BdAaPx": {
+      "type": "icon-info-columns",
+      "blocks": {
+        "column_FhFLcK": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/1-removebg-preview_13.png",
+            "title": "Days 1–3",
+            "description": "Skin will feel warm, tight, and appear red or swollen. This is a normal part of the healing process. Keep the area clean and well moisturised."
+          }
+        },
+        "column_q33jG4": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/1-removebg-preview_11.png",
+            "title": "Days 4–10",
+            "description": "Peeling and flaking will begin as the skin sheds its damaged outer layer. Avoid picking or scratching. New, fresher skin will gradually emerge underneath."
+          }
+        },
+        "column_kjnQ93": {
+          "type": "column",
+          "settings": {
+            "icon": "shopify://shop_images/2-removebg-preview_10.png",
+            "title": "Weeks 2–6+",
+            "description": "Redness fades progressively and collagen remodelling continues beneath the surface. Strict sun protection is essential throughout the healing period."
+          }
+        }
+      },
+      "block_order": [
+        "column_FhFLcK",
+        "column_q33jG4",
+        "column_kjnQ93"
+      ],
+      "custom_css": [
+        ".iic__col-icon,.iic__col-icon img {width: 100px !important; height: 100px !important;}"
+      ],
+      "name": "Icon Info Columns",
+      "settings": {
+        "heading": "What to Expect During Recovery",
+        "show_underline": true,
+        "footer_text": "Your clinician will provide a personalised aftercare plan based on your treatment depth and skin response.",
+        "section_bg": "#e4e0da",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "accent_color": "#c4956a",
+        "divider_color": "#ccc4ba",
+        "heading_font_size": 36,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "how_it_works_timeline_Q4fGQe": {
+      "type": "how-it-works-timeline",
+      "blocks": {
+        "step_UJtFjE": {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Week 1",
+            "points": "Initial healing phase begins||Redness and peeling as treated skin renews||Fresh skin gradually replaces the treated surface"
+          }
+        },
+        "step_niXfMx": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 2–4",
+            "points": "Skin texture starts to improve noticeably||Redness gradually fades||Early softening of fine lines and scars may become visible"
+          }
+        },
+        "step_MNdhUf": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Months 1–3",
+            "points": "Collagen remodelling accelerates||Scarring continues to soften and skin firmness improves||Tone becomes more even and balanced"
+          }
+        },
+        "step_DAYLXc": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "Months 3–6+",
+            "points": "Full results become apparent||Collagen production peaks ||Skin appears tighter, smoother, and significantly renewed"
+          }
+        }
+      },
+      "block_order": [
+        "step_UJtFjE",
+        "step_niXfMx",
+        "step_MNdhUf",
+        "step_DAYLXc"
+      ],
+      "name": "How It Works Timeline",
+      "settings": {
+        "heading": "Results Timeline",
+        "description": "<p>CO₂ laser results develop gradually as the skin heals and new collagen forms beneath the surface. The full extent of improvement continues for several months after treatment.</p>",
+        "footer_text": "Results vary depending on treatment depth, skin condition, and individual healing response. Deeper treatments produce more dramatic results but require longer recovery.",
+        "section_bg": "#f6e7dd",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#5a3e28",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b08d57",
+        "circle_bg": "#c4a87a",
+        "circle_icon_color": "#ffffff",
+        "line_color": "#d4ccc0",
+        "heading_font_size": 42,
+        "step_title_font_size": 18,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "how_it_works_timeline_xDyBNg": {
+      "type": "how-it-works-timeline",
+      "blocks": {
+        "step_PxYXXR": {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Immediately after treatment",
+            "points": "Skin may appear slightly red or warm||Hair follicles absorb laser energy"
+          }
+        },
+        "step_MMWhHq": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 1–2",
+            "points": "Treated hairs begin to shed naturally||Skin settles back to normal"
+          }
+        },
+        "step_6xrTHj": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Weeks 3–6",
+            "points": "Hair regrowth becomes noticeably reduced||Hair returns finer and slower"
+          }
+        },
+        "step_eFhDjT": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "After multiple sessions",
+            "points": "Long-term hair reduction||Smoother skin with minimal regrowth"
+          }
+        }
+      },
+      "block_order": [
+        "step_PxYXXR",
+        "step_MMWhHq",
+        "step_6xrTHj",
+        "step_eFhDjT"
+      ],
+      "disabled": true,
+      "name": "How It Works Timeline",
+      "settings": {
+        "heading": "How CO2 Works & What to Expect",
+        "description": "<p><strong>CO2</strong> uses controlled pulses of laser energy to target pigment within the hair follicle. The energy heats and disables the follicle at the root, reducing its ability to regrow hair without damaging the surrounding skin.</p><p>Hair grows in cycles, which is why a course of treatments is required for best results.</p>",
+        "footer_text": "Results develop progressively and improve with each session.",
+        "section_bg": "#f7e7dd",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#5a3e28",
+        "text_color": "#5a4a3a",
+        "accent_color": "#b08d57",
+        "circle_bg": "#c4a87a",
+        "circle_icon_color": "#ffffff",
+        "line_color": "#d4ccc0",
+        "heading_font_size": 42,
+        "step_title_font_size": 18,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "before_after_results_fdnWYz": {
+      "type": "before-after-results",
+      "blocks": {
+        "result_card_DtNdVM": {
+          "type": "result_card",
+          "settings": {
+            "title": "Light CO₂ Resurfacing",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.39.30.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.39.41.png",
+            "session_info": "After 1 session. 6–8 weeks post treatment. Minimal downtime (2–3 days)",
+            "benefit": "✔ Improves sun damage, pore visibility, and dullness<br>\n✔ Enhances overall skin brightness and smoothness<br>\n✔ Ideal for early texture concerns"
+          }
+        },
+        "result_card_KEif9R": {
+          "type": "result_card",
+          "settings": {
+            "title": "Moderate CO₂ Resurfacing",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.40.51.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.00.png",
+            "session_info": "After 2 sessions. 8 weeks post treatment. Moderate downtime (5–7 days)",
+            "benefit": "✔ Softens fine lines and mild acne scarring<br>\n✔ Improves skin firmness and crepey texture<br>\n✔ Targets deeper dermal renewal"
+          }
+        },
+        "result_card_LG8eTG": {
+          "type": "result_card",
+          "settings": {
+            "title": "Deep CO₂ Resurfacing",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.49.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-16_at_19.41.54.png",
+            "session_info": "After 3 sessions. 12 weeks post treatment. Downtime 7–10+ days",
+            "benefit": "✔ Targets deep rolling acne scars<br>\n✔ Improves surgical scarring and advanced texture<br>\n✔ Stimulates significant collagen remodelling"
+          }
+        }
+      },
+      "block_order": [
+        "result_card_DtNdVM",
+        "result_card_KEif9R",
+        "result_card_LG8eTG"
+      ],
+      "name": "Before After Results",
+      "settings": {
+        "heading": "<p>Real Patient Results, Tailored by Treatment Depth<br/></p>",
+        "subtitle": "Fractional CO₂ laser treatments adjusted to your skin's needs and tolerance for downtime.",
+        "before_label": "Before",
+        "after_label": "After",
+        "footer_text": "Individual results vary. A personalised treatment plan is created during consultation.",
+        "section_bg": "#eee4e2",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b09a60",
+        "card_bg": "#f5efea",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "luxury_pricing_TFtVXM": {
+      "type": "luxury-pricing",
+      "blocks": {
+        "price_card_UQRhjj": {
+          "type": "price_card",
+          "settings": {
+            "name": "Small Treatment Area",
+            "card_subtitle": "Suitable for acne scars, stretch marks, surgical scars or targeted facial areas.",
+            "price": "£175",
+            "per_label": "per session",
+            "description": "Single Session: £175<br>Course of 3: £450<br> Course of 6: £750 (save £300)"
+          }
+        },
+        "price_card_6pE9fx": {
+          "type": "price_card",
+          "settings": {
+            "name": "Large Treatment Area",
+            "card_subtitle": "Comprehensive resurfacing for full face or larger body areas.",
+            "price": "£300",
+            "per_label": "per session",
+            "description": "Single Session: £300<br>Course of 3: £825<br> Course of 6: £1500 (save £300)"
+          }
+        }
+      },
+      "block_order": [
+        "price_card_UQRhjj",
+        "price_card_6pE9fx"
+      ],
+      "name": "Luxury Pricing",
+      "settings": {
+        "heading": "Fractional CO₂ Laser Pricing — Transparent, Professional, Affordable.",
+        "subtitle": "Achieve your skin goals with personalised, medically led treatment.",
+        "footer_text": "Treatment depth and number of sessions are determined during your clinical assessment.",
+        "button_label": "Book Your CO₂ Consultation",
+        "button_link": "#cf-template--25630315217276__consultation_form_NRQDDA",
+        "button_open_new_tab": false,
+        "section_bg": "#3a3248",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "gold_color": "#d4be8a",
+        "card_border": "#8a7a60",
+        "button_bg": "#a89060",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#8e7848",
+        "heading_font_size": 44,
+        "card_title_font_size": 22,
+        "price_font_size": 48,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "expectations_trust_QaqgNy": {
+      "type": "expectations-trust",
+      "blocks": {
+        "trust_point_WdF3XX": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "star",
+            "text": "4.9 Google rating"
+          }
+        },
+        "trust_point_fP88EX": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Medically delivered resurfacing"
+          }
+        },
+        "trust_point_ihmezr": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "finance",
+            "text": "0% finance available"
+          }
+        },
+        "trust_point_iJxRmP": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Structured recovery & aftercare planning"
+          }
+        },
+        "trust_point_WdErRC": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_3RXALx": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "clock",
+            "text": "Established 10+ years"
+          }
+        }
+      },
+      "block_order": [
+        "trust_point_WdF3XX",
+        "trust_point_fP88EX",
+        "trust_point_ihmezr",
+        "trust_point_iJxRmP",
+        "trust_point_WdErRC",
+        "trust_point_3RXALx"
+      ],
+      "name": "Expectations & Trust",
+      "settings": {
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What you can expect with CO₂ resurfacing",
+        "card_description": "<p>CO₂ resurfacing is medically delivered using controlled fractional technology designed to stimulate collagen renewal safely and effectively.</p><p>Each treatment is carefully structured to balance visible skin improvement with appropriate recovery and aftercare support.</p><p>We prioritise precision, safety, and realistic long-term results.</p>",
+        "section_bg": "#fbe8dc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#777777",
+        "card_bg": "#f8ebe4",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 44,
+        "card_heading_font_size": 28,
+        "body_font_size": 16,
+        "button_label": "Book Your CO₂ Consultation",
+        "button_link": "#cf-template--25630315217276__consultation_form_NRQDDA",
+        "button_open_new_tab": false,
+        "button_bg": "#604739",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "consultation_form_NRQDDA": {
+      "type": "consultation-form",
+      "name": "Consultation Form",
+      "settings": {
+        "section_width": 1600,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_side": 20,
+        "section_background": "#f9f9f9",
+        "form_max_width": 700,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 40,
+        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_font_size": 14,
+        "form_heading": "C02 Enquiry Form",
+        "form_subheading": "",
+        "heading_color": "#000000",
+        "heading_font_size": 26,
+        "heading_font_weight": "500",
+        "subheading_color": "#777777",
+        "subheading_font_size": 15,
+        "label_color": "#333333",
+        "label_font_size": 14,
+        "label_font_weight": "400",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 6,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 15,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "show_treatment_field": true,
+        "treatment_label": "Which treatment are you interested in?",
+        "default_treatment_value": "Consultation",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "name_label": "Name",
+        "name_placeholder": "Your Name",
+        "contact_method_label": "How can we reach you?",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "email_label": "Email Address",
+        "email_placeholder": "Email Address",
+        "whatsapp_number": "447798983387",
+        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
+        "wa_you_contact_text": "I'll message you",
+        "wa_we_contact_text": "Message me",
+        "whatsapp_button_text": "Chat on WhatsApp",
+        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
+        "whatsapp_button_background": "#25d366",
+        "whatsapp_button_hover_background": "#1fbe59",
+        "whatsapp_button_text_color": "#ffffff",
+        "clinic_phone_number": "01902256667",
+        "call_phone_label": "Your phone number",
+        "call_time_label": "Best time to call you?",
+        "call_time_placeholder": "Select a time",
+        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "phone_placeholder": "Phone Number",
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 14,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Enquire Now",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 15,
+        "button_font_weight": "600",
+        "button_border_radius": 8,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
+        "privacy_text_color": "#999999",
+        "privacy_font_size": 13
+      }
+    },
+    "faq_updated_kjbyB3": {
+      "type": "faq-updated",
+      "blocks": {
+        "faq_item_PNmVFK": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "question": "Everything you want to know about CO₂ laser resurfacing.",
+            "answer": "<p><strong>The Science of Fractional CO2</strong><br/>We utilize advanced <strong>Fractional CO2 Laser technology</strong>, widely considered the \"Gold Standard\" in dermatology for treating textured acne scars and deep wrinkles. Unlike older lasers that burn the entire skin surface, our technology creates thousands of microscopic thermal channels deep into the dermis. This triggers the body’s natural healing response, stimulating massive collagen production to \"fill in\" scars and smooth texture from the inside out.</p><p><strong>One Laser. Three Intensities.</strong><br/>We customize the depth of the CO2 energy to match your skin concerns and downtime availability:<br/></p><ul><li><strong>Level 1: The 'Refresh' (Light)Best For:</strong> Sun damage, uneven tone, and open pores.<strong>Downtime:</strong> 3-4 days (Redness and mild dryness).<br/></li><li><strong>Level 2: The 'Resurface' (Medium)Best For:</strong> Fine lines, crepey skin, and mild atrophic scarring.<strong>Downtime:</strong> 5-7 days (Bronzing and peeling).<br/></li><li><strong>Level 3: The 'Scar Repair' (Deep)Best For:</strong> Deep rolling acne scars, boxcar scars, and surgical scar revision.<strong>Downtime:</strong> 7-10+ days (Requires social downtime for maximum results).</li></ul>"
+          }
+        },
+        "faq_item_MTQ7HM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What skin concerns can CO₂ laser resurfacing treat?",
+            "answer": "<p>CO₂ laser resurfacing is a versatile treatment that can address multiple skin concerns in a single procedure. It works by removing damaged surface layers of skin while stimulating collagen production deeper within the dermis.</p><p>It can help improve:</p><p>• Fine lines and deeper wrinkles</p><p>• Sun damage and pigmentation irregularities</p><p>• Acne scarring and surgical scars</p><p>• Enlarged pores</p><p>• Uneven skin tone and texture</p><p>• Crepey or thinning skin</p><p>• Stretch marks (in selected areas)</p><p>• Age spots and sun spots</p><p>• Skin laxity in mild to moderate cases</p><p>During your consultation, we assess your skin type, concerns, and downtime tolerance to determine whether CO₂ is the most appropriate treatment for you.</p>"
+          }
+        },
+        "faq_item_HrxNLf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is CO₂ laser resurfacing painful?",
+            "answer": "<p>A topical anaesthetic is applied before treatment to minimise discomfort. Most clients describe the sensation as heat and pressure rather than sharp pain.</p><p>Treatment intensity can be adjusted depending on your goals and downtime tolerance.</p>"
+          }
+        },
+        "faq_item_ddfEcQ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What level of downtime should I expect?",
+            "answer": "<p>Downtime depends on treatment intensity:</p><p>• Light resurfacing: 3–5 days redness and mild peeling</p><p>• Moderate resurfacing: 5–7 days redness and flaking</p><p>• Deep resurfacing: 7–10+ days visible peeling and recovery</p><p>We tailor depth based on your goals and your ability to accommodate downtime.</p>"
+          }
+        },
+        "faq_item_cYExH8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Many clients achieve significant improvement from one well-planned session.</p><p>However, deeper scarring or advanced ageing concerns may require a structured treatment plan.</p><p>Your consultation determines the correct approach.</p>"
+          }
+        },
+        "faq_item_UbaFJR": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Initial smoothing appears once healing completes.</p><p>Collagen remodelling continues for 8–12 weeks after treatment, with progressive improvements in texture, tone, and firmness.</p>"
+          }
+        },
+        "faq_item_qJVU4c": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is CO₂ resurfacing safe for my skin type?",
+            "answer": "<p>CO₂ is best suited for lighter to medium skin tones.</p><p>A full assessment is carried out before treatment to ensure suitability and minimise risks.</p><p>We never proceed without confirming safety.</p>"
+          }
+        },
+        "faq_item_yVNnp8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I wear makeup after treatment?",
+            "answer": "<p>Makeup can usually be applied once the skin surface has fully healed, typically 5–7 days depending on depth.</p><p>Aftercare guidance is provided to ensure optimal healing.</p>"
+          }
+        },
+        "faq_item_Ek4P3d": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the difference between \"Full Face\" and \"Half Face\"?",
+            "answer": "<p>Full Face treats the entire facial surface.</p><p>Half Face targets a specific area of concern, such as:</p><p>• Lower face</p><p>• Cheeks</p><p>• Perioral lines</p><p>• Forehead</p><p>The approach is customised depending on your primary concern.</p>"
+          }
+        },
+        "faq_item_hcEF7D": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>CO₂ stimulates deep collagen renewal.</p><p>Results can last several years, depending on:</p><p>• Age</p><p>• Lifestyle</p><p>• Skincare</p><p>• Sun exposure</p><p>Maintenance treatments may be recommended to preserve results.</p>"
+          }
+        },
+        "faq_item_x7jNzt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who is CO₂ resurfacing best for?",
+            "answer": "<p>CO₂ may be ideal if you have:</p><p>• Acne scarring</p><p>• Deep lines</p><p>• Texture irregularities</p><p>• Sun damage</p><p>• Skin laxity</p><p>It may not be suitable if you require zero downtime or have certain medical contraindications.</p><p></p><h3></h3>"
+          }
+        },
+        "faq_item_QwXbyn": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What happens at my consultation?",
+            "answer": "<p>Your consultation includes:</p><p>• Skin assessment</p><p>• Downtime discussion</p><p>• Depth planning (light, moderate, deep)</p><p>• Clear pricing</p><p>• Aftercare planning</p><p>You’ll leave knowing exactly what recovery involves.</p>"
+          }
+        },
+        "faq_item_3LC6wb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p><br/></p><p>If you’re unsure which option is best for you, our team will be happy to guide you</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_PNmVFK",
+        "faq_item_MTQ7HM",
+        "faq_item_HrxNLf",
+        "faq_item_ddfEcQ",
+        "faq_item_cYExH8",
+        "faq_item_UbaFJR",
+        "faq_item_qJVU4c",
+        "faq_item_yVNnp8",
+        "faq_item_Ek4P3d",
+        "faq_item_hcEF7D",
+        "faq_item_x7jNzt",
+        "faq_item_QwXbyn",
+        "faq_item_3LC6wb"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "section_bg_color": "#ededed",
+        "max_width": 1200,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "side_padding": 30,
+        "heading": "C02 Laser Resurfacing. Your Questions. Answered",
+        "heading_color": "#1c1c1c",
+        "heading_font_size": 24,
+        "heading_font_weight": "600",
+        "heading_font_style": "normal",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 40,
+        "question_color": "#1c1c1c",
+        "question_font_size": 18,
+        "question_font_weight": "600",
+        "show_underline": true,
+        "underline_color": "#b8a164",
+        "underline_width": 60,
+        "underline_height": 2,
+        "answer_color": "#1c1c1c",
+        "answer_font_size": 16,
+        "answer_line_height": 1.6,
+        "answer_margin_top": 16,
+        "divider_color": "#b8a164",
+        "item_padding_vertical": 20,
+        "icon_color": "#a69f6b",
+        "icon_active_color": "#b8a164",
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 24,
+        "icon_border_width": 2,
+        "show_decoration": false,
+        "decoration_color": "#b8a164",
+        "decoration_size": 40,
+        "decoration_opacity": 0.6,
+        "all_items_open": false,
+        "first_item_open": false,
+        "allow_multiple_open": false
+      }
+    },
+    "location_contact_FMacAd": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_8HEKC6": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_zq99kg": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_8GCPWA": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_8HEKC6",
+        "contact_zq99kg",
+        "contact_8GCPWA"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "info_bg": "#e8e3dc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "#cf-template--25630315217276__consultation_form_NRQDDA",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "treatment_tabs_section_krrqjg",
+    "ss_image_with_text_12_gUF6fh",
+    "ss_image_with_text_9_GLgAya",
+    "ss_clothing_image_grid_4XaYjQ",
+    "rich_text_nziPUE",
+    "ss_steps_11_7cMyRT",
+    "175993612397035c9e",
+    "ss_simple_faq_jiYFWj",
+    "product_hero_RqkdU3",
+    "treatment_comparison_jCJbxT",
+    "slideshow_9NBKXH",
+    "stacked_info_cards_Tc3JWJ",
+    "split_content_CrNMyU",
+    "slideshow_49kXaM",
+    "treatment_tiers_cGjMRP",
+    "icon_info_columns_BdAaPx",
+    "how_it_works_timeline_Q4fGQe",
+    "how_it_works_timeline_xDyBNg",
+    "before_after_results_fdnWYz",
+    "luxury_pricing_TFtVXM",
+    "expectations_trust_QaqgNy",
+    "consultation_form_NRQDDA",
+    "faq_updated_kjbyB3",
+    "location_contact_FMacAd"
+  ]
+}
