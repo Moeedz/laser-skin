@@ -1886,7 +1886,7 @@
         "trust_point_KPKrDL": {
           "type": "trust_point",
           "settings": {
-            "icon": "heart",
+            "icon": "shield",
             "text": " Advanced EM LIFT muscle technology"
           }
         },
@@ -1900,8 +1900,8 @@
         "trust_point_ArAKqG": {
           "type": "trust_point",
           "settings": {
-            "icon": "test_patch",
-            "text": "Trusted by thousands of patients"
+            "icon": "heart",
+            "text": "No needles. No downtime."
           }
         },
         "trust_point_gAyh8r": {
