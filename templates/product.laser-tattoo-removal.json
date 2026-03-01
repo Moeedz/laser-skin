@@ -2059,6 +2059,13 @@
             "question": "What happens at my consultation?",
             "answer": "<p>Your consultation includes:</p><p>• Ink and skin assessment</p><p>• Session estimate</p><p>• Patch test</p><p>• Clear pricing</p><p>• Discussion of expected outcome</p><p>You’ll leave knowing exactly what level of fading to expect.</p>"
           }
+        },
+        "faq_item_a7VdnU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
         }
       },
       "block_order": [
@@ -2071,7 +2078,8 @@
         "faq_item_qpUa6i",
         "faq_item_fgttbn",
         "faq_item_F7nydg",
-        "faq_item_BcULRn"
+        "faq_item_BcULRn",
+        "faq_item_a7VdnU"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
