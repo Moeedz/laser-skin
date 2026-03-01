@@ -2093,7 +2093,7 @@
         "heading": "Transparent pricing. Trusted clinical standards.",
         "subtitle": "Everything you need to feel confident in your treatment.",
         "card_title": "What to expect with Non-Surgical body sculpting",
-        "card_description": "<p>PowerSculpt uses advanced electromagnetic stimulation technology to activate targeted muscle groups and support improved tone and definition.</p><p>Each treatment session is structured to stimulate intense muscle contractions beyond voluntary exercise levels, encouraging progressive strength and contour improvement.</p><p>We prioritise controlled delivery, measurable progression, and realistic body sculpting outcomes.</p>",
+        "card_description": "<p>Non-Surgical body sculpting uses advanced electromagnetic stimulation technology to activate targeted muscle groups and support improved tone and definition.</p><p>Each treatment session is structured to stimulate intense muscle contractions beyond voluntary exercise levels, encouraging progressive strength and contour improvement.</p><p>We prioritise controlled delivery, measurable progression, and realistic body sculpting outcomes.</p>",
         "section_bg": "#f7e2d4",
         "show_texture": true,
         "texture_opacity": 80,
@@ -2214,29 +2214,29 @@
         "faq_item_XryWre": {
           "type": "faq_item",
           "settings": {
-            "question": "What is PowerSculpt?",
-            "answer": "<p>PowerSculpt is a non-invasive body contouring treatment that uses advanced electromagnetic stimulation to trigger powerful muscle contractions in targeted areas such as the abdomen, glutes, or thighs.</p><p>These contractions are significantly stronger than those achieved through voluntary exercise.</p>"
+            "question": "What is non-surgical body sculpting?",
+            "answer": "<p>Non-surgical body sculpting is a treatment designed to strengthen and tone targeted muscle groups using advanced electromagnetic stimulation technology.</p><p>It is delivered without needles or surgery and is structured as a progressive treatment course.</p>"
           }
         },
         "faq_item_JcGn7T": {
           "type": "faq_item",
           "settings": {
-            "question": "How does PowerSculpt Work?",
-            "answer": "<p>PowerSculpt delivers high-intensity electromagnetic energy to targeted muscle groups, causing repeated supra maximal contractions.</p><p>This stimulates muscle strengthening and toning while supporting improved contour over a structured treatment course.</p>"
+            "question": "How does non-surgical body sculpting work?",
+            "answer": "<p>The treatment uses controlled electromagnetic energy to trigger repeated, high-intensity muscle contractions in targeted areas.</p><p>These contractions engage muscle fibres beyond voluntary exercise levels, supporting muscle strengthening and improved definition over time.</p>"
           }
         },
         "faq_item_jkhbFw": {
           "type": "faq_item",
           "settings": {
-            "question": "Does PowerSculpt burn fat?",
-            "answer": "<p>PowerSculpt primarily stimulates muscle strengthening and toning.</p><p>Some patients may experience mild fat reduction in treated areas due to increased metabolic demand, but it is not a weight loss treatment.</p><p>It is best suited for body contouring and muscle definition rather than fat loss alone.</p>"
+            "question": "Does it reduce fat?",
+            "answer": "<p>Non-surgical body sculpting is primarily designed to improve muscle tone and definition.</p><p>Some patients may notice contour improvements in treated areas; however, it is not a weight loss treatment.</p><p>It works best for body shaping rather than overall fat reduction.</p>"
           }
         },
         "faq_item_w7pDUm": {
           "type": "faq_item",
           "settings": {
-            "question": "Is this a replacement for the gym?",
-            "answer": "<p>No.</p><p>PowerSculpt supports muscle activation and contour improvement but does not replace exercise, healthy nutrition, or overall lifestyle management.</p><p>It works best as a complement to an active routine.</p>"
+            "question": "Is this a replacement for exercise?",
+            "answer": "<p>No.</p><p>Non-surgical body sculpting supports muscle activation and tone but does not replace regular exercise, nutrition, or a healthy lifestyle.</p><p>It is most effective as part of an overall body maintenance plan.</p>"
           }
         },
         "faq_item_xRiTy3": {
@@ -2244,13 +2244,6 @@
           "settings": {
             "question": "Does the treatment hurt?",
             "answer": "<p>Most patients describe the sensation as intense but tolerable muscle contractions.</p><p>You will feel your muscles working strongly. The intensity can be adjusted to suit comfort levels.</p>"
-          }
-        },
-        "faq_item_LGwkby": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
           }
         },
         "faq_item_F6EEgL": {
@@ -2277,15 +2270,15 @@
         "faq_item_b7JdRA": {
           "type": "faq_item",
           "settings": {
-            "question": "Is PowerSculpt suitable for everyone?",
-            "answer": "<p>PowerSculpt may not be suitable if you:</p><p>• Have a pacemaker or implanted electronic device</p><p>• Are pregnant</p><p>• Have certain medical conditions</p><p>• Have metal implants in the treatment area</p><p>A medical assessment will determine suitability.</p>"
+            "question": "Is non-surgical body sculpting suitable for everyone?",
+            "answer": "<p>It may not be suitable if you:</p><p>• Have a pacemaker or implanted electronic device</p><p>• Are pregnant</p><p>• Have certain medical conditions</p><p>• Have metal implants in the treatment area</p><p>A medical assessment will determine suitability.</p>"
           }
         },
         "faq_item_g6HcMe": {
           "type": "faq_item",
           "settings": {
             "question": "Can it help after pregnancy?",
-            "answer": "<p>PowerSculpt may support abdominal muscle strengthening after pregnancy, particularly for mild muscle laxity.</p><p>However, it is not a medical treatment for diastasis recti and suitability must be assessed individually.</p>"
+            "answer": "<p>Non-surgical body sculpting may support abdominal muscle strengthening after pregnancy, particularly for mild muscle laxity.</p><p>However, it is not a medical treatment for diastasis recti and suitability must be assessed individually.</p>"
           }
         },
         "faq_item_Xn3tqH": {
@@ -2309,7 +2302,6 @@
         "faq_item_jkhbFw",
         "faq_item_w7pDUm",
         "faq_item_xRiTy3",
-        "faq_item_LGwkby",
         "faq_item_F6EEgL",
         "faq_item_8ANgXM",
         "faq_item_WcfHzi",
@@ -2325,7 +2317,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your Powersculpt Questions. Answered",
+        "heading": "Your Non-Surgical Body Sculpting Questions. Answered.",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
