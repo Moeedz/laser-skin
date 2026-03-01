@@ -2030,8 +2030,8 @@
         "trust_point_MXdtT8": {
           "type": "trust_point",
           "settings": {
-            "icon": "calendar",
-            "text": "7-day appointment guarantee"
+            "icon": "shield",
+            "text": "Precision-controlled RF technology"
           }
         },
         "trust_point_cDrJ3y": {
@@ -2044,8 +2044,8 @@
         "trust_point_ghFdDj": {
           "type": "trust_point",
           "settings": {
-            "icon": "test_patch",
-            "text": "Clinically calibrated depth settings"
+            "icon": "heart",
+            "text": "Advanced collagen stimulation"
           }
         },
         "trust_point_VXWnrn": {
