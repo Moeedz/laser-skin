@@ -1777,10 +1777,10 @@
       ],
       "name": "Expectations & Trust",
       "settings": {
-        "heading": "Clear pricing. Professional standards.",
-        "subtitle": "Everything you need to feel confident booking your treatment.",
-        "card_title": "What You Can Expect With Radio Frequency Treatment",
-        "card_description": "<p>We believe confidence comes from clarity.</p><p>Your treatment plan is structured around your consultation, your skin, and your goals with no pressure and no hidden surprises.</p><p>Radio Frequency is delivered in a professional clinical environment, focused on safety, consistency, and long-term skin improvement.</p><p>You’ll receive:</p><p>• A tailored treatment plan</p><p>• Clear explanation of expected results</p><p>• Transparent course pricing</p><p>• Honest guidance on suitability</p>",
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What to expect with radio frequency skin tightening",
+        "card_description": "<p>Radio frequency skin tightening uses controlled thermal energy to stimulate collagen production and improve skin firmness without needles or downtime.</p><p>Energy levels are carefully regulated to heat the deeper dermal layers while protecting the skin’s surface.</p><p>We prioritise gradual tightening, structural support, and natural-looking improvement.</p>",
         "section_bg": "#f3ded3",
         "show_texture": true,
         "texture_opacity": 80,
@@ -1946,6 +1946,13 @@
             "question": "Can Radio Frequency be combined with other treatments?",
             "answer": "<p>Yes.</p><p>Radio Frequency can be incorporated into a structured treatment plan and works particularly well alongside treatments such as:</p><p>• Polynucleotides</p><p>• Microneedling</p><p>• CO₂ Laser</p><p>Your clinician will advise on the safest and most effective combination for your goals.</p>"
           }
+        },
+        "faq_item_xyqAyj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you during your consultation.</p>"
+          }
         }
       },
       "block_order": [
@@ -1955,7 +1962,8 @@
         "faq_item_ifgJXa",
         "faq_item_FUQPUE",
         "faq_item_8eVQFq",
-        "faq_item_ja8AYE"
+        "faq_item_ja8AYE",
+        "faq_item_xyqAyj"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
