@@ -1579,7 +1579,7 @@
       ],
       "name": "Process Timeline",
       "settings": {
-        "heading": "YOUR STRUCTURAL LIFT THERAPY PLAN",
+        "heading": "Your Structural Lift Therapy Plan",
         "sub_heading": "Every treatment plan is tailored to your facial structure, muscle tone, and aesthetic goals. Below is a typical protocol.",
         "body": "<p>Structural Lift Therapy delivers focused electromagnetic energy to trigger deep, targeted facial muscle contractions strengthening the underlying muscles that support natural lift and contour. These contractions retrain and tone facial structure over time, resulting in improved definition and firmness.<br/><br/><em>During your consultation we assess facial muscle tone, areas of laxity, and overall structure to determine whether structural lift therapy is appropriate and how many sessions are recommended.</em></p>",
         "timeline_label": "What to expect",
@@ -1642,6 +1642,7 @@
         "right_point_DRzCbG",
         "right_point_JV7gVU"
       ],
+      "disabled": true,
       "name": "Split Content",
       "settings": {
         "heading": "Aftercare & Downtime",
