@@ -2117,10 +2117,10 @@
       ],
       "name": "Expectations & Trust",
       "settings": {
-        "heading": "Clear pricing. Professional standards.",
-        "subtitle": "Everything you need to feel confident booking your consultation.",
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
         "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>Medical-Grade IPL Treatment</p><p>Your IPL treatment is delivered using regulated, medical-grade light technology in a clinical environment.</p><p>All treatments include a skin assessment and suitability check prior to treatment to ensure safe and effective results.</p><p>We prioritise safety, correct settings, and long-term skin health over aggressive or rushed treatments.</p>",
+        "card_description": "<p>IPL (Intense Pulsed Light) is delivered using medical-grade light technology designed to target pigmentation, redness, and sun damage safely and effectively.</p><p>Each treatment is structured to improve overall skin tone and clarity while minimising disruption to surrounding tissue.</p><p>We prioritise controlled energy delivery, consistent results, and minimal downtime.</p>",
         "section_bg": "#f4e0d2",
         "show_texture": true,
         "texture_opacity": 80,
