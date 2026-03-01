@@ -1,0 +1,2139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "button_PUkJNb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "text": "View Pricing",
+            "stretch": false,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 2,
+            "show_below_gallery": true,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "button_PUkJNb",
+        "price",
+        "payment_terms",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "complementary_products"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "full",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
+      }
+    },
+    "treatment_tabs_section_qrH3zM": {
+      "type": "treatment-tabs-section",
+      "blocks": {
+        "tab_Amzfdm": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "nctf",
+            "tab_name": "NCTF Skin Booster",
+            "heading": "NCTF Skin Booster",
+            "top_description": "<p>NCTF Skin Booster delivers a potent blend of vitamins, hyaluronic acid, and antioxidants to deeply hydrate and revitalise the skin. It improves texture, radiance, and firmness, giving a smoother, healthier, and more youthful glow.</p>",
+            "image_1": "shopify://shop_images/main_image.jpg",
+            "image_1_aspect_ratio": "original",
+            "consultation_heading": "Speak to a specialist",
+            "consultation_badge": "",
+            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "View prices and make an enquiry",
+            "package_description": "Pay per session or buy multiple and save"
+          }
+        },
+        "package_HrfHda": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "nctf",
+            "package_name": "Small Eye",
+            "price": "from £91.50",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£135",
+            "session_1_total": "total £135.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279604092&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£116.50",
+            "session_3_total": "total £350.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279636860&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£91.50",
+            "session_6_total": "total £550.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279669628&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_JjNGMf": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "nctf",
+            "package_name": "Half Face",
+            "price": "from £120.50",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£175",
+            "session_1_total": "total £175.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279702396&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£133.50",
+            "session_3_total": "total £400.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279735164&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£120.50",
+            "session_6_total": "total £725.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279767932&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_eaxCci": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "nctf",
+            "package_name": "Full Face",
+            "price": "from £200.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£300",
+            "session_1_total": "total £300.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279800700&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£250.00",
+            "session_3_total": "total £750.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279833468&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£200.00",
+            "session_6_total": "total £1,200.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983279866236&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_Amzfdm",
+        "package_HrfHda",
+        "package_JjNGMf",
+        "package_eaxCci"
+      ],
+      "disabled": true,
+      "name": "Treatment Tabs",
+      "settings": {
+        "section_width": 1400,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "tab_alignment": "center",
+        "tab_gap": 12,
+        "tab_font_size": 15,
+        "tab_font_weight": "500",
+        "tab_border_radius": 50,
+        "tab_border_width": 2,
+        "tab_background": "#ffffff",
+        "tab_text_color": "#000000",
+        "tab_border_color": "#333333",
+        "tab_hover_background": "#f5f5f5",
+        "tab_hover_text_color": "#000000",
+        "tab_active_background": "#e6b325",
+        "tab_active_text_color": "#ffffff",
+        "tab_active_border_color": "#e6b325",
+        "heading_font_size": 42,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 15,
+        "text_color": "#333333",
+        "cta_card_gap": 16,
+        "cta_border_radius": 16,
+        "cta_border_width": 2,
+        "cta_background": "#ffffff",
+        "cta_border_color": "#333333",
+        "cta_hover_background": "#f9f9f9",
+        "cta_heading_color": "#000000",
+        "cta_text_color": "#666666",
+        "badge_background": "#f0f0f0",
+        "badge_text_color": "#000000",
+        "price_text_color": "#666666",
+        "package_border_radius": 12,
+        "package_border_width": 2,
+        "package_background": "#ffffff",
+        "package_border_color": "#333333",
+        "package_heading_color": "#000000",
+        "package_price_color": "#666666",
+        "package_button_radius": 8,
+        "package_button_background": "#e6b325",
+        "package_button_text_color": "#ffffff",
+        "package_button_hover_background": "#e6b325",
+        "image_border_radius": 8,
+        "show_collapsible_1": true,
+        "collapsible_1_title": "7-Day Appointment Guarantee",
+        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
+        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers can be seen within 7 days of their initial enquiry.</p>",
+        "show_collapsible_2": true,
+        "collapsible_2_title": "Course Price Match Guarantee",
+        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_2_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> — and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
+        "show_collapsible_3": false,
+        "collapsible_3_title": "Booking Process",
+        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
+        "collapsible_3_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your appointment.</p>",
+        "show_collapsible_4": true,
+        "collapsible_4_title": "Securing your booking",
+        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_4_content": "<p>A small deposit of £30 will be required to secure your booking. This will be deducted from price of your treatment cost.</p>",
+        "show_collapsible_5": true,
+        "collapsible_5_title": "Payment Options & Finance",
+        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
+        "collapsible_5_content": "<p>Treatments can be paid for by cash or card on the day of your appointment. We also offer Klarna and Shopify instalment options for added flexibility. If you’d like to pay using one of these methods, just let us know and we’ll guide you through it.</p>",
+        "show_collapsible_6": true,
+        "collapsible_6_title": "Contact and address",
+        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
+        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
+        "show_faq_link": true,
+        "faq_pre_text": "Have more questions?",
+        "faq_link_text": "View FAQs",
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
+      }
+    },
+    "ss_image_with_text_12_gUF6fh": {
+      "type": "ss-image-with-text-12",
+      "blocks": {
+        "slide_4jhyPz": {
+          "type": "slide",
+          "settings": {
+            "heading": "<p><strong>Revitalise, Hydrate, and Rejuvenate Your Skin from Within</strong></p>",
+            "text": "<p>NCTF Skin Booster is an advanced injectable treatment designed to revitalise dull, tired, or ageing skin from within.</p><p>Developed by Filmmed, this innovative formula contains over 50 active ingredients, including hyaluronic acid, amino acids, vitamins, and antioxidants.</p><p>It works by deeply hydrating the skin, stimulating collagen production, and improving overall tone and texture.</p><p>Unlike traditional fillers, NCTF Skin Booster focuses on restoring radiance and elasticity rather than adding volume, leaving your skin smoother, brighter, and naturally rejuvenated.</p><p>This treatment is ideal for improving fine lines, uneven texture, and a lack of glow in areas such as the face, neck, décolletage, and hands.<br/></p>",
+            "button": "BOOK ONLINE",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3552098&location=4546",
+            "button2": "Get more information",
+            "button2_url": "shopify://pages/contact",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.54.29_31f00771.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4jhyPz"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {padding-top: 10px; padding-bottom: 5px;}",
+        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
+      ],
+      "name": "SS - Image With Text #12",
+      "settings": {
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "start",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 12,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 12,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "right",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#e6b325",
+        "button_bg_hover_color": "#deac21",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#ffffff",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "#000000",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "ss_image_with_text_9_GLgAya": {
+      "type": "ss-image-with-text-9",
+      "blocks": {
+        "text_zqNDU6": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Benefits of NCTF Skin Booster</strong></h3>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 34,
+            "text_size_mobile": 26,
+            "text_height": 150,
+            "text_mt": 0,
+            "text_align": "left",
+            "text_align_mobile": "left",
+            "text_color": "#e6b325"
+          }
+        },
+        "icon_text_UxfF9a": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Deeply hydrates and restores natural radiance for a healthy glow"
+          }
+        },
+        "icon_text_LJCxHi": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Improves skin firmness, elasticity, and overall texture"
+          }
+        },
+        "icon_text_dEUWkb": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Reduces fine lines, uneven tone, and signs of tired or dull skin"
+          }
+        },
+        "icon_text_WwkP3M": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Stimulates collagen and elastin for long-lasting smoothness across all skin types"
+          }
+        },
+        "button_HfVK4Q": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button": "Book Online",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3552098&location=4546",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 200,
+            "button_width_mobile": 700,
+            "button_mt": 52,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#e6b325",
+            "button_bg_color": "#e6b325",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "button_MwG34x": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button": "Get more information",
+            "button_url": "",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 270,
+            "button_width_mobile": 700,
+            "button_mt": 12,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_zqNDU6",
+        "icon_text_UxfF9a",
+        "icon_text_LJCxHi",
+        "icon_text_dEUWkb",
+        "icon_text_WwkP3M",
+        "button_HfVK4Q",
+        "button_MwG34x"
+      ],
+      "disabled": true,
+      "name": "SS - Image With Text #9",
+      "settings": {
+        "body_gap": 50,
+        "body_gap_mobile": 0,
+        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.54.29_425910c1.jpg",
+        "image_position": "left",
+        "image_position_mobile": "top",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "content_maxwidth": 700,
+        "content_padding_vertical": 40,
+        "content_padding_vertical_mobile": 20,
+        "content_padding_horizontal": 24,
+        "content_padding_horizontal_mobile": 16,
+        "row_gap": 16,
+        "row_mt": 20,
+        "row_align": "left",
+        "row_align_mobile": "left",
+        "icon_size": 30,
+        "icon_size_mobile": 26,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 18,
+        "text_size_mobile": 16,
+        "text_height": 180,
+        "icon_color": "#000000",
+        "text_color": "#2b1a1a",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_clothing_image_grid_BGb7qV": {
+      "type": "ss-clothing-image-grid",
+      "blocks": {
+        "link_eUH9AY": {
+          "type": "link",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.54.29_ddf1133d.jpg",
+            "text": "",
+            "url": "",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "link_eUH9AY"
+      ],
+      "disabled": true,
+      "name": "SS - Threads Image Grid",
+      "settings": {
+        "font_size": 24,
+        "font_color": "#000000",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_vertical": 0,
+        "section-width": 200
+      }
+    },
+    "rich_text_nziPUE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U7EUj7": {
+          "type": "heading",
+          "settings": {
+            "text": "<strong>The NCTF 3-Step Process</strong>",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U7EUj7"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": true
+      }
+    },
+    "ss_steps_11_7cMyRT": {
+      "type": "ss-steps-11",
+      "blocks": {
+        "step_jmRN9F": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 1",
+            "title": "PRE TREATMENT",
+            "text": "<p>Your treatment begins with a consultation with one of our qualified medical professionals.<br/><br/>We assess your skin’s condition, hydration levels, and overall tone to determine how NCTF can best improve your skin health and appearance.</p>"
+          }
+        },
+        "step_jiiz8x": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 2",
+            "title": "PROCEDURE",
+            "text": "<p>The NCTF solution is gently injected into the superficial layers of the skin using fine, precise microinjections.<br/><br/>This replenishes nutrients, enhances hydration, and encourages new collagen formation.<br/><br/>The treatment takes around 30 minutes and involves minimal discomfort, with most clients describing it as quick and easily tolerable.</p>"
+          }
+        },
+        "step_6jaGgE": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 3",
+            "title": "POST TREATMENT",
+            "text": "<p>After treatment, the skin immediately appears more hydrated and luminous.<br/><br/>Over the following weeks, collagen production increases, improving firmness and texture.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_jmRN9F",
+        "step_jiiz8x",
+        "step_6jaGgE"
+      ],
+      "disabled": true,
+      "name": "SS - Steps #11",
+      "settings": {
+        "layout": "image_content",
+        "layout_mobile": "image_content",
+        "layout_gap": 64,
+        "layout_gap_mobile": 32,
+        "image": "shopify://shop_images/main_image_c908ec9a-c1d3-49da-bbc8-bf9a4b3c205b.jpg",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "steps_custom": false,
+        "steps_font": "josefin_sans_n4",
+        "steps_size": 12,
+        "steps_size_mobile": 12,
+        "steps_height": 100,
+        "steps_padding_horizontal": 8,
+        "steps_padding_horizontal_mobile": 8,
+        "steps_padding_vertical": 4,
+        "steps_padding_vertical_mobile": 4,
+        "steps_radius": 100,
+        "steps_border_thickness": 1,
+        "steps_content_align": "left",
+        "steps_content_align_mobile": "left",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 24,
+        "title_size_mobile": 20,
+        "title_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 8,
+        "text_mt_mobile": 8,
+        "steps_color": "#ffffff",
+        "steps_bg_color": "#e6b325",
+        "steps_border_color": "#e6b325",
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "image_border_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "175993612397035c9e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_qFMFmN": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+          "settings": {
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
+          }
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_qFMFmN"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_Dpx4Qh": {
+          "type": "text",
+          "settings": {
+            "question": "Who is NCFT suitable for?",
+            "answer": "<p>NCTF is suitable for anyone experiencing dullness, dehydration, fine lines, or a loss of skin radiance.<br/><br/>It’s ideal for people who want fresher, healthier-looking skin without fillers or surgery, and can be used on the face, neck, hands, or décolletage.</p>"
+          }
+        },
+        "text_UV874H": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "What is your cancellation policy?",
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+          }
+        },
+        "text_w79Wy7": {
+          "type": "text",
+          "settings": {
+            "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
+            "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
+          }
+        },
+        "text_gabhgh": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
+          "settings": {
+            "question": "Does it hurt?",
+            "answer": "<p>The procedure is quick and well-tolerated.</p><p>You may feel a slight prickling sensation during the injections, but a topical numbing cream can be applied beforehand to ensure comfort throughout the session.</p>"
+          }
+        },
+        "text_UiGdVT": {
+          "type": "text",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>You’ll see increased hydration and glow within days, with progressive improvements in firmness and texture over the following weeks as collagen production increases.</p>"
+          }
+        },
+        "text_xRpx9D": {
+          "type": "text",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>Downtime is minimal.<br/><br/>You may notice slight redness or tiny marks at the injection points, which usually settle within a few hours.<br/><br/>Most clients return to normal activities the same day.</p>"
+          }
+        },
+        "text_JFLPAT": {
+          "type": "text",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can last up to 6 months, depending on your skin type, age, and lifestyle.</p><p>Many clients choose to maintain their results with regular top-up sessions throughout the year.</p>"
+          }
+        },
+        "text_8rpGLf": {
+          "type": "text",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>We usually recommend a course of 3 sessions spaced 2 to 4 weeks apart for optimal results.<br/><br/>After your initial course, maintenance treatments every 3 to 6 months help to keep the skin hydrated and radiant.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Dpx4Qh",
+        "text_UV874H",
+        "text_w79Wy7",
+        "text_gabhgh",
+        "text_JMUbWR",
+        "text_UiGdVT",
+        "text_xRpx9D",
+        "text_JFLPAT",
+        "text_8rpGLf"
+      ],
+      "disabled": true,
+      "name": "SS - FAQ #1",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 1
+      }
+    },
+    "product_hero_rpMfMw": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_MeC7GN": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": " Improves skin texture and elasticity"
+          }
+        },
+        "check_item_PJNL4k": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Stimulates collagen at a cellular level"
+          }
+        },
+        "check_item_MJ7HUc": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Subtle, natural-looking rejuvenation"
+          }
+        },
+        "trust_item_KU3zHT": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_39pi3M": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_C4bQWR": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_UpYrh7": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_MeC7GN",
+        "check_item_PJNL4k",
+        "check_item_MJ7HUc",
+        "trust_item_KU3zHT",
+        "trust_item_39pi3M",
+        "trust_item_C4bQWR",
+        "trust_item_UpYrh7"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_jqor8wjqor8wjqor.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_height": 200,
+        "background_color": "#f5dcd0",
+        "overlay_color_start": "rgba(0,0,0,0)",
+        "overlay_color_mid": "rgba(0,0,0,0)",
+        "overlay_color_fade": "#ece3dd40",
+        "heading": "Deep Skin Revitalisation. Natural, Radiant Results",
+        "subheading_highlight": "",
+        "subheading": "Clinically formulated injectable skin booster performed in a regulated medical environment.",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>NCTF® is an advanced medical skin booster designed to improve hydration, firmness, and overall skin quality without adding volume or changing your natural features.</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book your NCTF Consultation",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
+        "button_open_new_tab": false,
+        "button_bg": "#c4a080",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f5dcd0",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
+    "slideshow_GzPCLJ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_rbP9Wg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hd_d6606029-0623-4e71-a7d4-cadf96a2db28.png",
+            "mobile_image": "shopify://shop_images/hm_895b8926-0660-44c2-85f5-570e96309e4f.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rbP9Wg"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "info_hero_E6fW7Q": {
+      "type": "info-hero",
+      "blocks": {
+        "point_zCiRyM": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Clinically tested formulation"
+          }
+        },
+        "point_c7ALmi": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Used worldwide in medical aesthetic practice"
+          }
+        },
+        "point_bD7TcE": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Performed at Laser Skin Clinics by trained practitioners under medical protocols"
+          }
+        }
+      },
+      "block_order": [
+        "point_zCiRyM",
+        "point_c7ALmi",
+        "point_bD7TcE"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What is NCTF Skin Revitalisation?",
+        "body": "<p>NCTF® is a clinically formulated injectable skin revitalisation treatment containing over 50 active ingredients, including hyaluronic acid, vitamins, amino acids and antioxidants. It is designed to improve skin quality from within rather than add volume.</p><p>Rather than adding volume like traditional fillers, NCTF works by nourishing the skin from within improving hydration, elasticity, and overall skin quality over time.</p><p>It is ideal for clients who want fresher, smoother, more radiant skin without looking “done.”</p>",
+        "points_heading": "",
+        "footer_text": "",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_vumknxvumknxvumk.png",
+        "bg_position": "right center",
+        "section_height": 900,
+        "overlay_strong": "rgba(0,0,0,0)",
+        "overlay_mid": "rgba(0,0,0,0)",
+        "overlay_fade": "rgba(0,0,0,0)",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "timeline_circles_kL7kDh": {
+      "type": "timeline-circles",
+      "blocks": {
+        "step_YqXAAB": {
+          "type": "step",
+          "settings": {
+            "title": "Immediately after",
+            "image": "shopify://shop_images/1_6a59d4b0-ca80-4ccf-bfce-dda2160a201c.png",
+            "description": "Skin feels hydrated and refreshed"
+          }
+        },
+        "step_j9i7RT": {
+          "type": "step",
+          "settings": {
+            "title": "Days 3–7",
+            "image": "shopify://shop_images/2_e9d17eb9-426b-4556-b0d7-7171b09dacc7.png",
+            "description": "Initial improvements in texture and brightness"
+          }
+        },
+        "step_qBG7pE": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 2–4",
+            "image": "shopify://shop_images/3_38b031f2-5eb9-40ff-9e41-b37f48463b8e.png",
+            "description": "Increased fibroblast activity as NCTF® nourishes the skin's cellular environment"
+          }
+        },
+        "step_6Knjm9": {
+          "type": "step",
+          "settings": {
+            "title": "Weeks 6–12",
+            "image": "shopify://shop_images/4_d9f716d5-ca7d-4eaf-86aa-074515c4155a.png",
+            "description": "Skin appears firmer, collagen-rich, and radiant"
+          }
+        }
+      },
+      "block_order": [
+        "step_YqXAAB",
+        "step_j9i7RT",
+        "step_qBG7pE",
+        "step_6Knjm9"
+      ],
+      "name": "Timeline Circles",
+      "settings": {
+        "heading": "How it works & what to expect",
+        "subtitle": "NCTF is delivered through a series of superficial micro-injections tailored to your skin’s needs. Results develop gradually and remain natural-looking.",
+        "body": "",
+        "footer_text": "Most clients benefit from a course of 3–5 sessions spaced 2–3 weeks apart for optimal results. Your clinician will tailor the plan to your skin and goals.",
+        "connector_style": "line",
+        "section_bg": "#fbdfd8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "line_color": "#baa898",
+        "dot_color": "#baa898",
+        "circle_border": "#ece5dd",
+        "heading_font_size": 40,
+        "title_font_size": 20,
+        "body_font_size": 16,
+        "circle_size": 160,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "slideshow_Wr8ijY": {
+      "type": "slideshow",
+      "blocks": {
+        "image_4hFBTc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4d_b701cc8d-1368-4949-845b-8d9da4e1c3f4.png",
+            "mobile_image": "shopify://shop_images/4m_d4f6dc23-4d39-4d19-a9bc-8bb2f9d596ed.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4hFBTc"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "split_content_wbRbrP": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_aAcjUg": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Dull or tired-looking skin</b> - If your skin lacks glow or appears flat and fatigued, NCTF helps restore brightness and hydration from within."
+          }
+        },
+        "left_point_JUJNQJ": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Fine lines and early signs of ageing</b> - Improves skin elasticity and smoothness, softening early lines without freezing expression."
+          }
+        },
+        "left_point_Q8QfMM": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Dehydrated or thinning skin</b> - Boosts deep hydration and strengthens the skin’s natural barrier."
+          }
+        },
+        "left_point_4n7TkH": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Loss of firmness or skin laxity - </b>Stimulates fibroblast activity to support collagen production over time."
+          }
+        },
+        "left_point_Jzd4Xp": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b> Preventative anti-ageing</b> - ideal for clients in their late 20s to 40s looking to maintain healthy, resilient skin."
+          }
+        },
+        "left_point_8MYGaT": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Those seeking skin improvement without adding facial volume</b> - A subtle, natural option for those wanting improvement without volume or structural change."
+          }
+        },
+        "right_point_9prdpQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "Forehead lines"
+          }
+        },
+        "right_point_VXpJKz": {
+          "type": "right_point",
+          "settings": {
+            "text": "Eye contour (crow's feet)"
+          }
+        },
+        "right_point_gypQVb": {
+          "type": "right_point",
+          "settings": {
+            "text": "Neck and décolleté"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_aAcjUg",
+        "left_point_JUJNQJ",
+        "left_point_Q8QfMM",
+        "left_point_4n7TkH",
+        "left_point_Jzd4Xp",
+        "left_point_8MYGaT",
+        "right_point_9prdpQ",
+        "right_point_VXpJKz",
+        "right_point_gypQVb"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Who Is NCTF Best For?",
+        "subtitle": "NCTF® is ideal for clients who want visible skin improvement without altering their natural facial structure. It focuses on restoring skin quality rather than adding volume.",
+        "footer_text": "RF fits easily into ongoing skin maintenance plans.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "",
+        "left_subtitle": "This treatment is particularly suited for:",
+        "left_image": "shopify://shop_images/1-removebg-preview_10.png",
+        "enable_right": false,
+        "right_heading": "Common treatment areas",
+        "right_subtitle": "NCTF® revitalisation can be at:",
+        "right_image": "shopify://shop_images/2-removebg-preview_12.png",
+        "section_bg": "#f6ecf4",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
+    "slideshow_JhRaCw": {
+      "type": "slideshow",
+      "blocks": {
+        "image_nr8PaB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5d_1883e7a9-df01-4d30-b7ab-f18a405051cb.png",
+            "mobile_image": "shopify://shop_images/5m_2faae020-3744-4e8d-b12d-d702eb5c6996.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nr8PaB"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "results_cards_iPrXU8": {
+      "type": "results-cards",
+      "blocks": {
+        "card_DkzMQx": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/1-removebg-preview_9.png",
+            "image_cover": false,
+            "title": "Straight After",
+            "description": "Most clients experience mild redness or small injection marks for 24–48 hours. Bruising is uncommon but possible."
+          }
+        },
+        "card_dn9BEw": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/2-removebg-preview_11.png",
+            "image_cover": true,
+            "title": "Hydrate & Protect",
+            "description": "Keep the skin hydrated with a quality moisturizer. Use SPF to protect against sun exposure."
+          }
+        },
+        "card_PqUrkQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/3_11039e48-27fb-4a17-aab7-2961f0a85a81.png",
+            "image_cover": false,
+            "title": "Quick Recovery",
+            "description": "You can usually resume normal activities the next day, avoiding makeup for 24 hours."
+          }
+        }
+      },
+      "block_order": [
+        "card_DkzMQx",
+        "card_dn9BEw",
+        "card_PqUrkQ"
+      ],
+      "name": "Results Cards",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "footer_text": "Treatment plans are tailored based on skin condition, concerns, and the area being treated.",
+        "section_bg": "#f4dee3",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "card_bg": "#f6e7ee",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "treatment_pricing_table_zfB6Uk": {
+      "type": "treatment-pricing-table",
+      "blocks": {
+        "price_row_F3nCQz": {
+          "type": "price_row",
+          "settings": {
+            "area": "Standard Area",
+            "single_price": "£200",
+            "package_price": "£850",
+            "was_price": ""
+          }
+        },
+        "price_row_GJKpUy": {
+          "type": "price_row",
+          "settings": {
+            "area": "Half Face (Periocular)",
+            "single_price": "£230",
+            "package_price": "£975",
+            "was_price": ""
+          }
+        },
+        "price_row_GxdBhQ": {
+          "type": "price_row",
+          "settings": {
+            "area": "Full Face",
+            "single_price": "£260",
+            "package_price": "£1,105",
+            "was_price": ""
+          }
+        }
+      },
+      "block_order": [
+        "price_row_F3nCQz",
+        "price_row_GJKpUy",
+        "price_row_GxdBhQ"
+      ],
+      "name": "Treatment Pricing Table",
+      "settings": {
+        "heading": "<p>Clear Pricing. Structured Treatment Plans.</p>",
+        "subtitle": "A course of 3–5 treatments is typically recommended for best results. Each session is tailored to your skin's needs and goals.",
+        "col_1_label": "Treatment Area",
+        "col_2_label": "Single Session",
+        "col_3_label": "Package of 5 (Save 15%)*",
+        "note": "* Results develop gradually and vary by individual. A full consultation ensures the right treatment plan for your skin.",
+        "button_label": "Book Consultation",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
+        "section_bg": "#4a4555",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "light_color": "#e0d8d0",
+        "gold_color": "#d4c4a0",
+        "table_bg": "#55506080",
+        "heading_font_size": 42,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "expectations_trust_Y6WBNa": {
+      "type": "expectations-trust",
+      "blocks": {
+        "trust_point_7CHmrC": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "star",
+            "text": "4.9 Google rating"
+          }
+        },
+        "trust_point_8JH8eE": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Clinically formulated revitalisation complex"
+          }
+        },
+        "trust_point_zBYWmG": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "finance",
+            "text": "0% finance available"
+          }
+        },
+        "trust_point_fPb4hd": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Precision microinjection delivery"
+          }
+        },
+        "trust_point_kdqGT3": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_xXAaph": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "clock",
+            "text": "Established 10+ years"
+          }
+        }
+      },
+      "block_order": [
+        "trust_point_7CHmrC",
+        "trust_point_8JH8eE",
+        "trust_point_zBYWmG",
+        "trust_point_fPb4hd",
+        "trust_point_kdqGT3",
+        "trust_point_xXAaph"
+      ],
+      "name": "Expectations & Trust",
+      "settings": {
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What to expect with NCTF skin revitalisation",
+        "card_description": "<p>NCTF is a clinically formulated skin revitalisation treatment designed to improve hydration, texture, and overall skin quality through precision microinjections.</p><p>The multi-component complex supports cellular renewal and dermal hydration while maintaining natural facial expression and structure.</p><p>We prioritise subtle, progressive skin improvement and medically delivered precision.</p>",
+        "section_bg": "#ecd7cc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#777777",
+        "card_bg": "#f1e3da",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 44,
+        "card_heading_font_size": 28,
+        "body_font_size": 16,
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "consultation_form_8hkxJ6": {
+      "type": "consultation-form",
+      "name": "Consultation Form",
+      "settings": {
+        "section_width": 1200,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_side": 20,
+        "section_background": "#f9f9f9",
+        "form_max_width": 700,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 40,
+        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_font_size": 14,
+        "form_heading": "Make an enquiry",
+        "form_subheading": "Fill out the form below and we'll guide you to the best next step.",
+        "heading_color": "#000000",
+        "heading_font_size": 26,
+        "heading_font_weight": "500",
+        "subheading_color": "#777777",
+        "subheading_font_size": 15,
+        "label_color": "#333333",
+        "label_font_size": 14,
+        "label_font_weight": "400",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 6,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 15,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "show_treatment_field": true,
+        "treatment_label": "Which treatment are you interested in?",
+        "default_treatment_value": "Consultation",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "name_label": "Name",
+        "name_placeholder": "Your Name",
+        "contact_method_label": "How can we reach you?",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "email_label": "Email Address",
+        "email_placeholder": "Email Address",
+        "whatsapp_number": "447798983387",
+        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
+        "wa_you_contact_text": "I'll message you",
+        "wa_we_contact_text": "Message me",
+        "whatsapp_button_text": "Chat on WhatsApp",
+        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
+        "whatsapp_button_background": "#25d366",
+        "whatsapp_button_hover_background": "#1fbe59",
+        "whatsapp_button_text_color": "#ffffff",
+        "clinic_phone_number": "01902256667",
+        "call_phone_label": "Your phone number",
+        "call_time_label": "Best time to call you?",
+        "call_time_placeholder": "Select a time",
+        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "phone_placeholder": "Phone Number",
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 14,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Submit Form",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 15,
+        "button_font_weight": "600",
+        "button_border_radius": 8,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
+        "privacy_text_color": "#999999",
+        "privacy_font_size": 13
+      }
+    },
+    "faq_updated_JENtQY": {
+      "type": "faq-updated",
+      "blocks": {
+        "faq_item_h7yHHd": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is NCTF?",
+            "answer": "<p>NCTF® is a clinically formulated injectable skin booster containing over 50 active ingredients including hyaluronic acid, vitamins, amino acids and antioxidants. It improves hydration, elasticity and overall skin quality without adding volume like dermal fillers.</p>"
+          }
+        },
+        "faq_item_heM8Uk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How is NCTF different to derma fillers?",
+            "answer": "<p>Dermal fillers are designed to restore or add facial volume. NCTF does not add volume. Instead, it improves the quality, hydration and firmness of the skin itself.</p>"
+          }
+        },
+        "faq_item_LP7eQR": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients benefit from a course of 3–5 sessions spaced 2–3 weeks apart. Your clinician will assess your skin and recommend a personalised treatment plan during consultation.</p>"
+          }
+        },
+        "faq_item_BAEKdm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>You may experience mild redness or small injection marks for 24–48 hours. Minor bruising is possible. Most clients return to normal activities the following day.</p>"
+          }
+        },
+        "faq_item_F8jzNC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the treatment painful?",
+            "answer": "<p>NCTF is delivered using very fine needles. Most clients describe the treatment as mildly uncomfortable rather than painful. A topical numbing cream can be applied if needed.</p>"
+          }
+        },
+        "faq_item_KYFgra": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Hydration and glow often improve within the first week. Collagen stimulation and firmness develop gradually over several weeks.</p>"
+          }
+        },
+        "faq_item_QA7HBU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is NCTF suitable for all skin types?",
+            "answer": "<p>Yes. NCTF is suitable for most skin types and tones. A consultation will confirm suitability and identify any contraindications.</p>"
+          }
+        },
+        "faq_item_zrX6iW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_h7yHHd",
+        "faq_item_heM8Uk",
+        "faq_item_LP7eQR",
+        "faq_item_BAEKdm",
+        "faq_item_F8jzNC",
+        "faq_item_KYFgra",
+        "faq_item_QA7HBU",
+        "faq_item_zrX6iW"
+      ],
+      "name": "FAQ Dark Theme",
+      "settings": {
+        "section_bg_color": "#ededed",
+        "max_width": 900,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "side_padding": 30,
+        "heading": "Your NCTF Questions. Answered",
+        "heading_color": "#1c1c1c",
+        "heading_font_size": 24,
+        "heading_font_weight": "400",
+        "heading_font_style": "italic",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 50,
+        "question_color": "#1c1c1c",
+        "question_font_size": 16,
+        "question_font_weight": "600",
+        "show_underline": true,
+        "underline_color": "#b8a164",
+        "underline_width": 60,
+        "underline_height": 2,
+        "answer_color": "#1c1c1c",
+        "answer_font_size": 14,
+        "answer_line_height": 1.7,
+        "answer_margin_top": 16,
+        "divider_color": "#333333",
+        "item_padding_vertical": 30,
+        "icon_color": "#b8a164",
+        "icon_active_color": "#b8a164",
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 24,
+        "icon_border_width": 2,
+        "show_decoration": false,
+        "decoration_color": "#b8a164",
+        "decoration_size": 40,
+        "decoration_opacity": 0.6,
+        "all_items_open": false,
+        "first_item_open": false,
+        "allow_multiple_open": true
+      }
+    },
+    "location_contact_8cdVLX": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_pb6eYr": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_TUqc3J": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_JBEQ9x": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_pb6eYr",
+        "contact_TUqc3J",
+        "contact_JBEQ9x"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "info_bg": "#ebebeb",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "#cf-template--25630339203452__consultation_form_8hkxJ6",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "treatment_tabs_section_qrH3zM",
+    "ss_image_with_text_12_gUF6fh",
+    "ss_image_with_text_9_GLgAya",
+    "ss_clothing_image_grid_BGb7qV",
+    "rich_text_nziPUE",
+    "ss_steps_11_7cMyRT",
+    "175993612397035c9e",
+    "ss_simple_faq_jiYFWj",
+    "product_hero_rpMfMw",
+    "slideshow_GzPCLJ",
+    "info_hero_E6fW7Q",
+    "timeline_circles_kL7kDh",
+    "slideshow_Wr8ijY",
+    "split_content_wbRbrP",
+    "slideshow_JhRaCw",
+    "results_cards_iPrXU8",
+    "treatment_pricing_table_zfB6Uk",
+    "expectations_trust_Y6WBNa",
+    "consultation_form_8hkxJ6",
+    "faq_updated_JENtQY",
+    "location_contact_8cdVLX"
+  ]
+}
