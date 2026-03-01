@@ -3981,7 +3981,7 @@
         "trust_point_G7PEGK": {
           "type": "trust_point",
           "settings": {
-            "icon": "test_patch",
+            "icon": "heart",
             "text": "Test patch included"
           }
         },
@@ -4358,6 +4358,13 @@
             "question": "Will I need maintenance sessions?",
             "answer": "<p>Some clients choose occasional maintenance treatments once or twice per year, especially in hormonally sensitive areas.</p><p>Your long-term plan is discussed openly so there are no surprises.</p>"
           }
+        },
+        "faq_item_JJ8Lk4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
         }
       },
       "block_order": [
@@ -4372,7 +4379,8 @@
         "faq_item_C4qTxP",
         "faq_item_aaTc4h",
         "faq_item_cYUUPK",
-        "faq_item_4pHAKh"
+        "faq_item_4pHAKh",
+        "faq_item_JJ8Lk4"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
