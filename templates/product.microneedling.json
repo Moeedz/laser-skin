@@ -2073,10 +2073,10 @@
       ],
       "name": "Expectations & Trust",
       "settings": {
-        "heading": "Transparent pricing. Structured clinical care.",
-        "subtitle": "Everything you need to feel confident booking your consultation.",
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
         "card_title": "What you can expect with RF Microneedling",
-        "card_description": "<p>RF Microneedling is carefully planned and clinically delivered with personalised depth settings.</p><p>From your consultation, you’ll understand:</p><p>• Your appropriate treatment depth</p><p>• Expected downtime</p><p>• Number of sessions recommended</p><p>• When visible results should appear</p><p>• How collagen remodelling progresses over time</p><p>Every treatment plan is built around safety, precision, and realistic outcomes with no pressure and no hidden surprises.</p><p>We prioritise progressive, natural-looking results over aggressive treatments.</p>",
+        "card_description": "<p>RF Microneedling combines precision-controlled microneedles with radiofrequency energy to stimulate collagen and improve skin texture, firmness, and tone.</p><p>Energy depth and intensity are carefully adjusted to suit your skin concerns, ensuring controlled dermal stimulation while protecting surrounding tissue.</p><p>We prioritise progressive improvement, structural collagen support, and realistic outcomes.</p>",
         "section_bg": "#efddd1",
         "show_texture": true,
         "texture_opacity": 80,
