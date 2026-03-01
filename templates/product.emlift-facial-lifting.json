@@ -2033,7 +2033,7 @@
         "show_message_field": true,
         "message_label": "How can we help you? (Optional Message)",
         "message_placeholder": "",
-        "button_text": "Request Callback",
+        "button_text": "Submit Form",
         "button_background": "#b8a164",
         "button_hover_background": "#9a8654",
         "button_text_color": "#ffffff",
@@ -2133,6 +2133,13 @@
             "question": "How should I prepare for treatment?",
             "answer": "<p>No special preparation is required. You should attend with clean skin and follow any practitioner advice given during consultation.</p>"
           }
+        },
+        "faq_item_kH8xkJ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p><br/></p><p>If you’re unsure which option is best for you, our team will be happy to guide you during your consultation.</p>"
+          }
         }
       },
       "block_order": [
@@ -2147,7 +2154,8 @@
         "faq_item_xHN3BB",
         "faq_item_X6VmJe",
         "faq_item_6JkCLb",
-        "faq_item_FDzrh6"
+        "faq_item_FDzrh6",
+        "faq_item_kH8xkJ"
       ],
       "name": "FAQ Dark Theme",
       "settings": {
