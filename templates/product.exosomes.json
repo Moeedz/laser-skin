@@ -1958,50 +1958,78 @@
         "faq_item_h7yHHd": {
           "type": "faq_item",
           "settings": {
-            "question": "What is NCTF?",
-            "answer": "<p>NCTF® is a clinically formulated injectable skin booster containing over 50 active ingredients including hyaluronic acid, vitamins, amino acids and antioxidants. It improves hydration, elasticity and overall skin quality without adding volume like dermal fillers.</p>"
+            "question": "What are exosomes",
+            "answer": "<p>Exosomes are microscopic extracellular vesicles that act as cellular messengers. They help regulate communication between cells, supporting repair processes, collagen production, and overall skin regeneration.</p>"
           }
         },
         "faq_item_heM8Uk": {
           "type": "faq_item",
           "settings": {
-            "question": "How is NCTF different to derma fillers?",
-            "answer": "<p>Dermal fillers are designed to restore or add facial volume. NCTF does not add volume. Instead, it improves the quality, hydration and firmness of the skin itself.</p>"
+            "question": "What is EXO|E?",
+            "answer": "<p>EXO|E is a clinically developed exosome-based regenerative complex designed for professional aesthetic use. It is applied using advanced delivery techniques such as microneedling to enhance skin renewal and improve overall skin quality.</p>"
           }
         },
         "faq_item_LP7eQR": {
           "type": "faq_item",
           "settings": {
-            "question": "How many sessions will I need?",
-            "answer": "<p>Most clients benefit from a course of 3–5 sessions spaced 2–3 weeks apart. Your clinician will assess your skin and recommend a personalised treatment plan during consultation.</p>"
+            "question": "is Exosome therapy injectable?",
+            "answer": "<p>No. In our clinic, EXO|E is applied topically and delivered into the skin using precision microneedling. It is not used as a traditional injectable filler or volumising treatment.</p>"
           }
         },
         "faq_item_BAEKdm": {
           "type": "faq_item",
           "settings": {
-            "question": "Is there any downtime?",
-            "answer": "<p>You may experience mild redness or small injection marks for 24–48 hours. Minor bruising is possible. Most clients return to normal activities the following day.</p>"
+            "question": "How is exosome therapy different from dermal fillers?",
+            "answer": "<p>Dermal fillers add volume and structure to specific areas of the face.</p><p>Exosome therapy focuses on improving skin quality by supporting collagen production, texture refinement, and overall skin health.</p>"
           }
         },
         "faq_item_F8jzNC": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the treatment painful?",
-            "answer": "<p>NCTF is delivered using very fine needles. Most clients describe the treatment as mildly uncomfortable rather than painful. A topical numbing cream can be applied if needed.</p>"
+            "question": "How is it different from polynucleotides?",
+            "answer": "<p>Polynucleotides primarily stimulate tissue repair and hydration through DNA-based regeneration.</p><p>Exosomes act as signalling messengers that support broader cellular communication, collagen renewal, and skin recovery.</p><p>They can sometimes complement each other depending on treatment goals.</p>"
           }
         },
         "faq_item_KYFgra": {
           "type": "faq_item",
           "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>Hydration and glow often improve within the first week. Collagen stimulation and firmness develop gradually over several weeks.</p>"
+            "question": "What concerns do exosome therapy treat?",
+            "answer": "<p>Exosome therapy may help improve:</p><p>• Dull or tired-looking skin</p><p>• Uneven texture</p><p>• Fine lines</p><p>• Enlarged pores</p><p>• Loss of firmness</p><p>• Skin recovery following laser or microneedling</p><p>It is focused on overall skin rejuvenation rather than structural lifting or volume.</p>"
           }
         },
         "faq_item_QA7HBU": {
           "type": "faq_item",
           "settings": {
-            "question": "Is NCTF suitable for all skin types?",
-            "answer": "<p>Yes. NCTF is suitable for most skin types and tones. A consultation will confirm suitability and identify any contraindications.</p>"
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients benefit from a course of 3–4 treatments spaced 3–4 weeks apart.</p><p>Your practitioner will tailor the plan to your skin condition and goals.</p>"
+          }
+        },
+        "faq_item_q3RXtq": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Some clients notice improved hydration and glow within the first week.</p><p>More significant improvements in firmness and texture develop gradually over 4–12 weeks as collagen renewal continues.</p>"
+          }
+        },
+        "faq_item_4UNMbc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the treatment painful?",
+            "answer": "<p>A topical numbing cream is applied prior to microneedling to ensure comfort. Most clients describe the sensation as mild and tolerable.</p>"
+          }
+        },
+        "faq_item_zLxbH6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it make me look different?",
+            "answer": "<p>Exosome therapy improves skin quality rather than facial structure. The goal is healthier, smoother, more radiant skin not a “done” or overtreated appearance.</p>"
+          }
+        },
+        "faq_item_erbbMU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results vary by individual. After completing a course, many clients choose maintenance treatments every 4–6 months to support ongoing collagen production and skin health.</p>"
           }
         },
         "faq_item_zrX6iW": {
@@ -2020,6 +2048,10 @@
         "faq_item_F8jzNC",
         "faq_item_KYFgra",
         "faq_item_QA7HBU",
+        "faq_item_q3RXtq",
+        "faq_item_4UNMbc",
+        "faq_item_zLxbH6",
+        "faq_item_erbbMU",
         "faq_item_zrX6iW"
       ],
       "name": "FAQ Dark Theme",
@@ -2029,7 +2061,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "side_padding": 30,
-        "heading": "Your NCTF Questions. Answered",
+        "heading": "Your Exosomes Questions. Answered",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "400",
