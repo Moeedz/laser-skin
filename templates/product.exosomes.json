@@ -1504,7 +1504,7 @@
       "settings": {
         "heading": "Who Is Exosome Therapy Best For?",
         "subtitle": "Exosome therapy is ideal for clients who want advanced skin regeneration rather than structural facial change.",
-        "footer_text": "NCTF fits easily into ongoing skin maintenance plans.",
+        "footer_text": "Exosomes fit easily into ongoing skin maintenance plans.",
         "show_card_wrap": false,
         "card_bg": "#f5efe9",
         "card_border": "#d8cfc5",
@@ -1676,7 +1676,7 @@
             "image": "shopify://shop_images/1-removebg-preview_9.png",
             "image_cover": false,
             "title": "Straight After",
-            "description": "Most clients experience mild redness or small injection marks for 24–48 hours. Bruising is uncommon but possible."
+            "description": "Redness similar to mild sunburn for 24–48 hours is common."
           }
         },
         "card_dn9BEw": {
@@ -1685,7 +1685,7 @@
             "image": "shopify://shop_images/2-removebg-preview_11.png",
             "image_cover": true,
             "title": "Hydrate & Protect",
-            "description": "Keep the skin hydrated with a quality moisturizer. Use SPF to protect against sun exposure."
+            "description": "Use gentle skincare and SPF. Avoid active ingredients for 3–5 days."
           }
         },
         "card_PqUrkQ": {
@@ -1694,7 +1694,7 @@
             "image": "shopify://shop_images/3_11039e48-27fb-4a17-aab7-2961f0a85a81.png",
             "image_cover": false,
             "title": "Quick Recovery",
-            "description": "You can usually resume normal activities the next day, avoiding makeup for 24 hours."
+            "description": "Most clients return to normal activities within 24–48 hours."
           }
         }
       },
