@@ -1706,7 +1706,7 @@
       "name": "Results Cards",
       "settings": {
         "heading": "Aftercare & Downtime",
-        "footer_text": "Treatment plans are tailored based on skin condition, concerns, and the area being treated.",
+        "footer_text": "Results develop gradually as collagen remodelling continues over several weeks.",
         "section_bg": "#f4dee3",
         "show_texture": true,
         "texture_opacity": 80,
@@ -1758,7 +1758,7 @@
       ],
       "name": "Treatment Pricing Table",
       "settings": {
-        "heading": "<p>Clear Pricing. Structured Treatment Plans.</p>",
+        "heading": "<p>Clear Pricing. Regenerative Treatment Plans.</p>",
         "subtitle": "A course of 3–5 treatments is typically recommended for best results. Each session is tailored to your skin's needs and goals.",
         "col_1_label": "Treatment Area",
         "col_2_label": "Single Session",
