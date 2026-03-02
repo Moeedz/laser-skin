@@ -1239,7 +1239,7 @@
           "settings": {
             "title": "Immediately after",
             "image": "shopify://shop_images/1_6a59d4b0-ca80-4ccf-bfce-dda2160a201c.png",
-            "description": "Skin feels hydrated and refreshed"
+            "description": "Skin may appear flushed and feel warm. Mild redness is expected for 24–48 hours."
           }
         },
         "step_j9i7RT": {
@@ -1247,7 +1247,7 @@
           "settings": {
             "title": "Days 3–7",
             "image": "shopify://shop_images/2_e9d17eb9-426b-4556-b0d7-7171b09dacc7.png",
-            "description": "Initial improvements in texture and brightness"
+            "description": "Skin begins to feel smoother and more hydrated. Early improvements in glow and texture."
           }
         },
         "step_qBG7pE": {
@@ -1255,7 +1255,7 @@
           "settings": {
             "title": "Weeks 2–4",
             "image": "shopify://shop_images/3_38b031f2-5eb9-40ff-9e41-b37f48463b8e.png",
-            "description": "Increased fibroblast activity as NCTF® nourishes the skin's cellular environment"
+            "description": "Increased collagen activity supports improved firmness and tone."
           }
         },
         "step_6Knjm9": {
@@ -1263,7 +1263,7 @@
           "settings": {
             "title": "Weeks 6–12",
             "image": "shopify://shop_images/4_d9f716d5-ca7d-4eaf-86aa-074515c4155a.png",
-            "description": "Skin appears firmer, collagen-rich, and radiant"
+            "description": "Progressive improvements in skin quality, resilience, and overall radiance become more visible."
           }
         }
       },
