@@ -1191,12 +1191,20 @@
             "title": "",
             "text": "Suitable for use alongside microneedling"
           }
+        },
+        "point_d8tXch": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Designed for progressive, natural-looking results"
+          }
         }
       },
       "block_order": [
         "point_zCiRyM",
         "point_c7ALmi",
-        "point_bD7TcE"
+        "point_bD7TcE",
+        "point_d8tXch"
       ],
       "name": "Info Hero",
       "settings": {
