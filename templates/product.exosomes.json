@@ -942,7 +942,14 @@
           "type": "check_item",
           "settings": {
             "icon": "shield_check",
-            "text": "Subtle, natural-looking rejuvenation"
+            "text": "Improves tone, texture and luminosity"
+          }
+        },
+        "check_item_zpfxBf": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Non-surgical regenerative therapy"
           }
         },
         "trust_item_KU3zHT": {
@@ -986,6 +993,7 @@
         "check_item_MeC7GN",
         "check_item_PJNL4k",
         "check_item_MJ7HUc",
+        "check_item_zpfxBf",
         "trust_item_KU3zHT",
         "trust_item_39pi3M",
         "trust_item_C4bQWR",
