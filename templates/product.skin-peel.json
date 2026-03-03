@@ -1007,6 +1007,68 @@
         "content_max_width": 580
       }
     },
+    "info_hero_REFibd": {
+      "type": "info-hero",
+      "blocks": {
+        "point_jXWUed": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Stimulates collagen and tissue regeneration"
+          }
+        },
+        "point_apwbDT": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Improves skin texture, elasticity, and hydration"
+          }
+        },
+        "point_fL8TMc": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Supports natural repair without altering facial structure"
+          }
+        },
+        "point_jGJfQn": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Suitable for delicate areas such as under-eyes and neck"
+          }
+        }
+      },
+      "block_order": [
+        "point_jXWUed",
+        "point_apwbDT",
+        "point_fL8TMc",
+        "point_jGJfQn"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What are Polynucleotides?",
+        "body": "<p>A clinically proven regenerative treatment that works with your skin, not against it.</p><p>Polynucleotides are purified DNA fragments that stimulate your skin's natural repair processes.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.</p>",
+        "points_heading": "",
+        "footer_text": "",
+        "bg_position": "right center",
+        "section_height": 600,
+        "overlay_strong": "#ddd2c8ee",
+        "overlay_mid": "#ddd2c8b0",
+        "overlay_fade": "#ddd2c850",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 600,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "slideshow_9NBKXH": {
       "type": "slideshow",
       "disabled": true,
@@ -2159,6 +2221,7 @@
     "175993612397035c9e",
     "ss_simple_faq_jiYFWj",
     "product_hero_RqkdU3",
+    "info_hero_REFibd",
     "slideshow_9NBKXH",
     "stacked_info_cards_Tc3JWJ",
     "split_content_CrNMyU",
