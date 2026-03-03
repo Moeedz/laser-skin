@@ -1035,7 +1035,14 @@
           "type": "point",
           "settings": {
             "title": "",
-            "text": "Suitable for delicate areas such as under-eyes and neck"
+            "text": "A guided at-home skin management phase"
+          }
+        },
+        "point_betEVx": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Ongoing pigment control support"
           }
         }
       },
@@ -1043,7 +1050,8 @@
         "point_jXWUed",
         "point_apwbDT",
         "point_fL8TMc",
-        "point_jGJfQn"
+        "point_jGJfQn",
+        "point_betEVx"
       ],
       "name": "Info Hero",
       "settings": {
