@@ -2174,6 +2174,20 @@
             "answer": "<p>We treat a range of superficial skin lesions including:</p><p>• Skin tags</p><p>• Cherry angiomas</p><p>• Seborrhoeic keratosis</p><p>• Age spots</p><p>• Milia</p><p>• Certain benign moles</p><p>All treatments follow clinical assessment to confirm suitability.</p>"
           }
         },
+        "faq_item_FtQke8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do you remove skin blemishes?",
+            "answer": "<p>At Laser Skin Clinics we remove blemishes using Short Wave Diathermy or CryoPen treatment, depending on the type of blemish.</p><p>Short Wave Diathermy uses a fine probe to deliver controlled electrical energy that safely breaks down the unwanted tissue.</p><p>CryoPen works by precisely freezing the blemish, causing the tissue to break down and naturally fall away as the skin heals.</p><p>Your clinician will assess the blemish first and choose the safest and most appropriate method.</p>"
+          }
+        },
+        "faq_item_kzDEBk": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do you decide which treatment to use?",
+            "answer": "<p>The treatment method depends on the type, size, and location of the blemish.</p><p>Some blemishes respond best to controlled heat using Short Wave Diathermy, while others are better suited to CryoPen freezing technology.</p><p>Your practitioner will assess the area during your appointment and recommend the most effective option.</p>"
+          }
+        },
         "faq_item_Yqi3Jk": {
           "type": "faq_item",
           "settings": {
@@ -2233,6 +2247,8 @@
       },
       "block_order": [
         "faq_item_i6eLaB",
+        "faq_item_FtQke8",
+        "faq_item_kzDEBk",
         "faq_item_Yqi3Jk",
         "faq_item_VaKqwp",
         "faq_item_iAWpyp",
