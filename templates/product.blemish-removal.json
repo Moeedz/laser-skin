@@ -1188,7 +1188,7 @@
           "type": "card",
           "settings": {
             "title": "Natural healing response",
-            "description": "The treated area heals gradually, revealing smoother, clearer skin as it regenerates.<br>\n• Minimal scarring when clinically appropriate<br>\n• Gradual smoothing as skin regenerates",
+            "description": "The treated area forms a small scab as the skin repairs<br>\n• This naturally falls away during the healing process<br>\n• Healthy new skin forms underneath",
             "card_bg": "#eccac6"
           }
         }
