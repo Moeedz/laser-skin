@@ -1141,6 +1141,125 @@
         "padding_bottom": 72
       }
     },
+    "recovery_grid_kjJH7f": {
+      "type": "recovery-grid",
+      "blocks": {
+        "card_3pH4Vn": {
+          "type": "card",
+          "settings": {
+            "day_column": "1",
+            "label": "Mild",
+            "description": "Light warmth or slight dryness",
+            "is_highlight": false
+          }
+        },
+        "card_K79NGG": {
+          "type": "card",
+          "settings": {
+            "day_column": "1",
+            "label": "Most Common",
+            "description": "Redness and tightness similar to sun exposure",
+            "is_highlight": true
+          }
+        },
+        "card_3LpNwL": {
+          "type": "card",
+          "settings": {
+            "day_column": "1",
+            "label": "Stronger",
+            "description": "Visible redness with mild swelling",
+            "is_highlight": false
+          }
+        },
+        "card_FTVmBV": {
+          "type": "card",
+          "settings": {
+            "day_column": "2",
+            "label": "Mild",
+            "description": "Light flaking begins",
+            "is_highlight": false
+          }
+        },
+        "card_RJeaCQ": {
+          "type": "card",
+          "settings": {
+            "day_column": "2",
+            "label": "Most Common",
+            "description": "Noticeable peeling around mouth and cheeks",
+            "is_highlight": true
+          }
+        },
+        "card_CPM4aB": {
+          "type": "card",
+          "settings": {
+            "day_column": "2",
+            "label": "Stronger",
+            "description": "Heavier peeling as pigmented skin sheds",
+            "is_highlight": false
+          }
+        },
+        "card_Q6Fbwm": {
+          "type": "card",
+          "settings": {
+            "day_column": "3",
+            "label": "Mild",
+            "description": "Peeling settles and skin feels smoother",
+            "is_highlight": false
+          }
+        },
+        "card_MTdH7K": {
+          "type": "card",
+          "settings": {
+            "day_column": "3",
+            "label": "Most Common",
+            "description": "Fresh brighter skin appears",
+            "is_highlight": true
+          }
+        },
+        "card_ypBJn7": {
+          "type": "card",
+          "settings": {
+            "day_column": "3",
+            "label": "Stronger",
+            "description": "Remaining flakes gradually resolve",
+            "is_highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "card_3pH4Vn",
+        "card_K79NGG",
+        "card_3LpNwL",
+        "card_FTVmBV",
+        "card_RJeaCQ",
+        "card_CPM4aB",
+        "card_Q6Fbwm",
+        "card_MTdH7K",
+        "card_ypBJn7"
+      ],
+      "name": "Recovery Grid",
+      "settings": {
+        "heading": "What Your Skin May Look Like During Recovery",
+        "subtitle": "The MelanoPro Peel triggers a controlled skin renewal process. While responses vary slightly, most clients experience mild to moderate peeling that settles within around one week.",
+        "footer_text": "Most clients experience mild to moderate peeling that settles within 5–7 days.",
+        "day_1_title": "Day 1–2",
+        "day_2_title": "Day 3–5",
+        "day_3_title": "Day 5–7",
+        "section_bg": "#ebe2e2",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "card_bg": "#f5f0eb",
+        "card_border": "#e0d8d0",
+        "highlight_bg": "#c8a87c",
+        "highlight_text": "#ffffff",
+        "heading_font_size": 42,
+        "body_font_size": 15,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "how_it_works_timeline_Q4fGQe": {
       "type": "how-it-works-timeline",
       "blocks": {
@@ -1784,6 +1903,7 @@
     "product_hero_RqkdU3",
     "info_hero_REFibd",
     "how_it_works_timeline_3twx3E",
+    "recovery_grid_kjJH7f",
     "how_it_works_timeline_Q4fGQe",
     "how_it_works_timeline_xDyBNg",
     "before_after_results_fdnWYz",
