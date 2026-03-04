@@ -1100,7 +1100,7 @@
         "step_a38war": {
           "type": "step",
           "settings": {
-            "icon": "calendar_2",
+            "icon": "checkmark",
             "title": "Days 3–7",
             "points": "Visible peeling and flaking occurs||Pigmented skin cells begin to shed||Skin texture may feel dry during this stage"
           }
