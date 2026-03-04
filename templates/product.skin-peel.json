@@ -1148,6 +1148,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
+            "image": "shopify://shop_images/1_2e183706-1830-4897-8fc7-2ff02c68a7bd.png",
             "label": "Mild",
             "description": "Light warmth or slight dryness",
             "is_highlight": false
@@ -1157,6 +1158,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
+            "image": "shopify://shop_images/2_5deea786-a2bc-4080-a831-b1682e6498ce.png",
             "label": "Most Common",
             "description": "Redness and tightness similar to sun exposure",
             "is_highlight": true
@@ -1166,6 +1168,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
+            "image": "shopify://shop_images/3_92a97bc7-6ce7-4217-b688-79bc8908935c.png",
             "label": "Stronger",
             "description": "Visible redness with mild swelling",
             "is_highlight": false
