@@ -1183,6 +1183,88 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#b8886a",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
+    "split_content_D9dUDX": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_FR4jKC": {
+          "type": "left_point",
+          "settings": {
+            "text": "Stronger hydration and elasticity"
+          }
+        },
+        "left_point_PACbzR": {
+          "type": "left_point",
+          "settings": {
+            "text": "Improved skin texture and tone"
+          }
+        },
+        "left_point_KNn94P": {
+          "type": "left_point",
+          "settings": {
+            "text": "Brighter, more youthful appearance"
+          }
+        },
+        "right_point_JgFzEE": {
+          "type": "right_point",
+          "settings": {
+            "text": "Forehead lines"
+          }
+        },
+        "right_point_LkWLPH": {
+          "type": "right_point",
+          "settings": {
+            "text": "Eye contour (crow's feet)"
+          }
+        },
+        "right_point_FT7XfR": {
+          "type": "right_point",
+          "settings": {
+            "text": "Neck and décolleté"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_FR4jKC",
+        "left_point_PACbzR",
+        "left_point_KNn94P",
+        "right_point_JgFzEE",
+        "right_point_LkWLPH",
+        "right_point_FT7XfR"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Aftercare & Downtime",
+        "subtitle": "Radio Frequency requires minimal aftercare and no downtime.",
+        "footer_text": "RF fits easily into ongoing skin maintenance plans.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "What results can I expect?",
+        "left_subtitle": "NCTF® revitalisation benefits:",
+        "enable_right": true,
+        "right_heading": "Common treatment areas",
+        "right_subtitle": "NCTF® revitalisation can be at:",
+        "section_bg": "#e4ddd6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
@@ -2078,6 +2160,7 @@
     "product_hero_RqkdU3",
     "info_hero_REFibd",
     "split_content_gmnmF7",
+    "split_content_D9dUDX",
     "how_it_works_timeline_3twx3E",
     "recovery_grid_kjJH7f",
     "process_cards_EWtwhy",
