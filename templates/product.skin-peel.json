@@ -1783,7 +1783,7 @@
         "banner_text_color": "#333333",
         "banner_highlight_color": "#000000",
         "banner_font_size": 14,
-        "form_heading": "C02 Enquiry Form",
+        "form_heading": "Enquiry Form",
         "form_subheading": "",
         "heading_color": "#000000",
         "heading_font_size": 26,
@@ -1870,78 +1870,78 @@
         "faq_item_MTQ7HM": {
           "type": "faq_item",
           "settings": {
-            "question": "What skin concerns can CO₂ laser resurfacing treat?",
-            "answer": "<p>CO₂ laser resurfacing is a versatile treatment that can address multiple skin concerns in a single procedure. It works by removing damaged surface layers of skin while stimulating collagen production deeper within the dermis.</p><p>It can help improve:</p><p>• Fine lines and deeper wrinkles</p><p>• Sun damage and pigmentation irregularities</p><p>• Acne scarring and surgical scars</p><p>• Enlarged pores</p><p>• Uneven skin tone and texture</p><p>• Crepey or thinning skin</p><p>• Stretch marks (in selected areas)</p><p>• Age spots and sun spots</p><p>• Skin laxity in mild to moderate cases</p><p>During your consultation, we assess your skin type, concerns, and downtime tolerance to determine whether CO₂ is the most appropriate treatment for you.</p>"
+            "question": "What is the MelanoPro Peel System?",
+            "answer": "<p>The MelanoPro Peel System is a professional depigmentation treatment designed to target stubborn pigmentation concerns such as melasma, sun damage and post-inflammatory discolouration.</p><p>The treatment combines an in-clinic professional peel application with a structured at-home phase that encourages controlled skin renewal and gradual pigment correction.</p>"
           }
         },
         "faq_item_HrxNLf": {
           "type": "faq_item",
           "settings": {
-            "question": "Is CO₂ laser resurfacing painful?",
-            "answer": "<p>A topical anaesthetic is applied before treatment to minimise discomfort. Most clients describe the sensation as heat and pressure rather than sharp pain.</p><p>Treatment intensity can be adjusted depending on your goals and downtime tolerance.</p>"
+            "question": "What skin concerns does MelanoPro treat?",
+            "answer": "<p>MelanoPro is designed to improve a range of pigmentation-related concerns including:</p><p>• Melasma</p><p>• Sun damage</p><p>• Uneven skin tone</p><p>• Post-inflammatory pigmentation from acne</p><p>• Dull or tired looking skin</p>"
           }
         },
         "faq_item_ddfEcQ": {
           "type": "faq_item",
           "settings": {
-            "question": "What level of downtime should I expect?",
-            "answer": "<p>Downtime depends on treatment intensity:</p><p>• Light resurfacing: 3–5 days redness and mild peeling</p><p>• Moderate resurfacing: 5–7 days redness and flaking</p><p>• Deep resurfacing: 7–10+ days visible peeling and recovery</p><p>We tailor depth based on your goals and your ability to accommodate downtime.</p>"
+            "question": "How does the MelanoPro peel work?",
+            "answer": "<p>The peel works by combining controlled resurfacing with ingredients that regulate pigment activity within the skin.</p><p>After the professional peel is applied in clinic, the skin goes through a controlled renewal phase where pigmented cells are gradually shed and replaced with clearer, more even-toned skin.</p>"
           }
         },
         "faq_item_cYExH8": {
           "type": "faq_item",
           "settings": {
-            "question": "How many sessions will I need?",
-            "answer": "<p>Many clients achieve significant improvement from one well-planned session.</p><p>However, deeper scarring or advanced ageing concerns may require a structured treatment plan.</p><p>Your consultation determines the correct approach.</p>"
+            "question": "What happens during the treatment?",
+            "answer": "<p>During your appointment, the clinician will cleanse and prepare the skin before applying the MelanoPro depigmentation peel.</p><p>The peel remains on the skin for a prescribed number of hours and is then washed off at home. Your clinician will provide clear instructions and guide you through the full protocol.</p>"
           }
         },
         "faq_item_UbaFJR": {
           "type": "faq_item",
           "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>Initial smoothing appears once healing completes.</p><p>Collagen remodelling continues for 8–12 weeks after treatment, with progressive improvements in texture, tone, and firmness.</p>"
+            "question": "How long does the peel stay on the skin?",
+            "answer": "<p>The peel is typically left on the skin for <strong>8–12 hours</strong> depending on your skin type and the clinician’s assessment.</p><p>You will then wash the peel off at home and begin the recommended aftercare routine.</p>"
           }
         },
         "faq_item_qJVU4c": {
           "type": "faq_item",
           "settings": {
-            "question": "Is CO₂ resurfacing safe for my skin type?",
-            "answer": "<p>CO₂ is best suited for lighter to medium skin tones.</p><p>A full assessment is carried out before treatment to ensure suitability and minimise risks.</p><p>We never proceed without confirming safety.</p>"
+            "question": "Will my skin peel after the treatment?",
+            "answer": "<p>Yes. Most clients experience visible peeling or flaking over the following days as the skin renews itself.</p><p>This is a normal and expected part of the treatment process and usually settles within around 5–7 days.</p>"
           }
         },
         "faq_item_yVNnp8": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I wear makeup after treatment?",
-            "answer": "<p>Makeup can usually be applied once the skin surface has fully healed, typically 5–7 days depending on depth.</p><p>Aftercare guidance is provided to ensure optimal healing.</p>"
+            "question": "How much downtime should I expect?",
+            "answer": "<p>Downtime varies slightly depending on your skin type, but most clients experience:</p><p>• Tightness or dryness in the first 1–2 days</p><p>• Peeling or flaking between days 3–7</p><p>• Gradual improvement in skin clarity over the following weeks</p><p>Your clinician will provide aftercare guidance to support proper healing.</p>"
           }
         },
         "faq_item_Ek4P3d": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between \"Full Face\" and \"Half Face\"?",
-            "answer": "<p>Full Face treats the entire facial surface.</p><p>Half Face targets a specific area of concern, such as:</p><p>• Lower face</p><p>• Cheeks</p><p>• Perioral lines</p><p>• Forehead</p><p>The approach is customised depending on your primary concern.</p>"
+            "question": "When will I see results?",
+            "answer": "<p>Many clients notice improvements in skin clarity and brightness once the peeling phase has settled.</p><p>Pigmentation correction continues to improve gradually over the following weeks as the skin renews itself.</p>"
           }
         },
         "faq_item_hcEF7D": {
           "type": "faq_item",
           "settings": {
-            "question": "How long do results last?",
-            "answer": "<p>CO₂ stimulates deep collagen renewal.</p><p>Results can last several years, depending on:</p><p>• Age</p><p>• Lifestyle</p><p>• Skincare</p><p>• Sun exposure</p><p>Maintenance treatments may be recommended to preserve results.</p>"
+            "question": "How many treatments are needed?",
+            "answer": "<p>Some clients see excellent results from a single MelanoPro treatment.</p><p>However, depending on the severity of pigmentation and your skin goals, your clinician may recommend a personalised treatment plan.</p>"
           }
         },
         "faq_item_x7jNzt": {
           "type": "faq_item",
           "settings": {
-            "question": "Who is CO₂ resurfacing best for?",
-            "answer": "<p>CO₂ may be ideal if you have:</p><p>• Acne scarring</p><p>• Deep lines</p><p>• Texture irregularities</p><p>• Sun damage</p><p>• Skin laxity</p><p>It may not be suitable if you require zero downtime or have certain medical contraindications.</p><p></p><h3></h3>"
+            "question": "Is the peel suitable for all skin types?",
+            "answer": "<p>MelanoPro is designed to be suitable for a wide range of skin types and pigmentation concerns.</p><p>Your clinician will assess your skin during consultation to confirm whether the treatment is appropriate for you.</p>"
           }
         },
         "faq_item_QwXbyn": {
           "type": "faq_item",
           "settings": {
-            "question": "What happens at my consultation?",
-            "answer": "<p>Your consultation includes:</p><p>• Skin assessment</p><p>• Downtime discussion</p><p>• Depth planning (light, moderate, deep)</p><p>• Clear pricing</p><p>• Aftercare planning</p><p>You’ll leave knowing exactly what recovery involves.</p>"
+            "question": "Can I wear makeup after the peel?",
+            "answer": "<p>Makeup should generally be avoided during the early peeling phase while the skin is renewing.</p><p>Your clinician will advise when it is safe to resume makeup based on your skin’s progress.</p>"
           }
         },
         "faq_item_3LC6wb": {
@@ -1974,7 +1974,7 @@
         "padding_top": 60,
         "padding_bottom": 60,
         "side_padding": 30,
-        "heading": "C02 Laser Resurfacing. Your Questions. Answered",
+        "heading": "MelanoPro Peel. Your Questions. Answered",
         "heading_color": "#1c1c1c",
         "heading_font_size": 24,
         "heading_font_weight": "600",
