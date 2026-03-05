@@ -1269,17 +1269,17 @@
         "padding_bottom": 72
       }
     },
-    "aftercare_cards_Ad9JAA": {
+    "aftercare_cards_HrWABF": {
       "type": "aftercare-cards",
       "blocks": {
-        "card_M36AUk": {
+        "card_HByGXU": {
           "type": "card",
           "settings": {
             "card_heading": "Aftercare Tips",
             "points": "Apply gentle sunscreen daily, SPF 30+||Avoid retinoids & exfoliating products for 3–5 days||Avoid strenuous exercise, saunas, & hot tubs for 24–48 hours||Keep skin hydrated and don't pick or scratch at treated areas"
           }
         },
-        "card_Ee4DRh": {
+        "card_A9q9Hp": {
           "type": "card",
           "settings": {
             "card_heading": "Expected Downtime",
@@ -1288,8 +1288,8 @@
         }
       },
       "block_order": [
-        "card_M36AUk",
-        "card_Ee4DRh"
+        "card_HByGXU",
+        "card_A9q9Hp"
       ],
       "name": "Aftercare Cards",
       "settings": {
@@ -1963,7 +1963,7 @@
     "info_hero_REFibd",
     "how_it_works_timeline_3twx3E",
     "recovery_grid_kjJH7f",
-    "aftercare_cards_Ad9JAA",
+    "aftercare_cards_HrWABF",
     "info_hero_GdJ3Xe",
     "how_it_works_timeline_xDyBNg",
     "before_after_results_fdnWYz",
