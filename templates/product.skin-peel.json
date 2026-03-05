@@ -1399,7 +1399,7 @@
           "type": "card",
           "settings": {
             "title": "Support the Skin While It Peels",
-            "description": "Peeling and flaking are a normal part of the treatment process<br>\nAvoid picking or pulling at peeling skin<br>\nUse the recommended post-treatment products provided by your clinician",
+            "description": "Peeling and flaking are a normal part of the treatment process||Avoid picking or pulling at peeling skin||Use the recommended post-treatment products provided by your clinician",
             "card_bg": "#c8cedf"
           }
         },
@@ -1407,7 +1407,7 @@
           "type": "card",
           "settings": {
             "title": "Protect Your Skin From Sun",
-            "description": "Strict sun protection is essential during the recovery phase<br>Apply broad spectrum SPF daily once advised<br>Avoid direct sun exposure while the skin is renewing",
+            "description": "Strict sun protection is essential during the recovery phase||Apply broad spectrum SPF daily once advised||Avoid direct sun exposure while the skin is renewing",
             "card_bg": "#e8ddd4"
           }
         }
