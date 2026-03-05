@@ -1296,8 +1296,15 @@
         "point_Jd7Hq3": {
           "type": "point",
           "settings": {
-            "title": "✔ Improved skin clarity",
+            "title": "Improved skin clarity",
             "text": "The resurfacing process helps remove dull, damaged skin cells, revealing smoother and clearer skin underneath."
+          }
+        },
+        "point_eARHP6": {
+          "type": "point",
+          "settings": {
+            "title": "Smoother overall skin texture",
+            "text": "As the skin regenerates, texture may appear more refined and refreshed."
           }
         }
       },
@@ -1305,7 +1312,8 @@
         "point_gP7VKq",
         "point_68Pmwh",
         "point_igkqdk",
-        "point_Jd7Hq3"
+        "point_Jd7Hq3",
+        "point_eARHP6"
       ],
       "name": "Info Hero",
       "settings": {
