@@ -1184,7 +1184,7 @@
         "text_color": "#4a3a30",
         "accent_color": "#b8886a",
         "cross_color": "#c27c7c",
-        "right_icon_style": "check",
+        "right_icon_style": "cross",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
