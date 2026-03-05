@@ -1269,6 +1269,60 @@
         "padding_bottom": 72
       }
     },
+    "process_cards_EWtwhy": {
+      "type": "process-cards",
+      "blocks": {
+        "card_TnDEDR": {
+          "type": "card",
+          "settings": {
+            "title": "Targeted precision",
+            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
+            "card_bg": "#e8ddd4"
+          }
+        },
+        "card_JQV7PL": {
+          "type": "card",
+          "settings": {
+            "title": "Clinician-controlled treatment",
+            "description": "Depth and intensity adjusted based on skin type and blemish type",
+            "card_bg": "#c8cedf"
+          }
+        },
+        "card_HQMX9g": {
+          "type": "card",
+          "settings": {
+            "title": "Natural healing response",
+            "description": "The treated area heals gradually as the skin renews itself",
+            "card_bg": "#e8ddd4"
+          }
+        }
+      },
+      "block_order": [
+        "card_TnDEDR",
+        "card_JQV7PL",
+        "card_HQMX9g"
+      ],
+      "name": "Process Cards",
+      "settings": {
+        "heading": "How blemish removal works",
+        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
+        "footer_text": "",
+        "show_timeline": false,
+        "connector_color": "#b5a080",
+        "connector_border": "#ddd4c8",
+        "section_bg": "linear-gradient(180deg, rgba(201, 180, 176, 1), rgba(212, 191, 192, 1) 25%, rgba(200, 181, 192, 1) 50%, rgba(184, 168, 184, 1) 75%, rgba(194, 176, 168, 1) 100%)",
+        "shimmer_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a32",
+        "card_title_color": "#3a2820",
+        "card_text_color": "#5a4a42",
+        "heading_font_size": 42,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "info_hero_GdJ3Xe": {
       "type": "info-hero",
       "blocks": {
@@ -1337,60 +1391,6 @@
         "content_width": 600,
         "padding_top": 60,
         "padding_bottom": 60
-      }
-    },
-    "process_cards_EMMUpL": {
-      "type": "process-cards",
-      "blocks": {
-        "card_mEMXg6": {
-          "type": "card",
-          "settings": {
-            "title": "Targeted precision",
-            "description": "Energy or controlled cautery is applied only to the blemish, protecting surrounding skin",
-            "card_bg": "#e8ddd4"
-          }
-        },
-        "card_jQUeLz": {
-          "type": "card",
-          "settings": {
-            "title": "Clinician-controlled treatment",
-            "description": "Depth and intensity adjusted based on skin type and blemish type",
-            "card_bg": "#c8cedf"
-          }
-        },
-        "card_bXDdqd": {
-          "type": "card",
-          "settings": {
-            "title": "Natural healing response",
-            "description": "The treated area heals gradually as the skin renews itself",
-            "card_bg": "#e8ddd4"
-          }
-        }
-      },
-      "block_order": [
-        "card_mEMXg6",
-        "card_jQUeLz",
-        "card_bXDdqd"
-      ],
-      "name": "Process Cards",
-      "settings": {
-        "heading": "How blemish removal works",
-        "subtitle": "Guiding you through every step to ensure a thorough, clinician-focused treatment experience that's effective and reassuring.",
-        "footer_text": "",
-        "show_timeline": false,
-        "connector_color": "#b5a080",
-        "connector_border": "#ddd4c8",
-        "section_bg": "linear-gradient(180deg, rgba(201, 180, 176, 1), rgba(212, 191, 192, 1) 25%, rgba(200, 181, 192, 1) 50%, rgba(184, 168, 184, 1) 75%, rgba(194, 176, 168, 1) 100%)",
-        "shimmer_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a32",
-        "card_title_color": "#3a2820",
-        "card_text_color": "#5a4a42",
-        "heading_font_size": 42,
-        "card_title_font_size": 24,
-        "body_font_size": 16,
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "how_it_works_timeline_xDyBNg": {
@@ -1974,8 +1974,8 @@
     "info_hero_REFibd",
     "how_it_works_timeline_3twx3E",
     "recovery_grid_kjJH7f",
+    "process_cards_EWtwhy",
     "info_hero_GdJ3Xe",
-    "process_cards_EMMUpL",
     "how_it_works_timeline_xDyBNg",
     "before_after_results_fdnWYz",
     "luxury_pricing_TFtVXM",
