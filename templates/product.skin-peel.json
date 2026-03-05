@@ -1389,7 +1389,7 @@
           "type": "card",
           "settings": {
             "title": "Leave the Peel On as Directed",
-            "description": "<ul>\n<li>The professional peel applied in clinic must remain on the skin for the prescribed number of hours</li>\n<br>\n<li>Your clinician will advise exactly when to cleanse the skin at home</li>\n<br>\n<li>Do not apply additional products until instructed</li>\n</ul>",
+            "description": "The professional peel applied in clinic must remain on the skin for the prescribed number of hours<br>\n<li>Your clinician will advise exactly when to cleanse the skin at home<br>\n</li><li>Do not apply additional products until instructed.</li>",
             "card_bg": "#e8ddd4"
           }
         },
