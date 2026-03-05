@@ -1482,6 +1482,9 @@
         "point_Jd7Hq3",
         "point_eARHP6"
       ],
+      "custom_css": [
+        ".ifh__content {width: 100% !important; max-width: 100% !important;}"
+      ],
       "name": "Info Hero",
       "settings": {
         "heading": "What Results Can You Expect?",
