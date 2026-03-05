@@ -1128,6 +1128,18 @@
           "settings": {
             "text": "Are unable to avoid sun exposure during recovery"
           }
+        },
+        "right_point_HikjcY": {
+          "type": "right_point",
+          "settings": {
+            "text": "Are unable to avoid sun exposure during recovery"
+          }
+        },
+        "right_point_wfjzXY": {
+          "type": "right_point",
+          "settings": {
+            "text": "Are unable to avoid sun exposure during recovery"
+          }
         }
       },
       "block_order": [
@@ -1138,7 +1150,9 @@
         "left_point_Dbd4er",
         "right_point_4jAF8w",
         "right_point_WiKQYg",
-        "right_point_6jgkzj"
+        "right_point_6jgkzj",
+        "right_point_HikjcY",
+        "right_point_wfjzXY"
       ],
       "name": "Split Content",
       "settings": {
