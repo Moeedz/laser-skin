@@ -1696,7 +1696,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "shield",
-            "text": "Medically delivered resurfacing"
+            "text": "Clinically guided peel protocol"
           }
         },
         "trust_point_ihmezr": {
@@ -1710,7 +1710,7 @@
           "type": "trust_point",
           "settings": {
             "icon": "heart",
-            "text": "Structured recovery & aftercare planning"
+            "text": "Structured pigment correction programme"
           }
         },
         "trust_point_WdErRC": {
