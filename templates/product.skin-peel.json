@@ -1269,49 +1269,6 @@
         "padding_bottom": 72
       }
     },
-    "aftercare_cards_HrWABF": {
-      "type": "aftercare-cards",
-      "blocks": {
-        "card_HByGXU": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Aftercare Tips",
-            "points": "Apply gentle sunscreen daily, SPF 30+||Avoid retinoids & exfoliating products for 3–5 days||Avoid strenuous exercise, saunas, & hot tubs for 24–48 hours||Keep skin hydrated and don't pick or scratch at treated areas"
-          }
-        },
-        "card_A9q9Hp": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Expected Downtime",
-            "points": "Mild redness and darkening of pigment||Any swelling is typically mild and short-lived||Within 3–7 days, treated areas will flake or fade||Makeup may be worn if skin isn't irritated; apply gently"
-          }
-        }
-      },
-      "block_order": [
-        "card_HByGXU",
-        "card_A9q9Hp"
-      ],
-      "name": "Aftercare Cards",
-      "settings": {
-        "heading": "IPL Aftercare & Downtime",
-        "subtitle": "To ensure safe, natural-looking results, patients should follow these key aftercare steps.",
-        "footer_text": "Downtime is typically minimal. Full healing and clearer skin develop over 1–2 weeks.",
-        "show_checkmarks": false,
-        "layout": "grid",
-        "section_bg": "#ede4dc",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "info_hero_GdJ3Xe": {
       "type": "info-hero",
       "blocks": {
@@ -1963,7 +1920,6 @@
     "info_hero_REFibd",
     "how_it_works_timeline_3twx3E",
     "recovery_grid_kjJH7f",
-    "aftercare_cards_HrWABF",
     "info_hero_GdJ3Xe",
     "how_it_works_timeline_xDyBNg",
     "before_after_results_fdnWYz",
