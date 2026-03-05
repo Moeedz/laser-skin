@@ -1099,6 +1099,18 @@
             "text": "Want to improve skin clarity and brightness"
           }
         },
+        "left_point_Kw4BPh": {
+          "type": "left_point",
+          "settings": {
+            "text": "Have post-inflammatory pigmentation from acne"
+          }
+        },
+        "left_point_Dbd4er": {
+          "type": "left_point",
+          "settings": {
+            "text": "Are comfortable with a short peeling phase for better results"
+          }
+        },
         "right_point_4jAF8w": {
           "type": "right_point",
           "settings": {
@@ -1122,6 +1134,8 @@
         "left_point_FPBURj",
         "left_point_nbUUB4",
         "left_point_WtyHjM",
+        "left_point_Kw4BPh",
+        "left_point_Dbd4er",
         "right_point_4jAF8w",
         "right_point_WiKQYg",
         "right_point_6jgkzj"
