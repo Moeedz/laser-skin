@@ -339,7 +339,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "header {border-bottom: solid 10px #C5A059;}"
+      "header {border-bottom: solid 10px #c5a059;}",
+      "span.bar__card-check {display: none;}"
     ]
   }
 }
