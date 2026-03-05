@@ -1132,13 +1132,19 @@
         "right_point_HikjcY": {
           "type": "right_point",
           "settings": {
-            "text": "Are unable to avoid sun exposure during recovery"
+            "text": "Prefer treatments with no downtime at all"
           }
         },
         "right_point_wfjzXY": {
           "type": "right_point",
           "settings": {
             "text": "Are unable to avoid sun exposure during recovery"
+          }
+        },
+        "right_point_EP7TFf": {
+          "type": "right_point",
+          "settings": {
+            "text": "Are looking for treatment primarily for deep wrinkles or skin laxity"
           }
         }
       },
@@ -1152,7 +1158,8 @@
         "right_point_WiKQYg",
         "right_point_6jgkzj",
         "right_point_HikjcY",
-        "right_point_wfjzXY"
+        "right_point_wfjzXY",
+        "right_point_EP7TFf"
       ],
       "name": "Split Content",
       "settings": {
