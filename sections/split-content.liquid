@@ -97,6 +97,12 @@
 
   .spc__point-check svg { width: 18px; height: 18px; }
 
+  .spc__point-cross {
+    flex-shrink: 0; color: var(--cross-color); margin-top: 2px;
+  }
+
+  .spc__point-cross svg { width: 18px; height: 18px; }
+
   .spc__point span p { margin: 0; }
   .spc__point span p + p { margin-top: 4px; }
 
@@ -200,6 +206,7 @@
     --heading-color: {{ section.settings.heading_color }};
     --text-color: {{ section.settings.text_color }};
     --accent-color: {{ section.settings.accent_color }};
+    --cross-color: {{ section.settings.cross_color }};
     --divider-color: {{ section.settings.divider_color }};
     --heading-size: {{ section.settings.heading_font_size }}px;
     --body-size: {{ section.settings.body_font_size }}px;
@@ -281,9 +288,19 @@
             <div class="spc__points">
               {% for block in right_blocks %}
                 <div class="spc__point" {{ block.shopify_attributes }}>
-                  <span class="spc__point-check">
-                    <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
+                  {% if section.settings.right_icon_style == 'cross' %}
+                    <span class="spc__point-cross">
+                      <svg viewBox="0 0 18 18" fill="none"><path d="M4 4L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </span>
+                  {% elsif section.settings.right_icon_style == 'dot' %}
+                    <span class="spc__point-cross">
+                      <svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="4" fill="currentColor"/></svg>
+                    </span>
+                  {% else %}
+                    <span class="spc__point-check">
+                      <svg viewBox="0 0 18 18" fill="none"><path d="M3 9.5L7 13.5L15 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  {% endif %}
                   <span>{{ block.settings.text }}</span>
                 </div>
               {% endfor %}
@@ -371,7 +388,19 @@
     { "type": "header", "content": "Colors" },
     { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
     { "type": "color", "id": "text_color", "label": "Text Color", "default": "#4a3a30" },
-    { "type": "color", "id": "accent_color", "label": "Checkmark Color", "default": "#b8886a" },
+    { "type": "color", "id": "accent_color", "label": "Left Checkmark Color", "default": "#b8886a" },
+    { "type": "color", "id": "cross_color", "label": "Right Icon Color", "default": "#c27c7c" },
+    {
+      "type": "select",
+      "id": "right_icon_style",
+      "label": "Right Column Icon",
+      "options": [
+        { "value": "check", "label": "Checkmark" },
+        { "value": "cross", "label": "Cross" },
+        { "value": "dot", "label": "Dot" }
+      ],
+      "default": "check"
+    },
     { "type": "color", "id": "divider_color", "label": "Divider Color", "default": "#c4b8aa" },
     { "type": "header", "content": "Typography" },
     { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 24, "max": 48, "step": 2, "default": 32, "unit": "px" },
