@@ -1528,7 +1528,7 @@
             "day_column": "1",
             "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.32.05.png",
             "label": "Light",
-            "description": "Light warmth or slight dryness",
+            "description": "Mild redness and warmth similar to light sun exposure.",
             "is_highlight": false
           }
         },
@@ -1538,7 +1538,7 @@
             "day_column": "1",
             "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.32.18.png",
             "label": "Moderate",
-            "description": "Redness and tightness similar to sun exposure",
+            "description": "Redness, tightness, and mild swelling as the skin begins its renewal process.",
             "is_highlight": false
           }
         },
@@ -1546,8 +1546,9 @@
           "type": "card",
           "settings": {
             "day_column": "1",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.32.32.png",
             "label": "Deep",
-            "description": "Visible redness with mild swelling",
+            "description": "More noticeable redness and swelling as the skin responds to deeper resurfacing.",
             "is_highlight": false
           }
         },
