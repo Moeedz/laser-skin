@@ -1861,11 +1861,19 @@
             "answer": "<p><strong>The Science of Fractional CO2</strong><br/>We utilize advanced <strong>Fractional CO2 Laser technology</strong>, widely considered the \"Gold Standard\" in dermatology for treating textured acne scars and deep wrinkles. Unlike older lasers that burn the entire skin surface, our technology creates thousands of microscopic thermal channels deep into the dermis. This triggers the body’s natural healing response, stimulating massive collagen production to \"fill in\" scars and smooth texture from the inside out.</p><p><strong>One Laser. Three Intensities.</strong><br/>We customize the depth of the CO2 energy to match your skin concerns and downtime availability:<br/></p><ul><li><strong>Level 1: The 'Refresh' (Light)Best For:</strong> Sun damage, uneven tone, and open pores.<strong>Downtime:</strong> 3-4 days (Redness and mild dryness).<br/></li><li><strong>Level 2: The 'Resurface' (Medium)Best For:</strong> Fine lines, crepey skin, and mild atrophic scarring.<strong>Downtime:</strong> 5-7 days (Bronzing and peeling).<br/></li><li><strong>Level 3: The 'Scar Repair' (Deep)Best For:</strong> Deep rolling acne scars, boxcar scars, and surgical scar revision.<strong>Downtime:</strong> 7-10+ days (Requires social downtime for maximum results).</li></ul>"
           }
         },
+        "faq_item_VUA9pF": {
+          "type": "faq_item",
+          "disabled": true,
+          "settings": {
+            "question": "Everything you want to know about CO₂ laser resurfacing.",
+            "answer": "<p><strong>The Science of Fractional CO2</strong><br/>We utilize advanced <strong>Fractional CO2 Laser technology</strong>, widely considered the \"Gold Standard\" in dermatology for treating textured acne scars and deep wrinkles. Unlike older lasers that burn the entire skin surface, our technology creates thousands of microscopic thermal channels deep into the dermis. This triggers the body’s natural healing response, stimulating massive collagen production to \"fill in\" scars and smooth texture from the inside out.</p><p><strong>One Laser. Three Intensities.</strong><br/>We customize the depth of the CO2 energy to match your skin concerns and downtime availability:<br/></p><ul><li><strong>Level 1: The 'Refresh' (Light)Best For:</strong> Sun damage, uneven tone, and open pores.<strong>Downtime:</strong> 3-4 days (Redness and mild dryness).<br/></li><li><strong>Level 2: The 'Resurface' (Medium)Best For:</strong> Fine lines, crepey skin, and mild atrophic scarring.<strong>Downtime:</strong> 5-7 days (Bronzing and peeling).<br/></li><li><strong>Level 3: The 'Scar Repair' (Deep)Best For:</strong> Deep rolling acne scars, boxcar scars, and surgical scar revision.<strong>Downtime:</strong> 7-10+ days (Requires social downtime for maximum results).</li></ul>"
+          }
+        },
         "faq_item_MTQ7HM": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the MelanoPro Peel System?",
-            "answer": "<p>The MelanoPro Peel System is a professional depigmentation treatment designed to target stubborn pigmentation concerns such as melasma, sun damage and post-inflammatory discolouration.</p><p>The treatment combines an in-clinic professional peel application with a structured at-home phase that encourages controlled skin renewal and gradual pigment correction.</p>"
+            "question": "Why We Use the MelanoPro Peel System",
+            "answer": "<p>There are many professional chemical peels available, some of which are extremely aggressive treatments with significant downtime and extended recovery periods.</p><p>At Laser Skin Clinics we have chosen to offer the MelanoPro Peel System because it delivers meaningful skin renewal while remaining controlled, predictable and suitable for a wider range of clients.</p><p>Rather than relying on highly invasive peeling methods, MelanoPro uses a structured protocol that encourages gradual skin renewal and improvement in tone, clarity and overall complexion quality.</p><p>This approach allows us to achieve visible improvements in the skin while keeping downtime manageable and recovery more comfortable for our clients.</p><p>For many people, this balance between <strong>results and recovery</strong> makes MelanoPro a more practical and accessible option compared with more aggressive peel systems.</p><p>Our goal is always to choose treatments that are <strong>effective, safe and appropriate for real clients and real lifestyles</strong>.</p>"
           }
         },
         "faq_item_HrxNLf": {
@@ -1948,6 +1956,7 @@
       },
       "block_order": [
         "faq_item_PNmVFK",
+        "faq_item_VUA9pF",
         "faq_item_MTQ7HM",
         "faq_item_HrxNLf",
         "faq_item_ddfEcQ",
