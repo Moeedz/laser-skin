@@ -1526,7 +1526,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
-            "label": "Mild",
+            "label": "Light",
             "description": "Light warmth or slight dryness",
             "is_highlight": false
           }
@@ -1535,7 +1535,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
-            "label": "Most Common",
+            "label": "Moderate",
             "description": "Redness and tightness similar to sun exposure",
             "is_highlight": false
           }
@@ -1544,7 +1544,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
-            "label": "Stronger",
+            "label": "Deep",
             "description": "Visible redness with mild swelling",
             "is_highlight": false
           }
@@ -1553,7 +1553,7 @@
           "type": "card",
           "settings": {
             "day_column": "2",
-            "label": "Mild",
+            "label": "Light",
             "description": "Light flaking begins",
             "is_highlight": false
           }
@@ -1562,16 +1562,16 @@
           "type": "card",
           "settings": {
             "day_column": "2",
-            "label": "Most Common",
+            "label": "Moderate",
             "description": "Noticeable peeling around mouth and cheeks",
-            "is_highlight": true
+            "is_highlight": false
           }
         },
         "card_ztfzyk": {
           "type": "card",
           "settings": {
             "day_column": "2",
-            "label": "Stronger",
+            "label": "Deeper",
             "description": "Heavier peeling as pigmented skin sheds",
             "is_highlight": false
           }
@@ -1580,7 +1580,7 @@
           "type": "card",
           "settings": {
             "day_column": "3",
-            "label": "Mild",
+            "label": "Light",
             "description": "Peeling settles and skin feels smoother",
             "is_highlight": false
           }
@@ -1589,16 +1589,16 @@
           "type": "card",
           "settings": {
             "day_column": "3",
-            "label": "Most Common",
+            "label": "Moderate",
             "description": "Fresh brighter skin appears",
-            "is_highlight": true
+            "is_highlight": false
           }
         },
         "card_xdVQG8": {
           "type": "card",
           "settings": {
             "day_column": "3",
-            "label": "Stronger",
+            "label": "Deeper",
             "description": "Remaining flakes gradually resolve",
             "is_highlight": false
           }
