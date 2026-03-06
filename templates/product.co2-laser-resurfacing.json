@@ -1556,6 +1556,7 @@
           "type": "card",
           "settings": {
             "day_column": "2",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.36.18.png",
             "label": "Light",
             "description": "Skin may feel dry with light flaking.",
             "is_highlight": false
@@ -1565,6 +1566,7 @@
           "type": "card",
           "settings": {
             "day_column": "2",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.36.32.png",
             "label": "Moderate",
             "description": "Bronzing and visible flaking as the outer layer renews.",
             "is_highlight": false
@@ -1574,6 +1576,7 @@
           "type": "card",
           "settings": {
             "day_column": "2",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.36.32_9872e698-fe0e-4505-8a77-e6a365a8c36e.png",
             "label": "Deeper",
             "description": "More noticeable peeling or crusting as damaged surface skin sheds.",
             "is_highlight": false
