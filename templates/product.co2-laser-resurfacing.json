@@ -1587,7 +1587,7 @@
           "settings": {
             "day_column": "3",
             "label": "Light",
-            "description": "Peeling settles and skin feels smoother",
+            "description": "Skin appears smoother and brighter as renewal continues.",
             "is_highlight": false
           }
         },
@@ -1596,7 +1596,7 @@
           "settings": {
             "day_column": "3",
             "label": "Moderate",
-            "description": "Fresh brighter skin appears",
+            "description": "Most flaking settles and clearer skin begins to emerge.",
             "is_highlight": false
           }
         },
@@ -1605,7 +1605,7 @@
           "settings": {
             "day_column": "3",
             "label": "Deeper",
-            "description": "Remaining flakes gradually resolve",
+            "description": "Residual peeling and mild pinkness gradually settle as fresh skin appears.",
             "is_highlight": false
           }
         }
