@@ -1557,7 +1557,7 @@
           "settings": {
             "day_column": "2",
             "label": "Light",
-            "description": "Light flaking begins",
+            "description": "Skin may feel dry with light flaking.",
             "is_highlight": false
           }
         },
@@ -1566,7 +1566,7 @@
           "settings": {
             "day_column": "2",
             "label": "Moderate",
-            "description": "Noticeable peeling around mouth and cheeks",
+            "description": "Bronzing and visible flaking as the outer layer renews.",
             "is_highlight": false
           }
         },
@@ -1575,7 +1575,7 @@
           "settings": {
             "day_column": "2",
             "label": "Deeper",
-            "description": "Heavier peeling as pigmented skin sheds",
+            "description": "More noticeable peeling or crusting as damaged surface skin sheds.",
             "is_highlight": false
           }
         },
