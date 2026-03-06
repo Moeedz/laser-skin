@@ -1537,7 +1537,7 @@
             "day_column": "1",
             "label": "Most Common",
             "description": "Redness and tightness similar to sun exposure",
-            "is_highlight": true
+            "is_highlight": false
           }
         },
         "card_ceHDbi": {
@@ -1618,7 +1618,7 @@
       "name": "Recovery Grid",
       "settings": {
         "heading": "What Your Skin May Look Like During Recovery",
-        "subtitle": "The MelanoPro Peel triggers a controlled skin renewal process. While responses vary slightly, most clients experience mild to moderate peeling that settles within around one week.",
+        "subtitle": "Fractional CO₂ laser triggers a controlled skin renewal process. While responses vary depending on treatment depth, most clients experience visible recovery within around 7–10 days.",
         "footer_text": "Most clients experience mild to moderate peeling that settles within 5–7 days.",
         "day_1_title": "Day 1–2",
         "day_2_title": "Day 3–5",
