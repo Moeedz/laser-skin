@@ -1642,7 +1642,7 @@
           "type": "price_card",
           "settings": {
             "name": "MelanoPro Peel System",
-            "card_subtitle": "Professional depigmentation treatment targeting stubborn pigmentation and uneven skin tone.",
+            "card_subtitle": "",
             "price": "£350",
             "per_label": "",
             "description": ""
@@ -1655,7 +1655,7 @@
       "name": "Luxury Pricing",
       "settings": {
         "heading": "MelanoPro Peel Pricing – Transparent, Professional, Structured",
-        "subtitle": "Achieve clearer, brighter skin with a clinically guided pigment correction treatment.",
+        "subtitle": "Achieve clearer, brighter skin with a clinically guided MelanoPro Peel system.",
         "footer_text": "MelanoPro is delivered as a structured depigmentation protocol, with visible skin renewal occurring over the days following treatment.",
         "button_label": "Book Your MelanoPro Consultation",
         "button_link": "#cf-template--25630315217276__consultation_form_NRQDDA",
