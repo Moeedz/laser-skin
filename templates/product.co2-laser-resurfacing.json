@@ -1568,7 +1568,7 @@
             "day_column": "2",
             "image": "shopify://shop_images/Screenshot_2026-03-06_at_09.17.28.png",
             "label": "Moderate",
-            "description": "Bronzing and visible flaking as the outer layer renews.",
+            "description": "Bronzing, visible flaking + visible fractional pattern",
             "is_highlight": false
           }
         },
@@ -1578,7 +1578,7 @@
             "day_column": "2",
             "image": "shopify://shop_images/Screenshot_2026-03-06_at_09.17.30.png",
             "label": "Deeper",
-            "description": "More noticeable peeling or crusting as damaged surface skin sheds.",
+            "description": "More noticeable peeling or crusting + stronger grid texture",
             "is_highlight": false
           }
         },
