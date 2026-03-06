@@ -1581,7 +1581,7 @@
           "settings": {
             "icon": "clock",
             "title": "Week 1",
-            "points": "Initial healing phase begins||Redness and peeling as treated skin renews||Fresh skin gradually replaces the treated surface"
+            "points": "Skin renewal process begins||Early improvements in smoothness and clarity||Skin starts to feel fresher and more refined"
           }
         },
         "step_niXfMx": {
@@ -1589,7 +1589,7 @@
           "settings": {
             "icon": "calendar_1",
             "title": "Weeks 2–4",
-            "points": "Skin texture starts to improve noticeably||Redness gradually fades||Early softening of fine lines and scars may become visible"
+            "points": "Texture improvements become more noticeable||Skin appears brighter and more even in tone||Early softening of fine lines and shallow scars"
           }
         },
         "step_MNdhUf": {
@@ -1597,7 +1597,7 @@
           "settings": {
             "icon": "calendar_2",
             "title": "Months 1–3",
-            "points": "Collagen remodelling accelerates||Scarring continues to soften and skin firmness improves||Tone becomes more even and balanced"
+            "points": "Collagen production increases beneath the surface||Skin firmness and structure continue improving||Scars, pores, and lines progressively soften"
           }
         },
         "step_DAYLXc": {
@@ -1605,7 +1605,7 @@
           "settings": {
             "icon": "calendar_check",
             "title": "Months 3–6+",
-            "points": "Full results become apparent||Collagen production peaks ||Skin appears tighter, smoother, and significantly renewed"
+            "points": "Full results become more visible||Skin appears firmer, smoother, and clearer ||Long-term collagen remodelling enhances overall skin quality"
           }
         }
       },
