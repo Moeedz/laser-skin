@@ -1526,6 +1526,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.32.05.png",
             "label": "Light",
             "description": "Light warmth or slight dryness",
             "is_highlight": false
@@ -1535,6 +1536,7 @@
           "type": "card",
           "settings": {
             "day_column": "1",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.32.18.png",
             "label": "Moderate",
             "description": "Redness and tightness similar to sun exposure",
             "is_highlight": false
