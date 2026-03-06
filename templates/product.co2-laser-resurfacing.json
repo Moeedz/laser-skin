@@ -1619,7 +1619,7 @@
       "settings": {
         "heading": "Results Timeline",
         "description": "<p>CO₂ laser results develop gradually as the skin heals and new collagen forms beneath the surface. The full extent of improvement continues for several months after treatment.</p>",
-        "footer_text": "Results vary depending on treatment depth, skin condition, and individual healing response. Deeper treatments produce more dramatic results but require longer recovery.",
+        "footer_text": "Results develop progressively as collagen rebuilds beneath the surface. Treatment depth, skin condition, and individual response all influence how quickly improvements appear.",
         "section_bg": "#f6e7dd",
         "show_texture": true,
         "texture_opacity": 80,
