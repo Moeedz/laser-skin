@@ -1586,6 +1586,7 @@
           "type": "card",
           "settings": {
             "day_column": "3",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.39.49.png",
             "label": "Light",
             "description": "Skin appears smoother and brighter as renewal continues.",
             "is_highlight": false
@@ -1595,6 +1596,7 @@
           "type": "card",
           "settings": {
             "day_column": "3",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.40.00.png",
             "label": "Moderate",
             "description": "Most flaking settles and clearer skin begins to emerge.",
             "is_highlight": false
@@ -1604,6 +1606,7 @@
           "type": "card",
           "settings": {
             "day_column": "3",
+            "image": "shopify://shop_images/Screenshot_2026-03-06_at_08.40.08.png",
             "label": "Deeper",
             "description": "Residual peeling and mild pinkness gradually settle as fresh skin appears.",
             "is_highlight": false
