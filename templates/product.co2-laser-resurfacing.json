@@ -1278,7 +1278,7 @@
         "right_point_FBrGDA": {
           "type": "right_point",
           "settings": {
-            "text": "Darker skin tones require an individual assessment for safety and settings. (assessed individually)"
+            "text": "You have a darker skin tone that may require a different treatment approach (assessed individually during consultation)."
           }
         }
       },
@@ -1299,7 +1299,7 @@
       "settings": {
         "heading": "Is CO₂ Right For You?",
         "subtitle": "Fractional CO₂ laser works by creating controlled micro-injuries in the skin to stimulate deep collagen remodelling. Suitability depends on skin type, condition, and treatment goals assessed during your consultation.",
-        "footer_text": "Suitability is always confirmed during your consultation and patch test.",
+        "footer_text": "Suitability is always confirmed during your consultation",
         "show_card_wrap": false,
         "card_bg": "#f5efe9",
         "card_border": "#d8cfc5",
