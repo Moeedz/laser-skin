@@ -1471,7 +1471,7 @@
             "title": "Light Resurfacing",
             "best_for": "early texture, pores, dullness",
             "downtime": "2–3 days",
-            "description": "<p>A gentle, surface-level refresh designed to smooth uneven texture and revive dull, tired-looking skin.</p><p>Ideal for sun exposure, open pores, and mild imperfections — revealing a healthy, natural glow with minimal downtime.<br/><br/><em><strong>Suitable for those wanting minimal disruption to routine.</strong></em></p>"
+            "description": "<p>A gentle, surface-level refresh designed to smooth uneven texture and revive dull, tired-looking skin.</p><p>Ideal for sun exposure, open pores, and mild imperfections revealing a healthy, natural glow with minimal downtime.<br/><br/><em><strong>Suitable for those wanting minimal disruption to routine.</strong></em></p>"
           }
         },
         "tier_Kn7Lge": {
@@ -1790,7 +1790,7 @@
       ],
       "name": "Luxury Pricing",
       "settings": {
-        "heading": "Fractional CO₂ Laser Pricing — Transparent, Professional, Affordable.",
+        "heading": "Fractional CO₂ Laser Pricing - Transparent, Professional, Affordable.",
         "subtitle": "Achieve your skin goals with personalised, medically led treatment.",
         "footer_text": "Treatment depth and number of sessions are determined during your clinical assessment.",
         "button_label": "Book Your CO₂ Consultation",
