@@ -1519,58 +1519,123 @@
         "padding_bottom": 72
       }
     },
-    "icon_info_columns_BdAaPx": {
-      "type": "icon-info-columns",
+    "recovery_grid_Y8PFd8": {
+      "type": "recovery-grid",
       "blocks": {
-        "column_FhFLcK": {
-          "type": "column",
+        "card_6F6bP6": {
+          "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/1-removebg-preview_13.png",
-            "title": "Days 1–3",
-            "description": "Skin will feel warm, tight, and appear red or swollen. This is a normal part of the healing process. Keep the area clean and well moisturised."
+            "day_column": "1",
+            "label": "Mild",
+            "description": "Light warmth or slight dryness",
+            "is_highlight": false
           }
         },
-        "column_q33jG4": {
-          "type": "column",
+        "card_UhMhaG": {
+          "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/1-removebg-preview_11.png",
-            "title": "Days 4–10",
-            "description": "Peeling and flaking will begin as the skin sheds its damaged outer layer. Avoid picking or scratching. New, fresher skin will gradually emerge underneath."
+            "day_column": "1",
+            "label": "Most Common",
+            "description": "Redness and tightness similar to sun exposure",
+            "is_highlight": true
           }
         },
-        "column_kjnQ93": {
-          "type": "column",
+        "card_ceHDbi": {
+          "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/2-removebg-preview_10.png",
-            "title": "Weeks 2–6+",
-            "description": "Redness fades progressively and collagen remodelling continues beneath the surface. Strict sun protection is essential throughout the healing period."
+            "day_column": "1",
+            "label": "Stronger",
+            "description": "Visible redness with mild swelling",
+            "is_highlight": false
+          }
+        },
+        "card_DL7kwN": {
+          "type": "card",
+          "settings": {
+            "day_column": "2",
+            "label": "Mild",
+            "description": "Light flaking begins",
+            "is_highlight": false
+          }
+        },
+        "card_NBHTia": {
+          "type": "card",
+          "settings": {
+            "day_column": "2",
+            "label": "Most Common",
+            "description": "Noticeable peeling around mouth and cheeks",
+            "is_highlight": true
+          }
+        },
+        "card_ztfzyk": {
+          "type": "card",
+          "settings": {
+            "day_column": "2",
+            "label": "Stronger",
+            "description": "Heavier peeling as pigmented skin sheds",
+            "is_highlight": false
+          }
+        },
+        "card_WqxMRP": {
+          "type": "card",
+          "settings": {
+            "day_column": "3",
+            "label": "Mild",
+            "description": "Peeling settles and skin feels smoother",
+            "is_highlight": false
+          }
+        },
+        "card_77dkFH": {
+          "type": "card",
+          "settings": {
+            "day_column": "3",
+            "label": "Most Common",
+            "description": "Fresh brighter skin appears",
+            "is_highlight": true
+          }
+        },
+        "card_xdVQG8": {
+          "type": "card",
+          "settings": {
+            "day_column": "3",
+            "label": "Stronger",
+            "description": "Remaining flakes gradually resolve",
+            "is_highlight": false
           }
         }
       },
       "block_order": [
-        "column_FhFLcK",
-        "column_q33jG4",
-        "column_kjnQ93"
+        "card_6F6bP6",
+        "card_UhMhaG",
+        "card_ceHDbi",
+        "card_DL7kwN",
+        "card_NBHTia",
+        "card_ztfzyk",
+        "card_WqxMRP",
+        "card_77dkFH",
+        "card_xdVQG8"
       ],
-      "custom_css": [
-        ".iic__col-icon,.iic__col-icon img {width: 100px !important; height: 100px !important;}"
-      ],
-      "name": "Icon Info Columns",
+      "name": "Recovery Grid",
       "settings": {
-        "heading": "What to Expect During Recovery",
-        "show_underline": true,
-        "footer_text": "Your clinician will provide a personalised aftercare plan based on your treatment depth and skin response.",
-        "section_bg": "#e4e0da",
+        "heading": "What Your Skin May Look Like During Recovery",
+        "subtitle": "The MelanoPro Peel triggers a controlled skin renewal process. While responses vary slightly, most clients experience mild to moderate peeling that settles within around one week.",
+        "footer_text": "Most clients experience mild to moderate peeling that settles within 5–7 days.",
+        "day_1_title": "Day 1–2",
+        "day_2_title": "Day 3–5",
+        "day_3_title": "Day 5–7",
+        "section_bg": "#e8e2dc",
         "show_texture": true,
         "texture_opacity": 80,
         "heading_color": "#3a2820",
         "text_color": "#5a4a3a",
-        "accent_color": "#c4956a",
-        "divider_color": "#ccc4ba",
-        "heading_font_size": 36,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "card_bg": "#f5f0eb",
+        "card_border": "#e0d8d0",
+        "highlight_bg": "#c8a87c",
+        "highlight_text": "#ffffff",
+        "heading_font_size": 42,
+        "body_font_size": 15,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "how_it_works_timeline_Q4fGQe": {
@@ -2220,7 +2285,7 @@
     "split_content_CrNMyU",
     "slideshow_49kXaM",
     "treatment_tiers_cGjMRP",
-    "icon_info_columns_BdAaPx",
+    "recovery_grid_Y8PFd8",
     "how_it_works_timeline_Q4fGQe",
     "how_it_works_timeline_xDyBNg",
     "before_after_results_fdnWYz",
