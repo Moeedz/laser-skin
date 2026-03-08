@@ -1624,6 +1624,10 @@
         "card_77dkFH",
         "card_xdVQG8"
       ],
+      "custom_css": [
+        ".rcg__card {height: 110px !important;}",
+        ".rcg__card-img {display: none;}"
+      ],
       "name": "Recovery Grid",
       "settings": {
         "heading": "What Your Skin May Look Like During Recovery",
