@@ -1817,6 +1817,7 @@
         "result_card_KEif9R",
         "result_card_LG8eTG"
       ],
+      "disabled": true,
       "name": "Before After Results",
       "settings": {
         "heading": "<p>Real Patient Results, Tailored by Treatment Depth<br/></p>",
