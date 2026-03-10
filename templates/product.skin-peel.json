@@ -1361,6 +1361,7 @@
         "card_MTdH7K",
         "card_ypBJn7"
       ],
+      "disabled": true,
       "name": "Recovery Grid",
       "settings": {
         "heading": "What Your Skin May Look Like During Recovery",
