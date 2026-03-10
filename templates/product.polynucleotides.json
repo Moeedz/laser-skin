@@ -1689,6 +1689,8 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#efefef",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
@@ -2015,6 +2017,7 @@
         "result_card_wQqY3d",
         "result_card_U4jtz7"
       ],
+      "disabled": true,
       "name": "Before After Results",
       "settings": {
         "heading": "<h2><strong>Regenerative Results. Stimulated From Within.</strong></h2>",
