@@ -1333,6 +1333,7 @@
         "result_card_xB4zbf",
         "result_card_gqiYFq"
       ],
+      "disabled": true,
       "name": "Before After Results",
       "settings": {
         "heading": "<h3><strong>Where Science Meets Skin Structure.</strong></h3>",
@@ -1548,6 +1549,8 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#e4ddd6",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
@@ -1647,6 +1650,8 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#b8886a",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
