@@ -1269,12 +1269,14 @@
         "enable_right": true,
         "right_heading": "RF Microneedling",
         "right_subtitle": "",
-        "section_bg": "#f8d2d1",
+        "section_bg": "#efefef",
         "show_texture": true,
         "texture_opacity": 80,
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#b8886a",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
@@ -1283,64 +1285,91 @@
         "image_height": 420
       }
     },
-    "before_after_results_qHFYWr": {
-      "type": "before-after-results",
+    "split_content_PLyyRt": {
+      "type": "split-content",
       "blocks": {
-        "result_card_QAMNQM": {
-          "type": "result_card",
+        "left_point_hNrMkU": {
+          "type": "left_point",
           "settings": {
-            "title": "Surface Renewal",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.53.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.01.png",
-            "session_info": "After 1 session",
-            "benefit": "Improves skin clarity, smoothness, and overall radiance with minimal downtime."
+            "text": "<p><strong>Acne scarring and uneven texture</strong> – Stimulates deep collagen remodelling to smooth and resurface scarred skin.</p>"
           }
         },
-        "result_card_F4r9aK": {
-          "type": "result_card",
+        "left_point_hA3xC4": {
+          "type": "left_point",
           "settings": {
-            "title": "Texture Correction",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.16.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.23.png",
-            "session_info": "After 1 session",
-            "benefit": "Targets acne scarring, enlarged pores, and uneven skin tone through controlled dermal stimulation."
+            "text": "<p><strong>Fine lines and wrinkles</strong> – Targets the dermis to improve skin firmness and reduce visible signs of ageing.</p>"
           }
         },
-        "result_card_hcM6Bg": {
-          "type": "result_card",
+        "left_point_bNepRQ": {
+          "type": "left_point",
           "settings": {
-            "title": "Structural Remodelling",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.26.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.34.png",
-            "session_info": "After 4 sessions",
-            "benefit": "Deep collagen rebuilding for visible skin tightening and long-term firmness improvement."
+            "text": "<b>Enlarged pores</b> – Tightens pore structure for a smoother, more refined complexion."
+          }
+        },
+        "left_point_NnzB9G": {
+          "type": "left_point",
+          "settings": {
+            "text": "<b>Skin laxity in lower face or neck</b> – Enhances firmness where early sagging begins."
+          }
+        },
+        "right_point_yGCA9E": {
+          "type": "right_point",
+          "settings": {
+            "text": "<b>Polynucleotides or NCTF® </b>– To boost skin hydration and quality alongside collagen stimulation."
+          }
+        },
+        "right_point_4nYHdY": {
+          "type": "right_point",
+          "settings": {
+            "text": "<b>Medical-Grade Skin Boosters</b> – To improve hydration, skin quality, and support collagen regeneration."
+          }
+        },
+        "right_point_EmtmNg": {
+          "type": "right_point",
+          "settings": {
+            "text": "<p><strong>LED Light Therapy</strong> – To reduce inflammation and support recovery between sessions.</p>"
           }
         }
       },
       "block_order": [
-        "result_card_QAMNQM",
-        "result_card_F4r9aK",
-        "result_card_hcM6Bg"
+        "left_point_hNrMkU",
+        "left_point_hA3xC4",
+        "left_point_bNepRQ",
+        "left_point_NnzB9G",
+        "right_point_yGCA9E",
+        "right_point_4nYHdY",
+        "right_point_EmtmNg"
       ],
-      "name": "Before After Results",
+      "name": "Split Content",
       "settings": {
-        "heading": "<p>Collagen Renewal, Controlled by Precision.</p>",
-        "subtitle": "Advanced microneedling treatments designed to stimulate natural collagen production and restore smoother, firmer-looking skin with minimal disruption.",
-        "before_label": "Before",
-        "after_label": "After",
-        "footer_text": "Results are progressive and designed to look natural and not over-treated.",
-        "section_bg": "#e5dfda",
+        "heading": "Who Is RF Microneedling Best For?",
+        "subtitle": "RF Microneedling is ideal for clients looking to improve skin texture, scarring, and signs of ageing with minimal downtime.",
+        "footer_text": "Combination therapy is often recommended for clients seeking accelerated or more dramatic rejuvenation results.",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "Can RF Microneedling Be Combined With Other Treatments?",
+        "right_subtitle": "RF Microneedling works exceptionally well as part of a structured skin rejuvenation plan. It can be combined with:",
+        "section_bg": "#ece1e2",
         "show_texture": true,
         "texture_opacity": 80,
-        "heading_color": "#2a2a2a",
-        "text_color": "#555555",
-        "accent_color": "#b09a60",
-        "card_bg": "#f5f0eb",
-        "heading_font_size": 40,
-        "card_title_font_size": 24,
-        "body_font_size": 16,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 20,
+        "image_height": 420
       }
     },
     "how_it_works_expect_BQk3qz": {
@@ -1538,89 +1567,65 @@
         "note_border_color": "#d4a8a8"
       }
     },
-    "split_content_PLyyRt": {
-      "type": "split-content",
+    "before_after_results_qHFYWr": {
+      "type": "before-after-results",
       "blocks": {
-        "left_point_hNrMkU": {
-          "type": "left_point",
+        "result_card_QAMNQM": {
+          "type": "result_card",
           "settings": {
-            "text": "<p><strong>Acne scarring and uneven texture</strong> – Stimulates deep collagen remodelling to smooth and resurface scarred skin.</p>"
+            "title": "Surface Renewal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.53.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.01.png",
+            "session_info": "After 1 session",
+            "benefit": "Improves skin clarity, smoothness, and overall radiance with minimal downtime."
           }
         },
-        "left_point_hA3xC4": {
-          "type": "left_point",
+        "result_card_F4r9aK": {
+          "type": "result_card",
           "settings": {
-            "text": "<p><strong>Fine lines and wrinkles</strong> – Targets the dermis to improve skin firmness and reduce visible signs of ageing.</p>"
+            "title": "Texture Correction",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.16.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.29.23.png",
+            "session_info": "After 1 session",
+            "benefit": "Targets acne scarring, enlarged pores, and uneven skin tone through controlled dermal stimulation."
           }
         },
-        "left_point_bNepRQ": {
-          "type": "left_point",
+        "result_card_hcM6Bg": {
+          "type": "result_card",
           "settings": {
-            "text": "<b>Enlarged pores</b> – Tightens pore structure for a smoother, more refined complexion."
-          }
-        },
-        "left_point_NnzB9G": {
-          "type": "left_point",
-          "settings": {
-            "text": "<b>Skin laxity in lower face or neck</b> – Enhances firmness where early sagging begins."
-          }
-        },
-        "right_point_yGCA9E": {
-          "type": "right_point",
-          "settings": {
-            "text": "<b>Polynucleotides or NCTF® </b>– To boost skin hydration and quality alongside collagen stimulation."
-          }
-        },
-        "right_point_4nYHdY": {
-          "type": "right_point",
-          "settings": {
-            "text": "<b>Medical-Grade Skin Boosters</b> – To improve hydration, skin quality, and support collagen regeneration."
-          }
-        },
-        "right_point_EmtmNg": {
-          "type": "right_point",
-          "settings": {
-            "text": "<p><strong>LED Light Therapy</strong> – To reduce inflammation and support recovery between sessions.</p>"
+            "title": "Structural Remodelling",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.26.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-18_at_12.28.34.png",
+            "session_info": "After 4 sessions",
+            "benefit": "Deep collagen rebuilding for visible skin tightening and long-term firmness improvement."
           }
         }
       },
       "block_order": [
-        "left_point_hNrMkU",
-        "left_point_hA3xC4",
-        "left_point_bNepRQ",
-        "left_point_NnzB9G",
-        "right_point_yGCA9E",
-        "right_point_4nYHdY",
-        "right_point_EmtmNg"
+        "result_card_QAMNQM",
+        "result_card_F4r9aK",
+        "result_card_hcM6Bg"
       ],
-      "name": "Split Content",
+      "disabled": true,
+      "name": "Before After Results",
       "settings": {
-        "heading": "Who Is RF Microneedling Best For?",
-        "subtitle": "RF Microneedling is ideal for clients looking to improve skin texture, scarring, and signs of ageing with minimal downtime.",
-        "footer_text": "Combination therapy is often recommended for clients seeking accelerated or more dramatic rejuvenation results.",
-        "show_card_wrap": false,
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "callout_title": "",
-        "callout_text": "",
-        "enable_left": true,
-        "left_heading": "",
-        "left_subtitle": "",
-        "enable_right": true,
-        "right_heading": "Can RF Microneedling Be Combined With Other Treatments?",
-        "right_subtitle": "RF Microneedling works exceptionally well as part of a structured skin rejuvenation plan. It can be combined with:",
-        "section_bg": "#ece1e2",
+        "heading": "<p>Collagen Renewal, Controlled by Precision.</p>",
+        "subtitle": "Advanced microneedling treatments designed to stimulate natural collagen production and restore smoother, firmer-looking skin with minimal disruption.",
+        "before_label": "Before",
+        "after_label": "After",
+        "footer_text": "Results are progressive and designed to look natural and not over-treated.",
+        "section_bg": "#e5dfda",
         "show_texture": true,
         "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "divider_color": "#c4b8aa",
-        "heading_font_size": 32,
-        "body_font_size": 17,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b09a60",
+        "card_bg": "#f5f0eb",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
         "padding_top": 60,
-        "padding_bottom": 20,
-        "image_height": 420
+        "padding_bottom": 60
       }
     },
     "treatment_areas_map_F4yJcc": {
