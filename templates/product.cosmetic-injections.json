@@ -1515,6 +1515,7 @@
         "result_card_GQfVYf",
         "result_card_nV6q6D"
       ],
+      "disabled": true,
       "name": "Before After Results",
       "settings": {
         "heading": "<p>Real results, tailored by treatment area</p>",
