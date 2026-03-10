@@ -1881,6 +1881,7 @@
         "result_card_zKGdd7",
         "result_card_gNi7Nm"
       ],
+      "disabled": true,
       "custom_css": [
         ".bar__card-benefit {margin-top: 0 !important;}"
       ],
