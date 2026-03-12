@@ -1391,6 +1391,7 @@
         "result_card_JqyViE",
         "result_card_Jge636"
       ],
+      "disabled": true,
       "name": "Before After Results",
       "settings": {
         "heading": "<p>Real results, tailored by muscle activation level</p>",
@@ -1665,6 +1666,8 @@
         "heading_color": "#3a2820",
         "text_color": "#4a3a30",
         "accent_color": "#b8886a",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
         "divider_color": "#c4b8aa",
         "heading_font_size": 32,
         "body_font_size": 17,
