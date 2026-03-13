@@ -1,0 +1,80 @@
+{% style %}
+.lsc-test-wrap { width:100%; overflow:hidden; position:relative; background-color:#f6dcd1; padding:80px 0; }
+.lsc-test-wrap::before { content:''; position:absolute; inset:0; pointer-events:none; z-index:0; opacity:0.35; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); background-size:200px 200px; }
+.lsc-test-inner { position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:0 40px; }
+.lsc-test-heading { font-family:'Georgia','Times New Roman',serif; font-size:40px; font-weight:400; font-style:italic; line-height:1.2; color:#2c2419; margin:0 0 14px; letter-spacing:-0.01em; text-align:center; }
+.lsc-test-orn { text-align:center; margin-bottom:14px; color:#b8a164; opacity:0.7; line-height:1; }
+.lsc-test-orn::before,.lsc-test-orn::after { content:''; display:inline-block; width:60px; height:1px; background:#b8a164; vertical-align:middle; margin:0 10px; opacity:0.6; }
+.lsc-test-sub { font-size:16px; font-style:italic; line-height:1.65; color:#5a4a3a; margin:0 auto 48px; max-width:640px; text-align:center; }
+.lsc-test-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:40px; }
+.lsc-test-card { background:rgba(255,255,255,0.75); border:1px solid rgba(184,161,100,0.2); border-top:3px solid #b8a164; border-radius:10px; padding:32px 28px; display:flex; flex-direction:column; gap:16px; transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s ease; }
+.lsc-test-card:hover { transform:translateY(-4px); box-shadow:0 8px 28px rgba(0,0,0,0.08); }
+.lsc-test-stars { display:flex; gap:3px; color:#b8a164; font-size:18px; line-height:1; }
+.lsc-test-quote { font-family:'Georgia','Times New Roman',serif; font-size:15.5px; line-height:1.7; color:#3a2d1e; margin:0; flex:1; font-style:italic; }
+.lsc-test-author { display:flex; align-items:center; gap:12px; padding-top:14px; border-top:1px solid rgba(184,161,100,0.2); }
+.lsc-test-avatar { width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Georgia','Times New Roman',serif; font-size:18px; font-weight:700; color:#fff; flex-shrink:0; }
+.lsc-test-name { font-size:14px; font-weight:700; color:#2c2419; line-height:1.3; }
+.lsc-test-detail { font-size:13px; color:#7a6a5a; line-height:1.3; }
+.lsc-test-gicon { margin-left:auto; flex-shrink:0; }
+.lsc-test-badge { display:flex; align-items:center; justify-content:center; gap:8px; padding:20px 28px; background:rgba(255,255,255,0.5); border:1px solid rgba(184,161,100,0.25); border-radius:8px; max-width:480px; margin:0 auto; }
+.lsc-test-badge-score { font-size:22px; font-weight:700; color:#2c2419; font-family:'Georgia','Times New Roman',serif; }
+.lsc-test-badge-divider { width:1px; height:28px; background:rgba(184,161,100,0.3); margin:0 8px; }
+.lsc-test-badge-label strong { font-size:14px; font-weight:700; color:#2c2419; display:block; }
+.lsc-test-badge-label span { font-size:13px; color:#5a4a3a; }
+@media screen and (max-width:900px) { .lsc-test-grid { grid-template-columns:1fr 1fr; } .lsc-test-grid .lsc-test-card:last-child { grid-column:1/-1; max-width:500px; margin:0 auto; width:100%; } .lsc-test-inner { padding:0 28px; } }
+@media screen and (max-width:620px) { .lsc-test-grid { grid-template-columns:1fr; } .lsc-test-grid .lsc-test-card:last-child { grid-column:auto; max-width:100%; } .lsc-test-inner { padding:0 18px; } .lsc-test-wrap { padding:52px 0; } .lsc-test-heading { font-size:28px; } }
+@media screen and (max-width:480px) { .lsc-test-inner { padding:0 16px; } .lsc-test-heading { font-size:24px; } .lsc-test-card { padding:22px 18px; } }
+{% endstyle %}
+
+<section class="lsc-test-wrap">
+  <div class="lsc-test-inner">
+    <h2 class="lsc-test-heading">Real Results, Real Clients</h2>
+    <div class="lsc-test-orn">&#10022;</div>
+    <p class="lsc-test-sub">Hear directly from clients who have experienced CO&#8322; laser resurfacing at our Wolverhampton clinic.</p>
+    <div class="lsc-test-grid">
+      <div class="lsc-test-card">
+        <div class="lsc-test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="lsc-test-quote">&ldquo;I struggled with acne scarring for years and had tried everything. After just one CO&#8322; session the texture of my skin changed dramatically. The clinic was professional, the aftercare advice was thorough, and the results honestly exceeded my expectations.&rdquo;</p>
+        <div class="lsc-test-author">
+          <div class="lsc-test-avatar" style="background:linear-gradient(135deg,#b8a164 0%,#d4c08a 100%);">S</div>
+          <div><div class="lsc-test-name">Sarah M.</div><div class="lsc-test-detail">Wolverhampton &middot; Acne Scarring</div></div>
+          <div class="lsc-test-gicon"><svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+        </div>
+      </div>
+      <div class="lsc-test-card">
+        <div class="lsc-test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="lsc-test-quote">&ldquo;From the initial consultation to my follow-up, the team here were exceptional. They took time to explain everything, were honest about the recovery and what I could expect. My fine lines and sun damage have improved massively &mdash; I finally feel confident in my skin again.&rdquo;</p>
+        <div class="lsc-test-author">
+          <div class="lsc-test-avatar" style="background:linear-gradient(135deg,#7a6a5a 0%,#a0907a 100%);">J</div>
+          <div><div class="lsc-test-name">Janet R.</div><div class="lsc-test-detail">Wolverhampton &middot; Fine Lines &amp; Sun Damage</div></div>
+          <div class="lsc-test-gicon"><svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+        </div>
+      </div>
+      <div class="lsc-test-card">
+        <div class="lsc-test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="lsc-test-quote">&ldquo;I had a surgical scar I&rsquo;d been self-conscious about for over a decade. Three sessions in and it has faded beyond anything I thought possible. The clinician was knowledgeable and made me feel completely at ease. Genuinely life-changing treatment.&rdquo;</p>
+        <div class="lsc-test-author">
+          <div class="lsc-test-avatar" style="background:linear-gradient(135deg,#b8a164 0%,#c8b090 100%);">M</div>
+          <div><div class="lsc-test-name">Marcus T.</div><div class="lsc-test-detail">Wolverhampton &middot; Surgical Scar</div></div>
+          <div class="lsc-test-gicon"><svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="lsc-test-badge">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#b8a164"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+      <div class="lsc-test-badge-score">4.9</div>
+      <div class="lsc-test-badge-divider"></div>
+      <div class="lsc-test-badge-label"><strong>Google Rating</strong><span>Verified patient reviews</span></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Client Testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [{"name": "Client Testimonials"}]
+}
+{% endschema %}
