@@ -1,0 +1,228 @@
+<style>
+  #section-practitioners-home-{{ section.id }} {
+    background: var(--warm-white, #FDFCFA);
+    padding: 5rem 6%;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioners-home__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioners-home__eyebrow {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold, #C2A56E);
+    margin-bottom: 0.6rem;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioners-home__heading {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0 0 3rem;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioners-home__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__placeholder {
+    width: 100%;
+    height: 280px;
+    background: var(--sand, #E8E0D5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--taupe, #A89F91);
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__content {
+    padding: 2rem;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--gold, #C2A56E);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0.3rem 0 0.8rem;
+  }
+
+  #section-practitioners-home-{{ section.id }} .practitioner-card__bio {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #6B5E50);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    #section-practitioners-home-{{ section.id }} .practitioners-home__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section id="section-practitioners-home-{{ section.id }}">
+  <div class="practitioners-home__inner">
+    <p class="practitioners-home__eyebrow">YOUR PRACTITIONERS</p>
+    <h2 class="practitioners-home__heading">Expert Care, Tailored to You</h2>
+
+    <div class="practitioners-home__grid">
+      {% for block in section.blocks %}
+        <div class="practitioner-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <div class="practitioner-card__image">
+              <img
+                src="{{ block.settings.image | image_url: width: 800 }}"
+                alt="{{ block.settings.name | escape }}"
+                loading="lazy"
+                width="800"
+                height="560"
+              >
+            </div>
+          {% elsif block.settings.asset_image != blank %}
+            <div class="practitioner-card__image">
+              <img
+                src="{{ block.settings.asset_image | asset_url }}"
+                alt="{{ block.settings.name | escape }}"
+                loading="lazy"
+                width="800"
+                height="560"
+              >
+            </div>
+          {% else %}
+            <div class="practitioner-card__placeholder">
+              Photo Coming Soon
+            </div>
+          {% endif %}
+
+          <div class="practitioner-card__content">
+            <h3 class="practitioner-card__name">{{ block.settings.name }}</h3>
+            <p class="practitioner-card__title">{{ block.settings.title }}</p>
+            <p class="practitioner-card__bio">{{ block.settings.bio }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Practitioners Preview",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "practitioner",
+      "name": "Practitioner",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Headshot Image"
+        },
+        {
+          "type": "text",
+          "id": "asset_image",
+          "label": "Asset Image Filename",
+          "info": "Fallback: filename in theme assets (e.g. maxine.png)"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Practitioner Name"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Specialist Title"
+        },
+        {
+          "type": "textarea",
+          "id": "bio",
+          "label": "Short Bio",
+          "default": "A brief description of the practitioner's qualifications and specialities."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Practitioners Preview",
+      "blocks": [
+        {
+          "type": "practitioner",
+          "settings": {
+            "name": "Maxine Harish",
+            "title": "Advanced Laser & Clinical Aesthetics Specialist",
+            "bio": "Lead Practitioner and Clinic Director with Level 4 VTCT Laser & IPL and IISHCA qualifications. Specialising in laser treatments, skin renewal, and blemish removal.",
+            "asset_image": "maxine.png"
+          }
+        },
+        {
+          "type": "practitioner",
+          "settings": {
+            "name": "Dr Sangeeta Scotton",
+            "title": "MBBS, MRCP (UK), BSc, MSc — NHS Consultant",
+            "bio": "Consultant Physician with 12 years of medical experience. Member of the Royal Society of Medicine. Specialising in anti-wrinkle injections and advanced cosmetic procedures.",
+            "asset_image": "dr-scotton.png"
+          }
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2
+}
+{% endschema %}

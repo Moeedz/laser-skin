@@ -1,0 +1,1010 @@
+{%- comment -%}
+  LSC Collection Treatments
+  Custom categorised treatments page replacing the default collection grid.
+  Matches the approved HTML mockup with 4 treatment groups, jump links,
+  treatment cards with images/prices, and a consultation CTA.
+  Only renders when collection.handle == 'treatments'.
+{%- endcomment -%}
+
+{%- if collection.handle == 'treatments' -%}
+
+{%- comment -%} Hide default Dawn collection-banner and main-collection sections {%- endcomment -%}
+<style>
+  /* Hide default Dawn collection-banner and main-collection sections */
+  #shopify-section-collection-banner,
+  #shopify-section-main,
+  [id^="shopify-section-"][id*="collection-banner"],
+  [id^="shopify-section-"][id*="__main"] {
+    display: none !important;
+  }
+</style>
+
+{%- comment -%}
+  Build a lookup of collection products by handle for reliable image access.
+  This avoids all_products limits and Liquid errors.
+{%- endcomment -%}
+
+{%- comment -%} ── Page Header ── {%- endcomment -%}
+<section class="lsc-ct__header">
+  <p class="lsc-ct__breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; <span>Treatments</span></p>
+  <span class="lsc-ct__eyebrow">OUR TREATMENTS</span>
+  <h1 class="lsc-ct__title">Clinic Treatments</h1>
+  <p class="lsc-ct__intro">Advanced laser, injectable, and skin renewal treatments — all medically overseen and personalised to you.</p>
+  <div class="lsc-ct__jumps">
+    <a href="#laser" class="lsc-ct__jump">Laser</a>
+    <a href="#injectables" class="lsc-ct__jump">Injectables</a>
+    <a href="#skin" class="lsc-ct__jump">Skin Renewal</a>
+    <a href="#body" class="lsc-ct__jump">Body & Face</a>
+  </div>
+</section>
+
+{%- comment -%} ── GROUP 1: Laser ── {%- endcomment -%}
+<div class="lsc-ct__group" id="laser">
+  <div class="lsc-ct__group-header">
+    <div>
+      <span class="lsc-ct__group-num">01</span>
+      <h2 class="lsc-ct__group-title">Laser Treatments</h2>
+    </div>
+    <span class="lsc-ct__group-count">4 treatments</span>
+  </div>
+  <div class="lsc-ct__grid">
+
+    <a href="/products/laser-hair-removal" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'laser-hair-removal' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Laser Hair Removal treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__badge">Most Popular</span>
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Laser Hair Removal</h3>
+        <p class="lsc-ct__card-desc">Long-lasting hair reduction using advanced laser technology. Suitable for face and body with results from the very first session.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £10</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/co2-laser-resurfacing" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'co2-laser-resurfacing' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="CO2 Laser Resurfacing treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">CO₂ Laser Resurfacing</h3>
+        <p class="lsc-ct__card-desc">The gold standard in skin resurfacing. Stimulates deep collagen renewal to smooth scars, fine lines, and uneven texture.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £175</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/laser-tattoo-removal" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'laser-tattoo-removal' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Laser Tattoo Removal treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Laser Tattoo Removal</h3>
+        <p class="lsc-ct__card-desc">Advanced laser breaks down ink particles for safe, progressive fading and removal across all colours and sizes.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £45</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/ipl" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'ipl' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="IPL Skin Rejuvenation treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">IPL Skin Rejuvenation</h3>
+        <p class="lsc-ct__card-desc">Intense Pulsed Light targeting pigmentation, redness, thread veins, and sun damage for clearer, even-toned skin.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £50</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+  <p class="lsc-ct__concerns"><strong>Common concerns:</strong> unwanted hair, tattoo removal, pigmentation, sun damage, thread veins, redness</p>
+</div>
+
+{%- comment -%} ── GROUP 2: Injectables ── {%- endcomment -%}
+<div class="lsc-ct__group" id="injectables">
+  <div class="lsc-ct__group-header">
+    <div>
+      <span class="lsc-ct__group-num">02</span>
+      <h2 class="lsc-ct__group-title">Injectables</h2>
+    </div>
+    <span class="lsc-ct__group-count">3 treatments</span>
+  </div>
+  <div class="lsc-ct__grid">
+
+    <a href="/products/anti-wrinkle-injections" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'anti-wrinkle-injections' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Anti-Wrinkle Injections treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Anti-Wrinkle Injections</h3>
+        <p class="lsc-ct__card-desc">Administered by Dr Scotton. Relaxes targeted facial muscles to soften lines and prevent wrinkles from deepening. Natural-looking results.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £140</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/polynucleotides" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'polynucleotides' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Polynucleotides treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__badge">Trending</span>
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Polynucleotides</h3>
+        <p class="lsc-ct__card-desc">Bio-regenerative treatment using DNA-derived molecules to repair, hydrate, and rejuvenate skin at a cellular level.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £135</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/nctf" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'nctf' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="NCTF Skin Booster treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">NCTF Skin Booster</h3>
+        <p class="lsc-ct__card-desc">A cocktail of hyaluronic acid, vitamins, and amino acids to deeply hydrate, firm, and restore radiance from within.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £200</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+  <p class="lsc-ct__concerns"><strong>Common concerns:</strong> fine lines, wrinkles, skin laxity, dull skin, dehydration, loss of firmness</p>
+</div>
+
+{%- comment -%} ── GROUP 3: Skin Renewal ── {%- endcomment -%}
+<div class="lsc-ct__group" id="skin">
+  <div class="lsc-ct__group-header">
+    <div>
+      <span class="lsc-ct__group-num">03</span>
+      <h2 class="lsc-ct__group-title">Skin Renewal</h2>
+    </div>
+    <span class="lsc-ct__group-count">5 treatments</span>
+  </div>
+  <div class="lsc-ct__grid">
+
+    <a href="/products/dermaforce-rf-microneedling" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'dermaforce-rf-microneedling' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="RF Microneedling treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">RF Microneedling</h3>
+        <p class="lsc-ct__card-desc">Combines radiofrequency with microneedling to tighten skin, reduce scarring, and stimulate deep collagen production.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £270</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/chemical-peel" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'chemical-peel' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="MelanoPro Chemical Peel treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">MelanoPro Chemical Peel</h3>
+        <p class="lsc-ct__card-desc">Professional-grade peel targeting pigmentation, melasma, and uneven tone for a brighter, clearer complexion.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £350</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/hydrofacial" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'hydrofacial' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Hydrofacial treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Hydrofacial</h3>
+        <p class="lsc-ct__card-desc">Deep cleansing, exfoliation, and intense hydration. Leaves skin glowing, plump, and instantly refreshed.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £100</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/exosomes" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'exosomes' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Exosomes regenerative treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__badge">New</span>
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Exosomes</h3>
+        <p class="lsc-ct__card-desc">Next-generation regenerative therapy using cell-derived exosomes to accelerate healing and renew skin.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £275</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/blemish-removal" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'blemish-removal' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Blemish Removal treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Blemish Removal</h3>
+        <p class="lsc-ct__card-desc">Precise removal of spider veins, moles, skin tags, and other blemishes. Quick treatment with minimal downtime.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £75</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+  <p class="lsc-ct__concerns"><strong>Common concerns:</strong> acne scarring, texture, large pores, pigmentation, dull skin, dehydration, skin tags</p>
+</div>
+
+{%- comment -%} ── GROUP 4: Body & Face ── {%- endcomment -%}
+<div class="lsc-ct__group" id="body">
+  <div class="lsc-ct__group-header">
+    <div>
+      <span class="lsc-ct__group-num">04</span>
+      <h2 class="lsc-ct__group-title">Body & Face</h2>
+    </div>
+    <span class="lsc-ct__group-count">3 treatments</span>
+  </div>
+  <div class="lsc-ct__grid">
+
+    <a href="/products/non-surgical-face-lift" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'non-surgical-face-lift' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Non-Surgical Face Lift treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Non-Surgical Face Lift</h3>
+        <p class="lsc-ct__card-desc">Advanced lifting and tightening to restore facial contours and firmness — without surgery or extended downtime.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £225</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/non-surgical-body-sculpting" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'non-surgical-body-sculpting' and p.featured_image -%}
+            <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Non-Surgical Body Sculpting treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Non-Surgical Body Sculpting</h3>
+        <p class="lsc-ct__card-desc">Targeted body contouring to reduce stubborn fat and tighten skin — a non-invasive alternative to liposuction.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £50</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="/products/rf-skin-tightening" class="lsc-ct__card">
+      <div class="lsc-ct__card-img">
+        {%- for p in collection.products -%}
+          {%- if p.handle == 'rf-skin-tightening' or p.handle == 'radio-frequency-skin-tightening' -%}
+            {%- if p.featured_image -%}
+              <img src="{{ p.featured_image | image_url: width: 600 }}" alt="Radio Frequency Skin Tightening treatment at Laser Skin Clinics Wolverhampton" loading="lazy" width="600" height="450">
+              {%- break -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="lsc-ct__card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
+      </div>
+      <div class="lsc-ct__card-body">
+        <h3 class="lsc-ct__card-name">Radio Frequency Skin Tightening</h3>
+        <p class="lsc-ct__card-desc">Controlled radiofrequency heats deep tissue layers, stimulating collagen contraction and long-term firming.</p>
+        <div class="lsc-ct__card-foot">
+          <span class="lsc-ct__card-price">From £50</span>
+          <span class="lsc-ct__card-link">View Details &rarr;</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+  <p class="lsc-ct__concerns"><strong>Common concerns:</strong> skin laxity, sagging, body contouring, facial firmness, jowls, double chin</p>
+</div>
+
+{%- comment -%} ── Consultation CTA ── {%- endcomment -%}
+<section class="lsc-ct__cta">
+  <span class="lsc-ct__cta-ey">NOT SURE WHICH TREATMENT IS RIGHT?</span>
+  <h2 class="lsc-ct__cta-heading">Book a Free Skin Assessment</h2>
+  <p class="lsc-ct__cta-text">Our practitioners will assess your skin, discuss your goals, and recommend the most effective treatment plan — no obligation.</p>
+  <a href="https://wa.me/447798983387?text=Hi%21%20I%27d%20like%20to%20book%20a%20consultation%20please." target="_blank" rel="noopener" class="lsc-ct__cta-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.72-1.323A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.143 0-4.144-.663-5.787-1.8l-.404-.27-2.793.783.726-2.86-.282-.422A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+    Message Us on WhatsApp
+  </a>
+</section>
+
+{%- comment -%} ── ItemList Structured Data (JSON-LD) ── {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Clinic Treatments at Laser Skin Clinics Wolverhampton",
+  "description": "Advanced laser, injectable, and skin renewal treatments — all medically overseen and personalised to you.",
+  "url": "{{ shop.url }}/collections/treatments",
+  "numberOfItems": 15,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Laser Hair Removal",
+        "url": "{{ shop.url }}/products/laser-hair-removal",
+        "description": "Long-lasting hair reduction using advanced laser technology. Suitable for face and body with results from the very first session.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Laser Skin Clinics",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 Perton Farm Barns, Jenny Walkers Lane",
+            "addressLocality": "Wolverhampton",
+            "postalCode": "WV6 7HB",
+            "addressCountry": "GB"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "CO₂ Laser Resurfacing",
+        "url": "{{ shop.url }}/products/co2-laser-resurfacing",
+        "description": "The gold standard in skin resurfacing. Stimulates deep collagen renewal to smooth scars, fine lines, and uneven texture."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Laser Tattoo Removal",
+        "url": "{{ shop.url }}/products/laser-tattoo-removal",
+        "description": "Advanced laser breaks down ink particles for safe, progressive fading and removal across all colours and sizes."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "IPL Skin Rejuvenation",
+        "url": "{{ shop.url }}/products/ipl-skin-rejuvenation",
+        "description": "Intense Pulsed Light targeting pigmentation, redness, thread veins, and sun damage for clearer, even-toned skin."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Service",
+        "name": "Anti-Wrinkle Injections",
+        "url": "{{ shop.url }}/products/anti-wrinkle-injections",
+        "description": "Relaxes targeted facial muscles to soften lines and prevent wrinkles from deepening. Natural-looking results."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Service",
+        "name": "Polynucleotides",
+        "url": "{{ shop.url }}/products/polynucleotides",
+        "description": "Bio-regenerative treatment using DNA-derived molecules to repair, hydrate, and rejuvenate skin at a cellular level."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Service",
+        "name": "NCTF Skin Booster",
+        "url": "{{ shop.url }}/products/nctf-skin-booster",
+        "description": "A cocktail of hyaluronic acid, vitamins, and amino acids to deeply hydrate, firm, and restore radiance from within."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Service",
+        "name": "RF Microneedling",
+        "url": "{{ shop.url }}/products/dermaforce-rf-microneedling",
+        "description": "Combines radiofrequency with microneedling to tighten skin, reduce scarring, and stimulate deep collagen production."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Service",
+        "name": "MelanoPro Chemical Peel",
+        "url": "{{ shop.url }}/products/melanopro-chemical-peel",
+        "description": "Professional-grade peel targeting pigmentation, melasma, and uneven tone for a brighter, clearer complexion."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Service",
+        "name": "Hydrofacial",
+        "url": "{{ shop.url }}/products/hydrofacial",
+        "description": "Deep cleansing, exfoliation, and intense hydration. Leaves skin glowing, plump, and instantly refreshed."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "Service",
+        "name": "Exosomes",
+        "url": "{{ shop.url }}/products/exosomes",
+        "description": "Next-generation regenerative therapy using cell-derived exosomes to accelerate healing and renew skin."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "Service",
+        "name": "Blemish Removal",
+        "url": "{{ shop.url }}/products/blemish-removal",
+        "description": "Precise removal of spider veins, moles, skin tags, and other blemishes. Quick treatment with minimal downtime."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "Service",
+        "name": "Non-Surgical Face Lift",
+        "url": "{{ shop.url }}/products/non-surgical-face-lift",
+        "description": "Advanced lifting and tightening to restore facial contours and firmness — without surgery or extended downtime."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "Service",
+        "name": "Non-Surgical Body Sculpting",
+        "url": "{{ shop.url }}/products/non-surgical-body-sculpting",
+        "description": "Targeted body contouring to reduce stubborn fat and tighten skin — a non-invasive alternative to liposuction."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "Service",
+        "name": "Radio Frequency Skin Tightening",
+        "url": "{{ shop.url }}/products/rf-skin-tightening",
+        "description": "Controlled radiofrequency heats deep tissue layers, stimulating collagen contraction and long-term firming."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ── Header ── */
+  .lsc-ct__header {
+    padding: 5rem 6% 3.5rem;
+    background: var(--charcoal, #2C2824);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .lsc-ct__header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(196,169,125,0.07), transparent);
+  }
+  .lsc-ct__breadcrumb {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--taupe, #B8A99A);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__breadcrumb a {
+    color: var(--taupe, #B8A99A);
+    text-decoration: none;
+  }
+  .lsc-ct__breadcrumb a:hover { color: var(--gold, #C4A97D); }
+  .lsc-ct__breadcrumb span { color: rgba(255,255,255,0.6); }
+  .lsc-ct__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--warm-white, #FDFCFA);
+    margin: 0 0 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__intro {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.5);
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Jump Links ── */
+  .lsc-ct__jumps {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__jump {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all 0.3s;
+  }
+  .lsc-ct__jump:hover {
+    border-color: var(--gold, #C4A97D);
+    color: var(--gold, #C4A97D);
+  }
+
+  /* ── Treatment Groups ── */
+  .lsc-ct__group {
+    padding: 4.5rem 6% 1rem;
+  }
+  .lsc-ct__group:first-of-type {
+    padding-top: 3.5rem;
+  }
+  .lsc-ct__group-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding-bottom: 1rem;
+  }
+  .lsc-ct__group-num {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.3rem;
+  }
+  .lsc-ct__group-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    color: var(--charcoal, #2C2824);
+    margin: 0;
+  }
+  .lsc-ct__group-count {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+  }
+
+  /* ── Card Grid ── */
+  .lsc-ct__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Cards ── */
+  .lsc-ct__card {
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0, 0.25, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+  }
+  .lsc-ct__card:hover {
+    border-color: var(--gold, #C4A97D);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+  }
+
+  .lsc-ct__card-img {
+    aspect-ratio: 4 / 3;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--sand, #E8E0D5), var(--taupe, #B8A99A));
+  }
+  .lsc-ct__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .lsc-ct__card:hover .lsc-ct__card-img img {
+    transform: scale(1.03);
+  }
+
+  .lsc-ct__badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--gold, #C4A97D);
+    color: var(--deep, #1A1714);
+    padding: 0.3rem 0.7rem;
+    z-index: 2;
+  }
+
+  .lsc-ct__card-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.3s;
+    color: white;
+  }
+  .lsc-ct__card:hover .lsc-ct__card-arrow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .lsc-ct__card-arrow svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .lsc-ct__card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .lsc-ct__card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2824);
+    margin: 0 0 0.5rem;
+    line-height: 1.25;
+  }
+  .lsc-ct__card-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--dark-taupe, #8A7B6B);
+    flex-grow: 1;
+    margin: 0 0 1rem;
+  }
+  .lsc-ct__card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  .lsc-ct__card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2824);
+  }
+  .lsc-ct__card-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    transition: color 0.3s;
+  }
+  .lsc-ct__card:hover .lsc-ct__card-link {
+    color: var(--charcoal, #2C2824);
+  }
+
+  /* ── Concerns line ── */
+  .lsc-ct__concerns {
+    max-width: 1200px;
+    margin-bottom: 3rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+    line-height: 1.6;
+  }
+  .lsc-ct__concerns strong {
+    font-weight: 400;
+    color: var(--dark-taupe, #8A7B6B);
+  }
+
+  /* ── CTA Section ── */
+  .lsc-ct__cta {
+    background: var(--charcoal, #2C2824);
+    padding: 5rem 6%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .lsc-ct__cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(196,169,125,0.06), transparent);
+  }
+  .lsc-ct__cta-ey {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-light, #D4BE9A);
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__cta-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: var(--warm-white, #FDFCFA);
+    margin: 0 0 0.8rem;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__cta-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.5);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 1rem 2.2rem;
+    background: var(--gold, #C4A97D);
+    color: var(--deep, #1A1714);
+    text-decoration: none;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 2;
+  }
+  .lsc-ct__cta-btn:hover {
+    background: var(--gold-light, #D4BE9A);
+    transform: translateY(-1px);
+  }
+
+  /* ── Responsive ── */
+  @media screen and (max-width: 1024px) {
+    .lsc-ct__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .lsc-ct__header {
+      padding: 3.5rem 5% 2.5rem;
+    }
+    .lsc-ct__grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
+    .lsc-ct__group {
+      padding: 3rem 5% 1rem;
+    }
+    .lsc-ct__group-header {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .lsc-ct__cta {
+      padding: 3.5rem 5%;
+    }
+  }
+</style>
+
+<script>
+  // Staggered scroll-reveal for treatment cards
+  (function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var card = entry.target;
+          var group = card.closest('.lsc-ct__grid');
+          if (group) {
+            var siblings = Array.from(group.querySelectorAll('.lsc-ct__card'));
+            var idx = siblings.indexOf(card);
+            setTimeout(function() {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, idx * 100);
+          }
+          observer.unobserve(card);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.lsc-ct__card').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      observer.observe(el);
+    });
+  })();
+</script>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection Treatments",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Collection Treatments"
+    }
+  ]
+}
+{% endschema %}

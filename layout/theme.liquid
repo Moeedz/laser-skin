@@ -2,7 +2,49 @@
 
 <html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MG76XPBQ');</script>
+<!-- End Google Tag Manager -->
     <script>
+  // Check if current page is the gift card product
+  if (window.location.pathname === '/products/laser-skin-clinics-gift-card') {
+    // Wait for DOM to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Find the button inside buy-buttons
+      const bookButton = document.querySelector('.buy-buttons button.button');
+      
+      if (bookButton && bookButton.textContent.trim() === 'Book Now') {
+        bookButton.textContent = 'Buy Now';
+      }
+    });
+  }
+</script>
+    {% if template == 'product' %}
+  {% assign hidden_products = 'laser-hair-removal-course-of-10,laser-hair-removal-course-of-6,laser-hair-removal-course-of-3,laser-hair-removal-single-session' | split: ',' %}
+  {% if hidden_products contains product.handle %}
+    <meta name="robots" content="noindex, follow">
+  {% endif %}
+{% endif %}
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // For anchor tags with spans containing "Get more information"
+  document.querySelectorAll('a span').forEach(span => {
+    if (span.textContent.trim() === 'Get more information') {
+      span.closest('a').style.display = 'none';
+    }
+  });
+  
+  // For anchor tags with direct text "Get more Information"
+  document.querySelectorAll('a').forEach(link => {
+    if (link.textContent.trim() === 'Get more Information') {
+      link.style.display = 'none';
+    }
+  });
+});
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="https://partner.pabau.com/"]').forEach(link => {
         link.style.display = 'none';
@@ -11,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
     <script id="pabau-script" src="https://pabau.com/widgets/online-bookings/book-now-button.js?company_slug=laser-skin-clinics&category=93159&services=3552094&location=4546&btnStyle=2"></script>
     <style>
+      product-sticky-bar.product-sticky-bar.is-visible {
+    display: none !important;
+}
       .pricing-body .btn-wrapper {
     display: none;
 }
@@ -29,7 +74,7 @@ product-card.product-card {
 }
 
 span.desktop-btn a {
-    background: #E6B325 !important;
+    background: #B77A57 !important;
     color: white !important;
     padding: 15px !important;
     border-radius: 15px !important;
@@ -44,9 +89,11 @@ span.desktop-btn {
 span.desktop-btn {
     display: none;
 }
+@media screen and (min-width: 768px) {
 x-header.header.color-scheme.color-scheme--scheme-2 {
     display: flex !important;
     justify-content: space-between !important;
+}
 }
 .header-sidebar__scroller {
     display: flex !important;
@@ -54,7 +101,7 @@ x-header.header.color-scheme.color-scheme--scheme-2 {
     gap: 2rem !important;
 }
 span.mobile-btn a {
-    background: #E6B325 !important;
+    background: #B77A57 !important;
     color: white !important;
     padding: 15px !important;
     border-radius: 10px !important;
@@ -64,7 +111,7 @@ span.mobile-btn a {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
 
-    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
+    <title>{% if template == 'index' %}Laser Skin Clinics | Aesthetic Clinic Wolverhampton{% elsif page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% unless page_title contains 'Laser Skin Clinics' %} | Laser Skin Clinics{% endunless %}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
 
     {%- if page_description -%}
       <meta name="description" content="{{ page_description | escape }}">
@@ -79,6 +126,9 @@ span.mobile-btn a {
 
     {%- comment -%}Few prefetch to increase performance on commonly used third-parties{%- endcomment -%}
     <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     {%- unless settings.heading_font.system? -%}
       <link rel="preload" href="{{ settings.heading_font | font_url }}" as="font" type="font/woff2" crossorigin>
@@ -124,6 +174,7 @@ span.mobile-btn a {
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    {{ 'lsc-global.css' | asset_url | stylesheet_tag }}
   </head>
 
   {% liquid
@@ -143,6 +194,9 @@ span.mobile-btn a {
   %}
 
   <body class="{{ features_class }} color-scheme color-scheme--{{ settings.default_color_scheme.id }}">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MG76XPBQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     {%- render 'shadow-dom-templates' -%}
 
     <loading-bar class="loading-bar" aria-hidden="true"></loading-bar>
@@ -156,7 +210,7 @@ span.mobile-btn a {
     </span>
 
     {%- if request.page_type != 'password' -%}
-      {%- sections 'header-group' -%}
+      {% section 'lsc-header' %}
       {%- sections 'overlay-group' -%}
     {%- endif -%}
 
@@ -169,8 +223,12 @@ span.mobile-btn a {
         consecutive, and hence having a cleaner margin collapsing management.
       {%- endcomment -%}
       {%- if request.page_type != 'password' -%}
-        {%- sections 'footer-group' -%}
+        {% section 'lsc-footer' %}
       {%- endif -%}
     </main>
+
+    {% render 'lsc-schema-markup' %}
+    {% render 'lsc-ai-content-block' %}
+    {% render 'lsc-ga4-events' %}
   </body>
 </html>
