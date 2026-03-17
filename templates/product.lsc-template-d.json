@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {}
+    },
+    "comparison": {
+      "type": "lsc-comparison",
+      "settings": {}
+    },
+    "our_technology": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "fading_timeline": {
+      "type": "lsc-fading-timeline",
+      "settings": {}
+    },
+    "aftercare": {
+      "type": "lsc-aftercare",
+      "settings": {}
+    },
+    "suitability": {
+      "type": "lsc-suitability",
+      "settings": {}
+    },
+    "pricing": {
+      "type": "lsc-pricing-cards",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "blocks": {
+        "rev_1": {
+          "type": "review",
+          "settings": {
+            "text": "I've been having my sleeve lightened for a cover-up and Maxine has been incredible throughout. The fading has been really impressive and she always makes sure I'm comfortable before starting. Can't recommend Laser Skin Clinics enough.",
+            "author": "Jason M.",
+            "treatment": "Laser Tattoo Removal"
+          }
+        },
+        "rev_2": {
+          "type": "review",
+          "settings": {
+            "text": "Had a small wrist tattoo removed over four sessions and it's completely gone. Maxine explained the process honestly from the start and set realistic expectations — everything went exactly as she said it would. Amazing results.",
+            "author": "Natasha F.",
+            "treatment": "Laser Tattoo Removal"
+          }
+        },
+        "rev_3": {
+          "type": "review",
+          "settings": {
+            "text": "Came to Laser Skin Clinics in Wolverhampton to remove a name tattoo I'd regretted for years. Maxine was professional and reassuring throughout the whole process. Six sessions in and it's barely visible. So relieved.",
+            "author": "Darren H.",
+            "treatment": "Laser Tattoo Removal"
+          }
+        }
+      },
+      "block_order": [
+        "rev_1",
+        "rev_2",
+        "rev_3"
+      ],
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most tattoos require 6–12 sessions spaced 6–8 weeks apart. The number depends on ink colour, depth, tattoo age, and your body’s immune response. Your consultation includes an honest assessment of what to expect.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Will my tattoo completely disappear?",
+            "answer": "<p>Most tattoos can be significantly faded or fully removed. Complete removal depends on ink depth, colour, age, and skin type. Black ink responds best. Some colours like green and light blue can be more stubborn. We set realistic expectations from your first consultation.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Does it hurt?",
+            "answer": "<p>Most clients describe it as brief, sharp pulses — similar to a rubber band snapping against the skin. We use cooling throughout for comfort. The sensation is tolerable and each session is short.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "What laser do you use?",
+            "answer": "<p>We use a Nanosure Q-Switched ND:YAG laser with multiple wavelengths to target both black and coloured inks effectively. This is the gold-standard technology for tattoo removal.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Can you remove coloured tattoos?",
+            "answer": "<p>Yes. Our laser uses multiple wavelengths to target different ink colours. Black and dark inks respond best, while lighter colours like yellow and white may require more sessions. We’ll assess your specific colours during consultation.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Will it scar?",
+            "answer": "<p>Our laser breaks down ink particles without forcing them through the skin surface, which significantly reduces scarring risk. Following aftercare instructions is important. Clients with a history of keloid scarring should discuss this during consultation.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I get a cover-up instead of full removal?",
+            "answer": "<p>Absolutely. Many clients use laser sessions to fade an existing tattoo enough for a cover-up. This usually requires fewer sessions than full removal. We can work with your tattoo artist to get the fading to the right level.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
+      ],
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "product_hero",
+    "trust_bar",
+    "comparison",
+    "our_technology",
+    "fading_timeline",
+    "aftercare",
+    "suitability",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
+  ]
+}

@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gift_cards": {
+      "type": "lsc-gift-cards",
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Can the gift card be used for any treatment?",
+            "answer": "<p>Yes — our gift cards can be applied to any treatment or package we offer at Laser Skin Clinics, including laser hair removal, skin treatments, injectables, and packages.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Do gift cards expire?",
+            "answer": "<p>Gift cards are valid for 12 months from the date of purchase. We recommend booking your treatment within this period to make the most of your gift.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "How will the gift card be delivered?",
+            "answer": "<p>Gift cards are delivered digitally by email immediately after purchase. If you'd prefer a printed version, please message us on WhatsApp and we'll arrange it.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use a gift card towards a course of treatments?",
+            "answer": "<p>Yes — gift cards can be used as full or partial payment towards any individual session or course of treatments. Any remaining balance stays on your account.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I get a refund on a gift card?",
+            "answer": "<p>Gift cards are non-refundable but are fully transferable. If the recipient can't use it, it can be gifted or transferred to another person.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ],
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "gift_cards",
+    "faq",
+    "contact"
+  ]
+}

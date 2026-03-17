@@ -1,0 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {}
+    },
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "what_it_treats": {
+      "type": "lsc-suitability",
+      "settings": {}
+    },
+    "pricing": {
+      "type": "lsc-pricing-cards",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {
+        "whatsapp_message": "Hi! I would like to book a Hydrofacial please."
+      }
+    }
+  },
+  "order": [
+    "product_hero",
+    "trust_bar",
+    "what_is",
+    "how_it_works",
+    "what_it_treats",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
+  ]
+}

@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {}
+    },
+    "quick_facts": {
+      "type": "lsc-quick-facts",
+      "blocks": {
+        "qf_1": {
+          "type": "fact",
+          "settings": {
+            "label": "Downtime",
+            "value": "Minimal"
+          }
+        },
+        "qf_2": {
+          "type": "fact",
+          "settings": {
+            "label": "Sessions",
+            "value": "Usually 1"
+          }
+        },
+        "qf_3": {
+          "type": "fact",
+          "settings": {
+            "label": "Price",
+            "value": "£75"
+          }
+        }
+      },
+      "block_order": [
+        "qf_1",
+        "qf_2",
+        "qf_3"
+      ],
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {
+        "override_metafield": true,
+        "item_1": "Professional Blemish Removal",
+        "item_2": "Quick & Precise",
+        "item_3": "Complimentary Consultation",
+        "item_4": "Established 10+ Years"
+      }
+    },
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "how_we_treat": {
+      "type": "lsc-how-we-treat",
+      "settings": {}
+    },
+    "aftercare": {
+      "type": "lsc-aftercare",
+      "settings": {}
+    },
+    "pricing": {
+      "type": "lsc-pricing-cards",
+      "blocks": {
+        "price_1": {
+          "type": "pricing_tier",
+          "settings": {
+            "tier_name": "Blemish Removal",
+            "price": "£75",
+            "description": "Single blemish removal session — consultation, treatment, and aftercare included"
+          }
+        }
+      },
+      "block_order": [
+        "price_1"
+      ],
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "blocks": {
+        "rev_1": {
+          "type": "review",
+          "settings": {
+            "text": "I've been going to Laser Skin Clinic for my skin tag removal treatments and I honestly couldn't be happier with my experience. From the moment you walk in, the staff are so warm, welcoming, and professional. My practitioner is absolutely amazing — she always explains everything clearly, makes sure I'm at ease during the procedure, and genuinely cares about the results. Highly recommend!",
+            "author": "Tavena McKenzie",
+            "treatment": "Skin Tag Removal"
+          }
+        },
+        "rev_2": {
+          "type": "review",
+          "settings": {
+            "text": "Had several skin tags and a small thread vein treated in one session at Laser Skin Clinics. The team were incredibly professional and put me at ease straight away. The results were immediate and I was amazed at how quickly the blemishes disappeared. Would highly recommend.",
+            "author": "Debbie S.",
+            "treatment": "Blemish Removal"
+          }
+        },
+        "rev_3": {
+          "type": "review",
+          "settings": {
+            "text": "I'd been self-conscious about a stubborn spider vein on my face for years. After one treatment it's completely gone. The whole experience was so professional and the clinic is spotless. Wish I'd come sooner!",
+            "author": "Kerry W.",
+            "treatment": "Blemish Removal"
+          }
+        }
+      },
+      "block_order": [
+        "rev_1",
+        "rev_2",
+        "rev_3"
+      ],
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "settings": {}
+    },
+    "blemish_nav": {
+      "type": "lsc-blemish-nav",
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {
+        "whatsapp_message": "Hi! I'd like to book a blemish assessment please."
+      }
+    }
+  },
+  "order": [
+    "product_hero",
+    "quick_facts",
+    "trust_bar",
+    "what_is",
+    "how_we_treat",
+    "aftercare",
+    "pricing",
+    "reviews",
+    "faq",
+    "blemish_nav",
+    "contact"
+  ]
+}

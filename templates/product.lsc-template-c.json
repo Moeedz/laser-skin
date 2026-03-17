@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {}
+    },
+    "comparison": {
+      "type": "lsc-comparison",
+      "settings": {}
+    },
+    "our_technology": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "suitability": {
+      "type": "lsc-suitability",
+      "settings": {}
+    },
+    "timeline": {
+      "type": "lsc-results-timeline",
+      "settings": {}
+    },
+    "pricing": {
+      "type": "lsc-tabbed-pricing",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {
+        "whatsapp_message": "Hi! I would like to book a laser hair removal consultation please."
+      }
+    }
+  },
+  "order": [
+    "product_hero",
+    "trust_bar",
+    "comparison",
+    "our_technology",
+    "how_it_works",
+    "suitability",
+    "timeline",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
+  ]
+}

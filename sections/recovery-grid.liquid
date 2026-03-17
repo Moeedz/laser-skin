@@ -1,0 +1,381 @@
+{% style %}
+  /* ==========================================================================
+     Recovery Grid Section
+     ========================================================================== */
+
+  .rcg {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--section-bg);
+    padding: var(--padding-top) 0 var(--padding-bottom);
+  }
+
+  .rcg__texture {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    opacity: var(--texture-opacity);
+  }
+  .rcg__texture::before, .rcg__texture::after { content: ''; position: absolute; inset: 0; }
+  .rcg__texture::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .rcg__texture::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.02 0.08' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 512px 512px;
+  }
+
+  .rcg__container {
+    position: relative; z-index: 1;
+    max-width: 1200px; margin: 0 auto; padding: 0 40px;
+  }
+
+  /* Header */
+  .rcg__header { text-align: center; margin-bottom: 48px; }
+
+  .rcg__heading {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: var(--heading-size); font-weight: 400; font-style: italic;
+    line-height: 1.2; color: var(--heading-color); margin: 0 0 18px;
+  }
+
+  .rcg__subtitle {
+    font-size: var(--body-size); line-height: 1.65;
+    color: var(--text-color); margin: 0 auto; max-width: 720px;
+  }
+
+  /* 3-column grid */
+  .rcg__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  /* Day column */
+  .rcg__day {
+    display: flex; flex-direction: column; gap: 14px;
+  }
+
+  .rcg__day-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--heading-size) * 0.55);
+    font-weight: 400; color: var(--heading-color);
+    text-align: center; margin: 0 0 4px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Card row */
+  .rcg__card {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+  }
+
+  .rcg__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  /* Card image */
+  .rcg__card-img {
+    width: 72px; height: 72px; flex-shrink: 0;
+    border-radius: 8px; overflow: hidden;
+  }
+
+  .rcg__card-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+
+  /* Card content */
+  .rcg__card-content { flex: 1; }
+
+  .rcg__card-label {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px);
+    font-weight: 700; color: var(--heading-color);
+    margin: 0 0 3px; line-height: 1.3;
+  }
+
+  .rcg__card-desc {
+    font-size: var(--body-size); line-height: 1.5;
+    color: var(--text-color); margin: 0;
+  }
+
+  /* Highlight badge for "Most Common" */
+  .rcg__card--highlight .rcg__card-label {
+    display: inline-block;
+    background: var(--highlight-bg);
+    color: var(--highlight-text);
+    padding: 2px 12px 3px;
+    border-radius: 4px;
+    font-size: calc(var(--body-size) - 1px);
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 6px;
+  }
+
+  /* Footer */
+  .rcg__footer {
+    margin-top: 40px; text-align: center;
+  }
+
+  .rcg__footer-text {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: calc(var(--body-size) + 2px); font-style: italic;
+    color: var(--heading-color); margin: 0; opacity: 0.85;
+  }
+
+  /* Animations */
+  [data-rcg-animate] {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+  [data-rcg-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Responsive — Tablet */
+  @media screen and (max-width: 900px) {
+    .rcg__grid { gap: 18px; }
+    .rcg__card { padding: 12px 12px; gap: 10px; }
+    .rcg__card-img { width: 56px; height: 56px; }
+    .rcg__card-label { font-size: var(--body-size); }
+    .rcg__card-desc { font-size: calc(var(--body-size) - 1px); }
+  }
+
+  /* Responsive — Mobile */
+  @media screen and (max-width: 768px) {
+    .rcg__container { padding: 0 20px; }
+    .rcg__heading { font-size: calc(var(--heading-size) * 0.65); }
+    .rcg__grid { grid-template-columns: 1fr; gap: 32px; }
+    .rcg__day-title { font-size: calc(var(--heading-size) * 0.48); }
+  }
+
+  @media screen and (max-width: 480px) {
+    .rcg__container { padding: 0 16px; }
+    .rcg__heading { font-size: calc(var(--heading-size) * 0.52); }
+    .rcg__card-img { width: 60px; height: 60px; }
+  }
+{% endstyle %}
+
+<section
+  class="rcg"
+  id="rcg-{{ section.id }}"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --heading-color: {{ section.settings.heading_color }};
+    --text-color: {{ section.settings.text_color }};
+    --card-bg: {{ section.settings.card_bg }};
+    --card-border: {{ section.settings.card_border }};
+    --highlight-bg: {{ section.settings.highlight_bg }};
+    --highlight-text: {{ section.settings.highlight_text }};
+    --heading-size: {{ section.settings.heading_font_size }}px;
+    --body-size: {{ section.settings.body_font_size }}px;
+    --texture-opacity: {{ section.settings.texture_opacity | divided_by: 100.0 }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {% if section.settings.show_texture %}<div class="rcg__texture"></div>{% endif %}
+
+  <div class="rcg__container">
+    <!-- Header -->
+    <div class="rcg__header" data-rcg-animate data-delay="0">
+      {% if section.settings.heading != blank %}
+        <h2 class="rcg__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="rcg__subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- 3-Column Grid -->
+    <div class="rcg__grid">
+      {% comment %} Day 1 {% endcomment %}
+      <div class="rcg__day" data-rcg-animate data-delay="1">
+        {% if section.settings.day_1_title != blank %}
+          <h3 class="rcg__day-title">{{ section.settings.day_1_title }}</h3>
+        {% endif %}
+        {% for block in section.blocks %}
+          {% if block.settings.day_column == '1' %}
+            <div class="rcg__card{% if block.settings.is_highlight %} rcg__card--highlight{% endif %}" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                <div class="rcg__card-img">
+                  {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '100,150,200' }}
+                </div>
+              {% endif %}
+              <div class="rcg__card-content">
+                {% if block.settings.label != blank %}
+                  <p class="rcg__card-label">{{ block.settings.label }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="rcg__card-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% comment %} Day 2 {% endcomment %}
+      <div class="rcg__day" data-rcg-animate data-delay="2">
+        {% if section.settings.day_2_title != blank %}
+          <h3 class="rcg__day-title">{{ section.settings.day_2_title }}</h3>
+        {% endif %}
+        {% for block in section.blocks %}
+          {% if block.settings.day_column == '2' %}
+            <div class="rcg__card{% if block.settings.is_highlight %} rcg__card--highlight{% endif %}" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                <div class="rcg__card-img">
+                  {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '100,150,200' }}
+                </div>
+              {% endif %}
+              <div class="rcg__card-content">
+                {% if block.settings.label != blank %}
+                  <p class="rcg__card-label">{{ block.settings.label }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="rcg__card-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% comment %} Day 3 {% endcomment %}
+      <div class="rcg__day" data-rcg-animate data-delay="3">
+        {% if section.settings.day_3_title != blank %}
+          <h3 class="rcg__day-title">{{ section.settings.day_3_title }}</h3>
+        {% endif %}
+        {% for block in section.blocks %}
+          {% if block.settings.day_column == '3' %}
+            <div class="rcg__card{% if block.settings.is_highlight %} rcg__card--highlight{% endif %}" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                <div class="rcg__card-img">
+                  {{ block.settings.image | image_url: width: 200 | image_tag: loading: 'lazy', widths: '100,150,200' }}
+                </div>
+              {% endif %}
+              <div class="rcg__card-content">
+                {% if block.settings.label != blank %}
+                  <p class="rcg__card-label">{{ block.settings.label }}</p>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p class="rcg__card-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {% if section.settings.footer_text != blank %}
+      <div class="rcg__footer" data-rcg-animate data-delay="4">
+        <p class="rcg__footer-text">{{ section.settings.footer_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var s = document.getElementById('rcg-{{ section.id }}');
+    if (!s) return;
+    var els = s.querySelectorAll('[data-rcg-animate]');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var d = parseInt(e.target.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () { e.target.classList.add('is-visible'); }, d * 120);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function (el) { obs.observe(el); });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Recovery Grid",
+  "tag": "section",
+  "class": "recovery-grid-section",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Heading", "default": "What Your Skin May Look Like During Recovery" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtitle", "default": "The MelanoPro Peel triggers a controlled skin renewal process. While responses vary slightly, most clients experience mild to moderate peeling that settles within around one week." },
+    { "type": "text", "id": "footer_text", "label": "Footer Text", "default": "Most clients experience mild to moderate peeling that settles within 5–7 days." },
+    { "type": "header", "content": "Day Column Titles" },
+    { "type": "text", "id": "day_1_title", "label": "Day 1 Title", "default": "Day 1–2" },
+    { "type": "text", "id": "day_2_title", "label": "Day 2 Title", "default": "Day 3–5" },
+    { "type": "text", "id": "day_3_title", "label": "Day 3 Title", "default": "Day 5–7" },
+    { "type": "header", "content": "Background & Texture" },
+    { "type": "color", "id": "section_bg", "label": "Section Background", "default": "#e8e2dc" },
+    { "type": "checkbox", "id": "show_texture", "label": "Show Paper Texture", "default": true },
+    { "type": "range", "id": "texture_opacity", "label": "Texture Intensity", "min": 0, "max": 100, "step": 5, "default": 80, "unit": "%" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color", "default": "#3a2820" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#5a4a3a" },
+    { "type": "color", "id": "card_bg", "label": "Card Background", "default": "#f5f0eb" },
+    { "type": "color", "id": "card_border", "label": "Card Border", "default": "#e0d8d0" },
+    { "type": "color", "id": "highlight_bg", "label": "Highlight Badge BG", "default": "#c8a87c" },
+    { "type": "color", "id": "highlight_text", "label": "Highlight Badge Text", "default": "#ffffff" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_font_size", "label": "Heading Font Size", "min": 28, "max": 56, "step": 2, "default": 42, "unit": "px" },
+    { "type": "range", "id": "body_font_size", "label": "Body Font Size", "min": 13, "max": 20, "step": 1, "default": 15, "unit": "px" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "label": "Padding Top", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding Bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Recovery Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "day_column",
+          "label": "Day Column",
+          "options": [
+            { "value": "1", "label": "Day 1" },
+            { "value": "2", "label": "Day 2" },
+            { "value": "3", "label": "Day 3" }
+          ],
+          "default": "1"
+        },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Mild" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Light warmth or slight dryness" },
+        { "type": "checkbox", "id": "is_highlight", "label": "Highlight as Most Common", "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recovery Grid",
+      "settings": {
+        "heading": "What Your Skin May Look Like During Recovery",
+        "subtitle": "The MelanoPro Peel triggers a controlled skin renewal process. While responses vary slightly, most clients experience mild to moderate peeling that settles within around one week.",
+        "footer_text": "Most clients experience mild to moderate peeling that settles within 5–7 days.",
+        "day_1_title": "Day 1–2",
+        "day_2_title": "Day 3–5",
+        "day_3_title": "Day 5–7"
+      },
+      "blocks": [
+        { "type": "card", "settings": { "day_column": "1", "label": "Mild", "description": "Light warmth or slight dryness", "is_highlight": false } },
+        { "type": "card", "settings": { "day_column": "1", "label": "Most Common", "description": "Redness and tightness similar to sun exposure", "is_highlight": true } },
+        { "type": "card", "settings": { "day_column": "1", "label": "Stronger", "description": "Visible redness with mild swelling", "is_highlight": false } },
+        { "type": "card", "settings": { "day_column": "2", "label": "Mild", "description": "Light flaking begins", "is_highlight": false } },
+        { "type": "card", "settings": { "day_column": "2", "label": "Most Common", "description": "Noticeable peeling around mouth and cheeks", "is_highlight": true } },
+        { "type": "card", "settings": { "day_column": "2", "label": "Stronger", "description": "Heavier peeling as pigmented skin sheds", "is_highlight": false } },
+        { "type": "card", "settings": { "day_column": "3", "label": "Mild", "description": "Peeling settles and skin feels smoother", "is_highlight": false } },
+        { "type": "card", "settings": { "day_column": "3", "label": "Most Common", "description": "Fresh brighter skin appears", "is_highlight": true } },
+        { "type": "card", "settings": { "day_column": "3", "label": "Stronger", "description": "Remaining flakes gradually resolve", "is_highlight": false } }
+      ]
+    }
+  ]
+}
+{% endschema %}
