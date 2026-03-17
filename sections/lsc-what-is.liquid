@@ -1,0 +1,402 @@
+{%- comment -%}
+  LSC "What Is This Treatment?" Section
+  Educational content section. Reads from:
+  1. product.metafields.custom.what_is (JSON object with heading + body array)
+  2. Falls back to product.description if metafield is blank
+{%- endcomment -%}
+
+{%- liquid
+  assign what_is_data = product.metafields.custom.what_is.value
+  assign has_metafield = false
+  if what_is_data != blank
+    assign has_metafield = true
+  endif
+  assign fallback_body = product.description
+
+  assign blemish_handles = 'skin-tag-removal,mole-removal,milia-removal,thread-vein-removal,age-spot-removal,cherry-angioma-removal,spider-naevi-removal,xanthelasma-removal,wart-and-verruca-removal,seborrheic-wart-removal'
+  assign is_blemish = false
+  if blemish_handles contains product.handle
+    assign is_blemish = true
+  endif
+-%}
+
+{%- unless has_metafield == false and fallback_body == blank and is_blemish == false -%}
+<section class="lsc-what-is">
+  <div class="lsc-what-is__inner">
+
+    <div class="lsc-what-is__header">
+      <span class="lsc-what-is__eyebrow">ABOUT THE TREATMENT</span>
+      {%- if has_metafield and what_is_data.heading != blank -%}
+        <h2 class="lsc-what-is__heading">{{ what_is_data.heading }}</h2>
+      {%- else -%}
+        <h2 class="lsc-what-is__heading">What is {{ product.title }}?</h2>
+      {%- endif -%}
+    </div>
+
+    <div class="lsc-what-is__body">
+      {%- if has_metafield or is_blemish -%}
+        {%- if what_is_data.intro != blank or is_blemish -%}
+          {%- if product.handle == 'laser-hair-removal' -%}
+            <p class="lsc-what-is__intro">{{ what_is_data.intro | replace: 'Every session is performed by Maxine, our Level 4 VTCT qualified laser specialist', 'Every session is performed by our qualified laser specialists using individually calibrated settings' | replace: 'Maxine', 'our specialist' }}</p>
+          {%- elsif product.handle == 'cosmetic-injections' -%}
+            <p class="lsc-what-is__intro">{{ what_is_data.intro | replace: 'James Scotton', 'Sangeeta Scotton' | replace: 'Dr James', 'Dr Sangeeta' }}</p>
+          {%- elsif product.handle == 'hydrofacial' -%}
+            <p class="lsc-what-is__intro">{{ what_is_data.intro | replace: 'Maxine Harish', 'our trained specialists' | replace: 'Maxine', 'our trained specialists' }}</p>
+          {%- elsif product.handle == 'non-surgical-face-lift' -%}
+            <p class="lsc-what-is__intro">The Non-Surgical Face Lift at Laser Skin Clinics uses EMLIFT technology — a non-invasive electromagnetic device that stimulates and strengthens the facial muscles beneath the skin. By delivering focused electromagnetic pulses, EMLIFT contracts the facial muscles thousands of times in a single session, rebuilding muscle tone, tightening the skin, and restoring a more lifted, defined appearance — all without needles, injections, or downtime.</p>
+          {%- elsif product.handle == 'non-surgical-body-sculpting' or product.handle == 'power-sculpt-hifem' -%}
+            <p class="lsc-what-is__intro">Non-Surgical Body Sculpting at Laser Skin Clinics uses PowerSculpt technology — a non-invasive body contouring device that targets and disrupts stubborn fat cells while simultaneously firming and tightening the skin. PowerSculpt delivers targeted energy to the treatment area, causing progressive fat reduction over the following weeks as the body naturally processes the disrupted cells — all without surgery, needles, or downtime.</p>
+          {%- elsif product.handle == 'radio-frequency' or product.handle == 'rf-skin-tightening' or product.handle == 'radio-frequency-skin-tightening' -%}
+            <p class="lsc-what-is__intro">RF Skin Tightening at Laser Skin Clinics uses controlled radiofrequency energy to heat the deeper layers of the skin, triggering collagen contraction and stimulating new collagen production. The result is progressively firmer, tighter skin — on the face, neck, or body — without needles, surgery, or downtime.</p>
+          {%- elsif product.handle == 'ipl-glo-facial' or product.handle == 'ipl-skin-rejuvenation' or product.handle == 'ipl' -%}
+            <p class="lsc-what-is__intro">IPL (Intense Pulsed Light) at Laser Skin Clinics uses medical-grade broad-spectrum light to target rosacea, thread veins, age spots, and uneven skin tone. The light energy is absorbed by haemoglobin in blood vessels and melanin in pigmented lesions, breaking them down while leaving surrounding skin unaffected. It is one of the most effective non-invasive treatments available for rosacea-related redness and facial flushing.</p>
+          {%- elsif product.handle == 'skin-tag-removal' -%}
+            <p class="lsc-what-is__intro">Skin tags are small, soft, flesh-coloured growths that hang from the skin on a thin stalk. They are completely harmless but can be a cosmetic nuisance — especially on the neck, underarms, and around the eyes. At Laser Skin Clinics, we remove skin tags quickly and precisely using advanced electrosurgery techniques, leaving clean, smooth skin with minimal healing time.</p>
+          {%- elsif product.handle == 'mole-removal' -%}
+            <p class="lsc-what-is__intro">Moles are clusters of pigmented skin cells that can appear anywhere on the body. While most are harmless, unwanted moles can be a source of self-consciousness — particularly on the face. At Laser Skin Clinics, we remove benign moles using precise clinical techniques, leaving minimal scarring and a natural result. Any mole showing signs of concern is referred for medical assessment before treatment.</p>
+            <p class="lsc-what-is__safety-note"><span class="lsc-what-is__safety-icon">&#9432;</span> If you're unsure whether your mole has changed in size, shape, or colour, we'd suggest having it checked by your GP before treatment. During your appointment, we'll also assess the mole to confirm it's suitable for cosmetic removal.</p>
+          {%- elsif product.handle == 'milia-removal' -%}
+            <p class="lsc-what-is__intro">Milia are small, hard, white bumps that form just beneath the surface of the skin — most commonly around the eyes and cheeks. They occur when dead skin cells become trapped in tiny pockets near the surface. Unlike spots, milia will not resolve on their own and cannot be squeezed. At Laser Skin Clinics, we remove milia quickly using a fine sterile needle or electrosurgery for an immediately clearer complexion.</p>
+          {%- elsif product.handle == 'thread-vein-removal' -%}
+            <p class="lsc-what-is__intro">Thread veins (also called spider veins or broken capillaries) are small, visible blood vessels that appear close to the skin's surface — most commonly on the face and legs. They are harmless but can be cosmetically bothersome. At Laser Skin Clinics, we treat thread veins using advanced electrosurgery or IPL, collapsing the vessel so it is gradually absorbed by the body and fades from view.</p>
+          {%- elsif product.handle == 'age-spot-removal' -%}
+            <p class="lsc-what-is__intro">Age spots (also known as sun spots or liver spots) are flat, darkened patches of skin caused by years of sun exposure. They most commonly appear on the face, hands, and décolletage. At Laser Skin Clinics, we treat age spots using advanced techniques including cryotherapy and IPL to break down excess melanin, revealing clearer, more even-toned skin.</p>
+          {%- elsif product.handle == 'cherry-angioma-removal' -%}
+            <p class="lsc-what-is__intro">Cherry angiomas are small, bright red or purple spots caused by an overgrowth of tiny blood vessels in the skin. They are completely harmless but can be cosmetically unwanted, particularly when they appear on visible areas of the face or body. At Laser Skin Clinics, we remove cherry angiomas quickly using electrosurgery, leaving the skin smooth and clear.</p>
+          {%- elsif product.handle == 'spider-naevi-removal' -%}
+            <p class="lsc-what-is__intro">A spider naevus is a small cluster of blood vessels visible on the skin's surface, radiating outwards from a central point — resembling a spider's web. They are harmless but often appear on the face, making them cosmetically bothersome. At Laser Skin Clinics, we treat spider naevi using advanced electrosurgery, targeting the central feeding vessel to collapse the entire cluster.</p>
+          {%- elsif product.handle == 'xanthelasma-removal' -%}
+            <p class="lsc-what-is__intro">Xanthelasma are yellowish, flat deposits of cholesterol that form under the skin around the eyelids. While harmless, they can be a persistent cosmetic concern and do not resolve on their own. At Laser Skin Clinics, we remove xanthelasma using precise electrosurgery techniques, carefully treating the deposit while preserving the delicate skin around the eyes.</p>
+            <p class="lsc-what-is__safety-note"><span class="lsc-what-is__safety-icon">&#9432;</span> Xanthelasma can sometimes be associated with elevated cholesterol. We recommend a cholesterol check with your GP alongside treatment.</p>
+          {%- elsif product.handle == 'wart-and-verruca-removal' -%}
+            <p class="lsc-what-is__intro">Warts and verrucas are common skin growths caused by the human papillomavirus (HPV). Warts typically appear on the hands and fingers, while verrucas occur on the soles of the feet. Both can be stubborn and resistant to over-the-counter treatments. At Laser Skin Clinics, we remove warts and verrucas using advanced clinical techniques for effective, lasting results.</p>
+          {%- elsif product.handle == 'seborrheic-wart-removal' -%}
+            <p class="lsc-what-is__intro">Seborrheic warts (also called seborrheic keratoses) are common, harmless growths that appear as raised, waxy, brown or black patches on the skin. Despite their name, they are not true warts and are not caused by a virus. They tend to increase with age and can be cosmetically unwanted. At Laser Skin Clinics, we remove seborrheic warts quickly using electrosurgery or cryotherapy for a smooth, clear result.</p>
+          {%- else -%}
+            <p class="lsc-what-is__intro">{{ what_is_data.intro }}</p>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if product.handle == 'co2-laser-resurfacing' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Fractional delivery creates microscopic treatment zones, leaving surrounding tissue intact for faster healing</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Triggers deep collagen remodelling that continues for 8–12 weeks after treatment</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Most clients achieve significant improvement in 1–3 sessions, depending on depth and concern</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Clinically proven technology used across dermatology and aesthetic medicine worldwide</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'dermaforce-rf-microneedling' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Combines microneedling and radiofrequency energy for dual-action skin remodelling</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Insulated needles protect the skin surface while delivering energy at precise depth</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Triggers an intensive collagen and elastin response that continues for months</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>DermaForce system allows individually calibrated depth and energy for each client</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'non-surgical-face-lift' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Focused electromagnetic energy contracts facial muscles up to thousands of times per session</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Non-invasive — no needles, no fillers, no anaesthetic required</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Rebuilds underlying muscle tone for a naturally lifted, firmer appearance</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Zero downtime — return to normal activities immediately after treatment</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'non-surgical-body-sculpting' or product.handle == 'power-sculpt-hifem' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>PowerSculpt uses targeted energy to disrupt fat cells, causing progressive reduction over weeks</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Non-invasive — no surgery, no anaesthetic, no needles</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Simultaneously firms and tightens skin in the treatment area</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Zero downtime — return to normal activities immediately after each session</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'radio-frequency' or product.handle == 'rf-skin-tightening' or product.handle == 'radio-frequency-skin-tightening' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Delivers controlled radiofrequency energy to heat the dermis and stimulate collagen contraction</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Non-invasive — no needles, no anaesthetic, no downtime</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Progressive collagen remodelling continues building for 3–6 months after treatment</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Suitable for face, neck, and body — settings adjusted for each treatment area</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'ipl-glo-facial' or product.handle == 'ipl-skin-rejuvenation' or product.handle == 'ipl' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Broad-spectrum intense pulsed light targets haemoglobin and melanin beneath the skin surface</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Particularly effective for rosacea — reduces persistent redness, visible veins, and flushing</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Adjustable cut-off filters allow precise wavelength selection for each skin concern</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Medical-grade system with individually calibrated parameters for safe, effective treatment</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'chemical-peels' -%}
+          <ul class="lsc-what-is__points">
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>MelanoPro system uses medical-grade TCA, lactic acid, and kojic acid to target melanin pathways</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Multi-acid formulation works at multiple depths for visible depigmentation</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Progressive cell turnover reveals clearer, more refined skin over days</span>
+            </li>
+            <li class="lsc-what-is__point">
+              <span class="lsc-what-is__point-icon">&#10003;</span>
+              <span>Professional-grade strength not available in over-the-counter products</span>
+            </li>
+          </ul>
+        {%- elsif product.handle == 'skin-tag-removal' or product.handle == 'mole-removal' or product.handle == 'milia-removal' or product.handle == 'thread-vein-removal' or product.handle == 'age-spot-removal' or product.handle == 'cherry-angioma-removal' or product.handle == 'spider-naevi-removal' or product.handle == 'xanthelasma-removal' or product.handle == 'wart-and-verruca-removal' or product.handle == 'seborrheic-wart-removal' -%}
+          {%- comment -%}Blemish pages: no bullet points — content is in the How We Treat It section{%- endcomment -%}
+        {%- elsif what_is_data.points != blank -%}
+          <ul class="lsc-what-is__points">
+            {%- for point in what_is_data.points -%}
+              <li class="lsc-what-is__point">
+                <span class="lsc-what-is__point-icon">&#10003;</span>
+                {%- if product.handle == 'laser-hair-removal' -%}
+                  <span>{{ point | replace: 'Every session is performed by Maxine, our Level 4 VTCT qualified laser specialist', 'Every session is performed by our qualified laser specialists using individually calibrated settings' | replace: 'Maxine', 'our specialist' }}</span>
+                {%- elsif product.handle == 'cosmetic-injections' -%}
+                  <span>{{ point | replace: 'James Scotton', 'Sangeeta Scotton' | replace: 'Dr James', 'Dr Sangeeta' }}</span>
+                {%- elsif product.handle == 'hydrofacial' -%}
+                  <span>{{ point | replace: 'Maxine Harish', 'our trained specialists' | replace: 'Maxine', 'our trained specialists' }}</span>
+                {%- else -%}
+                  <span>{{ point }}</span>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        {%- if what_is_data.closing != blank and product.handle != 'non-surgical-face-lift' and product.handle != 'non-surgical-body-sculpting' and product.handle != 'power-sculpt-hifem' and product.handle != 'radio-frequency' and product.handle != 'rf-skin-tightening' and product.handle != 'radio-frequency-skin-tightening' and product.handle != 'ipl-glo-facial' and product.handle != 'ipl-skin-rejuvenation' and product.handle != 'ipl' and product.handle != 'skin-tag-removal' and product.handle != 'mole-removal' and product.handle != 'milia-removal' and product.handle != 'thread-vein-removal' and product.handle != 'age-spot-removal' and product.handle != 'cherry-angioma-removal' and product.handle != 'spider-naevi-removal' and product.handle != 'xanthelasma-removal' and product.handle != 'wart-and-verruca-removal' and product.handle != 'seborrheic-wart-removal' -%}
+          {%- if product.handle == 'laser-hair-removal' -%}
+            <p class="lsc-what-is__closing">{{ what_is_data.closing | replace: 'Every session is performed by Maxine, our Level 4 VTCT qualified laser specialist', 'Every session is performed by our qualified laser specialists using individually calibrated settings' | replace: 'Maxine', 'our specialist' }}</p>
+          {%- elsif product.handle == 'cosmetic-injections' -%}
+            <p class="lsc-what-is__closing">{{ what_is_data.closing | replace: 'James Scotton', 'Sangeeta Scotton' | replace: 'Dr James', 'Dr Sangeeta' }}</p>
+          {%- elsif product.handle == 'hydrofacial' -%}
+            <p class="lsc-what-is__closing">{{ what_is_data.closing | replace: 'Maxine Harish', 'our trained specialists' | replace: 'Maxine', 'our trained specialists' }}</p>
+          {%- else -%}
+            <p class="lsc-what-is__closing">{{ what_is_data.closing }}</p>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if product.handle == 'co2-laser-resurfacing' -%}
+          <p class="lsc-what-is__intro" style="margin-top: 1.5rem;">While most commonly associated with facial rejuvenation, CO₂ resurfacing is equally effective on the neck, décolletage, hands, and body — particularly for stretch marks, surgical scarring, and sun-damaged skin.</p>
+        {%- elsif product.handle == 'dermaforce-rf-microneedling' -%}
+          <p class="lsc-what-is__intro" style="margin-top: 1.5rem;">While most commonly used on the face, RF microneedling is equally effective on the neck, décolletage, hands, and body for concerns including skin laxity, stretch marks, and scarring.</p>
+        {%- elsif section.settings.content_append != blank -%}
+          <p class="lsc-what-is__intro" style="margin-top: 1.5rem;">{{ section.settings.content_append }}</p>
+        {%- endif -%}
+      {%- else -%}
+        <div class="lsc-what-is__description rte">{{ fallback_body }}</div>
+      {%- endif -%}
+    </div>
+
+  </div>
+</section>
+{%- endunless -%}
+
+<style>
+  .lsc-what-is {
+    background: var(--warm-white, #FAF8F5);
+    padding: 5rem 6%;
+  }
+
+  .lsc-what-is__inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .lsc-what-is__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .lsc-what-is__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-what-is__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .lsc-what-is__intro {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #6B5E54);
+    line-height: 1.75;
+    margin: 0 0 2rem 0;
+  }
+
+  .lsc-what-is__points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .lsc-what-is__point {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #6B5E54);
+    line-height: 1.6;
+  }
+
+  .lsc-what-is__point-icon {
+    flex-shrink: 0;
+    color: var(--gold, #C4A97D);
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+  }
+
+  .lsc-what-is__closing {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dark-taupe, #6B5E54);
+    line-height: 1.75;
+    margin: 0;
+    border-left: 2px solid var(--gold, #C4A97D);
+    padding-left: 1.5rem;
+  }
+
+  .lsc-what-is__safety-note {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dark-taupe, #6B5E54);
+    line-height: 1.65;
+    margin: 0 0 2rem 0;
+    padding: 1rem 1.25rem;
+    background: rgba(196, 169, 125, 0.08);
+    border-left: 3px solid var(--gold, #C4A97D);
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .lsc-what-is__safety-icon {
+    flex-shrink: 0;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--gold, #C4A97D);
+    line-height: 1.4;
+  }
+
+  .lsc-what-is__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #6B5E54);
+    line-height: 1.75;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-what-is {
+      padding: 3.5rem 6%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "What Is This Treatment?",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "content_append",
+      "label": "Additional paragraph",
+      "info": "Text appended after the metafield content. Leave blank to show metafield only."
+    }
+  ],
+  "presets": [
+    {
+      "name": "What Is This Treatment?"
+    }
+  ]
+}
+{% endschema %}

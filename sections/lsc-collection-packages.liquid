@@ -1,0 +1,662 @@
+{%- comment -%}
+  LSC Collection Packages
+  Custom packages collection page replacing the default collection grid.
+  Only renders when collection.handle == 'bundles'.
+{%- endcomment -%}
+
+{%- comment -%} Build product image lookup via all_products {%- endcomment -%}
+{%- assign pkg1_product = all_products['sculpt-cleanse-glow-signature-package'] -%}
+{%- assign pkg2_product = all_products['the-tighten-clean-glow-package'] -%}
+{%- assign pkg3_product = all_products['the-lift-heal-glow-supreme-package'] -%}
+{%- assign pkg1_img = pkg1_product.featured_image -%}
+{%- assign pkg2_img = pkg2_product.featured_image -%}
+{%- assign pkg3_img = pkg3_product.featured_image -%}
+
+<style>
+  :root {
+    --gold: #C4A97D;
+    --gold-light: #D4BE9A;
+    --deep: #1A1714;
+    --charcoal: #2C2824;
+    --cream: #F7F3EE;
+    --warm-white: #FAF8F5;
+    --dark-taupe: #6B5E53;
+    --sand: #D6CEC4;
+    --taupe: #8B7E74;
+  }
+
+  .lsc-pkg__header {
+    background: var(--charcoal);
+    padding: 8rem 6% 3rem;
+    text-align: center;
+  }
+
+  .lsc-pkg__breadcrumb {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--taupe);
+    margin: 0 0 1.5rem;
+  }
+
+  .lsc-pkg__breadcrumb a {
+    color: var(--sand);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .lsc-pkg__breadcrumb a:hover {
+    color: var(--gold);
+  }
+
+  .lsc-pkg__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 1rem;
+  }
+
+  .lsc-pkg__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 0.8rem;
+  }
+
+  .lsc-pkg__intro {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--sand);
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .lsc-pkg__section {
+    background: var(--warm-white);
+    padding: 5rem 6%;
+  }
+
+  .lsc-pkg__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .lsc-pkg__card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .lsc-pkg__card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .lsc-pkg__card-overlay-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+  }
+
+  .lsc-pkg__card-cta {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+  }
+
+  .lsc-pkg__card-btn--view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background: var(--charcoal);
+    color: #ffffff;
+    border: 1px solid var(--charcoal);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .lsc-pkg__card-btn--view:hover {
+    background: transparent;
+    color: var(--charcoal);
+    transform: translateY(-1px);
+  }
+
+  .lsc-pkg__card--popular {
+    border-color: var(--gold);
+  }
+
+  .lsc-pkg__badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 0.4rem 1.2rem;
+    z-index: 2;
+    white-space: nowrap;
+  }
+
+  .lsc-pkg__card-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #e8e2da;
+  }
+
+  .lsc-pkg__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .lsc-pkg__card:hover .lsc-pkg__card-image {
+    transform: scale(1.03);
+  }
+
+  .lsc-pkg__card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e2da;
+  }
+
+  .lsc-pkg__card-placeholder svg {
+    width: 40px;
+    height: 40px;
+    stroke: #c4b9ab;
+    fill: none;
+    stroke-width: 1;
+  }
+
+  .lsc-pkg__card-content {
+    padding: 2rem 1.8rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+  }
+
+  .lsc-pkg__card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin: 0 0 0.6rem;
+    line-height: 1.3;
+  }
+
+  .lsc-pkg__card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--deep);
+    margin: 0 0 1.5rem;
+    line-height: 1.2;
+  }
+
+  .lsc-pkg__checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    text-align: left;
+  }
+
+  .lsc-pkg__checklist li {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.5;
+    padding: 0.35rem 0;
+    padding-left: 1.6rem;
+    position: relative;
+  }
+
+  .lsc-pkg__checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 10px;
+    height: 5px;
+    background: none;
+    border-left: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    transform: rotate(-45deg);
+  }
+
+  .lsc-pkg__card-btn {
+    display: block;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--charcoal);
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 0.6rem;
+  }
+
+  .lsc-pkg__card-btn:hover {
+    background: var(--charcoal);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .lsc-pkg__card--popular .lsc-pkg__card-btn--view {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #ffffff;
+  }
+
+  .lsc-pkg__card--popular .lsc-pkg__card-btn--view:hover {
+    background: transparent;
+    color: var(--gold);
+  }
+
+  .lsc-pkg__unsure {
+    background: var(--cream);
+    padding: 4.5rem 6%;
+    text-align: center;
+  }
+
+  .lsc-pkg__unsure-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 300;
+    color: var(--deep);
+    margin: 0 0 0.6rem;
+  }
+
+  .lsc-pkg__unsure-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+
+  .lsc-pkg__unsure-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2rem;
+    background: #25D366;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .lsc-pkg__unsure-btn:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+  }
+
+  .lsc-pkg__unsure-btn svg {
+    flex-shrink: 0;
+  }
+
+  .lsc-pkg__unsure-alt {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    margin: 1.5rem 0 0;
+    line-height: 1.6;
+  }
+
+  .lsc-pkg__unsure-alt a {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .lsc-pkg__unsure-alt a:hover {
+    color: var(--gold);
+  }
+
+  @media screen and (max-width: 900px) {
+    .lsc-pkg__grid {
+      grid-template-columns: 1fr 1fr;
+      max-width: 740px;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .lsc-pkg__header {
+      padding: 7rem 5% 2.5rem;
+    }
+
+    .lsc-pkg__section {
+      padding: 3.5rem 5%;
+    }
+
+    .lsc-pkg__grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+    }
+
+    .lsc-pkg__unsure {
+      padding: 3rem 5%;
+    }
+  }
+</style>
+
+<!-- ═══ DARK HEADER ═══ -->
+<section class="lsc-pkg__header">
+  <p class="lsc-pkg__breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; <span>Packages</span></p>
+  <p class="lsc-pkg__eyebrow">VALUE PACKAGES</p>
+  <h1 class="lsc-pkg__heading">Treatment Packages</h1>
+  <p class="lsc-pkg__intro">Premium treatment bundles designed to deliver maximum results in a single session — saving you time and money.</p>
+</section>
+
+<!-- ═══ PACKAGE CARDS ═══ -->
+<section class="lsc-pkg__section">
+  <div class="lsc-pkg__grid">
+
+    <!-- Package 1: Sculpt Cleanse & Glow -->
+    <div class="lsc-pkg__card">
+      <a href="/products/sculpt-cleanse-glow-signature-package" class="lsc-pkg__card-overlay-link" aria-label="View Sculpt Cleanse and Glow package details"></a>
+      <div class="lsc-pkg__card-image-wrap">
+        {%- if pkg1_img -%}
+          <img
+            class="lsc-pkg__card-image"
+            src="{{ pkg1_img | image_url: width: 700 }}"
+            alt="Sculpt Cleanse and Glow treatment package at Laser Skin Clinics Wolverhampton — PowerSculpt body sculpting, carbon facial, and red light therapy"
+            loading="lazy"
+            width="700"
+            height="525"
+          >
+        {%- else -%}
+          <div class="lsc-pkg__card-placeholder">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="lsc-pkg__card-content">
+        <h3 class="lsc-pkg__card-name">Sculpt Cleanse &amp; Glow</h3>
+        <p class="lsc-pkg__card-price">From &pound;99</p>
+
+        <ul class="lsc-pkg__checklist">
+          <li>PowerSculpt Body Sculpting</li>
+          <li>Carbon Facial</li>
+          <li>Red Light Therapy</li>
+        </ul>
+
+        <div class="lsc-pkg__card-cta">
+          <a href="/products/sculpt-cleanse-glow-signature-package" class="lsc-pkg__card-btn--view">View Package</a>
+          {%- capture pkg1_msg -%}Hi! I would like to book the Sculpt Cleanse and Glow package please.{%- endcapture -%}
+          <a
+            href="https://wa.me/447340485665?text={{ pkg1_msg | url_encode }}"
+            class="lsc-pkg__card-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-wa-type="package_book"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 2: Tighten Clean & Glow (MOST POPULAR) -->
+    <div class="lsc-pkg__card lsc-pkg__card--popular">
+      <div class="lsc-pkg__badge">Most Popular</div>
+      <a href="/products/the-tighten-clean-glow-package" class="lsc-pkg__card-overlay-link" aria-label="View Tighten Clean and Glow package details"></a>
+      <div class="lsc-pkg__card-image-wrap">
+        {%- if pkg2_img -%}
+          <img
+            class="lsc-pkg__card-image"
+            src="{{ pkg2_img | image_url: width: 700 }}"
+            alt="Tighten Clean and Glow treatment package at Laser Skin Clinics Wolverhampton — RF skin tightening, hydrofacial deep cleanse, and exosomes booster"
+            loading="lazy"
+            width="700"
+            height="525"
+          >
+        {%- else -%}
+          <div class="lsc-pkg__card-placeholder">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="lsc-pkg__card-content">
+        <h3 class="lsc-pkg__card-name">Tighten Clean &amp; Glow</h3>
+        <p class="lsc-pkg__card-price">From &pound;149</p>
+
+        <ul class="lsc-pkg__checklist">
+          <li>RF Skin Tightening</li>
+          <li>Hydrofacial Deep Cleanse</li>
+          <li>Exosomes Booster</li>
+        </ul>
+
+        <div class="lsc-pkg__card-cta">
+          <a href="/products/the-tighten-clean-glow-package" class="lsc-pkg__card-btn--view">View Package</a>
+          {%- capture pkg2_msg -%}Hi! I would like to book the Tighten Clean and Glow package please.{%- endcapture -%}
+          <a
+            href="https://wa.me/447340485665?text={{ pkg2_msg | url_encode }}"
+            class="lsc-pkg__card-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-wa-type="package_book"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 3: Lift Heal & Glow -->
+    <div class="lsc-pkg__card">
+      <a href="/products/the-lift-heal-glow-supreme-package" class="lsc-pkg__card-overlay-link" aria-label="View Lift Heal and Glow package details"></a>
+      <div class="lsc-pkg__card-image-wrap">
+        {%- if pkg3_img -%}
+          <img
+            class="lsc-pkg__card-image"
+            src="{{ pkg3_img | image_url: width: 700 }}"
+            alt="Lift Heal and Glow treatment package at Laser Skin Clinics Wolverhampton — RF skin tightening, IPL glow facial, and Celluma LED therapy"
+            loading="lazy"
+            width="700"
+            height="525"
+          >
+        {%- else -%}
+          <div class="lsc-pkg__card-placeholder">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="lsc-pkg__card-content">
+        <h3 class="lsc-pkg__card-name">Lift Heal &amp; Glow</h3>
+        <p class="lsc-pkg__card-price">From &pound;99</p>
+
+        <ul class="lsc-pkg__checklist">
+          <li>RF Skin Tightening</li>
+          <li>IPL Glow Facial</li>
+          <li>Celluma LED Therapy</li>
+        </ul>
+
+        <div class="lsc-pkg__card-cta">
+          <a href="/products/the-lift-heal-glow-supreme-package" class="lsc-pkg__card-btn--view">View Package</a>
+          {%- capture pkg3_msg -%}Hi! I would like to book the Lift Heal and Glow package please.{%- endcapture -%}
+          <a
+            href="https://wa.me/447340485665?text={{ pkg3_msg | url_encode }}"
+            class="lsc-pkg__card-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-wa-type="package_book"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ NOT SURE? CTA ═══ -->
+<section class="lsc-pkg__unsure">
+  <h2 class="lsc-pkg__unsure-heading">Not Sure Which Package?</h2>
+  <p class="lsc-pkg__unsure-desc">Chat with us and we'll help you choose the right package for your goals.</p>
+  {%- capture generic_msg -%}Hi! I'd like some advice on which treatment package is right for me.{%- endcapture -%}
+  <a
+    href="https://wa.me/447340485665?text={{ generic_msg | url_encode }}"
+    class="lsc-pkg__unsure-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-wa-type="not_sure"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Chat on WhatsApp
+  </a>
+  <p class="lsc-pkg__unsure-alt">Prefer email? Get in touch at <a href="mailto:info@laserskinclinics.co.uk">info@laserskinclinics.co.uk</a></p>
+</section>
+
+<!-- ═══ ItemList SCHEMA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Treatment Packages at Laser Skin Clinics Wolverhampton",
+  "description": "Premium treatment bundles combining body contouring, skin tightening, facials, and regenerative treatments from £99.",
+  "numberOfItems": 3,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Sculpt Cleanse & Glow",
+        "description": "PowerSculpt body sculpting, carbon facial, and red light therapy in a single session.",
+        "url": "{{ shop.url }}/products/sculpt-cleanse-glow-signature-package",
+        "offers": {
+          "@type": "Offer",
+          "price": "99",
+          "priceCurrency": "GBP"
+        },
+        "provider": {
+          "@type": "MedicalBusiness",
+          "name": "Laser Skin Clinics",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 Perton Farm Barns, Jenny Walkers Lane",
+            "addressLocality": "Wolverhampton",
+            "postalCode": "WV6 7HB",
+            "addressCountry": "GB"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Tighten Clean & Glow",
+        "description": "RF skin tightening, hydrofacial deep cleanse, and exosomes booster in a single session.",
+        "url": "{{ shop.url }}/products/the-tighten-clean-glow-package",
+        "offers": {
+          "@type": "Offer",
+          "price": "149",
+          "priceCurrency": "GBP"
+        },
+        "provider": {
+          "@type": "MedicalBusiness",
+          "name": "Laser Skin Clinics",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 Perton Farm Barns, Jenny Walkers Lane",
+            "addressLocality": "Wolverhampton",
+            "postalCode": "WV6 7HB",
+            "addressCountry": "GB"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Lift Heal & Glow",
+        "description": "RF skin tightening, IPL glow facial, and Celluma LED therapy in a single session.",
+        "url": "{{ shop.url }}/products/the-lift-heal-glow-supreme-package",
+        "offers": {
+          "@type": "Offer",
+          "price": "99",
+          "priceCurrency": "GBP"
+        },
+        "provider": {
+          "@type": "MedicalBusiness",
+          "name": "Laser Skin Clinics"
+        }
+      }
+    }
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "Packages Collection",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Packages Collection"
+    }
+  ]
+}
+{% endschema %}

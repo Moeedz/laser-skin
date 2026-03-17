@@ -1,0 +1,510 @@
+{% comment %}
+  Section: lsc-lhr-pricing.liquid
+  Block-based tabbed pricing — data lives in the template JSON, not metafields.
+  Each block is a pricing row. Rows are grouped into tabs via the `tab_group` setting.
+  Tab order is determined by first appearance in block_order.
+{% endcomment %}
+
+{%- liquid
+  assign tab_names = ''
+  assign tab_delimiter = '|||'
+
+  for block in section.blocks
+    if block.type == 'pricing_row'
+      assign grp = block.settings.tab_group
+      unless tab_names contains grp
+        if tab_names == ''
+          assign tab_names = grp
+        else
+          assign tab_names = tab_names | append: tab_delimiter | append: grp
+        endif
+      endunless
+    endif
+  endfor
+
+  assign tabs = tab_names | split: tab_delimiter
+-%}
+
+{%- if tabs.size > 0 -%}
+<section class="lsc-tabbed-pricing" id="pricing">
+  <div class="lsc-tabbed-pricing__header">
+    <span class="lsc-tabbed-pricing__eyebrow">{{ section.settings.eyebrow | default: 'PRICING' }}</span>
+    <h2 class="lsc-tabbed-pricing__heading">{{ section.settings.heading | default: 'Treatment Pricing' }}</h2>
+  </div>
+
+  {%- if tabs.size > 1 -%}
+  <div class="lsc-tabbed-pricing__tabs" role="tablist">
+    {%- for tab in tabs -%}
+    <button
+      class="lsc-tabbed-pricing__tab{% if forloop.first %} lsc-tabbed-pricing__tab--active{% endif %}"
+      role="tab"
+      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+      aria-controls="lhr-panel-{{ forloop.index }}"
+      data-tab-index="{{ forloop.index }}"
+    >
+      {{ tab }}
+    </button>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  {%- for tab in tabs -%}
+  <div
+    class="lsc-tabbed-pricing__panel{% if forloop.first %} lsc-tabbed-pricing__panel--active{% endif %}"
+    id="lhr-panel-{{ forloop.index }}"
+    role="tabpanel"
+    data-panel-index="{{ forloop.index }}"
+  >
+    <!-- Desktop Table -->
+    <div class="lsc-tabbed-pricing__table-wrap">
+      <table class="lsc-tabbed-pricing__table">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Single</th>
+            <th>Course of 6</th>
+            <th>Course of 8</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'pricing_row' and block.settings.tab_group == tab -%}
+            <tr {{ block.shopify_attributes }}>
+              <td class="lsc-tabbed-pricing__area-name">
+                {{ block.settings.area_name }}
+                {%- if block.settings.badge != blank -%}
+                  <span class="lsc-tabbed-pricing__badge">{{ block.settings.badge }}</span>
+                {%- endif -%}
+              </td>
+              <td>{{ block.settings.single_price | default: '—' }}</td>
+              <td>{{ block.settings.course_6_price | default: '—' }}</td>
+              <td>{{ block.settings.course_8_price | default: '—' }}</td>
+              <td class="lsc-tabbed-pricing__save">{{ block.settings.save_text }}</td>
+            </tr>
+            {%- endif -%}
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile Accordion -->
+    <div class="lsc-tabbed-pricing__mobile">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'pricing_row' and block.settings.tab_group == tab -%}
+        <details class="lsc-tabbed-pricing__accordion" {{ block.shopify_attributes }}>
+          <summary class="lsc-tabbed-pricing__accordion-header">
+            <span class="lsc-tabbed-pricing__accordion-name">
+              {{ block.settings.area_name }}
+              {%- if block.settings.badge != blank -%}
+                <span class="lsc-tabbed-pricing__badge">{{ block.settings.badge }}</span>
+              {%- endif -%}
+            </span>
+            <span class="lsc-tabbed-pricing__accordion-price">{{ block.settings.single_price | default: '—' }}</span>
+          </summary>
+          <div class="lsc-tabbed-pricing__accordion-body">
+            <div class="lsc-tabbed-pricing__accordion-row">
+              <span>Single Session</span>
+              <span>{{ block.settings.single_price | default: '—' }}</span>
+            </div>
+            {%- if block.settings.course_6_price != blank -%}
+            <div class="lsc-tabbed-pricing__accordion-row">
+              <span>Course of 6</span>
+              <span>{{ block.settings.course_6_price }}</span>
+            </div>
+            {%- endif -%}
+            {%- if block.settings.course_8_price != blank -%}
+            <div class="lsc-tabbed-pricing__accordion-row">
+              <span>Course of 8</span>
+              <span>{{ block.settings.course_8_price }}</span>
+            </div>
+            {%- endif -%}
+            {%- if block.settings.save_text != blank -%}
+            <div class="lsc-tabbed-pricing__accordion-row lsc-tabbed-pricing__accordion-row--save">
+              <span></span>
+              <span>{{ block.settings.save_text }}</span>
+            </div>
+            {%- endif -%}
+          </div>
+        </details>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endfor -%}
+
+  {%- if section.settings.note_1 != blank or section.settings.note_2 != blank or section.settings.note_3 != blank -%}
+  <div class="lsc-tabbed-pricing__notes">
+    {%- if section.settings.note_1 != blank -%}
+      <p class="lsc-tabbed-pricing__note">{{ section.settings.note_1 }}</p>
+    {%- endif -%}
+    {%- if section.settings.note_2 != blank -%}
+      <p class="lsc-tabbed-pricing__note">{{ section.settings.note_2 }}</p>
+    {%- endif -%}
+    {%- if section.settings.note_3 != blank -%}
+      <p class="lsc-tabbed-pricing__note">{{ section.settings.note_3 }}</p>
+    {%- endif -%}
+  </div>
+  {%- endif -%}
+
+  <div class="lsc-tabbed-pricing__finance-note">
+    <p>0% finance available — spread the cost with Klarna. Subject to eligibility.</p>
+  </div>
+</section>
+
+<style>
+  .lsc-tabbed-pricing {
+    background: var(--cream, #F7F3EE);
+    padding: 5rem 6%;
+  }
+
+  .lsc-tabbed-pricing__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .lsc-tabbed-pricing__eyebrow {
+    display: block;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--taupe, #8B7E74);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-tabbed-pricing__heading {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  .lsc-tabbed-pricing__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .lsc-tabbed-pricing__tab {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 1.4rem;
+    background: transparent;
+    color: var(--dark-taupe, #6B5E54);
+    border: 1px solid var(--sand, #D6CEC4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .lsc-tabbed-pricing__tab:hover {
+    border-color: var(--charcoal, #2C2C2C);
+    color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-tabbed-pricing__tab--active {
+    background: var(--charcoal, #2C2C2C);
+    color: var(--warm-white, #FAF8F5);
+    border-color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-tabbed-pricing__panel {
+    display: none;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lsc-tabbed-pricing__panel--active {
+    display: block;
+  }
+
+  .lsc-tabbed-pricing__table-wrap {
+    overflow-x: auto;
+  }
+
+  .lsc-tabbed-pricing__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+  }
+
+  .lsc-tabbed-pricing__table thead th {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--taupe, #8B7E74);
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--sand, #D6CEC4);
+  }
+
+  .lsc-tabbed-pricing__table tbody td {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    vertical-align: top;
+  }
+
+  .lsc-tabbed-pricing__area-name {
+    font-weight: 500;
+  }
+
+  .lsc-tabbed-pricing__badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--gold, #C4A87C);
+    color: #fff;
+    padding: 0.15rem 0.5rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .lsc-tabbed-pricing__save {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gold, #C4A87C);
+    white-space: nowrap;
+  }
+
+  .lsc-tabbed-pricing__klarna {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: var(--gold, #C4A87C);
+    margin-top: 0.2rem;
+  }
+
+  .lsc-tabbed-pricing__finance-note {
+    max-width: 600px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+  }
+
+  .lsc-tabbed-pricing__finance-note p {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--taupe, #8B7E74);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Mobile accordion */
+  .lsc-tabbed-pricing__mobile {
+    display: none;
+  }
+
+  .lsc-tabbed-pricing__accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .lsc-tabbed-pricing__accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--charcoal, #2C2C2C);
+    list-style: none;
+  }
+
+  .lsc-tabbed-pricing__accordion-header::-webkit-details-marker {
+    display: none;
+  }
+
+  .lsc-tabbed-pricing__accordion-price {
+    font-weight: 400;
+    color: var(--dark-taupe, #6B5E54);
+    font-size: 0.82rem;
+  }
+
+  .lsc-tabbed-pricing__accordion-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .lsc-tabbed-pricing__accordion-body {
+    padding: 0 0 1rem 0;
+  }
+
+  .lsc-tabbed-pricing__accordion-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.82rem;
+    color: var(--charcoal, #2C2C2C);
+    padding: 0.4rem 0;
+  }
+
+  .lsc-tabbed-pricing__accordion-row--save span:last-child {
+    font-weight: 500;
+    color: var(--gold, #C4A87C);
+  }
+
+  .lsc-tabbed-pricing__notes {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+  }
+
+  .lsc-tabbed-pricing__note {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--taupe, #8B7E74);
+    margin: 0.3rem 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-tabbed-pricing {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-tabbed-pricing__heading {
+      font-size: 1.8rem;
+    }
+
+    .lsc-tabbed-pricing__table-wrap {
+      display: none;
+    }
+
+    .lsc-tabbed-pricing__mobile {
+      display: block;
+    }
+
+    .lsc-tabbed-pricing__tabs {
+      gap: 0.3rem;
+    }
+
+    .lsc-tabbed-pricing__tab {
+      font-size: 0.7rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    var section = document.querySelector('.lsc-tabbed-pricing');
+    if (!section) return;
+    var tabs = section.querySelectorAll('.lsc-tabbed-pricing__tab');
+    var panels = section.querySelectorAll('.lsc-tabbed-pricing__panel');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var index = this.getAttribute('data-tab-index');
+        tabs.forEach(function(t) {
+          t.classList.remove('lsc-tabbed-pricing__tab--active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach(function(p) {
+          p.classList.remove('lsc-tabbed-pricing__panel--active');
+        });
+        this.classList.add('lsc-tabbed-pricing__tab--active');
+        this.setAttribute('aria-selected', 'true');
+        var panel = section.querySelector('[data-panel-index="' + index + '"]');
+        if (panel) panel.classList.add('lsc-tabbed-pricing__panel--active');
+      });
+    });
+  })();
+</script>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "LHR Pricing (Blocks)",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "PRICING"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Treatment Pricing"
+    },
+    {
+      "type": "text",
+      "id": "note_1",
+      "label": "Note 1"
+    },
+    {
+      "type": "text",
+      "id": "note_2",
+      "label": "Note 2"
+    },
+    {
+      "type": "text",
+      "id": "note_3",
+      "label": "Note 3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pricing_row",
+      "name": "Pricing Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_group",
+          "label": "Tab Group",
+          "info": "Rows with the same tab group appear under the same tab."
+        },
+        {
+          "type": "text",
+          "id": "area_name",
+          "label": "Area Name"
+        },
+        {
+          "type": "text",
+          "id": "single_price",
+          "label": "Single Session Price"
+        },
+        {
+          "type": "text",
+          "id": "course_6_price",
+          "label": "Course of 6 Price"
+        },
+        {
+          "type": "text",
+          "id": "course_8_price",
+          "label": "Course of 8 Price"
+        },
+        {
+          "type": "text",
+          "id": "save_text",
+          "label": "Save Text",
+          "info": "e.g. Save up to £40"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "info": "e.g. MOST POPULAR, BEST VALUE"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50
+}
+{% endschema %}

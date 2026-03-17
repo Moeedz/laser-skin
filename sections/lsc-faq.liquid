@@ -1,0 +1,391 @@
+{% comment %}
+  Section: lsc-faq.liquid
+  FAQ accordion with schema.org FAQPage markup.
+  Data source priority: blemish handle overrides > section blocks > product.metafields.custom.faqs (JSON).
+{% endcomment %}
+
+{%- liquid
+  assign blemish_handles = 'skin-tag-removal,mole-removal,milia-removal,thread-vein-removal,age-spot-removal,cherry-angioma-removal,spider-naevi-removal,xanthelasma-removal,wart-and-verruca-removal,seborrheic-wart-removal'
+  assign is_blemish_faq = false
+  if blemish_handles contains product.handle
+    assign is_blemish_faq = true
+  endif
+
+  assign use_blocks = false
+  if section.blocks.size > 0
+    assign use_blocks = true
+  endif
+
+  assign use_metafield = false
+  if use_blocks == false and product.metafields.custom.faqs != blank
+    assign meta_raw = product.metafields.custom.faqs | strip
+    if meta_raw contains '['
+      assign use_metafield = true
+    endif
+  endif
+-%}
+
+{%- comment -%}Build blemish FAQ data per handle using capture + split{%- endcomment -%}
+{%- if is_blemish_faq -%}
+  {%- if product.handle == 'skin-tag-removal' -%}
+    {%- capture blemish_faq_data -%}What is a skin tag?|~|A skin tag is a small, soft, harmless growth that hangs off the skin. They're very common and usually appear where skin rubs together — the neck, armpits, under the breasts, and around the groin.|||How are skin tags removed?|~|We use Short Wave Diathermy or CryoPen cryotherapy depending on the size and location. A fine probe targets the skin tag precisely, removing it in seconds.|||Does skin tag removal hurt?|~|You may feel a brief warm sensation or mild pinch. Most clients describe it as very tolerable. The treatment is over in seconds per skin tag.|||Will the skin tag grow back?|~|Once removed, the same skin tag will not grow back. However, if you're prone to skin tags, new ones may develop in other areas over time.|||Can you remove multiple skin tags in one session?|~|Yes. Multiple skin tags in the same area can be treated in a single session, making it very efficient.|||How long does it take to heal?|~|A small scab forms and falls away within 7–14 days. The area heals naturally with minimal scarring.|||Do I need a GP referral?|~|No. Skin tags are benign and do not require a GP referral. We assess suitability during your appointment.|||What payment options do you offer?|~|We accept card, cash, and bank transfer in clinic. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'mole-removal' -%}
+    {%- capture blemish_faq_data -%}Can any mole be removed?|~|We can only remove moles that have been confirmed as suitable for cosmetic removal. During your appointment, we'll assess the mole carefully. If you're unsure whether your mole has changed in size, shape, or colour, we'd suggest having it checked by your GP beforehand for peace of mind.|||How is the mole removed?|~|We use Short Wave Diathermy — a fine probe delivers a precise electrical current that cauterises and removes the mole tissue, sealing the blood supply.|||Will there be a scar?|~|Scarring is minimal. A small pink mark may remain initially but fades significantly over the following weeks. We provide detailed aftercare to help the area heal cleanly.|||Does mole removal hurt?|~|You may feel a brief warm sensation. The treatment is quick and well-tolerated. For larger moles, a topical numbing cream can be applied.|||How long does it take to heal?|~|A scab forms and falls away within 7–14 days. Full healing with minimal marking takes 4–8 weeks.|||Will the mole grow back?|~|In most cases, the mole is permanently removed in one session. Occasionally, deeper moles may require a follow-up treatment.|||Do I need a GP referral?|~|A GP referral isn't required, but if you have any concerns about a mole — particularly if it has changed recently — we'd suggest seeing your GP first. We also assess every mole during your appointment to confirm it's suitable for cosmetic removal.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'milia-removal' -%}
+    {%- capture blemish_faq_data -%}What are milia?|~|Milia are small, hard, white bumps caused by keratin trapped beneath the skin surface. They commonly appear around the eyes, cheeks, and forehead.|||Why can't I squeeze milia out at home?|~|Milia sit beneath the skin surface and are encased in a hard keratin shell. Squeezing can damage the skin, cause scarring, and won't remove the milia. Professional extraction is the safe and effective approach.|||How does Short Wave Diathermy remove milia?|~|A fine probe delivers a precise current that vaporises the keratin content trapped inside each milia. The contents are removed cleanly without damaging the surrounding skin.|||Does milia removal hurt?|~|Most clients describe a mild warm sensation. The treatment is very quick — each milia takes just seconds to treat.|||Will milia come back?|~|The treated milia will not return. However, if the underlying cause (such as rich skincare products or lack of exfoliation) is not addressed, new milia can form elsewhere.|||How many sessions will I need?|~|Most milia are fully removed in a single session. If you have a large number, we may recommend treating them across two sessions to allow the skin to heal between treatments.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'thread-vein-removal' -%}
+    {%- capture blemish_faq_data -%}What causes thread veins?|~|Thread veins are caused by weakened blood vessel walls. Contributing factors include sun exposure, ageing, genetics, pregnancy, and standing for long periods.|||How does Short Wave Diathermy treat thread veins?|~|A fine probe delivers a precise electrical current that cauterises and seals each individual blood vessel. The sealed vein is then reabsorbed by the body over the following weeks.|||Does thread vein removal hurt?|~|You may feel a mild warm pinprick sensation. The treatment is well-tolerated and each vein takes just seconds to treat.|||How many sessions will I need?|~|Many thread veins clear in a single session. Larger or more widespread areas may require 2–3 sessions spaced 4–6 weeks apart.|||Will thread veins come back?|~|Treated veins are permanently sealed. However, new thread veins can develop over time, particularly with continued sun exposure or genetic predisposition.|||Can you treat thread veins on the legs?|~|We primarily treat facial thread veins. Leg veins can be treated but they are more likely to recur. We'll advise on suitability during your appointment.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'age-spot-removal' -%}
+    {%- capture blemish_faq_data -%}What causes age spots?|~|Age spots are caused by years of sun exposure. UV light stimulates excess melanin production, which accumulates in flat brown patches on sun-exposed areas like the face, hands, and décolletage.|||What treatment method do you use for age spots?|~|We offer Short Wave Diathermy, CryoPen cryotherapy, or IPL depending on the size, number, and location of your age spots. Your practitioner will recommend the best approach during your appointment.|||What is the 'darkening' that happens after treatment?|~|After treatment, age spots temporarily darken — this is the treated pigment rising to the surface. It will naturally flake away over 7–14 days, revealing clearer skin.|||How many sessions will I need?|~|Most individual age spots clear in a single session. Widespread sun damage across a larger area may benefit from IPL, which typically requires 2–3 sessions.|||Will age spots come back?|~|Treated spots are permanently removed. However, new spots can develop with continued sun exposure. Daily SPF is essential to prevent new age spots forming.|||Does it hurt?|~|You may feel a brief warm sensation or light flick. The treatment is quick and well-tolerated.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'cherry-angioma-removal' -%}
+    {%- capture blemish_faq_data -%}What is a cherry angioma?|~|A cherry angioma is a small, bright red or purple spot caused by an overgrowth of blood vessels beneath the skin. They are extremely common and completely harmless.|||Why do cherry angiomas appear?|~|They become more common with age, typically appearing after 30. The exact cause is unknown but genetics and hormonal changes may play a role.|||How are cherry angiomas removed?|~|We use Short Wave Diathermy or CryoPen cryotherapy. The blood vessel cluster is precisely targeted and destroyed, causing the spot to fade and disappear.|||Does it hurt?|~|You may feel a brief warm sensation or mild pinch. Each cherry angioma takes just seconds to treat.|||Will cherry angiomas come back?|~|Once treated, the same cherry angioma will not return. However, new ones may develop elsewhere over time — this is normal and they can be treated as they appear.|||How long does it take to heal?|~|The treated spot may darken initially before healing over 7–14 days. Minimal aftercare is required.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'spider-naevi-removal' -%}
+    {%- capture blemish_faq_data -%}What is a spider naevus?|~|A spider naevus is a small cluster of blood vessels that radiate outward from a central point, resembling a spider's web. They commonly appear on the face, neck, and upper body.|||What causes spider naevi?|~|They can occur for no apparent reason, but are more common during pregnancy, in people taking the contraceptive pill, or with liver conditions. Most are harmless and cosmetic.|||How are spider naevi removed?|~|We use Short Wave Diathermy. A fine probe targets the central feeding vessel — once sealed, the radiating legs collapse and fade naturally.|||Does it hurt?|~|You may feel a brief warm pinprick at the central point. The treatment is very quick and well-tolerated.|||Will it come back?|~|Once the central vessel is sealed, the spider naevus is permanently removed. New ones may develop elsewhere over time.|||How long does it take to heal?|~|The treated area settles within 7–14 days as the sealed vessels are reabsorbed by the body.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'xanthelasma-removal' -%}
+    {%- capture blemish_faq_data -%}What is xanthelasma?|~|Xanthelasma are yellowish, flat deposits of cholesterol that form on or around the eyelids. They are harmless but do not resolve on their own.|||Are xanthelasma linked to high cholesterol?|~|They can be. We recommend having your cholesterol levels checked by your GP, as xanthelasma can sometimes indicate elevated cholesterol levels.|||How is xanthelasma removed?|~|We use Short Wave Diathermy. A fine probe delivers a controlled current that shrinks the fatty deposit. The delicate eye area requires precise technique.|||Will I need more than one session?|~|Larger deposits may require 2–3 sessions for full removal. Each eye is treated at separate appointments for safety and comfort.|||Does it hurt?|~|You may feel a mild warm sensation around the eye area. The treatment is carefully performed and well-tolerated.|||Will xanthelasma grow back?|~|They can recur over time, particularly if the underlying cholesterol issue is not addressed. Managing cholesterol levels reduces the chance of recurrence.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'wart-and-verruca-removal' -%}
+    {%- capture blemish_faq_data -%}What is CryoPen cryotherapy?|~|CryoPen is a precision cryotherapy device that delivers a controlled jet of nitrous oxide to freeze and destroy the wart tissue. It is the preferred professional method for viral warts and verrucas.|||Why haven't over-the-counter treatments worked on my wart?|~|Pharmacy treatments are often too weak to reach the root of stubborn or long-standing warts. Professional CryoPen treatment reaches deeper and destroys the wart tissue more effectively.|||How many sessions will I need?|~|Many warts are resolved in 1–2 sessions. Stubborn or deep verrucas may require 2–3 sessions spaced a few weeks apart.|||Does cryotherapy hurt?|~|You'll feel a cold stinging sensation for a few seconds during treatment. Mild discomfort may last briefly afterward but settles quickly.|||Is there any downtime?|~|Minimal. The area may blister slightly before the wart dries up and falls away over 7–14 days. You can continue normal activities.|||Are warts contagious?|~|Yes. Warts are caused by HPV and can spread through direct contact. Prompt treatment reduces the risk of spreading to other areas or other people.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- elsif product.handle == 'seborrheic-wart-removal' -%}
+    {%- capture blemish_faq_data -%}What is a seborrheic wart?|~|A seborrheic wart (seborrheic keratosis) is a raised, waxy, brown or black growth that commonly appears with age. Despite the name, it is not a true wart and is not caused by a virus.|||Are seborrheic warts dangerous?|~|No. They are completely benign. However, if you're unsure whether a growth is a seborrheic keratosis, we'll assess it during your appointment and may recommend GP clearance.|||How are seborrheic warts removed?|~|We use Short Wave Diathermy or CryoPen cryotherapy depending on the size and thickness. SWD is often preferred for thicker, more stubborn growths.|||Does it hurt?|~|You may feel a brief warm sensation or mild stinging. The treatment is quick and well-tolerated.|||Will it grow back?|~|Once removed, the same seborrheic wart will not return. However, new ones may develop elsewhere over time — this is a normal part of ageing.|||How long does it take to heal?|~|A scab forms and falls away naturally within 7–14 days, revealing smoother skin beneath.|||What payment options do you offer?|~|We accept card, cash, and bank transfer. The treatment is £75 per session.{%- endcapture -%}
+  {%- endif -%}
+  {%- assign blemish_faq_items = blemish_faq_data | split: '|||' -%}
+{%- endif -%}
+
+<style>
+  /* ── FAQ Section ── */
+  .lsc-faq {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .lsc-faq__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-faq__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-faq__title {
+    font-family: 'Cormorant Garamond', 'Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2824);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  /* ── Accordion Items ── */
+  .lsc-faq__item {
+    border-bottom: 1px solid var(--sand, #E8E0D5);
+  }
+
+  .lsc-faq__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.4rem 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Cormorant Garamond', 'Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2824);
+    line-height: 1.4;
+    gap: 1rem;
+  }
+
+  .lsc-faq__question:focus-visible {
+    outline: 2px solid var(--gold, #C4A97D);
+    outline-offset: 2px;
+  }
+
+  .lsc-faq__chevron {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .lsc-faq__chevron svg {
+    display: block;
+    width: 14px;
+    height: 14px;
+    stroke: var(--charcoal, #2C2824);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .lsc-faq__item.is-open .lsc-faq__chevron {
+    transform: rotate(180deg);
+  }
+
+  .lsc-faq__answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .lsc-faq__answer {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #8A7B6B);
+    padding: 0 0 1.4rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    .lsc-faq {
+      padding: 3rem 1.25rem;
+    }
+
+    .lsc-faq__title {
+      font-size: 1.6rem;
+    }
+
+    .lsc-faq__question {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
+<section class="lsc-faq" data-section-id="{{ section.id }}">
+  <div class="lsc-faq__header">
+    <p class="lsc-faq__eyebrow">COMMON QUESTIONS</p>
+    <h2 class="lsc-faq__title">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="lsc-faq__list" id="lsc-faq-list-{{ section.id }}">
+    {%- if is_blemish_faq -%}
+      {%- for item in blemish_faq_items -%}
+        {%- assign qa = item | split: '|~|' -%}
+        {%- assign faq_q = qa[0] | strip -%}
+        {%- assign faq_a = qa[1] | strip -%}
+        <div class="lsc-faq__item" data-faq-item>
+          <button
+            class="lsc-faq__question"
+            type="button"
+            aria-expanded="false"
+            aria-controls="lsc-faq-answer-b-{{ forloop.index }}-{{ section.id }}"
+          >
+            <span>{{ faq_q }}</span>
+            <span class="lsc-faq__chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
+          </button>
+          <div
+            class="lsc-faq__answer-wrapper"
+            id="lsc-faq-answer-b-{{ forloop.index }}-{{ section.id }}"
+            role="region"
+          >
+            <div class="lsc-faq__answer"><p>{{ faq_a }}</p></div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- elsif use_blocks -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'faq' -%}
+          <div class="lsc-faq__item" data-faq-item {{ block.shopify_attributes }}>
+            <button
+              class="lsc-faq__question"
+              type="button"
+              aria-expanded="false"
+              aria-controls="lsc-faq-answer-{{ block.id }}"
+            >
+              <span>{{ block.settings.question }}</span>
+              <span class="lsc-faq__chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="lsc-faq__answer-wrapper"
+              id="lsc-faq-answer-{{ block.id }}"
+              role="region"
+            >
+              <div class="lsc-faq__answer">{{ block.settings.answer }}</div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- elsif use_metafield -%}
+      {%- assign faq_items = product.metafields.custom.faqs.value -%}
+      {%- for faq in faq_items -%}
+        <div class="lsc-faq__item" data-faq-item>
+          <button
+            class="lsc-faq__question"
+            type="button"
+            aria-expanded="false"
+            aria-controls="lsc-faq-answer-meta-{{ forloop.index }}-{{ section.id }}"
+          >
+            <span>{{ faq.question }}</span>
+            <span class="lsc-faq__chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
+          </button>
+          <div
+            class="lsc-faq__answer-wrapper"
+            id="lsc-faq-answer-meta-{{ forloop.index }}-{{ section.id }}"
+            role="region"
+          >
+            <div class="lsc-faq__answer">{{ faq.answer }}</div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+<!-- FAQ Schema.org FAQPage structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- if is_blemish_faq -%}
+      {%- for item in blemish_faq_items -%}
+        {%- assign qa = item | split: '|~|' -%}
+        {%- assign faq_q = qa[0] | strip -%}
+        {%- assign faq_a = qa[1] | strip -%}
+        {
+          "@type": "Question",
+          "name": {{ faq_q | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ faq_a | json }}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    {%- elsif use_blocks -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'faq' -%}
+          {
+            "@type": "Question",
+            "name": {{ block.settings.question | json }},
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": {{ block.settings.answer | strip_html | json }}
+            }
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- elsif use_metafield -%}
+      {%- assign faq_items = product.metafields.custom.faqs.value -%}
+      {%- for faq in faq_items -%}
+        {
+          "@type": "Question",
+          "name": {{ faq.question | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ faq.answer | strip_html | json }}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+  ]
+}
+</script>
+
+<script>
+  (function () {
+    var container = document.getElementById('lsc-faq-list-{{ section.id }}');
+    if (!container) return;
+
+    container.addEventListener('click', function (e) {
+      var button = e.target.closest('.lsc-faq__question');
+      if (!button) return;
+
+      var item = button.closest('[data-faq-item]');
+      if (!item) return;
+
+      var isOpen = item.classList.contains('is-open');
+      var wrapper = item.querySelector('.lsc-faq__answer-wrapper');
+
+      /* Close all siblings */
+      var allItems = container.querySelectorAll('[data-faq-item]');
+      for (var i = 0; i < allItems.length; i++) {
+        var sibling = allItems[i];
+        if (sibling !== item && sibling.classList.contains('is-open')) {
+          sibling.classList.remove('is-open');
+          var sibBtn = sibling.querySelector('.lsc-faq__question');
+          var sibWrap = sibling.querySelector('.lsc-faq__answer-wrapper');
+          if (sibBtn) sibBtn.setAttribute('aria-expanded', 'false');
+          if (sibWrap) sibWrap.style.maxHeight = null;
+        }
+      }
+
+      /* Toggle current */
+      if (isOpen) {
+        item.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
+        wrapper.style.maxHeight = null;
+      } else {
+        item.classList.add('is-open');
+        button.setAttribute('aria-expanded', 'true');
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 50,
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "faq",
+          "settings": {
+            "question": "What should I expect during my first appointment?",
+            "answer": "<p>Your first visit includes a thorough consultation where we assess your skin, discuss your goals, and recommend a personalised treatment plan.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,284 @@
+{%- comment -%}
+  LSC Treatments Grid
+  Categorised treatment links for the homepage.
+  Shows 5 categories with individual treatment links + View All button.
+{%- endcomment -%}
+
+<section class="lsc-tgrid">
+  <div class="lsc-tgrid__inner">
+
+    <div class="lsc-tgrid__header">
+      <span class="lsc-tgrid__eyebrow">OUR EXPERTISE</span>
+      <h2 class="lsc-tgrid__heading">Treatments We Offer</h2>
+    </div>
+
+    <div class="lsc-tgrid__categories">
+
+      {%- comment -%} Laser Treatments {%- endcomment -%}
+      <div class="lsc-tgrid__category">
+        <h3 class="lsc-tgrid__cat-title">Laser Treatments</h3>
+        <ul class="lsc-tgrid__list">
+          <li><a href="/products/laser-hair-removal" class="lsc-tgrid__link">Laser Hair Removal <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/co2-laser-resurfacing" class="lsc-tgrid__link">CO₂ Laser Resurfacing <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/laser-tattoo-removal" class="lsc-tgrid__link">Laser Tattoo Removal <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/ipl-skin-rejuvenation" class="lsc-tgrid__link">IPL Skin Rejuvenation <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+        </ul>
+      </div>
+
+      {%- comment -%} Skin Treatments {%- endcomment -%}
+      <div class="lsc-tgrid__category">
+        <h3 class="lsc-tgrid__cat-title">Skin Treatments</h3>
+        <ul class="lsc-tgrid__list">
+          <li><a href="/products/hydrofacial" class="lsc-tgrid__link">Hydrofacial <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/dermaforce-rf-microneedling" class="lsc-tgrid__link">RF Microneedling <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/melanopro-chemical-peel" class="lsc-tgrid__link">MelanoPro Chemical Peel <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/rf-skin-tightening" class="lsc-tgrid__link">RF Skin Tightening <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+        </ul>
+      </div>
+
+      {%- comment -%} Regenerative {%- endcomment -%}
+      <div class="lsc-tgrid__category">
+        <h3 class="lsc-tgrid__cat-title">Regenerative</h3>
+        <ul class="lsc-tgrid__list">
+          <li><a href="/products/nctf-skin-booster" class="lsc-tgrid__link">NCTF Skin Booster <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/exosomes" class="lsc-tgrid__link">Exosomes <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/polynucleotides" class="lsc-tgrid__link">Polynucleotides <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+        </ul>
+      </div>
+
+      {%- comment -%} Body & Face {%- endcomment -%}
+      <div class="lsc-tgrid__category">
+        <h3 class="lsc-tgrid__cat-title">Body & Face</h3>
+        <ul class="lsc-tgrid__list">
+          <li><a href="/products/non-surgical-face-lift" class="lsc-tgrid__link">Non-Surgical Face Lift <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+          <li><a href="/products/non-surgical-body-sculpting" class="lsc-tgrid__link">Non-Surgical Body Sculpting <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+        </ul>
+      </div>
+
+      {%- comment -%} Medical {%- endcomment -%}
+      <div class="lsc-tgrid__category">
+        <h3 class="lsc-tgrid__cat-title">Medical</h3>
+        <ul class="lsc-tgrid__list">
+          <li><a href="/products/anti-wrinkle-injections" class="lsc-tgrid__link">Anti-Wrinkle Injections <span class="lsc-tgrid__arrow">&rarr;</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    {%- comment -%} Blemish Removal — standalone callout {%- endcomment -%}
+    <div class="lsc-tgrid__blemish">
+      <a href="/products/blemish-removal" class="lsc-tgrid__blemish-link">
+        <span class="lsc-tgrid__blemish-text">Blemish Removal — Skin Tags, Moles, Thread Veins & More</span>
+        <span class="lsc-tgrid__arrow">&rarr;</span>
+      </a>
+    </div>
+
+    <div class="lsc-tgrid__cta-wrap">
+      <a href="/collections/treatments" class="lsc-tgrid__cta">View All Treatments &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .lsc-tgrid {
+    background: var(--cream, #F7F3EE);
+    padding: 5rem 6%;
+  }
+
+  .lsc-tgrid__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .lsc-tgrid__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-tgrid__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.8rem;
+  }
+
+  .lsc-tgrid__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: var(--deep, #1A1714);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  /* ── Category grid ── */
+  .lsc-tgrid__categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 2.5rem;
+  }
+
+  .lsc-tgrid__category {
+    min-width: 0;
+  }
+
+  .lsc-tgrid__cat-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(196, 169, 125, 0.3);
+  }
+
+  .lsc-tgrid__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lsc-tgrid__list li {
+    margin-bottom: 0;
+  }
+
+  .lsc-tgrid__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--charcoal, #2C2C2C);
+    text-decoration: none;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+  }
+
+  .lsc-tgrid__link:hover {
+    color: var(--gold, #C4A97D);
+    padding-left: 0.3rem;
+  }
+
+  .lsc-tgrid__arrow {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: var(--gold, #C4A97D);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .lsc-tgrid__link:hover .lsc-tgrid__arrow {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  /* ── Blemish callout ── */
+  .lsc-tgrid__blemish {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .lsc-tgrid__blemish-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    border: 1px solid rgba(196, 169, 125, 0.3);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--charcoal, #2C2C2C);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .lsc-tgrid__blemish-link:hover {
+    border-color: var(--gold, #C4A97D);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .lsc-tgrid__blemish-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-tgrid__blemish-link .lsc-tgrid__arrow {
+    opacity: 1;
+    font-size: 1rem;
+  }
+
+  .lsc-tgrid__blemish-link:hover .lsc-tgrid__arrow {
+    transform: translateX(3px);
+  }
+
+  /* ── CTA button ── */
+  .lsc-tgrid__cta-wrap {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .lsc-tgrid__cta {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--gold, #C4A97D);
+    padding: 0.85rem 2.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+
+  .lsc-tgrid__cta:hover {
+    background: var(--charcoal, #2C2C2C);
+    transform: translateY(-1px);
+  }
+
+  /* ── Mobile ── */
+  @media screen and (max-width: 768px) {
+    .lsc-tgrid {
+      padding: 3.5rem 5%;
+    }
+
+    .lsc-tgrid__categories {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .lsc-tgrid__categories {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .lsc-tgrid__blemish-link {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Treatments Grid",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Treatments Grid"
+    }
+  ]
+}
+{% endschema %}

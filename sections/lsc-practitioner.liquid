@@ -1,0 +1,202 @@
+{% comment %}
+  LSC Practitioner Profile Section
+  Shows practitioner bio on product pages.
+  Determined by product.metafields.custom.practitioner or section setting fallback.
+  Values: "maxine", "scotton", or "none"/blank (hidden).
+{% endcomment %}
+
+{%- assign practitioner = product.metafields.custom.practitioner | default: section.settings.practitioner_type -%}
+
+{%- if practitioner == "maxine" or practitioner == "scotton" -%}
+
+<style>
+  .lsc-practitioner {
+    background: var(--cream, #F7F3EE);
+    padding: 5rem 6%;
+  }
+
+  .lsc-practitioner__grid {
+    display: grid;
+    grid-template-columns: 300px auto;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .lsc-practitioner__photo {
+    width: 100%;
+    height: 380px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+  .lsc-practitioner__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .lsc-practitioner__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+
+  .lsc-practitioner__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    margin: 0 0 0.4rem 0;
+    line-height: 1.2;
+  }
+
+  .lsc-practitioner__title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .lsc-practitioner__bio {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .lsc-practitioner__quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+    border-left: 2px solid var(--gold);
+  }
+
+  .lsc-practitioner__qualifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .lsc-practitioner__qual-tag {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--dark-taupe);
+    border: 1px solid var(--sand);
+    padding: 0.3rem 0.8rem;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-practitioner {
+      padding: 3rem 5%;
+    }
+
+    .lsc-practitioner__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .lsc-practitioner__photo {
+      width: 100%;
+      height: 260px;
+    }
+  }
+</style>
+
+<section class="lsc-practitioner">
+  <div class="lsc-practitioner__grid">
+    <div class="lsc-practitioner__photo">
+      {%- if practitioner == "maxine" -%}
+        <img src="{{ 'maxine.png' | asset_url }}" alt="Maxine Harish — Lead Practitioner" loading="lazy" width="600" height="760">
+      {%- elsif practitioner == "scotton" -%}
+        <img src="{{ 'dr-scotton.png' | asset_url }}" alt="Dr Sangeeta Scotton — Consultant Physician" loading="lazy" width="600" height="760">
+      {%- endif -%}
+    </div>
+
+    <div class="lsc-practitioner__content">
+      <p class="lsc-practitioner__eyebrow">YOUR PRACTITIONER</p>
+
+      {%- if practitioner == "maxine" -%}
+        <h2 class="lsc-practitioner__name">Maxine Harish</h2>
+        <p class="lsc-practitioner__title">Lead Practitioner & Clinic Director</p>
+
+        <p class="lsc-practitioner__bio">
+          With extensive training in advanced laser treatments and clinical aesthetics, Maxine brings a meticulous, safety-first approach to every treatment. As Clinic Director of Laser Skin Clinics, she combines deep technical knowledge with a genuine passion for helping clients achieve their skin goals. Every consultation is thorough, every treatment plan personalised, and every result held to the highest clinical standard.
+        </p>
+
+        <div class="lsc-practitioner__qualifications">
+          <span class="lsc-practitioner__qual-tag">Level 4 VTCT Laser & IPL</span>
+          <span class="lsc-practitioner__qual-tag">Level 4 IISHCA</span>
+          <span class="lsc-practitioner__qual-tag">Advanced Skin Science</span>
+          <span class="lsc-practitioner__qual-tag">Council Registered</span>
+          <span class="lsc-practitioner__qual-tag">Clinical Aesthetics</span>
+        </div>
+
+      {%- elsif practitioner == "scotton" -%}
+        <h2 class="lsc-practitioner__name">Dr Sangeeta Scotton</h2>
+        <p class="lsc-practitioner__title">Consultant Physician</p>
+
+        <blockquote class="lsc-practitioner__quote">
+          "I believe in a thorough, medically-led approach to aesthetics."
+        </blockquote>
+
+        <p class="lsc-practitioner__bio">
+          Dr Sangeeta Scotton is a highly experienced Consultant Physician who brings a rigorous, medically-led perspective to aesthetic treatments. With over 12 years of medical experience, including NHS consultancy, she ensures every treatment at Laser Skin Clinics meets the highest standards of clinical safety and efficacy. Her background in evidence-based medicine means clients can trust that their care is grounded in science.
+        </p>
+
+        <div class="lsc-practitioner__qualifications">
+          <span class="lsc-practitioner__qual-tag">MBBS</span>
+          <span class="lsc-practitioner__qual-tag">MRCP (UK)</span>
+          <span class="lsc-practitioner__qual-tag">BSc, MSc</span>
+          <span class="lsc-practitioner__qual-tag">NHS Consultant</span>
+          <span class="lsc-practitioner__qual-tag">Royal Society of Medicine</span>
+          <span class="lsc-practitioner__qual-tag">12 Years Medical Experience</span>
+        </div>
+
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Practitioner",
+  "settings": [
+    {
+      "type": "select",
+      "id": "practitioner_type",
+      "label": "Practitioner",
+      "options": [
+        { "value": "maxine", "label": "Maxine Harish" },
+        { "value": "scotton", "label": "Dr Sangeeta Scotton" },
+        { "value": "none", "label": "None (hidden)" }
+      ],
+      "default": "none",
+      "info": "Overridden by product metafield if set."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Practitioner"
+    }
+  ]
+}
+{% endschema %}

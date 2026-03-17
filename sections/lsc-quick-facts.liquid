@@ -1,0 +1,214 @@
+{%- comment -%}
+  LSC Quick Facts Strip
+  Shows key treatment details at a glance on product pages.
+  Data: product.metafields.custom.quick_facts_json OR section blocks.
+{%- endcomment -%}
+
+{%- liquid
+  assign facts = blank
+  assign has_metafield = false
+
+  if product.metafields.custom.quick_facts_json != blank
+    assign facts_json = product.metafields.custom.quick_facts_json | strip
+    if facts_json != '' and facts_json != 'null'
+      assign has_metafield = true
+    endif
+  endif
+
+  assign has_blocks = false
+  if section.blocks.size > 0
+    assign has_blocks = true
+  endif
+-%}
+
+{%- if has_metafield or has_blocks -%}
+<section
+  id="lsc-quick-facts-{{ section.id }}"
+  class="lsc-quick-facts"
+  data-section-id="{{ section.id }}"
+  data-section-type="lsc-quick-facts"
+>
+  <div class="lsc-quick-facts__inner">
+    {%- if has_blocks -%}
+      {%- for block in section.blocks -%}
+        <div
+          class="lsc-quick-facts__item{% if forloop.last %} lsc-quick-facts__item--last{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <span class="lsc-quick-facts__label">{{ block.settings.label }}</span>
+          <span class="lsc-quick-facts__value">{{ block.settings.value }}</span>
+        </div>
+      {%- endfor -%}
+    {%- elsif has_metafield -%}
+      {%- assign parsed_facts = product.metafields.custom.quick_facts_json.value -%}
+      {%- for fact in parsed_facts -%}
+        <div class="lsc-quick-facts__item{% if forloop.last %} lsc-quick-facts__item--last{% endif %}">
+          <span class="lsc-quick-facts__label">{{ fact.label }}</span>
+          <span class="lsc-quick-facts__value">{{ fact.value }}</span>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  /* =============================================
+     LSC Quick Facts Strip
+     ============================================= */
+
+  .lsc-quick-facts {
+    background: var(--warm-white, #FDFCFA);
+    padding: 3rem 6%;
+  }
+
+  .lsc-quick-facts__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* ---- Individual fact ---- */
+
+  .lsc-quick-facts__item {
+    text-align: center;
+    position: relative;
+    flex: 1 1 0;
+    padding: 0 1.5rem;
+  }
+
+  /* Vertical divider via ::after (not on last item) */
+  .lsc-quick-facts__item:not(.lsc-quick-facts__item--last)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background: var(--sand, #E2D8CC);
+  }
+
+  .lsc-quick-facts__label {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--taupe, #B8A99A);
+  }
+
+  .lsc-quick-facts__value {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin-top: 0.3rem;
+  }
+
+  /* ---- Tablet: 2x2 grid ---- */
+
+  @media screen and (max-width: 899px) {
+    .lsc-quick-facts__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 1rem;
+      justify-items: center;
+    }
+
+    .lsc-quick-facts__item {
+      padding: 0;
+    }
+
+    .lsc-quick-facts__item::after {
+      display: none !important;
+    }
+  }
+
+  /* ---- Mobile: 2 columns, dividers hidden ---- */
+
+  @media screen and (max-width: 599px) {
+    .lsc-quick-facts {
+      padding: 2rem 6%;
+    }
+
+    .lsc-quick-facts__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 0.5rem;
+    }
+
+    .lsc-quick-facts__item::after {
+      display: none !important;
+    }
+  }
+</style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Quick Facts",
+  "tag": "section",
+  "class": "lsc-section-quick-facts",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "fact",
+      "name": "Fact",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Session Time"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "30-60 min"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Quick Facts",
+      "blocks": [
+        {
+          "type": "fact",
+          "settings": {
+            "label": "Session Time",
+            "value": "30-60 min"
+          }
+        },
+        {
+          "type": "fact",
+          "settings": {
+            "label": "Sessions",
+            "value": "1-3"
+          }
+        },
+        {
+          "type": "fact",
+          "settings": {
+            "label": "Downtime",
+            "value": "5-7 days"
+          }
+        },
+        {
+          "type": "fact",
+          "settings": {
+            "label": "Results",
+            "value": "4-6 weeks"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

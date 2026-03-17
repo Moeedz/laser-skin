@@ -1,0 +1,435 @@
+{% comment %}
+  LSC Tabbed Pricing Section
+  Reads pricing data from product.metafields.custom.pricing_structure (JSON).
+  Expected structure:
+  {
+    "tabs": [
+      {
+        "name": "Tab Name",
+        "areas": [
+          {
+            "name": "Area Name",
+            "single": "£50",
+            "course_6": "£250",
+            "course_8": "£300",
+            "save": "Save £50",
+            "badge": "Popular",
+            "description": "Optional description",
+            "category": "Optional category"
+          }
+        ]
+      }
+    ],
+    "notes": ["Note 1", "Note 2"]
+  }
+{% endcomment %}
+
+{%- assign pricing_raw = product.metafields.custom.pricing_structure -%}
+
+{%- if pricing_raw != blank -%}
+{%- if pricing_raw.tabs -%}
+  {%- assign pricing_data = pricing_raw -%}
+{%- else -%}
+  {%- assign pricing_data = pricing_raw | parse_json -%}
+{%- endif -%}
+
+<section class="lsc-tabbed-pricing" id="pricing">
+  <div class="lsc-tabbed-pricing__header">
+    <span class="lsc-tabbed-pricing__eyebrow">PRICING</span>
+    <h2 class="lsc-tabbed-pricing__heading">Treatment Pricing</h2>
+  </div>
+
+  {%- if pricing_data.tabs.size > 1 -%}
+  <!-- Tab Navigation -->
+  <div class="lsc-tabbed-pricing__tabs" role="tablist">
+    {%- for tab in pricing_data.tabs -%}
+    <button
+      class="lsc-tabbed-pricing__tab{% if forloop.first %} lsc-tabbed-pricing__tab--active{% endif %}"
+      role="tab"
+      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+      aria-controls="pricing-panel-{{ forloop.index }}"
+      data-tab-index="{{ forloop.index }}"
+    >
+      {{ tab.name }}
+    </button>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  <!-- Tab Panels -->
+  {%- for tab in pricing_data.tabs -%}
+  <div
+    class="lsc-tabbed-pricing__panel{% if forloop.first %} lsc-tabbed-pricing__panel--active{% endif %}"
+    id="pricing-panel-{{ forloop.index }}"
+    role="tabpanel"
+    data-panel-index="{{ forloop.index }}"
+  >
+    <!-- Desktop Table -->
+    <div class="lsc-tabbed-pricing__table-wrap">
+      <table class="lsc-tabbed-pricing__table">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Single</th>
+            <th>Course of 6</th>
+            <th>Course of 8</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for area in tab.areas -%}
+          <tr>
+            <td class="lsc-tabbed-pricing__area-name">
+              {{ area.name }}
+              {%- if area.badge != blank -%}
+                <span class="lsc-tabbed-pricing__badge">{{ area.badge }}</span>
+              {%- endif -%}
+              {%- if area.description != blank -%}
+                <span class="lsc-tabbed-pricing__area-desc">{{ area.description }}</span>
+              {%- endif -%}
+            </td>
+            <td>{{ area.single | default: "—" }}</td>
+            <td>{{ area.course_6 | default: "—" }}</td>
+            <td>{{ area.course_8 | default: "—" }}</td>
+            <td class="lsc-tabbed-pricing__save">{{ area.save }}</td>
+          </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile Accordion -->
+    <div class="lsc-tabbed-pricing__mobile">
+      {%- for area in tab.areas -%}
+      <details class="lsc-tabbed-pricing__accordion">
+        <summary class="lsc-tabbed-pricing__accordion-header">
+          <span class="lsc-tabbed-pricing__accordion-name">
+            {{ area.name }}
+            {%- if area.badge != blank -%}
+              <span class="lsc-tabbed-pricing__badge">{{ area.badge }}</span>
+            {%- endif -%}
+          </span>
+          <span class="lsc-tabbed-pricing__accordion-price">{{ area.single | default: "—" }}</span>
+        </summary>
+        <div class="lsc-tabbed-pricing__accordion-body">
+          {%- if area.description != blank -%}
+            <p class="lsc-tabbed-pricing__accordion-desc">{{ area.description }}</p>
+          {%- endif -%}
+          <div class="lsc-tabbed-pricing__accordion-row">
+            <span>Single Session</span>
+            <span>{{ area.single | default: "—" }}</span>
+          </div>
+          {%- if area.course_6 != blank -%}
+          <div class="lsc-tabbed-pricing__accordion-row">
+            <span>Course of 6</span>
+            <span>{{ area.course_6 }}</span>
+          </div>
+          {%- endif -%}
+          {%- if area.course_8 != blank -%}
+          <div class="lsc-tabbed-pricing__accordion-row">
+            <span>Course of 8</span>
+            <span>{{ area.course_8 }}</span>
+          </div>
+          {%- endif -%}
+          {%- if area.save != blank -%}
+          <div class="lsc-tabbed-pricing__accordion-row lsc-tabbed-pricing__accordion-row--save">
+            <span></span>
+            <span>{{ area.save }}</span>
+          </div>
+          {%- endif -%}
+        </div>
+      </details>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endfor -%}
+
+  {%- if pricing_data.notes.size > 0 -%}
+  <div class="lsc-tabbed-pricing__notes">
+    {%- for note in pricing_data.notes -%}
+      <p class="lsc-tabbed-pricing__note">{{ note }}</p>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+</section>
+
+<style>
+  .lsc-tabbed-pricing {
+    background: var(--cream, #F7F3EE);
+    padding: 5rem 6%;
+  }
+
+  .lsc-tabbed-pricing__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .lsc-tabbed-pricing__eyebrow {
+    display: block;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--taupe, #8B7E74);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-tabbed-pricing__heading {
+    font-family: var(--font-heading, 'Cormorant Garamond', serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  .lsc-tabbed-pricing__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .lsc-tabbed-pricing__tab {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 1.4rem;
+    background: transparent;
+    color: var(--dark-taupe, #6B5E54);
+    border: 1px solid var(--sand, #D6CEC4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .lsc-tabbed-pricing__tab:hover {
+    border-color: var(--charcoal, #2C2C2C);
+    color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-tabbed-pricing__tab--active {
+    background: var(--charcoal, #2C2C2C);
+    color: var(--warm-white, #FAF8F5);
+    border-color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-tabbed-pricing__panel {
+    display: none;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lsc-tabbed-pricing__panel--active {
+    display: block;
+  }
+
+  .lsc-tabbed-pricing__table-wrap {
+    overflow-x: auto;
+  }
+
+  .lsc-tabbed-pricing__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+  }
+
+  .lsc-tabbed-pricing__table thead th {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--taupe, #8B7E74);
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--sand, #D6CEC4);
+  }
+
+  .lsc-tabbed-pricing__table tbody td {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    vertical-align: top;
+  }
+
+  .lsc-tabbed-pricing__area-name {
+    font-weight: 500;
+  }
+
+  .lsc-tabbed-pricing__area-desc {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--taupe, #8B7E74);
+    margin-top: 0.2rem;
+  }
+
+  .lsc-tabbed-pricing__badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--gold, #C4A87C);
+    color: #fff;
+    padding: 0.15rem 0.5rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .lsc-tabbed-pricing__save {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gold, #C4A87C);
+    white-space: nowrap;
+  }
+
+  /* Mobile accordion */
+  .lsc-tabbed-pricing__mobile {
+    display: none;
+  }
+
+  .lsc-tabbed-pricing__accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .lsc-tabbed-pricing__accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--charcoal, #2C2C2C);
+    list-style: none;
+  }
+
+  .lsc-tabbed-pricing__accordion-header::-webkit-details-marker {
+    display: none;
+  }
+
+  .lsc-tabbed-pricing__accordion-price {
+    font-weight: 400;
+    color: var(--dark-taupe, #6B5E54);
+    font-size: 0.82rem;
+  }
+
+  .lsc-tabbed-pricing__accordion-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .lsc-tabbed-pricing__accordion-body {
+    padding: 0 0 1rem 0;
+  }
+
+  .lsc-tabbed-pricing__accordion-desc {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--taupe, #8B7E74);
+    margin: 0 0 0.8rem 0;
+  }
+
+  .lsc-tabbed-pricing__accordion-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.82rem;
+    color: var(--charcoal, #2C2C2C);
+    padding: 0.4rem 0;
+  }
+
+  .lsc-tabbed-pricing__accordion-row--save span:last-child {
+    font-weight: 500;
+    color: var(--gold, #C4A87C);
+  }
+
+  .lsc-tabbed-pricing__notes {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+  }
+
+  .lsc-tabbed-pricing__note {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--taupe, #8B7E74);
+    margin: 0.3rem 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-tabbed-pricing {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-tabbed-pricing__heading {
+      font-size: 1.8rem;
+    }
+
+    .lsc-tabbed-pricing__table-wrap {
+      display: none;
+    }
+
+    .lsc-tabbed-pricing__mobile {
+      display: block;
+    }
+
+    .lsc-tabbed-pricing__tabs {
+      gap: 0.3rem;
+    }
+
+    .lsc-tabbed-pricing__tab {
+      font-size: 0.7rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    var section = document.querySelector('.lsc-tabbed-pricing');
+    if (!section) return;
+    var tabs = section.querySelectorAll('.lsc-tabbed-pricing__tab');
+    var panels = section.querySelectorAll('.lsc-tabbed-pricing__panel');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var index = this.getAttribute('data-tab-index');
+        tabs.forEach(function(t) {
+          t.classList.remove('lsc-tabbed-pricing__tab--active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach(function(p) {
+          p.classList.remove('lsc-tabbed-pricing__panel--active');
+        });
+        this.classList.add('lsc-tabbed-pricing__tab--active');
+        this.setAttribute('aria-selected', 'true');
+        var panel = section.querySelector('[data-panel-index="' + index + '"]');
+        if (panel) panel.classList.add('lsc-tabbed-pricing__panel--active');
+      });
+    });
+  })();
+</script>
+
+{%- else -%}
+  {% comment %} No pricing data — section renders nothing {% endcomment %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Tabbed Pricing",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Tabbed Pricing"
+    }
+  ]
+}
+{% endschema %}

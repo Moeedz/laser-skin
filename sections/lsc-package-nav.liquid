@@ -1,0 +1,183 @@
+{%- comment -%}
+  LSC Package Navigation
+  Shows the other 2 bundle packages as clickable cards.
+  Auto-excludes the current product.
+{%- endcomment -%}
+
+{%- assign package_handles = 'sculpt-cleanse-glow-signature-package,the-tighten-clean-glow-package,the-lift-heal-glow-supreme-package' -%}
+{%- assign is_package = false -%}
+{%- if package_handles contains product.handle -%}
+  {%- assign is_package = true -%}
+{%- endif -%}
+
+{%- if is_package -%}
+<section class="lsc-package-nav">
+  <div class="lsc-package-nav__inner">
+    <div class="lsc-package-nav__header">
+      <span class="lsc-package-nav__eyebrow">EXPLORE</span>
+      <h2 class="lsc-package-nav__heading">Browse Our Other Packages</h2>
+    </div>
+
+    <div class="lsc-package-nav__cards">
+      {%- unless product.handle == 'sculpt-cleanse-glow-signature-package' -%}
+        <a href="/products/sculpt-cleanse-glow-signature-package" class="lsc-package-nav__card">
+          <div class="lsc-package-nav__card-content">
+            <h3 class="lsc-package-nav__card-title">Sculpt, Cleanse & Glow</h3>
+            <p class="lsc-package-nav__card-treatments">PowerSculpt + Carbon Facial + Red Light Therapy</p>
+            <span class="lsc-package-nav__card-price">£99</span>
+          </div>
+          <span class="lsc-package-nav__card-arrow">&rarr;</span>
+        </a>
+      {%- endunless -%}
+
+      {%- unless product.handle == 'the-tighten-clean-glow-package' -%}
+        <a href="/products/the-tighten-clean-glow-package" class="lsc-package-nav__card">
+          <div class="lsc-package-nav__card-content">
+            <h3 class="lsc-package-nav__card-title">Tighten, Clean & Glow</h3>
+            <p class="lsc-package-nav__card-treatments">RF Tightening + Hydrofacial + Exosomes</p>
+            <span class="lsc-package-nav__card-price">£149</span>
+          </div>
+          <span class="lsc-package-nav__card-arrow">&rarr;</span>
+        </a>
+      {%- endunless -%}
+
+      {%- unless product.handle == 'the-lift-heal-glow-supreme-package' -%}
+        <a href="/products/the-lift-heal-glow-supreme-package" class="lsc-package-nav__card">
+          <div class="lsc-package-nav__card-content">
+            <h3 class="lsc-package-nav__card-title">Lift, Heal & Glow</h3>
+            <p class="lsc-package-nav__card-treatments">RF Tightening + IPL Glow Facial + LED Therapy</p>
+            <span class="lsc-package-nav__card-price">£99</span>
+          </div>
+          <span class="lsc-package-nav__card-arrow">&rarr;</span>
+        </a>
+      {%- endunless -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+<style>
+  .lsc-package-nav {
+    background: var(--warm-white, #FAF8F5);
+    padding: 4rem 6%;
+  }
+
+  .lsc-package-nav__inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .lsc-package-nav__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .lsc-package-nav__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-package-nav__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  .lsc-package-nav__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .lsc-package-nav__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .lsc-package-nav__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--gold, #C4A97D);
+  }
+
+  .lsc-package-nav__card-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lsc-package-nav__card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0 0 0.3rem 0;
+  }
+
+  .lsc-package-nav__card-treatments {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #6B5E54);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+  }
+
+  .lsc-package-nav__card-price {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gold, #C4A97D);
+  }
+
+  .lsc-package-nav__card-arrow {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    color: var(--gold, #C4A97D);
+    transition: transform 0.25s ease;
+  }
+
+  .lsc-package-nav__card:hover .lsc-package-nav__card-arrow {
+    transform: translateX(3px);
+  }
+
+  @media screen and (max-width: 580px) {
+    .lsc-package-nav {
+      padding: 3rem 5%;
+    }
+
+    .lsc-package-nav__cards {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Package Navigation",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Package Navigation"
+    }
+  ]
+}
+{% endschema %}

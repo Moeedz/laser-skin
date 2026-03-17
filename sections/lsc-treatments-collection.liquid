@@ -1,0 +1,564 @@
+{% comment %}
+  LSC Treatments Collection Section
+  Full treatments page with grouped sections, jump links, and staggered scroll reveal.
+{% endcomment %}
+
+{{ 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap' | stylesheet_tag }}
+
+<style>
+  :root {
+    --gold: #C4A97D;
+    --gold-light: #D4BE9A;
+    --deep: #1A1714;
+    --charcoal: #2C2824;
+    --cream: #F7F3EE;
+    --warm-white: #FAF8F5;
+    --dark-taupe: #6B5E53;
+    --sand: #D6CEC4;
+  }
+
+  /* ── Dark Header ── */
+  .lsc-tc__header {
+    background: var(--charcoal);
+    padding: 8rem 6% 3rem;
+    text-align: center;
+  }
+
+  .lsc-tc__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 1rem;
+  }
+
+  .lsc-tc__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 2.2rem;
+  }
+
+  /* ── Jump Links ── */
+  .lsc-tc__jump-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    padding-bottom: 0.5rem;
+  }
+
+  .lsc-tc__jump-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.73rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .lsc-tc__jump-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  /* ── Treatment Group ── */
+  .lsc-tc__group {
+    padding: 5rem 6%;
+    scroll-margin-top: 2rem;
+  }
+
+  .lsc-tc__group--warm-white {
+    background: var(--warm-white);
+  }
+
+  .lsc-tc__group--cream {
+    background: var(--cream);
+  }
+
+  .lsc-tc__group-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .lsc-tc__group-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .lsc-tc__group-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 0.6rem;
+  }
+
+  .lsc-tc__group-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  /* ── Card Grid ── */
+  .lsc-tc__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ── Treatment Card ── */
+  .lsc-tc__card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .lsc-tc__card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .lsc-tc__card-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #e8e2da;
+  }
+
+  .lsc-tc__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .lsc-tc__card:hover .lsc-tc__card-image {
+    transform: scale(1.03);
+  }
+
+  .lsc-tc__card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e2da;
+  }
+
+  .lsc-tc__card-placeholder svg {
+    width: 40px;
+    height: 40px;
+    stroke: #c4b9ab;
+    fill: none;
+    stroke-width: 1;
+  }
+
+  .lsc-tc__card-content {
+    padding: 1.5rem 1.5rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .lsc-tc__card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+  }
+
+  .lsc-tc__card-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.55;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .lsc-tc__card-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 1rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+
+  .lsc-tc__card:hover .lsc-tc__card-link {
+    color: var(--deep);
+  }
+
+  /* ── Staggered Scroll Reveal ── */
+  @keyframes lscTcReveal {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Cards only hidden if JS is running (progressive enhancement) */
+  .lsc-tc__card.lsc-tc--ready {
+    opacity: 0;
+  }
+
+  .lsc-tc__card.lsc-tc--visible {
+    animation: lscTcReveal 0.6s ease-out forwards;
+  }
+
+  /* ── Responsive: Tablet ── */
+  @media screen and (max-width: 900px) {
+    .lsc-tc__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lsc-tc__group {
+      padding: 4rem 6%;
+    }
+  }
+
+  /* ── Responsive: Mobile ── */
+  @media screen and (max-width: 580px) {
+    .lsc-tc__header {
+      padding: 7rem 5% 2.5rem;
+    }
+
+    .lsc-tc__grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    .lsc-tc__group {
+      padding: 3rem 5%;
+    }
+
+    .lsc-tc__jump-nav {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 0.8rem;
+    }
+
+    .lsc-tc__jump-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .lsc-tc__jump-link {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+</style>
+
+<!-- ════════════════════════════════════════════════
+     DARK HEADER + JUMP LINKS
+     ════════════════════════════════════════════════ -->
+<section class="lsc-tc__header">
+  <p class="lsc-tc__eyebrow">ALL TREATMENTS</p>
+  <h1 class="lsc-tc__heading">Our Treatments</h1>
+
+  <nav class="lsc-tc__jump-nav" aria-label="Treatment categories">
+    <a href="#laser" class="lsc-tc__jump-link">Laser</a>
+    <a href="#injectables" class="lsc-tc__jump-link">Injectables</a>
+    <a href="#skin-renewal" class="lsc-tc__jump-link">Skin Renewal</a>
+    <a href="#body" class="lsc-tc__jump-link">Body</a>
+  </nav>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     GROUP 1 — LASER TREATMENTS
+     ════════════════════════════════════════════════ -->
+<section class="lsc-tc__group lsc-tc__group--warm-white" id="laser">
+  <div class="lsc-tc__group-inner">
+    <div class="lsc-tc__group-header">
+      <p class="lsc-tc__group-eyebrow">LASER TREATMENTS</p>
+      <h2 class="lsc-tc__group-title">Advanced Laser Treatments</h2>
+    </div>
+
+    <div class="lsc-tc__grid">
+      {%- assign laser_names = 'Laser Hair Removal,CO₂ Laser Resurfacing,Laser Tattoo Removal,IPL' | split: ',' -%}
+      {%- assign laser_urls = '/products/laser-hair-removal,/products/co2-laser-resurfacing,/products/laser-tattoo-removal,/products/ipl' | split: ',' -%}
+      {%- assign laser_descs = 'Permanent hair reduction using medical-grade diode laser technology for all skin types.,Fractional CO₂ laser for deep resurfacing — targets scars&#44; fine lines and uneven texture.,Safe&#44; effective laser removal for unwanted tattoos with minimal scarring.,Intense Pulsed Light therapy for pigmentation&#44; redness and sun damage.' | split: ',' -%}
+
+      {%- for i in (0..3) -%}
+        <a href="{{ laser_urls[i] }}" class="lsc-tc__card" style="animation-delay: {{ forloop.index | times: 0.1 }}s;">
+          <div class="lsc-tc__card-image-wrap">
+            {%- assign img_handle = laser_urls[i] | split: '/products/' | last -%}
+            {%- assign product_ref = all_products[img_handle] -%}
+            {%- if product_ref and product_ref.featured_image -%}
+              <img
+                class="lsc-tc__card-image"
+                src="{{ product_ref.featured_image | image_url: width: 600 }}"
+                alt="{{ laser_names[i] | escape }}"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+            {%- else -%}
+              <div class="lsc-tc__card-placeholder">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="lsc-tc__card-content">
+            <h3 class="lsc-tc__card-name">{{ laser_names[i] }}</h3>
+            <p class="lsc-tc__card-desc">{{ laser_descs[i] | replace: '&#44;', ',' }}</p>
+            <span class="lsc-tc__card-link">Learn More &rarr;</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     GROUP 2 — INJECTABLES
+     ════════════════════════════════════════════════ -->
+<section class="lsc-tc__group lsc-tc__group--cream" id="injectables">
+  <div class="lsc-tc__group-inner">
+    <div class="lsc-tc__group-header">
+      <p class="lsc-tc__group-eyebrow">INJECTABLE TREATMENTS</p>
+      <h2 class="lsc-tc__group-title">Injectable Treatments</h2>
+    </div>
+
+    <div class="lsc-tc__grid">
+      {%- assign inj_names = 'Anti-Wrinkle Injections,Polynucleotides' | split: ',' -%}
+      {%- assign inj_urls = '/products/anti-wrinkle-injections,/products/polynucleotides' | split: ',' -%}
+      {%- assign inj_descs = 'Physician-administered wrinkle-relaxing injections for a naturally refreshed appearance.,Next-generation bio-stimulating treatment that regenerates and repairs skin at a cellular level.' | split: ',' -%}
+
+      {%- for i in (0..1) -%}
+        <a href="{{ inj_urls[i] }}" class="lsc-tc__card" style="animation-delay: {{ forloop.index | times: 0.1 }}s;">
+          <div class="lsc-tc__card-image-wrap">
+            {%- assign img_handle = inj_urls[i] | split: '/products/' | last -%}
+            {%- assign product_ref = all_products[img_handle] -%}
+            {%- if product_ref and product_ref.featured_image -%}
+              <img
+                class="lsc-tc__card-image"
+                src="{{ product_ref.featured_image | image_url: width: 600 }}"
+                alt="{{ inj_names[i] | escape }}"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+            {%- else -%}
+              <div class="lsc-tc__card-placeholder">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="lsc-tc__card-content">
+            <h3 class="lsc-tc__card-name">{{ inj_names[i] }}</h3>
+            <p class="lsc-tc__card-desc">{{ inj_descs[i] }}</p>
+            <span class="lsc-tc__card-link">Learn More &rarr;</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     GROUP 3 — SKIN RENEWAL
+     ════════════════════════════════════════════════ -->
+<section class="lsc-tc__group lsc-tc__group--warm-white" id="skin-renewal">
+  <div class="lsc-tc__group-inner">
+    <div class="lsc-tc__group-header">
+      <p class="lsc-tc__group-eyebrow">SKIN RENEWAL</p>
+      <h2 class="lsc-tc__group-title">Skin Renewal Treatments</h2>
+    </div>
+
+    <div class="lsc-tc__grid">
+      {%- assign skin_names = 'RF Microneedling,MelanoPro Chemical Peel,Hydrofacial,NCTF Skin Booster,Exosomes,Blemish Removal' | split: ',' -%}
+      {%- assign skin_urls = '/products/dermaforce-rf-microneedling,/products/chemical-peel,/products/hydrofacial,/products/nctf,/products/exosomes,/pages/blemish-removal' | split: ',' -%}
+      {%- assign skin_descs = 'Combines radiofrequency with microneedling to stimulate collagen and tighten skin.,Medical-grade peel targeting pigmentation&#44; melasma and uneven skin tone.,Deep cleanse&#44; exfoliate and hydrate in one session for an instant glow.,Injectable skin booster with 59 active ingredients for deep hydration and renewal.,Cutting-edge regenerative therapy using exosome technology for cellular repair.,Expert removal of skin tags&#44; moles&#44; milia and other common blemishes.' | split: ',' -%}
+
+      {%- for i in (0..5) -%}
+        <a href="{{ skin_urls[i] }}" class="lsc-tc__card" style="animation-delay: {{ forloop.index | times: 0.1 }}s;">
+          <div class="lsc-tc__card-image-wrap">
+            {%- if skin_urls[i] contains '/products/' -%}
+              {%- assign img_handle = skin_urls[i] | split: '/products/' | last -%}
+              {%- assign product_ref = all_products[img_handle] -%}
+              {%- if product_ref and product_ref.featured_image -%}
+                <img
+                  class="lsc-tc__card-image"
+                  src="{{ product_ref.featured_image | image_url: width: 600 }}"
+                  alt="{{ skin_names[i] | escape }}"
+                  loading="lazy"
+                  width="600"
+                  height="800"
+                >
+              {%- else -%}
+                <div class="lsc-tc__card-placeholder">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                </div>
+              {%- endif -%}
+            {%- else -%}
+              <div class="lsc-tc__card-placeholder">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="lsc-tc__card-content">
+            <h3 class="lsc-tc__card-name">{{ skin_names[i] }}</h3>
+            <p class="lsc-tc__card-desc">{{ skin_descs[i] | replace: '&#44;', ',' }}</p>
+            <span class="lsc-tc__card-link">Learn More &rarr;</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     GROUP 4 — BODY
+     ════════════════════════════════════════════════ -->
+<section class="lsc-tc__group lsc-tc__group--cream" id="body">
+  <div class="lsc-tc__group-inner">
+    <div class="lsc-tc__group-header">
+      <p class="lsc-tc__group-eyebrow">BODY TREATMENTS</p>
+      <h2 class="lsc-tc__group-title">Body Treatments</h2>
+    </div>
+
+    <div class="lsc-tc__grid">
+      {%- assign body_names = 'Non-Surgical Face Lift,Non-Surgical Body Sculpting,RF Skin Tightening' | split: ',' -%}
+      {%- assign body_urls = '/products/non-surgical-face-lift,/products/non-surgical-body-sculpting,/products/radio-frequency-skin-tightening' | split: ',' -%}
+      {%- assign body_descs = 'HIFU technology to lift and tighten facial contours without surgery or downtime.,Advanced body contouring to reduce stubborn fat and sculpt your silhouette.,Radiofrequency skin tightening for firmer&#44; more youthful-looking skin.' | split: ',' -%}
+
+      {%- for i in (0..2) -%}
+        <a href="{{ body_urls[i] }}" class="lsc-tc__card" style="animation-delay: {{ forloop.index | times: 0.1 }}s;">
+          <div class="lsc-tc__card-image-wrap">
+            {%- assign img_handle = body_urls[i] | split: '/products/' | last -%}
+            {%- assign product_ref = all_products[img_handle] -%}
+            {%- if product_ref and product_ref.featured_image -%}
+              <img
+                class="lsc-tc__card-image"
+                src="{{ product_ref.featured_image | image_url: width: 600 }}"
+                alt="{{ body_names[i] | escape }}"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+            {%- else -%}
+              <div class="lsc-tc__card-placeholder">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            {%- endif -%}
+          </div>
+          <div class="lsc-tc__card-content">
+            <h3 class="lsc-tc__card-name">{{ body_names[i] }}</h3>
+            <p class="lsc-tc__card-desc">{{ body_descs[i] | replace: '&#44;', ',' }}</p>
+            <span class="lsc-tc__card-link">Learn More &rarr;</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     INTERSECTION OBSERVER — Staggered Scroll Reveal
+     ════════════════════════════════════════════════ -->
+<script>
+  (function() {
+    var cards = document.querySelectorAll('.lsc-tc__card');
+
+    if (!('IntersectionObserver' in window)) {
+      // No IO support — just show all cards immediately
+      return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('lsc-tc--visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px 0px 0px'
+    });
+
+    cards.forEach(function(card) {
+      card.classList.add('lsc-tc--ready');
+      observer.observe(card);
+    });
+
+    // Fallback: reveal any cards still hidden after 800ms
+    setTimeout(function() {
+      document.querySelectorAll('.lsc-tc__card.lsc-tc--ready:not(.lsc-tc--visible)').forEach(function(card) {
+        card.classList.add('lsc-tc--visible');
+      });
+    }, 800);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Treatments Collection",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Treatments Collection"
+    }
+  ]
+}
+{% endschema %}

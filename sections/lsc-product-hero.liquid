@@ -1,0 +1,270 @@
+{% comment %}
+  LSC Product Hero Section
+  Split hero used on all product/treatment pages.
+  Pulls content from product object and custom metafields.
+{% endcomment %}
+
+<style>
+  .lsc-product-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 70vh;
+  }
+
+  .lsc-product-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .lsc-product-hero__breadcrumb {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    color: var(--taupe);
+    margin-bottom: 1.5rem;
+  }
+
+  .lsc-product-hero__breadcrumb a {
+    color: var(--dark-taupe);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .lsc-product-hero__breadcrumb a:hover {
+    color: var(--gold);
+  }
+
+  .lsc-product-hero__breadcrumb span {
+    margin: 0 0.4rem;
+  }
+
+  .lsc-product-hero__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .lsc-product-hero__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 300;
+    color: var(--charcoal);
+    margin: 0 0 1.2rem 0;
+    line-height: 1.15;
+  }
+
+  .lsc-product-hero__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .lsc-product-hero__ctas {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .lsc-product-hero__btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--charcoal, #2C2824);
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.6rem;
+    border: 1px solid var(--charcoal, #2C2824);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .lsc-product-hero__btn-whatsapp:hover {
+    background-color: transparent;
+    color: var(--charcoal, #2C2824);
+    transform: translateY(-1px);
+  }
+
+  .lsc-product-hero__btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.85rem 1.6rem;
+    background: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--charcoal);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .lsc-product-hero__btn-secondary:hover {
+    background-color: var(--charcoal);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .lsc-product-hero__image-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lsc-product-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-product-hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .lsc-product-hero__image-wrap {
+      order: -1;
+      aspect-ratio: 4 / 3;
+    }
+
+    .lsc-product-hero__content {
+      padding: 2rem 5%;
+    }
+
+    .lsc-product-hero__ctas {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .lsc-product-hero__btn-whatsapp,
+    .lsc-product-hero__btn-secondary {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+</style>
+
+<section class="lsc-product-hero">
+  <div class="lsc-product-hero__content">
+    <nav class="lsc-product-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/collections/treatments">Treatments</a>
+      <span>/</span>
+      {%- if product.handle == 'cosmetic-injections' -%}Anti-Wrinkle Injections{%- else -%}{{ product.title }}{%- endif -%}
+    </nav>
+
+    <p class="lsc-product-hero__eyebrow">
+      {%- if section.settings.eyebrow_override != blank -%}
+        {{ section.settings.eyebrow_override }}
+      {%- elsif product.metafields.custom.hero_eyebrow != blank -%}
+        {{ product.metafields.custom.hero_eyebrow }}
+      {%- else -%}
+        {{ product.type }}
+      {%- endif -%}
+    </p>
+
+    {%- if product.handle == 'cosmetic-injections' -%}
+      <h1 class="lsc-product-hero__heading">Anti-Wrinkle Injections</h1>
+    {%- else -%}
+      <h1 class="lsc-product-hero__heading">{{ product.title }}</h1>
+    {%- endif -%}
+
+    <div class="lsc-product-hero__description">
+      {%- if product.handle == 'co2-laser-resurfacing' -%}
+        Fractional CO₂ laser creates microscopic channels in the skin, triggering your body's natural healing process — stimulating collagen, resurfacing texture, and targeting damage for smoother, firmer skin. Effective on the face, neck, décolletage, hands, and body.
+      {%- elsif section.settings.description_override != blank -%}
+        {{ section.settings.description_override }}
+      {%- elsif product.metafields.custom.hero_description != blank -%}
+        {{ product.metafields.custom.hero_description }}
+      {%- else -%}
+        {{ product.description }}
+      {%- endif -%}
+    </div>
+
+    <div class="lsc-product-hero__ctas">
+      <a
+        href="#lsc-contact"
+        class="lsc-product-hero__btn-whatsapp"
+        onclick="var el=document.getElementById('lsc-contact');if(el){el.scrollIntoView({behavior:'smooth'});return false;}"
+        aria-label="Book Now"
+      >
+        Book Now
+      </a>
+
+      <a
+        href="#"
+        class="lsc-product-hero__btn-secondary"
+        onclick="var el=document.querySelector('.lsc-pricing-cards,.lsc-tabbed-pricing');if(el){el.scrollIntoView({behavior:'smooth'});}return false;"
+      >
+        View Pricing
+      </a>
+    </div>
+  </div>
+
+  <div class="lsc-product-hero__image-wrap">
+    {%- if product.featured_image != blank -%}
+      <img
+        class="lsc-product-hero__image"
+        src="{{ product.featured_image | image_url: width: 800 }}"
+        alt="{{ product.featured_image.alt | escape | default: product.title }}"
+        loading="eager"
+        width="800"
+        height="1000"
+      >
+    {%- else -%}
+      <div style="width:100%;height:100%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:0.85rem;color:var(--dark-taupe);">
+        Image Coming Soon
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow_override",
+      "label": "Eyebrow Override",
+      "info": "Overrides the metafield hero_eyebrow. Leave blank to use metafield or product type."
+    },
+    {
+      "type": "textarea",
+      "id": "description_override",
+      "label": "Description Override",
+      "info": "Overrides the metafield hero_description. Leave blank to use metafield or product description."
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_message_override",
+      "label": "WhatsApp Message Override",
+      "info": "Overrides the metafield whatsapp_message. Leave blank for default."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Hero"
+    }
+  ]
+}
+{% endschema %}

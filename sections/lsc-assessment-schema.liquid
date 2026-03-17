@@ -1,0 +1,41 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Free Skin Assessment",
+  "description": "Complimentary personalised skin consultation at Laser Skin Clinics Wolverhampton. Includes skin analysis and written treatment plan.",
+  "url": "{{ shop.url }}/pages/free-skin-assessment",
+  "provider": {
+    "@type": "MedicalBusiness",
+    "name": "Laser Skin Clinics",
+    "url": "{{ shop.url }}",
+    "telephone": "+447340485665",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4 Perton Farm Barns, Jenny Walkers Lane",
+      "addressLocality": "Wolverhampton",
+      "addressRegion": "West Midlands",
+      "postalCode": "WV6 7HB",
+      "addressCountry": "GB"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "description": "Completely free with no obligation"
+  }
+}
+</script>
+
+{% schema %}
+{
+  "name": "Assessment Schema",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Assessment Schema"
+    }
+  ]
+}
+{% endschema %}

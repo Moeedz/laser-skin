@@ -1,0 +1,318 @@
+{{ 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap' | stylesheet_tag }}
+
+<style>
+  :root {
+    --gold: #C4A97D;
+    --gold-light: #D4BE9A;
+    --deep: #1A1714;
+    --cream: #F7F3EE;
+    --dark-taupe: #6B5E53;
+  }
+
+  /* --- Section Wrapper --- */
+  .lsc-treatments {
+    background-color: var(--cream);
+    padding: 5rem 6%;
+  }
+
+  .lsc-treatments__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* --- Section Header --- */
+  .lsc-treatments__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-treatments__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .lsc-treatments__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: var(--deep);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+
+  /* --- Card Grid --- */
+  .lsc-treatments__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* --- Individual Card --- */
+  .lsc-treatment-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .lsc-treatment-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* --- Card Image --- */
+  .lsc-treatment-card__image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+
+  .lsc-treatment-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .lsc-treatment-card:hover .lsc-treatment-card__image {
+    transform: scale(1.03);
+  }
+
+  .lsc-treatment-card__image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #e8e2da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lsc-treatment-card__image-placeholder svg {
+    width: 40px;
+    height: 40px;
+    stroke: #c4b9ab;
+    fill: none;
+    stroke-width: 1;
+  }
+
+  /* --- Card Content --- */
+  .lsc-treatment-card__content {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .lsc-treatment-card__eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+  }
+
+  .lsc-treatment-card__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin: 0.5rem 0;
+    line-height: 1.3;
+  }
+
+  .lsc-treatment-card__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.55;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .lsc-treatment-card__link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 1.2rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+
+  .lsc-treatment-card:hover .lsc-treatment-card__link {
+    color: var(--deep);
+  }
+
+  /* --- Responsive: Tablet (768px) --- */
+  @media screen and (max-width: 768px) {
+    .lsc-treatments__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* --- Responsive: Mobile (480px) --- */
+  @media screen and (max-width: 480px) {
+    .lsc-treatments {
+      padding: 3.5rem 5%;
+    }
+
+    .lsc-treatments__grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+  }
+</style>
+
+<section class="lsc-treatments">
+  <div class="lsc-treatments__inner">
+    <div class="lsc-treatments__header">
+      <p class="lsc-treatments__eyebrow">OUR EXPERTISE</p>
+      <h2 class="lsc-treatments__heading">Treatments We Offer</h2>
+    </div>
+
+    <div class="lsc-treatments__grid">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link }}" class="lsc-treatment-card" {{ block.shopify_attributes }}>
+          <div class="lsc-treatment-card__image-wrap">
+            {% if block.settings.image != blank %}
+              <img
+                class="lsc-treatment-card__image"
+                src="{{ block.settings.image | image_url: width: 600 }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy"
+                width="600"
+                height="800"
+              >
+            {% else %}
+              <div class="lsc-treatment-card__image-placeholder">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="lsc-treatment-card__content">
+            <p class="lsc-treatment-card__eyebrow">{{ block.settings.eyebrow }}</p>
+            <h3 class="lsc-treatment-card__title">{{ block.settings.title }}</h3>
+            <p class="lsc-treatment-card__description">{{ block.settings.description }}</p>
+            <span class="lsc-treatment-card__link">Explore Treatments &rarr;</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Treatment Cards",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Treatment Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Treatment Image"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Category Eyebrow",
+          "default": "TREATMENTS"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Treatment Name",
+          "default": "Treatment Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Short Description",
+          "default": "A short description of this treatment category."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Treatment Cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "eyebrow": "LASER TREATMENTS",
+            "title": "Laser Treatments",
+            "description": "From hair removal to CO\u2082 resurfacing, advanced laser technology for lasting results.",
+            "link": "/collections/laser-treatments"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "eyebrow": "INJECTABLE TREATMENTS",
+            "title": "Injectable Treatments",
+            "description": "Anti-wrinkle injections and polynucleotides delivered by our consultant physician.",
+            "link": "/collections/injectable-treatments"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "eyebrow": "SKIN RENEWAL",
+            "title": "Skin Renewal",
+            "description": "Hydrofacials, chemical peels, and skin boosters for radiant, rejuvenated skin.",
+            "link": "/collections/skin-renewal"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "eyebrow": "BODY TREATMENTS",
+            "title": "Body Treatments",
+            "description": "Non-surgical body sculpting, skin tightening, and contouring.",
+            "link": "/collections/body-treatments"
+          }
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4
+}
+{% endschema %}

@@ -1,0 +1,320 @@
+{%- comment -%}
+  LSC How It Works Section
+  Step-by-step process section with numbered gold circles and connecting lines.
+  Reads from product.metafields.custom.how_it_works_steps (JSON array) first,
+  then falls back to section blocks.
+{%- endcomment -%}
+
+{%- liquid
+  assign hiw_steps = product.metafields.custom.how_it_works_steps.value
+  assign use_metafield = false
+  if hiw_steps != blank and hiw_steps.size > 0
+    assign use_metafield = true
+  endif
+  if product.handle == 'hydrofacial' and section.blocks.size > 0
+    assign use_metafield = false
+  endif
+  if product.handle == 'laser-tattoo-removal' and section.blocks.size > 0
+    assign use_metafield = false
+  endif
+-%}
+
+{%- if use_metafield or section.blocks.size > 0 -%}
+{%- assign step_count = section.blocks.size -%}
+{%- if use_metafield -%}{%- assign step_count = hiw_steps.size -%}{%- endif -%}
+<section
+  id="lsc-how-it-works-{{ section.id }}"
+  class="lsc-how-it-works"
+  data-section-id="{{ section.id }}"
+  data-section-type="lsc-how-it-works"
+>
+  <div class="lsc-how-it-works__header">
+    <span class="lsc-how-it-works__eyebrow">THE PROCESS</span>
+    <h2 class="lsc-how-it-works__heading">How It Works</h2>
+  </div>
+
+  <div class="lsc-how-it-works__steps" style="--step-count: {{ step_count }};">
+    {%- if use_metafield -%}
+      {%- for step in hiw_steps -%}
+        <div class="lsc-how-it-works__step{% if forloop.last %} lsc-how-it-works__step--last{% endif %}">
+          <div class="lsc-how-it-works__number-wrap">
+            <span class="lsc-how-it-works__number">{{ forloop.index }}</span>
+          </div>
+          {%- if product.handle == 'laser-hair-removal' -%}
+            <h3 class="lsc-how-it-works__title">{{ step.title | replace: 'Maxine', 'Your practitioner' }}</h3>
+            <p class="lsc-how-it-works__description">{{ step.description | replace: 'Maxine assesses', 'Your practitioner assesses' | replace: 'Maxine', 'your practitioner' }}</p>
+          {%- elsif product.handle == 'cosmetic-injections' -%}
+            <h3 class="lsc-how-it-works__title">{{ step.title | replace: 'James Scotton', 'Sangeeta Scotton' | replace: 'Dr James', 'Dr Sangeeta' }}</h3>
+            <p class="lsc-how-it-works__description">{{ step.description | replace: 'James Scotton', 'Sangeeta Scotton' | replace: 'Dr James', 'Dr Sangeeta' }}</p>
+          {%- else -%}
+            <h3 class="lsc-how-it-works__title">{{ step.title }}</h3>
+            <p class="lsc-how-it-works__description">{{ step.description }}</p>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for block in section.blocks -%}
+        <div
+          class="lsc-how-it-works__step{% if forloop.last %} lsc-how-it-works__step--last{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <div class="lsc-how-it-works__number-wrap">
+            <span class="lsc-how-it-works__number">{{ forloop.index }}</span>
+          </div>
+          <h3 class="lsc-how-it-works__title">{{ block.settings.title }}</h3>
+          <p class="lsc-how-it-works__description">{{ block.settings.description }}</p>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  /* =============================================
+     LSC How It Works
+     ============================================= */
+
+  .lsc-how-it-works {
+    background: var(--cream, #F7F3EE);
+    padding: 5rem 6%;
+  }
+
+  /* ---- Section heading ---- */
+
+  .lsc-how-it-works__header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .lsc-how-it-works__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold, #C4A265);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-how-it-works__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  /* ---- Steps row ---- */
+
+  .lsc-how-it-works__steps {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(var(--step-count, 4), 1fr);
+    gap: 2rem;
+  }
+
+  /* ---- Individual step ---- */
+
+  .lsc-how-it-works__step {
+    text-align: center;
+    position: relative;
+  }
+
+  /* Connecting line between steps (not on last) */
+  .lsc-how-it-works__step:not(.lsc-how-it-works__step--last)::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: calc(50% + 30px);
+    width: calc(100% - 60px + 2rem);
+    height: 1px;
+    background: var(--gold, #C4A265);
+    pointer-events: none;
+  }
+
+  /* ---- Step number circle ---- */
+
+  .lsc-how-it-works__number-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid var(--gold, #C4A265);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    background: var(--cream, #F7F3EE);
+  }
+
+  .lsc-how-it-works__number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gold, #C4A265);
+    line-height: 1;
+  }
+
+  /* ---- Step text ---- */
+
+  .lsc-how-it-works__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 1rem 0 0.5rem;
+  }
+
+  .lsc-how-it-works__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #8B7D6B);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Tablet: 2x2 grid ---- */
+
+  @media screen and (max-width: 899px) {
+    .lsc-how-it-works__steps {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem 2rem;
+    }
+
+    /* Hide horizontal connecting lines on tablet */
+    .lsc-how-it-works__step::after {
+      display: none !important;
+    }
+  }
+
+  /* ---- Mobile: single column, vertical line on left ---- */
+
+  @media screen and (max-width: 599px) {
+    .lsc-how-it-works {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-how-it-works__heading {
+      font-size: 1.6rem;
+    }
+
+    .lsc-how-it-works__steps {
+      grid-template-columns: 1fr;
+      gap: 0;
+      position: relative;
+      padding-left: 50px;
+    }
+
+    /* Vertical connecting line on left */
+    .lsc-how-it-works__steps::before {
+      content: '';
+      position: absolute;
+      left: 21px;
+      top: 22px;
+      bottom: 22px;
+      width: 1px;
+      background: var(--gold, #C4A265);
+    }
+
+    .lsc-how-it-works__step {
+      text-align: left;
+      padding: 0 0 2rem 0;
+    }
+
+    .lsc-how-it-works__step--last {
+      padding-bottom: 0;
+    }
+
+    .lsc-how-it-works__step::after {
+      display: none !important;
+    }
+
+    .lsc-how-it-works__number-wrap {
+      position: absolute;
+      left: -50px;
+      top: 0;
+    }
+
+    .lsc-how-it-works__title {
+      margin-top: 0;
+    }
+
+    .lsc-how-it-works__description {
+      max-width: none;
+      margin-left: 0;
+    }
+  }
+</style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "How It Works",
+  "tag": "section",
+  "class": "lsc-section-how-it-works",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Consultation"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Book a complimentary consultation with our experienced practitioners to discuss your goals."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "How It Works",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Consultation",
+            "description": "Book a complimentary consultation with our experienced practitioners to discuss your goals and assess your suitability."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Treatment Plan",
+            "description": "Receive a personalised treatment plan tailored to your skin type, concerns, and desired outcomes."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Your Session",
+            "description": "Relax in our comfortable clinic while our practitioners deliver your treatment using medical-grade technology."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Aftercare & Results",
+            "description": "Follow your bespoke aftercare routine and watch your results develop over the coming weeks."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,191 @@
+{%- comment -%}
+  LSC Feature Highlight Section
+  Centred content block with heading, description, and optional bullet points.
+  Used for treatment combination explanations or key selling propositions.
+{%- endcomment -%}
+
+{%- if section.settings.heading != blank -%}
+<section class="lsc-feature-highlight" id="lsc-feature-highlight-{{ section.id }}">
+  <div class="lsc-feature-highlight__inner">
+    {%- if section.settings.eyebrow != blank -%}
+      <span class="lsc-feature-highlight__eyebrow">{{ section.settings.eyebrow }}</span>
+    {%- endif -%}
+    <h2 class="lsc-feature-highlight__heading">{{ section.settings.heading }}</h2>
+    {%- if section.settings.description != blank -%}
+      <div class="lsc-feature-highlight__description">{{ section.settings.description }}</div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <ul class="lsc-feature-highlight__points">
+        {%- for block in section.blocks -%}
+          <li class="lsc-feature-highlight__point" {{ block.shopify_attributes }}>
+            <span class="lsc-feature-highlight__icon" aria-hidden="true">&#10003;</span>
+            <span>{{ block.settings.text }}</span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if section.settings.cta_text != blank and section.settings.cta_url != blank -%}
+      <a href="{{ section.settings.cta_url }}" class="lsc-feature-highlight__cta">{{ section.settings.cta_text }}</a>
+    {%- endif -%}
+  </div>
+</section>
+{%- endif -%}
+
+<style>
+  .lsc-feature-highlight {
+    background: var(--cream, #F7F3EE);
+    padding: 5rem 6%;
+  }
+
+  .lsc-feature-highlight__inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lsc-feature-highlight__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold, #C4A265);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-feature-highlight__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+  }
+
+  .lsc-feature-highlight__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #8B7D6B);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .lsc-feature-highlight__points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lsc-feature-highlight__point {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--charcoal, #2C2C2C);
+    padding: 0.6rem 0;
+    line-height: 1.5;
+  }
+
+  .lsc-feature-highlight__icon {
+    flex-shrink: 0;
+    color: var(--gold, #C4A265);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .lsc-feature-highlight__cta {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.85rem 2rem;
+    background: var(--charcoal, #2C2C2C);
+    color: #fff;
+    border: 1px solid var(--charcoal, #2C2C2C);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .lsc-feature-highlight__cta:hover {
+    background: transparent;
+    color: var(--charcoal, #2C2C2C);
+  }
+
+  @media screen and (max-width: 599px) {
+    .lsc-feature-highlight {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-feature-highlight__heading {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Feature Highlight",
+  "tag": "section",
+  "class": "lsc-section-feature-highlight",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text (optional)"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA Button URL (optional)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Bullet Point",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Point Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Feature Highlight"
+    }
+  ]
+}
+{% endschema %}

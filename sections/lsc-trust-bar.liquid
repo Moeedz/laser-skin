@@ -1,0 +1,175 @@
+{% comment %}
+  LSC Trust Bar Section
+  Horizontal strip showing 4 trust/credibility items.
+  Defaults: Google rating, Medical-Grade Technology, Established 10+ Years, 0% Finance.
+  Can be overridden via section settings or product metafield trust_bar_items.
+{% endcomment %}
+
+{%- assign item_1 = section.settings.item_1 | default: "Google ★ 4.9/5" -%}
+{%- assign item_2 = section.settings.item_2 | default: "Medical-Grade Technology" -%}
+{%- assign item_3 = section.settings.item_3 | default: "Established 10+ Years" -%}
+{%- assign item_4 = section.settings.item_4 | default: "Complimentary Consultation" -%}
+
+{%- comment -%} Only use metafield if override_metafield is not enabled {%- endcomment -%}
+{%- if section.settings.override_metafield != true and product.metafields.custom.trust_bar_items != blank -%}
+  {%- assign tb_raw = product.metafields.custom.trust_bar_items -%}
+
+  {%- comment -%} Try list metafield first (auto-deserialized array) {%- endcomment -%}
+  {%- assign tb_is_list = false -%}
+  {%- assign tb_test = tb_raw | where: '__never__' -%}
+  {%- if tb_test != nil -%}
+    {%- assign tb_is_list = true -%}
+  {%- endif -%}
+
+  {%- if tb_is_list -%}
+    {%- comment -%} Shopify list metafield — index directly {%- endcomment -%}
+    {%- if tb_raw.size >= 1 -%}{%- assign item_1 = tb_raw[0] -%}{%- endif -%}
+    {%- if tb_raw.size >= 2 -%}{%- assign item_2 = tb_raw[1] -%}{%- endif -%}
+    {%- if tb_raw.size >= 3 -%}{%- assign item_3 = tb_raw[2] -%}{%- endif -%}
+    {%- if tb_raw.size >= 4 -%}{%- assign item_4 = tb_raw[3] -%}{%- endif -%}
+
+  {%- elsif tb_raw contains '["' -%}
+    {%- comment -%} Raw JSON string — strip brackets/quotes and split {%- endcomment -%}
+    {%- assign tb_stripped = tb_raw | remove: '[' | remove: ']' | remove: '"' -%}
+    {%- assign tb_items = tb_stripped | split: ',' -%}
+    {%- if tb_items.size >= 1 -%}{%- assign item_1 = tb_items[0] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 2 -%}{%- assign item_2 = tb_items[1] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 3 -%}{%- assign item_3 = tb_items[2] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 4 -%}{%- assign item_4 = tb_items[3] | strip -%}{%- endif -%}
+
+  {%- elsif tb_raw contains '|' -%}
+    {%- comment -%} Pipe-delimited string fallback {%- endcomment -%}
+    {%- assign tb_items = tb_raw | split: '|' -%}
+    {%- if tb_items.size >= 1 -%}{%- assign item_1 = tb_items[0] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 2 -%}{%- assign item_2 = tb_items[1] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 3 -%}{%- assign item_3 = tb_items[2] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 4 -%}{%- assign item_4 = tb_items[3] | strip -%}{%- endif -%}
+
+  {%- else -%}
+    {%- comment -%} Comma-delimited string fallback {%- endcomment -%}
+    {%- assign tb_items = tb_raw | split: ',' -%}
+    {%- if tb_items.size >= 1 -%}{%- assign item_1 = tb_items[0] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 2 -%}{%- assign item_2 = tb_items[1] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 3 -%}{%- assign item_3 = tb_items[2] | strip -%}{%- endif -%}
+    {%- if tb_items.size >= 4 -%}{%- assign item_4 = tb_items[3] | strip -%}{%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Handle-based override for blemish products — always wins {%- endcomment -%}
+{%- assign blemish_trust_handles = 'skin-tag-removal,mole-removal,milia-removal,thread-vein-removal,age-spot-removal,cherry-angioma-removal,spider-naevi-removal,xanthelasma-removal,wart-and-verruca-removal,seborrheic-wart-removal' -%}
+{%- if blemish_trust_handles contains product.handle -%}
+  {%- assign item_1 = "Professional Blemish Removal" -%}
+  {%- assign item_2 = "£75 Per Session" -%}
+  {%- assign item_3 = "Usually One Visit" -%}
+  {%- assign item_4 = "Quick & Comfortable" -%}
+{%- endif -%}
+
+<section class="lsc-trust-bar">
+  <div class="lsc-trust-bar__inner">
+    <span class="lsc-trust-bar__item">{{ item_1 }}</span>
+    <span class="lsc-trust-bar__divider"></span>
+    <span class="lsc-trust-bar__item">{{ item_2 }}</span>
+    <span class="lsc-trust-bar__divider"></span>
+    <span class="lsc-trust-bar__item">{{ item_3 }}</span>
+    <span class="lsc-trust-bar__divider"></span>
+    <span class="lsc-trust-bar__item">{{ item_4 }}</span>
+  </div>
+</section>
+
+<style>
+  .lsc-trust-bar {
+    background: var(--charcoal, #2C2C2C);
+    padding: 1rem 6%;
+  }
+
+  .lsc-trust-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .lsc-trust-bar__item {
+    font-family: var(--font-body, 'Outfit', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warm-white, #FAF8F5);
+    white-space: nowrap;
+  }
+
+  .lsc-trust-bar__divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-trust-bar {
+      padding: 0.8rem 4%;
+    }
+
+    .lsc-trust-bar__inner {
+      gap: 0.8rem 1.2rem;
+      justify-content: center;
+    }
+
+    .lsc-trust-bar__item {
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+    }
+
+    .lsc-trust-bar__divider {
+      display: none;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Trust Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "override_metafield",
+      "label": "Use section settings (ignore metafield)",
+      "info": "Enable to use the items below instead of the product metafield trust_bar_items.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "item_1",
+      "label": "Item 1",
+      "default": "Google ★ 4.9/5"
+    },
+    {
+      "type": "text",
+      "id": "item_2",
+      "label": "Item 2",
+      "default": "Medical-Grade Technology"
+    },
+    {
+      "type": "text",
+      "id": "item_3",
+      "label": "Item 3",
+      "default": "Established 10+ Years"
+    },
+    {
+      "type": "text",
+      "id": "item_4",
+      "label": "Item 4",
+      "default": "Complimentary Consultation"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Bar"
+    }
+  ]
+}
+{% endschema %}

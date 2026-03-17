@@ -1,0 +1,162 @@
+<style>
+  .lsc-footer {
+    background: var(--deep, #1A1714);
+    padding: 4rem 6%;
+  }
+
+  .lsc-footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Column 1: Brand */
+  .lsc-footer__brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--warm-white, #F5F0EB);
+    margin: 0 0 0.6rem 0;
+    line-height: 1.3;
+  }
+
+  .lsc-footer__tagline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+  }
+
+  /* Column headings */
+  .lsc-footer__heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin: 0 0 1.2rem 0;
+  }
+
+  /* Link lists */
+  .lsc-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lsc-footer__links li {
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-footer__links a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .lsc-footer__links a:hover {
+    color: var(--warm-white, #F5F0EB);
+  }
+
+  /* Bottom bar */
+  .lsc-footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .lsc-footer__copyright {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+    margin: 0;
+  }
+
+  /* Tablet: 2 columns */
+  @media (max-width: 768px) {
+    .lsc-footer__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  /* Mobile: stacked */
+  @media (max-width: 480px) {
+    .lsc-footer__grid {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+</style>
+
+<footer class="lsc-footer">
+  <div class="lsc-footer__grid">
+
+    <!-- Column 1: Brand -->
+    <div class="lsc-footer__col">
+      <p class="lsc-footer__brand-name">Laser Skin Clinics</p>
+      <p class="lsc-footer__tagline">Advanced laser and regenerative skin treatments in Wolverhampton.</p>
+    </div>
+
+    <!-- Column 2: Treatments -->
+    <div class="lsc-footer__col">
+      <p class="lsc-footer__heading">Treatments</p>
+      <ul class="lsc-footer__links">
+        <li><a href="/products/laser-hair-removal">Laser Hair Removal</a></li>
+        <li><a href="/products/co2-laser-resurfacing">CO&#8322; Laser Resurfacing</a></li>
+        <li><a href="/products/anti-wrinkle-injections">Anti-Wrinkle Injections</a></li>
+        <li><a href="/products/dermaforce-rf-microneedling">RF Microneedling</a></li>
+        <li><a href="/pages/blemish-removal">Blemish Removal</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Clinic -->
+    <div class="lsc-footer__col">
+      <p class="lsc-footer__heading">Clinic</p>
+      <ul class="lsc-footer__links">
+        <li><a href="/pages/about-us">About Us</a></li>
+        <li><a href="/pages/free-skin-assessment">Free Skin Assessment</a></li>
+        <li><a href="/pages/packages">Packages</a></li>
+        <li><a href="/products/laser-skin-clinics-gift-card">Gift Cards</a></li>
+        <li><a href="/pages/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Legal -->
+    <div class="lsc-footer__col">
+      <p class="lsc-footer__heading">Legal</p>
+      <ul class="lsc-footer__links">
+        <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/policies/terms-of-service">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="lsc-footer__bottom">
+    <p class="lsc-footer__copyright">&copy; 2026 Laser Skin Clinics. All rights reserved.</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "class": "lsc-footer-section",
+  "settings": []
+}
+{% endschema %}

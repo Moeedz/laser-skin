@@ -1,0 +1,305 @@
+{% comment %}
+  LSC Fading Timeline — Template D (Tattoo Removal)
+  Horizontal 4-stage timeline showing how a tattoo fades over sessions.
+{% endcomment %}
+
+<style>
+  /* ── Container ── */
+  .lsc-fading-timeline {
+    background: var(--charcoal, #2C2824);
+    padding: 5rem 6%;
+  }
+
+  .lsc-fading-timeline__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── Section Heading ── */
+  .lsc-fading-timeline__eyebrow {
+    display: block;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-fading-timeline__heading {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 3.5rem;
+  }
+
+  /* ── Stages Row ── */
+  .lsc-fading-timeline__stages {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* ── Individual Stage ── */
+  .lsc-fading-timeline__stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+  }
+
+  /* ── Number Circle ── */
+  .lsc-fading-timeline__number {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gold);
+    position: relative;
+    z-index: 2;
+    background: var(--charcoal, #2C2824);
+    flex-shrink: 0;
+  }
+
+  /* ── Connecting Line ── */
+  .lsc-fading-timeline__stage:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: calc(50% + 22px);
+    width: calc(100% - 44px);
+    height: 1px;
+    background: var(--gold);
+    z-index: 1;
+  }
+
+  /* ── Stage Label ── */
+  .lsc-fading-timeline__label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Visual Placeholder ── */
+  .lsc-fading-timeline__visual {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* ── Description ── */
+  .lsc-fading-timeline__desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--taupe);
+    text-align: center;
+    max-width: 220px;
+  }
+
+  /* ── Responsive: Tablet (2x2 grid) ── */
+  @media (max-width: 960px) {
+    .lsc-fading-timeline__stages {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem 0;
+    }
+
+    .lsc-fading-timeline__stage {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    /* Hide the connecting line on tablet */
+    .lsc-fading-timeline__stage::after {
+      display: none;
+    }
+  }
+
+  /* ── Responsive: Mobile (single column) ── */
+  @media (max-width: 580px) {
+    .lsc-fading-timeline {
+      padding: 3.5rem 5%;
+    }
+
+    .lsc-fading-timeline__heading {
+      font-size: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .lsc-fading-timeline__stages {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .lsc-fading-timeline__stage {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+      padding: 0 0 2.5rem;
+      position: relative;
+    }
+
+    .lsc-fading-timeline__stage:not(:last-child)::after {
+      display: block;
+      top: 44px;
+      left: 50%;
+      width: 1px;
+      height: calc(100% - 44px);
+      transform: translateX(-50%);
+    }
+
+    .lsc-fading-timeline__desc {
+      max-width: 280px;
+    }
+  }
+</style>
+
+<section class="lsc-fading-timeline" id="fading-timeline-{{ section.id }}">
+  <div class="lsc-fading-timeline__inner">
+
+    {%- comment -%} Section Heading {%- endcomment -%}
+    <span class="lsc-fading-timeline__eyebrow">The Process</span>
+    <h2 class="lsc-fading-timeline__heading">{{ section.settings.heading | default: 'How Your Tattoo Fades' }}</h2>
+
+    {%- comment -%} Stages {%- endcomment -%}
+    <div class="lsc-fading-timeline__stages">
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          <div class="lsc-fading-timeline__stage" {{ block.shopify_attributes }}>
+            <div class="lsc-fading-timeline__number">{{ forloop.index }}</div>
+            <span class="lsc-fading-timeline__label">{{ block.settings.label }}</span>
+            <div class="lsc-fading-timeline__visual"></div>
+            <p class="lsc-fading-timeline__desc">{{ block.settings.description }}</p>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        {%- comment -%} Default 4 stages when no blocks configured {%- endcomment -%}
+        <div class="lsc-fading-timeline__stage">
+          <div class="lsc-fading-timeline__number">1</div>
+          <span class="lsc-fading-timeline__label">After 1 Session</span>
+          <div class="lsc-fading-timeline__visual"></div>
+          <p class="lsc-fading-timeline__desc">Initial treatment breaks down ink particles. Some lightening visible within 4-6 weeks.</p>
+        </div>
+
+        <div class="lsc-fading-timeline__stage">
+          <div class="lsc-fading-timeline__number">2</div>
+          <span class="lsc-fading-timeline__label">After 3 Sessions</span>
+          <div class="lsc-fading-timeline__visual"></div>
+          <p class="lsc-fading-timeline__desc">Significant fading. Lighter colours may be fully removed. Dark inks continue to break down.</p>
+        </div>
+
+        <div class="lsc-fading-timeline__stage">
+          <div class="lsc-fading-timeline__number">3</div>
+          <span class="lsc-fading-timeline__label">After 6 Sessions</span>
+          <div class="lsc-fading-timeline__visual"></div>
+          <p class="lsc-fading-timeline__desc">Most tattoos show 70-80% fading. Fine details often completely gone.</p>
+        </div>
+
+        <div class="lsc-fading-timeline__stage">
+          <div class="lsc-fading-timeline__number">4</div>
+          <span class="lsc-fading-timeline__label">After 10 Sessions</span>
+          <div class="lsc-fading-timeline__visual"></div>
+          <p class="lsc-fading-timeline__desc">Near-complete removal for most tattoos. Skin appears clear with minimal trace.</p>
+        </div>
+      {%- endif -%}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Fading Timeline",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How Your Tattoo Fades"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stage",
+      "name": "Stage",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Stage Label",
+          "default": "After 1 Session"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Initial treatment breaks down ink particles. Some lightening visible within 4-6 weeks."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Fading Timeline",
+      "blocks": [
+        {
+          "type": "stage",
+          "settings": {
+            "label": "After 1 Session",
+            "description": "Initial treatment breaks down ink particles. Some lightening visible within 4-6 weeks."
+          }
+        },
+        {
+          "type": "stage",
+          "settings": {
+            "label": "After 3 Sessions",
+            "description": "Significant fading. Lighter colours may be fully removed. Dark inks continue to break down."
+          }
+        },
+        {
+          "type": "stage",
+          "settings": {
+            "label": "After 6 Sessions",
+            "description": "Most tattoos show 70-80% fading. Fine details often completely gone."
+          }
+        },
+        {
+          "type": "stage",
+          "settings": {
+            "label": "After 10 Sessions",
+            "description": "Near-complete removal for most tattoos. Skin appears clear with minimal trace."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

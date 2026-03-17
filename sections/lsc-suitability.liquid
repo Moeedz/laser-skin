@@ -1,0 +1,263 @@
+{% comment %}
+  LSC Suitability Guide Section
+  Displays "Ideal For" and "May Not Be Suitable If" columns
+  Data: product.metafields.custom.suitability_ideal / suitability_not_suitable (JSON arrays)
+  Fallback: section blocks of type "ideal" / "not_suitable"
+{% endcomment %}
+
+{%- liquid
+  assign ideal_items = product.metafields.custom.suitability_ideal.value
+  assign not_suitable_items = product.metafields.custom.suitability_not_suitable.value
+
+  assign ideal_blocks = section.blocks | where: "type", "ideal"
+  assign not_suitable_blocks = section.blocks | where: "type", "not_suitable"
+
+  assign has_ideal = false
+  assign has_not_suitable = false
+
+  if ideal_items and ideal_items.size > 0
+    assign has_ideal = true
+  endif
+  if ideal_blocks.size > 0
+    assign has_ideal = true
+  endif
+
+  if not_suitable_items and not_suitable_items.size > 0
+    assign has_not_suitable = true
+  elsif not_suitable_blocks.size > 0
+    assign has_not_suitable = true
+  endif
+-%}
+
+{% if has_ideal or has_not_suitable %}
+<section class="lsc-suitability" id="suitability-guide">
+  <div class="lsc-suitability__header">
+    <span class="lsc-suitability__eyebrow">IS THIS RIGHT FOR YOU?</span>
+    <h2 class="lsc-suitability__heading">Suitability Guide</h2>
+  </div>
+
+  <div class="lsc-suitability__grid">
+    {%- if has_ideal -%}
+      <div class="lsc-suitability__column lsc-suitability__column--ideal">
+        <h3 class="lsc-suitability__column-heading">
+          <span class="lsc-suitability__icon lsc-suitability__icon--check">&#10003;</span>
+          Ideal For
+        </h3>
+        <ul class="lsc-suitability__list">
+          {%- assign suppress_ideal_handles = 'co2-laser-resurfacing,anti-wrinkle-injections,cosmetic-injections,laser-tattoo-removal,hydrofacial,dermaforce-rf-microneedling,chemical-peels,nctf-skin-booster,exosomes,polynucleotides,non-surgical-face-lift,non-surgical-body-sculpting,power-sculpt-hifem,radio-frequency,rf-skin-tightening,radio-frequency-skin-tightening,ipl-glo-facial,ipl-skin-rejuvenation,ipl' -%}
+          {%- assign suppress_ideal = false -%}
+          {%- if suppress_ideal_handles contains product.handle -%}
+            {%- assign suppress_ideal = true -%}
+          {%- endif -%}
+          {%- if ideal_items and ideal_items.size > 0 and suppress_ideal == false -%}
+            {%- for item in ideal_items -%}
+              <li class="lsc-suitability__item">
+                <span class="lsc-suitability__tick">&#10003;</span>
+                <span class="lsc-suitability__item-text">{{ item }}</span>
+              </li>
+            {%- endfor -%}
+          {%- endif -%}
+          {%- for block in ideal_blocks -%}
+            <li class="lsc-suitability__item" {{ block.shopify_attributes }}>
+              <span class="lsc-suitability__tick">&#10003;</span>
+              <span class="lsc-suitability__item-text">{{ block.settings.text }}</span>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+
+    {%- if has_not_suitable -%}
+      <div class="lsc-suitability__column lsc-suitability__column--not-suitable">
+        <h3 class="lsc-suitability__column-heading">
+          <span class="lsc-suitability__icon lsc-suitability__icon--cross">&#10005;</span>
+          May Not Be Suitable If
+        </h3>
+        <ul class="lsc-suitability__list">
+          {%- if not_suitable_items and not_suitable_items.size > 0 -%}
+            {%- for item in not_suitable_items -%}
+              <li class="lsc-suitability__item">
+                <span class="lsc-suitability__cross">&#10005;</span>
+                <span class="lsc-suitability__item-text">{{ item }}</span>
+              </li>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for block in not_suitable_blocks -%}
+              <li class="lsc-suitability__item" {{ block.shopify_attributes }}>
+                <span class="lsc-suitability__cross">&#10005;</span>
+                <span class="lsc-suitability__item-text">{{ block.settings.text }}</span>
+              </li>
+            {%- endfor -%}
+          {%- endif -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+{% endif %}
+
+<style>
+  .lsc-suitability {
+    background: var(--warm-white);
+    padding: 5rem 6%;
+  }
+
+  .lsc-suitability__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-suitability__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-suitability__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-taupe);
+    margin: 0;
+  }
+
+  .lsc-suitability__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2.5rem;
+  }
+
+  .lsc-suitability__column-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--dark-taupe);
+    margin: 0 0 1.2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .lsc-suitability__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  .lsc-suitability__icon--check {
+    color: var(--gold);
+  }
+
+  .lsc-suitability__icon--cross {
+    color: var(--dark-taupe);
+    opacity: 0.5;
+  }
+
+  .lsc-suitability__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lsc-suitability__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .lsc-suitability__item:last-child {
+    border-bottom: none;
+  }
+
+  .lsc-suitability__tick {
+    color: var(--gold);
+    font-size: 0.85rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1em;
+  }
+
+  .lsc-suitability__cross {
+    color: var(--dark-taupe);
+    opacity: 0.45;
+    font-size: 0.85rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1em;
+  }
+
+  .lsc-suitability__item-text {
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-suitability {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-suitability__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .lsc-suitability__column--ideal {
+      order: 1;
+    }
+
+    .lsc-suitability__column--not-suitable {
+      order: 2;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Suitability Guide",
+  "tag": "section",
+  "class": "lsc-suitability-section",
+  "blocks": [
+    {
+      "type": "ideal",
+      "name": "Ideal For Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Item text",
+          "default": "Suitable for most skin types"
+        }
+      ]
+    },
+    {
+      "type": "not_suitable",
+      "name": "Not Suitable Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Item text",
+          "default": "Active skin infections or open wounds"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

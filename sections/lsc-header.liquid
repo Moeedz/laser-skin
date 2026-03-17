@@ -1,0 +1,360 @@
+{% comment %}
+  LSC Header Section
+  Fixed navigation with logo, links, WhatsApp CTA, and mobile hamburger menu.
+  Transparent on load, frosted glass on scroll.
+{% endcomment %}
+
+<style>
+  .lsc-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .lsc-header.scrolled {
+    background: rgba(253, 252, 250, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 1rem 4%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  }
+
+  .lsc-header__logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-decoration: none;
+  }
+
+  .lsc-header__logo img {
+    height: 32px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: filter 0.4s;
+  }
+
+  .lsc-header.scrolled .lsc-header__logo img {
+    filter: none;
+  }
+
+  .lsc-header__logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.4s;
+  }
+
+  .lsc-header.scrolled .lsc-header__logo-text {
+    color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-header__nav {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lsc-header__nav a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .lsc-header.scrolled .lsc-header__nav a {
+    color: var(--charcoal, #2C2C2C);
+  }
+
+  .lsc-header__nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold, #C4A87C);
+    transition: width 0.3s;
+  }
+
+  .lsc-header__nav a:hover {
+    color: var(--gold, #c9a96e);
+  }
+
+  .lsc-header__nav a:hover::after {
+    width: 100%;
+  }
+
+  /* Dropdown submenu styles */
+  .lsc-header__nav > li {
+    position: relative;
+  }
+
+  .lsc-header__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background: var(--charcoal, #2C2824);
+    padding: 1rem 0 0.8rem;
+    margin-top: 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    z-index: 110;
+    list-style: none;
+  }
+
+  .lsc-header__nav > li:hover > .lsc-header__dropdown {
+    display: block;
+  }
+
+  .lsc-header__dropdown li a {
+    display: block;
+    padding: 0.55rem 1.4rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .lsc-header__dropdown li a:hover {
+    color: var(--gold, #c9a96e) !important;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .lsc-header__dropdown li a::after {
+    display: none;
+  }
+
+  .lsc-header__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .lsc-header.scrolled .lsc-header__cta {
+    background: var(--charcoal, #2C2824);
+    border-color: var(--charcoal, #2C2824);
+    color: #fff;
+  }
+
+  .lsc-header__cta:hover {
+    background: var(--gold, #C4A87C);
+    border-color: var(--gold, #C4A87C);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  /* Hamburger */
+  .lsc-header__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .lsc-header__hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  .lsc-header.scrolled .lsc-header__hamburger span {
+    background: var(--charcoal, #2C2C2C);
+  }
+
+  /* Mobile menu */
+  .lsc-header__mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--warm-white, #FDFCFA);
+    z-index: 200;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .lsc-header__mobile-menu.open {
+    display: flex;
+  }
+
+  .lsc-header__mobile-menu a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal, #2C2C2C);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .lsc-header__mobile-menu a:hover {
+    color: var(--gold, #C4A87C);
+  }
+
+  .lsc-header__mobile-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 4%;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--charcoal, #2C2C2C);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-header__nav {
+      display: none;
+    }
+
+    .lsc-header__cta {
+      display: none;
+    }
+
+    .lsc-header__hamburger {
+      display: flex;
+    }
+  }
+</style>
+
+<header class="lsc-header" id="lsc-header">
+  {%- if settings.logo != blank -%}
+    <a href="/" class="lsc-header__logo">
+      <img src="{{ settings.logo | image_url: height: 64 }}" alt="{{ shop.name }}" loading="eager">
+    </a>
+  {%- else -%}
+    <a href="/" class="lsc-header__logo-text">{{ shop.name }}</a>
+  {%- endif -%}
+
+  <ul class="lsc-header__nav">
+    <li>
+      <a href="/collections/treatments">Treatments</a>
+      <ul class="lsc-header__dropdown">
+        <li><a href="/products/laser-hair-removal">Laser Hair Removal</a></li>
+        <li><a href="/products/co2-laser-resurfacing">CO2 Laser Resurfacing</a></li>
+        <li><a href="/products/laser-tattoo-removal">Laser Tattoo Removal</a></li>
+        <li><a href="/products/dermaforce-rf-microneedling">RF Microneedling</a></li>
+        <li><a href="/products/anti-wrinkle-injections">Anti-Wrinkle Injections</a></li>
+        <li><a href="/products/polynucleotides">Polynucleotides</a></li>
+        <li><a href="/products/nctf">NCTF Skin Booster</a></li>
+        <li><a href="/products/exosomes">Exosomes</a></li>
+        <li><a href="/products/ipl">IPL Skin Rejuvenation</a></li>
+        <li><a href="/products/chemical-peel">Chemical Peel</a></li>
+        <li><a href="/products/hydrofacial">Hydrofacial</a></li>
+        <li><a href="/products/radio-frequency-skin-tightening">RF Skin Tightening</a></li>
+        <li><a href="/products/non-surgical-face-lift">Non-Surgical Face Lift</a></li>
+        <li><a href="/products/non-surgical-body-sculpting">Body Sculpting</a></li>
+        <li><a href="/products/blemish-removal">Blemish Removal</a></li>
+      </ul>
+    </li>
+    <li><a href="/pages/free-skin-assessment">Skin Assessment</a></li>
+    <li><a href="/pages/packages">Packages</a></li>
+    <li><a href="/pages/about-us">About</a></li>
+    <li><a href="/products/laser-skin-clinics-gift-card">Gift Cards</a></li>
+  </ul>
+
+  {%- if product -%}
+  <a href="#lsc-contact" class="lsc-header__cta" onclick="var el=document.getElementById('lsc-contact');if(el){el.scrollIntoView({behavior:'smooth'});return false;}">
+    Book Now
+  </a>
+  {%- else -%}
+  <a href="/pages/contact" class="lsc-header__cta">
+    Book Now
+  </a>
+  {%- endif -%}
+
+  <button class="lsc-header__hamburger" aria-label="Open menu" onclick="document.getElementById('lsc-mobile-menu').classList.add('open')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<!-- Mobile Menu -->
+<div class="lsc-header__mobile-menu" id="lsc-mobile-menu">
+  <button class="lsc-header__mobile-close" aria-label="Close menu" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open')">&times;</button>
+  <a href="/collections/treatments" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open')">Treatments</a>
+  <a href="/pages/free-skin-assessment" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open')">Skin Assessment</a>
+  <a href="/pages/packages" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open')">Packages</a>
+  <a href="/pages/about-us" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open')">About</a>
+  <a href="/products/laser-skin-clinics-gift-card" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open')">Gift Cards</a>
+  {%- if product -%}
+  <a href="#lsc-contact" style="background:var(--charcoal,#2C2824);color:#fff;padding:0.8rem 2rem;margin-top:1rem;font-size:0.82rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-align:center;" onclick="document.getElementById('lsc-mobile-menu').classList.remove('open');var el=document.getElementById('lsc-contact');if(el){el.scrollIntoView({behavior:'smooth'});return false;}">
+    Book Now
+  </a>
+  {%- else -%}
+  <a href="/pages/contact" style="background:var(--charcoal,#2C2824);color:#fff;padding:0.8rem 2rem;margin-top:1rem;font-size:0.82rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-align:center;">
+    Book Now
+  </a>
+  {%- endif -%}
+</div>
+
+<script>
+  (function() {
+    var header = document.getElementById('lsc-header');
+    if (!header) return;
+    var observer = new IntersectionObserver(function(entries) {
+      if (!entries[0].isIntersecting) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { threshold: [1] });
+    var tracker = document.getElementById('header-scroll-tracker');
+    if (tracker) observer.observe(tracker);
+    else header.classList.add('scrolled');
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "lsc-header-section",
+  "settings": []
+}
+{% endschema %}

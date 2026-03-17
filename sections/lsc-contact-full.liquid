@@ -1,0 +1,491 @@
+<style>
+  .lsc-contact-full {
+    background: var(--warm-white, #FAF7F2);
+    padding: 5rem 6%;
+  }
+
+  .lsc-contact-full__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  /* ── Left column ── */
+  .lsc-contact-full__left {}
+
+  .lsc-contact-full__whatsapp-card {
+    background: #25D366;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .lsc-contact-full__whatsapp-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .lsc-contact-full__whatsapp-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 0 0.5rem;
+  }
+
+  .lsc-contact-full__whatsapp-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin: 0 0 1.2rem;
+  }
+
+  .lsc-contact-full__whatsapp-btn {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #25D366;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    transition: opacity 0.3s ease;
+  }
+
+  .lsc-contact-full__whatsapp-btn:hover {
+    opacity: 0.9;
+  }
+
+  .lsc-contact-full__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .lsc-contact-full__detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .lsc-contact-full__detail-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    color: var(--gold, #C5A467);
+  }
+
+  .lsc-contact-full__detail-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+
+  .lsc-contact-full__detail-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold, #C5A467);
+    margin-bottom: 0.15rem;
+  }
+
+  .lsc-contact-full__detail-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--charcoal, #2C2824);
+    line-height: 1.5;
+  }
+
+  .lsc-contact-full__detail-text a {
+    color: var(--charcoal, #2C2824);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .lsc-contact-full__detail-text a:hover {
+    color: var(--gold, #C5A467);
+  }
+
+  .lsc-contact-full__parking {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--gold, #C5A467);
+  }
+
+  /* ── Right column — Form ── */
+  .lsc-contact-full__form-wrapper {}
+
+  .lsc-contact-full__form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2824);
+    margin: 0 0 1.5rem;
+  }
+
+  .lsc-contact-full__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .lsc-contact-full__field {
+    margin-bottom: 1rem;
+  }
+
+  .lsc-contact-full__label {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--charcoal, #2C2824);
+    margin-bottom: 0.4rem;
+  }
+
+  .lsc-contact-full__input,
+  .lsc-contact-full__select,
+  .lsc-contact-full__textarea {
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--charcoal, #2C2824);
+    background: #FFFFFF;
+    border: 1px solid var(--sand, #D6CFC4);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .lsc-contact-full__input:focus,
+  .lsc-contact-full__select:focus,
+  .lsc-contact-full__textarea:focus {
+    outline: none;
+    border-color: var(--gold, #C5A467);
+  }
+
+  .lsc-contact-full__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .lsc-contact-full__submit {
+    display: inline-block;
+    background: var(--gold, #C5A467);
+    color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 0.5rem;
+  }
+
+  .lsc-contact-full__submit:hover {
+    background: var(--charcoal, #2C2824);
+  }
+
+  /* ── Map ── */
+  .lsc-contact-full__map {
+    max-width: 1100px;
+    margin: 3rem auto 0;
+  }
+
+  .lsc-contact-full__map iframe {
+    width: 100%;
+    height: 350px;
+    border: 1px solid var(--sand, #D6CFC4);
+    border-radius: 8px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .lsc-contact-full__grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .lsc-contact-full__form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .lsc-contact-full__map iframe {
+      height: 260px;
+    }
+  }
+</style>
+
+<section class="lsc-contact-full" id="section-{{ section.id }}">
+  <div class="lsc-contact-full__grid">
+
+    <!-- ── Left Column ── -->
+    <div class="lsc-contact-full__left">
+
+      <!-- WhatsApp Card -->
+      <div class="lsc-contact-full__whatsapp-card">
+        <svg class="lsc-contact-full__whatsapp-icon" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <h3 class="lsc-contact-full__whatsapp-title">Message Us on WhatsApp</h3>
+        <p class="lsc-contact-full__whatsapp-text">
+          Quick replies during clinic hours.<br>
+          Tap below to start a conversation.
+        </p>
+        <a
+          href="https://wa.me/447798983387?text={{ section.settings.whatsapp_message | url_encode }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="lsc-contact-full__whatsapp-btn"
+        >
+          Open WhatsApp
+        </a>
+      </div>
+
+      <!-- Clinic Details -->
+      <div class="lsc-contact-full__details">
+
+        <!-- Address -->
+        <div class="lsc-contact-full__detail">
+          <span class="lsc-contact-full__detail-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          </span>
+          <div>
+            <p class="lsc-contact-full__detail-label">Address</p>
+            <p class="lsc-contact-full__detail-text">4 Perton Farm Barns, Jenny Walkers Lane,<br>Wolverhampton WV6 7HB</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="lsc-contact-full__detail">
+          <span class="lsc-contact-full__detail-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          <div>
+            <p class="lsc-contact-full__detail-label">WhatsApp</p>
+            <p class="lsc-contact-full__detail-text"><a href="https://wa.me/447798983387" target="_blank" rel="noopener noreferrer">07798 983387</a></p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="lsc-contact-full__detail">
+          <span class="lsc-contact-full__detail-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </span>
+          <div>
+            <p class="lsc-contact-full__detail-label">Email</p>
+            <p class="lsc-contact-full__detail-text"><a href="mailto:info@laserskinclinics.co.uk">info@laserskinclinics.co.uk</a></p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="lsc-contact-full__detail">
+          <span class="lsc-contact-full__detail-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </span>
+          <div>
+            <p class="lsc-contact-full__detail-label">Phone</p>
+            <p class="lsc-contact-full__detail-text"><a href="tel:01902256667">01902 256 667</a></p>
+          </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="lsc-contact-full__detail">
+          <span class="lsc-contact-full__detail-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          </span>
+          <div>
+            <p class="lsc-contact-full__detail-label">Opening Hours</p>
+            <p class="lsc-contact-full__detail-text">
+              Tue / Wed / Fri: 10am &ndash; 6pm<br>
+              Sat: 10am &ndash; 4pm<br>
+              Closed Mon / Thu / Sun
+            </p>
+          </div>
+        </div>
+
+        <!-- Parking -->
+        <div class="lsc-contact-full__parking">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Free parking on site
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Right Column — Enquiry Form ── -->
+    <div class="lsc-contact-full__form-wrapper">
+      <h2 class="lsc-contact-full__form-title">Send Us an Enquiry</h2>
+
+      {%- form 'contact', id: 'contact_form' -%}
+
+        {%- if form.posted_successfully? -%}
+          <p style="color: #25D366; font-family: 'Outfit', sans-serif; font-size: 0.9rem; margin-bottom: 1.5rem;">
+            Thank you for your message. We'll be in touch shortly.
+          </p>
+        {%- endif -%}
+
+        {%- if form.errors -%}
+          <div style="color: #c0392b; font-family: 'Outfit', sans-serif; font-size: 0.85rem; margin-bottom: 1.5rem;">
+            {{ form.errors | default_errors }}
+          </div>
+        {%- endif -%}
+
+        <!-- Name Row -->
+        <div class="lsc-contact-full__form-row">
+          <div class="lsc-contact-full__field">
+            <label class="lsc-contact-full__label" for="contact-first-name">First Name *</label>
+            <input
+              class="lsc-contact-full__input"
+              type="text"
+              id="contact-first-name"
+              name="contact[first_name]"
+              required
+              autocomplete="given-name"
+            >
+          </div>
+          <div class="lsc-contact-full__field">
+            <label class="lsc-contact-full__label" for="contact-last-name">Last Name *</label>
+            <input
+              class="lsc-contact-full__input"
+              type="text"
+              id="contact-last-name"
+              name="contact[last_name]"
+              required
+              autocomplete="family-name"
+            >
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="lsc-contact-full__field">
+          <label class="lsc-contact-full__label" for="contact-email">Email *</label>
+          <input
+            class="lsc-contact-full__input"
+            type="email"
+            id="contact-email"
+            name="contact[email]"
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <!-- Phone -->
+        <div class="lsc-contact-full__field">
+          <label class="lsc-contact-full__label" for="contact-phone">Phone</label>
+          <input
+            class="lsc-contact-full__input"
+            type="tel"
+            id="contact-phone"
+            name="contact[phone]"
+            autocomplete="tel"
+          >
+        </div>
+
+        <!-- Treatment Dropdown -->
+        <div class="lsc-contact-full__field">
+          <label class="lsc-contact-full__label" for="contact-treatment">Treatment of Interest</label>
+          <select class="lsc-contact-full__select" id="contact-treatment" name="contact[treatment]">
+            <option value="">Select a treatment...</option>
+            <option value="Laser Hair Removal">Laser Hair Removal</option>
+            <option value="Tattoo Removal">Tattoo Removal</option>
+            <option value="Carbon Laser Facial">Carbon Laser Facial</option>
+            <option value="Skin Rejuvenation">Skin Rejuvenation</option>
+            <option value="Acne Treatment">Acne Treatment</option>
+            <option value="Pigmentation Removal">Pigmentation Removal</option>
+            <option value="Rosacea Treatment">Rosacea Treatment</option>
+            <option value="Thread Vein Removal">Thread Vein Removal</option>
+            <option value="Fungal Nail Treatment">Fungal Nail Treatment</option>
+            <option value="Mole & Skin Tag Removal">Mole &amp; Skin Tag Removal</option>
+            <option value="Fat Freezing">Fat Freezing</option>
+            <option value="Stretch Mark Reduction">Stretch Mark Reduction</option>
+            <option value="Scar Reduction">Scar Reduction</option>
+            <option value="Age Spot Removal">Age Spot Removal</option>
+            <option value="Wart & Verruca Removal">Wart &amp; Verruca Removal</option>
+            <option value="Skin Assessment">Skin Assessment</option>
+            <option value="Gift Card">Gift Card</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div class="lsc-contact-full__field">
+          <label class="lsc-contact-full__label" for="contact-message">Message</label>
+          <textarea
+            class="lsc-contact-full__textarea"
+            id="contact-message"
+            name="contact[body]"
+            rows="6"
+            placeholder="Tell us a bit about what you're looking for..."
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="lsc-contact-full__submit btn-primary">
+          Send Enquiry
+        </button>
+
+      {%- endform -%}
+    </div>
+
+  </div>
+
+  <!-- ── Google Maps Embed ── -->
+  <div class="lsc-contact-full__map">
+    <iframe
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=4+Perton+Farm+Barns,+Jenny+Walkers+Lane,+Wolverhampton+WV6+7HB"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Laser Skin Clinics Location"
+    ></iframe>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Contact Full",
+  "settings": [
+    {
+      "type": "text",
+      "id": "whatsapp_message",
+      "label": "WhatsApp pre-filled message",
+      "default": "Hi! I'd like to enquire about a treatment please."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Full"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,262 @@
+{% comment %}
+  LSC Results Timeline Section
+  Horizontal timeline showing what to expect over time after treatment.
+  Data: product.metafields.custom.results_timeline (JSON array of {timeframe, title, description})
+  Fallback: section blocks of type "stage"
+  Hides entirely if no data.
+{% endcomment %}
+
+{%- liquid
+  assign timeline_data = product.metafields.custom.results_timeline.value
+  assign stage_blocks = section.blocks | where: "type", "stage"
+
+  assign has_data = false
+  assign use_metafield = false
+
+  if timeline_data and timeline_data.size > 0
+    assign has_data = true
+    assign use_metafield = true
+  elsif stage_blocks.size > 0
+    assign has_data = true
+  endif
+-%}
+
+{% if has_data %}
+<section class="lsc-timeline" id="results-timeline">
+  <div class="lsc-timeline__header">
+    <span class="lsc-timeline__eyebrow">WHAT TO EXPECT</span>
+    <h2 class="lsc-timeline__heading">Your Results Timeline</h2>
+  </div>
+
+  <div class="lsc-timeline__track">
+    {%- if use_metafield -%}
+      {%- for stage in timeline_data -%}
+        <div class="lsc-timeline__stage" style="--stage-index: {{ forloop.index0 }};">
+          <div class="lsc-timeline__circle">
+            <span class="lsc-timeline__number">{{ forloop.index }}</span>
+          </div>
+          <span class="lsc-timeline__timeframe">{{ stage.timeframe }}</span>
+          <h3 class="lsc-timeline__title">{{ stage.title }}</h3>
+          <p class="lsc-timeline__description">{{ stage.description }}</p>
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for block in stage_blocks -%}
+        <div class="lsc-timeline__stage" {{ block.shopify_attributes }} style="--stage-index: {{ forloop.index0 }};">
+          <div class="lsc-timeline__circle">
+            <span class="lsc-timeline__number">{{ forloop.index }}</span>
+          </div>
+          <span class="lsc-timeline__timeframe">{{ block.settings.timeframe }}</span>
+          <h3 class="lsc-timeline__title">{{ block.settings.title }}</h3>
+          <p class="lsc-timeline__description">{{ block.settings.description }}</p>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+{% endif %}
+
+<style>
+  .lsc-timeline {
+    background: var(--charcoal, #2C2824);
+    padding: 5rem 6%;
+  }
+
+  .lsc-timeline__header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .lsc-timeline__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-timeline__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .lsc-timeline__track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .lsc-timeline__stage {
+    text-align: center;
+    position: relative;
+  }
+
+  /* Gold connecting line between stages */
+  .lsc-timeline__stage:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 28px);
+    width: calc(100% - 36px);
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+  }
+
+  .lsc-timeline__circle {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    background: var(--charcoal, #2C2824);
+  }
+
+  .lsc-timeline__number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .lsc-timeline__timeframe {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin: 1rem 0 0.5rem;
+  }
+
+  .lsc-timeline__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .lsc-timeline__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Tablet: 2x2 grid */
+  @media screen and (max-width: 768px) {
+    .lsc-timeline {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-timeline__track {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 2rem;
+    }
+
+    /* Hide horizontal connectors on tablet since grid wraps */
+    .lsc-timeline__stage:nth-child(2)::after {
+      display: none;
+    }
+
+    .lsc-timeline__stage:nth-child(4)::after {
+      display: none;
+    }
+  }
+
+  /* Mobile: single column with vertical line */
+  @media screen and (max-width: 480px) {
+    .lsc-timeline__track {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-left: 40px;
+      position: relative;
+    }
+
+    /* Vertical timeline line on the left */
+    .lsc-timeline__track::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 20px;
+      bottom: 20px;
+      width: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+    }
+
+    .lsc-timeline__stage {
+      text-align: left;
+      padding: 0 0 2rem 1.2rem;
+    }
+
+    .lsc-timeline__stage:last-child {
+      padding-bottom: 0;
+    }
+
+    /* Hide horizontal connecting lines on mobile */
+    .lsc-timeline__stage::after {
+      display: none !important;
+    }
+
+    .lsc-timeline__circle {
+      position: absolute;
+      left: -40px;
+      top: 0;
+      margin: 0;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Results Timeline",
+  "tag": "section",
+  "class": "lsc-timeline-section",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "stage",
+      "name": "Timeline Stage",
+      "settings": [
+        {
+          "type": "text",
+          "id": "timeframe",
+          "label": "Timeframe",
+          "default": "Week 1"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Initial Recovery"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Mild redness and sensitivity is normal during this phase. Keep skin hydrated and protected."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

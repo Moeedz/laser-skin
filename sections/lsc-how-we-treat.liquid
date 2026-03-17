@@ -1,0 +1,368 @@
+{%- comment -%}
+  LSC "How We Treat It" Section
+  Step-by-step treatment process for blemish removal pages.
+  Content driven by product.handle.
+{%- endcomment -%}
+
+{%- assign blemish_handles = 'skin-tag-removal,mole-removal,milia-removal,thread-vein-removal,age-spot-removal,cherry-angioma-removal,spider-naevi-removal,xanthelasma-removal,wart-and-verruca-removal,seborrheic-wart-removal' -%}
+{%- assign is_blemish = false -%}
+{%- if blemish_handles contains product.handle -%}
+  {%- assign is_blemish = true -%}
+{%- endif -%}
+
+{%- if is_blemish -%}
+<section class="lsc-how-we-treat">
+  <div class="lsc-how-we-treat__inner">
+    <div class="lsc-how-we-treat__header">
+      <span class="lsc-how-we-treat__eyebrow">THE PROCESS</span>
+      <h2 class="lsc-how-we-treat__heading">How We Treat It</h2>
+    </div>
+
+    <div class="lsc-how-we-treat__steps">
+      {%- if product.handle == 'skin-tag-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">Your skin tag is examined to confirm it is benign and suitable for removal.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy or CryoPen cryotherapy (selected based on the size and location of your skin tag), the growth is precisely targeted and removed.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">A small scab forms and falls away naturally within 7–14 days, revealing clear skin beneath.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'mole-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">Your mole is carefully examined to confirm it is benign and safe to treat. We may recommend GP clearance for certain moles before proceeding.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy, a fine probe delivers a precise electrical current that cauterises and removes the mole tissue, sealing the blood supply.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">A small scab forms and falls away naturally within 7–14 days. Most moles are fully removed in a single session.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'milia-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">The milia are examined to confirm they are suitable for treatment and to plan the approach.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy, a fine probe vaporises the keratin content trapped inside each milia. This is the preferred method as it removes the contents cleanly without marking the skin.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">The treated areas settle within a few days. The milia will not return in the same spot, though new ones can form if the underlying cause is not addressed.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'thread-vein-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">The thread veins are mapped to plan the most effective treatment approach.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy, a fine probe delivers a precise current that cauterises and seals each individual blood vessel. The pinpoint accuracy of SWD makes it the ideal method for thread veins.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">Treated veins may appear slightly darker initially before fading over 2–4 weeks as the body reabsorbs the sealed vessels.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'age-spot-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">Your age spots are examined to confirm they are benign solar lentigines and to determine the best treatment approach.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Depending on the size, number, and location of your age spots, we use Short Wave Diathermy, CryoPen cryotherapy, or IPL. Your practitioner will recommend the most effective method during your consultation.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">Treated spots will temporarily darken before naturally flaking away over 7–14 days, revealing clearer skin beneath.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'cherry-angioma-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">The cherry angioma is examined to confirm it is benign and suitable for removal.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy or CryoPen cryotherapy (selected based on size and location), the blood vessel cluster is precisely targeted and destroyed.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">The treated spot may darken initially before fading and healing over 7–14 days.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'spider-naevi-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">The spider naevus is examined to confirm it is suitable for treatment.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy, a fine probe targets and cauterises the central feeding vessel. Once the central vessel is sealed, the radiating 'legs' collapse and fade.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">The treated area settles within 7–14 days as the sealed vessels are reabsorbed by the body.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'xanthelasma-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">The xanthelasma is examined and measured. We may recommend a cholesterol check with your GP as xanthelasma can be associated with elevated cholesterol levels.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy, a fine probe delivers a controlled current that shrinks the fatty deposit. The delicate eye area requires precise technique, which SWD provides.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">Small crusts form and heal within 1–2 weeks. More than one session may be needed for larger deposits, with each eye treated at separate appointments.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'wart-and-verruca-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">Your wart or verruca is examined to confirm the type and plan the treatment approach.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using CryoPen cryotherapy, a precise jet of nitrous oxide freezes the wart tissue, destroying the cells and cutting off the blood supply. CryoPen is the preferred method for viral warts.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">The treated area may blister slightly before the wart dries up and falls away over 7–14 days. Stubborn warts may require a follow-up session.</p>
+          </div>
+        </div>
+
+      {%- elsif product.handle == 'seborrheic-wart-removal' -%}
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">1</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Assessment</h3>
+            <p class="lsc-how-we-treat__desc">The seborrheic wart is examined to confirm it is a keratosis and not another type of lesion.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">2</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Treatment</h3>
+            <p class="lsc-how-we-treat__desc">Using Short Wave Diathermy or CryoPen cryotherapy (selected based on size, thickness, and location), the growth is precisely removed. SWD is often preferred for thicker, more stubborn growths.</p>
+          </div>
+        </div>
+        <div class="lsc-how-we-treat__step">
+          <span class="lsc-how-we-treat__number">3</span>
+          <div class="lsc-how-we-treat__content">
+            <h3 class="lsc-how-we-treat__title">Healing</h3>
+            <p class="lsc-how-we-treat__desc">A scab forms and falls away naturally within 7–14 days, revealing smoother skin beneath.</p>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+<style>
+  .lsc-how-we-treat {
+    background: var(--cream, #F5F0EB);
+    padding: 5rem 6%;
+  }
+
+  .lsc-how-we-treat__inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .lsc-how-we-treat__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-how-we-treat__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-how-we-treat__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .lsc-how-we-treat__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .lsc-how-we-treat__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lsc-how-we-treat__step:hover {
+    border-color: var(--gold, #C4A97D);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .lsc-how-we-treat__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: var(--gold, #C4A97D);
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .lsc-how-we-treat__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .lsc-how-we-treat__desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #6B5E54);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 580px) {
+    .lsc-how-we-treat {
+      padding: 3rem 5%;
+    }
+
+    .lsc-how-we-treat__step {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "How We Treat It",
+  "settings": [],
+  "presets": [
+    {
+      "name": "How We Treat It"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,69 @@
+{% comment %}
+  Snippet: lsc-ai-content-block.liquid
+  AI-friendly semantic content block for product pages.
+  Renders a clean, parseable summary paragraph for AI crawlers.
+  Usage: {% render 'lsc-ai-content-block' %}
+{% endcomment %}
+
+{%- liquid
+  assign show_ai_block = false
+  assign ai_summary = ''
+
+  if template contains 'product'
+    assign show_ai_block = true
+    assign price_text = ''
+    if product.metafields.custom.price_from != blank
+      assign price_text = ', with prices from ' | append: product.metafields.custom.price_from
+    elsif product.price > 0
+      assign formatted_price = product.price | money
+      assign price_text = ', priced at ' | append: formatted_price
+    endif
+
+    assign practitioner_text = ''
+    if product.metafields.custom.practitioner_name != blank
+      assign practitioner_text = ' Treatments are carried out by ' | append: product.metafields.custom.practitioner_name | append: '.'
+    endif
+
+    assign description_text = product.metafields.custom.hero_description | strip_html | truncate: 200
+    if description_text == blank
+      assign description_text = product.description | strip_html | truncate: 200
+    endif
+
+    assign ai_summary = product.title | append: ' at Laser Skin Clinics in Wolverhampton' | append: price_text | append: '. ' | append: description_text | append: '.' | append: practitioner_text | append: ' To book, contact us on WhatsApp at 07798 983387 or call 01902 256 667.'
+
+  elsif template contains 'page'
+    assign show_ai_block = true
+    assign page_desc = page.content | strip_html | truncate: 250
+    assign ai_summary = page.title | append: ' — Laser Skin Clinics, Wolverhampton. ' | append: page_desc | append: ' Contact us on WhatsApp at 07798 983387 or call 01902 256 667.'
+
+  elsif template == 'index'
+    assign show_ai_block = true
+    assign ai_summary = 'Laser Skin Clinics is a medically-led aesthetic clinic in Perton, Wolverhampton, offering laser hair removal, skin rejuvenation, anti-wrinkle treatments, dermal fillers, HydraFacial, body sculpting, and blemish removal. Led by Maxine Harish (Level 4 VTCT, IISHCA qualified, Council Registered) and Dr Sangeeta Scotton (MBBS, MRCP, NHS Consultant). Rated 4.9/5 on Google with 246+ reviews. Open Tuesday, Wednesday, Friday 10am–6pm, Saturday 10am–4pm. Book via WhatsApp 07798 983387 or call 01902 256 667.'
+  endif
+-%}
+
+{%- if show_ai_block -%}
+<style>
+  /* ── AI Content Block ── */
+  .lsc-ai-content-block {
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .lsc-ai-content-block p {
+    margin: 0;
+  }
+</style>
+
+<article class="lsc-ai-content-block" aria-label="{% if template contains 'product' %}Treatment summary{% elsif template == 'index' %}Clinic overview{% else %}Page summary{% endif %} for AI assistants">
+  <p>{{ ai_summary }}</p>
+</article>
+{%- endif -%}

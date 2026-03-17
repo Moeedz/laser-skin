@@ -1,0 +1,145 @@
+{%- comment -%}
+  LSC Blemish Navigation
+  Pill-style links to other blemish removal pages.
+  Auto-excludes the current product.
+{%- endcomment -%}
+
+{%- assign blemish_handles = 'skin-tag-removal,mole-removal,milia-removal,thread-vein-removal,age-spot-removal,cherry-angioma-removal,spider-naevi-removal,xanthelasma-removal,wart-and-verruca-removal,seborrheic-wart-removal' -%}
+{%- assign is_blemish = false -%}
+{%- if blemish_handles contains product.handle -%}
+  {%- assign is_blemish = true -%}
+{%- endif -%}
+
+{%- if is_blemish -%}
+<section class="lsc-blemish-nav">
+  <div class="lsc-blemish-nav__inner">
+    <div class="lsc-blemish-nav__header">
+      <span class="lsc-blemish-nav__eyebrow">EXPLORE</span>
+      <h2 class="lsc-blemish-nav__heading">Other Blemishes We Treat</h2>
+    </div>
+
+    <div class="lsc-blemish-nav__pills">
+      {%- unless product.handle == 'skin-tag-removal' -%}
+        <a href="/products/skin-tag-removal" class="lsc-blemish-nav__pill">Skin Tags</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'mole-removal' -%}
+        <a href="/products/mole-removal" class="lsc-blemish-nav__pill">Moles</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'milia-removal' -%}
+        <a href="/products/milia-removal" class="lsc-blemish-nav__pill">Milia</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'thread-vein-removal' -%}
+        <a href="/products/thread-vein-removal" class="lsc-blemish-nav__pill">Thread Veins</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'age-spot-removal' -%}
+        <a href="/products/age-spot-removal" class="lsc-blemish-nav__pill">Age Spots</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'cherry-angioma-removal' -%}
+        <a href="/products/cherry-angioma-removal" class="lsc-blemish-nav__pill">Cherry Angiomas</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'spider-naevi-removal' -%}
+        <a href="/products/spider-naevi-removal" class="lsc-blemish-nav__pill">Spider Naevi</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'xanthelasma-removal' -%}
+        <a href="/products/xanthelasma-removal" class="lsc-blemish-nav__pill">Xanthelasma</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'wart-and-verruca-removal' -%}
+        <a href="/products/wart-and-verruca-removal" class="lsc-blemish-nav__pill">Warts & Verrucas</a>
+      {%- endunless -%}
+      {%- unless product.handle == 'seborrheic-wart-removal' -%}
+        <a href="/products/seborrheic-wart-removal" class="lsc-blemish-nav__pill">Seborrheic Warts</a>
+      {%- endunless -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+<style>
+  .lsc-blemish-nav {
+    background: var(--warm-white, #FAF8F5);
+    padding: 4rem 6%;
+  }
+
+  .lsc-blemish-nav__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lsc-blemish-nav__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .lsc-blemish-nav__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--gold, #C4A97D);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-blemish-nav__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  .lsc-blemish-nav__pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .lsc-blemish-nav__pill {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    text-decoration: none;
+    padding: 0.6rem 1.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 100px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+
+  .lsc-blemish-nav__pill:hover {
+    background: var(--charcoal, #2C2C2C);
+    border-color: var(--charcoal, #2C2C2C);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  @media screen and (max-width: 580px) {
+    .lsc-blemish-nav {
+      padding: 3rem 5%;
+    }
+
+    .lsc-blemish-nav__pills {
+      gap: 0.5rem;
+    }
+
+    .lsc-blemish-nav__pill {
+      font-size: 0.72rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Blemish Navigation",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Blemish Navigation"
+    }
+  ]
+}
+{% endschema %}

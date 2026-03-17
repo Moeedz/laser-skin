@@ -1,0 +1,196 @@
+{% comment %}
+  LSC Aftercare Guidance Section
+  Dark background with 3 aftercare cards.
+  Data: product.metafields.custom.aftercare_steps (JSON array of {timeframe, title, description})
+  Fallback: section blocks of type "step"
+  Hides entirely if no data.
+{% endcomment %}
+
+{%- liquid
+  assign aftercare_data = product.metafields.custom.aftercare_steps.value
+  assign step_blocks = section.blocks | where: "type", "step"
+
+  assign has_data = false
+  assign use_metafield = false
+
+  if aftercare_data and aftercare_data.size > 0
+    assign has_data = true
+    assign use_metafield = true
+  elsif step_blocks.size > 0
+    assign has_data = true
+  endif
+-%}
+
+{% if has_data %}
+<section class="lsc-aftercare" id="aftercare-guidance">
+  <div class="lsc-aftercare__header">
+    <span class="lsc-aftercare__eyebrow">POST-TREATMENT</span>
+    <h2 class="lsc-aftercare__heading">Aftercare Guidance</h2>
+  </div>
+
+  <div class="lsc-aftercare__grid">
+    {%- if use_metafield -%}
+      {%- for step in aftercare_data -%}
+        <div class="lsc-aftercare__card">
+          <span class="lsc-aftercare__badge">{{ step.timeframe }}</span>
+          <h3 class="lsc-aftercare__title">{{ step.title }}</h3>
+          <p class="lsc-aftercare__description">{{ step.description }}</p>
+        </div>
+      {%- endfor -%}
+    {%- else -%}
+      {%- for block in step_blocks -%}
+        <div class="lsc-aftercare__card" {{ block.shopify_attributes }}>
+          <span class="lsc-aftercare__badge">{{ block.settings.timeframe }}</span>
+          <h3 class="lsc-aftercare__title">{{ block.settings.title }}</h3>
+          <p class="lsc-aftercare__description">{{ block.settings.description }}</p>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+{% endif %}
+
+<style>
+  .lsc-aftercare {
+    background: var(--charcoal, #2C2824);
+    padding: 5rem 6%;
+  }
+
+  .lsc-aftercare__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-aftercare__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .lsc-aftercare__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .lsc-aftercare__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .lsc-aftercare__card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lsc-aftercare__card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(183, 157, 117, 0.08);
+  }
+
+  .lsc-aftercare__badge {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid var(--gold);
+    padding: 0.3rem 0.8rem;
+    line-height: 1;
+  }
+
+  .lsc-aftercare__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 1rem 0 0.6rem;
+  }
+
+  .lsc-aftercare__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--taupe, #B8A99A);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Tablet: maintain 3 columns */
+  @media screen and (max-width: 768px) {
+    .lsc-aftercare {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-aftercare__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .lsc-aftercare__card {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Mobile: single column stack */
+  @media screen and (max-width: 480px) {
+    .lsc-aftercare__grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    .lsc-aftercare__card {
+      padding: 1.8rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Aftercare",
+  "tag": "section",
+  "class": "lsc-aftercare-section",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Aftercare Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "timeframe",
+          "label": "Timeframe",
+          "default": "First 24 Hours"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Immediate Care"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Avoid direct sun exposure and keep the treated area clean and moisturised."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

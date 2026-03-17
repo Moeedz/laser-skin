@@ -1,0 +1,141 @@
+{% comment %}
+  Snippet: lsc-ga4-events.liquid
+  Pushes GA4-compatible events to dataLayer (consumed by GTM-MG76XPBQ).
+  Automatic page-level events + delegated click tracking for CTAs.
+  Include once in theme.liquid before </body>: {% render 'lsc-ga4-events' %}
+{% endcomment %}
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+/* ── 1. Page-type context (enhances all GTM triggers) ─────────────────── */
+dataLayer.push({
+  event: 'page_context',
+  page_type: {{ request.page_type | json }},
+  page_template: {{ template | json }},
+  shop_name: {{ shop.name | json }}
+});
+
+/* ── 2. view_item — treatment / product pages ─────────────────────────── */
+{%- if template contains 'product' -%}
+dataLayer.push({
+  event: 'view_item',
+  ecommerce: {
+    currency: {{ shop.currency | json }},
+    value: {{ product.price | money_without_currency | remove: ',' | json }},
+    items: [{
+      item_id: {{ product.id | json }},
+      item_name: {{ product.title | json }},
+      item_category: {{ product.type | json }},
+      item_variant: {{ product.selected_or_first_available_variant.title | json }},
+      price: {{ product.price | money_without_currency | remove: ',' | json }},
+      quantity: 1
+    }]
+  }
+});
+{%- endif -%}
+
+/* ── 3. view_page — page template pages ──────────────────────────────── */
+{%- if template contains 'page' -%}
+dataLayer.push({
+  event: 'view_page',
+  page_title: {{ page.title | json }},
+  page_handle: {{ page.handle | json }}
+});
+{%- endif -%}
+
+/* ── 4. Delegated click tracking ──────────────────────────────────────── */
+document.addEventListener('click', function(e) {
+
+  /* ── WhatsApp clicks ── */
+  var waEl = e.target.closest(
+    'a[href*="wa.me"], a[href*="whatsapp"], ' +
+    '.lsc-product-hero__btn-whatsapp, .lsc-dual-contact__whatsapp, ' +
+    '.lsc-whatsapp-float'
+  );
+  if (waEl) {
+    var waType = waEl.getAttribute('data-wa-type') || 'general';
+    var section = waEl.closest('[class*="lsc-"]');
+    dataLayer.push({
+      event: 'whatsapp_click',
+      wa_type: waType,
+      click_location: section ? section.className.split(' ')[0] : 'unknown',
+      treatment_name: {{ template contains 'product' | json }} ? {{ product.title | default: '' | json }} : '',
+      page_url: window.location.href,
+      page_title: document.title
+    });
+    return;
+  }
+
+  /* ── Book Now / scroll-to-contact clicks ── */
+  var bookEl = e.target.closest('a[href="#lsc-contact"]');
+  if (bookEl) {
+    dataLayer.push({
+      event: 'book_now_click',
+      cta_text: bookEl.textContent.trim(),
+      click_location: (bookEl.closest('[class*="lsc-"]') || {}).className ? bookEl.closest('[class*="lsc-"]').className.split(' ')[0] : 'unknown',
+      treatment_name: {{ template contains 'product' | json }} ? {{ product.title | default: '' | json }} : '',
+      page_url: window.location.href,
+      page_title: document.title
+    });
+    return;
+  }
+
+  /* ── Free skin assessment CTA ── */
+  var assessEl = e.target.closest('a[href*="skin-assessment"]');
+  if (assessEl) {
+    dataLayer.push({
+      event: 'cta_click',
+      cta_type: 'free_skin_assessment',
+      page_url: window.location.href,
+      page_title: document.title
+    });
+    return;
+  }
+
+  /* ── Treatment card clicks ── */
+  var cardEl = e.target.closest('.lsc-treatment-card');
+  if (cardEl) {
+    dataLayer.push({
+      event: 'treatment_card_click',
+      card_title: (cardEl.querySelector('.lsc-treatment-card__title') || {}).textContent || '',
+      card_link: cardEl.getAttribute('href') || ''
+    });
+    return;
+  }
+
+  /* ── Pricing CTA buttons ── */
+  var priceEl = e.target.closest('.lsc-pricing-card__cta, .lsc-product-hero__btn-secondary');
+  if (priceEl) {
+    dataLayer.push({
+      event: 'cta_click',
+      cta_type: 'book_treatment',
+      cta_text: priceEl.textContent.trim(),
+      page_url: window.location.href,
+      page_title: document.title
+    });
+    return;
+  }
+});
+
+/* ── 5. Enquiry form submission tracking ──────────────────────────────── */
+document.addEventListener('submit', function(e) {
+  var form = e.target.closest('.lsc-dual-contact__form form, .lsc-dual-contact form[action*="contact"]');
+  if (!form) return;
+
+  var getData = function(name) {
+    var field = form.querySelector('[name="contact[' + name + ']"]');
+    return field ? field.value : '';
+  };
+
+  dataLayer.push({
+    event: 'form_submit',
+    form_type: 'enquiry',
+    enquiry_type: getData('how_can_we_help'),
+    preferred_contact: getData('preferred_contact'),
+    treatment_name: getData('treatment') || ({{ template contains 'product' | json }} ? {{ product.title | default: '' | json }} : ''),
+    page_url: window.location.href,
+    page_title: document.title
+  });
+});
+</script>

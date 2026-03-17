@@ -1,0 +1,691 @@
+{% comment %}
+  LSC Blemish Hub Section
+  Blemish & Lesion removal hub page with split hero, blemish type grid,
+  treatment methods, pricing box, review, and WhatsApp CTA.
+{% endcomment %}
+
+{{ 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap' | stylesheet_tag }}
+
+<style>
+  :root {
+    --gold: #C4A97D;
+    --gold-light: #D4BE9A;
+    --deep: #1A1714;
+    --charcoal: #2C2824;
+    --cream: #F7F3EE;
+    --warm-white: #FAF8F5;
+    --dark-taupe: #6B5E53;
+    --sand: #D6CEC4;
+    --taupe: #8B7E74;
+  }
+
+  /* ══════════════════════════════════════
+     SPLIT HERO
+     ══════════════════════════════════════ */
+  .lsc-bh__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+  }
+
+  .lsc-bh__hero-content {
+    background: var(--charcoal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 6% 5rem 8%;
+  }
+
+  .lsc-bh__hero-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 1rem;
+  }
+
+  .lsc-bh__hero-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 0 1.2rem;
+  }
+
+  .lsc-bh__hero-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin: 0 0 2rem;
+    max-width: 460px;
+  }
+
+  .lsc-bh__hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.8rem;
+    background: #25D366;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .lsc-bh__hero-cta:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+  }
+
+  .lsc-bh__hero-cta svg {
+    flex-shrink: 0;
+  }
+
+  .lsc-bh__hero-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lsc-bh__hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .lsc-bh__hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #e8e2da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lsc-bh__hero-image-placeholder svg {
+    width: 60px;
+    height: 60px;
+    stroke: #c4b9ab;
+    fill: none;
+    stroke-width: 1;
+  }
+
+  /* ══════════════════════════════════════
+     BLEMISH TYPE GRID
+     ══════════════════════════════════════ */
+  .lsc-bh__types {
+    background: var(--warm-white);
+    padding: 5rem 6%;
+  }
+
+  .lsc-bh__types-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .lsc-bh__section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-bh__section-eyebrow {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 0.6rem;
+  }
+
+  .lsc-bh__section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 300;
+    color: var(--deep);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .lsc-bh__types-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.2rem;
+  }
+
+  .lsc-bh__type-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 2rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .lsc-bh__type-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .lsc-bh__type-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  .lsc-bh__type-icon svg {
+    width: 26px;
+    height: 26px;
+    stroke: var(--dark-taupe);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .lsc-bh__type-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin: 0 0 0.4rem;
+    line-height: 1.3;
+  }
+
+  .lsc-bh__type-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ══════════════════════════════════════
+     TREATMENT METHODS
+     ══════════════════════════════════════ */
+  .lsc-bh__methods {
+    background: var(--cream);
+    padding: 5rem 6%;
+  }
+
+  .lsc-bh__methods-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lsc-bh__methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .lsc-bh__method-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 2.5rem 2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lsc-bh__method-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .lsc-bh__method-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--deep);
+    margin: 0 0 0.8rem;
+  }
+
+  .lsc-bh__method-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ══════════════════════════════════════
+     PRICING BOX
+     ══════════════════════════════════════ */
+  .lsc-bh__pricing {
+    background: var(--warm-white);
+    padding: 4rem 6%;
+  }
+
+  .lsc-bh__pricing-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 2px solid var(--gold);
+    padding: 3rem 2.5rem;
+    text-align: center;
+  }
+
+  .lsc-bh__pricing-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 0.8rem;
+  }
+
+  .lsc-bh__pricing-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 300;
+    color: var(--deep);
+    margin: 0 0 0.6rem;
+    line-height: 1.2;
+  }
+
+  .lsc-bh__pricing-note {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe);
+    margin: 0 0 2rem;
+    line-height: 1.5;
+  }
+
+  .lsc-bh__pricing-cta {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--charcoal);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    border: 1px solid var(--charcoal);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .lsc-bh__pricing-cta:hover {
+    background: transparent;
+    color: var(--charcoal);
+  }
+
+  /* ══════════════════════════════════════
+     SINGLE REVIEW
+     ══════════════════════════════════════ */
+  .lsc-bh__review {
+    background: var(--cream);
+    padding: 4rem 6%;
+  }
+
+  .lsc-bh__review-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lsc-bh__review-stars {
+    color: #FBBC05;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.2rem;
+  }
+
+  .lsc-bh__review-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dark-taupe);
+    line-height: 1.8;
+    margin: 0 0 1.2rem;
+  }
+
+  .lsc-bh__review-author {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--deep);
+  }
+
+  .lsc-bh__review-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .lsc-bh__review-badge span {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    color: var(--taupe);
+  }
+
+  /* ══════════════════════════════════════
+     WHATSAPP CTA
+     ══════════════════════════════════════ */
+  .lsc-bh__cta {
+    background: var(--charcoal);
+    padding: 4rem 6%;
+    text-align: center;
+  }
+
+  .lsc-bh__cta-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0 0 0.8rem;
+  }
+
+  .lsc-bh__cta-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+
+  .lsc-bh__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2rem;
+    background: #25D366;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .lsc-bh__cta-btn:hover {
+    background: #20bd5a;
+    transform: translateY(-1px);
+  }
+
+  .lsc-bh__cta-btn svg {
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════════════════════════
+     RESPONSIVE
+     ══════════════════════════════════════ */
+  @media screen and (max-width: 900px) {
+    .lsc-bh__types-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .lsc-bh__hero {
+      grid-template-columns: 1fr;
+    }
+
+    .lsc-bh__hero-content {
+      padding: 7rem 6% 3rem;
+    }
+
+    .lsc-bh__hero-image {
+      min-height: 300px;
+    }
+
+    .lsc-bh__types-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lsc-bh__methods-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .lsc-bh__types {
+      padding: 3.5rem 5%;
+    }
+
+    .lsc-bh__types-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+
+    .lsc-bh__type-card {
+      padding: 1.5rem 1rem;
+    }
+
+    .lsc-bh__methods {
+      padding: 3.5rem 5%;
+    }
+
+    .lsc-bh__pricing {
+      padding: 3rem 5%;
+    }
+
+    .lsc-bh__pricing-card {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .lsc-bh__review {
+      padding: 3rem 5%;
+    }
+
+    .lsc-bh__cta {
+      padding: 3rem 5%;
+    }
+  }
+</style>
+
+<!-- ════════════════════════════════════════════════
+     SPLIT HERO
+     ════════════════════════════════════════════════ -->
+<section class="lsc-bh__hero">
+  <div class="lsc-bh__hero-content">
+    <p class="lsc-bh__hero-eyebrow">BLEMISH &amp; LESION REMOVAL</p>
+    <h1 class="lsc-bh__hero-heading">Expert Blemish Removal in Wolverhampton</h1>
+    <p class="lsc-bh__hero-desc">
+      Our consultant-led clinic offers safe, effective removal of common skin blemishes and lesions using advanced Short Wave Diathermy and CryoPen technology. Whether it's skin tags, moles, milia or thread veins, we deliver precise treatment with minimal discomfort and downtime.
+    </p>
+    {%- capture whatsapp_msg -%}Hi! I'd like to send a photo for a blemish assessment please.{%- endcapture -%}
+    <a
+      href="https://wa.me/447798983387?text={{ whatsapp_msg | url_encode }}"
+      class="lsc-bh__hero-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Send a Photo
+    </a>
+  </div>
+
+  <div class="lsc-bh__hero-image">
+    {%- if section.settings.hero_image != blank -%}
+      <img
+        src="{{ section.settings.hero_image | image_url: width: 1200 }}"
+        alt="Blemish removal treatment at Laser Skin Clinics"
+        loading="eager"
+        width="1200"
+        height="800"
+      >
+    {%- else -%}
+      <div class="lsc-bh__hero-image-placeholder">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <circle cx="8.5" cy="8.5" r="1.5"></circle>
+          <polyline points="21 15 16 10 5 21"></polyline>
+        </svg>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     BLEMISH TYPE GRID
+     ════════════════════════════════════════════════ -->
+<section class="lsc-bh__types">
+  <div class="lsc-bh__types-inner">
+    <div class="lsc-bh__section-header">
+      <p class="lsc-bh__section-eyebrow">WHAT WE TREAT</p>
+      <h2 class="lsc-bh__section-title">Common Blemishes &amp; Lesions</h2>
+    </div>
+
+    <div class="lsc-bh__types-grid">
+      {%- assign blem_names = 'Skin Tags,Moles,Milia,Thread Veins,Age Spots,Seborrheic Warts,Cherry Angiomas,Warts & Verrucas,Xanthelasma,Spider Naevi' | split: ',' -%}
+      {%- assign blem_slugs = 'skin-tag-removal,mole-removal,milia-removal,thread-vein-removal,age-spot-removal,seborrheic-wart-removal,cherry-angioma-removal,wart-and-verruca-removal,xanthelasma-removal,spider-naevi-removal' | split: ',' -%}
+      {%- assign blem_descs = 'Small soft growths commonly found on the neck and underarms.,Raised or flat pigmented lesions assessed and safely removed.,Tiny white keratin cysts typically around the eyes and cheeks.,Visible red or purple veins on the face or legs.,Flat brown patches caused by sun exposure and ageing.,Rough waxy growths that develop with age.,Small bright red vascular spots on the skin.,Viral skin growths on hands and feet.,Yellowish cholesterol deposits around the eyelids.,Central red spot with radiating blood vessels.' | split: ',' -%}
+
+      {%- for i in (0..9) -%}
+        <a href="/products/{{ blem_slugs[i] }}" class="lsc-bh__type-card">
+          <div class="lsc-bh__type-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="8"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="lsc-bh__type-name">{{ blem_names[i] }}</h3>
+          <p class="lsc-bh__type-desc">{{ blem_descs[i] }}</p>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     TREATMENT METHODS
+     ════════════════════════════════════════════════ -->
+<section class="lsc-bh__methods">
+  <div class="lsc-bh__methods-inner">
+    <div class="lsc-bh__section-header">
+      <p class="lsc-bh__section-eyebrow">HOW WE TREAT</p>
+      <h2 class="lsc-bh__section-title">Our Treatment Methods</h2>
+    </div>
+
+    <div class="lsc-bh__methods-grid">
+      <div class="lsc-bh__method-card">
+        <h3 class="lsc-bh__method-name">Short Wave Diathermy</h3>
+        <p class="lsc-bh__method-desc">
+          A precise electrical current is delivered through a fine needle to cauterise and remove skin blemishes. This method is ideal for skin tags, thread veins, spider naevi and cherry angiomas. Treatment is quick, with minimal discomfort and no downtime. Results are typically seen after a single session.
+        </p>
+      </div>
+
+      <div class="lsc-bh__method-card">
+        <h3 class="lsc-bh__method-name">CryoPen</h3>
+        <p class="lsc-bh__method-desc">
+          CryoPen delivers a precise jet of nitrous oxide to freeze and destroy unwanted tissue. It is highly effective for age spots, seborrheic warts, milia, warts and verrucas. The pen-like applicator allows millimetre accuracy, meaning only the lesion is treated with no damage to surrounding healthy skin.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     PRICING BOX
+     ════════════════════════════════════════════════ -->
+<section class="lsc-bh__pricing">
+  <div class="lsc-bh__pricing-card">
+    <p class="lsc-bh__pricing-label">BLEMISH REMOVAL</p>
+    <p class="lsc-bh__pricing-price">From &pound;75 per session</p>
+    <p class="lsc-bh__pricing-note">
+      Price depends on the type, size and number of blemishes. A complimentary assessment will confirm your exact treatment plan and cost.
+    </p>
+    {%- capture blemish_assess_msg -%}Hi! I'd like to book a blemish assessment please.{%- endcapture -%}
+    <a
+      href="https://wa.me/447798983387?text={{ blemish_assess_msg | url_encode }}"
+      class="lsc-bh__pricing-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book Assessment
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SINGLE GOOGLE REVIEW
+     ════════════════════════════════════════════════ -->
+<section class="lsc-bh__review">
+  <div class="lsc-bh__review-inner">
+    <div class="lsc-bh__review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="lsc-bh__review-text">
+      "I had several skin tags removed and the whole experience was fantastic. The treatment was quick and virtually painless. The results are amazing &mdash; you can't even tell they were there. Highly recommend!"
+    </p>
+    <span class="lsc-bh__review-author">Verified Google Review</span>
+    <div class="lsc-bh__review-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48">
+        <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+        <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+        <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+        <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+      </svg>
+      <span>Google Review</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     WHATSAPP CTA
+     ════════════════════════════════════════════════ -->
+<section class="lsc-bh__cta">
+  <h2 class="lsc-bh__cta-heading">Not Sure What You Need?</h2>
+  <p class="lsc-bh__cta-desc">Send us a photo of your blemish on WhatsApp and we'll advise on the best treatment.</p>
+  {%- capture blemish_cta_msg -%}Hi! I'd like to book a blemish assessment please.{%- endcapture -%}
+  <a
+    href="https://wa.me/447798983387?text={{ blemish_cta_msg | url_encode }}"
+    class="lsc-bh__cta-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Send a Photo
+  </a>
+</section>
+
+{% schema %}
+{
+  "name": "Blemish Hub",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blemish Hub"
+    }
+  ]
+}
+{% endschema %}

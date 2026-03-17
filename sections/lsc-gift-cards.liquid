@@ -1,0 +1,584 @@
+{%- comment -%}
+  LSC Gift Cards Section
+  Gift card product page with denomination selector,
+  split hero, and how-it-works steps.
+{%- endcomment -%}
+
+<section
+  id="lsc-gift-cards-{{ section.id }}"
+  class="lsc-gift-cards"
+  data-section-id="{{ section.id }}"
+  data-section-type="lsc-gift-cards"
+>
+  {%- comment -%} ── Split Hero ── {%- endcomment -%}
+  <div class="lsc-gift-cards__hero">
+    <div class="lsc-gift-cards__hero-image-wrap">
+      {%- if product.featured_image != blank -%}
+        <img
+          class="lsc-gift-cards__hero-image"
+          src="{{ product.featured_image | image_url: width: 800 }}"
+          alt="{{ product.featured_image.alt | escape | default: product.title }}"
+          loading="eager"
+          width="800"
+          height="800"
+        >
+      {%- else -%}
+        <div class="lsc-gift-cards__hero-placeholder">
+          Gift Card
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="lsc-gift-cards__hero-content">
+      <span class="lsc-gift-cards__eyebrow">THE PERFECT GIFT</span>
+      <h1 class="lsc-gift-cards__heading">Laser Skin Clinics Gift Card</h1>
+      <p class="lsc-gift-cards__description">
+        Give the gift of confidence. Our gift cards can be used towards any treatment at Laser Skin Clinics.
+      </p>
+      <p class="lsc-gift-cards__price" data-gift-card-price>
+        {%- if product.selected_or_first_available_variant -%}
+          {{ product.selected_or_first_available_variant.price | money }}
+        {%- endif -%}
+      </p>
+    </div>
+  </div>
+
+  {%- comment -%} ── Denomination Cards + Add to Cart ── {%- endcomment -%}
+  <div class="lsc-gift-cards__selector">
+    <form action="/cart/add" method="post" id="lsc-gift-card-form-{{ section.id }}">
+      <div class="lsc-gift-cards__denominations" data-gift-card-denominations>
+        {%- for variant in product.variants -%}
+          <button
+            type="button"
+            class="lsc-gift-cards__denom-card{% if forloop.first %} lsc-gift-cards__denom-card--selected{% endif %}"
+            data-variant-id="{{ variant.id }}"
+            data-variant-price="{{ variant.price | money }}"
+            aria-label="Select {{ variant.title }} gift card"
+          >
+            <span class="lsc-gift-cards__denom-price">{{ variant.title }}</span>
+            {%- if variant.title contains '100' -%}
+              <span class="lsc-gift-cards__denom-badge">Popular</span>
+            {%- endif -%}
+          </button>
+        {%- endfor -%}
+      </div>
+
+      <select name="id" id="lsc-gift-card-variant-{{ section.id }}" hidden>
+        {%- for variant in product.variants -%}
+          <option
+            value="{{ variant.id }}"
+            {% if forloop.first %}selected{% endif %}
+          >
+            {{ variant.title }}
+          </option>
+        {%- endfor -%}
+      </select>
+
+      <button type="submit" class="lsc-gift-cards__add-btn">
+        Add to Cart
+      </button>
+    </form>
+  </div>
+
+  {%- comment -%} ── How It Works ── {%- endcomment -%}
+  <div class="lsc-gift-cards__how-it-works">
+    <div class="lsc-gift-cards__how-header">
+      <span class="lsc-gift-cards__eyebrow">HOW IT WORKS</span>
+      <h2 class="lsc-gift-cards__how-heading">Three Simple Steps</h2>
+    </div>
+
+    <div class="lsc-gift-cards__steps">
+      <div class="lsc-gift-cards__step">
+        <div class="lsc-gift-cards__step-number-wrap">
+          <span class="lsc-gift-cards__step-number">1</span>
+        </div>
+        <h3 class="lsc-gift-cards__step-title">Choose Your Amount</h3>
+        <p class="lsc-gift-cards__step-desc">Select from &pound;25 to &pound;500</p>
+      </div>
+
+      <div class="lsc-gift-cards__step">
+        <div class="lsc-gift-cards__step-number-wrap">
+          <span class="lsc-gift-cards__step-number">2</span>
+        </div>
+        <h3 class="lsc-gift-cards__step-title">We'll Send It To You</h3>
+        <p class="lsc-gift-cards__step-desc">Receive a beautifully designed digital gift card</p>
+      </div>
+
+      <div class="lsc-gift-cards__step lsc-gift-cards__step--last">
+        <div class="lsc-gift-cards__step-number-wrap">
+          <span class="lsc-gift-cards__step-number">3</span>
+        </div>
+        <h3 class="lsc-gift-cards__step-title">Redeem at the Clinic</h3>
+        <p class="lsc-gift-cards__step-desc">Use towards any treatment or package</p>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} ── Perfect For ── {%- endcomment -%}
+  <div class="lsc-gift-cards__perfect-for">
+    <div class="lsc-gift-cards__how-header">
+      <span class="lsc-gift-cards__eyebrow">PERFECT FOR</span>
+      <h2 class="lsc-gift-cards__how-heading">Every Occasion</h2>
+    </div>
+    <div class="lsc-gift-cards__pills">
+      <span class="lsc-gift-cards__pill">🎂 Birthday</span>
+      <span class="lsc-gift-cards__pill">💐 Mother's Day</span>
+      <span class="lsc-gift-cards__pill">💝 Valentine's Day</span>
+      <span class="lsc-gift-cards__pill">💍 Anniversary</span>
+      <span class="lsc-gift-cards__pill">🎄 Christmas</span>
+      <span class="lsc-gift-cards__pill">✨ Just Because</span>
+      <span class="lsc-gift-cards__pill">🙏 Thank You</span>
+      <span class="lsc-gift-cards__pill">🥂 New Year</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* =============================================
+     LSC Gift Cards
+     ============================================= */
+
+  .lsc-gift-cards {
+    background: var(--warm-white, #FDFBF8);
+    padding: 5rem 6%;
+  }
+
+  /* ---- Split Hero ---- */
+
+  .lsc-gift-cards__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .lsc-gift-cards__hero-image-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .lsc-gift-cards__hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .lsc-gift-cards__hero-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--sand, #E8E0D4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--dark-taupe, #8B7D6B);
+  }
+
+  .lsc-gift-cards__hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .lsc-gift-cards__eyebrow {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold, #C4A265);
+    margin-bottom: 0.75rem;
+  }
+
+  .lsc-gift-cards__heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 300;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0 0 1.2rem 0;
+    line-height: 1.15;
+  }
+
+  .lsc-gift-cards__description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #8B7D6B);
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .lsc-gift-cards__price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  /* ---- Denomination Selector ---- */
+
+  .lsc-gift-cards__selector {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    text-align: center;
+  }
+
+  .lsc-gift-cards__denominations {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .lsc-gift-cards__denom-card {
+    position: relative;
+    background: #ffffff;
+    border: 1.5px solid var(--sand, #E8E0D4);
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease,
+                background-color 0.3s ease,
+                transform 0.2s ease;
+    border-radius: 2px;
+    font-family: inherit;
+    outline: none;
+  }
+
+  .lsc-gift-cards__denom-card:hover {
+    border-color: var(--gold, #C4A265);
+    transform: translateY(-2px);
+  }
+
+  .lsc-gift-cards__denom-card:focus-visible {
+    border-color: var(--gold, #C4A265);
+    box-shadow: 0 0 0 2px var(--gold, #C4A265);
+  }
+
+  .lsc-gift-cards__denom-card--selected {
+    border-color: var(--gold, #C4A265);
+    background: var(--cream, #F7F3EE);
+  }
+
+  .lsc-gift-cards__denom-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    display: block;
+  }
+
+  .lsc-gift-cards__denom-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--gold, #C4A265);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    line-height: 1.4;
+  }
+
+  .lsc-gift-cards__add-btn {
+    display: inline-block;
+    background: var(--charcoal, #2C2C2C);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+    border-radius: 0;
+  }
+
+  .lsc-gift-cards__add-btn:hover {
+    background: var(--gold, #C4A265);
+    transform: translateY(-1px);
+  }
+
+  .lsc-gift-cards__add-btn:focus-visible {
+    outline: 2px solid var(--gold, #C4A265);
+    outline-offset: 2px;
+  }
+
+  /* ---- How It Works ---- */
+
+  /* ---- Perfect For ---- */
+
+  .lsc-gift-cards__perfect-for {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .lsc-gift-cards__pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .lsc-gift-cards__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.25rem;
+    border: 1px solid var(--gold, #C4A265);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--dark-taupe, #6B5E53);
+    background: transparent;
+    transition: background 0.25s ease, color 0.25s ease;
+    cursor: default;
+  }
+
+  .lsc-gift-cards__pill:hover {
+    background: var(--gold, #C4A265);
+    color: #fff;
+  }
+
+  /* ---- How It Works ---- */
+
+  .lsc-gift-cards__how-it-works {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .lsc-gift-cards__how-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .lsc-gift-cards__how-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 0;
+  }
+
+  .lsc-gift-cards__steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .lsc-gift-cards__step {
+    text-align: center;
+    position: relative;
+  }
+
+  /* Connecting line between steps (not on last) */
+  .lsc-gift-cards__step:not(.lsc-gift-cards__step--last)::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: calc(50% + 30px);
+    width: calc(100% - 60px + 2rem);
+    height: 1px;
+    background: var(--gold, #C4A265);
+    pointer-events: none;
+  }
+
+  .lsc-gift-cards__step-number-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid var(--gold, #C4A265);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    background: var(--warm-white, #FDFBF8);
+  }
+
+  .lsc-gift-cards__step-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gold, #C4A265);
+    line-height: 1;
+  }
+
+  .lsc-gift-cards__step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--charcoal, #2C2C2C);
+    margin: 1rem 0 0.5rem;
+  }
+
+  .lsc-gift-cards__step-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--dark-taupe, #8B7D6B);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Responsive: Tablet ---- */
+
+  @media screen and (max-width: 899px) {
+    .lsc-gift-cards__hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .lsc-gift-cards__hero-image-wrap {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .lsc-gift-cards__hero-content {
+      text-align: center;
+    }
+
+    .lsc-gift-cards__denominations {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lsc-gift-cards__steps {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lsc-gift-cards__step::after {
+      display: none !important;
+    }
+  }
+
+  /* ---- Responsive: Mobile ---- */
+
+  @media screen and (max-width: 599px) {
+    .lsc-gift-cards {
+      padding: 3.5rem 6%;
+    }
+
+    .lsc-gift-cards__heading {
+      font-size: 1.8rem;
+    }
+
+    .lsc-gift-cards__denominations {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lsc-gift-cards__steps {
+      grid-template-columns: 1fr;
+      gap: 0;
+      position: relative;
+      padding-left: 50px;
+    }
+
+    /* Vertical connecting line on left */
+    .lsc-gift-cards__steps::before {
+      content: '';
+      position: absolute;
+      left: 21px;
+      top: 22px;
+      bottom: 22px;
+      width: 1px;
+      background: var(--gold, #C4A265);
+    }
+
+    .lsc-gift-cards__step {
+      text-align: left;
+      padding: 0 0 2rem 0;
+    }
+
+    .lsc-gift-cards__step--last {
+      padding-bottom: 0;
+    }
+
+    .lsc-gift-cards__step::after {
+      display: none !important;
+    }
+
+    .lsc-gift-cards__step-number-wrap {
+      position: absolute;
+      left: -50px;
+      top: 0;
+    }
+
+    .lsc-gift-cards__step-title {
+      margin-top: 0;
+    }
+
+    .lsc-gift-cards__step-desc {
+      max-width: none;
+      margin-left: 0;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var section = document.getElementById('lsc-gift-cards-{{ section.id }}');
+    if (!section) return;
+
+    var cards = section.querySelectorAll('[data-variant-id]');
+    var select = document.getElementById('lsc-gift-card-variant-{{ section.id }}');
+    var priceDisplay = section.querySelector('[data-gift-card-price]');
+    var selectedClass = 'lsc-gift-cards__denom-card--selected';
+
+    cards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        /* Remove selected state from all cards */
+        cards.forEach(function (c) {
+          c.classList.remove(selectedClass);
+        });
+
+        /* Set selected state on clicked card */
+        card.classList.add(selectedClass);
+
+        /* Update hidden select */
+        var variantId = card.getAttribute('data-variant-id');
+        if (select) {
+          select.value = variantId;
+        }
+
+        /* Update displayed price */
+        var price = card.getAttribute('data-variant-price');
+        if (priceDisplay && price) {
+          priceDisplay.textContent = price;
+        }
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Gift Cards",
+  "tag": "section",
+  "class": "lsc-section-gift-cards",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Gift Cards"
+    }
+  ]
+}
+{% endschema %}
