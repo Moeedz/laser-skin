@@ -9,564 +9,1297 @@
  */
 {
   "sections": {
-    "product_hero": {
-      "type": "lsc-product-hero",
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "button_PUkJNb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "text": "View Pricing",
+            "stretch": false,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 2,
+            "show_below_gallery": true,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "button_PUkJNb",
+        "price",
+        "payment_terms",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "complementary_products"
+      ],
+      "disabled": true,
       "settings": {
-        "whatsapp_message_override": "Hi! I'd like to book a consultation for Anti-Wrinkle Injections please."
+        "color_scheme": "scheme-1",
+        "container_size": "full",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
       }
     },
-    "trust_bar": {
-      "type": "lsc-trust-bar",
+    "treatment_tabs_section_mpDdtt": {
+      "type": "treatment-tabs-section",
+      "blocks": {
+        "tab_4RmFm6": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "inject",
+            "tab_name": "Cosmetic Injections",
+            "heading": "Cosmetic Injections",
+            "top_description": "<p>Cosmetic injections gently smooth fine lines and enhance facial contours for a refreshed, natural-looking appearance. They work by relaxing wrinkles or adding subtle volume to create a balanced, youthful finish.</p>",
+            "image_1": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_20.57.35_611cb03a.jpg",
+            "image_1_aspect_ratio": "original",
+            "consultation_heading": "Speak to a specialist",
+            "consultation_badge": "",
+            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
+            "consultation_link": "shopify://pages/contact",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_X9zHLR": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "inject",
+            "package_name": "1 Area",
+            "price": "from £220.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£220",
+            "session_1_total": "total £220.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275311484&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_NmGpyQ": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "inject",
+            "package_name": "2 Areas",
+            "price": "from £220.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£220",
+            "session_1_total": "total £220.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275344252&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_FfiHTf": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "inject",
+            "package_name": "3 Areas",
+            "price": "from £270.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£270",
+            "session_1_total": "total £270.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275377020&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_fFTkwc": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "inject",
+            "package_name": "4 Areas",
+            "price": "from £285.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£285",
+            "session_1_total": "total £285.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275409788&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "tab_MPC9ML": {
+          "type": "tab",
+          "settings": {
+            "tab_identifier": "alternative",
+            "tab_name": "Alternative Treatments",
+            "heading": "Alternative Treatments",
+            "top_description": "<p>Alternative treatments for cosmetic injections offer non-injectable ways to smooth, lift, and rejuvenate the skin naturally. These options focus on stimulating collagen, improving texture, and enhancing radiance without needles.</p>",
+            "image_1": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_20.57.35_611cb03a.jpg",
+            "image_1_aspect_ratio": "original",
+            "consultation_heading": "Speak to a specialist",
+            "consultation_badge": "",
+            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
+            "consultation_link": "",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save."
+          }
+        },
+        "package_Fh4mPY": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "alternative",
+            "package_name": "Top Lip Barcode Lines",
+            "price": "from £140.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£140",
+            "session_1_total": "total £140.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275442556&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_ybUU4p": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "alternative",
+            "package_name": "Masseyter Muscle For bruxism and clenching",
+            "price": "from £140.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£140",
+            "session_1_total": "total £140.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275475324&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_8YgKP9": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "alternative",
+            "package_name": "Chemical Brow Lift",
+            "price": "from £220.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£220",
+            "session_1_total": "total £220.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275508092&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        },
+        "package_CeCXBa": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "alternative",
+            "package_name": "Chemical Browlift",
+            "price": "from £300.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£300",
+            "session_1_total": "total £300.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983275540860&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£10.00",
+            "session_3_total": "total £30.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "",
+            "show_session_6": false,
+            "session_6_label": "6 session",
+            "session_6_price": "£9.00",
+            "session_6_total": "total £54.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_4RmFm6",
+        "package_X9zHLR",
+        "package_NmGpyQ",
+        "package_FfiHTf",
+        "package_fFTkwc",
+        "tab_MPC9ML",
+        "package_Fh4mPY",
+        "package_ybUU4p",
+        "package_8YgKP9",
+        "package_CeCXBa"
+      ],
+      "name": "Treatment Tabs",
       "settings": {
-        "override_metafield": true,
-        "item_1": "Google ★ 4.9/5",
-        "item_2": "Doctor-Led Treatment",
-        "item_3": "NHS Consultant Physician",
-        "item_4": "Two-Week Review Included"
+        "section_width": 1400,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_background": "#ffffff",
+        "tab_alignment": "center",
+        "tab_gap": 12,
+        "tab_font_size": 15,
+        "tab_font_weight": "500",
+        "tab_border_radius": 50,
+        "tab_border_width": 2,
+        "tab_background": "#ffffff",
+        "tab_text_color": "#000000",
+        "tab_border_color": "#333333",
+        "tab_hover_background": "#f5f5f5",
+        "tab_hover_text_color": "#000000",
+        "tab_active_background": "#e6b325",
+        "tab_active_text_color": "#ffffff",
+        "tab_active_border_color": "#e6b325",
+        "heading_font_size": 42,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 15,
+        "text_color": "#333333",
+        "cta_card_gap": 16,
+        "cta_border_radius": 16,
+        "cta_border_width": 2,
+        "cta_background": "#ffffff",
+        "cta_border_color": "#333333",
+        "cta_hover_background": "#f9f9f9",
+        "cta_heading_color": "#000000",
+        "cta_text_color": "#666666",
+        "badge_background": "#f0f0f0",
+        "badge_text_color": "#000000",
+        "price_text_color": "#666666",
+        "package_border_radius": 12,
+        "package_border_width": 2,
+        "package_background": "#ffffff",
+        "package_border_color": "#333333",
+        "package_heading_color": "#000000",
+        "package_price_color": "#666666",
+        "package_button_radius": 8,
+        "package_button_background": "#e6b325",
+        "package_button_text_color": "#ffffff",
+        "package_button_hover_background": "#e6b325",
+        "image_border_radius": 8,
+        "show_collapsible_1": true,
+        "collapsible_1_title": "DESCRIPTION",
+        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
+        "collapsible_1_content": "<p>Add your description content here.</p>",
+        "show_collapsible_2": true,
+        "collapsible_2_title": "INFORMATION & INGREDIENTS",
+        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_2_content": "<p>Add your information and ingredients here.</p>",
+        "show_collapsible_3": true,
+        "collapsible_3_title": "THIS HELPS WITH",
+        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
+        "collapsible_3_content": "<p>Add benefits and features here.</p>",
+        "show_collapsible_4": true,
+        "collapsible_4_title": "FAQS",
+        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_4_content": "<p>Add your FAQs here.</p>"
       }
     },
-    "quick_facts": {
-      "type": "lsc-quick-facts",
+    "ss_image_with_text_12_PPNnyT": {
+      "type": "ss-image-with-text-12",
       "blocks": {
-        "qf_1": {
-          "type": "fact",
+        "slide_mTH4wq": {
+          "type": "slide",
           "settings": {
-            "label": "Session Time",
-            "value": "15–30 min"
-          }
-        },
-        "qf_2": {
-          "type": "fact",
-          "settings": {
-            "label": "Downtime",
-            "value": "None"
-          }
-        },
-        "qf_3": {
-          "type": "fact",
-          "settings": {
-            "label": "Results",
-            "value": "3–6 months"
-          }
-        },
-        "qf_4": {
-          "type": "fact",
-          "settings": {
-            "label": "From",
-            "value": "£140"
+            "heading": "<p><strong>{{ product.title }}</strong></p>",
+            "text": "",
+            "button": "",
+            "button_url": "",
+            "button2": "",
+            "button2_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_20.57.35_611cb03a.jpg"
           }
         }
       },
       "block_order": [
-        "qf_1",
-        "qf_2",
-        "qf_3",
-        "qf_4"
+        "slide_mTH4wq"
       ],
-      "settings": {}
-    },
-    "what_is": {
-      "type": "lsc-what-is",
-      "settings": {}
-    },
-    "treatment_areas": {
-      "type": "lsc-what-it-treats",
-      "blocks": {
-        "area_1": {
-          "type": "condition",
-          "settings": {
-            "icon": "〰️",
-            "title": "Forehead Lines",
-            "description": "Horizontal lines across the forehead caused by raising the eyebrows"
-          }
-        },
-        "area_2": {
-          "type": "condition",
-          "settings": {
-            "icon": "‖",
-            "title": "Frown Lines (Glabellar)",
-            "description": "Vertical '11' lines between the brows from frowning"
-          }
-        },
-        "area_3": {
-          "type": "condition",
-          "settings": {
-            "icon": "✦",
-            "title": "Crow's Feet",
-            "description": "Fine lines radiating from the outer corners of the eyes"
-          }
-        },
-        "area_4": {
-          "type": "condition",
-          "settings": {
-            "icon": "◇",
-            "title": "Bunny Lines",
-            "description": "Lines on the bridge of the nose from scrunching"
-          }
-        },
-        "area_5": {
-          "type": "condition",
-          "settings": {
-            "icon": "😁",
-            "title": "Gummy Smile",
-            "description": "Reduces excessive gum show when smiling"
-          }
-        },
-        "area_6": {
-          "type": "condition",
-          "settings": {
-            "icon": "👄",
-            "title": "Lip Flip / Barcode Lines",
-            "description": "Softens vertical lines above the upper lip"
-          }
-        },
-        "area_7": {
-          "type": "condition",
-          "settings": {
-            "icon": "◻️",
-            "title": "Masseter / Jaw Slimming",
-            "description": "Relaxes the jaw muscle to slim a wide jawline and relieve grinding"
-          }
-        },
-        "area_8": {
-          "type": "condition",
-          "settings": {
-            "icon": "↗️",
-            "title": "Chemical Brow Lift",
-            "description": "Subtle elevation of the brow for a more open eye area"
-          }
-        }
-      },
-      "block_order": [
-        "area_1",
-        "area_2",
-        "area_3",
-        "area_4",
-        "area_5",
-        "area_6",
-        "area_7",
-        "area_8"
+      "disabled": true,
+      "custom_css": [
+        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
       ],
+      "name": "SS - Image With Text #12",
       "settings": {
-        "eyebrow": "TREATMENT AREAS",
-        "heading": "Areas We Treat"
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "center",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 100,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 100,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "left",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#000000",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "rgba(0,0,0,0)",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
       }
     },
-    "comparison": {
-      "type": "lsc-comparison",
+    "ss_image_with_text_12_gUF6fh": {
+      "type": "ss-image-with-text-12",
       "blocks": {
-        "pt_1": {
-          "type": "point",
+        "slide_4jhyPz": {
+          "type": "slide",
           "settings": {
-            "industry": "Often performed by beauticians or nurses with minimal training",
-            "lsc": "Performed exclusively by Dr Sangeeta Scotton, NHS Consultant Physician"
-          }
-        },
-        "pt_2": {
-          "type": "point",
-          "settings": {
-            "industry": "No medical consultation or facial anatomy assessment",
-            "lsc": "Full medical consultation and facial anatomy assessment before treatment"
-          }
-        },
-        "pt_3": {
-          "type": "point",
-          "settings": {
-            "industry": "Cookie-cutter approach — same dose for every client",
-            "lsc": "Conservative, personalised dosing — natural results, never overdone"
-          }
-        },
-        "pt_4": {
-          "type": "point",
-          "settings": {
-            "industry": "No follow-up review included",
-            "lsc": "Complimentary two-week review included with every treatment"
-          }
-        },
-        "pt_5": {
-          "type": "point",
-          "settings": {
-            "industry": "Limited ability to manage complications",
-            "lsc": "Full medical training to manage any complications safely"
+            "heading": "<h3><strong>Safe, Precise and Personalised Non-Surgical Aesthetic Treatments</strong></h3>",
+            "text": "<p>Cosmetic injections at Laser Skin Clinics are designed to enhance, rejuvenate, and restore natural balance to your features with precision and care.</p><p>All injectable treatments are performed by <strong>Dr Scotton (MBBS, MRCP (UK), BSc, MSc)</strong>, an appointed NHS Consultant with over 12 years of medical experience.</p><p>She has completed advanced aesthetic training through the Royal Society of Medicine and is proficient in administering wrinkle-reducing products for both cosmetic and medical indications such as migraine and hyperhidrosis.</p><p>Dr Scotton is passionate about delivering safe, effective treatments that enhance your natural appearance without changing your expression.</p><p>Her extensive medical knowledge and aesthetic experience ensure every treatment is personalised to your needs and carried out in a clinical, professional environment.</p><p>Our range of cosmetic injections includes anti-wrinkle treatments, skin boosters, and other non-surgical rejuvenation options to help smooth fine lines, restore lost volume, and refresh your overall look.<br/></p>",
+            "button": "Book Online",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93156&services=2471524&location=4546",
+            "button2": "Get more information",
+            "button2_url": "shopify://pages/contact",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
+            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_20.57.35_121c54a4.jpg"
           }
         }
       },
       "block_order": [
-        "pt_1",
-        "pt_2",
-        "pt_3",
-        "pt_4",
-        "pt_5"
+        "slide_4jhyPz"
       ],
+      "custom_css": [
+        "p {padding-top: 10px; padding-bottom: 5px;}",
+        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
+      ],
+      "name": "SS - Image With Text #12",
       "settings": {
-        "eyebrow": "THE DIFFERENCE",
-        "heading": "Doctor-Led vs Non-Medical Clinics",
-        "left_header": "Non-Medical Clinics",
-        "right_header": "Doctor-Led at Laser Skin Clinics",
-        "right_badge": "DOCTOR-LED"
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "start",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 12,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 12,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "right",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#e6b325",
+        "button_bg_hover_color": "#deac21",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#ffffff",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "#000000",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
       }
     },
-    "how_it_works": {
-      "type": "lsc-how-it-works",
-      "settings": {}
-    },
-    "suitability": {
-      "type": "lsc-suitability",
+    "treatment_pricing_hjdUCE": {
+      "type": "treatment-pricing",
       "blocks": {
-        "ideal_1": {
-          "type": "ideal",
+        "treatment_NbwzRR": {
+          "type": "treatment",
           "settings": {
-            "text": "Clients wanting to soften expression lines for a refreshed, natural appearance"
+            "treatment_name": "1 Area",
+            "treatment_name_column1": "",
+            "single_price": "220",
+            "treatment_name_column2": "Top Lip Barcode Lines",
+            "course_price": "140"
           }
         },
-        "ideal_2": {
-          "type": "ideal",
+        "treatment_TWcErn": {
+          "type": "treatment",
           "settings": {
-            "text": "Those seeking a quick, non-surgical treatment with no downtime"
+            "treatment_name": "2 Areas",
+            "treatment_name_column1": "2 Areas",
+            "single_price": "220",
+            "treatment_name_column2": "Masseyter Muscle For bruxism and clenching",
+            "course_price": "140"
           }
         },
-        "ideal_3": {
-          "type": "ideal",
+        "treatment_DGUDpX": {
+          "type": "treatment",
           "settings": {
-            "text": "Anyone wanting to prevent lines from deepening over time"
+            "treatment_name": "3 Areas",
+            "treatment_name_column1": "",
+            "single_price": "270",
+            "treatment_name_column2": "Chemical Brow Lift",
+            "course_price": "220"
           }
         },
-        "ideal_4": {
-          "type": "ideal",
+        "treatment_LWReLR": {
+          "type": "treatment",
           "settings": {
-            "text": "Clients comfortable with maintenance every 3–4 months"
-          }
-        },
-        "ideal_5": {
-          "type": "ideal",
-          "settings": {
-            "text": "Adults with no contraindications confirmed during medical consultation"
+            "treatment_name": "4 Areas",
+            "treatment_name_column1": "",
+            "single_price": "285",
+            "treatment_name_column2": "Chemical Browlift",
+            "course_price": "300"
           }
         }
       },
       "block_order": [
-        "ideal_1",
-        "ideal_2",
-        "ideal_3",
-        "ideal_4",
-        "ideal_5"
+        "treatment_NbwzRR",
+        "treatment_TWcErn",
+        "treatment_DGUDpX",
+        "treatment_LWReLR"
       ],
-      "settings": {}
-    },
-    "timeline": {
-      "type": "lsc-results-timeline",
-      "settings": {}
-    },
-    "safety_approach": {
-      "type": "lsc-values",
-      "blocks": {
-        "s_1": {
-          "type": "value",
-          "settings": {
-            "title": "Natural-Looking Results",
-            "description": "We prioritise subtle enhancement — you'll still look like you, just refreshed. We never chase trends or dramatic changes."
-          }
-        },
-        "s_2": {
-          "type": "value",
-          "settings": {
-            "title": "Conservative Technique",
-            "description": "Dr Scotton uses a careful, measured approach — starting with lower doses and building gradually for optimal, natural results."
-          }
-        },
-        "s_3": {
-          "type": "value",
-          "settings": {
-            "title": "Full Facial Assessment",
-            "description": "A thorough assessment of your unique muscle movement and facial anatomy is completed before any treatment is administered."
-          }
-        },
-        "s_4": {
-          "type": "value",
-          "settings": {
-            "title": "We Never Over-Treat",
-            "description": "We'll only recommend treatment that genuinely benefits you — and we'll tell you honestly if something isn't right for you."
-          }
-        }
-      },
-      "block_order": [
-        "s_1",
-        "s_2",
-        "s_3",
-        "s_4"
-      ],
+      "disabled": true,
+      "name": "Treatment Pricing",
       "settings": {
-        "eyebrow": "OUR APPROACH",
-        "heading": "Safety & Natural Results"
+        "show_section_title": true,
+        "section_title": "Price List",
+        "show_two_columns": true,
+        "column1_title": "Cosmetic Injections",
+        "column1_subtitle": "More areas on request",
+        "show_button_column1": true,
+        "button_text_column1": "BOOK ONLINE",
+        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93156&services=2471524&location=4546",
+        "column2_title": "Alternative Treatments",
+        "column2_subtitle": "Others on request",
+        "show_button_column2": true,
+        "button_text_column2": "BOOK ONLINE",
+        "button_link_column2": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93156&services=3564720&location=4546",
+        "header_color": "#c9a86a",
+        "accent_color": "#d4a574",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
       }
     },
-    "practitioner": {
-      "type": "lsc-practitioner",
+    "ss_image_with_text_9_GLgAya": {
+      "type": "ss-image-with-text-9",
+      "blocks": {
+        "text_zqNDU6": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Benefits of Cosmetic Injections</strong></h3>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 34,
+            "text_size_mobile": 26,
+            "text_height": 150,
+            "text_mt": 0,
+            "text_align": "left",
+            "text_align_mobile": "left",
+            "text_color": "#e6b325"
+          }
+        },
+        "icon_text_UxfF9a": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Smooths fine lines and wrinkles for a refreshed, youthful appearance"
+          }
+        },
+        "icon_text_LJCxHi": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Restores volume and definition to areas such as the lips, cheeks and jawline"
+          }
+        },
+        "icon_text_dEUWkb": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Prevents early signs of ageing and maintains natural facial balance"
+          }
+        },
+        "icon_text_WwkP3M": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "tick",
+            "text": "Performed by a qualified NHS neurological Consultant with advanced aesthetic training"
+          }
+        },
+        "button_HfVK4Q": {
+          "type": "button",
+          "settings": {
+            "button": "Book Online",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93156&services=2471524&location=4546",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 200,
+            "button_width_mobile": 700,
+            "button_mt": 52,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#e6b325",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        },
+        "button_EmHVYj": {
+          "type": "button",
+          "settings": {
+            "button": "Get more information",
+            "button_url": "shopify://pages/contact",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 270,
+            "button_width_mobile": 700,
+            "button_mt": 12,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_zqNDU6",
+        "icon_text_UxfF9a",
+        "icon_text_LJCxHi",
+        "icon_text_dEUWkb",
+        "icon_text_WwkP3M",
+        "button_HfVK4Q",
+        "button_EmHVYj"
+      ],
+      "name": "SS - Image With Text #9",
       "settings": {
-        "practitioner_type": "scotton"
+        "body_gap": 50,
+        "body_gap_mobile": 0,
+        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_20.57.35_9dae0a54.jpg",
+        "image_position": "left",
+        "image_position_mobile": "top",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "content_maxwidth": 700,
+        "content_padding_vertical": 40,
+        "content_padding_vertical_mobile": 20,
+        "content_padding_horizontal": 24,
+        "content_padding_horizontal_mobile": 16,
+        "row_gap": 16,
+        "row_mt": 20,
+        "row_align": "left",
+        "row_align_mobile": "left",
+        "icon_size": 30,
+        "icon_size_mobile": 26,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 18,
+        "text_size_mobile": 16,
+        "text_height": 180,
+        "icon_color": "#000000",
+        "text_color": "#2b1a1a",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
       }
     },
-    "pricing": {
-      "type": "lsc-pricing-cards",
+    "ss_clothing_image_grid_fNP7MV": {
+      "type": "ss-clothing-image-grid",
       "blocks": {
-        "price_1": {
-          "type": "pricing_tier",
+        "link_jYfj9x": {
+          "type": "link",
           "settings": {
-            "tier_name": "1 Area",
-            "price": "£140",
-            "description": "e.g. forehead, frown lines, or crow's feet",
-            "popular": false
-          }
-        },
-        "price_2": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "2 Areas",
-            "price": "£220",
-            "description": "Treat two areas for balanced, natural results",
-            "popular": false
-          }
-        },
-        "price_3": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "3 Areas",
-            "price": "£270",
-            "description": "Full upper face — forehead, frown, and crow's feet",
-            "popular": true
-          }
-        },
-        "price_4": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "4 Areas",
-            "price": "£285",
-            "description": "Comprehensive treatment including bunny lines or other additional area",
-            "popular": false
-          }
-        },
-        "price_5": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "Masseter / Jaw Slimming",
-            "price": "£140",
-            "description": "Slims the jawline and can relieve teeth grinding or jaw tension",
-            "popular": false
-          }
-        },
-        "price_6": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "Top Lip Barcode Lines",
-            "price": "£140",
-            "description": "Softens vertical lip lines for a smoother, more refined appearance",
-            "popular": false
-          }
-        },
-        "price_7": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "Chemical Brow Lift",
-            "price": "£220",
-            "description": "Subtle brow elevation using strategic anti-wrinkle placement",
-            "popular": false
-          }
-        },
-        "price_8": {
-          "type": "pricing_tier",
-          "settings": {
-            "tier_name": "Enhanced Brow Lift",
-            "price": "£300",
-            "description": "More defined brow lift combined with forehead smoothing",
-            "popular": false
+            "image": "shopify://shop_images/IMG_0107_fb66ac61-f052-4305-9582-ab86139a3723.jpg",
+            "text": "",
+            "url": "",
+            "overlay_opacity": 0
           }
         }
       },
       "block_order": [
-        "price_1",
-        "price_2",
-        "price_3",
-        "price_4",
-        "price_5",
-        "price_6",
-        "price_7",
-        "price_8"
+        "link_jYfj9x"
       ],
-      "settings": {}
+      "name": "SS - Threads Image Grid",
+      "settings": {
+        "font_size": 24,
+        "font_color": "#000000",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_vertical": 0,
+        "section-width": 200
+      }
     },
-    "reviews": {
-      "type": "lsc-google-reviews",
+    "before_after_FYP3MP": {
+      "type": "before-after",
       "blocks": {
-        "rev_1": {
-          "type": "review",
+        "before_h3jXfm": {
+          "type": "before",
           "settings": {
-            "text": "I was really nervous about having anti-wrinkle injections but Dr Scotton put me completely at ease. The results are so natural — friends have commented that I look refreshed without being able to tell I've had anything done. Will absolutely be returning.",
-            "author": "Claire B.",
-            "treatment": "Anti-Wrinkle Injections"
+            "color_scheme": "",
+            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
+            "text": "Before",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
           }
         },
-        "rev_2": {
-          "type": "review",
+        "after_PymKJA": {
+          "type": "after",
           "settings": {
-            "text": "Dr Scotton took so much time to understand what I wanted. She's clearly highly experienced and her conservative approach means the results look completely natural. The clinic in Wolverhampton is very professional and I felt totally safe throughout.",
-            "author": "Joanne R.",
-            "treatment": "Anti-Wrinkle Injections"
-          }
-        },
-        "rev_3": {
-          "type": "review",
-          "settings": {
-            "text": "Had anti-wrinkle treatment with Dr Scotton and couldn't be happier. She advised me on the right amount rather than just giving me what I asked for — the outcome looks amazing and very natural. Highly recommend to anyone considering this.",
-            "author": "Michelle P.",
-            "treatment": "Anti-Wrinkle Injections"
+            "color_scheme": "",
+            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
+            "text": "After",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
           }
         }
       },
       "block_order": [
-        "rev_1",
-        "rev_2",
-        "rev_3"
+        "before_h3jXfm",
+        "after_PymKJA"
       ],
-      "settings": {}
+      "disabled": true,
+      "name": "t:sections.before_after.presets.before_after.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "Before/after",
+        "content": "",
+        "cursor_direction": "horizontal",
+        "cursor_initial_position": 50,
+        "cursor_background": "#ffffff",
+        "cursor_arrows_color": "#000000"
+      }
     },
-    "faq": {
-      "type": "lsc-faq",
+    "rich_text_nziPUE": {
+      "type": "rich-text",
       "blocks": {
-        "faq_1": {
-          "type": "faq",
+        "heading_U7EUj7": {
+          "type": "heading",
           "settings": {
-            "question": "Why should I choose a medical doctor for anti-wrinkle injections?",
-            "answer": "<p>Anti-wrinkle injections are prescription-only medicines that require medical assessment before treatment. A doctor has advanced training in facial anatomy, safe prescribing, and complication management. At Laser Skin Clinics, all treatments are performed by an NHS Consultant Physician, ensuring precision, safety, and appropriate dosing tailored to your muscle structure.</p>"
+            "text": "<strong>The Cosmetic Injections 3-Step Process</strong>",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U7EUj7"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": true
+      }
+    },
+    "ss_steps_11_7cMyRT": {
+      "type": "ss-steps-11",
+      "blocks": {
+        "step_jmRN9F": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 1",
+            "title": "Consultation and Assessment",
+            "text": "<p>Your treatment begins with a detailed consultation with Dr Scotton.<br/><br/>She will assess your facial structure, expression lines, and individual concerns while discussing your desired results.<br/><br/>This medical assessment ensures the treatment is safe, appropriate, and tailored specifically to you.</p>"
           }
         },
-        "faq_2": {
-          "type": "faq",
+        "step_jiiz8x": {
+          "type": "step",
           "settings": {
-            "question": "How do Anti Wrinkle injections work?",
-            "answer": "<p>Anti-wrinkle injections temporarily relax specific facial muscles responsible for dynamic expression lines. By reducing repetitive muscle contraction, lines such as frown lines, forehead lines, and crow’s feet soften while natural facial movement is preserved.</p>"
+            "step": "STEP 2",
+            "title": "Treatment",
+            "text": "<p>Once your plan is agreed, Dr Scotton carefully administers the selected injectable product using advanced techniques for precision and natural results.<br/><br/>Whether it is wrinkle-relaxing injections or a skin booster, every treatment is carried out in a calm, clinical environment with comfort as a priority.<br/><br/>Sessions typically take 15-30 minutes and require minimal downtime.</p>"
           }
         },
-        "faq_3": {
-          "type": "faq",
+        "step_6jaGgE": {
+          "type": "step",
           "settings": {
-            "question": "How long do results typically last?",
-            "answer": "<p>Results usually last between 3–4 months, depending on your muscle strength, metabolism, and lifestyle factors. With consistent treatment, many patients find results may last slightly longer over time.</p>"
+            "step": "STEP 3",
+            "title": "Aftercare and Maintenance",
+            "text": "<p>After treatment, you may experience mild redness or swelling at the injection sites which settles quickly.<br/><br/>Results develop over 1/2 weeks leaving the skin smoother and more refined.<br/><br/>Regular maintenance sessions every few months help preserve and enhance your results over time.</p>"
           }
-        },
-        "faq_4": {
-          "type": "faq",
+        }
+      },
+      "block_order": [
+        "step_jmRN9F",
+        "step_jiiz8x",
+        "step_6jaGgE"
+      ],
+      "name": "SS - Steps #11",
+      "settings": {
+        "layout": "image_content",
+        "layout_mobile": "image_content",
+        "layout_gap": 64,
+        "layout_gap_mobile": 32,
+        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_21.07.29_95d1ee5f.jpg",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "steps_custom": false,
+        "steps_font": "josefin_sans_n4",
+        "steps_size": 12,
+        "steps_size_mobile": 12,
+        "steps_height": 100,
+        "steps_padding_horizontal": 8,
+        "steps_padding_horizontal_mobile": 8,
+        "steps_padding_vertical": 4,
+        "steps_padding_vertical_mobile": 4,
+        "steps_radius": 100,
+        "steps_border_thickness": 1,
+        "steps_content_align": "left",
+        "steps_content_align_mobile": "left",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 24,
+        "title_size_mobile": 20,
+        "title_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 8,
+        "text_mt_mobile": 8,
+        "steps_color": "#ffffff",
+        "steps_bg_color": "#e6b325",
+        "steps_border_color": "#e6b325",
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "image_border_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "175993612397035c9e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_qFMFmN": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
           "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>You may begin to notice softening within 3–7 days. Full results are typically visible at around 14 days, which is why a two-week clinical review is included.</p>"
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
           }
-        },
-        "faq_5": {
-          "type": "faq",
-          "settings": {
-            "question": "Will my results look natural?",
-            "answer": "<p>Yes. Our approach focuses on subtle softening while maintaining natural facial expression. We use minimum effective dosing and precise placement to avoid a “frozen” or overdone appearance.</p>"
-          }
-        },
-        "faq_6": {
-          "type": "faq",
-          "settings": {
-            "question": "Does the treatment work?",
-            "answer": "<p>Most patients describe the treatment as mildly uncomfortable rather than painful. The injections use very fine needles and are completed quickly. Discomfort is brief and generally well tolerated.</p>"
-          }
-        },
-        "faq_7": {
-          "type": "faq",
-          "settings": {
-            "question": "Is there any downtime?",
-            "answer": "<p>There is minimal downtime. You may experience mild redness, small bumps at the injection sites, or slight bruising, which typically resolves within a few hours to a few days. Most patients return to normal activities immediately.</p>"
-          }
-        },
-        "faq_8": {
-          "type": "faq",
-          "settings": {
-            "question": "What happens at the two-week review?",
-            "answer": "<p>At your two-week review, results are assessed once the treatment has fully developed. If minor adjustments are clinically appropriate, these can be discussed and addressed to ensure balanced, natural outcomes.</p>"
-          }
-        },
-        "faq_9": {
-          "type": "faq",
-          "settings": {
-            "question": "Are anti-wrinkle injections safe?",
-            "answer": "<p>When prescribed and administered by a qualified medical professional, anti-wrinkle injections have an established safety profile. As with any medical procedure, potential risks and side effects will be discussed during consultation before treatment proceeds.</p>"
-          }
-        },
-        "faq_10": {
-          "type": "faq",
-          "settings": {
-            "question": "Who may not be suitable for anti-wrinkle injections?",
-            "answer": "<p>Treatment may not be suitable if you are pregnant or breastfeeding, have certain neuromuscular conditions, active infection at the treatment site, or known allergy to botulinum toxin. Suitability is always confirmed during medical consultation.</p>"
-          }
-        },
-        "faq_11": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I have treatment on the same day as my consultation?",
-            "answer": "<p>If medically appropriate and following full assessment and prescription, treatment can often be performed on the same day. Suitability is always confirmed during consultation.</p>"
-          }
-        },
-        "faq_12": {
-          "type": "faq",
-          "settings": {
-            "question": "What are possible side effects?",
-            "answer": "<p>Temporary side effects may include mild swelling, redness, bruising, or headache. Rare complications will be discussed during consultation. Choosing a medically qualified injector significantly reduces risk.</p>"
-          }
-        },
-        "faq_13": {
-          "type": "faq",
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_qFMFmN"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_Dpx4Qh": {
+          "type": "text",
           "settings": {
             "question": "Who performs the injections?",
             "answer": "<p>All cosmetic injections at Laser Skin Clinics are carried out personally by Dr Scotton (MBBS, MRCP (UK), BSc, MSc).<br/><br/>She is an appointed NHS Consultant with more than 12 years of medical experience and additional aesthetic training through the Royal Society of Medicine.<br/><br/>Her extensive background ensures your treatment is delivered safely and to the highest professional standard.</p>"
           }
         },
-        "faq_14": {
-          "type": "faq",
+        "text_HmrUVH": {
+          "type": "text",
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
           }
         },
-        "faq_15": {
-          "type": "faq",
+        "text_rmeL4P": {
+          "type": "text",
           "settings": {
             "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
             "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
-        "faq_16": {
-          "type": "faq",
+        "text_kePrY3": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_NNPULi": {
+          "type": "text",
+          "settings": {
+            "question": "Do I need to book a consultation before my first session?",
+            "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
+          }
+        },
+        "text_66P4eN": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
+          }
+        },
+        "text_MpyGVf": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
           "settings": {
             "question": "What can cosmetic injections treat?",
             "answer": "<p>Cosmetic injections can be used to reduce fine lines and wrinkles, restore facial volume, reshape lips, and soften dynamic expression lines.<br/><br/>They can also be used for medical indications such as migraine management and excessive sweating (hyperhidrosis).</p>"
           }
         },
-        "faq_17": {
-          "type": "faq",
+        "text_UiGdVT": {
+          "type": "text",
           "settings": {
             "question": "Is there any downtime?",
             "answer": "<p>Downtime is minimal.<br/><br/>You may have slight redness or swelling immediately after treatment, but this normally settles within a few hours.</p>"
           }
         },
-        "faq_18": {
-          "type": "faq",
+        "text_ajEmr6": {
+          "type": "text",
           "settings": {
             "question": "What product do we use when administrating anti wrinkle injections?",
             "answer": "<p>We only use botox</p>"
           }
         },
-        "faq_19": {
-          "type": "faq",
+        "text_LjyLRP": {
+          "type": "text",
           "settings": {
             "question": "How long do results last?",
             "answer": "<p>Results vary depending on the product used and individual response.<br/><br/>Anti-wrinkle injections generally last around 3 to 4 months, while dermal fillers can last between 6 and 12 months.</p>"
           }
         },
-        "faq_20": {
-          "type": "faq",
+        "text_6DkaHf": {
+          "type": "text",
           "settings": {
             "question": "Are cosmetic injections safe?",
             "answer": "<p>Yes, when performed by an experienced medical professional.<br/><br/>At Laser Skin Clinics, all products are FDA-approved and treatments are administered by Dr Scotton in a sterile, clinical environment.</p>"
@@ -574,51 +1307,44 @@
         }
       },
       "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6",
-        "faq_7",
-        "faq_8",
-        "faq_9",
-        "faq_10",
-        "faq_11",
-        "faq_12",
-        "faq_13",
-        "faq_14",
-        "faq_15",
-        "faq_16",
-        "faq_17",
-        "faq_18",
-        "faq_19",
-        "faq_20"
+        "text_Dpx4Qh",
+        "text_HmrUVH",
+        "text_rmeL4P",
+        "text_kePrY3",
+        "text_NNPULi",
+        "text_66P4eN",
+        "text_MpyGVf",
+        "text_JMUbWR",
+        "text_UiGdVT",
+        "text_ajEmr6",
+        "text_LjyLRP",
+        "text_6DkaHf"
       ],
-      "settings": {}
-    },
-    "contact": {
-      "type": "lsc-dual-contact",
+      "name": "SS - FAQ #1",
       "settings": {
-        "whatsapp_message_override": "Hi! I'd like to book a consultation for Anti-Wrinkle Injections please."
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 1
       }
     }
   },
   "order": [
-    "product_hero",
-    "trust_bar",
-    "quick_facts",
-    "what_is",
-    "treatment_areas",
-    "comparison",
-    "how_it_works",
-    "suitability",
-    "timeline",
-    "safety_approach",
-    "practitioner",
-    "pricing",
-    "reviews",
-    "faq",
-    "contact"
+    "main",
+    "treatment_tabs_section_mpDdtt",
+    "ss_image_with_text_12_PPNnyT",
+    "ss_image_with_text_12_gUF6fh",
+    "treatment_pricing_hjdUCE",
+    "ss_image_with_text_9_GLgAya",
+    "ss_clothing_image_grid_fNP7MV",
+    "before_after_FYP3MP",
+    "rich_text_nziPUE",
+    "ss_steps_11_7cMyRT",
+    "175993612397035c9e",
+    "ss_simple_faq_jiYFWj"
   ]
 }

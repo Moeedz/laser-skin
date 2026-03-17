@@ -1,9 +1,7 @@
 {% comment %}
-  Treatment Tabs Section with Enquiry Form
+  Treatment Tabs Section
   - Multiple tabs with dynamic content
-  - Package cards with session selection
-  - Enquiry form modal with auto-filled treatment details
-  - Consultation modal with multiple contact options
+  - Package cards that toggle
   - Fully customizable from section settings
   - Mobile optimized
 {% endcomment %}
@@ -244,7 +242,7 @@
   }
 
   .packages-container.active {
-    max-height: 4000px;
+    max-height: 2000px;
   }
 
   .packages-grid {
@@ -296,7 +294,7 @@
   }
 
   .session-options.active {
-    max-height: 1500px;
+    max-height: 800px;
     margin-top: 16px;
   }
 
@@ -490,472 +488,6 @@
     margin-bottom: 0;
   }
 
-  /* FAQ Link Section */
-  .faq-link-section {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 30px;
-  }
-
-  .faq-link-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .faq-pre-text {
-    font-size: 15px;
-    color: {{ section.settings.text_color }};
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-
-  .faq-link-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 28px;
-    background: {{ section.settings.tab_active_background }};
-    color: {{ section.settings.tab_active_text_color }};
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-  }
-
-  button.faq-link-button {
-    border: none;
-    outline: none;
-  }
-
-  .faq-link-button:hover {
-    background: {{ section.settings.tab_active_border_color }};
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-
-  .faq-link-button svg {
-    width: 18px;
-    height: 18px;
-    transition: transform 0.3s ease;
-  }
-
-  .faq-link-button:hover svg {
-    transform: translateX(3px);
-  }
-
-  /* Modal Styles */
-  .consultation-modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
-    animation: fadeIn 0.3s ease;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .consultation-modal-overlay.active {
-    display: flex;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .consultation-modal {
-    background: white;
-    border-radius: 16px;
-    max-width: 420px;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideUp 0.3s ease;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  .modal-header {
-    padding: 25px 25px 20px;
-    position: relative;
-    border-bottom: none;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 28px;
-    height: 28px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    border-radius: 50%;
-  }
-
-  .modal-close:hover {
-    background: #f5f5f5;
-  }
-
-  .modal-close svg {
-    width: 20px;
-    height: 20px;
-    stroke: #999;
-  }
-
-  .modal-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #000;
-    margin: 0;
-    padding-right: 30px;
-    line-height: 1.3;
-  }
-
-  .modal-subtitle {
-    font-size: 14px;
-    color: #6c757d;
-    margin-top: 6px;
-    line-height: 1.4;
-  }
-
-  .modal-content {
-    padding: 10px 20px 25px;
-  }
-
-  .consultation-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .consultation-option {
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    color: inherit;
-    background: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  }
-
-  .consultation-option:hover {
-    border-color: #d0d0d0;
-    background: #fafafa;
-    transform: translateX(2px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .consultation-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 14px;
-    flex-shrink: 0;
-  }
-
-  /* Contact Form Icon - Orange */
-  .consultation-option:nth-child(1) .consultation-icon {
-    background: #FFF4E6;
-  }
-
-  .consultation-option:nth-child(1) .consultation-icon svg {
-    width: 22px;
-    height: 22px;
-    stroke: #FF9500;
-    fill: none;
-  }
-
-  /* Phone Icon - Light Blue */
-  .consultation-option:nth-child(2) .consultation-icon {
-    background: #E3F2FD;
-  }
-
-  .consultation-option:nth-child(2) .consultation-icon svg {
-    width: 22px;
-    height: 22px;
-    stroke: #2196F3;
-    fill: none;
-  }
-
-  /* WhatsApp Icon - Green */
-  .consultation-option:nth-child(3) .consultation-icon {
-    background: #E8F5E9;
-  }
-
-  .consultation-option:nth-child(3) .consultation-icon svg {
-    width: 22px;
-    height: 22px;
-    fill: #4CAF50;
-  }
-
-  .consultation-details {
-    flex: 1;
-  }
-
-  .consultation-method {
-    font-size: 15px;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 2px;
-  }
-
-  .consultation-info {
-    font-size: 13px;
-    color: #6c757d;
-    line-height: 1.3;
-  }
-
-  .consultation-arrow {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.3;
-    transition: opacity 0.2s ease;
-  }
-
-  .consultation-option:hover .consultation-arrow {
-    opacity: 0.6;
-  }
-
-  .consultation-arrow svg {
-    width: 16px;
-    height: 16px;
-    stroke: #666;
-  }
-
-  /* Phone Hours Modal Styles */
-  .phone-hours-modal {
-    background: white;
-    border-radius: 20px;
-    max-width: 400px;
-    width: 90%;
-    position: relative;
-    animation: slideUp 0.3s ease;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    padding: 40px 30px 30px;
-    text-align: center;
-  }
-
-  .phone-icon-circle {
-    width: 80px;
-    height: 80px;
-    background: #007AFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-  }
-
-  .phone-icon-circle svg {
-    width: 40px;
-    height: 40px;
-    stroke: white;
-    fill: none;
-  }
-
-  .phone-modal-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000;
-    margin: 0 0 20px 0;
-  }
-
-  .store-status {
-    background: #D1F2E0;
-    color: #0F9D58;
-    padding: 10px 20px;
-    border-radius: 25px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 25px;
-    font-weight: 500;
-    font-size: 14px;
-  }
-
-  .store-status.closed {
-    background: #FFE4E1;
-    color: #FF4444;
-  }
-
-  .status-icon {
-    font-size: 16px;
-  }
-
-  .closed-message {
-    background: #FFF3CD;
-    border-left: 4px solid #FFC107;
-    padding: 12px 16px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    text-align: left;
-  }
-
-  .closed-message p {
-    color: #856404;
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .opening-hours {
-    text-align: left;
-    margin-bottom: 25px;
-  }
-
-  .hours-heading {
-    font-size: 14px;
-    font-weight: 600;
-    color: #666;
-    margin: 0 0 15px 0;
-    text-align: center;
-  }
-
-  .hours-list {
-    background: #f8f8f8;
-    border-radius: 12px;
-    padding: 15px;
-  }
-
-  .hours-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 14px;
-  }
-
-  .hours-row:last-child {
-    border-bottom: none;
-  }
-
-  .hours-row .day {
-    font-weight: 500;
-    color: #333;
-  }
-
-  .hours-row .time {
-    color: #666;
-  }
-
-  .hours-row.current-day {
-    background: #fff;
-    margin: -5px -10px;
-    padding: 8px 10px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-
-  .hours-row.current-day .day {
-    color: #007AFF;
-  }
-
-  .hours-row.current-day .time {
-    color: #007AFF;
-  }
-
-  .call-now-button {
-    background: #007AFF;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.3s ease;
-  }
-
-  .call-now-button:hover {
-    background: #0056CC;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
-  }
-
-  .call-now-button.disabled {
-    background: #cccccc !important;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  .call-now-button.disabled:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  /* Enquiry Form Modal */
-  .enquiry-modal {
-    background: white;
-    border-radius: 16px;
-    max-width: 540px;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideUp 0.3s ease;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  .enquiry-form-wrapper {
-    padding: 0;
-  }
-
-  .enquiry-form-wrapper .form {
-    padding: 0;
-  }
-
-  .enquiry-form-wrapper .fieldset {
-    gap: 16px;
-  }
-
-  .enquiry-form-wrapper .fieldset-row {
-    gap: 12px;
-  }
-
-  .enquiry-form-wrapper .banner {
-    margin-bottom: 16px;
-  }
-
   /* Mobile Responsive */
   @media (max-width: 1024px) {
     .packages-grid {
@@ -1096,85 +628,6 @@
     .collapsible-content-inner {
       font-size: 13px;
     }
-
-    .consultation-modal,
-    .enquiry-modal {
-      width: 95%;
-      margin: 10px;
-      border-radius: 12px;
-    }
-
-    .modal-header {
-      padding: 20px 20px 15px;
-    }
-
-    .modal-title {
-      font-size: 18px;
-    }
-
-    .modal-subtitle {
-      font-size: 13px;
-    }
-
-    .modal-content {
-      padding: 5px 15px 20px;
-    }
-
-    .consultation-option {
-      padding: 14px;
-    }
-
-    .consultation-icon {
-      width: 40px;
-      height: 40px;
-      margin-right: 12px;
-      border-radius: 8px;
-    }
-
-    .consultation-icon svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .consultation-method {
-      font-size: 14px;
-    }
-
-    .consultation-info {
-      font-size: 12px;
-    }
-
-    .modal-close {
-      top: 12px;
-      right: 12px;
-      width: 26px;
-      height: 26px;
-    }
-
-    .modal-close svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    .faq-link-section {
-      padding: 0px 15px;
-      margin-top: 20px;
-    }
-
-    .faq-pre-text {
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .faq-link-button {
-      padding: 12px 24px;
-      font-size: 14px;
-    }
-
-    .faq-link-button svg {
-      width: 16px;
-      height: 16px;
-    }
   }
 
   @media (max-width: 480px) {
@@ -1200,26 +653,10 @@
       font-size: 14px;
     }
   }
-  /* Style auto-filled fields as read-only */
-  .enquiry-form-wrapper input[name="contact[note]"],
-  .enquiry-form-wrapper input[name="contact[subject]"] {
-    background-color: #f5f5f5;
-    cursor: not-allowed;
-    opacity: 0.7;
-  }
 </style>
 
 <div class="treatment-tabs-section">
- {%- comment -%} Count total tab blocks {%- endcomment -%}
-{%- assign tab_count = 0 -%}
-{%- for block in section.blocks -%}
-  {%- if block.type == 'tab' -%}
-    {%- assign tab_count = tab_count | plus: 1 -%}
-  {%- endif -%}
-{%- endfor -%}
-
-<!-- Tab Navigation - Top (Mobile Only) - Hidden if only 1 tab -->
-{%- if tab_count > 1 -%}
+  <!-- Tab Navigation - Top (Mobile Only) -->
   <div class="tab-navigation top-tabs">
     {% for block in section.blocks %}
       {% if block.type == 'tab' %}
@@ -1232,7 +669,6 @@
       {% endif %}
     {% endfor %}
   </div>
-{%- endif -%}
 
   <!-- Tab Content -->
   {% for block in section.blocks %}
@@ -1254,6 +690,20 @@
                 Image 1
               </div>
             {% endif %}
+
+            <!-- Tab Navigation - Mobile Only (Below Image) -->
+            <div class="tab-navigation content-tabs mobile-tabs">
+              {% for tab_block in section.blocks %}
+                {% if tab_block.type == 'tab' %}
+                  <button 
+                    class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                    data-tab="{{ tab_block.settings.tab_identifier }}"
+                    onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                    {{ tab_block.settings.tab_name }}
+                  </button>
+                {% endif %}
+              {% endfor %}
+            </div>
           </div>
 
           <!-- Right Column - Content -->
@@ -1264,43 +714,30 @@
               {{ block.settings.top_description }}
             </div>
 
-            {%- comment -%} Mobile Tabs - Hidden if only 1 tab {%- endcomment -%}
-            {%- if tab_count > 1 -%}
-              <div class="tab-navigation content-tabs mobile-tabs">
-                {% for tab_block in section.blocks %}
-                  {% if tab_block.type == 'tab' %}
-                    <button 
-                      class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
-                      data-tab="{{ tab_block.settings.tab_identifier }}"
-                      onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
-                      {{ tab_block.settings.tab_name }}
-                    </button>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            {%- endif -%}
-
-            <span style="display: none;"> <p><span id="shopify-installments-content" data-testid="shopify-installments-content" class="pr-1.5">Pay in instalments with </span></p><div class="inline-flex align-middle text-purple-primary" style="
-    color: rgb(84 51 235 / 1);
-    vertical-align: middle;
-    display: inline-flex;
-"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 25" aria-label="Shop Pay" role="img" class="h-[14px] w-[59px]" style="
-    width: 59px;
-    height: 14px;
-"><path fill="currentColor" d="M70.842 7.915h2.25c1.561 0 2.328.642 2.328 1.715 0 1.074-.739 1.715-2.259 1.715h-2.32v-3.43ZM80.525 16.142c-.879 0-1.227-.474-1.227-.948 0-.642.725-.935 2.147-1.102l1.115-.125c-.07 1.227-.892 2.175-2.035 2.175Z"></path><path fill="currentColor" fill-rule="evenodd" d="M65.645.5a3.64 3.64 0 0 0-3.64 3.64V20.7a3.64 3.64 0 0 0 3.64 3.64h29.668a3.64 3.64 0 0 0 3.64-3.64V4.14A3.64 3.64 0 0 0 95.314.5H65.645Zm5.197 16.674v-4.197h2.64c2.412 0 3.695-1.353 3.695-3.402 0-2.05-1.283-3.277-3.695-3.277h-4.341v10.876h1.7Zm9.334.223c1.297 0 2.147-.572 2.538-1.548.112 1.088.767 1.645 2.189 1.269l.014-1.157c-.572.055-.683-.154-.683-.753v-2.845c0-1.673-1.102-2.663-3.138-2.663-2.008 0-3.165 1.004-3.165 2.705h1.562c0-.809.572-1.297 1.576-1.297 1.06 0 1.547.46 1.534 1.255v.363l-1.8.195c-2.021.223-3.137.99-3.137 2.329 0 1.101.781 2.147 2.51 2.147Zm9.906.32c-.711 1.73-1.855 2.245-3.64 2.245h-.766V18.54h.822c.977 0 1.45-.307 1.966-1.185L85.3 9.923h1.757l2.259 5.424 2.008-5.424h1.715l-2.956 7.795Z" clip-rule="evenodd"></path><path fill="currentColor" d="M6.992 11.055c-2.359-.509-3.41-.708-3.41-1.612 0-.85.711-1.274 2.134-1.274 1.25 0 2.165.544 2.839 1.61.05.081.155.11.241.066l2.655-1.335a.186.186 0 0 0 .076-.259c-1.102-1.9-3.137-2.94-5.818-2.94C2.188 5.311 0 7.037 0 9.781c0 2.915 2.664 3.651 5.027 4.16 2.362.51 3.417.709 3.417 1.613s-.769 1.33-2.303 1.33c-1.416 0-2.467-.644-3.102-1.896a.186.186 0 0 0-.251-.082L.14 16.21a.188.188 0 0 0-.083.253c1.051 2.102 3.207 3.285 6.087 3.285 3.668 0 5.885-1.698 5.885-4.527 0-2.83-2.677-3.651-5.037-4.16v-.007ZM21.218 5.311c-1.505 0-2.835.531-3.791 1.477-.06.057-.159.015-.159-.067V.687A.185.185 0 0 0 17.081.5h-3.322a.185.185 0 0 0-.187.187v18.73c0 .104.083.186.187.186h3.322a.185.185 0 0 0 .187-.186V11.2c0-1.587 1.223-2.804 2.87-2.804 1.649 0 2.843 1.191 2.843 2.804v8.216c0 .104.082.186.187.186h3.322a.185.185 0 0 0 .187-.186V11.2c0-3.452-2.274-5.89-5.459-5.89ZM33.415 4.774c-1.803 0-3.493.55-4.706 1.343a.186.186 0 0 0-.06.25l1.464 2.488c.054.089.168.12.257.066a5.853 5.853 0 0 1 3.052-.834c2.899 0 5.03 2.036 5.03 4.726 0 2.292-1.706 3.99-3.868 3.99-1.762 0-2.985-1.022-2.985-2.463 0-.825.352-1.502 1.27-1.98a.183.183 0 0 0 .073-.258l-1.381-2.327a.187.187 0 0 0-.226-.079c-1.85.683-3.15 2.327-3.15 4.533 0 3.338 2.67 5.83 6.396 5.83 4.35 0 7.478-3 7.478-7.303 0-4.612-3.64-7.982-8.644-7.982ZM51.776 5.283c-1.68 0-3.182.62-4.277 1.707a.093.093 0 0 1-.16-.066v-1.31a.185.185 0 0 0-.187-.186h-3.235a.185.185 0 0 0-.188.187v18.702c0 .104.083.186.188.186h3.32a.185.185 0 0 0 .188-.186v-6.133c0-.082.099-.123.16-.07 1.091 1.012 2.536 1.603 4.19 1.603 3.897 0 6.936-3.139 6.936-7.217 0-4.078-3.042-7.217-6.935-7.217Zm-.63 11.266c-2.215 0-3.895-1.754-3.895-4.074S48.928 8.4 51.147 8.4c2.22 0 3.893 1.726 3.893 4.075 0 2.348-1.651 4.074-3.896 4.074h.003Z"></path></svg></div>or<img alt="Klarna" loading="lazy" decoding="async" data-nimg="fill" class="payment-provider_payment-providers-image__Gs9uE" src="https://images.ctfassets.net/wl6q2in9o7k3/3qigO8KlMUUeeMuIh5Mo4l/b8b2e35136a604e1e823ce27c9d391ab/klarna-logo.svg" style="position: relative;height: 100%;width: auto;inset: 0px;color: transparent;"></span>
-            
             <!-- CTA Cards -->
             <div class="cta-cards">
-              <!-- Book Consultation Card - Now triggers modal -->
-              <div class="cta-card consultation-card" onclick="openConsultationModal('{{ block.settings.tab_identifier }}')">
-                <div class="cta-card-header">
-                  <h3>{{ block.settings.consultation_heading }}</h3>
-                  {% if block.settings.consultation_badge != blank %}
-                    <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
-                  {% endif %}
+              <!-- Book Consultation Card -->
+              {% if block.settings.consultation_link != blank %}
+                <a href="{{ block.settings.consultation_link }}" class="cta-card consultation-card" style="text-decoration: none; color: inherit;">
+                  <div class="cta-card-header">
+                    <h3>{{ block.settings.consultation_heading }}</h3>
+                    {% if block.settings.consultation_badge != blank %}
+                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.consultation_description }}</p>
+                </a>
+              {% else %}
+                <div class="cta-card consultation-card">
+                  <div class="cta-card-header">
+                    <h3>{{ block.settings.consultation_heading }}</h3>
+                    {% if block.settings.consultation_badge != blank %}
+                      <span class="cta-badge">{{ block.settings.consultation_badge }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.consultation_description }}</p>
                 </div>
-                <p>{{ block.settings.consultation_description }}</p>
-              </div>
+              {% endif %}
 
               <!-- Buy Package Card -->
               <div class="cta-card package-card-toggle" onclick="togglePackages('{{ block.settings.tab_identifier }}')">
@@ -1316,267 +753,24 @@
                 <p>{{ block.settings.package_description }}</p>
               </div>
 
-              {%- comment -%} Desktop Tabs - Hidden if only 1 tab {%- endcomment -%}
-              {%- if tab_count > 1 -%}
-                <!-- Tab Navigation - Desktop Only (Below CTA Cards) -->
-                <div class="tab-navigation content-tabs desktop-tabs">
-                  {% for tab_block in section.blocks %}
-                    {% if tab_block.type == 'tab' %}
-                      <button 
-                        class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
-                        data-tab="{{ tab_block.settings.tab_identifier }}"
-                        onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
-                        {{ tab_block.settings.tab_name }}
-                      </button>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              {%- endif -%}
-            </div>
-          </div>
-        </div>
-
-        <!-- Consultation Modal for this tab -->
-        <div class="consultation-modal-overlay" id="consultation-modal-{{ block.settings.tab_identifier }}">
-          <div class="consultation-modal">
-            <div class="modal-header">
-              <button class="modal-close" onclick="closeConsultationModal('{{ block.settings.tab_identifier }}')">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              <h3 class="modal-title">{{ block.settings.modal_title | default: 'How would you like to contact us?' }}</h3>
-              <p class="modal-subtitle">{{ block.settings.modal_subtitle | default: 'Choose your preferred method to get in touch with us' }}</p>
-            </div>
-            <div class="modal-content">
-              <div class="consultation-options">
-                
-                <!-- Contact Page Option -->
-                {% if block.settings.contact_page_url != blank %}
-                  <a href="{{ block.settings.contact_page_url }}" class="consultation-option">
-                    <div class="consultation-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div class="consultation-details">
-                      <div class="consultation-method">{{ block.settings.contact_option_title | default: 'Contact Form' }}</div>
-                      <div class="consultation-info">{{ block.settings.contact_option_description | default: 'Fill out our online form' }}</div>
-                    </div>
-                    <div class="consultation-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </a>
-                {% endif %}
-
-                <!-- Phone Option -->
-                  {% if block.settings.phone_number != blank %}
-                    <div class="consultation-option" onclick="openPhoneHoursModal('{{ block.settings.tab_identifier }}'); event.preventDefault();">
-                    <div class="consultation-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div class="consultation-details">
-                      <div class="consultation-method">{{ block.settings.phone_option_title | default: 'Call Us' }}</div>
-                      <div class="consultation-info">{{ block.settings.phone_number }}</div>
-                    </div>
-                    <div class="consultation-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                {% endif %}
-
-                <!-- WhatsApp Option -->
-                {% if block.settings.whatsapp_number != blank %}
-                  <a href="https://wa.me/{{ block.settings.whatsapp_number | replace: ' ', '' | replace: '-', '' | replace: '+', '' }}" target="_blank" class="consultation-option">
-                    <div class="consultation-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                      </svg>
-                    </div>
-                    <div class="consultation-details">
-                      <div class="consultation-method">{{ block.settings.whatsapp_option_title | default: 'WhatsApp' }}</div>
-                      <div class="consultation-info">{{ block.settings.whatsapp_display_number | default: block.settings.whatsapp_number }}</div>
-                    </div>
-                    <div class="consultation-arrow">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </a>
-                {% endif %}
+              <!-- Tab Navigation - Desktop Only (Below CTA Cards) -->
+              <div class="tab-navigation content-tabs desktop-tabs">
+                {% for tab_block in section.blocks %}
+                  {% if tab_block.type == 'tab' %}
+                    <button 
+                      class="tab-button {% if tab_block.settings.tab_identifier == block.settings.tab_identifier %}active{% endif %}" 
+                      data-tab="{{ tab_block.settings.tab_identifier }}"
+                      onclick="switchTab('{{ tab_block.settings.tab_identifier }}')">
+                      {{ tab_block.settings.tab_name }}
+                    </button>
+                  {% endif %}
+                {% endfor %}
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Phone Hours Modal for this tab -->
-        <div class="consultation-modal-overlay" id="phone-hours-modal-{{ block.settings.tab_identifier }}">
-          <div class="phone-hours-modal">
-            <button class="modal-close" onclick="closePhoneHoursModal('{{ block.settings.tab_identifier }}')">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
-            <div class="phone-icon-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-
-            <h3 class="phone-modal-title">Call Us</h3>
-
-            <div class="store-status" id="store-status-{{ block.settings.tab_identifier }}">
-              <span class="status-icon">✓</span>
-              <span class="status-text">We are currently open</span>
-            </div>
-
-            <div class="closed-message" id="closed-message-{{ block.settings.tab_identifier }}" style="display: none;">
-              <p>{{ block.settings.closed_message | default: 'You can send us a WhatsApp, send us an email or call back during opening hours' }}</p>
-            </div>
-
-            <div class="opening-hours">
-              <h4 class="hours-heading">Opening Hours</h4>
-              <div class="hours-list">
-                <div class="hours-row">
-                  <span class="day">Monday</span>
-                  <span class="time">{{ block.settings.monday_hours | default: 'Closed' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Tuesday</span>
-                  <span class="time">{{ block.settings.tuesday_hours | default: '10:00AM-6:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Wednesday</span>
-                  <span class="time">{{ block.settings.wednesday_hours | default: '10:00AM-6:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Thursday</span>
-                  <span class="time">{{ block.settings.thursday_hours | default: 'Closed' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Friday</span>
-                  <span class="time">{{ block.settings.friday_hours | default: '10:00AM-6:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Saturday</span>
-                  <span class="time">{{ block.settings.saturday_hours | default: '10:00AM-4:00PM' }}</span>
-                </div>
-                <div class="hours-row">
-                  <span class="day">Sunday</span>
-                  <span class="time">{{ block.settings.sunday_hours | default: 'Closed' }}</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="tel:{{ block.settings.phone_number | replace: ' ', '' | replace: '-', '' }}" class="call-now-button" id="call-button-{{ block.settings.tab_identifier }}">
-              Call Now
-            </a>
-          </div>
-        </div>
-
-        <!-- Packages Container - Right below desktop tabs -->
-        <div class="packages-container" data-packages="{{ block.settings.tab_identifier }}">
-          <div class="packages-grid">
-            {% for package_block in section.blocks %}
-              {% if package_block.type == 'package' and package_block.settings.parent_tab == block.settings.tab_identifier %}
-                <div class="package-card">
-                  <div class="package-card-header" onclick="toggleSessionOptions('{{ package_block.id }}')">
-                    <h4>{{ package_block.settings.package_name }}</h4>
-                    <div class="package-price">{{ package_block.settings.price }}</div>
-                  </div>
-                  
-                  <!-- Session Options -->
-                  <div class="session-options" id="session-{{ package_block.id }}">
-                    <div class="session-selector-heading">Select Number of Sessions</div>
-                    
-                    {% if package_block.settings.show_session_1 %}
-                      <div class="session-option" 
-                           data-package-name="{{ package_block.settings.package_name }}"
-                           data-session-label="{{ package_block.settings.session_1_label }}"
-                           data-session-price="{{ package_block.settings.session_1_price }}"
-                           data-session-total="{{ package_block.settings.session_1_total }}"
-                           data-link="{{ package_block.settings.session_1_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_1_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_1_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_1_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_1_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    {% if package_block.settings.show_session_3 %}
-                      <div class="session-option"
-                           data-package-name="{{ package_block.settings.package_name }}"
-                           data-session-label="{{ package_block.settings.session_3_label }}"
-                           data-session-price="{{ package_block.settings.session_3_price }}"
-                           data-session-total="{{ package_block.settings.session_3_total }}"
-                           data-link="{{ package_block.settings.session_3_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_3_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_3_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_3_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_3_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    {% if package_block.settings.show_session_6 %}
-                      <div class="session-option"
-                           data-package-name="{{ package_block.settings.package_name }}"
-                           data-session-label="{{ package_block.settings.session_6_label }}"
-                           data-session-price="{{ package_block.settings.session_6_price }}"
-                           data-session-total="{{ package_block.settings.session_6_total }}"
-                           data-link="{{ package_block.settings.session_6_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_6_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_6_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_6_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_6_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    {% if package_block.settings.show_session_10 %}
-                      <div class="session-option"
-                           data-package-name="{{ package_block.settings.package_name }}"
-                           data-session-label="{{ package_block.settings.session_10_label }}"
-                           data-session-price="{{ package_block.settings.session_10_price }}"
-                           data-session-total="{{ package_block.settings.session_10_total }}"
-                           data-link="{{ package_block.settings.session_10_link }}">
-                        <div class="session-info">
-                          <span class="session-label">{{ package_block.settings.session_10_label }}</span>
-                          <span class="session-price">{{ package_block.settings.session_10_price }}</span>
-                        </div>
-                        <div class="session-details">
-                          <span class="session-total">{{ package_block.settings.session_10_total }}</span>
-                          <span class="session-per">{{ package_block.settings.session_10_per_session }}</span>
-                        </div>
-                      </div>
-                    {% endif %}
-
-                    <button class="package-select session-select" id="select-btn-{{ package_block.id }}">SELECT</button>
-                  </div>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-
-        <!-- Collapsible Tabs Section (Desktop) -->
+        <!-- Collapsible Tabs Section (Static - doesn't change with tabs) -->
         <div class="collapsible-tabs-section">
           {% if section.settings.show_collapsible_1 %}
             <div class="collapsible-tab" id="collapsible-1-{{ block.settings.tab_identifier }}">
@@ -1589,7 +783,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1612,7 +806,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1635,7 +829,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1658,7 +852,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1669,52 +863,81 @@
               </div>
             </div>
           {% endif %}
+        </div>
 
-          {% if section.settings.show_collapsible_5 %}
-            <div class="collapsible-tab" id="collapsible-5-{{ block.settings.tab_identifier }}">
-              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-5-{{ block.settings.tab_identifier }}')">
-                <div class="collapsible-header-left">
-                  <div class="collapsible-icon">
-                    {{ section.settings.collapsible_5_icon }}
+        <!-- Packages Container - Below Main Content -->
+        <div class="packages-container" data-packages="{{ block.settings.tab_identifier }}">
+          <div class="packages-grid">
+            {% for package_block in section.blocks %}
+              {% if package_block.type == 'package' and package_block.settings.parent_tab == block.settings.tab_identifier %}
+                <div class="package-card">
+                  <div class="package-card-header" onclick="toggleSessionOptions('{{ package_block.id }}')">
+                    <h4>{{ package_block.settings.package_name }}</h4>
+                    <div class="package-price">{{ package_block.settings.price }}</div>
                   </div>
-                  <div class="collapsible-title">{{ section.settings.collapsible_5_title }}</div>
-                </div>
-                <div class="collapsible-arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="collapsible-content">
-                <div class="collapsible-content-inner">
-                  {{ section.settings.collapsible_5_content }}
-                </div>
-              </div>
-            </div>
-          {% endif %}
+                  
+                  <!-- Session Options -->
+                  <div class="session-options" id="session-{{ package_block.id }}">
+                    <div class="session-selector-heading">Select Number of Session</div>
+                    
+                    {% if package_block.settings.show_session_1 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_1_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_1_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_1_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_1_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_1_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
 
-          {% if section.settings.show_collapsible_6 %}
-            <div class="collapsible-tab" id="collapsible-6-{{ block.settings.tab_identifier }}">
-              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-6-{{ block.settings.tab_identifier }}')">
-                <div class="collapsible-header-left">
-                  <div class="collapsible-icon">
-                    {{ section.settings.collapsible_6_icon }}
+                    {% if package_block.settings.show_session_3 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_3_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_3_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_3_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_3_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_3_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_6 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_6_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_6_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_6_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_6_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_6_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    {% if package_block.settings.show_session_10 %}
+                      <div class="session-option" data-link="{{ package_block.settings.session_10_link }}">
+                        <div class="session-info">
+                          <span class="session-label">{{ package_block.settings.session_10_label }}</span>
+                          <span class="session-price">{{ package_block.settings.session_10_price }}</span>
+                        </div>
+                        <div class="session-details">
+                          <span class="session-total">{{ package_block.settings.session_10_total }}</span>
+                          <span class="session-per">{{ package_block.settings.session_10_per_session }}</span>
+                        </div>
+                      </div>
+                    {% endif %}
+
+                    <button class="package-select session-select">SELECT</button>
                   </div>
-                  <div class="collapsible-title">{{ section.settings.collapsible_6_title }}</div>
                 </div>
-                <div class="collapsible-arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="collapsible-content">
-                <div class="collapsible-content-inner">
-                  {{ section.settings.collapsible_6_content }}
-                </div>
-              </div>
-            </div>
-          {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
 
         <!-- Collapsible Tabs Section - Mobile (After Packages) -->
@@ -1730,7 +953,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1753,7 +976,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1776,7 +999,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1799,7 +1022,7 @@
                 </div>
                 <div class="collapsible-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
               </div>
@@ -1810,219 +1033,44 @@
               </div>
             </div>
           {% endif %}
-
-          {% if section.settings.show_collapsible_5 %}
-            <div class="collapsible-tab" id="collapsible-5-mobile-{{ block.settings.tab_identifier }}">
-              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-5-mobile-{{ block.settings.tab_identifier }}')">
-                <div class="collapsible-header-left">
-                  <div class="collapsible-icon">
-                    {{ section.settings.collapsible_5_icon }}
-                  </div>
-                  <div class="collapsible-title">{{ section.settings.collapsible_5_title }}</div>
-                </div>
-                <div class="collapsible-arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="collapsible-content">
-                <div class="collapsible-content-inner">
-                  {{ section.settings.collapsible_5_content }}
-                </div>
-              </div>
-            </div>
-          {% endif %}
-
-          {% if section.settings.show_collapsible_6 %}
-            <div class="collapsible-tab" id="collapsible-6-mobile-{{ block.settings.tab_identifier }}">
-              <div class="collapsible-header" onclick="toggleCollapsible('collapsible-6-mobile-{{ block.settings.tab_identifier }}')">
-                <div class="collapsible-header-left">
-                  <div class="collapsible-icon">
-                    {{ section.settings.collapsible_6_icon }}
-                  </div>
-                  <div class="collapsible-title">{{ section.settings.collapsible_6_title }}</div>
-                </div>
-                <div class="collapsible-arrow">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="collapsible-content">
-                <div class="collapsible-content-inner">
-                  {{ section.settings.collapsible_6_content }}
-                </div>
-              </div>
-            </div>
-          {% endif %}
         </div>
-
-        <!-- View FAQs Link Section -->
-        {% if section.settings.show_faq_link %}
-          <div class="faq-link-section">
-            <div class="faq-link-wrapper">
-              {% if section.settings.faq_pre_text != blank %}
-                <p class="faq-pre-text">{{ section.settings.faq_pre_text }}</p>
-              {% endif %}
-              {% if section.settings.faq_section_id != blank %}
-                <button onclick="scrollToFAQ('{{ section.settings.faq_section_id }}')" class="faq-link-button">
-                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              {% elsif section.settings.faq_link_url != blank %}
-                <a href="{{ section.settings.faq_link_url }}" class="faq-link-button">
-                  {{ section.settings.faq_link_text | default: 'View FAQs' }}
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              {% endif %}
-            </div>
-          </div>
-        {% endif %}
 
       </div>
     {% endif %}
   {% endfor %}
 </div>
 
-<!-- Global Enquiry Form Modal -->
-<div class="consultation-modal-overlay" id="enquiry-modal">
-  <div class="enquiry-modal">
-    <div class="modal-header">
-      <button class="modal-close" onclick="closeEnquiryModal()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <h3 class="modal-title">{{ section.settings.enquiry_modal_title | default: 'Get in Touch' }}</h3>
-      <p class="modal-subtitle">{{ section.settings.enquiry_modal_subtitle | default: 'Fill out the form below and we will get back to you shortly' }}</p>
-    </div>
-    <div class="modal-content">
-      <div class="enquiry-form-wrapper">
-        {%- form 'contact', id: 'treatment-enquiry-form', class: 'form', method: 'post' -%}
-  {%- if form.posted_successfully? -%}
-    {%- assign content = 'contact.form.success_message' | t -%}
-    {%- render 'banner', status: 'success', content: content -%}
-  {%- endif -%}
-
-  {%- if form.errors -%}
-    {%- capture content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
-    {%- render 'banner', status: 'error', content: content -%}
-  {%- endif -%}
-
-  <div class="fieldset">
-    <div class="fieldset-row">
-      {%- assign label = 'First Name' -%}
-      {%- render 'input', type: 'text', name: 'contact[first_name]', label: label, required: true, autocomplete: 'given-name', id_prefix: 'enquiry' -%}
-
-      {%- assign label = 'Last Name' -%}
-      {%- render 'input', type: 'text', name: 'contact[last_name]', label: label, required: true, autocomplete: 'family-name', id_prefix: 'enquiry' -%}
-    </div>
-
-    <div class="fieldset-row">
-      {%- assign label = 'Email' -%}
-      {%- render 'input', type: 'email', name: 'contact[email]', label: label, required: true, autocomplete: 'email', id_prefix: 'enquiry' -%}
-
-      {%- assign label = 'Phone' -%}
-      {%- render 'input', type: 'tel', name: 'contact[phone]', label: label, required: true, autocomplete: 'tel', id_prefix: 'enquiry' -%}
-    </div>
-
-    {%- if section.settings.time_to_call_options != blank -%}
-      {%- assign time_options = section.settings.time_to_call_options | split: ',' -%}
-      {%- assign label = 'Best time to call' -%}
-      {%- render 'select', option_values: time_options, show_empty_value: true, name: 'contact[company]', label: label, required: false, id_prefix: 'enquiry' -%}
-    {%- endif -%}
-
-    {%- assign label = 'Treatment Name' -%}
-    {%- render 'input', type: 'text', name: 'contact[note]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
-
-    {%- assign label = 'Selected Sessions' -%}
-    {%- render 'input', type: 'text', name: 'contact[subject]', label: label, required: true, id_prefix: 'enquiry', autocomplete: 'off' -%}
-
-    {%- assign label = 'Message' -%}
-    {%- render 'input', name: 'contact[body]', label: label, multiline: 4, required: true, id_prefix: 'enquiry' -%}
-  </div>
-
-  {%- assign button_content = 'Submit Enquiry' -%}
-  {%- render 'button', content: button_content, type: 'submit', stretch: true -%}
-{%- endform -%}
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
+  function switchTab(tabId) {
+    // Update ALL tab buttons (both top and content tabs)
+    document.querySelectorAll('.tab-button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
+      btn.classList.add('active');
+    });
 
-  // Reopen enquiry modal if URL contains success parameter
-if (window.location.search.includes('contact_posted=true') && window.location.hash === '#treatment-enquiry-form') {
-  setTimeout(function() {
-    openEnquiryModal();
-    // Scroll to the success message
-    setTimeout(function() {
-      const modal = document.getElementById('enquiry-modal');
-      if (modal) {
-        const banner = modal.querySelector('.banner');
-        if (banner) {
-          banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-      }
-    }, 300);
-  }, 500);
-}
+    // Update tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+    document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
 
-  // Enquiry state management
-  const enquiryState = {
-    packageName: '',
-    sessionLabel: '',
-    sessionPrice: '',
-    sessionTotal: '',
-    cartLink: ''
-  };
+    // Close any open package containers
+    document.querySelectorAll('.packages-container').forEach(container => {
+      container.classList.remove('active');
+    });
 
- let packagesVisible = false;
+    // Close any open session options
+    document.querySelectorAll('.session-options').forEach(session => {
+      session.classList.remove('active');
+    });
+  }
 
-function switchTab(tabId) {
-  document.querySelectorAll('.tab-button').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  document.querySelectorAll(`[data-tab="${tabId}"]`).forEach(btn => {
-    btn.classList.add('active');
-  });
-  document.querySelectorAll('.tab-content').forEach(content => {
-    content.classList.remove('active');
-  });
-  document.querySelector(`[data-tab-content="${tabId}"]`).classList.add('active');
-  document.querySelectorAll('.packages-container').forEach(container => {
-    container.classList.remove('active');
-  });
-  document.querySelectorAll('.session-options').forEach(session => {
-    session.classList.remove('active');
-  });
-  
-  // NEW: Keep packages visible when switching tabs
-  if (packagesVisible) {
+  function togglePackages(tabId) {
     const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
-    if (packagesContainer) {
-      packagesContainer.classList.add('active');
-    }
+    packagesContainer.classList.toggle('active');
   }
-}
-
-function togglePackages(tabId) {
-  const packagesContainer = document.querySelector(`[data-packages="${tabId}"]`);
-  packagesContainer.classList.toggle('active');
-  
-  // Track if packages are now visible or hidden
-  if (packagesContainer.classList.contains('active')) {
-    packagesVisible = true;
-  } else {
-    packagesVisible = false;
-  }
-}
 
   function toggleSessionOptions(packageId) {
     const sessionOptions = document.getElementById(`session-${packageId}`);
@@ -2034,240 +1082,36 @@ function togglePackages(tabId) {
     collapsibleTab.classList.toggle('active');
   }
 
-  function openConsultationModal(tabId) {
-    const modal = document.getElementById(`consultation-modal-${tabId}`);
-    if (modal) {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeConsultationModal(tabId) {
-    const modal = document.getElementById(`consultation-modal-${tabId}`);
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
-  function openPhoneHoursModal(tabId) {
-    closeConsultationModal(tabId);
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
-    if (modal) {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      checkStoreStatus(tabId);
-      highlightCurrentDay(tabId);
-    }
-  }
-
-  function closePhoneHoursModal(tabId) {
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
-  function checkStoreStatus(tabId) {
-    const statusElement = document.getElementById(`store-status-${tabId}`);
-    if (!statusElement) return;
-    
-    const now = new Date();
-    const currentDay = now.getDay();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-    const currentTime = currentHour * 60 + currentMinute;
-    
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
-    const hoursRows = modal.querySelectorAll('.hours-row');
-    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];
-    const hoursText = todayRow.querySelector('.time').textContent.trim();
-    
-    let isOpen = false;
-    if (hoursText.toLowerCase() !== 'closed') {
-      const matches = hoursText.match(/(\d{1,2}):(\d{2})(AM|PM)-(\d{1,2}):(\d{2})(AM|PM)/i);
-      if (matches) {
-        let openHour = parseInt(matches[1]);
-        const openMinute = parseInt(matches[2]);
-        const openPeriod = matches[3].toUpperCase();
-        let closeHour = parseInt(matches[4]);
-        const closeMinute = parseInt(matches[5]);
-        const closePeriod = matches[6].toUpperCase();
-        
-        if (openPeriod === 'PM' && openHour !== 12) openHour += 12;
-        if (openPeriod === 'AM' && openHour === 12) openHour = 0;
-        if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;
-        if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;
-        
-        const openTime = openHour * 60 + openMinute;
-        const closeTime = closeHour * 60 + closeMinute;
-        
-        isOpen = currentTime >= openTime && currentTime < closeTime;
-      }
-    }
-    
-    const statusIcon = statusElement.querySelector('.status-icon');
-    const statusText = statusElement.querySelector('.status-text');
-    const closedMessage = document.getElementById(`closed-message-${tabId}`);
-    const callButton = document.getElementById(`call-button-${tabId}`);
-    
-    if (isOpen) {
-      statusElement.classList.remove('closed');
-      statusIcon.textContent = '✓';
-      statusText.textContent = 'We are currently open';
-      if (closedMessage) closedMessage.style.display = 'none';
-      if (callButton) {
-        callButton.textContent = 'Call Now';
-        callButton.classList.remove('disabled');
-        callButton.style.pointerEvents = 'auto';
-        callButton.style.background = '#007AFF';
-      }
-    } else {
-      statusElement.classList.add('closed');
-      statusIcon.textContent = '✗';
-      statusText.textContent = 'We are currently closed';
-      if (closedMessage) closedMessage.style.display = 'block';
-      if (callButton) {
-        callButton.textContent = 'Currently Closed';
-        callButton.classList.add('disabled');
-        callButton.style.pointerEvents = 'none';
-        callButton.style.background = '#cccccc';
-      }
-    }
-  }
-
-  function highlightCurrentDay(tabId) {
-    const modal = document.getElementById(`phone-hours-modal-${tabId}`);
-    if (!modal) return;
-    
-    const now = new Date();
-    const currentDay = now.getDay();
-    const hoursRows = modal.querySelectorAll('.hours-row');
-    
-    hoursRows.forEach(row => row.classList.remove('current-day'));
-    
-    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];
-    if (todayRow) todayRow.classList.add('current-day');
-  }
-
-  function openEnquiryModal() {
-  const modal = document.getElementById('enquiry-modal');
-  if (modal) {
-    // Use new field names
-    const treatmentNameInput = document.querySelector('input[name="contact[note]"]');
-    const selectedSessionsInput = document.querySelector('input[name="contact[subject]"]');
-    
-    if (treatmentNameInput) {
-      treatmentNameInput.value = `${enquiryState.packageName} - {{ product.title }}`;
-      treatmentNameInput.setAttribute('readonly', true);
-    }
-    if (selectedSessionsInput) {
-      selectedSessionsInput.value = `${enquiryState.sessionLabel} - ${enquiryState.sessionTotal}`;
-      selectedSessionsInput.setAttribute('readonly', true);
-    }
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  }
-
-  function closeEnquiryModal() {
-    const modal = document.getElementById('enquiry-modal');
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
-  function scrollToFAQ(sectionId) {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      const headerOffset = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    } else {
-      const sections = document.querySelectorAll('[id*="faq"]');
-      if (sections.length > 0) {
-        const headerOffset = 80;
-        const elementPosition = sections[0].getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-      }
-    }
-  }
-
+  // Handle session selection
   document.addEventListener('DOMContentLoaded', function() {
-    // Session option selection handler
+    let selectedSessionLink = '';
+
     document.querySelectorAll('.session-option').forEach(option => {
       option.addEventListener('click', function() {
+        // Remove selected class from siblings
         const parent = this.parentElement;
-        const packageId = parent.id.replace('session-', '');
-        
-        // Deselect all options in this package
         parent.querySelectorAll('.session-option').forEach(opt => {
           opt.classList.remove('selected');
         });
         
-        // Select this option
+        // Add selected class to clicked option
         this.classList.add('selected');
         
-        // Store selection data
-        enquiryState.packageName = this.getAttribute('data-package-name');
-        enquiryState.sessionLabel = this.getAttribute('data-session-label');
-        enquiryState.sessionPrice = this.getAttribute('data-session-price');
-        enquiryState.sessionTotal = this.getAttribute('data-session-total');
-        enquiryState.cartLink = this.getAttribute('data-link');
+        // Store the link from data attribute
+        selectedSessionLink = this.getAttribute('data-link');
         
-        // Enable SELECT button
+        // Enable the SELECT button
         const selectButton = parent.querySelector('.session-select');
         selectButton.classList.add('enabled');
+        
+        // Add click handler to SELECT button
+        selectButton.onclick = function() {
+          if (selectedSessionLink && selectedSessionLink !== '') {
+            window.location.href = selectedSessionLink;
+          }
+        };
       });
     });
-
-    // SELECT button handler
-    document.querySelectorAll('.session-select').forEach(button => {
-      button.addEventListener('click', function() {
-        if (this.classList.contains('enabled')) {
-          openEnquiryModal();
-        }
-      });
-    });
-
-    // Modal overlay click to close
-    document.querySelectorAll('.consultation-modal-overlay').forEach(overlay => {
-      overlay.addEventListener('click', function(e) {
-        if (e.target === this) {
-          this.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      });
-    });
-
-    // Escape key to close modals
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.consultation-modal-overlay.active').forEach(modal => {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      }
-    });
-
-    // If form was submitted successfully, reopen modal to show success message
-    {% if form.posted_successfully? %}
-      setTimeout(function() {
-        openEnquiryModal();
-      }, 100);
-    {% endif %}
-
-    // If form has errors, reopen modal to show errors
-    {% if form.errors %}
-      setTimeout(function() {
-        openEnquiryModal();
-      }, 100);
-    {% endif %}
   });
 </script>
 
@@ -2311,29 +1155,6 @@ function togglePackages(tabId) {
       "id": "section_background",
       "label": "Section Background Color",
       "default": "#ffffff"
-    },
-    {
-      "type": "header",
-      "content": "Enquiry Form Settings"
-    },
-    {
-      "type": "text",
-      "id": "enquiry_modal_title",
-      "label": "Modal Title",
-      "default": "Get in touch"
-    },
-    {
-      "type": "text",
-      "id": "enquiry_modal_subtitle",
-      "label": "Modal Subtitle",
-      "default": "Fill out the form below and we'll get back to you shortly"
-    },
-    {
-      "type": "text",
-      "id": "time_to_call_options",
-      "label": "Best Time to Call Options",
-      "info": "Comma-separated values (e.g., Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm))",
-      "default": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)"
     },
     {
       "type": "header",
@@ -2445,6 +1266,14 @@ function togglePackages(tabId) {
       "id": "tab_active_border_color",
       "label": "Tab Active Border Color",
       "default": "#E6B325"
+    },
+    {
+      "type": "header",
+      "content": "Tab Scrollbar (Mobile)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Customize the scrollbar that appears when tabs overflow on mobile. The scrollbar thumb uses the active tab background color."
     },
     {
       "type": "header",
@@ -2664,7 +1493,7 @@ function togglePackages(tabId) {
     },
     {
       "type": "paragraph",
-      "content": "Add up to 6 collapsible accordion tabs that remain the same across all treatment tabs."
+      "content": "Add up to 4 collapsible accordion tabs that remain the same across all treatment tabs."
     },
     {
       "type": "checkbox",
@@ -2765,97 +1594,6 @@ function togglePackages(tabId) {
       "id": "collapsible_4_content",
       "label": "Tab 4 - Content",
       "default": "<p>Add your FAQs here.</p>"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collapsible_5",
-      "label": "Show Collapsible Tab 5",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "collapsible_5_title",
-      "label": "Tab 5 - Title",
-      "default": "REVIEWS"
-    },
-    {
-      "type": "html",
-      "id": "collapsible_5_icon",
-      "label": "Tab 5 - Icon (SVG)",
-      "default": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z' /></svg>",
-      "info": "Paste SVG code for the icon"
-    },
-    {
-      "type": "richtext",
-      "id": "collapsible_5_content",
-      "label": "Tab 5 - Content",
-      "default": "<p>Add your reviews here.</p>"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collapsible_6",
-      "label": "Show Collapsible Tab 6",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "collapsible_6_title",
-      "label": "Tab 6 - Title",
-      "default": "AFTERCARE"
-    },
-    {
-      "type": "html",
-      "id": "collapsible_6_icon",
-      "label": "Tab 6 - Icon (SVG)",
-      "default": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' /></svg>",
-      "info": "Paste SVG code for the icon"
-    },
-    {
-      "type": "richtext",
-      "id": "collapsible_6_content",
-      "label": "Tab 6 - Content",
-      "default": "<p>Add your aftercare instructions here.</p>"
-    },
-    {
-      "type": "header",
-      "content": "FAQ Link Section"
-    },
-    {
-      "type": "paragraph",
-      "content": "Add a link to your FAQs that either scrolls to a section on the same page or links to another page."
-    },
-    {
-      "type": "checkbox",
-      "id": "show_faq_link",
-      "label": "Show FAQ Link",
-      "default": true,
-      "info": "Display a link to your FAQs below the collapsible tabs"
-    },
-    {
-      "type": "textarea",
-      "id": "faq_pre_text",
-      "label": "Text Above FAQ Link",
-      "default": "Have more questions?",
-      "info": "Optional text that appears above the FAQ button"
-    },
-    {
-      "type": "text",
-      "id": "faq_link_text",
-      "label": "FAQ Button Text",
-      "default": "View FAQs"
-    },
-    {
-      "type": "text",
-      "id": "faq_section_id",
-      "label": "FAQ Section ID (For Same Page)",
-      "info": "Enter the section ID to scroll to on the same page (e.g., shopify-section-template--25630357193084__ss_simple_faq_jiYFWj)",
-      "default": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj"
-    },
-    {
-      "type": "url",
-      "id": "faq_link_url",
-      "label": "FAQ Page URL (For Different Page)",
-      "info": "Link to a different FAQs page (e.g., /pages/faqs). Only used if Section ID is not set."
     }
   ],
   "blocks": [
@@ -2925,138 +1663,10 @@ function togglePackages(tabId) {
           "default": "Meet with one of our experts for a complimentary consultation."
         },
         {
-          "type": "header",
-          "content": "Consultation Modal Settings"
-        },
-        {
-          "type": "text",
-          "id": "modal_title",
-          "label": "Modal Title",
-          "default": "How would you like to consult?"
-        },
-        {
-          "type": "text",
-          "id": "modal_subtitle",
-          "label": "Modal Subtitle",
-          "default": "Choose your preferred method to get in touch with us"
-        },
-        {
-          "type": "header",
-          "content": "Contact Page Option"
-        },
-        {
           "type": "url",
-          "id": "contact_page_url",
-          "label": "Contact Page URL",
-          "info": "Link to your contact page"
-        },
-        {
-          "type": "text",
-          "id": "contact_option_title",
-          "label": "Contact Option Title",
-          "default": "Contact Form"
-        },
-        {
-          "type": "text",
-          "id": "contact_option_description",
-          "label": "Contact Option Description",
-          "default": "Fill out our online form"
-        },
-        {
-          "type": "header",
-          "content": "Phone Option"
-        },
-        {
-          "type": "text",
-          "id": "phone_number",
-          "label": "Phone Number",
-          "info": "Enter phone number (e.g., +1234567890)"
-        },
-        {
-          "type": "text",
-          "id": "phone_option_title",
-          "label": "Phone Option Title",
-          "default": "Call Us"
-        },
-        {
-          "type": "header",
-          "content": "Store Opening Hours"
-        },
-        {
-          "type": "paragraph",
-          "content": "Set your opening hours for each day. Format: 10:00AM-6:00PM or 'Closed'. These will be shown when customers click on the phone option."
-        },
-        {
-          "type": "text",
-          "id": "monday_hours",
-          "label": "Monday",
-          "default": "Closed"
-        },
-        {
-          "type": "text",
-          "id": "tuesday_hours",
-          "label": "Tuesday",
-          "default": "10:00AM-6:00PM"
-        },
-        {
-          "type": "text",
-          "id": "wednesday_hours",
-          "label": "Wednesday",
-          "default": "10:00AM-6:00PM"
-        },
-        {
-          "type": "text",
-          "id": "thursday_hours",
-          "label": "Thursday",
-          "default": "Closed"
-        },
-        {
-          "type": "text",
-          "id": "friday_hours",
-          "label": "Friday",
-          "default": "10:00AM-6:00PM"
-        },
-        {
-          "type": "text",
-          "id": "saturday_hours",
-          "label": "Saturday",
-          "default": "10:00AM-4:00PM"
-        },
-        {
-          "type": "text",
-          "id": "sunday_hours",
-          "label": "Sunday",
-          "default": "Closed"
-        },
-        {
-          "type": "textarea",
-          "id": "closed_message",
-          "label": "Closed Hours Message",
-          "default": "You can send us a WhatsApp, send us an email or call back during opening hours",
-          "info": "This message appears when the store is closed"
-        },
-        {
-          "type": "header",
-          "content": "WhatsApp Option"
-        },
-        {
-          "type": "text",
-          "id": "whatsapp_number",
-          "label": "WhatsApp Number",
-          "info": "Enter WhatsApp number without + or spaces (e.g., 1234567890)"
-        },
-        {
-          "type": "text",
-          "id": "whatsapp_display_number",
-          "label": "WhatsApp Display Number",
-          "info": "How the number should be displayed (e.g., +1 234 567 890)",
-          "default": "+44 7798 983387"
-        },
-        {
-          "type": "text",
-          "id": "whatsapp_option_title",
-          "label": "WhatsApp Option Title",
-          "default": "WhatsApp"
+          "id": "consultation_link",
+          "label": "Consultation Button Link",
+          "info": "Where should the consultation card link to?"
         },
         {
           "type": "text",
@@ -3132,8 +1742,7 @@ function togglePackages(tabId) {
         {
           "type": "url",
           "id": "session_1_link",
-          "label": "Cart Add Link",
-          "info": "Example: /cart/add?id=55977562374524&quantity=1"
+          "label": "Link"
         },
         {
           "type": "header",
@@ -3149,7 +1758,7 @@ function togglePackages(tabId) {
           "type": "text",
           "id": "session_3_label",
           "label": "Session Label",
-          "default": "3 sessions"
+          "default": "3 session"
         },
         {
           "type": "text",
@@ -3172,8 +1781,7 @@ function togglePackages(tabId) {
         {
           "type": "url",
           "id": "session_3_link",
-          "label": "Cart Add Link",
-          "info": "Example: /cart/add?id=55977562374524&quantity=1"
+          "label": "Link"
         },
         {
           "type": "header",
@@ -3189,7 +1797,7 @@ function togglePackages(tabId) {
           "type": "text",
           "id": "session_6_label",
           "label": "Session Label",
-          "default": "6 sessions"
+          "default": "6 session"
         },
         {
           "type": "text",
@@ -3212,8 +1820,7 @@ function togglePackages(tabId) {
         {
           "type": "url",
           "id": "session_6_link",
-          "label": "Cart Add Link",
-          "info": "Example: /cart/add?id=55977562374524&quantity=1"
+          "label": "Link"
         },
         {
           "type": "header",
@@ -3229,7 +1836,7 @@ function togglePackages(tabId) {
           "type": "text",
           "id": "session_10_label",
           "label": "Session Label",
-          "default": "10 sessions"
+          "default": "10 session"
         },
         {
           "type": "text",
@@ -3252,15 +1859,14 @@ function togglePackages(tabId) {
         {
           "type": "url",
           "id": "session_10_link",
-          "label": "Cart Add Link",
-          "info": "Example: /cart/add?id=55977562374524&quantity=1"
+          "label": "Link"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Treatment Tabs with Enquiry",
+      "name": "Treatment Tabs",
       "blocks": [
         {
           "type": "tab",
