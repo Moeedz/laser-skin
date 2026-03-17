@@ -375,6 +375,46 @@
         "content": "<p><em>Explore the advanced treatments that have made Laser Skin Clinics one of the most trusted names in and around Wolverhampton</em></p>"
       }
     },
+    "image_with_text_DdQgap": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_8yc3FE": {
+          "type": "subheading",
+          "settings": {
+            "text": "Skin Analysis"
+          }
+        },
+        "heading_8frBef": {
+          "type": "heading",
+          "settings": {
+            "text": "Free Skin Analysis At Laser Skin Clinics",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_btbXFx": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Your skin is unique. Your treatment plan should be too.</p><p>Book your free, no-obligation skin analysis and let our experts guide you towards clearer, healthier skin with a plan tailored specifically to you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_8yc3FE",
+        "heading_8frBef",
+        "richtext_btbXFx"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/image_97b739ab-f08b-4a6d-9428-e64f8852bfd9.png",
+        "mobile_image": "shopify://shop_images/square_banner.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
+    },
     "feature_cards_JKUWqd": {
       "type": "feature-cards",
       "blocks": {
@@ -658,6 +698,7 @@
     "176123897800c69b3c",
     "ss_scrolling_images_eTgjpG",
     "collection_list_yywqTr",
+    "image_with_text_DdQgap",
     "feature_cards_JKUWqd",
     "contact_info_form_heNtLy"
   ]
