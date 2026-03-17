@@ -139,26 +139,9 @@
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
             "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "modal_title": "How would you like to contact us?",
-            "modal_subtitle": "Choose your preferred method to get in touch with us",
-            "contact_page_url": "shopify://pages/contact",
-            "contact_option_title": "Contact Form",
-            "contact_option_description": "Fill out our online form",
-            "phone_number": "01902256667",
-            "phone_option_title": "Call Us",
-            "monday_hours": "Closed",
-            "tuesday_hours": "10:00AM-6:00PM",
-            "wednesday_hours": "10:00AM-6:00PM",
-            "thursday_hours": "Closed",
-            "friday_hours": "10:00AM-6:00PM",
-            "saturday_hours": "10:00AM-4:00PM",
-            "sunday_hours": "Closed",
-            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
-            "whatsapp_number": "447798983387",
-            "whatsapp_display_number": "+44 7798 983387",
-            "whatsapp_option_title": "WhatsApp",
-            "package_heading": "View prices and make an enquiry",
-            "package_description": "Pay per session or buy multiple and save"
+            "consultation_link": "shopify://pages/contact",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save."
           }
         },
         "package_aTgbfy": {
@@ -198,16 +181,12 @@
         "tab_XU3qrc",
         "package_aTgbfy"
       ],
-      "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
         "section_width": 1400,
         "section_padding_top": 40,
         "section_padding_bottom": 40,
         "section_background": "#ffffff",
-        "enquiry_modal_title": "Get in touch",
-        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
-        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
         "tab_alignment": "center",
         "tab_gap": 12,
         "tab_font_size": 15,
@@ -219,9 +198,9 @@
         "tab_border_color": "#333333",
         "tab_hover_background": "#f5f5f5",
         "tab_hover_text_color": "#000000",
-        "tab_active_background": "#e6b325",
-        "tab_active_text_color": "#ffffff",
-        "tab_active_border_color": "#e6b325",
+        "tab_active_background": "#E6B325",
+        "tab_active_text_color": "#FFFFFF",
+        "tab_active_border_color": "#E6B325",
         "heading_font_size": 42,
         "heading_font_weight": "400",
         "heading_color": "#000000",
@@ -245,39 +224,157 @@
         "package_heading_color": "#000000",
         "package_price_color": "#666666",
         "package_button_radius": 8,
-        "package_button_background": "#e6b325",
-        "package_button_text_color": "#ffffff",
+        "package_button_background": "#E6B325",
+        "package_button_text_color": "#FFFFFF",
         "package_button_hover_background": "#e6b325",
         "image_border_radius": 8,
         "show_collapsible_1": true,
-        "collapsible_1_title": "7-Day Appointment Guarantee",
+        "collapsible_1_title": "DESCRIPTION",
         "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers can be seen within 7 days of their enquiry.</p>",
+        "collapsible_1_content": "<p>Add your description content here.</p>",
         "show_collapsible_2": true,
-        "collapsible_2_title": "Course Price Match Guarantee",
+        "collapsible_2_title": "INFORMATION & INGREDIENTS",
         "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_2_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> — and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
-        "show_collapsible_3": false,
-        "collapsible_3_title": "Securing Your Booking",
+        "collapsible_2_content": "<p>Add your information and ingredients here.</p>",
+        "show_collapsible_3": true,
+        "collapsible_3_title": "THIS HELPS WITH",
         "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
-        "collapsible_3_content": "<p>A small deposit of £30 will be required to secure your booking. This will be deducted from price of your treatment cost.</p>",
-        "show_collapsible_4": false,
-        "collapsible_4_title": "Cancellation Policy",
+        "collapsible_3_content": "<p>Add benefits and features here.</p>",
+        "show_collapsible_4": true,
+        "collapsible_4_title": "FAQS",
         "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_4_content": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>",
-        "show_collapsible_5": true,
-        "collapsible_5_title": "Payment Options & Finance",
-        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
-        "collapsible_5_content": "<p>Treatments can be paid for by cash or card on the day of your appointment. We also offer Klarna finance and Shopify instalment options for added flexibility. If you’d like to pay using one of these methods, just let us know and we’ll guide you through it.</p>",
-        "show_collapsible_6": true,
-        "collapsible_6_title": "Contact and address",
-        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
-        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/>4 Perton Farm Barns<br/>Jenny Walkers Lane<br/>Wolverhampton<br/>WV6 7HB</p>",
-        "show_faq_link": true,
-        "faq_pre_text": "Have more questions?",
-        "faq_link_text": "View FAQs",
-        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
-        "faq_link_url": ""
+        "collapsible_4_content": "<p>Add your FAQs here.</p>"
+      }
+    },
+    "ss_image_with_text_12_PPNnyT": {
+      "type": "ss-image-with-text-12",
+      "blocks": {
+        "slide_mTH4wq": {
+          "type": "slide",
+          "settings": {
+            "heading": "<p><strong>{{ product.title }}</strong></p>",
+            "text": "",
+            "button": "",
+            "button_url": "",
+            "button2": "",
+            "button2_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": true,
+            "image": "shopify://shop_images/IMG_0116.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_mTH4wq"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
+      ],
+      "name": "SS - Image With Text #12",
+      "settings": {
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "center",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 100,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 100,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "left",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#000000",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "rgba(0,0,0,0)",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
       }
     },
     "ss_image_with_text_12_gUF6fh": {
@@ -303,7 +400,6 @@
       "block_order": [
         "slide_4jhyPz"
       ],
-      "disabled": true,
       "custom_css": [
         "p {padding-top: 10px; padding-bottom: 5px;}",
         ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
@@ -412,6 +508,80 @@
         "lazy": true
       }
     },
+    "treatment_pricing_hjdUCE": {
+      "type": "treatment-pricing",
+      "blocks": {
+        "treatment_NbwzRR": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Acne Therapy Single Session",
+            "treatment_name_column1": "",
+            "single_price": "130",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
+          }
+        },
+        "treatment_TWcErn": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Course Of 3",
+            "treatment_name_column1": "",
+            "single_price": "300",
+            "treatment_name_column2": "",
+            "course_price": "472.50"
+          }
+        },
+        "treatment_DGUDpX": {
+          "type": "treatment",
+          "settings": {
+            "treatment_name": "Course Of 6",
+            "treatment_name_column1": "",
+            "single_price": "600",
+            "treatment_name_column2": "",
+            "course_price": "787.50"
+          }
+        },
+        "treatment_LWReLR": {
+          "type": "treatment",
+          "disabled": true,
+          "settings": {
+            "treatment_name": "Treatment Name",
+            "treatment_name_column1": "",
+            "single_price": "75.00",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
+          }
+        }
+      },
+      "block_order": [
+        "treatment_NbwzRR",
+        "treatment_TWcErn",
+        "treatment_DGUDpX",
+        "treatment_LWReLR"
+      ],
+      "disabled": true,
+      "name": "Treatment Pricing",
+      "settings": {
+        "show_section_title": true,
+        "section_title": "Pricelist",
+        "show_two_columns": false,
+        "column1_title": "acne therapy",
+        "column1_subtitle": "Longer Courses Available On Request",
+        "show_button_column1": true,
+        "button_text_column1": "BOOK ONLINE",
+        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3564717&location=4546",
+        "column2_title": "Course Of 6",
+        "column2_subtitle": "Save more with packages",
+        "show_button_column2": true,
+        "button_text_column2": "BOOK NOW",
+        "button_link_column2": "",
+        "header_color": "#c9a86a",
+        "accent_color": "#d4a574",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
+      }
+    },
     "ss_image_with_text_9_GLgAya": {
       "type": "ss-image-with-text-9",
       "blocks": {
@@ -460,7 +630,6 @@
         },
         "button_HfVK4Q": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button": "Book Online",
             "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3564717&location=4546",
@@ -492,7 +661,6 @@
         },
         "button_9xWUQX": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button": "Get more information",
             "button_url": "shopify://pages/contact",
@@ -532,7 +700,6 @@
         "button_HfVK4Q",
         "button_9xWUQX"
       ],
-      "disabled": true,
       "name": "SS - Image With Text #9",
       "settings": {
         "body_gap": 50,
@@ -590,7 +757,6 @@
       "block_order": [
         "link_JLnhBL"
       ],
-      "disabled": true,
       "name": "SS - Threads Image Grid",
       "settings": {
         "font_size": 24,
@@ -600,6 +766,50 @@
         "padding_bottom": 36,
         "padding_vertical": 0,
         "section-width": 200
+      }
+    },
+    "before_after_FYP3MP": {
+      "type": "before-after",
+      "blocks": {
+        "before_h3jXfm": {
+          "type": "before",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
+            "text": "Before",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        },
+        "after_PymKJA": {
+          "type": "after",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
+            "text": "After",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "before_h3jXfm",
+        "after_PymKJA"
+      ],
+      "disabled": true,
+      "name": "t:sections.before_after.presets.before_after.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "Before/after",
+        "content": "",
+        "cursor_direction": "horizontal",
+        "cursor_initial_position": 50,
+        "cursor_background": "#ffffff",
+        "cursor_arrows_color": "#000000"
       }
     },
     "rich_text_nziPUE": {
@@ -616,7 +826,6 @@
       "block_order": [
         "heading_U7EUj7"
       ],
-      "disabled": true,
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
         "color_scheme": "",
@@ -659,7 +868,6 @@
         "step_jiiz8x",
         "step_6jaGgE"
       ],
-      "disabled": true,
       "name": "SS - Steps #11",
       "settings": {
         "layout": "image_content",
@@ -755,7 +963,6 @@
       "block_order": [
         "appio_google_reviews_carousel1_qFMFmN"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -768,10 +975,9 @@
       "blocks": {
         "text_cEbadb": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
           }
         },
         "text_AywdAG": {
@@ -788,11 +994,32 @@
             "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
           }
         },
+        "text_VzhfhH": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you in our diary.</p>"
+          }
+        },
+        "text_37j86y": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
         "text_Dpx4Qh": {
           "type": "text",
           "settings": {
             "question": "Does the treatment hurt?",
             "answer": "<p>No, Acne Therapy is gentle and non-invasive.<br/><br/>You may feel a light tingling or warmth during the procedure, but it is generally very comfortable.</p>"
+          }
+        },
+        "text_VD4jYV": {
+          "type": "text",
+          "settings": {
+            "question": "What happens if I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
           }
         },
         "text_yJg3mH": {
@@ -835,14 +1062,16 @@
         "text_cEbadb",
         "text_AywdAG",
         "text_xL6YQN",
+        "text_VzhfhH",
+        "text_37j86y",
         "text_Dpx4Qh",
+        "text_VD4jYV",
         "text_yJg3mH",
         "text_g8RX6D",
         "text_JMUbWR",
         "text_UiGdVT",
         "text_arMX7p"
       ],
-      "disabled": true,
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
@@ -854,1631 +1083,20 @@
         "answer_bg_color": "#ffffff",
         "questions-font-size": 1
       }
-    },
-    "product_hero_QQgM39": {
-      "type": "product-hero",
-      "blocks": {
-        "check_item_7Kwqzj": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Treats acne at its underlying causes"
-          }
-        },
-        "check_item_x8TVfN": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Reduces congestion and inflammation"
-          }
-        },
-        "check_item_VtxdmB": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Personalised treatment strategy"
-          }
-        },
-        "trust_item_C93Q74": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "star",
-            "title": "Google 4.9/5",
-            "subtitle": "",
-            "show_stars": true
-          }
-        },
-        "trust_item_RfDJcd": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "medical",
-            "title": "Medical-grade",
-            "subtitle": "technology",
-            "show_stars": false
-          }
-        },
-        "trust_item_Y4k6WJ": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "calendar",
-            "title": "7-Day Appointment",
-            "subtitle": "Guarantee",
-            "show_stars": false
-          }
-        },
-        "trust_item_G8AN6X": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "finance",
-            "title": "0% Finance Available",
-            "subtitle": "",
-            "show_stars": false
-          }
-        }
-      },
-      "block_order": [
-        "check_item_7Kwqzj",
-        "check_item_x8TVfN",
-        "check_item_VtxdmB",
-        "trust_item_C93Q74",
-        "trust_item_RfDJcd",
-        "trust_item_Y4k6WJ",
-        "trust_item_G8AN6X"
-      ],
-      "name": "Product Hero",
-      "settings": {
-        "background_image": "shopify://shop_images/Gemini_Generated_Image_vowr48vowr48vowr.png",
-        "image_position": "center center",
-        "desktop_height": 900,
-        "mobile_height": 200,
-        "background_color": "#f9dece",
-        "overlay_color_start": "rgba(0,0,0,0)",
-        "overlay_color_mid": "rgba(0,0,0,0)",
-        "overlay_color_fade": "rgba(0,0,0,0)",
-        "heading": "Targeted Acne Treatment for Long-Term Skin Clarity",
-        "subheading_highlight": "Restored Naturally",
-        "subheading": " ",
-        "heading_font_size": 54,
-        "subheading_font_size": 38,
-        "heading_color": "#3a3a3a",
-        "highlight_color": "#c8962e",
-        "description": "<p>Advanced acne therapy designed to reduce inflammation, regulate oil production, and support lasting skin balance tailored to your acne type.</p>",
-        "body_font_size": 17,
-        "text_color": "#5a5a5a",
-        "checkmark_color": "#c4a080",
-        "button_label": "Book your acne therapy treatment",
-        "button_link": "#cf-template--25630357258620__consultation_form_hCy3JF",
-        "button_open_new_tab": false,
-        "button_bg": "#614e4e",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#614e4e",
-        "trust_bar_bg": "#f9dece",
-        "trust_bar_text_color": "#3a3a3a",
-        "trust_icon_color": "#999999",
-        "trust_star_color": "#c8962e",
-        "content_max_width": 580
-      }
-    },
-    "slideshow_7HFKxn": {
-      "type": "slideshow",
-      "blocks": {
-        "image_9QcxC3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/1d_e1bbdc25-1119-45a9-85e1-af44457e3d00.png",
-            "mobile_image": "shopify://shop_images/1m_5dd16290-fdce-4c1b-8d2f-e9fde6afd5ac.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_9QcxC3"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "slideshow_kbBR6w": {
-      "type": "slideshow",
-      "blocks": {
-        "image_K6RAEb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2d_0527af4f-431c-4234-a4e5-3b60b4b1fd48.png",
-            "mobile_image": "shopify://shop_images/2m_2b5ae668-a53a-4aa4-b902-fa2161b9bd8c.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_K6RAEb"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "text_image_text_4HkXgV": {
-      "type": "text-image-text",
-      "blocks": {
-        "point_riyx8x": {
-          "type": "point",
-          "settings": {
-            "text": "Addresses excess oil, bacteria, and inflammation at the source"
-          }
-        },
-        "point_GREQYt": {
-          "type": "point",
-          "settings": {
-            "text": "Reduces active breakouts while helping prevent recurrence"
-          }
-        },
-        "point_F84gYh": {
-          "type": "point",
-          "settings": {
-            "text": "Supports long-term skin balance, not short-term surface fixes"
-          }
-        }
-      },
-      "block_order": [
-        "point_riyx8x",
-        "point_GREQYt",
-        "point_F84gYh"
-      ],
-      "name": "Text Image Text",
-      "settings": {
-        "heading": "What Is Acne Therapy?",
-        "body": "<p>Acne therapy focuses on treating the underlying causes of breakouts rather than just surface symptoms. By addressing factors such as excess oil production, inflammation, blocked pores, and acne-causing bacteria, treatments are designed to restore skin balance and support long-term clarity. Depending on acne type, severity, and skin condition, different treatment approaches may be used to achieve the best outcome.<br/><br/>Treatment may include a combination of deep cleansing, targeted light therapy, exfoliation, or medical-grade skincare depending on your acne severity.<br/><br/><br/></p>",
-        "image": "shopify://shop_images/1_89bace86-831b-4520-8e1b-6b8f129549ce.png",
-        "sub_heading": "Why patients choose acne therapy",
-        "footer_text": "",
-        "bullet_style": "dot",
-        "points_columns": "1",
-        "section_bg": "#ddd6db",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "image_max_width": 800,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_iWnACA": {
-      "type": "slideshow",
-      "blocks": {
-        "image_mxHpYa": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/3d_73623884-9fd4-47a6-9f7a-51efcf95070a.png",
-            "mobile_image": "shopify://shop_images/3m_fb4c59e8-a4ca-464a-966f-8b9d19818e9d.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_mxHpYa"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "timeline_circles_XU8ktG": {
-      "type": "timeline-circles",
-      "blocks": {
-        "step_iCgdcK": {
-          "type": "step",
-          "settings": {
-            "title": "Immediately after",
-            "image": "shopify://shop_images/1_d29a71b2-a127-42ca-a346-0677a5c4f5e5.png",
-            "description": "Skin may feel clean, refreshed, or slightly flushed. Congestion begins to reduce."
-          }
-        },
-        "step_JezhwW": {
-          "type": "step",
-          "settings": {
-            "title": "Weeks 1–4",
-            "image": "shopify://shop_images/2_ebaf0a61-b235-4901-9360-8108b576994e.png",
-            "description": "Inflammation decreases. Breakouts become less frequent"
-          }
-        },
-        "step_bDmhQP": {
-          "type": "step",
-          "settings": {
-            "title": "Weeks 4–8",
-            "image": "shopify://shop_images/3_184a11ec-6494-4e06-9e0e-782da60c7318.png",
-            "description": "Oil balance improves. Skin texture appears smoother"
-          }
-        },
-        "step_yMM3Bx": {
-          "type": "step",
-          "settings": {
-            "title": "Weeks 8–12",
-            "image": "shopify://shop_images/4_29fefe44-d040-4af4-ac9f-f1d074c27924.png",
-            "description": "Continued skin regulation. Clearer, calmer complexion develops"
-          }
-        }
-      },
-      "block_order": [
-        "step_iCgdcK",
-        "step_JezhwW",
-        "step_bDmhQP",
-        "step_yMM3Bx"
-      ],
-      "name": "Timeline Circles",
-      "settings": {
-        "heading": "How Acne Therapy Works & What to Expect",
-        "subtitle": "",
-        "body": "<p>Acne therapy combines targeted in-clinic treatments with a personalised assessment of lifestyle, diet, hormonal patterns, and skincare habits. By addressing both the underlying triggers and visible symptoms, we aim to restore long-term skin balance rather than offer short-term surface improvements.</p>",
-        "footer_text": "Breakouts decrease steadily as skin clarity and oil balance improve throughout a personalised treatment plan. Adjustments are made as needed based on your skin’s response and lifestyle factors.",
-        "connector_style": "arrows",
-        "section_bg": "#eed9d7",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "line_color": "#baa898",
-        "dot_color": "#baa898",
-        "circle_border": "#ece5dd",
-        "heading_font_size": 40,
-        "title_font_size": 20,
-        "body_font_size": 16,
-        "circle_size": 160,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_XgTG9r": {
-      "type": "slideshow",
-      "blocks": {
-        "image_UParAg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4d_2e13caa6-ea76-451d-bfe6-e338cf452945.png",
-            "mobile_image": "shopify://shop_images/4m_f89f87ca-0344-4e6b-8cc1-1092bb668425.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_UParAg"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "split_content_QQD39h": {
-      "type": "split-content",
-      "blocks": {
-        "left_point_aHAfB6": {
-          "type": "left_point",
-          "settings": {
-            "text": "<p>Face</p>"
-          }
-        },
-        "left_point_iV8AQH": {
-          "type": "left_point",
-          "settings": {
-            "text": "<p>Jawline & chin</p>"
-          }
-        },
-        "left_point_mWCUWT": {
-          "type": "left_point",
-          "settings": {
-            "text": "<p>Neck</p>"
-          }
-        },
-        "left_point_PeEKrc": {
-          "type": "left_point",
-          "settings": {
-            "text": "<p>Chest</p>"
-          }
-        },
-        "left_point_UyDghF": {
-          "type": "left_point",
-          "settings": {
-            "text": "<p>Back</p>"
-          }
-        },
-        "left_point_cLqdLV": {
-          "type": "left_point",
-          "settings": {
-            "text": "<p>Shoulders</p>"
-          }
-        },
-        "right_point_nR7ekQ": {
-          "type": "right_point",
-          "settings": {
-            "text": "<p>Active inflammatory acne</p>"
-          }
-        },
-        "right_point_GpDkAQ": {
-          "type": "right_point",
-          "settings": {
-            "text": "<p>Congested and comedonal acne</p>"
-          }
-        },
-        "right_point_BaWway": {
-          "type": "right_point",
-          "settings": {
-            "text": "<p>Hormonal breakouts</p>"
-          }
-        },
-        "right_point_hVycjU": {
-          "type": "right_point",
-          "settings": {
-            "text": "<p>Post-inflammatory redness</p>"
-          }
-        },
-        "right_point_LGm8Tw": {
-          "type": "right_point",
-          "settings": {
-            "text": "<p>Acne-prone, sensitised skin</p>"
-          }
-        }
-      },
-      "block_order": [
-        "left_point_aHAfB6",
-        "left_point_iV8AQH",
-        "left_point_mWCUWT",
-        "left_point_PeEKrc",
-        "left_point_UyDghF",
-        "left_point_cLqdLV",
-        "right_point_nR7ekQ",
-        "right_point_GpDkAQ",
-        "right_point_BaWway",
-        "right_point_hVycjU",
-        "right_point_LGm8Tw"
-      ],
-      "name": "Split Content",
-      "settings": {
-        "heading": "Areas & Acne Types Treated",
-        "subtitle": "Acne therapy is tailored to both the location and type of acne, ensuring treatment is appropriate, targeted, and effective for your skin.",
-        "footer_text": "Treatment plans are personalised based on acne type, skin condition, and treatment response.",
-        "show_card_wrap": false,
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "callout_title": "",
-        "callout_text": "",
-        "enable_left": true,
-        "left_heading": "Areas Commonly Treated",
-        "left_subtitle": "",
-        "enable_right": true,
-        "right_heading": "Acne Types Addressed",
-        "right_subtitle": "",
-        "section_bg": "#ede5e8",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "divider_color": "#c4b8aa",
-        "heading_font_size": 32,
-        "body_font_size": 17,
-        "padding_top": 60,
-        "padding_bottom": 20,
-        "image_height": 420
-      }
-    },
-    "slideshow_bTzhwf": {
-      "type": "slideshow",
-      "blocks": {
-        "image_xzUQFj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/5d_faec3f7d-8afb-41fe-babb-62fa83028b40.png",
-            "mobile_image": "shopify://shop_images/5m_ed0975f8-0de5-478c-a3f5-836de61f2d1c.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_xzUQFj"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "aftercare_cards_miereD": {
-      "type": "aftercare-cards",
-      "blocks": {
-        "card_W6fga6": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Keep Skin Hydrated",
-            "icon": "shopify://shop_images/1-removebg-preview_11.png",
-            "points": "Use a gentle, non-comedogenic moisturizer to keep the skin well-hydrated"
-          }
-        },
-        "card_WH3wpV": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Avoid Sun Exposure",
-            "icon": "shopify://shop_images/2-removebg-preview_13.png",
-            "points": "Apply broad-spectrum SPF daily and avoid direct sun exposure to protect healing skin"
-          }
-        },
-        "card_BUGAhz": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Skip Harsh Products",
-            "icon": "shopify://shop_images/3-removebg-preview_10.png",
-            "points": "Avoid exfoliants, alcohol-based toners, or strong skincare products that may irritate the skin."
-          }
-        },
-        "card_Ak8N37": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Prioritize Rest",
-            "icon": "shopify://shop_images/4-removebg-preview_5.png",
-            "points": "Get plenty of rest and allow your skin time to recover and rejuvenate"
-          }
-        }
-      },
-      "block_order": [
-        "card_W6fga6",
-        "card_WH3wpV",
-        "card_BUGAhz",
-        "card_Ak8N37"
-      ],
-      "custom_css": [
-        ".afc__card-icon,.afc__card-icon img {width: 80px !important; height: 80px !important;}"
-      ],
-      "name": "Aftercare Cards",
-      "settings": {
-        "heading": "Aftercare & Downtime",
-        "subtitle": "Following acne therapy, gentle aftercare is key to supporting skin healing and maintaining results. Temporary redness or sensitivity may occur after some treatments but usually subsides within a few hours to a day.",
-        "footer_text": "Follow all home care instructions provided by your therapist.",
-        "show_checkmarks": false,
-        "layout": "grid",
-        "section_bg": "#d9c9d3",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "card_bg": "#f1dee0",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "session_pricing_78qRic": {
-      "type": "session-pricing",
-      "blocks": {
-        "price_card_gH9AVh": {
-          "type": "price_card",
-          "settings": {
-            "name": "",
-            "main_price": "£130",
-            "main_per": "Per Session",
-            "tier_1": "",
-            "tier_2": "",
-            "tier_3": "",
-            "note": ""
-          }
-        },
-        "price_card_RFfNfE": {
-          "type": "price_card",
-          "settings": {
-            "name": "",
-            "main_price": "£120",
-            "main_per": "Per Session",
-            "tier_1": "(3 sessions)",
-            "tier_2": "",
-            "tier_3": "",
-            "note": ""
-          }
-        },
-        "price_card_VYNjJ4": {
-          "type": "price_card",
-          "settings": {
-            "name": "",
-            "main_price": "£110",
-            "main_per": "Per Session",
-            "tier_1": "(6 sessions)",
-            "tier_2": "",
-            "tier_3": "",
-            "note": ""
-          }
-        }
-      },
-      "block_order": [
-        "price_card_gH9AVh",
-        "price_card_RFfNfE",
-        "price_card_VYNjJ4"
-      ],
-      "name": "Session Pricing",
-      "settings": {
-        "heading": "Acne Therapy Pricing",
-        "subtitle": "Treatment plans are tailored following a full skin assessment. Course pricing is recommended for best long-term control.",
-        "footer_text": "",
-        "cta_heading": "Long-term improvement comes from structured treatment and personalised home care.",
-        "button_label": "",
-        "button_link": "",
-        "section_bg": "#4a4555",
-        "show_texture": true,
-        "texture_opacity": 90,
-        "light_color": "#e8e0d8",
-        "card_bg": "#6a6570b0",
-        "heading_font_size": 44,
-        "card_title_font_size": 24,
-        "price_font_size": 36,
-        "body_font_size": 16,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "expectations_trust_ea8k96": {
-      "type": "expectations-trust",
-      "blocks": {
-        "trust_point_YpMnNL": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "star",
-            "text": "4.9 Google rating"
-          }
-        },
-        "trust_point_D3ze4N": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "calendar",
-            "text": "7-day appointment guarantee"
-          }
-        },
-        "trust_point_cWdHPb": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "finance",
-            "text": "0% finance available"
-          }
-        },
-        "trust_point_ACzNnh": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "test_patch",
-            "text": "Trusted by thousands"
-          }
-        },
-        "trust_point_96xHNb": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "parking",
-            "text": "Free parking"
-          }
-        },
-        "trust_point_tt67mW": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "clock",
-            "text": "Established 10+ years"
-          }
-        }
-      },
-      "block_order": [
-        "trust_point_YpMnNL",
-        "trust_point_D3ze4N",
-        "trust_point_cWdHPb",
-        "trust_point_ACzNnh",
-        "trust_point_96xHNb",
-        "trust_point_tt67mW"
-      ],
-      "name": "Expectations & Trust",
-      "settings": {
-        "heading": "Clear pricing. Professional standards.",
-        "subtitle": "Everything you need to feel confident booking your consultation.",
-        "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>We believe confidence comes from clarity.</p><p>Every treatment plan is built around your consultation, your skin, and your goals –with no pressure and no hidden surprises.</p><p>Our focus is on consistency, safety, and long-term results, delivered in a professional clinical environment.</p>",
-        "section_bg": "#ecd7cc",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "icon_color": "#777777",
-        "card_bg": "#f8ebe3",
-        "card_border": "#ddd9d3",
-        "heading_font_size": 44,
-        "card_heading_font_size": 28,
-        "body_font_size": 16,
-        "button_label": "Book your consultation",
-        "button_link": "#cf-template--25630357258620__consultation_form_hCy3JF",
-        "button_open_new_tab": false,
-        "button_bg": "#61483a",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#61483a",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "consultation_form_hCy3JF": {
-      "type": "consultation-form",
-      "name": "Consultation Form",
-      "settings": {
-        "section_width": 1200,
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "section_padding_side": 20,
-        "section_background": "#f9f9f9",
-        "form_max_width": 700,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 40,
-        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_font_size": 14,
-        "form_heading": "Make an enquiry",
-        "form_subheading": "",
-        "heading_color": "#000000",
-        "heading_font_size": 26,
-        "heading_font_weight": "500",
-        "subheading_color": "#777777",
-        "subheading_font_size": 15,
-        "label_color": "#333333",
-        "label_font_size": 14,
-        "label_font_weight": "400",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 6,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 15,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "show_treatment_field": true,
-        "treatment_label": "Which treatment are you interested in?",
-        "default_treatment_value": "Consultation",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "name_label": "Name",
-        "name_placeholder": "Your Name",
-        "contact_method_label": "How can we reach you?",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "email_label": "Email Address",
-        "email_placeholder": "Email Address",
-        "whatsapp_number": "447798983387",
-        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
-        "wa_you_contact_text": "I'll message you",
-        "wa_we_contact_text": "Message me",
-        "whatsapp_button_text": "Chat on WhatsApp",
-        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
-        "whatsapp_button_background": "#25d366",
-        "whatsapp_button_hover_background": "#1fbe59",
-        "whatsapp_button_text_color": "#ffffff",
-        "clinic_phone_number": "01902256667",
-        "call_phone_label": "Your phone number",
-        "call_time_label": "Best time to call you?",
-        "call_time_placeholder": "Select a time",
-        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "phone_placeholder": "Phone Number",
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 14,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Submit Form",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 15,
-        "button_font_weight": "600",
-        "button_border_radius": 8,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
-        "privacy_text_color": "#999999",
-        "privacy_font_size": 13
-      }
-    },
-    "faq_updated_VLGB7J": {
-      "type": "faq-updated",
-      "blocks": {
-        "faq_item_M9pAhd": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What is acne therapy?",
-            "answer": "<p>Our acne therapy is a <strong>personalised treatment programme</strong> designed to address active acne, minimise breakouts, soothe inflammation, and restore skin balance. Every plan is carefully tailored to your skin’s needs, because effective acne treatment is never one-size-fits-all.</p>"
-          }
-        },
-        "faq_item_FbwQhi": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is acne therapy suitable for adults?",
-            "answer": "<p>Yes. Acne therapy is suitable for <strong>teenage and adult acne</strong>, including late-onset and hormonal breakouts.</p>"
-          }
-        },
-        "faq_item_tnGUTF": {
-          "type": "faq_item",
-          "settings": {
-            "question": "is there any downtime?",
-            "answer": "<p>Downtime is minimal:</p><p><br/>Mild redness may occur for a few hours.<br/>Skin may feel slightly sensitive.<br/>Most clients return to normal activities the same day or next day.</p>"
-          }
-        },
-        "faq_item_BwVKj4": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can I spread the cost?",
-            "answer": "<p>Yes, we offer interest-free payment plans through Klarna and ShopPay.</p>"
-          }
-        },
-        "faq_item_LqAg8E": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can the treatment help with acne scars?",
-            "answer": "<p>Acne therapy helps prevent future scarring and can improve <strong>early or superficial scarring</strong>.</p><p>Deeper scars may require treatments such as microneedling, RF microneedling, or laser therapy.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_M9pAhd",
-        "faq_item_FbwQhi",
-        "faq_item_tnGUTF",
-        "faq_item_BwVKj4",
-        "faq_item_LqAg8E"
-      ],
-      "name": "FAQ Dark Theme",
-      "settings": {
-        "section_bg_color": "#efefef",
-        "max_width": 900,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "side_padding": 30,
-        "heading": "Your Questions. Answered",
-        "heading_color": "#1c1c1c",
-        "heading_font_size": 24,
-        "heading_font_weight": "400",
-        "heading_font_style": "italic",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 50,
-        "question_color": "#1c1c1c",
-        "question_font_size": 16,
-        "question_font_weight": "600",
-        "show_underline": true,
-        "underline_color": "#b8a164",
-        "underline_width": 60,
-        "underline_height": 2,
-        "answer_color": "#1c1c1c",
-        "answer_font_size": 14,
-        "answer_line_height": 1.7,
-        "answer_margin_top": 16,
-        "divider_color": "#333333",
-        "item_padding_vertical": 30,
-        "icon_color": "#b8a164",
-        "icon_active_color": "#b8a164",
-        "icon_active_bg": "rgba(0,0,0,0)",
-        "icon_size": 24,
-        "icon_border_width": 2,
-        "show_decoration": false,
-        "decoration_color": "#b8a164",
-        "decoration_size": 40,
-        "decoration_opacity": 0.6,
-        "all_items_open": false,
-        "first_item_open": false,
-        "allow_multiple_open": true
-      }
-    },
-    "slideshow_8jzxQQ": {
-      "type": "slideshow",
-      "blocks": {
-        "image_4kRfVb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bottom_image_grey_bfc69fcc-cc39-474e-b427-579264015f60.png",
-            "mobile_image": "shopify://shop_images/Contact_Grey_0b8c706c-76ef-4609-b28a-e9a8a226fdd9.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_4kRfVb"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "location_contact_bdLzGR": {
-      "type": "location-contact",
-      "blocks": {
-        "contact_bHABFp": {
-          "type": "contact",
-          "settings": {
-            "icon": "phone",
-            "label": "Phone:",
-            "value": "01902 256667",
-            "link": "tel:01902256667",
-            "open_new_tab": false
-          }
-        },
-        "contact_YwgkNR": {
-          "type": "contact",
-          "settings": {
-            "icon": "whatsapp",
-            "label": "WhatsApp:",
-            "value": "07798983387",
-            "link": "https://wa.me/447798983387",
-            "open_new_tab": false
-          }
-        },
-        "contact_AiiXxe": {
-          "type": "contact",
-          "settings": {
-            "icon": "email",
-            "label": "Phone:",
-            "value": "info@laserskinclinics.co.uk",
-            "link": "mailto:info@laserskinclinics.co.uk",
-            "open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "contact_bHABFp",
-        "contact_YwgkNR",
-        "contact_AiiXxe"
-      ],
-      "name": "Location & Contact",
-      "settings": {
-        "label": "Location & Contact",
-        "heading": "Find Us / Visit the Clinic",
-        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
-        "show_hours": true,
-        "hours_title": "Opening Hours:",
-        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
-        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-        "info_bg": "#d9dbdd",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "accent_color": "#b08d57",
-        "heading_font_size": 40,
-        "body_font_size": 16,
-        "button_label": "BOOK CONSULTATION",
-        "button_link": "#cf-template--25630357258620__consultation_form_hCy3JF",
-        "button_open_new_tab": false,
-        "button_bg": "#b08d57",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#97763e"
-      }
     }
   },
   "order": [
     "main",
     "treatment_tabs_section_9jCtaR",
+    "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
+    "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
     "ss_clothing_image_grid_DQGfHr",
+    "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
-    "ss_simple_faq_jiYFWj",
-    "product_hero_QQgM39",
-    "slideshow_7HFKxn",
-    "slideshow_kbBR6w",
-    "text_image_text_4HkXgV",
-    "slideshow_iWnACA",
-    "timeline_circles_XU8ktG",
-    "slideshow_XgTG9r",
-    "split_content_QQD39h",
-    "slideshow_bTzhwf",
-    "aftercare_cards_miereD",
-    "session_pricing_78qRic",
-    "expectations_trust_ea8k96",
-    "consultation_form_hCy3JF",
-    "faq_updated_VLGB7J",
-    "slideshow_8jzxQQ",
-    "location_contact_bdLzGR"
+    "ss_simple_faq_jiYFWj"
   ]
 }

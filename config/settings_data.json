@@ -37,7 +37,7 @@
     "show_discount": false,
     "cart_type": "drawer",
     "cart_icon": "shopping_bag",
-    "cart_show_free_shipping_bar": false,
+    "cart_show_free_shipping_bar": true,
     "cart_free_shipping_threshold": "60",
     "social_facebook": "https://www.facebook.com/LaserSkinClinicsWolverhampton/",
     "social_twitter": "https://x.com/laserclinicwolv",
@@ -45,30 +45,10 @@
     "social_instagram": "https://www.instagram.com/laserskinclinics/",
     "social_tiktok": "",
     "favicon": "shopify://shop_images/Flav.png",
-    "sections": {
-      "whatsapp-bubble": {
-        "type": "whatsapp-bubble",
-        "custom_css": [
-          ".whatsapp-widget__bubble {display: none !important;}"
-        ],
-        "settings": {
-          "whatsapp_number": "447798983387",
-          "bubble_text": "",
-          "prefilled_message": "Hi, I'm looking for some advice about treatments and would like to speak to a skin specialist.",
-          "bottom_position": 30,
-          "right_position": 30
-        }
-      }
-    },
     "content_for_index": [],
     "blocks": {
       "2611479755219051411": {
         "type": "shopify://apps/appio-google-reviews/blocks/integration/25437a0d-2feb-4f5f-b07d-e313afa21656",
-        "disabled": false,
-        "settings": {}
-      },
-      "18408366429334172745": {
-        "type": "shopify://apps/pop-convert-pop-ups-banners/blocks/app-embed/ed587aec-4936-43ae-a1b3-1c9e0d08f185",
         "disabled": false,
         "settings": {}
       }
@@ -76,10 +56,10 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#f4eee7",
+          "background": "#ffffff",
           "background_gradient": "",
-          "text_color": "#2b2b2b",
-          "primary_button_background": "#b77a57",
+          "text_color": "#1c1c1c",
+          "primary_button_background": "#1c1c1c",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
           "circle_button_icon": "#1c1c1c"
@@ -137,28 +117,6 @@
           "primary_button_background": "#1c1c1c",
           "primary_button_text_color": "#ffffff",
           "circle_button_background": "#efefef",
-          "circle_button_icon": "#1c1c1c"
-        }
-      },
-      "scheme-2799ff38-05f9-4649-9d3a-8475ce351793": {
-        "settings": {
-          "background": "#ffffff",
-          "background_gradient": "",
-          "text_color": "#1c1c1c",
-          "primary_button_background": "#1c1c1c",
-          "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#ffffff",
-          "circle_button_icon": "#1c1c1c"
-        }
-      },
-      "scheme-e0213fbc-8b8c-466c-9e2f-d1059c46dd52": {
-        "settings": {
-          "background": "#f4eee7",
-          "background_gradient": "",
-          "text_color": "#2b2b2b",
-          "primary_button_background": "#b77a57",
-          "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#ffffff",
           "circle_button_icon": "#1c1c1c"
         }
       }
@@ -339,8 +297,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "header {border-bottom: solid 10px #c5a059;}",
-      "span.bar__card-check {display: none;}"
+      "header {border-bottom: solid 10px #e6b325;}"
     ]
   }
 }

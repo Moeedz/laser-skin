@@ -9,502 +9,1075 @@
  */
 {
   "sections": {
-    "product_hero": {
-      "type": "lsc-product-hero",
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h3"
+          }
+        },
+        "button_PUkJNb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "text": "View Pricing",
+            "stretch": false,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "complementary_products": {
+          "type": "complementary_products",
+          "settings": {
+            "title": "Pairs well with",
+            "products_count": 2,
+            "show_below_gallery": true,
+            "stack_products": false,
+            "show_quick_buy": true
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "button_PUkJNb",
+        "price",
+        "payment_terms",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "complementary_products"
+      ],
+      "disabled": true,
       "settings": {
-        "eyebrow_override": "Medical-Grade Facial"
+        "color_scheme": "scheme-1",
+        "container_size": "full",
+        "product_info_size": 35,
+        "show_sticky_add_to_cart": true,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 30,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3
       }
     },
-    "quick_facts": {
-      "type": "lsc-quick-facts",
+    "treatment_tabs_section_9KfATQ": {
+      "type": "treatment-tabs-section",
       "blocks": {
-        "qf_1": {
-          "type": "fact",
+        "tab_hk8Vy9": {
+          "type": "tab",
           "settings": {
-            "label": "Session Time",
-            "value": "45–60 min"
+            "tab_identifier": "hydro",
+            "tab_name": "Hydrofacial",
+            "heading": "Hydrofacial",
+            "top_description": "<p>A Hydrofacial deeply cleanses, exfoliates, and hydrates the skin using advanced suction and serum infusion technology. It removes impurities, boosts radiance, and leaves the skin smoother, clearer, and instantly refreshed.</p>",
+            "image_1": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2-facial-social-media-graphics-3_70566a6d-802f-4622-b3bc-a2cd62512dbb.jpg",
+            "image_1_aspect_ratio": "original",
+            "consultation_heading": "Speak to a specialist",
+            "consultation_badge": "",
+            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
+            "consultation_link": "shopify://pages/contact",
+            "package_heading": "Buy a Package",
+            "package_description": "Pay per session or buy a bundle and save."
           }
         },
-        "qf_2": {
-          "type": "fact",
+        "package_hnTmxD": {
+          "type": "package",
           "settings": {
-            "label": "Downtime",
-            "value": "None"
+            "parent_tab": "hydro",
+            "package_name": "Full Hour Treatment",
+            "price": "from £80.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£100",
+            "session_1_total": "total £100.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481880956&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£90.00",
+            "session_3_total": "total £270.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481913724&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£80.00",
+            "session_6_total": "total £480.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481946492&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
           }
         },
-        "qf_3": {
-          "type": "fact",
+        "package_XgQqnx": {
+          "type": "package",
           "settings": {
-            "label": "Results",
-            "value": "Immediate"
-          }
-        },
-        "qf_4": {
-          "type": "fact",
-          "settings": {
-            "label": "From",
-            "value": "£100"
+            "parent_tab": "hydro",
+            "package_name": "Express 30 Minute Treatment",
+            "price": "from £50.00",
+            "show_session_1": true,
+            "session_1_label": "1 session",
+            "session_1_price": "£70",
+            "session_1_total": "total £70.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481979260&quantity=1",
+            "show_session_3": true,
+            "session_3_label": "3 session",
+            "session_3_price": "£60.00",
+            "session_3_total": "total £180.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983482012028&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£50.00",
+            "session_6_total": "total £300.00",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983482044796&quantity=1",
+            "show_session_10": false,
+            "session_10_label": "10 session",
+            "session_10_price": "£7.00",
+            "session_10_total": "total £70.00",
+            "session_10_per_session": "per session",
+            "session_10_link": ""
           }
         }
       },
       "block_order": [
-        "qf_1",
-        "qf_2",
-        "qf_3",
-        "qf_4"
+        "tab_hk8Vy9",
+        "package_hnTmxD",
+        "package_XgQqnx"
       ],
-      "settings": {}
-    },
-    "trust_bar": {
-      "type": "lsc-trust-bar",
+      "name": "Treatment Tabs",
       "settings": {
-        "override_metafield": true,
-        "item_1": "Medical-Grade Facial",
-        "item_2": "Immediate Visible Results",
-        "item_3": "All Skin Types",
-        "item_4": "Zero Downtime"
+        "section_width": 1400,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "section_background": "#ffffff",
+        "tab_alignment": "center",
+        "tab_gap": 12,
+        "tab_font_size": 15,
+        "tab_font_weight": "500",
+        "tab_border_radius": 50,
+        "tab_border_width": 2,
+        "tab_background": "#ffffff",
+        "tab_text_color": "#000000",
+        "tab_border_color": "#333333",
+        "tab_hover_background": "#f5f5f5",
+        "tab_hover_text_color": "#000000",
+        "tab_active_background": "#E6B325",
+        "tab_active_text_color": "#FFFFFF",
+        "tab_active_border_color": "#E6B325",
+        "heading_font_size": 42,
+        "heading_font_weight": "400",
+        "heading_color": "#000000",
+        "text_font_size": 15,
+        "text_color": "#333333",
+        "cta_card_gap": 16,
+        "cta_border_radius": 16,
+        "cta_border_width": 2,
+        "cta_background": "#ffffff",
+        "cta_border_color": "#333333",
+        "cta_hover_background": "#f9f9f9",
+        "cta_heading_color": "#000000",
+        "cta_text_color": "#666666",
+        "badge_background": "#f0f0f0",
+        "badge_text_color": "#000000",
+        "price_text_color": "#666666",
+        "package_border_radius": 12,
+        "package_border_width": 2,
+        "package_background": "#ffffff",
+        "package_border_color": "#333333",
+        "package_heading_color": "#000000",
+        "package_price_color": "#666666",
+        "package_button_radius": 8,
+        "package_button_background": "#E6B325",
+        "package_button_text_color": "#FFFFFF",
+        "package_button_hover_background": "#e6b325",
+        "image_border_radius": 8,
+        "show_collapsible_1": true,
+        "collapsible_1_title": "DESCRIPTION",
+        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
+        "collapsible_1_content": "<p>Add your description content here.</p>",
+        "show_collapsible_2": true,
+        "collapsible_2_title": "INFORMATION & INGREDIENTS",
+        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_2_content": "<p>Add your information and ingredients here.</p>",
+        "show_collapsible_3": true,
+        "collapsible_3_title": "THIS HELPS WITH",
+        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
+        "collapsible_3_content": "<p>Add benefits and features here.</p>",
+        "show_collapsible_4": true,
+        "collapsible_4_title": "FAQS",
+        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
+        "collapsible_4_content": "<p>Add your FAQs here.</p>"
       }
     },
-    "what_is": {
-      "type": "lsc-what-is",
-      "settings": {}
-    },
-    "comparison": {
-      "type": "lsc-comparison",
+    "ss_image_with_text_12_PPNnyT": {
+      "type": "ss-image-with-text-12",
       "blocks": {
-        "pt_1": {
-          "type": "point",
+        "slide_mTH4wq": {
+          "type": "slide",
           "settings": {
-            "industry": "Manual extraction — can be painful and leave redness",
-            "lsc": "Painless vortex extraction — no squeezing, no redness"
-          }
-        },
-        "pt_2": {
-          "type": "point",
-          "settings": {
-            "industry": "Generic products not tailored to your skin",
-            "lsc": "Medical-grade serums selected for your skin type"
-          }
-        },
-        "pt_3": {
-          "type": "point",
-          "settings": {
-            "industry": "Surface-level cleansing only",
-            "lsc": "Deep cleansing, exfoliation, extraction AND hydration in one session"
-          }
-        },
-        "pt_4": {
-          "type": "point",
-          "settings": {
-            "industry": "Results fade within 24–48 hours",
-            "lsc": "Visible results lasting 5–7 days, improving with regular sessions"
-          }
-        },
-        "pt_5": {
-          "type": "point",
-          "settings": {
-            "industry": "No medical-grade technology",
-            "lsc": "Patented Vortex-Fusion technology used in clinics worldwide"
+            "heading": "<p><strong>{{ product.title }}</strong></p>",
+            "text": "",
+            "button": "",
+            "button_url": "",
+            "button2": "",
+            "button2_url": "",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": false,
+            "image": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2-facial-social-media-graphics-3_70566a6d-802f-4622-b3bc-a2cd62512dbb.jpg"
           }
         }
       },
       "block_order": [
-        "pt_1",
-        "pt_2",
-        "pt_3",
-        "pt_4",
-        "pt_5"
+        "slide_mTH4wq"
       ],
-      "settings": {}
+      "disabled": true,
+      "custom_css": [
+        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
+      ],
+      "name": "SS - Image With Text #12",
+      "settings": {
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "center",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 100,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 100,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "left",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#b59de3",
+        "button_bg_hover_color": "#b198de",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#000000",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "rgba(0,0,0,0)",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
     },
-    "what_it_treats": {
-      "type": "lsc-what-it-treats",
+    "ss_image_with_text_12_gUF6fh": {
+      "type": "ss-image-with-text-12",
       "blocks": {
-        "cond_1": {
-          "type": "condition",
+        "slide_4jhyPz": {
+          "type": "slide",
           "settings": {
-            "icon": "🔍",
-            "title": "Congested Pores & Blackheads",
-            "description": "Vortex suction deeply clears blocked pores without painful manual extraction"
-          }
-        },
-        "cond_2": {
-          "type": "condition",
-          "settings": {
-            "icon": "✨",
-            "title": "Dull, Tired-Looking Skin",
-            "description": "Multi-step exfoliation and serum infusion restores radiance and glow"
-          }
-        },
-        "cond_3": {
-          "type": "condition",
-          "settings": {
-            "icon": "💧",
-            "title": "Dehydration & Dry Skin",
-            "description": "Hyaluronic acid and nourishing serums deliver deep, lasting hydration"
-          }
-        },
-        "cond_4": {
-          "type": "condition",
-          "settings": {
-            "icon": "🪞",
-            "title": "Fine Lines & Uneven Texture",
-            "description": "Gentle acid peel and hydration smooth skin texture and soften fine lines"
-          }
-        },
-        "cond_5": {
-          "type": "condition",
-          "settings": {
-            "icon": "☀️",
-            "title": "Sun Damage & Pigmentation",
-            "description": "Targeted serums and exfoliation help reduce sun spots and uneven tone"
-          }
-        },
-        "cond_6": {
-          "type": "condition",
-          "settings": {
-            "icon": "⚖️",
-            "title": "Oily or Combination Skin",
-            "description": "Balances oil production while hydrating dry areas for a clearer complexion"
+            "heading": "<h5>HydroFacial – The Ultimate Deep-Cleansing, Glow-Boosting Treatment</h5><p></p>",
+            "text": "<p>The Hydrofacial facial is one of the most advanced skin rejuvenation treatments available — a non-invasive, multi-step facial that deeply cleanses, exfoliates, extracts, and hydrates your skin in one seamless session.</p><p>At <strong>Laser Skin Clinics</strong>, we use the latest technology to deliver powerful ingredients such as antioxidants, peptides, and hyaluronic acid deep into the skin — leaving your complexion <strong>instantly glowing, refreshed, and renewed</strong>.</p><p></p><p>Dubbed the ultimate #FiveStarFacial, our HydrO2 facial is a firm favourite with celebrities and is regularly featured in the national press. The seven technologies guarantee a complete, prescriptive approach to all your needs, providing extraordinary results to ensure maximum satisfaction<br/></p>",
+            "button": "BOOK ONLINE",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195382&services=2536812&location=4546",
+            "button2": "Get more information",
+            "button2_url": "shopify://pages/contact",
+            "video": "shopify://files/videos/05 - 3D HydrO2 Facial.mp4",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": false,
+            "image": "shopify://shop_images/3D_Brochure_ho2_why_choose.jpg"
           }
         }
       },
       "block_order": [
-        "cond_1",
-        "cond_2",
-        "cond_3",
-        "cond_4",
-        "cond_5",
-        "cond_6"
+        "slide_4jhyPz"
       ],
-      "settings": {}
+      "custom_css": [
+        "p {padding-top: 10px; padding-bottom: 5px;}",
+        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
+        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
+      ],
+      "name": "SS - Image With Text #12",
+      "settings": {
+        "slide_gap": 70,
+        "slide_gap_mobile": 24,
+        "content_horizontal_align": "start",
+        "content_horizontal_align_mobile": "start",
+        "content_mt": 0,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 44,
+        "heading_size_mobile": 28,
+        "heading_height": 110,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 170,
+        "text_mt": 32,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_height": 100,
+        "button_mt": 32,
+        "button_mt_mobile": 32,
+        "button_padding_vertical": 16,
+        "button_padding_vertical_mobile": 16,
+        "button_padding_horizontal": 38,
+        "button_padding_horizontal_mobile": 38,
+        "button_radius": 12,
+        "button_border_thickness": 0,
+        "button_style": "non_outline",
+        "button2_custom": false,
+        "button2_font": "josefin_sans_n4",
+        "button2_size": 16,
+        "button2_size_mobile": 16,
+        "button2_height": 100,
+        "button2_mt": 16,
+        "button2_mt_mobile": 16,
+        "button2_padding_vertical": 16,
+        "button2_padding_vertical_mobile": 16,
+        "button2_padding_horizontal": 38,
+        "button2_padding_horizontal_mobile": 38,
+        "button2_radius": 12,
+        "button2_border_thickness": 0,
+        "button2_style": "outline",
+        "images_position": "right",
+        "images_position_mobile": "bottom",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "image_shape": "none",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "number_custom": false,
+        "number_font": "josefin_sans_n4",
+        "number_size": 13,
+        "number_size_mobile": 13,
+        "pagination_text": "",
+        "pagination_text_custom": false,
+        "pagination_text_font": "josefin_sans_n4",
+        "pagination_text_size": 16,
+        "pagination_text_size_mobile": 16,
+        "pagination_text_height": 130,
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#e6b325",
+        "button_bg_hover_color": "#deac21",
+        "button_border_color": "#000000",
+        "button_border_hover_color": "#000000",
+        "button2_color": "#ffffff",
+        "button2_hover_color": "#ffffff",
+        "button2_bg_color": "#000000",
+        "button2_bg_hover_color": "#000000",
+        "button2_border_color": "#000000",
+        "button2_border_hover_color": "#000000",
+        "image_border_color": "#000000",
+        "dots_bg_color": "",
+        "dots_bg_hover_color": "#000000",
+        "dots_border_color": "#000000",
+        "dots_border_hover_color": "#000000",
+        "number_color": "#000000",
+        "number_hover_color": "#ffffff",
+        "pagination_text_color": "#000000",
+        "background_color": "#645e5c",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 6,
+        "padding_horizontal_mobile": 1,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
     },
-    "how_it_works": {
-      "type": "lsc-how-it-works",
+    "treatment_pricing_hjdUCE": {
+      "type": "treatment-pricing",
       "blocks": {
-        "step_1": {
-          "type": "step",
+        "treatment_NbwzRR": {
+          "type": "treatment",
           "settings": {
-            "title": "Cleanse",
-            "description": "Gentle vortex cleansing to remove surface debris and makeup"
+            "treatment_name": "Hydfrofacial Express 30 Minute Treatment",
+            "treatment_name_column1": "",
+            "single_price": "60",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
           }
         },
-        "step_2": {
-          "type": "step",
+        "treatment_TWcErn": {
+          "type": "treatment",
           "settings": {
-            "title": "Acid Peel",
-            "description": "Mild glycolic/salicylic acid blend to loosen dead skin cells without irritation"
+            "treatment_name": "Hydrofacial Full Hour Treatment",
+            "treatment_name_column1": "",
+            "single_price": "100",
+            "treatment_name_column2": "",
+            "course_price": "472.50"
           }
         },
-        "step_3": {
-          "type": "step",
+        "treatment_DGUDpX": {
+          "type": "treatment",
           "settings": {
-            "title": "Extraction",
-            "description": "Painless vortex suction clears congested pores, blackheads, and impurities"
+            "treatment_name": "Express Course Of 3",
+            "treatment_name_column1": "",
+            "single_price": "150",
+            "treatment_name_column2": "",
+            "course_price": "787.50"
           }
         },
-        "step_4": {
-          "type": "step",
+        "treatment_LWReLR": {
+          "type": "treatment",
           "settings": {
-            "title": "Hydration",
-            "description": "Hyaluronic acid and nourishing serums infused deep into the skin"
-          }
-        },
-        "step_5": {
-          "type": "step",
-          "settings": {
-            "title": "Antioxidant Protection",
-            "description": "Antioxidant and peptide serums to protect and rejuvenate"
-          }
-        },
-        "step_6": {
-          "type": "step",
-          "settings": {
-            "title": "LED Light Therapy",
-            "description": "Targeted light therapy to calm inflammation and boost collagen"
-          }
-        },
-        "step_7": {
-          "type": "step",
-          "settings": {
-            "title": "Serum Infusion & Finish",
-            "description": "Final layer of protective serums locks in hydration and glow"
+            "treatment_name": "Full Treatment Course Of 3",
+            "treatment_name_column1": "",
+            "single_price": "275",
+            "treatment_name_column2": "",
+            "course_price": "337.50"
           }
         }
       },
       "block_order": [
-        "step_1",
-        "step_2",
-        "step_3",
-        "step_4",
-        "step_5",
-        "step_6",
-        "step_7"
+        "treatment_NbwzRR",
+        "treatment_TWcErn",
+        "treatment_DGUDpX",
+        "treatment_LWReLR"
       ],
-      "settings": {}
+      "disabled": true,
+      "name": "Treatment Pricing",
+      "settings": {
+        "show_section_title": true,
+        "section_title": "Pricing",
+        "show_two_columns": false,
+        "column1_title": "HYDROFACIAL",
+        "column1_subtitle": "Alternative Course Available On Request",
+        "show_button_column1": true,
+        "button_text_column1": "BOOK ONLINE",
+        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195382&services=2536812&location=4546",
+        "column2_title": "Course Of 6",
+        "column2_subtitle": "Save more with packages",
+        "show_button_column2": true,
+        "button_text_column2": "BOOK NOW",
+        "button_link_column2": "",
+        "header_color": "#c9a86a",
+        "accent_color": "#d4a574",
+        "header_text_color": "#ffffff",
+        "button_color": "#c9a86a",
+        "button_text_color": "#ffffff"
+      }
     },
-    "suitability": {
-      "type": "lsc-suitability",
+    "ss_image_with_text_9_GLgAya": {
+      "type": "ss-image-with-text-9",
       "blocks": {
-        "ideal_1": {
-          "type": "ideal",
+        "text_zqNDU6": {
+          "type": "text",
           "settings": {
-            "text": "Clients wanting an instant visible glow with zero downtime"
+            "text": "<h2>Benefits of HydrO2 Facial</h2>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 34,
+            "text_size_mobile": 26,
+            "text_height": 150,
+            "text_mt": 0,
+            "text_align": "left",
+            "text_align_mobile": "left",
+            "text_color": "#e6b325"
           }
         },
-        "ideal_2": {
-          "type": "ideal",
+        "icon_text_UxfF9a": {
+          "type": "icon_text",
           "settings": {
-            "text": "Those looking for a deeper clean than a standard facial can provide"
+            "icon": "tick",
+            "text": "Deep cleansing and detoxification – Removes congestion, blackheads, and dead skin cells."
           }
         },
-        "ideal_3": {
-          "type": "ideal",
+        "icon_text_LJCxHi": {
+          "type": "icon_text",
           "settings": {
-            "text": "Anyone preparing their skin for a special event or occasion"
+            "icon": "tick",
+            "text": "Intense hydration – Infuses moisture and antioxidants for lasting glow."
           }
         },
-        "ideal_4": {
-          "type": "ideal",
+        "icon_text_dEUWkb": {
+          "type": "icon_text",
           "settings": {
-            "text": "Clients wanting to maintain healthy skin with regular monthly sessions"
+            "icon": "tick",
+            "text": "No downtime – Perfect before an event or as a monthly skin maintenance treatment."
           }
         },
-        "ideal_5": {
-          "type": "ideal",
+        "icon_text_WwkP3M": {
+          "type": "icon_text",
           "settings": {
-            "text": "Those new to clinic treatments looking for a gentle introduction"
+            "icon": "tick",
+            "text": "Refined texture and radiance – Smooths fine lines, dullness, and uneven tone."
           }
         },
-        "not_1": {
-          "type": "not_suitable",
+        "button_HfVK4Q": {
+          "type": "button",
           "settings": {
-            "text": "Active cold sores or herpes simplex on the face"
+            "button": "Book Online",
+            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195382&services=2536812&location=4546",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 200,
+            "button_width_mobile": 700,
+            "button_mt": 52,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#e6b325",
+            "button_bg_hover_color": "#e6b325",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
           }
         },
-        "not_2": {
-          "type": "not_suitable",
+        "button_wtK88A": {
+          "type": "button",
           "settings": {
-            "text": "Active acne pustules or open wounds"
-          }
-        },
-        "not_3": {
-          "type": "not_suitable",
-          "settings": {
-            "text": "Sunburn or recently sunburnt skin"
-          }
-        },
-        "not_4": {
-          "type": "not_suitable",
-          "settings": {
-            "text": "Currently using Roaccutane or strong retinoids"
-          }
-        },
-        "not_5": {
-          "type": "not_suitable",
-          "settings": {
-            "text": "Rosacea flare-up or highly sensitised skin"
+            "button": "Get more information",
+            "button_url": "shopify://pages/contact",
+            "button_custom": false,
+            "button_font": "josefin_sans_n4",
+            "button_size": 16,
+            "button_size_mobile": 16,
+            "button_height": 100,
+            "button_width": 270,
+            "button_width_mobile": 700,
+            "button_mt": 12,
+            "button_mt_mobile": 16,
+            "button_padding_vertical": 16,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 24,
+            "button_padding_horizontal_mobile": 24,
+            "button_radius": 4,
+            "button_border_thickness": 1,
+            "button_align": "left",
+            "button_align_mobile": "left",
+            "button_style": "non_outline",
+            "button_color": "#ffffff",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_bg_hover_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_hover_color": "#000000"
           }
         }
       },
       "block_order": [
-        "ideal_1",
-        "ideal_2",
-        "ideal_3",
-        "ideal_4",
-        "ideal_5",
-        "not_1",
-        "not_2",
-        "not_3",
-        "not_4",
-        "not_5"
+        "text_zqNDU6",
+        "icon_text_UxfF9a",
+        "icon_text_LJCxHi",
+        "icon_text_dEUWkb",
+        "icon_text_WwkP3M",
+        "button_HfVK4Q",
+        "button_wtK88A"
       ],
-      "settings": {}
+      "name": "SS - Image With Text #9",
+      "settings": {
+        "body_gap": 50,
+        "body_gap_mobile": 0,
+        "image": "shopify://shop_images/3D-HydrO2-facial-digital-screens-2---MAR-HO2-CPDS-REV01.jpg",
+        "image_position": "left",
+        "image_position_mobile": "top",
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "content_maxwidth": 700,
+        "content_padding_vertical": 40,
+        "content_padding_vertical_mobile": 20,
+        "content_padding_horizontal": 24,
+        "content_padding_horizontal_mobile": 16,
+        "row_gap": 16,
+        "row_mt": 20,
+        "row_align": "left",
+        "row_align_mobile": "left",
+        "icon_size": 30,
+        "icon_size_mobile": 26,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 18,
+        "text_size_mobile": 16,
+        "text_height": 180,
+        "icon_color": "#000000",
+        "text_color": "#2b1a1a",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
     },
-    "pricing": {
-      "type": "lsc-pricing-cards",
-      "settings": {}
-    },
-    "reviews": {
-      "type": "lsc-google-reviews",
+    "ss_clothing_image_grid_h4nJGV": {
+      "type": "ss-clothing-image-grid",
       "blocks": {
-        "rev_1": {
-          "type": "review",
+        "link_L4C8Dg": {
+          "type": "link",
           "settings": {
-            "text": "Had a Hydrofacial before my daughter's wedding and my skin looked absolutely amazing. Maxine was so professional and my skin felt hydrated and glowing for weeks afterwards. I've now booked in monthly.",
-            "author": "Sandra L.",
-            "treatment": "HydraFacial"
-          }
-        },
-        "rev_2": {
-          "type": "review",
-          "settings": {
-            "text": "I was sceptical about facials but the Hydrofacial at Laser Skin Clinics completely changed my mind. The results were immediate — my skin looked clearer and felt incredible. Maxine explained every step and I left feeling so confident.",
-            "author": "Kezia O.",
-            "treatment": "HydraFacial"
-          }
-        },
-        "rev_3": {
-          "type": "review",
-          "settings": {
-            "text": "Had the Hydrofacial as a treat and honestly it was the best skin treatment I've ever had. Zero redness or irritation and the glow lasted for ages. The team at Wolverhampton are brilliant. Already booked my next one.",
-            "author": "Rachel T.",
-            "treatment": "HydraFacial"
+            "image": "shopify://shop_images/3D-Brochure_ho2-results-1.jpg",
+            "text": "",
+            "url": "",
+            "overlay_opacity": 0
           }
         }
       },
       "block_order": [
-        "rev_1",
-        "rev_2",
-        "rev_3"
+        "link_L4C8Dg"
       ],
-      "settings": {}
+      "name": "SS - Threads Image Grid",
+      "settings": {
+        "font_size": 24,
+        "font_color": "#000000",
+        "background-color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_vertical": 0,
+        "section-width": 200
+      }
     },
-    "faq": {
-      "type": "lsc-faq",
+    "before_after_FYP3MP": {
+      "type": "before-after",
       "blocks": {
-        "faq_1": {
-          "type": "faq",
+        "before_h3jXfm": {
+          "type": "before",
           "settings": {
-            "question": "What exactly does a Hydrofacial do for my skin?",
-            "answer": "<p>HydroFacial is a multi-step medical-grade treatment that deeply cleanses, exfoliates, extracts congestion, and infuses the skin with targeted hydrating serums. It improves texture, clarity, and hydration in a single session while supporting overall skin health.</p>"
+            "color_scheme": "",
+            "image": "shopify://shop_images/3D-Brochure_ho2-results-1.jpg",
+            "text": "Before",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
           }
         },
-        "faq_2": {
-          "type": "faq",
+        "after_PymKJA": {
+          "type": "after",
           "settings": {
-            "question": "Is there any downtime afterwards?",
-            "answer": "<p>No. HydroFacial requires no downtime. You may experience mild redness immediately after treatment, which typically settles within a few hours. Most patients return to normal activities straight away.</p>"
+            "color_scheme": "",
+            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
+            "text": "After",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "before_h3jXfm",
+        "after_PymKJA"
+      ],
+      "disabled": true,
+      "name": "t:sections.before_after.presets.before_after.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "Before/after",
+        "content": "",
+        "cursor_direction": "horizontal",
+        "cursor_initial_position": 50,
+        "cursor_background": "#ffffff",
+        "cursor_arrows_color": "#000000"
+      }
+    },
+    "rich_text_nziPUE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U7EUj7": {
+          "type": "heading",
+          "settings": {
+            "text": "Three-stage process that transforms your skin step by step:",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U7EUj7"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": true
+      }
+    },
+    "ss_steps_11_7cMyRT": {
+      "type": "ss-steps-11",
+      "blocks": {
+        "step_jmRN9F": {
+          "type": "step",
+          "settings": {
+            "step": "STEP 1",
+            "title": "Cleanse & Exfoliate",
+            "text": "<p>A gentle resurfacing step removes makeup, dead skin, and built-up oils. This clears the way for deep penetration of active ingredients and reveals brighter, smoother skin instantly.<br/></p><p><br/></p><p></p>"
           }
         },
-        "faq_3": {
-          "type": "faq",
+        "step_jiiz8x": {
+          "type": "step",
           "settings": {
-            "question": "Will it hurt or feel uncomfortable?",
-            "answer": "<p>HydroFacial is generally described as comfortable and gentle. The vortex technology uses light suction to remove impurities without squeezing or manual pressure. Most patients find it relaxing.</p>"
+            "step": "STEP 2",
+            "title": "Extract + Detoxify",
+            "text": "<p>The suction handpiece painlessly removes blackheads, congestion, and impurities from deep within the pores - far more effectively than manual extractions.<br/></p><p></p>"
           }
         },
-        "faq_4": {
-          "type": "faq",
+        "step_6jaGgE": {
+          "type": "step",
           "settings": {
-            "question": "How often should I have a HydroFacial?",
-            "answer": "<p>For maintenance, many patients choose treatment every 4–6 weeks. If addressing specific concerns such as congestion or dullness, a short course may be recommended before moving to maintenance sessions.</p>"
+            "step": "STEP 3",
+            "title": "Hydrate + Protect",
+            "text": "<p>Finally, your skin is drenched in a blend of antioxidants, peptides, and hyaluronic acid to replenish moisture, soothe inflammation, and boost long-term skin health.<br/><br/>The result is skin that looks fresh, plump, and luminous - the kind of healthy glow that makeup simply can’t replicate.</p>"
           }
-        },
-        "faq_5": {
-          "type": "faq",
+        }
+      },
+      "block_order": [
+        "step_jmRN9F",
+        "step_jiiz8x",
+        "step_6jaGgE"
+      ],
+      "name": "SS - Steps #11",
+      "settings": {
+        "layout": "image_content",
+        "layout_mobile": "image_content",
+        "layout_gap": 64,
+        "layout_gap_mobile": 32,
+        "image": "shopify://shop_images/MAR-HO2-WHY-INSTAST-REV01_ho2-stories-why-hydro2_0e1bd9c1-ee18-4971-bf3f-11348831a712.jpg",
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "image_ratio": "original",
+        "image_ratio_mobile": "original",
+        "steps_custom": false,
+        "steps_font": "josefin_sans_n4",
+        "steps_size": 12,
+        "steps_size_mobile": 12,
+        "steps_height": 100,
+        "steps_padding_horizontal": 8,
+        "steps_padding_horizontal_mobile": 8,
+        "steps_padding_vertical": 4,
+        "steps_padding_vertical_mobile": 4,
+        "steps_radius": 100,
+        "steps_border_thickness": 1,
+        "steps_content_align": "left",
+        "steps_content_align_mobile": "left",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 24,
+        "title_size_mobile": 20,
+        "title_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 8,
+        "text_mt_mobile": 8,
+        "steps_color": "#ffffff",
+        "steps_bg_color": "#e6b325",
+        "steps_border_color": "#e6b325",
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "image_border_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "175993612397035c9e": {
+      "type": "apps",
+      "blocks": {
+        "appio_google_reviews_carousel1_qFMFmN": {
+          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
           "settings": {
-            "question": "What skin concerns does HydroFacial help with?",
-            "answer": "<p>HydroFacial can help improve dullness, dehydration, congestion, enlarged pores, uneven texture, and mild acne. It is also commonly used before events for an immediate skin refresh.</p>"
+            "title_type": "h2",
+            "show_callout_layout": true,
+            "card_background_color": "#f8f8f8",
+            "card_text_color": "#747171",
+            "star_color": "#fbbc05",
+            "max_line_review_content": 4,
+            "auto_scroll": true,
+            "slide_delay": 3,
+            "show_navigation_bar": true,
+            "show_reviewer_avatar": true,
+            "show_reviewer_name_detail": true,
+            "show_review_date": true,
+            "show_verified_badge": true,
+            "show_review_photos": true,
+            "show_liked_review": true,
+            "show_business_summary": true,
+            "show_business_summary_rating": true,
+            "show_business_summary_total_review": true,
+            "show_business_summary_summary_rating": true,
+            "business_summary_color": "#3a454f",
+            "show_leave_review_button": true,
+            "button_color": "#ffffff",
+            "button_background": "#4285f4"
           }
-        },
-        "faq_6": {
-          "type": "faq",
-          "settings": {
-            "question": "How is HydroFacial different from a regular facial?",
-            "answer": "<p>Unlike traditional facials, HydroFacial uses medical-grade vortex technology to exfoliate and extract impurities without manual squeezing. It delivers controlled, consistent results in a clinical environment.</p>"
-          }
-        },
-        "faq_7": {
-          "type": "faq",
-          "settings": {
-            "question": "How long do results last?",
-            "answer": "<p>You will notice immediate improvement in hydration and glow. Results typically last several weeks, depending on your skin type, lifestyle, and skincare routine. Regular treatments support longer-term skin clarity and texture improvement.</p>"
-          }
-        },
-        "faq_8": {
-          "type": "faq",
-          "settings": {
-            "question": "Is HydroFacial suitable for sensitive or acne prone skin?",
-            "answer": "<p>Yes. The treatment can be tailored to suit sensitive, congested, or acne-prone skin. The gentle exfoliation and vacuum-assisted extraction help clear pores without causing trauma. Suitability is confirmed during consultation.</p>"
-          }
-        },
-        "faq_9": {
-          "type": "faq",
-          "settings": {
-            "question": "Is HydroFacial safe during pregnancy?",
-            "answer": "<p>HydroFacial is generally considered safe, but certain active ingredients may be avoided during pregnancy. Please inform us during consultation so the treatment can be adjusted appropriately.</p>"
-          }
-        },
-        "faq_10": {
-          "type": "faq",
-          "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
-          }
-        },
-        "faq_11": {
-          "type": "faq",
-          "settings": {
-            "question": "Can I wear makeup straight after?",
-            "answer": "<p>Yes. Makeup can usually be applied the same day if desired. However, many patients prefer to leave the skin makeup-free to enjoy the natural post-treatment glow.</p>"
-          }
-        },
-        "faq_12": {
-          "type": "faq",
-          "settings": {
-            "question": "What payment options do you offer?",
-            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
-          }
-        },
-        "faq_13": {
-          "type": "faq",
-          "settings": {
-            "question": "What is the difference between a Full Hydrafacial and an Express Hydrafacial?",
-            "answer": "<p>The Express Hydrofacial is a quicker, more streamlined version of the treatment. It focuses on the first three core cleansing and exfoliating steps of the full seven-step Hydrofacial, giving your skin a refreshed, cleansed boost in roughly half the time.</p><p>The Full Hydrofacial includes all seven steps for deeper rejuvenation, enhanced hydration and maximum glow.</p>"
-          }
-        },
-        "faq_14": {
-          "type": "faq",
+        }
+      },
+      "block_order": [
+        "appio_google_reviews_carousel1_qFMFmN"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
+    },
+    "ss_simple_faq_jiYFWj": {
+      "type": "ss-simple-faq",
+      "blocks": {
+        "text_NzGjnk": {
+          "type": "text",
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
           }
         },
-        "faq_15": {
-          "type": "faq",
+        "text_Dpx4Qh": {
+          "type": "text",
           "settings": {
             "question": "What makes HydroFacial different from a regular facial?",
             "answer": "<p>Unlike a traditional facial, HydroFacial delivers consistent, medical-grade results using advanced technology rather than manual extractions.</p><p>It penetrates deeper into the skin to remove debris from pores and replenish essential moisture all with no irritation, no downtime, and visible results after a single treatment.</p>"
           }
         },
-        "faq_16": {
-          "type": "faq",
+        "text_Jn4LDD": {
+          "type": "text",
           "settings": {
             "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
             "answer": "<p>If you would like to speak to someone please do one of the below<br/><br/>- Use the enquiry button.<br/>- Contact us via email - info@laserskinclinics.co.uk<br/>- Call us during opening hours on 01902 256667<br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
-        "faq_17": {
-          "type": "faq",
+        "text_N46HGf": {
+          "type": "text",
+          "settings": {
+            "question": "What happens If I want to book a course?",
+            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
+          }
+        },
+        "text_WrgkHK": {
+          "type": "text",
+          "settings": {
+            "question": "How do I book?",
+            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
+          }
+        },
+        "text_RtKhXw": {
+          "type": "text",
+          "settings": {
+            "question": "How does payment work?",
+            "answer": "<p>Payment is made online when making your appointment.</p>"
+          }
+        },
+        "text_JMUbWR": {
+          "type": "text",
           "settings": {
             "question": "Who is HydroFacial suitable for?",
             "answer": "<p>HydroFacial is safe for all skin types and tones — even sensitive skin.</p>"
           }
         },
-        "faq_18": {
-          "type": "faq",
+        "text_UiGdVT": {
+          "type": "text",
           "settings": {
             "question": "Is there any downtime?",
             "answer": "<p>There’s no downtime whatsoever.</p><p>You might notice a slight pink glow for an hour or two, but you can return to your normal activities straight away, it’s even safe to have a HydroFacial on the same day as an event.</p>"
           }
         },
-        "faq_19": {
-          "type": "faq",
+        "text_F4JeBA": {
+          "type": "text",
           "settings": {
             "question": "How long does the treatment take?",
             "answer": "<p>A typical HydroFacial takes 30 to 1 hour, making it perfect for a lunchtime treatment or quick pick-me-up before a night out.</p>"
           }
         },
-        "faq_20": {
-          "type": "faq",
+        "text_C7wfEW": {
+          "type": "text",
           "settings": {
             "question": "How often should I have a HydroFacial?",
             "answer": "<p>For ongoing skin health and radiance, we recommend a HydroFacial every 4 to 6 weeks.</p>"
           }
         },
-        "faq_21": {
-          "type": "faq",
+        "text_GEizER": {
+          "type": "text",
           "settings": {
             "question": "Does it hurt?",
             "answer": "<p>Not at all. HydroFacial is completely comfortable and non-invasive.</p><p>Most clients describe it as a gentle, cooling sensation with light suction - relaxing and refreshing, rather than painful.</p>"
@@ -512,47 +1085,43 @@
         }
       },
       "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6",
-        "faq_7",
-        "faq_8",
-        "faq_9",
-        "faq_10",
-        "faq_11",
-        "faq_12",
-        "faq_13",
-        "faq_14",
-        "faq_15",
-        "faq_16",
-        "faq_17",
-        "faq_18",
-        "faq_19",
-        "faq_20",
-        "faq_21"
+        "text_NzGjnk",
+        "text_Dpx4Qh",
+        "text_Jn4LDD",
+        "text_N46HGf",
+        "text_WrgkHK",
+        "text_RtKhXw",
+        "text_JMUbWR",
+        "text_UiGdVT",
+        "text_F4JeBA",
+        "text_C7wfEW",
+        "text_GEizER"
       ],
-      "settings": {}
-    },
-    "contact": {
-      "type": "lsc-dual-contact",
-      "settings": {}
+      "name": "SS - FAQ #1",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "icon_color": "#ffffff",
+        "hover_color": "#efefef",
+        "question_color": "#ffffff",
+        "background_color": "#e6b325",
+        "answer_color": "#000000",
+        "answer_bg_color": "#ffffff",
+        "questions-font-size": 1
+      }
     }
   },
   "order": [
-    "product_hero",
-    "quick_facts",
-    "trust_bar",
-    "what_is",
-    "comparison",
-    "what_it_treats",
-    "how_it_works",
-    "suitability",
-    "pricing",
-    "reviews",
-    "faq",
-    "contact"
+    "main",
+    "treatment_tabs_section_9KfATQ",
+    "ss_image_with_text_12_PPNnyT",
+    "ss_image_with_text_12_gUF6fh",
+    "treatment_pricing_hjdUCE",
+    "ss_image_with_text_9_GLgAya",
+    "ss_clothing_image_grid_h4nJGV",
+    "before_after_FYP3MP",
+    "rich_text_nziPUE",
+    "ss_steps_11_7cMyRT",
+    "175993612397035c9e",
+    "ss_simple_faq_jiYFWj"
   ]
 }
