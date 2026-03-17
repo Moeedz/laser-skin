@@ -17,25 +17,19 @@
         "message_cxe74X": {
           "type": "message",
           "settings": {
-            "text": "FREE SHIPPING ORDER NOW"
-          }
-        },
-        "message_DTKxkK": {
-          "type": "message",
-          "settings": {
-            "text": "NEW COLLECTION IS LIVE"
+            "text": "Unsure which treatment? <a href=\"/pages/consultation\" title=\"Skin Consultation\"><strong>Book Your Free Expert Skin Analysis</strong></a>"
           }
         }
       },
       "block_order": [
-        "message_cxe74X",
-        "message_DTKxkK"
+        "message_cxe74X"
       ],
       "disabled": true,
+      "custom_css": [],
       "settings": {
-        "color_scheme": "scheme-83c8f934-b06b-498f-9443-09bcaf9992d7",
+        "color_scheme": "scheme-29937063-0e25-4186-be5a-207a30c69b9f",
         "enable_sticky": true,
-        "autoplay": true,
+        "autoplay": false,
         "cycle_speed": 4,
         "desktop_font_size": 11,
         "mobile_font_size": 10
@@ -43,9 +37,7 @@
     },
     "header": {
       "type": "header",
-      "custom_css": [
-        "nav.header__secondary-nav {display: none !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "",
         "enable_sticky": true,
@@ -68,12 +60,107 @@
         "show_country_name": false,
         "show_country_flag": false,
         "show_locale_selector": true,
-        "transparent_header_text_color": "#ffffff"
+        "transparent_header_text_color": "#ffffff",
+        "transparent_logo": "shopify://shop_images/PNG_Final_1_1.png"
+      }
+    },
+    "ss_product_tabs_5_JBxQeF": {
+      "type": "ss-product-tabs-5",
+      "blocks": {
+        "tab_JMHxHJ": {
+          "type": "tab",
+          "settings": {
+            "title": "Title",
+            "icon": "atc",
+            "text": "<p>Text</p>",
+            "use_description": true
+          }
+        },
+        "tab_wKXL9z": {
+          "type": "tab",
+          "settings": {
+            "title": "Title",
+            "icon": "atc",
+            "text": "<p>Text</p>",
+            "use_description": false
+          }
+        },
+        "tab_ADY3JV": {
+          "type": "tab",
+          "settings": {
+            "title": "Title",
+            "icon": "atc",
+            "text": "<p>Text</p>",
+            "use_description": false
+          }
+        },
+        "tab_7a4t8A": {
+          "type": "tab",
+          "settings": {
+            "title": "Title",
+            "icon": "atc",
+            "text": "<p>Text</p>",
+            "use_description": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_JMHxHJ",
+        "tab_wKXL9z",
+        "tab_ADY3JV",
+        "tab_7a4t8A"
+      ],
+      "name": "SS - Product tabs #5",
+      "settings": {
+        "tabs_position": "below_buy",
+        "tab_padding_horizontal": 18,
+        "tab_padding_horizontal_mobile": 16,
+        "tab_padding_vertical": 18,
+        "tab_padding_vertical_mobile": 18,
+        "tab_radius": 16,
+        "tab_border_thickness": 1,
+        "tab_mt": 10,
+        "tab_mt_mobile": 10,
+        "title_gap": 12,
+        "title_gap_mobile": 12,
+        "title_icon_size": 22,
+        "title_icon_size_mobile": 20,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 15,
+        "title_size_mobile": 15,
+        "title_height": 130,
+        "arrow_size": 24,
+        "arrow_size_mobile": 20,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 15,
+        "text_size_mobile": 15,
+        "text_height": 150,
+        "text_padding_top": 20,
+        "tab_bg_color": "#ffffff",
+        "tab_border_color": "#9e9e9e",
+        "title_icon_color": "#000000",
+        "title_color": "#000000",
+        "arrow_color": "#000000",
+        "text_color": "#000000",
+        "background_color": "",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "border_thickness": 0,
+        "lazy": true
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "ss_product_tabs_5_JBxQeF"
   ]
 }

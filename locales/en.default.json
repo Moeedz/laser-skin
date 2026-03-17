@@ -94,7 +94,7 @@
     "general": {
       "description": "Description",
       "view_details": "View details",
-      "add_to_cart_button": "Add to cart",
+      "add_to_cart_button": "Book Now",
       "pre_order_button": "Pre-order",
       "sold_out_button": "Sold out",
       "unavailable_button": "Unavailable",
@@ -352,7 +352,7 @@
       "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\" class=\"link\">Shipping</a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes included.",
       "add_order_note": "Add order note",
-      "edit_order_note": "Edit order note",
+      "edit_order_note": "Please let us know the best time to call you to get your appointment booked in. If you’d prefer Email or WhatsApp instead, just let us know here.",
       "order_note": "Order note",
       "save_note": "Save note",
       "note_placeholder": "How can we help you?",
