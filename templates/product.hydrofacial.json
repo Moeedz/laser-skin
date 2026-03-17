@@ -9,879 +9,502 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {
+        "eyebrow_override": "Medical-Grade Facial"
+      }
+    },
+    "quick_facts": {
+      "type": "lsc-quick-facts",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "disabled": true,
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
-          "disabled": true,
+        "qf_1": {
+          "type": "fact",
           "settings": {
-            "heading_tag": "h1"
+            "label": "Session Time",
+            "value": "45–60 min"
           }
         },
-        "description": {
-          "type": "description",
+        "qf_2": {
+          "type": "fact",
           "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
+            "label": "Downtime",
+            "value": "None"
           }
         },
-        "separator_9e3F7g": {
-          "type": "separator",
-          "settings": {}
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "disabled": true,
-          "settings": {}
-        },
-        "button_PUkJNb": {
-          "type": "button",
-          "disabled": true,
+        "qf_3": {
+          "type": "fact",
           "settings": {
-            "link": "",
-            "text": "View Pricing",
-            "stretch": false,
-            "background": "",
-            "text_color": ""
+            "label": "Results",
+            "value": "Immediate"
           }
         },
-        "price": {
-          "type": "price",
+        "qf_4": {
+          "type": "fact",
           "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "appointment_picker_iUiMMf": {
-          "type": "appointment_picker",
-          "settings": {
-            "default_slots": "11:00 AM\n1:00 PM\n3:00 PM",
-            "saturday_slots": "1:00 PM\n2:00 PM\n3:00 PM",
-            "custom_dates": "2026-01-06|CLOSED\n2026-01-07|CLOSED\n2026-01-09|CLOSED\n2026-01-10|CLOSED\n2026-01-14|4:00 PM\n2026-01-16|12:00 PM,2:00 PM\n2026-01-20|10:00 AM,11:00 AM,12:00 PM, 1:00 PM,3:00 PM,5:00 PM\n2026-01-21|10:00 AM,11:00 AM,2 PM, 1:00 PM,3:00 PM\n2026-01-23|5:00 PM\n2026-01-24|1:00 PM,2:00 PM\n2026-01-27|2:00 PM,4:00 PM,5:00 PM\n2026-01-28|10:00 AM,11:00 AM,4:00 PM\n2026-01-30|12:00 PM\n2026-01-31|1:00 PM,2:00 PM,3:00 PM"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_style": "dropdown",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "#e6b325",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "liquid_NdwPrd": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<style>\n  /* Standalone Consultation Card Styles */\n  .standalone-consultation-wrapper {\n    max-width: 600px;\n    margin: 20px 0;\n  }\n\n  .standalone-cta-card {\n    border: 2px solid #333333;\n    border-radius: 16px;\n    padding: 20px 24px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    background: #ffffff;\n    display: block;\n  }\n\n  .standalone-cta-card:hover {\n    background: #f9f9f9;\n    transform: translateY(-2px);\n    box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n  }\n\n  .standalone-cta-card-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 8px;\n  }\n\n  .standalone-cta-card h3 {\n    font-size: 18px;\n    font-weight: 500;\n    margin: 0;\n    color: #000000;\n  }\n\n  .standalone-cta-badge {\n    background: #f0f0f0;\n    color: #000000;\n    padding: 4px 12px;\n    border-radius: 20px;\n    font-size: 13px;\n    font-weight: 500;\n  }\n\n  .standalone-cta-card p {\n    margin: 0;\n    font-size: 14px;\n    color: #666666;\n    line-height: 1.5;\n  }\n\n  /* Modal Styles */\n  .standalone-consultation-modal-overlay {\n    display: none;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: 9998;\n    animation: fadeIn 0.3s ease;\n  }\n\n  .standalone-consultation-modal-overlay.active {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n\n  @keyframes slideUp {\n    from {\n      opacity: 0;\n      transform: translateY(30px);\n    }\n    to {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n\n  .standalone-consultation-modal {\n    background: white;\n    border-radius: 16px;\n    max-width: 420px;\n    width: 90%;\n    max-height: 90vh;\n    overflow-y: auto;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);\n  }\n\n  .standalone-modal-header {\n    padding: 25px 25px 20px;\n    position: relative;\n    border-bottom: none;\n  }\n\n  .standalone-modal-close {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    width: 28px;\n    height: 28px;\n    background: transparent;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s ease;\n    border-radius: 50%;\n  }\n\n  .standalone-modal-close:hover {\n    background: #f5f5f5;\n  }\n\n  .standalone-modal-close svg {\n    width: 20px;\n    height: 20px;\n    stroke: #999;\n  }\n\n  .standalone-modal-title {\n    font-size: 20px;\n    font-weight: 700;\n    color: #000;\n    margin: 0;\n    padding-right: 30px;\n    line-height: 1.3;\n  }\n\n  .standalone-modal-subtitle {\n    font-size: 14px;\n    color: #6c757d;\n    margin-top: 6px;\n    line-height: 1.4;\n  }\n\n  .standalone-modal-content {\n    padding: 10px 20px 25px;\n  }\n\n  .standalone-consultation-options {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n  }\n\n  .standalone-consultation-option {\n    display: flex;\n    align-items: center;\n    padding: 16px;\n    border: 1px solid #e8e8e8;\n    border-radius: 12px;\n    cursor: pointer;\n    transition: all 0.2s ease;\n    text-decoration: none;\n    color: inherit;\n    background: white;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.06);\n  }\n\n  .standalone-consultation-option:hover {\n    border-color: #d0d0d0;\n    background: #fafafa;\n    transform: translateX(2px);\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);\n  }\n\n  .standalone-consultation-icon {\n    width: 44px;\n    height: 44px;\n    border-radius: 10px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-right: 14px;\n    flex-shrink: 0;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon {\n    background: #FFF4E6;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #FF9500;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon {\n    background: #E3F2FD;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #2196F3;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon {\n    background: #E8F5E9;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    fill: #4CAF50;\n  }\n\n  .standalone-consultation-details {\n    flex: 1;\n  }\n\n  .standalone-consultation-method {\n    font-size: 15px;\n    font-weight: 600;\n    color: #000;\n    margin-bottom: 2px;\n  }\n\n  .standalone-consultation-info {\n    font-size: 13px;\n    color: #6c757d;\n    line-height: 1.3;\n  }\n\n  .standalone-consultation-arrow {\n    width: 20px;\n    height: 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.3;\n    transition: opacity 0.2s ease;\n  }\n\n  .standalone-consultation-option:hover .standalone-consultation-arrow {\n    opacity: 0.6;\n  }\n\n  .standalone-consultation-arrow svg {\n    width: 16px;\n    height: 16px;\n    stroke: #666;\n  }\n\n  /* Phone Hours Modal Styles */\n  .standalone-phone-hours-modal {\n    background: white;\n    border-radius: 20px;\n    max-width: 400px;\n    width: 90%;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);\n    padding: 15px 30px 30px;\n    text-align: center;\n  }\n\n  .standalone-phone-icon-circle {\n    width: 60px;\n    height: 60px;\n    background: #007AFF;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin: 0 auto 5px;\n  }\n\n  .standalone-phone-icon-circle svg {\n    width: 25px;\n    height: 25px;\n    stroke: white;\n    fill: none;\n  }\n\n  .standalone-phone-modal-title {\n    font-size: 24px;\n    font-weight: 600;\n    color: #000;\n    margin: 0 0 5px 0;\n  }\n\n  .standalone-store-status {\n    background: #D1F2E0;\n    color: #0F9D58;\n    padding: 5px 20px;\n    border-radius: 25px;\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 10px;\n    font-weight: 500;\n    font-size: 14px;\n  }\n\n  .standalone-store-status.closed {\n    background: #FFE4E1;\n    color: #FF4444;\n  }\n\n  .standalone-status-icon {\n    font-size: 16px;\n  }\n\n  .standalone-closed-message {\n    background: #FFF3CD;\n    border-left: 4px solid #FFC107;\n    padding: 12px 16px;\n    margin-bottom: 20px;\n    border-radius: 8px;\n    text-align: left;\n  }\n\n  .standalone-closed-message p {\n    color: #856404;\n    font-size: 12px;\n    line-height: 1.5;\n    margin: 0;\n  }\n\n  .standalone-opening-hours {\n    text-align: left;\n    margin-bottom: 25px;\n  }\n\n  .standalone-hours-heading {\n    font-size: 14px;\n    font-weight: 600;\n    color: #666;\n    margin: 0 0 15px 0;\n    text-align: center;\n  }\n\n  .standalone-hours-list {\n    background: #f8f8f8;\n    border-radius: 12px;\n    padding: 15px;\n  }\n\n  .standalone-hours-row {\n    display: flex;\n    justify-content: space-between;\n    padding: 8px 0;\n    border-bottom: 1px solid #e0e0e0;\n    font-size: 11px;\n  }\n\n  .standalone-hours-row:last-child {\n    border-bottom: none;\n  }\n\n  .standalone-hours-row .day {\n    font-weight: 500;\n    color: #333;\n  }\n\n  .standalone-hours-row .time {\n    color: #666;\n  }\n\n  .standalone-hours-row.current-day {\n    background: #fff;\n    margin: -5px -10px;\n    padding: 8px 10px;\n    border-radius: 8px;\n    font-weight: 600;\n  }\n\n  .standalone-hours-row.current-day .day {\n    color: #007AFF;\n  }\n\n  .standalone-hours-row.current-day .time {\n    color: #007AFF;\n  }\n\n  .standalone-call-now-button {\n    background: #007AFF;\n    color: white;\n    border: none;\n    padding: 5px 40px;\n    border-radius: 25px;\n    font-size: 13px;\n    font-weight: 600;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n    text-decoration: none;\n    display: block;\n    transition: all 0.3s ease;\n  }\n\n  .standalone-call-now-button:hover {\n    background: #0056CC;\n    transform: translateY(-2px);\n    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);\n  }\n\n  .standalone-call-now-button.disabled {\n    background: #cccccc !important;\n    cursor: not-allowed;\n    pointer-events: none;\n  }\n\n  .standalone-call-now-button.disabled:hover {\n    transform: none;\n    box-shadow: none;\n  }\n\n  @media (max-width: 640px) {\n    .standalone-consultation-modal {\n      width: 95%;\n      margin: 10px;\n      border-radius: 12px;\n    }\n\n    .standalone-modal-header {\n      padding: 20px 20px 15px;\n    }\n\n    .standalone-modal-title {\n      font-size: 18px;\n    }\n\n    .standalone-modal-subtitle {\n      font-size: 13px;\n    }\n\n    .standalone-modal-content {\n      padding: 5px 15px 20px;\n    }\n\n    .standalone-consultation-option {\n      padding: 14px;\n    }\n\n    .standalone-consultation-icon {\n      width: 40px;\n      height: 40px;\n      margin-right: 12px;\n      border-radius: 8px;\n    }\n\n    .standalone-consultation-icon svg {\n      width: 20px;\n      height: 20px;\n    }\n\n    .standalone-consultation-method {\n      font-size: 14px;\n    }\n\n    .standalone-consultation-info {\n      font-size: 12px;\n    }\n\n    .standalone-modal-close {\n      top: 12px;\n      right: 12px;\n      width: 26px;\n      height: 26px;\n    }\n\n    .standalone-modal-close svg {\n      width: 18px;\n      height: 18px;\n    }\n  }\n</style>\n\n<!-- ============= CUSTOMIZABLE SETTINGS - EDIT THESE ============= -->\n{% assign consultation_heading = \"Speak to the team \" %}\n{% assign consultation_badge = \"\" %}\n{% assign consultation_description = \"Can't find the answer to your question in the FAQ'S at the bottom of the page? Contact us by clicking here.\" %}\n{% assign modal_title = \"How would you like to contact us?\" %}\n{% assign modal_subtitle = \"Choose your preferred method to get in touch with us\" %}\n\n{% comment %} Contact Options {% endcomment %}\n{% assign contact_page_url = \"/pages/contact\" %}\n{% assign contact_option_title = \"Contact Form\" %}\n{% assign contact_option_description = \"Fill out our online form\" %}\n\n{% assign phone_number = \"01902256667\" %}\n{% assign phone_option_title = \"Call Us\" %}\n\n{% assign whatsapp_number = \"447798983387\" %}\n{% assign whatsapp_display_number = \"+44 7798 983387\" %}\n{% assign whatsapp_option_title = \"WhatsApp\" %}\n\n{% comment %} Store Hours {% endcomment %}\n{% assign monday_hours = \"Closed\" %}\n{% assign tuesday_hours = \"10:00AM-6:00PM\" %}\n{% assign wednesday_hours = \"10:00AM-6:00PM\" %}\n{% assign thursday_hours = \"Closed\" %}\n{% assign friday_hours = \"10:00AM-6:00PM\" %}\n{% assign saturday_hours = \"10:00AM-4:00PM\" %}\n{% assign sunday_hours = \"Closed\" %}\n{% assign closed_message = \"You can send us a WhatsApp, send us an email or call back during opening hours\" %}\n<!-- ============================================================== -->\n\n<div class=\"standalone-consultation-wrapper\">\n  <!-- Consultation Card Button -->\n  <div class=\"standalone-cta-card\" onclick=\"openStandaloneConsultationModal()\">\n    <div class=\"standalone-cta-card-header\">\n      <h3>{{ consultation_heading }}</h3>\n      {% if consultation_badge != blank %}\n        <span class=\"standalone-cta-badge\">{{ consultation_badge }}</span>\n      {% endif %}\n    </div>\n    <p>{{ consultation_description }}</p>\n  </div>\n\n  <!-- Consultation Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-consultation-modal\">\n    <div class=\"standalone-consultation-modal\">\n      <div class=\"standalone-modal-header\">\n        <button class=\"standalone-modal-close\" onclick=\"closeStandaloneConsultationModal()\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n          </svg>\n        </button>\n        <h3 class=\"standalone-modal-title\">{{ modal_title }}</h3>\n        <p class=\"standalone-modal-subtitle\">{{ modal_subtitle }}</p>\n      </div>\n      <div class=\"standalone-modal-content\">\n        <div class=\"standalone-consultation-options\">\n          \n          <!-- Contact Page Option -->\n          {% if contact_page_url != blank %}\n            <a href=\"{{ contact_page_url }}\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ contact_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ contact_option_description }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n\n          <!-- Phone Option -->\n          {% if phone_number != blank %}\n            <div class=\"standalone-consultation-option\" onclick=\"openStandalonePhoneHoursModal(); event.preventDefault();\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ phone_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ phone_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </div>\n          {% endif %}\n\n          <!-- WhatsApp Option -->\n          {% if whatsapp_number != blank %}\n            <a href=\"https://wa.me/{{ whatsapp_number | replace: ' ', '' | replace: '-', '' | replace: '+', '' }}\" target=\"_blank\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                  <path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z\"/>\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ whatsapp_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ whatsapp_display_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phone Hours Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-phone-hours-modal\">\n    <div class=\"standalone-phone-hours-modal\">\n      <button class=\"standalone-modal-close\" onclick=\"closeStandalonePhoneHoursModal()\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n        </svg>\n      </button>\n      \n      <div class=\"standalone-phone-icon-circle\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n        </svg>\n      </div>\n\n      <h3 class=\"standalone-phone-modal-title\">Call Us</h3>\n\n      <div class=\"standalone-store-status\" id=\"standalone-store-status\">\n        <span class=\"standalone-status-icon\">✓</span>\n        <span class=\"status-text\">We are currently open</span>\n      </div>\n\n      <div class=\"standalone-closed-message\" id=\"standalone-closed-message\" style=\"display: none;\">\n        <p>{{ closed_message }}</p>\n      </div>\n\n      <div class=\"standalone-opening-hours\">\n        <h4 class=\"standalone-hours-heading\">Opening Hours</h4>\n        <div class=\"standalone-hours-list\">\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Monday</span>\n            <span class=\"time\">{{ monday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Tuesday</span>\n            <span class=\"time\">{{ tuesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Wednesday</span>\n            <span class=\"time\">{{ wednesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Thursday</span>\n            <span class=\"time\">{{ thursday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Friday</span>\n            <span class=\"time\">{{ friday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Saturday</span>\n            <span class=\"time\">{{ saturday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Sunday</span>\n            <span class=\"time\">{{ sunday_hours }}</span>\n          </div>\n        </div>\n      </div>\n\n      <a href=\"tel:{{ phone_number | replace: ' ', '' | replace: '-', '' }}\" class=\"standalone-call-now-button\" id=\"standalone-call-button\">\n        Call Now\n      </a>\n    </div>\n  </div>\n</div>\n\n<script>\n  function openStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n    }\n  }\n\n  function closeStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function openStandalonePhoneHoursModal() {\n    closeStandaloneConsultationModal();\n    \n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n      checkStandaloneStoreStatus();\n      highlightStandaloneCurrentDay();\n    }\n  }\n\n  function closeStandalonePhoneHoursModal() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function checkStandaloneStoreStatus() {\n    const statusElement = document.getElementById('standalone-store-status');\n    if (!statusElement) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    const currentHour = now.getHours();\n    const currentMinute = now.getMinutes();\n    const currentTime = currentHour * 60 + currentMinute;\n\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    const hoursText = todayRow.querySelector('.time').textContent.trim();\n\n    let isOpen = false;\n    if (hoursText.toLowerCase() !== 'closed') {\n      const matches = hoursText.match(/(\\d{1,2}):(\\d{2})(AM|PM)-(\\d{1,2}):(\\d{2})(AM|PM)/i);\n      if (matches) {\n        let openHour = parseInt(matches[1]);\n        const openMinute = parseInt(matches[2]);\n        const openPeriod = matches[3].toUpperCase();\n        let closeHour = parseInt(matches[4]);\n        const closeMinute = parseInt(matches[5]);\n        const closePeriod = matches[6].toUpperCase();\n\n        if (openPeriod === 'PM' && openHour !== 12) openHour += 12;\n        if (openPeriod === 'AM' && openHour === 12) openHour = 0;\n        if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;\n        if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;\n\n        const openTime = openHour * 60 + openMinute;\n        const closeTime = closeHour * 60 + closeMinute;\n\n        isOpen = currentTime >= openTime && currentTime < closeTime;\n      }\n    }\n\n    const statusIcon = statusElement.querySelector('.standalone-status-icon');\n    const statusText = statusElement.querySelector('.status-text');\n    const closedMessage = document.getElementById('standalone-closed-message');\n    const callButton = document.getElementById('standalone-call-button');\n    \n    if (isOpen) {\n      statusElement.classList.remove('closed');\n      statusIcon.textContent = '✓';\n      statusText.textContent = 'We are currently open';\n      if (closedMessage) closedMessage.style.display = 'none';\n      if (callButton) {\n        callButton.textContent = 'Call Now';\n        callButton.classList.remove('disabled');\n        callButton.style.pointerEvents = 'auto';\n        callButton.style.background = '#007AFF';\n      }\n    } else {\n      statusElement.classList.add('closed');\n      statusIcon.textContent = '✗';\n      statusText.textContent = 'We are currently closed';\n      if (closedMessage) closedMessage.style.display = 'block';\n      if (callButton) {\n        callButton.textContent = 'Currently Closed';\n        callButton.classList.add('disabled');\n        callButton.style.pointerEvents = 'none';\n        callButton.style.background = '#cccccc';\n      }\n    }\n  }\n\n  function highlightStandaloneCurrentDay() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (!modal) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    \n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    hoursRows.forEach(row => row.classList.remove('current-day'));\n    \n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    if (todayRow) {\n      todayRow.classList.add('current-day');\n    }\n  }\n\n  // Close modals when clicking on overlay\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.standalone-consultation-modal-overlay').forEach(overlay => {\n      overlay.addEventListener('click', function(e) {\n        if (e.target === this) {\n          this.classList.remove('active');\n          document.body.style.overflow = '';\n        }\n      });\n    });\n\n    document.addEventListener('keydown', function(e) {\n      if (e.key === 'Escape') {\n        closeStandaloneConsultationModal();\n        closeStandalonePhoneHoursModal();\n      }\n    });\n  });\n</script>"
-          }
-        },
-        "complementary_products": {
-          "type": "complementary_products",
-          "disabled": true,
-          "settings": {
-            "title": "Pairs well with",
-            "products_count": 2,
-            "show_below_gallery": true,
-            "stack_products": false,
-            "show_quick_buy": true
+            "label": "From",
+            "value": "£100"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "description",
-        "separator_9e3F7g",
-        "payment_terms",
-        "separator",
-        "button_PUkJNb",
-        "price",
-        "appointment_picker_iUiMMf",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "liquid_NdwPrd",
-        "complementary_products"
+        "qf_1",
+        "qf_2",
+        "qf_3",
+        "qf_4"
       ],
-      "disabled": true,
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
       "settings": {
-        "color_scheme": "scheme-1",
-        "container_size": "xl",
-        "product_info_size": 50,
-        "show_sticky_add_to_cart": false,
-        "center_basic_info": false,
-        "desktop_media_layout": "grid_2x_highlighted",
-        "desktop_media_grid_gap": 30,
-        "mobile_controls": "dots",
-        "enable_media_autoplay": false,
-        "enable_video_looping": true,
-        "enable_image_zoom": true,
-        "max_image_zoom_level": 3
+        "override_metafield": true,
+        "item_1": "Medical-Grade Facial",
+        "item_2": "Immediate Visible Results",
+        "item_3": "All Skin Types",
+        "item_4": "Zero Downtime"
       }
     },
-    "treatment_tabs_section_9KfATQ": {
-      "type": "treatment-tabs-section",
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "comparison": {
+      "type": "lsc-comparison",
       "blocks": {
-        "tab_hk8Vy9": {
-          "type": "tab",
+        "pt_1": {
+          "type": "point",
           "settings": {
-            "tab_identifier": "hydro",
-            "tab_name": "Hydrofacial",
-            "heading": "Hydrofacial",
-            "top_description": "<p>A Hydrofacial deeply cleanses, exfoliates, and hydrates the skin using advanced suction and serum infusion technology. It removes impurities, boosts radiance, and leaves the skin smoother, clearer, and instantly refreshed.</p>",
-            "image_1": "shopify://shop_images/MAR-HO2-CPSMG-REV01_hydrO2-facial-social-media-graphics-3_70566a6d-802f-4622-b3bc-a2cd62512dbb.jpg",
-            "image_1_aspect_ratio": "original",
-            "consultation_heading": "Speak to a specialist",
-            "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "modal_title": "How would you like to contact us?",
-            "modal_subtitle": "Choose your preferred method to get in touch with us",
-            "contact_page_url": "shopify://pages/contact",
-            "contact_option_title": "Contact Form",
-            "contact_option_description": "Fill out our online form",
-            "phone_number": "01902256667",
-            "phone_option_title": "Call Us",
-            "monday_hours": "Closed",
-            "tuesday_hours": "10:00AM-6:00PM",
-            "wednesday_hours": "10:00AM-6:00PM",
-            "thursday_hours": "Closed",
-            "friday_hours": "10:00AM-6:00PM",
-            "saturday_hours": "10:00AM-4:00PM",
-            "sunday_hours": "Closed",
-            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
-            "whatsapp_number": "447798983387",
-            "whatsapp_display_number": "+44 7798 983387",
-            "whatsapp_option_title": "WhatsApp",
-            "package_heading": "View prices and book now",
-            "package_description": "Pay per session or buy a bundle and save."
+            "industry": "Manual extraction — can be painful and leave redness",
+            "lsc": "Painless vortex extraction — no squeezing, no redness"
           }
         },
-        "package_hnTmxD": {
-          "type": "package",
+        "pt_2": {
+          "type": "point",
           "settings": {
-            "parent_tab": "hydro",
-            "package_name": "Full Hour Treatment",
-            "price": "from £80.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£100",
-            "session_1_total": "total £100.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481880956&quantity=1",
-            "show_session_3": false,
-            "session_3_label": "3 session",
-            "session_3_price": "£90.00",
-            "session_3_total": "total £270.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481913724&quantity=1",
-            "show_session_6": false,
-            "session_6_label": "6 session",
-            "session_6_price": "£80.00",
-            "session_6_total": "total £480.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481946492&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "industry": "Generic products not tailored to your skin",
+            "lsc": "Medical-grade serums selected for your skin type"
           }
         },
-        "package_XgQqnx": {
-          "type": "package",
-          "disabled": true,
+        "pt_3": {
+          "type": "point",
           "settings": {
-            "parent_tab": "hydro",
-            "package_name": "Express 30 Minute Treatment",
-            "price": "from £50.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£70",
-            "session_1_total": "total £70.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983481979260&quantity=1",
-            "show_session_3": true,
-            "session_3_label": "3 session",
-            "session_3_price": "£60.00",
-            "session_3_total": "total £180.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983482012028&quantity=1",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£50.00",
-            "session_6_total": "total £300.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983482044796&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "industry": "Surface-level cleansing only",
+            "lsc": "Deep cleansing, exfoliation, extraction AND hydration in one session"
+          }
+        },
+        "pt_4": {
+          "type": "point",
+          "settings": {
+            "industry": "Results fade within 24–48 hours",
+            "lsc": "Visible results lasting 5–7 days, improving with regular sessions"
+          }
+        },
+        "pt_5": {
+          "type": "point",
+          "settings": {
+            "industry": "No medical-grade technology",
+            "lsc": "Patented Vortex-Fusion technology used in clinics worldwide"
           }
         }
       },
       "block_order": [
-        "tab_hk8Vy9",
-        "package_hnTmxD",
-        "package_XgQqnx"
+        "pt_1",
+        "pt_2",
+        "pt_3",
+        "pt_4",
+        "pt_5"
       ],
-      "disabled": true,
-      "name": "Treatment Tabs",
-      "settings": {
-        "section_width": 1400,
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "section_background": "#ffffff",
-        "enquiry_modal_title": "Get in touch",
-        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
-        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "tab_alignment": "center",
-        "tab_gap": 12,
-        "tab_font_size": 15,
-        "tab_font_weight": "500",
-        "tab_border_radius": 50,
-        "tab_border_width": 2,
-        "tab_background": "#ffffff",
-        "tab_text_color": "#000000",
-        "tab_border_color": "#333333",
-        "tab_hover_background": "#f5f5f5",
-        "tab_hover_text_color": "#000000",
-        "tab_active_background": "#e6b325",
-        "tab_active_text_color": "#ffffff",
-        "tab_active_border_color": "#e6b325",
-        "heading_font_size": 42,
-        "heading_font_weight": "400",
-        "heading_color": "#000000",
-        "text_font_size": 15,
-        "text_color": "#333333",
-        "cta_card_gap": 16,
-        "cta_border_radius": 16,
-        "cta_border_width": 2,
-        "cta_background": "#ffffff",
-        "cta_border_color": "#333333",
-        "cta_hover_background": "#f9f9f9",
-        "cta_heading_color": "#000000",
-        "cta_text_color": "#666666",
-        "badge_background": "#f0f0f0",
-        "badge_text_color": "#000000",
-        "price_text_color": "#666666",
-        "package_border_radius": 12,
-        "package_border_width": 2,
-        "package_background": "#ffffff",
-        "package_border_color": "#333333",
-        "package_heading_color": "#000000",
-        "package_price_color": "#666666",
-        "package_button_radius": 8,
-        "package_button_background": "#e6b325",
-        "package_button_text_color": "#ffffff",
-        "package_button_hover_background": "#e6b325",
-        "image_border_radius": 8,
-        "show_collapsible_1": true,
-        "collapsible_1_title": "7-day Appointment Guarantee",
-        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers will be seen within 7 days of their initial booking. If we’re unable to do so, you’ll receive either a full refund or a £50 voucher to spend at Laser Skin Clinics.</p>",
-        "show_collapsible_2": true,
-        "collapsible_2_title": "Course Price MATCH GUARANTEE",
-        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_2_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> — and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
-        "show_collapsible_3": true,
-        "collapsible_3_title": "Booking Process",
-        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
-        "collapsible_3_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your appointment</p>",
-        "show_collapsible_4": true,
-        "collapsible_4_title": "Cancellation Policy",
-        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_4_content": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>",
-        "show_collapsible_5": true,
-        "collapsible_5_title": "In-Clinic Payment Option",
-        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
-        "collapsible_5_content": "<p>If you prefer to pay for your treatment in person, simply select <strong>Speak to a Specialist</strong> and reach out via your chosen contact method. A deposit will be required to secure your appointment.</p>",
-        "show_collapsible_6": true,
-        "collapsible_6_title": "Contact and address",
-        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
-        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
-        "show_faq_link": true,
-        "faq_pre_text": "Have more questions?",
-        "faq_link_text": "View FAQs",
-        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
-        "faq_link_url": ""
-      }
+      "settings": {}
     },
-    "ss_image_with_text_12_gUF6fh": {
-      "type": "ss-image-with-text-12",
+    "what_it_treats": {
+      "type": "lsc-what-it-treats",
       "blocks": {
-        "slide_4jhyPz": {
-          "type": "slide",
+        "cond_1": {
+          "type": "condition",
           "settings": {
-            "heading": "<h5>HydroFacial – The Ultimate Deep-Cleansing, Glow-Boosting Treatment</h5><p></p>",
-            "text": "<p>The Hydrofacial facial is one of the most advanced skin rejuvenation treatments available — a non-invasive, multi-step facial that deeply cleanses, exfoliates, extracts, and hydrates your skin in one seamless session.</p><p>At <strong>Laser Skin Clinics</strong>, we use the latest technology to deliver powerful ingredients such as antioxidants, peptides, and hyaluronic acid deep into the skin — leaving your complexion <strong>instantly glowing, refreshed, and renewed</strong>.</p><p></p><p>Dubbed the ultimate #FiveStarFacial, our HydrO2 facial is a firm favourite with celebrities and is regularly featured in the national press. The seven technologies guarantee a complete, prescriptive approach to all your needs, providing extraordinary results to ensure maximum satisfaction<br/></p>",
-            "button": "BOOK ONLINE",
-            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195382&services=2536812&location=4546",
-            "button2": "Get more information",
-            "button2_url": "shopify://pages/contact",
-            "video": "shopify://files/videos/Untitled design (2).mp4",
-            "video_autoplay": true,
-            "video_loop": true,
-            "video_muted": true,
-            "video_controls": false,
-            "image": "shopify://shop_images/3D_Brochure_ho2_why_choose.jpg"
+            "icon": "🔍",
+            "title": "Congested Pores & Blackheads",
+            "description": "Vortex suction deeply clears blocked pores without painful manual extraction"
+          }
+        },
+        "cond_2": {
+          "type": "condition",
+          "settings": {
+            "icon": "✨",
+            "title": "Dull, Tired-Looking Skin",
+            "description": "Multi-step exfoliation and serum infusion restores radiance and glow"
+          }
+        },
+        "cond_3": {
+          "type": "condition",
+          "settings": {
+            "icon": "💧",
+            "title": "Dehydration & Dry Skin",
+            "description": "Hyaluronic acid and nourishing serums deliver deep, lasting hydration"
+          }
+        },
+        "cond_4": {
+          "type": "condition",
+          "settings": {
+            "icon": "🪞",
+            "title": "Fine Lines & Uneven Texture",
+            "description": "Gentle acid peel and hydration smooth skin texture and soften fine lines"
+          }
+        },
+        "cond_5": {
+          "type": "condition",
+          "settings": {
+            "icon": "☀️",
+            "title": "Sun Damage & Pigmentation",
+            "description": "Targeted serums and exfoliation help reduce sun spots and uneven tone"
+          }
+        },
+        "cond_6": {
+          "type": "condition",
+          "settings": {
+            "icon": "⚖️",
+            "title": "Oily or Combination Skin",
+            "description": "Balances oil production while hydrating dry areas for a clearer complexion"
           }
         }
       },
       "block_order": [
-        "slide_4jhyPz"
+        "cond_1",
+        "cond_2",
+        "cond_3",
+        "cond_4",
+        "cond_5",
+        "cond_6"
       ],
-      "disabled": true,
-      "custom_css": [
-        "p {padding-top: 10px; padding-bottom: 5px;}",
-        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
-        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
-      ],
-      "name": "SS - Image With Text #12",
-      "settings": {
-        "slide_gap": 70,
-        "slide_gap_mobile": 24,
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "start",
-        "content_mt": 0,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 28,
-        "heading_height": 110,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 170,
-        "text_mt": 32,
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_mt": 32,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 38,
-        "button_padding_horizontal_mobile": 38,
-        "button_radius": 12,
-        "button_border_thickness": 0,
-        "button_style": "non_outline",
-        "button2_custom": false,
-        "button2_font": "josefin_sans_n4",
-        "button2_size": 16,
-        "button2_size_mobile": 16,
-        "button2_height": 100,
-        "button2_mt": 16,
-        "button2_mt_mobile": 16,
-        "button2_padding_vertical": 16,
-        "button2_padding_vertical_mobile": 16,
-        "button2_padding_horizontal": 38,
-        "button2_padding_horizontal_mobile": 38,
-        "button2_radius": 12,
-        "button2_border_thickness": 0,
-        "button2_style": "outline",
-        "images_position": "right",
-        "images_position_mobile": "bottom",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "image_shape": "none",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 13,
-        "number_size_mobile": 13,
-        "pagination_text": "",
-        "pagination_text_custom": false,
-        "pagination_text_font": "josefin_sans_n4",
-        "pagination_text_size": 16,
-        "pagination_text_size_mobile": 16,
-        "pagination_text_height": 130,
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#e6b325",
-        "button_bg_hover_color": "#deac21",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "button2_color": "#ffffff",
-        "button2_hover_color": "#ffffff",
-        "button2_bg_color": "#000000",
-        "button2_bg_hover_color": "#000000",
-        "button2_border_color": "#000000",
-        "button2_border_hover_color": "#000000",
-        "image_border_color": "#000000",
-        "dots_bg_color": "",
-        "dots_bg_hover_color": "#000000",
-        "dots_border_color": "#000000",
-        "dots_border_hover_color": "#000000",
-        "number_color": "#000000",
-        "number_hover_color": "#ffffff",
-        "pagination_text_color": "#000000",
-        "background_color": "#645e5c",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 6,
-        "padding_horizontal_mobile": 1,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "ss_image_with_text_9_GLgAya": {
-      "type": "ss-image-with-text-9",
+    "how_it_works": {
+      "type": "lsc-how-it-works",
       "blocks": {
-        "text_zqNDU6": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Benefits of HydrO2 Facial</h2>",
-            "text_custom": false,
-            "text_font": "josefin_sans_n4",
-            "text_size": 34,
-            "text_size_mobile": 26,
-            "text_height": 150,
-            "text_mt": 0,
-            "text_align": "left",
-            "text_align_mobile": "left",
-            "text_color": "#e6b325"
-          }
-        },
-        "icon_text_UxfF9a": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "Deep cleansing and detoxification – Removes congestion, blackheads, and dead skin cells."
-          }
-        },
-        "icon_text_LJCxHi": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "Intense hydration – Infuses moisture and antioxidants for lasting glow."
-          }
-        },
-        "icon_text_dEUWkb": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "No downtime – Perfect before an event or as a monthly skin maintenance treatment."
-          }
-        },
-        "icon_text_WwkP3M": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "Refined texture and radiance – Smooths fine lines, dullness, and uneven tone."
-          }
-        },
-        "button_HfVK4Q": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button": "Book Online",
-            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=195382&services=2536812&location=4546",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 200,
-            "button_width_mobile": 700,
-            "button_mt": 52,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 4,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#ffffff",
-            "button_hover_color": "#ffffff",
-            "button_bg_color": "#e6b325",
-            "button_bg_hover_color": "#e6b325",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
-          }
-        },
-        "button_wtK88A": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button": "Get more information",
-            "button_url": "shopify://pages/contact",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 270,
-            "button_width_mobile": 700,
-            "button_mt": 12,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 4,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#ffffff",
-            "button_hover_color": "#ffffff",
-            "button_bg_color": "#000000",
-            "button_bg_hover_color": "#000000",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "text_zqNDU6",
-        "icon_text_UxfF9a",
-        "icon_text_LJCxHi",
-        "icon_text_dEUWkb",
-        "icon_text_WwkP3M",
-        "button_HfVK4Q",
-        "button_wtK88A"
-      ],
-      "disabled": true,
-      "name": "SS - Image With Text #9",
-      "settings": {
-        "body_gap": 50,
-        "body_gap_mobile": 0,
-        "image": "shopify://shop_images/3D-HydrO2-facial-digital-screens-2---MAR-HO2-CPDS-REV01.jpg",
-        "image_position": "left",
-        "image_position_mobile": "top",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "content_maxwidth": 700,
-        "content_padding_vertical": 40,
-        "content_padding_vertical_mobile": 20,
-        "content_padding_horizontal": 24,
-        "content_padding_horizontal_mobile": 16,
-        "row_gap": 16,
-        "row_mt": 20,
-        "row_align": "left",
-        "row_align_mobile": "left",
-        "icon_size": 30,
-        "icon_size_mobile": 26,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 18,
-        "text_size_mobile": 16,
-        "text_height": 180,
-        "icon_color": "#000000",
-        "text_color": "#2b1a1a",
-        "background_color": "#ffffff",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "lazy": true
-      }
-    },
-    "ss_clothing_image_grid_h4nJGV": {
-      "type": "ss-clothing-image-grid",
-      "blocks": {
-        "link_L4C8Dg": {
-          "type": "link",
-          "settings": {
-            "image": "shopify://shop_images/3D-Brochure_ho2-results-1.jpg",
-            "text": "",
-            "url": "",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "link_L4C8Dg"
-      ],
-      "disabled": true,
-      "name": "SS - Threads Image Grid",
-      "settings": {
-        "font_size": 24,
-        "font_color": "#000000",
-        "background-color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_vertical": 0,
-        "section-width": 200
-      }
-    },
-    "rich_text_nziPUE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U7EUj7": {
-          "type": "heading",
-          "settings": {
-            "text": "Three-stage process that transforms your skin step by step:",
-            "heading_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U7EUj7"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": true
-      }
-    },
-    "ss_steps_11_7cMyRT": {
-      "type": "ss-steps-11",
-      "blocks": {
-        "step_jmRN9F": {
+        "step_1": {
           "type": "step",
           "settings": {
-            "step": "STEP 1",
-            "title": "Cleanse & Exfoliate",
-            "text": "<p>A gentle resurfacing step removes makeup, dead skin, and built-up oils. This clears the way for deep penetration of active ingredients and reveals brighter, smoother skin instantly.<br/></p><p><br/></p><p></p>"
+            "title": "Cleanse",
+            "description": "Gentle vortex cleansing to remove surface debris and makeup"
           }
         },
-        "step_jiiz8x": {
+        "step_2": {
           "type": "step",
           "settings": {
-            "step": "STEP 2",
-            "title": "Extract + Detoxify",
-            "text": "<p>The suction handpiece painlessly removes blackheads, congestion, and impurities from deep within the pores - far more effectively than manual extractions.<br/></p><p></p>"
+            "title": "Acid Peel",
+            "description": "Mild glycolic/salicylic acid blend to loosen dead skin cells without irritation"
           }
         },
-        "step_6jaGgE": {
+        "step_3": {
           "type": "step",
           "settings": {
-            "step": "STEP 3",
-            "title": "Hydrate + Protect",
-            "text": "<p>Finally, your skin is drenched in a blend of antioxidants, peptides, and hyaluronic acid to replenish moisture, soothe inflammation, and boost long-term skin health.<br/><br/>The result is skin that looks fresh, plump, and luminous - the kind of healthy glow that makeup simply can’t replicate.</p>"
+            "title": "Extraction",
+            "description": "Painless vortex suction clears congested pores, blackheads, and impurities"
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "title": "Hydration",
+            "description": "Hyaluronic acid and nourishing serums infused deep into the skin"
+          }
+        },
+        "step_5": {
+          "type": "step",
+          "settings": {
+            "title": "Antioxidant Protection",
+            "description": "Antioxidant and peptide serums to protect and rejuvenate"
+          }
+        },
+        "step_6": {
+          "type": "step",
+          "settings": {
+            "title": "LED Light Therapy",
+            "description": "Targeted light therapy to calm inflammation and boost collagen"
+          }
+        },
+        "step_7": {
+          "type": "step",
+          "settings": {
+            "title": "Serum Infusion & Finish",
+            "description": "Final layer of protective serums locks in hydration and glow"
           }
         }
       },
       "block_order": [
-        "step_jmRN9F",
-        "step_jiiz8x",
-        "step_6jaGgE"
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4",
+        "step_5",
+        "step_6",
+        "step_7"
       ],
-      "disabled": true,
-      "name": "SS - Steps #11",
-      "settings": {
-        "layout": "image_content",
-        "layout_mobile": "image_content",
-        "layout_gap": 64,
-        "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/MAR-HO2-WHY-INSTAST-REV01_ho2-stories-why-hydro2_0e1bd9c1-ee18-4971-bf3f-11348831a712.jpg",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "steps_custom": false,
-        "steps_font": "josefin_sans_n4",
-        "steps_size": 12,
-        "steps_size_mobile": 12,
-        "steps_height": 100,
-        "steps_padding_horizontal": 8,
-        "steps_padding_horizontal_mobile": 8,
-        "steps_padding_vertical": 4,
-        "steps_padding_vertical_mobile": 4,
-        "steps_radius": 100,
-        "steps_border_thickness": 1,
-        "steps_content_align": "left",
-        "steps_content_align_mobile": "left",
-        "title_custom": false,
-        "title_font": "josefin_sans_n4",
-        "title_size": 24,
-        "title_size_mobile": 20,
-        "title_height": 130,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 14,
-        "text_size_mobile": 12,
-        "text_height": 150,
-        "text_mt": 8,
-        "text_mt_mobile": 8,
-        "steps_color": "#ffffff",
-        "steps_bg_color": "#e6b325",
-        "steps_border_color": "#e6b325",
-        "title_color": "#121212",
-        "text_color": "#121212",
-        "image_border_color": "#121212",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 1400,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "175993612397035c9e": {
-      "type": "apps",
+    "suitability": {
+      "type": "lsc-suitability",
       "blocks": {
-        "appio_google_reviews_carousel1_qFMFmN": {
-          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+        "ideal_1": {
+          "type": "ideal",
           "settings": {
-            "title_type": "h2",
-            "show_callout_layout": true,
-            "card_background_color": "#f8f8f8",
-            "card_text_color": "#747171",
-            "star_color": "#fbbc05",
-            "max_line_review_content": 4,
-            "auto_scroll": true,
-            "slide_delay": 3,
-            "show_navigation_bar": true,
-            "show_reviewer_avatar": true,
-            "show_reviewer_name_detail": true,
-            "show_review_date": true,
-            "show_verified_badge": true,
-            "show_review_photos": true,
-            "show_liked_review": true,
-            "show_business_summary": true,
-            "show_business_summary_rating": true,
-            "show_business_summary_total_review": true,
-            "show_business_summary_summary_rating": true,
-            "business_summary_color": "#3a454f",
-            "show_leave_review_button": true,
-            "button_color": "#ffffff",
-            "button_background": "#4285f4"
+            "text": "Clients wanting an instant visible glow with zero downtime"
+          }
+        },
+        "ideal_2": {
+          "type": "ideal",
+          "settings": {
+            "text": "Those looking for a deeper clean than a standard facial can provide"
+          }
+        },
+        "ideal_3": {
+          "type": "ideal",
+          "settings": {
+            "text": "Anyone preparing their skin for a special event or occasion"
+          }
+        },
+        "ideal_4": {
+          "type": "ideal",
+          "settings": {
+            "text": "Clients wanting to maintain healthy skin with regular monthly sessions"
+          }
+        },
+        "ideal_5": {
+          "type": "ideal",
+          "settings": {
+            "text": "Those new to clinic treatments looking for a gentle introduction"
+          }
+        },
+        "not_1": {
+          "type": "not_suitable",
+          "settings": {
+            "text": "Active cold sores or herpes simplex on the face"
+          }
+        },
+        "not_2": {
+          "type": "not_suitable",
+          "settings": {
+            "text": "Active acne pustules or open wounds"
+          }
+        },
+        "not_3": {
+          "type": "not_suitable",
+          "settings": {
+            "text": "Sunburn or recently sunburnt skin"
+          }
+        },
+        "not_4": {
+          "type": "not_suitable",
+          "settings": {
+            "text": "Currently using Roaccutane or strong retinoids"
+          }
+        },
+        "not_5": {
+          "type": "not_suitable",
+          "settings": {
+            "text": "Rosacea flare-up or highly sensitised skin"
           }
         }
       },
       "block_order": [
-        "appio_google_reviews_carousel1_qFMFmN"
+        "ideal_1",
+        "ideal_2",
+        "ideal_3",
+        "ideal_4",
+        "ideal_5",
+        "not_1",
+        "not_2",
+        "not_3",
+        "not_4",
+        "not_5"
       ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
-      }
+      "settings": {}
     },
-    "ss_simple_faq_jiYFWj": {
-      "type": "ss-simple-faq",
+    "pricing": {
+      "type": "lsc-pricing-cards",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
       "blocks": {
-        "text_TjwyWf": {
-          "type": "text",
-          "disabled": true,
+        "rev_1": {
+          "type": "review",
+          "settings": {
+            "text": "Had a Hydrofacial before my daughter's wedding and my skin looked absolutely amazing. Maxine was so professional and my skin felt hydrated and glowing for weeks afterwards. I've now booked in monthly.",
+            "author": "Sandra L.",
+            "treatment": "HydraFacial"
+          }
+        },
+        "rev_2": {
+          "type": "review",
+          "settings": {
+            "text": "I was sceptical about facials but the Hydrofacial at Laser Skin Clinics completely changed my mind. The results were immediate — my skin looked clearer and felt incredible. Maxine explained every step and I left feeling so confident.",
+            "author": "Kezia O.",
+            "treatment": "HydraFacial"
+          }
+        },
+        "rev_3": {
+          "type": "review",
+          "settings": {
+            "text": "Had the Hydrofacial as a treat and honestly it was the best skin treatment I've ever had. Zero redness or irritation and the glow lasted for ages. The team at Wolverhampton are brilliant. Already booked my next one.",
+            "author": "Rachel T.",
+            "treatment": "HydraFacial"
+          }
+        }
+      },
+      "block_order": [
+        "rev_1",
+        "rev_2",
+        "rev_3"
+      ],
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What exactly does a Hydrofacial do for my skin?",
+            "answer": "<p>HydroFacial is a multi-step medical-grade treatment that deeply cleanses, exfoliates, extracts congestion, and infuses the skin with targeted hydrating serums. It improves texture, clarity, and hydration in a single session while supporting overall skin health.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Is there any downtime afterwards?",
+            "answer": "<p>No. HydroFacial requires no downtime. You may experience mild redness immediately after treatment, which typically settles within a few hours. Most patients return to normal activities straight away.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Will it hurt or feel uncomfortable?",
+            "answer": "<p>HydroFacial is generally described as comfortable and gentle. The vortex technology uses light suction to remove impurities without squeezing or manual pressure. Most patients find it relaxing.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "How often should I have a HydroFacial?",
+            "answer": "<p>For maintenance, many patients choose treatment every 4–6 weeks. If addressing specific concerns such as congestion or dullness, a short course may be recommended before moving to maintenance sessions.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "What skin concerns does HydroFacial help with?",
+            "answer": "<p>HydroFacial can help improve dullness, dehydration, congestion, enlarged pores, uneven texture, and mild acne. It is also commonly used before events for an immediate skin refresh.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "How is HydroFacial different from a regular facial?",
+            "answer": "<p>Unlike traditional facials, HydroFacial uses medical-grade vortex technology to exfoliate and extract impurities without manual squeezing. It delivers controlled, consistent results in a clinical environment.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>You will notice immediate improvement in hydration and glow. Results typically last several weeks, depending on your skin type, lifestyle, and skincare routine. Regular treatments support longer-term skin clarity and texture improvement.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "question": "Is HydroFacial suitable for sensitive or acne prone skin?",
+            "answer": "<p>Yes. The treatment can be tailored to suit sensitive, congested, or acne-prone skin. The gentle exfoliation and vacuum-assisted extraction help clear pores without causing trauma. Suitability is confirmed during consultation.</p>"
+          }
+        },
+        "faq_9": {
+          "type": "faq",
+          "settings": {
+            "question": "Is HydroFacial safe during pregnancy?",
+            "answer": "<p>HydroFacial is generally considered safe, but certain active ingredients may be avoided during pregnancy. Please inform us during consultation so the treatment can be adjusted appropriately.</p>"
+          }
+        },
+        "faq_10": {
+          "type": "faq",
+          "settings": {
+            "question": "How bad is the downtime, really?",
+            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
+          }
+        },
+        "faq_11": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I wear makeup straight after?",
+            "answer": "<p>Yes. Makeup can usually be applied the same day if desired. However, many patients prefer to leave the skin makeup-free to enjoy the natural post-treatment glow.</p>"
+          }
+        },
+        "faq_12": {
+          "type": "faq",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
+        },
+        "faq_13": {
+          "type": "faq",
           "settings": {
             "question": "What is the difference between a Full Hydrafacial and an Express Hydrafacial?",
             "answer": "<p>The Express Hydrofacial is a quicker, more streamlined version of the treatment. It focuses on the first three core cleansing and exfoliating steps of the full seven-step Hydrofacial, giving your skin a refreshed, cleansed boost in roughly half the time.</p><p>The Full Hydrofacial includes all seven steps for deeper rejuvenation, enhanced hydration and maximum glow.</p>"
           }
         },
-        "text_NzGjnk": {
-          "type": "text",
+        "faq_14": {
+          "type": "faq",
           "settings": {
             "question": "What is your cancellation policy?",
             "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
-        "text_Dpx4Qh": {
-          "type": "text",
+        "faq_15": {
+          "type": "faq",
           "settings": {
             "question": "What makes HydroFacial different from a regular facial?",
             "answer": "<p>Unlike a traditional facial, HydroFacial delivers consistent, medical-grade results using advanced technology rather than manual extractions.</p><p>It penetrates deeper into the skin to remove debris from pores and replenish essential moisture all with no irritation, no downtime, and visible results after a single treatment.</p>"
           }
         },
-        "text_Jn4LDD": {
-          "type": "text",
+        "faq_16": {
+          "type": "faq",
           "settings": {
             "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
             "answer": "<p>If you would like to speak to someone please do one of the below<br/><br/>- Use the enquiry button.<br/>- Contact us via email - info@laserskinclinics.co.uk<br/>- Call us during opening hours on 01902 256667<br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
-        "text_JMUbWR": {
-          "type": "text",
+        "faq_17": {
+          "type": "faq",
           "settings": {
             "question": "Who is HydroFacial suitable for?",
             "answer": "<p>HydroFacial is safe for all skin types and tones — even sensitive skin.</p>"
           }
         },
-        "text_UiGdVT": {
-          "type": "text",
+        "faq_18": {
+          "type": "faq",
           "settings": {
             "question": "Is there any downtime?",
             "answer": "<p>There’s no downtime whatsoever.</p><p>You might notice a slight pink glow for an hour or two, but you can return to your normal activities straight away, it’s even safe to have a HydroFacial on the same day as an event.</p>"
           }
         },
-        "text_F4JeBA": {
-          "type": "text",
+        "faq_19": {
+          "type": "faq",
           "settings": {
             "question": "How long does the treatment take?",
             "answer": "<p>A typical HydroFacial takes 30 to 1 hour, making it perfect for a lunchtime treatment or quick pick-me-up before a night out.</p>"
           }
         },
-        "text_C7wfEW": {
-          "type": "text",
+        "faq_20": {
+          "type": "faq",
           "settings": {
             "question": "How often should I have a HydroFacial?",
             "answer": "<p>For ongoing skin health and radiance, we recommend a HydroFacial every 4 to 6 weeks.</p>"
           }
         },
-        "text_GEizER": {
-          "type": "text",
+        "faq_21": {
+          "type": "faq",
           "settings": {
             "question": "Does it hurt?",
             "answer": "<p>Not at all. HydroFacial is completely comfortable and non-invasive.</p><p>Most clients describe it as a gentle, cooling sensation with light suction - relaxing and refreshing, rather than painful.</p>"
@@ -889,1347 +512,47 @@
         }
       },
       "block_order": [
-        "text_TjwyWf",
-        "text_NzGjnk",
-        "text_Dpx4Qh",
-        "text_Jn4LDD",
-        "text_JMUbWR",
-        "text_UiGdVT",
-        "text_F4JeBA",
-        "text_C7wfEW",
-        "text_GEizER"
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9",
+        "faq_10",
+        "faq_11",
+        "faq_12",
+        "faq_13",
+        "faq_14",
+        "faq_15",
+        "faq_16",
+        "faq_17",
+        "faq_18",
+        "faq_19",
+        "faq_20",
+        "faq_21"
       ],
-      "disabled": true,
-      "name": "SS - FAQ #1",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "icon_color": "#ffffff",
-        "hover_color": "#efefef",
-        "question_color": "#ffffff",
-        "background_color": "#e6b325",
-        "answer_color": "#000000",
-        "answer_bg_color": "#ffffff",
-        "questions-font-size": 1
-      }
+      "settings": {}
     },
-    "product_hero_qGat7L": {
-      "type": "product-hero",
-      "blocks": {
-        "check_item_tjz9Wi": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Deeply cleanses and hydrates"
-          }
-        },
-        "check_item_F3QtpU": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Improves texture, tone, and congestion"
-          }
-        },
-        "check_item_9d9yPi": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "No downtime, immediate glow"
-          }
-        },
-        "trust_item_QYTwCk": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "star",
-            "title": "Google 4.9/5",
-            "subtitle": "",
-            "show_stars": true
-          }
-        },
-        "trust_item_gizQfQ": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "medical",
-            "title": "Medical-grade",
-            "subtitle": "technology",
-            "show_stars": false
-          }
-        },
-        "trust_item_dDBUha": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "calendar",
-            "title": "7-Day Appointment",
-            "subtitle": "Guarantee",
-            "show_stars": false
-          }
-        },
-        "trust_item_7XipBp": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "finance",
-            "title": "0% Finance Available",
-            "subtitle": "",
-            "show_stars": false
-          }
-        }
-      },
-      "block_order": [
-        "check_item_tjz9Wi",
-        "check_item_F3QtpU",
-        "check_item_9d9yPi",
-        "trust_item_QYTwCk",
-        "trust_item_gizQfQ",
-        "trust_item_dDBUha",
-        "trust_item_7XipBp"
-      ],
-      "name": "Product Hero",
-      "settings": {
-        "background_image": "shopify://shop_images/Gemini_Generated_Image_hcfomhhcfomhhcfo.png",
-        "image_position": "right center",
-        "desktop_height": 830,
-        "mobile_height": 350,
-        "background_color": "#eddde0",
-        "overlay_color_start": "rgba(0,0,0,0)",
-        "overlay_color_mid": "rgba(0,0,0,0)",
-        "overlay_color_fade": "rgba(0,0,0,0)",
-        "heading": "HydroFacial.",
-        "subheading_highlight": "",
-        "subheading": "Instant clarity. Clinical glow.",
-        "heading_font_size": 54,
-        "subheading_font_size": 38,
-        "heading_color": "#3a3a3a",
-        "highlight_color": "#c8962e",
-        "description": "<p>A multi-step medical-grade treatment that deeply cleanses, resurfaces, and hydrates in one session.</p>",
-        "body_font_size": 17,
-        "text_color": "#5a5a5a",
-        "checkmark_color": "#c6a199",
-        "button_label": "Book your HydroFacial",
-        "button_link": "#cf-template--25630357324156__consultation_form_ipNyW4",
-        "button_open_new_tab": false,
-        "button_bg": "#c6a199",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#b08d66",
-        "trust_bar_bg": "#f5f0eae6",
-        "trust_bar_text_color": "#3a3a3a",
-        "trust_icon_color": "#999999",
-        "trust_star_color": "#c8962e",
-        "content_max_width": 580
-      }
-    },
-    "treatment_steps_nQAXdx": {
-      "type": "treatment-steps",
-      "blocks": {
-        "step_UfjnT3": {
-          "type": "step",
-          "settings": {
-            "icon": "droplet",
-            "title": "Deep Cleanse & Exfoliate",
-            "description": "Removes dead skin cells and impurities while gently resurfacing the skin to reveal a smoother texture."
-          }
-        },
-        "step_Qdmidr": {
-          "type": "step",
-          "settings": {
-            "icon": "vial",
-            "title": "Extract & Purify",
-            "description": "Vacuum-assisted extraction clears pores without irritation or manual pressure."
-          }
-        },
-        "step_KV6KF7": {
-          "type": "step",
-          "settings": {
-            "icon": "shield",
-            "title": "Hydrate & Protect",
-            "description": "Infuses the skin with targeted serums to restore hydration, improve glow, and support skin health."
-          }
-        }
-      },
-      "block_order": [
-        "step_UfjnT3",
-        "step_Qdmidr",
-        "step_KV6KF7"
-      ],
-      "name": "Treatment Steps",
-      "settings": {
-        "heading": "What is a HydroFacial?",
-        "subtitle": "A multi-step skin treatment designed to deeply cleanse, resurface, and hydrate in a single session.<br><br>\n\n\nPerformed in a clinical environment using medical-grade vortex technology.",
-        "footer_text": "Suitable for all skin types. No downtime. Immediate visible results.",
-        "section_bg": "#ede6df",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "icon_color": "#b5a08a",
-        "card_bg": "#f2ede7",
-        "card_border": "#ddd8d0",
-        "heading_font_size": 40,
-        "card_title_font_size": 22,
-        "body_font_size": 16,
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "treatment_steps_yQFCCA": {
-      "type": "treatment-steps",
-      "blocks": {
-        "step_JLBLiV": {
-          "type": "step",
-          "settings": {
-            "icon": "droplet",
-            "title": "Vortex Cleansing & Exfoliation",
-            "description": "Removes dead skin cells and surface debris to reveal smoother texture."
-          }
-        },
-        "step_xfrPYY": {
-          "type": "step",
-          "settings": {
-            "icon": "vial",
-            "title": "Gentle Extraction",
-            "description": "Vacuum-assisted technology clears congestion without squeezing or trauma."
-          }
-        },
-        "step_EQLYpG": {
-          "type": "step",
-          "settings": {
-            "icon": "sparkle",
-            "title": "Targeted Serum Infusion",
-            "description": "Vacuum-assisted technology clears congestion without squeezing or trauma."
-          }
-        }
-      },
-      "block_order": [
-        "step_JLBLiV",
-        "step_xfrPYY",
-        "step_EQLYpG"
-      ],
-      "name": "Treatment Steps",
-      "settings": {
-        "heading": "How HydroFacial Works",
-        "subtitle": "A gentle and effective multi-step process that deeply cleanses, extracts congestion, and infuses hydration without irritation or downtime.",
-        "footer_text": "Personalised to your skin concerns for immediate, visible results.",
-        "section_bg": "#eddde0",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "icon_color": "#b5a08a",
-        "card_bg": "#f6e7ec",
-        "card_border": "#ddd8d0",
-        "heading_font_size": 40,
-        "card_title_font_size": 22,
-        "body_font_size": 16,
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "journey_steps_9zjiyq": {
-      "type": "journey-steps",
-      "blocks": {
-        "step_6ktrLr": {
-          "type": "step",
-          "settings": {
-            "title": "DETOX",
-            "description": "Lymphatic drainage improves circulation & removes toxins."
-          }
-        },
-        "step_RyUCMR": {
-          "type": "step",
-          "settings": {
-            "title": "CLEANSE",
-            "description": "Deep cleansing & exfoliation to uncover fresh skin."
-          }
-        },
-        "step_dV7UMM": {
-          "type": "step",
-          "settings": {
-            "title": "PEEL",
-            "description": "Gentle glycolic/salicylic peel loosens debris."
-          }
-        },
-        "step_ceng8q": {
-          "type": "step",
-          "settings": {
-            "title": "EXTRACT",
-            "description": "Painless vacuum suction removes blackheads & impurities."
-          }
-        },
-        "step_NVbArb": {
-          "type": "step",
-          "settings": {
-            "title": "HYDRATE",
-            "description": "Vortex-infusion of intense antioxidants & peptides."
-          }
-        },
-        "step_rhFAG3": {
-          "type": "step",
-          "settings": {
-            "title": "REJUVENATION",
-            "description": "LED Light Therapy stimulates collagen & reduces redness."
-          }
-        },
-        "step_jmH6jL": {
-          "type": "step",
-          "settings": {
-            "title": "PROTECTION",
-            "description": "SPF and skin barrier protection applied to finish."
-          }
-        }
-      },
-      "block_order": [
-        "step_6ktrLr",
-        "step_RyUCMR",
-        "step_dV7UMM",
-        "step_ceng8q",
-        "step_NVbArb",
-        "step_rhFAG3",
-        "step_jmH6jL"
-      ],
-      "name": "Journey Steps",
-      "settings": {
-        "heading": "Your 7-Step Journey to Glow",
-        "section_bg": "#ece6df",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#666666",
-        "row_bg": "#f0ebe5",
-        "number_bg": "#d8cfc4",
-        "number_text": "#ffffff",
-        "heading_font_size": 34,
-        "step_title_font_size": 20,
-        "body_font_size": 15,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "results_cards_eXbjYz": {
-      "type": "results-cards",
-      "blocks": {
-        "card_GhpaPx": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2026-02-09_at_11.45.53_PM.jpg",
-            "image_cover": false,
-            "title": "Instant Glow",
-            "description": "Skin looks radiant and refreshed after just one session."
-          }
-        },
-        "card_7fRxdC": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2026-02-09_at_11.45.54_PM.jpg",
-            "image_cover": true,
-            "title": "Improved texture & congestion",
-            "description": "Ongoing results for congestion, texture, and hydration."
-          }
-        },
-        "card_iNA6h7": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/checked-1.png",
-            "image_cover": false,
-            "title": "No Downtime",
-            "description": "Return to your day immediately, no recovery needed."
-          }
-        }
-      },
-      "block_order": [
-        "card_GhpaPx",
-        "card_7fRxdC",
-        "card_iNA6h7"
-      ],
-      "name": "Results Cards",
-      "settings": {
-        "heading": "HydroFacial Results",
-        "footer_text": "Immediate glow. No downtime.",
-        "section_bg": "#e3e0e8",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#666666",
-        "card_bg": "#ede8ee",
-        "heading_font_size": 40,
-        "card_title_font_size": 24,
-        "body_font_size": 16,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "luxury_pricing_qDjTLm": {
-      "type": "luxury-pricing",
-      "blocks": {
-        "price_card_MPYDjm": {
-          "type": "price_card",
-          "settings": {
-            "name": "Hydrofacial",
-            "card_subtitle": "",
-            "price": "£100",
-            "per_label": "per treatment",
-            "description": "Full medical-grade HydroFacial performed in a clinical environment."
-          }
-        },
-        "price_card_3ytUjd": {
-          "type": "price_card",
-          "settings": {
-            "name": "Course of 3",
-            "card_subtitle": "",
-            "price": "£85",
-            "per_label": "per treatment",
-            "description": "For cumulative skin improvement and longer-lasting results."
-          }
-        },
-        "price_card_Fwqwhn": {
-          "type": "price_card",
-          "settings": {
-            "name": "Express HydroFacial",
-            "card_subtitle": "(30 minutes)",
-            "price": "£65",
-            "per_label": "per treatment",
-            "description": "Course of 3 – £180"
-          }
-        }
-      },
-      "block_order": [
-        "price_card_MPYDjm",
-        "price_card_3ytUjd",
-        "price_card_Fwqwhn"
-      ],
-      "name": "Luxury Pricing",
-      "settings": {
-        "heading": "Hydrofacial Pricing",
-        "subtitle": "Medical-grade skin treatment with immediate, visible results.",
-        "footer_text": "No downtime  •  Suitable for all skin types  •  Immediate glow",
-        "button_label": "Book your HydroFacial",
-        "button_link": "#cf-template--25630357324156__consultation_form_ipNyW4",
-        "button_open_new_tab": false,
-        "section_bg": "#3a3248",
-        "show_texture": true,
-        "texture_opacity": 90,
-        "gold_color": "#d4be8a",
-        "card_border": "#8a7a60",
-        "button_bg": "#a89060",
-        "button_text": "#ffffff",
-        "button_bg_hover": "#8e7848",
-        "heading_font_size": 44,
-        "card_title_font_size": 22,
-        "price_font_size": 48,
-        "body_font_size": 16,
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "slideshow_aqPXUw": {
-      "type": "slideshow",
-      "blocks": {
-        "image_eqeGgp": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/35435454.png",
-            "mobile_image": "shopify://shop_images/newww.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_eqeGgp"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "slideshow_cCad3W": {
-      "type": "slideshow",
-      "blocks": {
-        "image_bQr6Nd": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4d_ad89f3ca-7704-4720-94f1-b5c8c4cc283d.png",
-            "mobile_image": "shopify://shop_images/4444_0f6cbfe7-8547-442d-906e-940333b7fb65.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_bQr6Nd"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "slideshow_KyKmLM": {
-      "type": "slideshow",
-      "blocks": {
-        "image_p8Xxiy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/pricinmg.png",
-            "mobile_image": "shopify://shop_images/pm.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_p8Xxiy"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "expectations_trust_p6xzUX": {
-      "type": "expectations-trust",
-      "blocks": {
-        "trust_point_xWC4Db": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "star",
-            "text": "4.9 Google rating"
-          }
-        },
-        "trust_point_zhRTAE": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "shield",
-            "text": "Advanced vortex-fusion technology"
-          }
-        },
-        "trust_point_iG7kNe": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "finance",
-            "text": "0% finance available"
-          }
-        },
-        "trust_point_AGqkdr": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "heart",
-            "text": "Instant glow with no downtime"
-          }
-        },
-        "trust_point_qgGbLL": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "parking",
-            "text": "Free parking"
-          }
-        },
-        "trust_point_cFa6Br": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "clock",
-            "text": "Established 10+ years"
-          }
-        }
-      },
-      "block_order": [
-        "trust_point_xWC4Db",
-        "trust_point_zhRTAE",
-        "trust_point_iG7kNe",
-        "trust_point_AGqkdr",
-        "trust_point_qgGbLL",
-        "trust_point_cFa6Br"
-      ],
-      "name": "Expectations & Trust",
-      "settings": {
-        "heading": "Transparent pricing. Trusted clinical standards.",
-        "subtitle": "Everything you need to feel confident in your treatment.",
-        "card_title": "What to expect with Hydrofacial",
-        "card_description": "<p>Hydrofacial is a multi-step treatment designed to cleanse, exfoliate, extract, and hydrate the skin in a single, structured session.</p><p>Using vortex-fusion technology, it removes impurities while infusing targeted serums to support clearer, brighter, and more hydrated skin.</p><p>We focus on consistent, visible skin improvement with no downtime.</p>",
-        "section_bg": "#dbd3d5",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "icon_color": "#777777",
-        "card_bg": "#f0ece7",
-        "card_border": "#ddd9d3",
-        "heading_font_size": 44,
-        "card_heading_font_size": 28,
-        "body_font_size": 16,
-        "button_label": "Book your hydrofacial",
-        "button_link": "#cf-template--25630357324156__consultation_form_ipNyW4",
-        "button_open_new_tab": false,
-        "button_bg": "#4a4a4a",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#333333",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "consultation_form_ipNyW4": {
-      "type": "consultation-form",
-      "name": "Consultation Form",
-      "settings": {
-        "section_width": 1200,
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "section_padding_side": 20,
-        "section_background": "#f9f9f9",
-        "form_max_width": 700,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 40,
-        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_font_size": 14,
-        "form_heading": "Make an enquiry",
-        "form_subheading": "",
-        "heading_color": "#000000",
-        "heading_font_size": 26,
-        "heading_font_weight": "500",
-        "subheading_color": "#777777",
-        "subheading_font_size": 15,
-        "label_color": "#333333",
-        "label_font_size": 14,
-        "label_font_weight": "400",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 6,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 15,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "show_treatment_field": true,
-        "treatment_label": "Which treatment are you interested in?",
-        "default_treatment_value": "Consultation",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "name_label": "Name",
-        "name_placeholder": "Your Name",
-        "contact_method_label": "How can we reach you?",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "email_label": "Email Address",
-        "email_placeholder": "Email Address",
-        "whatsapp_number": "447798983387",
-        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
-        "wa_you_contact_text": "I'll message you",
-        "wa_we_contact_text": "Message me",
-        "whatsapp_button_text": "Chat on WhatsApp",
-        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
-        "whatsapp_button_background": "#25d366",
-        "whatsapp_button_hover_background": "#1fbe59",
-        "whatsapp_button_text_color": "#ffffff",
-        "clinic_phone_number": "01902256667",
-        "call_phone_label": "Your phone number",
-        "call_time_label": "Best time to call you?",
-        "call_time_placeholder": "Select a time",
-        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "phone_placeholder": "Phone Number",
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 14,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Submit Form",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 15,
-        "button_font_weight": "600",
-        "button_border_radius": 8,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
-        "privacy_text_color": "#999999",
-        "privacy_font_size": 13
-      }
-    },
-    "slideshow_ndQzwV": {
-      "type": "slideshow",
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "faq_updated_ejxE6K": {
-      "type": "faq-updated",
-      "blocks": {
-        "faq_item_JHEwXH": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What exactly does a Hydrofacial do for my skin?",
-            "answer": "<p>HydroFacial is a multi-step medical-grade treatment that deeply cleanses, exfoliates, extracts congestion, and infuses the skin with targeted hydrating serums. It improves texture, clarity, and hydration in a single session while supporting overall skin health.</p>"
-          }
-        },
-        "faq_item_W9fEyb": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is there any downtime afterwards?",
-            "answer": "<p>No. HydroFacial requires no downtime. You may experience mild redness immediately after treatment, which typically settles within a few hours. Most patients return to normal activities straight away.</p>"
-          }
-        },
-        "faq_item_c8YeGG": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Will it hurt or feel uncomfortable?",
-            "answer": "<p>HydroFacial is generally described as comfortable and gentle. The vortex technology uses light suction to remove impurities without squeezing or manual pressure. Most patients find it relaxing.</p>"
-          }
-        },
-        "faq_item_jABFyM": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How often should I have a HydroFacial?",
-            "answer": "<p>For maintenance, many patients choose treatment every 4–6 weeks. If addressing specific concerns such as congestion or dullness, a short course may be recommended before moving to maintenance sessions.</p>"
-          }
-        },
-        "faq_item_LYNTfr": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What skin concerns does HydroFacial help with?",
-            "answer": "<p>HydroFacial can help improve dullness, dehydration, congestion, enlarged pores, uneven texture, and mild acne. It is also commonly used before events for an immediate skin refresh.</p>"
-          }
-        },
-        "faq_item_VPLEW8": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How is HydroFacial different from a regular facial?",
-            "answer": "<p>Unlike traditional facials, HydroFacial uses medical-grade vortex technology to exfoliate and extract impurities without manual squeezing. It delivers controlled, consistent results in a clinical environment.</p>"
-          }
-        },
-        "faq_item_yWYwhq": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How long do results last?",
-            "answer": "<p>You will notice immediate improvement in hydration and glow. Results typically last several weeks, depending on your skin type, lifestyle, and skincare routine. Regular treatments support longer-term skin clarity and texture improvement.</p>"
-          }
-        },
-        "faq_item_KnTRzP": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is HydroFacial suitable for sensitive or acne prone skin?",
-            "answer": "<p>Yes. The treatment can be tailored to suit sensitive, congested, or acne-prone skin. The gentle exfoliation and vacuum-assisted extraction help clear pores without causing trauma. Suitability is confirmed during consultation.</p>"
-          }
-        },
-        "faq_item_DjYwJG": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is HydroFacial safe during pregnancy?",
-            "answer": "<p>HydroFacial is generally considered safe, but certain active ingredients may be avoided during pregnancy. Please inform us during consultation so the treatment can be adjusted appropriately.</p>"
-          }
-        },
-        "faq_item_ggbRkk": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How bad is the downtime, really?",
-            "answer": "<p>Expect 2-3 days of redness like a strong sunburn, followed by light peeling on days 4-5. You can typically wear makeup by day 6.</p>"
-          }
-        },
-        "faq_item_WBwCLK": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can I wear makeup straight after?",
-            "answer": "<p>Yes. Makeup can usually be applied the same day if desired. However, many patients prefer to leave the skin makeup-free to enjoy the natural post-treatment glow.</p>"
-          }
-        },
-        "faq_item_aTJKHR": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What payment options do you offer?",
-            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_JHEwXH",
-        "faq_item_W9fEyb",
-        "faq_item_c8YeGG",
-        "faq_item_jABFyM",
-        "faq_item_LYNTfr",
-        "faq_item_VPLEW8",
-        "faq_item_yWYwhq",
-        "faq_item_KnTRzP",
-        "faq_item_DjYwJG",
-        "faq_item_ggbRkk",
-        "faq_item_WBwCLK",
-        "faq_item_aTJKHR"
-      ],
-      "name": "FAQ Dark Theme",
-      "settings": {
-        "section_bg_color": "#f4f2f2",
-        "max_width": 900,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "side_padding": 30,
-        "heading": "Your Questions. Answered",
-        "heading_color": "#1c1c1c",
-        "heading_font_size": 24,
-        "heading_font_weight": "400",
-        "heading_font_style": "italic",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 50,
-        "question_color": "#1c1c1c",
-        "question_font_size": 16,
-        "question_font_weight": "600",
-        "show_underline": true,
-        "underline_color": "#b8a164",
-        "underline_width": 60,
-        "underline_height": 2,
-        "answer_color": "#1c1c1c",
-        "answer_font_size": 14,
-        "answer_line_height": 1.7,
-        "answer_margin_top": 16,
-        "divider_color": "#333333",
-        "item_padding_vertical": 30,
-        "icon_color": "#b8a164",
-        "icon_active_color": "#b8a164",
-        "icon_active_bg": "rgba(0,0,0,0)",
-        "icon_size": 24,
-        "icon_border_width": 2,
-        "show_decoration": false,
-        "decoration_color": "#b8a164",
-        "decoration_size": 40,
-        "decoration_opacity": 0.6,
-        "all_items_open": false,
-        "first_item_open": false,
-        "allow_multiple_open": true
-      }
-    },
-    "location_contact_kYLxd8": {
-      "type": "location-contact",
-      "blocks": {
-        "contact_mCgMMN": {
-          "type": "contact",
-          "settings": {
-            "icon": "phone",
-            "label": "Phone:",
-            "value": "01902 256667",
-            "link": "tel:01902256667",
-            "open_new_tab": false
-          }
-        },
-        "contact_pChhAn": {
-          "type": "contact",
-          "settings": {
-            "icon": "whatsapp",
-            "label": "WhatsApp:",
-            "value": "07798983387",
-            "link": "https://wa.me/447798983387",
-            "open_new_tab": false
-          }
-        },
-        "contact_ix6tLB": {
-          "type": "contact",
-          "settings": {
-            "icon": "email",
-            "label": "Phone:",
-            "value": "info@laserskinclinics.co.uk",
-            "link": "mailto:info@laserskinclinics.co.uk",
-            "open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "contact_mCgMMN",
-        "contact_pChhAn",
-        "contact_ix6tLB"
-      ],
-      "name": "Location & Contact",
-      "settings": {
-        "label": "Location & Contact",
-        "heading": "Find Us / Visit the Clinic",
-        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
-        "show_hours": true,
-        "hours_title": "Opening Hours:",
-        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
-        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-        "info_bg": "#e8e3dc",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "accent_color": "#b08d57",
-        "heading_font_size": 40,
-        "body_font_size": 16,
-        "button_label": "BOOK CONSULTATION",
-        "button_link": "#cf-template--25630357324156__consultation_form_ipNyW4",
-        "button_open_new_tab": false,
-        "button_bg": "#b08d57",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#97763e"
-      }
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {}
     }
   },
   "order": [
-    "main",
-    "treatment_tabs_section_9KfATQ",
-    "ss_image_with_text_12_gUF6fh",
-    "ss_image_with_text_9_GLgAya",
-    "ss_clothing_image_grid_h4nJGV",
-    "rich_text_nziPUE",
-    "ss_steps_11_7cMyRT",
-    "175993612397035c9e",
-    "ss_simple_faq_jiYFWj",
-    "product_hero_qGat7L",
-    "treatment_steps_nQAXdx",
-    "treatment_steps_yQFCCA",
-    "journey_steps_9zjiyq",
-    "results_cards_eXbjYz",
-    "luxury_pricing_qDjTLm",
-    "slideshow_aqPXUw",
-    "slideshow_cCad3W",
-    "slideshow_KyKmLM",
-    "expectations_trust_p6xzUX",
-    "consultation_form_ipNyW4",
-    "slideshow_ndQzwV",
-    "faq_updated_ejxE6K",
-    "location_contact_kYLxd8"
+    "product_hero",
+    "quick_facts",
+    "trust_bar",
+    "what_is",
+    "comparison",
+    "what_it_treats",
+    "how_it_works",
+    "suitability",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
   ]
 }

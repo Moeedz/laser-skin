@@ -9,12 +9,99 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "treatments": {
+      "type": "lsc-treatments-collection",
       "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "blocks": {
+        "review-1": {
+          "type": "review",
+          "settings": {
+            "text": "100% absolutely recommend the services provided by Maxine and Angel. They are both patient, they truly care about you and are so knowledgeable in respect of the treatments offered and aftercare. They provide a truly bespoke, professional experience.",
+            "author": "Pin Sandhu",
+            "treatment": "Clinic Review"
+          }
+        },
+        "review-2": {
+          "type": "review",
+          "settings": {
+            "text": "I've had an excellent experience with the laser clinic! They've been brilliant for me and my daughter. I truly appreciate their genuine advice — they don't just try to sell treatments, but genuinely want you to see real results.",
+            "author": "Meena S.",
+            "treatment": "Laser Treatments"
+          }
+        },
+        "review-3": {
+          "type": "review",
+          "settings": {
+            "text": "Professional, knowledgeable and genuinely caring. The consultation was thorough and I felt completely at ease. Beautiful, natural results — I couldn't be happier.",
+            "author": "Emma R.",
+            "treatment": "Skin Rejuvenation"
+          }
+        }
+      },
+      "block_order": [
+        "review-1",
+        "review-2",
+        "review-3"
+      ],
+      "settings": {
+        "section_heading": "What Our Clients Say",
+        "background_color": "cream"
+      }
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "blocks": {
+        "faq-1": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need a consultation before booking a treatment?",
+            "answer": "<p>Yes — we offer a free skin assessment before every treatment. This ensures we recommend the right treatment for your skin type and concerns. There's no obligation to book afterwards.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I know which treatment is right for me?",
+            "answer": "<p>Book a free skin assessment and we'll assess your skin, discuss your concerns, and recommend the most effective treatment. We won't suggest anything we don't genuinely believe will help.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "faq",
+          "settings": {
+            "question": "Are your treatments safe for all skin types?",
+            "answer": "<p>Most of our treatments are suitable for a wide range of skin types. During your consultation, we'll assess your skin and confirm which treatments are appropriate for you. We always prioritise safety.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I book an appointment?",
+            "answer": "<p>The quickest way is via WhatsApp — message us on 07798 983387. You can also call us on 01902 256 667 or use the enquiry form on our contact page.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4"
+      ],
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {
+        "whatsapp_message": "Hi! I'd like to find out about your treatments please."
+      }
     }
   },
   "order": [
-    "main"
+    "treatments",
+    "reviews",
+    "faq",
+    "contact"
   ]
 }

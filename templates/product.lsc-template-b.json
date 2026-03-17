@@ -1,0 +1,123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {}
+    },
+    "quick_facts": {
+      "type": "lsc-quick-facts",
+      "settings": {}
+    },
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "suitability": {
+      "type": "lsc-suitability",
+      "settings": {}
+    },
+    "timeline": {
+      "type": "lsc-results-timeline",
+      "settings": {}
+    },
+    "aftercare": {
+      "type": "lsc-aftercare",
+      "settings": {}
+    },
+    "practitioner": {
+      "type": "lsc-practitioner",
+      "settings": {
+        "practitioner_type": "none"
+      }
+    },
+    "why_choose": {
+      "type": "lsc-values",
+      "blocks": {
+        "val_1": {
+          "type": "value",
+          "settings": {
+            "title": "Consultation-Led",
+            "description": "Every treatment begins with a thorough assessment of your skin, your concerns, and your goals before we recommend anything."
+          }
+        },
+        "val_2": {
+          "type": "value",
+          "settings": {
+            "title": "Medical-Grade Technology",
+            "description": "We invest in the same calibre of equipment found in leading UK clinics — not salon-grade alternatives."
+          }
+        },
+        "val_3": {
+          "type": "value",
+          "settings": {
+            "title": "Personalised Plans",
+            "description": "Your treatment plan is built around you — your skin type, your lifestyle, and your desired outcome."
+          }
+        },
+        "val_4": {
+          "type": "value",
+          "settings": {
+            "title": "Established 10+ Years",
+            "description": "Trusted by thousands of clients across Wolverhampton and the West Midlands since 2013."
+          }
+        }
+      },
+      "block_order": [
+        "val_1",
+        "val_2",
+        "val_3",
+        "val_4"
+      ],
+      "settings": {}
+    },
+    "pricing": {
+      "type": "lsc-pricing-cards",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "product_hero",
+    "trust_bar",
+    "quick_facts",
+    "what_is",
+    "how_it_works",
+    "suitability",
+    "timeline",
+    "aftercare",
+    "practitioner",
+    "why_choose",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
+  ]
+}

@@ -9,946 +9,452 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {}
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {
+        "override_metafield": true,
+        "item_1": "PowerSculpt Technology",
+        "item_2": "Non-Invasive Body Contouring",
+        "item_3": "No Downtime",
+        "item_4": "No Contract Required"
+      }
+    },
+    "quick_facts": {
+      "type": "lsc-quick-facts",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "disabled": true,
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
+        "qf_1": {
+          "type": "fact",
           "settings": {
-            "heading_tag": "h3"
+            "label": "Session Time",
+            "value": "30–60 min"
           }
         },
-        "description": {
-          "type": "description",
+        "qf_2": {
+          "type": "fact",
           "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
+            "label": "Downtime",
+            "value": "None"
           }
         },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
+        "qf_3": {
+          "type": "fact",
           "settings": {
-            "show_taxes_notice": false
+            "label": "Sessions",
+            "value": "6+ recommended"
           }
         },
-        "appointment_picker_ETbJxh": {
-          "type": "appointment_picker",
+        "qf_4": {
+          "type": "fact",
           "settings": {
-            "default_slots": "10:30 AM\n11:30 AM\n12:30 PM\n2:00 PM\n2:30 PM\n3:30 PM\n4:30 PM\n5:30 PM",
-            "saturday_slots": "10:00 AM\n12:30 PM\n1:30 PM\n2:30 PM\n3:30 PM",
-            "custom_dates": "2025-12-23|CLOSED\n2025-12-25|CLOSED\n2025-12-24|CLOSED\n2025-12-26|CLOSED\n2025-12-27|CLOSED\n2025-12-28|CLOSED\n2025-12-31|CLOSED\n2026-01-01|CLOSED\n2025-12-29|CLOSED\n2025-12-30|CLOSED\n2026-01-01|CLOSED\n2026-01-02|CLOSED\n2026-01-03|CLOSED\n2026-01-04|CLOSED\n2026-01-05|CLOSED"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "hide_sold_out_variants": false,
-            "selector_style": "dropdown",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "#e6b325",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "button_PUkJNb": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link": "",
-            "text": "View Pricing",
-            "stretch": false,
-            "background": "",
-            "text_color": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "liquid_BmgJWJ": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<style>\n  /* Standalone Consultation Card Styles */\n  .standalone-consultation-wrapper {\n    max-width: 600px;\n    margin: 20px 0;\n  }\n\n  .standalone-cta-card {\n    border: 2px solid #333333;\n    border-radius: 16px;\n    padding: 20px 24px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    position: relative;\n    background: #ffffff;\n    display: block;\n  }\n\n  .standalone-cta-card:hover {\n    background: #f9f9f9;\n    transform: translateY(-2px);\n    box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n  }\n\n  .standalone-cta-card-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 8px;\n  }\n\n  .standalone-cta-card h3 {\n    font-size: 18px;\n    font-weight: 500;\n    margin: 0;\n    color: #000000;\n  }\n\n  .standalone-cta-badge {\n    background: #f0f0f0;\n    color: #000000;\n    padding: 4px 12px;\n    border-radius: 20px;\n    font-size: 13px;\n    font-weight: 500;\n  }\n\n  .standalone-cta-card p {\n    margin: 0;\n    font-size: 14px;\n    color: #666666;\n    line-height: 1.5;\n  }\n\n  /* Modal Styles */\n  .standalone-consultation-modal-overlay {\n    display: none;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: 9998;\n    animation: fadeIn 0.3s ease;\n  }\n\n  .standalone-consultation-modal-overlay.active {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n\n  @keyframes fadeIn {\n    from { opacity: 0; }\n    to { opacity: 1; }\n  }\n\n  @keyframes slideUp {\n    from {\n      opacity: 0;\n      transform: translateY(30px);\n    }\n    to {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n\n  .standalone-consultation-modal {\n    background: white;\n    border-radius: 16px;\n    max-width: 420px;\n    width: 90%;\n    max-height: 90vh;\n    overflow-y: auto;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);\n  }\n\n  .standalone-modal-header {\n    padding: 25px 25px 20px;\n    position: relative;\n    border-bottom: none;\n  }\n\n  .standalone-modal-close {\n    position: absolute;\n    top: 15px;\n    right: 15px;\n    width: 28px;\n    height: 28px;\n    background: transparent;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    transition: all 0.2s ease;\n    border-radius: 50%;\n  }\n\n  .standalone-modal-close:hover {\n    background: #f5f5f5;\n  }\n\n  .standalone-modal-close svg {\n    width: 20px;\n    height: 20px;\n    stroke: #999;\n  }\n\n  .standalone-modal-title {\n    font-size: 20px;\n    font-weight: 700;\n    color: #000;\n    margin: 0;\n    padding-right: 30px;\n    line-height: 1.3;\n  }\n\n  .standalone-modal-subtitle {\n    font-size: 14px;\n    color: #6c757d;\n    margin-top: 6px;\n    line-height: 1.4;\n  }\n\n  .standalone-modal-content {\n    padding: 10px 20px 25px;\n  }\n\n  .standalone-consultation-options {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n  }\n\n  .standalone-consultation-option {\n    display: flex;\n    align-items: center;\n    padding: 16px;\n    border: 1px solid #e8e8e8;\n    border-radius: 12px;\n    cursor: pointer;\n    transition: all 0.2s ease;\n    text-decoration: none;\n    color: inherit;\n    background: white;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.06);\n  }\n\n  .standalone-consultation-option:hover {\n    border-color: #d0d0d0;\n    background: #fafafa;\n    transform: translateX(2px);\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);\n  }\n\n  .standalone-consultation-icon {\n    width: 44px;\n    height: 44px;\n    border-radius: 10px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-right: 14px;\n    flex-shrink: 0;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon {\n    background: #FFF4E6;\n  }\n\n  .standalone-consultation-option:nth-child(1) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #FF9500;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon {\n    background: #E3F2FD;\n  }\n\n  .standalone-consultation-option:nth-child(2) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    stroke: #2196F3;\n    fill: none;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon {\n    background: #E8F5E9;\n  }\n\n  .standalone-consultation-option:nth-child(3) .standalone-consultation-icon svg {\n    width: 22px;\n    height: 22px;\n    fill: #4CAF50;\n  }\n\n  .standalone-consultation-details {\n    flex: 1;\n  }\n\n  .standalone-consultation-method {\n    font-size: 15px;\n    font-weight: 600;\n    color: #000;\n    margin-bottom: 2px;\n  }\n\n  .standalone-consultation-info {\n    font-size: 13px;\n    color: #6c757d;\n    line-height: 1.3;\n  }\n\n  .standalone-consultation-arrow {\n    width: 20px;\n    height: 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0.3;\n    transition: opacity 0.2s ease;\n  }\n\n  .standalone-consultation-option:hover .standalone-consultation-arrow {\n    opacity: 0.6;\n  }\n\n  .standalone-consultation-arrow svg {\n    width: 16px;\n    height: 16px;\n    stroke: #666;\n  }\n\n  /* Phone Hours Modal Styles */\n  .standalone-phone-hours-modal {\n    background: white;\n    border-radius: 20px;\n    max-width: 400px;\n    width: 90%;\n    position: relative;\n    animation: slideUp 0.3s ease;\n    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);\n    padding: 15px 30px 30px;\n    text-align: center;\n  }\n\n  .standalone-phone-icon-circle {\n    width: 60px;\n    height: 60px;\n    background: #007AFF;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin: 0 auto 5px;\n  }\n\n  .standalone-phone-icon-circle svg {\n    width: 25px;\n    height: 25px;\n    stroke: white;\n    fill: none;\n  }\n\n  .standalone-phone-modal-title {\n    font-size: 24px;\n    font-weight: 600;\n    color: #000;\n    margin: 0 0 5px 0;\n  }\n\n  .standalone-store-status {\n    background: #D1F2E0;\n    color: #0F9D58;\n    padding: 5px 20px;\n    border-radius: 25px;\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    margin-bottom: 10px;\n    font-weight: 500;\n    font-size: 14px;\n  }\n\n  .standalone-store-status.closed {\n    background: #FFE4E1;\n    color: #FF4444;\n  }\n\n  .standalone-status-icon {\n    font-size: 16px;\n  }\n\n  .standalone-closed-message {\n    background: #FFF3CD;\n    border-left: 4px solid #FFC107;\n    padding: 12px 16px;\n    margin-bottom: 20px;\n    border-radius: 8px;\n    text-align: left;\n  }\n\n  .standalone-closed-message p {\n    color: #856404;\n    font-size: 12px;\n    line-height: 1.5;\n    margin: 0;\n  }\n\n  .standalone-opening-hours {\n    text-align: left;\n    margin-bottom: 25px;\n  }\n\n  .standalone-hours-heading {\n    font-size: 14px;\n    font-weight: 600;\n    color: #666;\n    margin: 0 0 15px 0;\n    text-align: center;\n  }\n\n  .standalone-hours-list {\n    background: #f8f8f8;\n    border-radius: 12px;\n    padding: 15px;\n  }\n\n  .standalone-hours-row {\n    display: flex;\n    justify-content: space-between;\n    padding: 8px 0;\n    border-bottom: 1px solid #e0e0e0;\n    font-size: 11px;\n  }\n\n  .standalone-hours-row:last-child {\n    border-bottom: none;\n  }\n\n  .standalone-hours-row .day {\n    font-weight: 500;\n    color: #333;\n  }\n\n  .standalone-hours-row .time {\n    color: #666;\n  }\n\n  .standalone-hours-row.current-day {\n    background: #fff;\n    margin: -5px -10px;\n    padding: 8px 10px;\n    border-radius: 8px;\n    font-weight: 600;\n  }\n\n  .standalone-hours-row.current-day .day {\n    color: #007AFF;\n  }\n\n  .standalone-hours-row.current-day .time {\n    color: #007AFF;\n  }\n\n  .standalone-call-now-button {\n    background: #007AFF;\n    color: white;\n    border: none;\n    padding: 5px 40px;\n    border-radius: 25px;\n    font-size: 13px;\n    font-weight: 600;\n    cursor: pointer;\n    width: 100%;\n    text-align: center;\n    text-decoration: none;\n    display: block;\n    transition: all 0.3s ease;\n  }\n\n  .standalone-call-now-button:hover {\n    background: #0056CC;\n    transform: translateY(-2px);\n    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);\n  }\n\n  .standalone-call-now-button.disabled {\n    background: #cccccc !important;\n    cursor: not-allowed;\n    pointer-events: none;\n  }\n\n  .standalone-call-now-button.disabled:hover {\n    transform: none;\n    box-shadow: none;\n  }\n\n  @media (max-width: 640px) {\n    .standalone-consultation-modal {\n      width: 95%;\n      margin: 10px;\n      border-radius: 12px;\n    }\n\n    .standalone-modal-header {\n      padding: 20px 20px 15px;\n    }\n\n    .standalone-modal-title {\n      font-size: 18px;\n    }\n\n    .standalone-modal-subtitle {\n      font-size: 13px;\n    }\n\n    .standalone-modal-content {\n      padding: 5px 15px 20px;\n    }\n\n    .standalone-consultation-option {\n      padding: 14px;\n    }\n\n    .standalone-consultation-icon {\n      width: 40px;\n      height: 40px;\n      margin-right: 12px;\n      border-radius: 8px;\n    }\n\n    .standalone-consultation-icon svg {\n      width: 20px;\n      height: 20px;\n    }\n\n    .standalone-consultation-method {\n      font-size: 14px;\n    }\n\n    .standalone-consultation-info {\n      font-size: 12px;\n    }\n\n    .standalone-modal-close {\n      top: 12px;\n      right: 12px;\n      width: 26px;\n      height: 26px;\n    }\n\n    .standalone-modal-close svg {\n      width: 18px;\n      height: 18px;\n    }\n  }\n</style>\n\n<!-- ============= CUSTOMIZABLE SETTINGS - EDIT THESE ============= -->\n{% assign consultation_heading = \"Speak to the team \" %}\n{% assign consultation_badge = \"\" %}\n{% assign consultation_description = \"Can't find the answer to your question in the FAQ'S at the bottom of the page? Contact us by clicking here.\" %}\n{% assign modal_title = \"How would you like to contact us?\" %}\n{% assign modal_subtitle = \"Choose your preferred method to get in touch with us\" %}\n\n{% comment %} Contact Options {% endcomment %}\n{% assign contact_page_url = \"/pages/contact\" %}\n{% assign contact_option_title = \"Contact Form\" %}\n{% assign contact_option_description = \"Fill out our online form\" %}\n\n{% assign phone_number = \"01902256667\" %}\n{% assign phone_option_title = \"Call Us\" %}\n\n{% assign whatsapp_number = \"447798983387\" %}\n{% assign whatsapp_display_number = \"+44 7798 983387\" %}\n{% assign whatsapp_option_title = \"WhatsApp\" %}\n\n{% comment %} Store Hours {% endcomment %}\n{% assign monday_hours = \"Closed\" %}\n{% assign tuesday_hours = \"10:00AM-6:00PM\" %}\n{% assign wednesday_hours = \"10:00AM-6:00PM\" %}\n{% assign thursday_hours = \"Closed\" %}\n{% assign friday_hours = \"10:00AM-6:00PM\" %}\n{% assign saturday_hours = \"10:00AM-4:00PM\" %}\n{% assign sunday_hours = \"Closed\" %}\n{% assign closed_message = \"You can send us a WhatsApp, send us an email or call back during opening hours\" %}\n<!-- ============================================================== -->\n\n<div class=\"standalone-consultation-wrapper\">\n  <!-- Consultation Card Button -->\n  <div class=\"standalone-cta-card\" onclick=\"openStandaloneConsultationModal()\">\n    <div class=\"standalone-cta-card-header\">\n      <h3>{{ consultation_heading }}</h3>\n      {% if consultation_badge != blank %}\n        <span class=\"standalone-cta-badge\">{{ consultation_badge }}</span>\n      {% endif %}\n    </div>\n    <p>{{ consultation_description }}</p>\n  </div>\n\n  <!-- Consultation Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-consultation-modal\">\n    <div class=\"standalone-consultation-modal\">\n      <div class=\"standalone-modal-header\">\n        <button class=\"standalone-modal-close\" onclick=\"closeStandaloneConsultationModal()\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n          </svg>\n        </button>\n        <h3 class=\"standalone-modal-title\">{{ modal_title }}</h3>\n        <p class=\"standalone-modal-subtitle\">{{ modal_subtitle }}</p>\n      </div>\n      <div class=\"standalone-modal-content\">\n        <div class=\"standalone-consultation-options\">\n          \n          <!-- Contact Page Option -->\n          {% if contact_page_url != blank %}\n            <a href=\"{{ contact_page_url }}\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ contact_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ contact_option_description }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n\n          <!-- Phone Option -->\n          {% if phone_number != blank %}\n            <div class=\"standalone-consultation-option\" onclick=\"openStandalonePhoneHoursModal(); event.preventDefault();\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ phone_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ phone_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </div>\n          {% endif %}\n\n          <!-- WhatsApp Option -->\n          {% if whatsapp_number != blank %}\n            <a href=\"https://wa.me/{{ whatsapp_number | replace: ' ', '' | replace: '-', '' | replace: '+', '' }}\" target=\"_blank\" class=\"standalone-consultation-option\">\n              <div class=\"standalone-consultation-icon\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                  <path d=\"M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z\"/>\n                </svg>\n              </div>\n              <div class=\"standalone-consultation-details\">\n                <div class=\"standalone-consultation-method\">{{ whatsapp_option_title }}</div>\n                <div class=\"standalone-consultation-info\">{{ whatsapp_display_number }}</div>\n              </div>\n              <div class=\"standalone-consultation-arrow\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </a>\n          {% endif %}\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Phone Hours Modal -->\n  <div class=\"standalone-consultation-modal-overlay\" id=\"standalone-phone-hours-modal\">\n    <div class=\"standalone-phone-hours-modal\">\n      <button class=\"standalone-modal-close\" onclick=\"closeStandalonePhoneHoursModal()\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n        </svg>\n      </button>\n      \n      <div class=\"standalone-phone-icon-circle\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z\" />\n        </svg>\n      </div>\n\n      <h3 class=\"standalone-phone-modal-title\">Call Us</h3>\n\n      <div class=\"standalone-store-status\" id=\"standalone-store-status\">\n        <span class=\"standalone-status-icon\">✓</span>\n        <span class=\"status-text\">We are currently open</span>\n      </div>\n\n      <div class=\"standalone-closed-message\" id=\"standalone-closed-message\" style=\"display: none;\">\n        <p>{{ closed_message }}</p>\n      </div>\n\n      <div class=\"standalone-opening-hours\">\n        <h4 class=\"standalone-hours-heading\">Opening Hours</h4>\n        <div class=\"standalone-hours-list\">\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Monday</span>\n            <span class=\"time\">{{ monday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Tuesday</span>\n            <span class=\"time\">{{ tuesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Wednesday</span>\n            <span class=\"time\">{{ wednesday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Thursday</span>\n            <span class=\"time\">{{ thursday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Friday</span>\n            <span class=\"time\">{{ friday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Saturday</span>\n            <span class=\"time\">{{ saturday_hours }}</span>\n          </div>\n          <div class=\"standalone-hours-row\">\n            <span class=\"day\">Sunday</span>\n            <span class=\"time\">{{ sunday_hours }}</span>\n          </div>\n        </div>\n      </div>\n\n      <a href=\"tel:{{ phone_number | replace: ' ', '' | replace: '-', '' }}\" class=\"standalone-call-now-button\" id=\"standalone-call-button\">\n        Call Now\n      </a>\n    </div>\n  </div>\n</div>\n\n<script>\n  function openStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n    }\n  }\n\n  function closeStandaloneConsultationModal() {\n    const modal = document.getElementById('standalone-consultation-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function openStandalonePhoneHoursModal() {\n    closeStandaloneConsultationModal();\n    \n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.add('active');\n      document.body.style.overflow = 'hidden';\n      checkStandaloneStoreStatus();\n      highlightStandaloneCurrentDay();\n    }\n  }\n\n  function closeStandalonePhoneHoursModal() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (modal) {\n      modal.classList.remove('active');\n      document.body.style.overflow = '';\n    }\n  }\n\n  function checkStandaloneStoreStatus() {\n    const statusElement = document.getElementById('standalone-store-status');\n    if (!statusElement) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    const currentHour = now.getHours();\n    const currentMinute = now.getMinutes();\n    const currentTime = currentHour * 60 + currentMinute;\n\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    const hoursText = todayRow.querySelector('.time').textContent.trim();\n\n    let isOpen = false;\n    if (hoursText.toLowerCase() !== 'closed') {\n      const matches = hoursText.match(/(\\d{1,2}):(\\d{2})(AM|PM)-(\\d{1,2}):(\\d{2})(AM|PM)/i);\n      if (matches) {\n        let openHour = parseInt(matches[1]);\n        const openMinute = parseInt(matches[2]);\n        const openPeriod = matches[3].toUpperCase();\n        let closeHour = parseInt(matches[4]);\n        const closeMinute = parseInt(matches[5]);\n        const closePeriod = matches[6].toUpperCase();\n\n        if (openPeriod === 'PM' && openHour !== 12) openHour += 12;\n        if (openPeriod === 'AM' && openHour === 12) openHour = 0;\n        if (closePeriod === 'PM' && closeHour !== 12) closeHour += 12;\n        if (closePeriod === 'AM' && closeHour === 12) closeHour = 0;\n\n        const openTime = openHour * 60 + openMinute;\n        const closeTime = closeHour * 60 + closeMinute;\n\n        isOpen = currentTime >= openTime && currentTime < closeTime;\n      }\n    }\n\n    const statusIcon = statusElement.querySelector('.standalone-status-icon');\n    const statusText = statusElement.querySelector('.status-text');\n    const closedMessage = document.getElementById('standalone-closed-message');\n    const callButton = document.getElementById('standalone-call-button');\n    \n    if (isOpen) {\n      statusElement.classList.remove('closed');\n      statusIcon.textContent = '✓';\n      statusText.textContent = 'We are currently open';\n      if (closedMessage) closedMessage.style.display = 'none';\n      if (callButton) {\n        callButton.textContent = 'Call Now';\n        callButton.classList.remove('disabled');\n        callButton.style.pointerEvents = 'auto';\n        callButton.style.background = '#007AFF';\n      }\n    } else {\n      statusElement.classList.add('closed');\n      statusIcon.textContent = '✗';\n      statusText.textContent = 'We are currently closed';\n      if (closedMessage) closedMessage.style.display = 'block';\n      if (callButton) {\n        callButton.textContent = 'Currently Closed';\n        callButton.classList.add('disabled');\n        callButton.style.pointerEvents = 'none';\n        callButton.style.background = '#cccccc';\n      }\n    }\n  }\n\n  function highlightStandaloneCurrentDay() {\n    const modal = document.getElementById('standalone-phone-hours-modal');\n    if (!modal) return;\n\n    const now = new Date();\n    const currentDay = now.getDay();\n    \n    const hoursRows = modal.querySelectorAll('.standalone-hours-row');\n    hoursRows.forEach(row => row.classList.remove('current-day'));\n    \n    const todayRow = hoursRows[currentDay === 0 ? 6 : currentDay - 1];\n    if (todayRow) {\n      todayRow.classList.add('current-day');\n    }\n  }\n\n  // Close modals when clicking on overlay\n  document.addEventListener('DOMContentLoaded', function() {\n    document.querySelectorAll('.standalone-consultation-modal-overlay').forEach(overlay => {\n      overlay.addEventListener('click', function(e) {\n        if (e.target === this) {\n          this.classList.remove('active');\n          document.body.style.overflow = '';\n        }\n      });\n    });\n\n    document.addEventListener('keydown', function(e) {\n      if (e.key === 'Escape') {\n        closeStandaloneConsultationModal();\n        closeStandalonePhoneHoursModal();\n      }\n    });\n  });\n</script>"
-          }
-        },
-        "complementary_products": {
-          "type": "complementary_products",
-          "disabled": true,
-          "settings": {
-            "title": "Pairs well with",
-            "products_count": 2,
-            "show_below_gallery": true,
-            "stack_products": false,
-            "show_quick_buy": true
+            "label": "From",
+            "value": "£50"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "description",
-        "payment_terms",
-        "separator",
-        "price",
-        "appointment_picker_ETbJxh",
-        "variant_picker",
-        "buy_buttons",
-        "button_PUkJNb",
-        "quantity_selector",
-        "liquid_BmgJWJ",
-        "complementary_products"
+        "qf_1",
+        "qf_2",
+        "qf_3",
+        "qf_4"
       ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "scheme-1",
-        "container_size": "xl",
-        "product_info_size": 50,
-        "show_sticky_add_to_cart": false,
-        "center_basic_info": false,
-        "desktop_media_layout": "grid_2x_highlighted",
-        "desktop_media_grid_gap": 30,
-        "mobile_controls": "dots",
-        "enable_media_autoplay": false,
-        "enable_video_looping": true,
-        "enable_image_zoom": true,
-        "max_image_zoom_level": 3
-      }
+      "settings": {}
     },
-    "treatment_tabs_section_TRdHJF": {
-      "type": "treatment-tabs-section",
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "treatment_areas": {
+      "type": "lsc-what-it-treats",
       "blocks": {
-        "tab_EX9Qjn": {
-          "type": "tab",
+        "area_1": {
+          "type": "condition",
           "settings": {
-            "tab_identifier": "powersculpt",
-            "tab_name": "Power Sculpt",
-            "heading": "Power Sculpt",
-            "top_description": "<p>Power Sculpt uses advanced electromagnetic technology to contract muscles at a high intensity, helping tone, lift, and strengthen targeted areas. It enhances muscle definition and supports fat reduction for a more sculpted, refined physique.</p>",
-            "image_1": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro_b529f133-2f1d-4ce1-b349-003eb11b9bb7.jpg",
-            "image_1_aspect_ratio": "original",
-            "consultation_heading": "Speak to a specialist",
-            "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "modal_title": "How would you like to contact us?",
-            "modal_subtitle": "Choose your preferred method to get in touch with us",
-            "contact_page_url": "shopify://pages/contact",
-            "contact_option_title": "Contact Form",
-            "contact_option_description": "Fill out our online form",
-            "phone_number": "01902256667",
-            "phone_option_title": "Call Us",
-            "monday_hours": "Closed",
-            "tuesday_hours": "10:00AM-6:00PM",
-            "wednesday_hours": "10:00AM-6:00PM",
-            "thursday_hours": "Closed",
-            "friday_hours": "10:00AM-6:00PM",
-            "saturday_hours": "10:00AM-4:00PM",
-            "sunday_hours": "Closed",
-            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
-            "whatsapp_number": "447798983387",
-            "whatsapp_display_number": "+44 7798 983387",
-            "whatsapp_option_title": "WhatsApp",
-            "package_heading": "View prices and book now",
-            "package_description": "Pay per session or buy a bundle and save."
+            "icon": "🎯",
+            "title": "Abdomen",
+            "description": "Targets stubborn belly fat for a flatter, more toned midsection"
           }
         },
-        "package_FEwd4g": {
-          "type": "package",
+        "area_2": {
+          "type": "condition",
           "settings": {
-            "parent_tab": "powersculpt",
-            "package_name": "Power Sculpt",
-            "price": "from £40.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£50",
-            "session_1_total": "total £50.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983349858684&quantity=1",
-            "show_session_3": false,
-            "session_3_label": "3 session",
-            "session_3_price": "£10.00",
-            "session_3_total": "total £30.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£41.50",
-            "session_6_total": "total £250.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983349891452&quantity=1",
-            "show_session_10": true,
-            "session_10_label": "10 session",
-            "session_10_price": "£40.00",
-            "session_10_total": "total £400.00",
-            "session_10_per_session": "per session",
-            "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983349924220&quantity=1"
+            "icon": "〰️",
+            "title": "Flanks (Love Handles)",
+            "description": "Reduces fat deposits on the sides for a smoother silhouette"
+          }
+        },
+        "area_3": {
+          "type": "condition",
+          "settings": {
+            "icon": "🦵",
+            "title": "Thighs (Inner & Outer)",
+            "description": "Contours and slims the upper leg area"
+          }
+        },
+        "area_4": {
+          "type": "condition",
+          "settings": {
+            "icon": "💪",
+            "title": "Upper Arms",
+            "description": "Firms and reduces excess fat on the backs of the arms"
+          }
+        },
+        "area_5": {
+          "type": "condition",
+          "settings": {
+            "icon": "✨",
+            "title": "Back (Bra Line)",
+            "description": "Smooths stubborn fat deposits around the bra line area"
+          }
+        },
+        "area_6": {
+          "type": "condition",
+          "settings": {
+            "icon": "🍑",
+            "title": "Buttocks",
+            "description": "Lifts and contours for a firmer appearance"
           }
         }
       },
       "block_order": [
-        "tab_EX9Qjn",
-        "package_FEwd4g"
+        "area_1",
+        "area_2",
+        "area_3",
+        "area_4",
+        "area_5",
+        "area_6"
       ],
-      "disabled": true,
-      "name": "Treatment Tabs",
       "settings": {
-        "section_width": 1400,
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "section_background": "#ffffff",
-        "enquiry_modal_title": "Get in touch",
-        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
-        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "tab_alignment": "center",
-        "tab_gap": 12,
-        "tab_font_size": 15,
-        "tab_font_weight": "500",
-        "tab_border_radius": 50,
-        "tab_border_width": 2,
-        "tab_background": "#ffffff",
-        "tab_text_color": "#000000",
-        "tab_border_color": "#333333",
-        "tab_hover_background": "#f5f5f5",
-        "tab_hover_text_color": "#000000",
-        "tab_active_background": "#e6b325",
-        "tab_active_text_color": "#ffffff",
-        "tab_active_border_color": "#e6b325",
-        "heading_font_size": 42,
-        "heading_font_weight": "400",
-        "heading_color": "#000000",
-        "text_font_size": 15,
-        "text_color": "#333333",
-        "cta_card_gap": 16,
-        "cta_border_radius": 16,
-        "cta_border_width": 2,
-        "cta_background": "#ffffff",
-        "cta_border_color": "#333333",
-        "cta_hover_background": "#f9f9f9",
-        "cta_heading_color": "#000000",
-        "cta_text_color": "#666666",
-        "badge_background": "#f0f0f0",
-        "badge_text_color": "#000000",
-        "price_text_color": "#666666",
-        "package_border_radius": 12,
-        "package_border_width": 2,
-        "package_background": "#ffffff",
-        "package_border_color": "#333333",
-        "package_heading_color": "#000000",
-        "package_price_color": "#666666",
-        "package_button_radius": 8,
-        "package_button_background": "#e6b325",
-        "package_button_text_color": "#ffffff",
-        "package_button_hover_background": "#e6b325",
-        "image_border_radius": 8,
-        "show_collapsible_1": true,
-        "collapsible_1_title": "7-Day Appointment Guarantee",
-        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers will be seen within 7 days of their initial booking. If we’re unable to do so, you’ll receive either a full refund or a £50 voucher to spend at Laser Skin Clinics.</p>",
-        "show_collapsible_2": true,
-        "collapsible_2_title": "Course Price Match Guarantee",
-        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_2_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> — and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
-        "show_collapsible_3": true,
-        "collapsible_3_title": "Booking Process",
-        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
-        "collapsible_3_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your appointment.</p>",
-        "show_collapsible_4": true,
-        "collapsible_4_title": "Cancellation Policy",
-        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_4_content": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>",
-        "show_collapsible_5": true,
-        "collapsible_5_title": "In-Clinic Payment Option",
-        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
-        "collapsible_5_content": "<p>If you prefer to pay for your treatment in person, simply select <strong>Speak to a Specialist</strong> and reach out via your chosen contact method. A deposit will be required to secure your appointment.</p>",
-        "show_collapsible_6": true,
-        "collapsible_6_title": "Contact and address",
-        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
-        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
-        "show_faq_link": true,
-        "faq_pre_text": "Have more questions?",
-        "faq_link_text": "View FAQs",
-        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
-        "faq_link_url": ""
+        "eyebrow": "TREATMENT AREAS",
+        "heading": "Areas We Treat"
       }
     },
-    "ss_image_with_text_12_PPNnyT": {
-      "type": "ss-image-with-text-12",
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "suitability": {
+      "type": "lsc-suitability",
       "blocks": {
-        "slide_mTH4wq": {
-          "type": "slide",
+        "ideal_1": {
+          "type": "ideal",
           "settings": {
-            "heading": "<p><strong>{{ product.title }}</strong></p>",
-            "text": "",
-            "button": "",
-            "button_url": "",
-            "button2": "",
-            "button2_url": "",
-            "video_autoplay": true,
-            "video_loop": true,
-            "video_muted": true,
-            "video_controls": true,
-            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro_b529f133-2f1d-4ce1-b349-003eb11b9bb7.jpg"
+            "text": "Clients close to their target weight with stubborn areas that won't shift through diet and exercise"
+          }
+        },
+        "ideal_2": {
+          "type": "ideal",
+          "settings": {
+            "text": "Those wanting body contouring without surgery or recovery time"
+          }
+        },
+        "ideal_3": {
+          "type": "ideal",
+          "settings": {
+            "text": "Anyone looking for gradual, natural-looking fat reduction"
+          }
+        },
+        "ideal_4": {
+          "type": "ideal",
+          "settings": {
+            "text": "Clients committed to a course of sessions for cumulative results"
+          }
+        },
+        "ideal_5": {
+          "type": "ideal",
+          "settings": {
+            "text": "Those maintaining a healthy lifestyle who want to refine their shape"
           }
         }
       },
       "block_order": [
-        "slide_mTH4wq"
+        "ideal_1",
+        "ideal_2",
+        "ideal_3",
+        "ideal_4",
+        "ideal_5"
       ],
-      "disabled": true,
-      "custom_css": [
-        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
-        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
-      ],
-      "name": "SS - Image With Text #12",
-      "settings": {
-        "slide_gap": 70,
-        "slide_gap_mobile": 24,
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "center",
-        "content_mt": 0,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 28,
-        "heading_height": 110,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 170,
-        "text_mt": 32,
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_mt": 32,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 38,
-        "button_padding_horizontal_mobile": 38,
-        "button_radius": 100,
-        "button_border_thickness": 0,
-        "button_style": "non_outline",
-        "button2_custom": false,
-        "button2_font": "josefin_sans_n4",
-        "button2_size": 16,
-        "button2_size_mobile": 16,
-        "button2_height": 100,
-        "button2_mt": 16,
-        "button2_mt_mobile": 16,
-        "button2_padding_vertical": 16,
-        "button2_padding_vertical_mobile": 16,
-        "button2_padding_horizontal": 38,
-        "button2_padding_horizontal_mobile": 38,
-        "button2_radius": 100,
-        "button2_border_thickness": 0,
-        "button2_style": "outline",
-        "images_position": "left",
-        "images_position_mobile": "bottom",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "image_shape": "none",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 13,
-        "number_size_mobile": 13,
-        "pagination_text": "",
-        "pagination_text_custom": false,
-        "pagination_text_font": "josefin_sans_n4",
-        "pagination_text_size": 16,
-        "pagination_text_size_mobile": 16,
-        "pagination_text_height": 130,
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#b59de3",
-        "button_bg_hover_color": "#b198de",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "button2_color": "#000000",
-        "button2_hover_color": "#ffffff",
-        "button2_bg_color": "rgba(0,0,0,0)",
-        "button2_bg_hover_color": "#000000",
-        "button2_border_color": "#000000",
-        "button2_border_hover_color": "#000000",
-        "image_border_color": "#000000",
-        "dots_bg_color": "",
-        "dots_bg_hover_color": "#000000",
-        "dots_border_color": "#000000",
-        "dots_border_hover_color": "#000000",
-        "number_color": "#000000",
-        "number_hover_color": "#ffffff",
-        "pagination_text_color": "#000000",
-        "background_color": "#645e5c",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 6,
-        "padding_horizontal_mobile": 1,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "ss_image_with_text_12_gUF6fh": {
-      "type": "ss-image-with-text-12",
+    "timeline": {
+      "type": "lsc-results-timeline",
+      "settings": {}
+    },
+    "aftercare": {
+      "type": "lsc-aftercare",
+      "settings": {}
+    },
+    "why_choose": {
+      "type": "lsc-values",
       "blocks": {
-        "slide_4jhyPz": {
-          "type": "slide",
+        "val_1": {
+          "type": "value",
           "settings": {
-            "heading": "<h2><strong>Power Sculpt – Build Muscle. Burn Fat. Transform Your Body.</strong></h2><p></p>",
-            "text": "<h3><strong>The revolutionary body-contouring treatment that tones, lifts and defines.</strong></h3><p>Introducing <strong>Power Sculpt</strong>, the non-invasive body-sculpting treatment that uses advanced <strong>High-Intensity Focused Electromagnetic</strong> technology to simultaneously <strong>build muscle and burn fat</strong> - all while you relax.</p><p>Each session delivers the equivalent of <strong>20,000 crunches, squats or glute bridges</strong>, triggering deep supramaximal muscle contractions that are impossible to achieve through regular exercise.</p><p>The result? Stronger, more defined muscles and a noticeably tighter, more sculpted physique — without downtime, needles, or recovery.</p><p></p>",
-            "button": "Book Online",
-            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93159&services=3552094&location=4546",
-            "button2": "Get more information",
-            "button2_url": "",
-            "video_autoplay": true,
-            "video_loop": true,
-            "video_muted": true,
-            "video_controls": true,
-            "image": "shopify://shop_images/MAR-PWS-INTRO-INSTAST-REV01_pws-stories-intro-3.jpg"
+            "title": "Practitioner-Led",
+            "description": "Every treatment begins with a thorough assessment of your skin, your concerns, and your goals before we recommend anything."
+          }
+        },
+        "val_2": {
+          "type": "value",
+          "settings": {
+            "title": "Medical-Grade Technology",
+            "description": "We invest in the same calibre of equipment found in leading UK clinics — not salon-grade alternatives."
+          }
+        },
+        "val_3": {
+          "type": "value",
+          "settings": {
+            "title": "Personalised Plans",
+            "description": "Your treatment plan is built around you — your skin type, your lifestyle, and your desired outcome."
+          }
+        },
+        "val_4": {
+          "type": "value",
+          "settings": {
+            "title": "Established 10+ Years",
+            "description": "Trusted by thousands of clients across Wolverhampton and the West Midlands since 2013."
           }
         }
       },
       "block_order": [
-        "slide_4jhyPz"
+        "val_1",
+        "val_2",
+        "val_3",
+        "val_4"
       ],
-      "disabled": true,
-      "custom_css": [
-        "p {padding-top: 10px; padding-bottom: 5px;}",
-        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
-        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
-      ],
-      "name": "SS - Image With Text #12",
-      "settings": {
-        "slide_gap": 70,
-        "slide_gap_mobile": 24,
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "start",
-        "content_mt": 0,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 28,
-        "heading_height": 110,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 170,
-        "text_mt": 32,
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_mt": 32,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 38,
-        "button_padding_horizontal_mobile": 38,
-        "button_radius": 12,
-        "button_border_thickness": 0,
-        "button_style": "non_outline",
-        "button2_custom": false,
-        "button2_font": "josefin_sans_n4",
-        "button2_size": 16,
-        "button2_size_mobile": 16,
-        "button2_height": 100,
-        "button2_mt": 16,
-        "button2_mt_mobile": 16,
-        "button2_padding_vertical": 16,
-        "button2_padding_vertical_mobile": 16,
-        "button2_padding_horizontal": 38,
-        "button2_padding_horizontal_mobile": 38,
-        "button2_radius": 12,
-        "button2_border_thickness": 0,
-        "button2_style": "outline",
-        "images_position": "right",
-        "images_position_mobile": "bottom",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "image_shape": "none",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 13,
-        "number_size_mobile": 13,
-        "pagination_text": "",
-        "pagination_text_custom": false,
-        "pagination_text_font": "josefin_sans_n4",
-        "pagination_text_size": 16,
-        "pagination_text_size_mobile": 16,
-        "pagination_text_height": 130,
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#e6b325",
-        "button_bg_hover_color": "#deac21",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "button2_color": "#ffffff",
-        "button2_hover_color": "#ffffff",
-        "button2_bg_color": "#000000",
-        "button2_bg_hover_color": "#000000",
-        "button2_border_color": "#000000",
-        "button2_border_hover_color": "#000000",
-        "image_border_color": "#000000",
-        "dots_bg_color": "",
-        "dots_bg_hover_color": "#000000",
-        "dots_border_color": "#000000",
-        "dots_border_hover_color": "#000000",
-        "number_color": "#000000",
-        "number_hover_color": "#ffffff",
-        "pagination_text_color": "#000000",
-        "background_color": "#645e5c",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 6,
-        "padding_horizontal_mobile": 1,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "ss_image_with_text_9_GLgAya": {
-      "type": "ss-image-with-text-9",
+    "pricing": {
+      "type": "lsc-pricing-cards",
       "blocks": {
-        "text_zqNDU6": {
-          "type": "text",
+        "price_1": {
+          "type": "pricing_tier",
           "settings": {
-            "text": "<h2>Benefits of Power Sculpt</h2>",
-            "text_custom": false,
-            "text_font": "josefin_sans_n4",
-            "text_size": 34,
-            "text_size_mobile": 26,
-            "text_height": 150,
-            "text_mt": 0,
-            "text_align": "left",
-            "text_align_mobile": "left",
-            "text_color": "#e6b325"
+            "tier_name": "Single Area — Single",
+            "price": "£50",
+            "description": "One session targeting a single body area"
           }
         },
-        "icon_text_UxfF9a": {
-          "type": "icon_text",
+        "price_2": {
+          "type": "pricing_tier",
           "settings": {
-            "icon": "tick",
-            "text": "Builds lean muscle and burns fat simultaneously"
+            "tier_name": "Single Area — Course of 6",
+            "price": "£240",
+            "description": "Six sessions on one area for visible contouring",
+            "save_text": "Save £60"
           }
         },
-        "icon_text_LJCxHi": {
-          "type": "icon_text",
+        "price_3": {
+          "type": "pricing_tier",
           "settings": {
-            "icon": "tick",
-            "text": "Non-invasive and pain-free, no downtime and no needles"
+            "tier_name": "Single Area — Course of 10",
+            "price": "£350",
+            "description": "Ten sessions on one area — best value for single area",
+            "save_text": "Save £150",
+            "badge_text": "BEST VALUE"
           }
         },
-        "icon_text_dEUWkb": {
-          "type": "icon_text",
+        "price_4": {
+          "type": "pricing_tier",
           "settings": {
-            "icon": "tick",
-            "text": "Clinically proven results with measurable muscle gain"
+            "tier_name": "Two Areas — Single",
+            "price": "£80",
+            "description": "One session targeting two body areas"
           }
         },
-        "icon_text_WwkP3M": {
-          "type": "icon_text",
+        "price_5": {
+          "type": "pricing_tier",
           "settings": {
-            "icon": "tick",
-            "text": "Perfect complement to training or fat-reduction programs"
+            "tier_name": "Two Areas — Course of 6",
+            "price": "£380",
+            "description": "Six sessions on two areas for comprehensive results",
+            "popular": true,
+            "save_text": "Save £100"
           }
         },
-        "button_YRwEBb": {
-          "type": "button",
-          "disabled": true,
+        "price_6": {
+          "type": "pricing_tier",
           "settings": {
-            "button": "Book Online",
-            "button_url": "https://partner.pabau.com/",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 200,
-            "button_width_mobile": 700,
-            "button_mt": 52,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 4,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#ffffff",
-            "button_hover_color": "#ffffff",
-            "button_bg_color": "#e6b325",
-            "button_bg_hover_color": "#000000",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
-          }
-        },
-        "button_HfVK4Q": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button": "Get more information",
-            "button_url": "shopify://pages/contact",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 270,
-            "button_width_mobile": 700,
-            "button_mt": 14,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 4,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#ffffff",
-            "button_hover_color": "#ffffff",
-            "button_bg_color": "#000000",
-            "button_bg_hover_color": "#000000",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
+            "tier_name": "Two Areas — Course of 10",
+            "price": "£560",
+            "description": "Ten sessions on two areas — maximum transformation",
+            "save_text": "Save £240",
+            "badge_text": "BEST VALUE"
           }
         }
       },
       "block_order": [
-        "text_zqNDU6",
-        "icon_text_UxfF9a",
-        "icon_text_LJCxHi",
-        "icon_text_dEUWkb",
-        "icon_text_WwkP3M",
-        "button_YRwEBb",
-        "button_HfVK4Q"
+        "price_1",
+        "price_2",
+        "price_3",
+        "price_4",
+        "price_5",
+        "price_6"
       ],
-      "disabled": true,
-      "name": "SS - Image With Text #9",
-      "settings": {
-        "body_gap": 50,
-        "body_gap_mobile": 0,
-        "image": "shopify://shop_images/MAR-PWS-WHY-INSTAST-REV01_pws-stories-why-choose.jpg",
-        "image_position": "left",
-        "image_position_mobile": "top",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "content_maxwidth": 700,
-        "content_padding_vertical": 40,
-        "content_padding_vertical_mobile": 20,
-        "content_padding_horizontal": 24,
-        "content_padding_horizontal_mobile": 16,
-        "row_gap": 16,
-        "row_mt": 20,
-        "row_align": "left",
-        "row_align_mobile": "left",
-        "icon_size": 30,
-        "icon_size_mobile": 26,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 18,
-        "text_size_mobile": 16,
-        "text_height": 180,
-        "icon_color": "#000000",
-        "text_color": "#2b1a1a",
-        "background_color": "#ffffff",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "ss_clothing_image_grid_bNwwDh": {
-      "type": "ss-clothing-image-grid",
+    "reviews": {
+      "type": "lsc-google-reviews",
       "blocks": {
-        "link_JegaW4": {
-          "type": "link",
+        "rev_1": {
+          "type": "review",
           "settings": {
-            "image": "shopify://shop_images/MAR-PWS-SHANRES-INSTAST-REV01_pws-stories-shannon-results.jpg",
-            "text": "",
-            "url": "",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "link_JegaW4"
-      ],
-      "disabled": true,
-      "name": "SS - Threads Image Grid",
-      "settings": {
-        "font_size": 24,
-        "font_color": "#000000",
-        "background-color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_vertical": 0,
-        "section-width": 200
-      }
-    },
-    "rich_text_nziPUE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U7EUj7": {
-          "type": "heading",
-          "settings": {
-            "text": "The Process of Power Sculpt",
-            "heading_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U7EUj7"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": true
-      }
-    },
-    "ss_steps_11_7cMyRT": {
-      "type": "ss-steps-11",
-      "blocks": {
-        "step_jmRN9F": {
-          "type": "step",
-          "settings": {
-            "step": "Technology",
-            "title": "How It Works",
-            "text": "<p>Power Sculpt uses focused electromagnetic energy to stimulate thousands of powerful muscle contractions in your chosen treatment area.</p><p>These contractions force the muscle fibres to adapt, strengthen, and grow while also enhancing fat metabolism in the surrounding tissue.</p><p>In short: it tones, tightens, and burns simultaneously.</p>"
+            "text": "I had a course of non-surgical body sculpting at Laser Skin Clinics and the results on my abdomen have been really impressive. The team were professional and made the whole process comfortable. I've lost inches and my confidence has genuinely improved.",
+            "author": "Karen S.",
+            "treatment": "Non-Surgical Body Sculpting"
           }
         },
-        "step_jiiz8x": {
-          "type": "step",
+        "rev_2": {
+          "type": "review",
           "settings": {
-            "step": "STEP 2",
-            "title": "Treatment",
-            "text": "<p>During treatment, you’ll feel strong, rhythmic muscle contractions - not pain, as the electromagnetic energy engages the muscles.<br/><br/>There’s no downtime or soreness; you can return to normal activities immediately. Most clients even describe the feeling as an intense workout without breaking a sweat.</p>"
+            "text": "Brilliant results from my body sculpting course. The clinic team were very knowledgeable and set realistic expectations from the start — which made the results even more satisfying when they came. Would absolutely recommend.",
+            "author": "Tracy M.",
+            "treatment": "Non-Surgical Body Sculpting"
           }
         },
-        "step_6jaGgE": {
-          "type": "step",
+        "rev_3": {
+          "type": "review",
           "settings": {
-            "step": "STEP 3",
-            "title": "After",
-            "text": "<p>After your Power Sculpt session, you can return to normal activities immediately - there’s no downtime or recovery required. You may feel a mild muscle ache similar to an intense workout, but this simply means your body is already responding and strengthening.</p>"
+            "text": "Had non-surgical body sculpting on my thighs and flanks and I'm genuinely impressed with the changes. The staff at Laser Skin Clinics are professional and supportive and the treatment itself was very comfortable. Great results.",
+            "author": "Amanda P.",
+            "treatment": "Non-Surgical Body Sculpting"
           }
         }
       },
       "block_order": [
-        "step_jmRN9F",
-        "step_jiiz8x",
-        "step_6jaGgE"
+        "rev_1",
+        "rev_2",
+        "rev_3"
       ],
-      "disabled": true,
-      "name": "SS - Steps #11",
-      "settings": {
-        "layout": "image_content",
-        "layout_mobile": "image_content",
-        "layout_gap": 64,
-        "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/MAR-PWS-TRTAREAS1-INSTAST-REV01_pws-stories-treatment-areas-1.jpg",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "portrait",
-        "steps_custom": false,
-        "steps_font": "josefin_sans_n4",
-        "steps_size": 12,
-        "steps_size_mobile": 12,
-        "steps_height": 100,
-        "steps_padding_horizontal": 8,
-        "steps_padding_horizontal_mobile": 8,
-        "steps_padding_vertical": 4,
-        "steps_padding_vertical_mobile": 4,
-        "steps_radius": 100,
-        "steps_border_thickness": 1,
-        "steps_content_align": "left",
-        "steps_content_align_mobile": "left",
-        "title_custom": false,
-        "title_font": "josefin_sans_n4",
-        "title_size": 24,
-        "title_size_mobile": 20,
-        "title_height": 130,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 14,
-        "text_size_mobile": 12,
-        "text_height": 150,
-        "text_mt": 8,
-        "text_mt_mobile": 8,
-        "steps_color": "#ffffff",
-        "steps_bg_color": "#e6b325",
-        "steps_border_color": "#e6b325",
-        "title_color": "#121212",
-        "text_color": "#121212",
-        "image_border_color": "#121212",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 1400,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "175993612397035c9e": {
-      "type": "apps",
+    "faq": {
+      "type": "lsc-faq",
       "blocks": {
-        "appio_google_reviews_carousel1_qFMFmN": {
-          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+        "faq_1": {
+          "type": "faq",
           "settings": {
-            "title_type": "h2",
-            "show_callout_layout": true,
-            "card_background_color": "#f8f8f8",
-            "card_text_color": "#747171",
-            "star_color": "#fbbc05",
-            "max_line_review_content": 4,
-            "auto_scroll": true,
-            "slide_delay": 3,
-            "show_navigation_bar": true,
-            "show_reviewer_avatar": true,
-            "show_reviewer_name_detail": true,
-            "show_review_date": true,
-            "show_verified_badge": true,
-            "show_review_photos": true,
-            "show_liked_review": true,
-            "show_business_summary": true,
-            "show_business_summary_rating": true,
-            "show_business_summary_total_review": true,
-            "show_business_summary_summary_rating": true,
-            "business_summary_color": "#3a454f",
-            "show_leave_review_button": true,
-            "button_color": "#ffffff",
-            "button_background": "#4285f4"
+            "question": "What is non-surgical body sculpting?",
+            "answer": "<p>Non-surgical body sculpting is a treatment designed to strengthen and tone targeted muscle groups using advanced electromagnetic stimulation technology.</p><p>It is delivered without needles or surgery and is structured as a progressive treatment course.</p>"
           }
-        }
-      },
-      "block_order": [
-        "appio_google_reviews_carousel1_qFMFmN"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
-      }
-    },
-    "ss_simple_faq_jiYFWj": {
-      "type": "ss-simple-faq",
-      "blocks": {
-        "text_Dpx4Qh": {
-          "type": "text",
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "How does non-surgical body sculpting work?",
+            "answer": "<p>The treatment uses controlled electromagnetic energy to trigger repeated, high-intensity muscle contractions in targeted areas.</p><p>These contractions engage muscle fibres beyond voluntary exercise levels, supporting muscle strengthening and improved definition over time.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Does it reduce fat?",
+            "answer": "<p>Non-surgical body sculpting is primarily designed to improve muscle tone and definition.</p><p>Some patients may notice contour improvements in treated areas; however, it is not a weight loss treatment.</p><p>It works best for body shaping rather than overall fat reduction.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Is this a replacement for exercise?",
+            "answer": "<p>No.</p><p>Non-surgical body sculpting supports muscle activation and tone but does not replace regular exercise, nutrition, or a healthy lifestyle.</p><p>It is most effective as part of an overall body maintenance plan.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Does the treatment hurt?",
+            "answer": "<p>Most patients describe the sensation as intense but tolerable muscle contractions.</p><p>You will feel your muscles working strongly. The intensity can be adjusted to suit comfort levels.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>No.</p><p>You can return to normal activities immediately after treatment. Mild muscle soreness similar to a workout may occur.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "How many sessions do I need?",
+            "answer": "<p>A course of 4–6 sessions is typically recommended for visible improvement.</p><p>Treatment plans are structured to allow progressive muscle adaptation over time.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Some patients feel increased muscle activation immediately.</p><p>Visible contour improvement typically develops gradually over several weeks as muscle tone improves.</p>"
+          }
+        },
+        "faq_9": {
+          "type": "faq",
+          "settings": {
+            "question": "Is non-surgical body sculpting suitable for everyone?",
+            "answer": "<p>It may not be suitable if you:</p><p>• Have a pacemaker or implanted electronic device</p><p>• Are pregnant</p><p>• Have certain medical conditions</p><p>• Have metal implants in the treatment area</p><p>A medical assessment will determine suitability.</p>"
+          }
+        },
+        "faq_10": {
+          "type": "faq",
+          "settings": {
+            "question": "Can it help after pregnancy?",
+            "answer": "<p>Non-surgical body sculpting may support abdominal muscle strengthening after pregnancy, particularly for mild muscle laxity.</p><p>However, it is not a medical treatment for diastasis recti and suitability must be assessed individually.</p>"
+          }
+        },
+        "faq_11": {
+          "type": "faq",
+          "settings": {
+            "question": "How long is a session?",
+            "answer": "<p>Sessions typically last around 30 minutes depending on the treatment area.</p>"
+          }
+        },
+        "faq_12": {
+          "type": "faq",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you during your consultation.</p>"
+          }
+        },
+        "faq_13": {
+          "type": "faq",
           "settings": {
             "question": "Who is Power Sculpt suitable for?",
             "answer": "<p>It’s ideal for men and women looking to tone, lift or define specific body areas without surgery.</p><p>Whether you want to enhance your workouts, sculpt your core, or lift and firm the glutes, Power Sculpt can help achieve those goals safely and effectively.</p>"
           }
         },
-        "text_XGMq6c": {
-          "type": "text",
+        "faq_14": {
+          "type": "faq",
           "settings": {
             "question": "What is your cancellation policy?",
             "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
-        "text_CneeFE": {
-          "type": "text",
+        "faq_15": {
+          "type": "faq",
           "settings": {
             "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
             "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
-        "text_JMUbWR": {
-          "type": "text",
+        "faq_16": {
+          "type": "faq",
           "settings": {
             "question": "Does it hurt?",
             "answer": "<p>No, Power Sculpt is completely non-invasive and pain-free.</p><p>You’ll feel strong but comfortable muscle contractions during the treatment, followed by a slight tingling or tightness. There’s no discomfort and no recovery period needed.</p>"
           }
         },
-        "text_UiGdVT": {
-          "type": "text",
+        "faq_17": {
+          "type": "faq",
           "settings": {
             "question": "How soon will I see results?",
             "answer": "<p>Most clients start to notice increased tone and firmness after two or three sessions, with full results developing over the next few weeks as the muscles strengthen and fat cells are metabolised.</p>"
           }
         },
-        "text_MXXKEH": {
-          "type": "text",
+        "faq_18": {
+          "type": "faq",
           "settings": {
             "question": "How many sessions will I need?",
             "answer": "<p>We recommend a course of 6 sessions once every 1/2 weeks to see optimal results.</p>"
@@ -956,1491 +462,48 @@
         }
       },
       "block_order": [
-        "text_Dpx4Qh",
-        "text_XGMq6c",
-        "text_CneeFE",
-        "text_JMUbWR",
-        "text_UiGdVT",
-        "text_MXXKEH"
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9",
+        "faq_10",
+        "faq_11",
+        "faq_12",
+        "faq_13",
+        "faq_14",
+        "faq_15",
+        "faq_16",
+        "faq_17",
+        "faq_18"
       ],
-      "disabled": true,
-      "name": "SS - FAQ #1",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "icon_color": "#ffffff",
-        "hover_color": "#efefef",
-        "question_color": "#ffffff",
-        "background_color": "#e6b325",
-        "answer_color": "#000000",
-        "answer_bg_color": "#ffffff",
-        "questions-font-size": 1
-      }
+      "settings": {}
     },
-    "product_hero_PCRa3U": {
-      "type": "product-hero",
-      "blocks": {
-        "check_item_djpnrG": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Stimulates high-intensity muscle activation"
-          }
-        },
-        "check_item_rPdr3z": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Supports improved tone and definition"
-          }
-        },
-        "check_item_AtyEWW": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "No needles. No surgery. No downtime."
-          }
-        },
-        "trust_item_f4CTa3": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "star",
-            "title": "Google 4.9/5",
-            "subtitle": "",
-            "show_stars": true
-          }
-        },
-        "trust_item_6A9CHX": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "medical",
-            "title": "Medical-grade",
-            "subtitle": "technology",
-            "show_stars": false
-          }
-        },
-        "trust_item_kPgz3r": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "calendar",
-            "title": "7-Day Appointment",
-            "subtitle": "Guarantee",
-            "show_stars": false
-          }
-        },
-        "trust_item_QBa3DD": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "finance",
-            "title": "0% Finance Available",
-            "subtitle": "",
-            "show_stars": false
-          }
-        }
-      },
-      "block_order": [
-        "check_item_djpnrG",
-        "check_item_rPdr3z",
-        "check_item_AtyEWW",
-        "trust_item_f4CTa3",
-        "trust_item_6A9CHX",
-        "trust_item_kPgz3r",
-        "trust_item_QBa3DD"
-      ],
-      "name": "Product Hero",
+    "contact": {
+      "type": "lsc-dual-contact",
       "settings": {
-        "background_image": "shopify://shop_images/ChatGPT_Image_Feb_21_2026_11_22_44_AM.png",
-        "image_position": "center center",
-        "desktop_height": 900,
-        "mobile_height": 200,
-        "background_color": "#fbdbc3",
-        "overlay_color_start": "rgba(0,0,0,0)",
-        "overlay_color_mid": "rgba(0,0,0,0)",
-        "overlay_color_fade": "rgba(0,0,0,0)",
-        "heading": "Non-Surgical Body Sculpting",
-        "subheading_highlight": "Reshape Your Body",
-        "subheading": " ",
-        "heading_font_size": 54,
-        "subheading_font_size": 38,
-        "heading_color": "#3a3a3a",
-        "highlight_color": "#c8962e",
-        "description": "<p>Strengthen and tone targeted muscle groups using advanced electromagnetic stimulation technology designed to improve definition and contour without surgery or downtime.</p>",
-        "body_font_size": 17,
-        "text_color": "#5a5a5a",
-        "checkmark_color": "#c4a080",
-        "button_label": "Book your body sculpting treatment",
-        "button_link": "#cf-template--25630341431676__consultation_form_ANA6YL",
-        "button_open_new_tab": false,
-        "button_bg": "#54433b",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#b08d66",
-        "trust_bar_bg": "#f7e1cf",
-        "trust_bar_text_color": "#3a3a3a",
-        "trust_icon_color": "#999999",
-        "trust_star_color": "#c8962e",
-        "content_max_width": 650
-      }
-    },
-    "slideshow_Cpngyt": {
-      "type": "slideshow",
-      "blocks": {
-        "image_3rWhRz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/d1.png",
-            "mobile_image": "shopify://shop_images/1m_265c99f4-d12c-4cfe-bbe9-04318ea7e23a.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_3rWhRz"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "text_image_text_bxVKpK": {
-      "type": "text-image-text",
-      "blocks": {
-        "point_mNbdeE": {
-          "type": "point",
-          "settings": {
-            "text": "Supports improved contour in resistant areas"
-          }
-        },
-        "point_aRqmKE": {
-          "type": "point",
-          "settings": {
-            "text": "Triggers powerful muscle contractions beyond voluntary exercise"
-          }
-        },
-        "point_iKMTci": {
-          "type": "point",
-          "settings": {
-            "text": "Enhances tone and contour without surgery or downtime"
-          }
-        }
-      },
-      "block_order": [
-        "point_mNbdeE",
-        "point_aRqmKE",
-        "point_iKMTci"
-      ],
-      "name": "Text Image Text",
-      "settings": {
-        "heading": "What Is Non-Surgical Body Sculpting?",
-        "body": "<p>Non-surgical body sculpting at Laser Skin Clinics is delivered using PowerSculpt electromagnetic technology to trigger controlled, high-intensity muscle contractions.</p><p>These contractions engage muscle fibres beyond voluntary exercise levels, supporting progressive strengthening and improved contour in targeted areas.</p>",
-        "image": "shopify://shop_images/Screenshot_3.png",
-        "sub_heading": "Why patients choose Non-surgical body sculpting",
-        "footer_text": "",
-        "bullet_style": "dot",
-        "points_columns": "1",
-        "section_bg": "#dfdfe1",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "image_max_width": 800,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_RxpVqU": {
-      "type": "slideshow",
-      "blocks": {
-        "image_nMmepV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2d_417c7eb9-d159-4d7c-b269-e9496145658c.png",
-            "mobile_image": "shopify://shop_images/2m_b4ad2979-f41a-4953-aac2-86cbc36bdbe8.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_nMmepV"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "image_process_timeline_DAWmeN": {
-      "type": "image-process-timeline",
-      "blocks": {
-        "stage_aRDK6B": {
-          "type": "stage",
-          "settings": {
-            "title": "Immediately after",
-            "points": "Muscles feel activated or worked||Area may feel tight or fatigued"
-          }
-        },
-        "stage_XF6MTR": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 1–4",
-            "points": "Muscle strength increases||Early improvements in tone and firmness"
-          }
-        },
-        "stage_Xeh9KD": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 4–8",
-            "points": "Muscle definition becomes more visible||Fat reduction begins to show"
-          }
-        },
-        "stage_9L47mx": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 8–12",
-            "points": "Continued muscle strengthening||Noticeable improvements in shape and contour"
-          }
-        }
-      },
-      "block_order": [
-        "stage_aRDK6B",
-        "stage_XF6MTR",
-        "stage_Xeh9KD",
-        "stage_9L47mx"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 767px) {img {display: none; }}"
-      ],
-      "name": "Image Process Timeline",
-      "settings": {
-        "heading": "How Non-Surgical Body Sculpting Works & What to Expect",
-        "how_label": "How it works",
-        "how_text": "",
-        "body": "<p>Non-surgical body sculpting uses advanced electromagnetic stimulation to trigger controlled, high-intensity muscle contractions in targeted areas.</p><p>These supramaximal contractions engage muscle fibres beyond voluntary exercise levels, supporting progressive strengthening and improved definition over time.</p><p>Treatment intensity is adjusted to your comfort and goals, ensuring controlled delivery and measurable progression.</p>",
-        "image": "shopify://shop_images/Screenshot_2.png",
-        "footer_text": "Results build progressively as muscle strength increases and fat metabolism improves.",
-        "section_bg": "#faded3",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#c4956a",
-        "card_bg": "#f8dad2",
-        "card_border": "#ddd5cc",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_FWyDaE": {
-      "type": "slideshow",
-      "blocks": {
-        "image_dgNAAy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4d_262cd551-3825-407d-a619-6cf552717683.png",
-            "mobile_image": "shopify://shop_images/4m_1545824f-5cde-4ba5-b182-f9d450cc046a.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_dgNAAy"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "areas_treated_circles_t78HbT": {
-      "type": "areas-treated-circles",
-      "blocks": {
-        "area_cDh3gg": {
-          "type": "area",
-          "settings": {
-            "image": "shopify://shop_images/1_ba7382fe-b422-4e4a-896d-531790adea9c.png",
-            "title": "Abdomen"
-          }
-        },
-        "area_eH3CCn": {
-          "type": "area",
-          "settings": {
-            "image": "shopify://shop_images/2_84beb48c-72ab-4005-b19c-00ea78335aed.png",
-            "title": "Buttocks"
-          }
-        },
-        "area_ccYHhE": {
-          "type": "area",
-          "settings": {
-            "image": "shopify://shop_images/3_2c9741f4-9a3e-4c16-8eef-80912710b9df.png",
-            "title": "Thighs"
-          }
-        },
-        "area_RpWqJP": {
-          "type": "area",
-          "settings": {
-            "image": "shopify://shop_images/4_a6af428a-142a-4f74-9ddf-9cfd15a8cea6.png",
-            "title": "Arms"
-          }
-        },
-        "area_P8tw74": {
-          "type": "area",
-          "settings": {
-            "image": "shopify://shop_images/5_a71f70ed-8a7e-4635-8efc-8714cc02b6d4.png",
-            "title": "Calves"
-          }
-        }
-      },
-      "block_order": [
-        "area_cDh3gg",
-        "area_eH3CCn",
-        "area_ccYHhE",
-        "area_RpWqJP",
-        "area_P8tw74"
-      ],
-      "name": "Areas Treated Circles",
-      "settings": {
-        "heading": "Areas Commonly Treated",
-        "subtitle": "Designed to target key muscle groups responsible for strength, tone, and body definition.",
-        "summary_title": "Non-surgical body sculpting",
-        "summary_points": "Non-surgical body sculpting is tailored to the anatomical structure of the treatment area and your individual goals.\n\nEach session is structured to stimulate targeted muscle groups while maintaining comfort and controlled delivery.",
-        "footer_text": "Treatment plans are tailored to the area being treated and individual body goals.",
-        "section_bg": "#e7e6ed",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "accent_color": "#efefef",
-        "circle_border": "#ece5dd",
-        "circle_bg": "#f0e8e0",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "circle_size": 150,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_Kr87ad": {
-      "type": "slideshow",
-      "blocks": {
-        "image_3FQdhh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/5d_80063489-d31e-4d9e-8132-6f9d98fb6f70.png",
-            "mobile_image": "shopify://shop_images/image_849e9f0d-38f6-4839-9670-22df3151d2df.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_3FQdhh"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "aftercare_cards_DhWtgr": {
-      "type": "aftercare-cards",
-      "blocks": {
-        "card_FAGdBE": {
-          "type": "card",
-          "settings": {
-            "card_heading": "After treatment",
-            "icon": "shopify://shop_images/1-removebg-preview_12.png",
-            "points": "Resume daily activities immediately||Muscles may feel sore, similar to post-workout fatigue"
-          }
-        },
-        "card_qYqGUj": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Aftercare guidance",
-            "icon": "shopify://shop_images/2-removebg-preview_14.png",
-            "points": "Stay well hydrated||Maintain light activity between sessions||Follow practitioner advice for optimal results"
-          }
-        }
-      },
-      "block_order": [
-        "card_FAGdBE",
-        "card_qYqGUj"
-      ],
-      "custom_css": [
-        ".afc__card-icon,.afc__card-icon img {width: 60px !important; height: 60px !important;}"
-      ],
-      "name": "Aftercare Cards",
-      "settings": {
-        "heading": "Aftercare & Downtime",
-        "subtitle": "Your treatment requires no downtime and minimal aftercare, allowing you to return to normal activities immediately after treatment.",
-        "footer_text": "For optimal results, non-surgical body sculpting is delivered as a planned treatment course tailored to your goals.",
-        "show_checkmarks": false,
-        "layout": "stacked",
-        "section_bg": "#f9dad3",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_hUr9qN": {
-      "type": "slideshow",
-      "blocks": {
-        "image_QN6nwX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/imagess.png",
-            "mobile_image": "shopify://shop_images/6m_47c69e19-2ab8-408e-9597-13fecfdb3962.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_QN6nwX"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "centered_pricing_stack_HUbtAd": {
-      "type": "centered-pricing-stack",
-      "blocks": {
-        "price_row_PUnRab": {
-          "type": "price_row",
-          "settings": {
-            "name": "1 Session",
-            "price": "£50",
-            "per_label": "",
-            "total": ""
-          }
-        },
-        "price_row_jeBhaT": {
-          "type": "price_row",
-          "settings": {
-            "name": "3 Sessions",
-            "price": "£45",
-            "per_label": "per session",
-            "total": "Total £135"
-          }
-        },
-        "price_row_QKqAfN": {
-          "type": "price_row",
-          "settings": {
-            "name": "6 Sessions",
-            "price": "£40",
-            "per_label": "per session",
-            "total": "Total £240"
-          }
-        }
-      },
-      "block_order": [
-        "price_row_PUnRab",
-        "price_row_jeBhaT",
-        "price_row_QKqAfN"
-      ],
-      "name": "Centered Pricing Stack",
-      "settings": {
-        "heading": "Non-Surgical Body Sculpting Pricing",
-        "subtitle": "Delivered using advanced electromagnetic muscle technology.",
-        "footer_text": "Most effective when delivered as a planned course tailored to your goals.",
-        "section_bg": "#3a3a42",
-        "show_texture": true,
-        "texture_opacity": 90,
-        "light_color": "#e0d8d0",
-        "heading_font_size": 42,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "expectations_trust_zAAGzU": {
-      "type": "expectations-trust",
-      "blocks": {
-        "trust_point_mHxmd6": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "star",
-            "text": "4.9 Google rating"
-          }
-        },
-        "trust_point_gigpCV": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "shield",
-            "text": "Advanced electromagnetic muscle technology"
-          }
-        },
-        "trust_point_6rgebf": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "finance",
-            "text": "0% finance available"
-          }
-        },
-        "trust_point_EkWdLk": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "heart",
-            "text": "Structured muscle activation protocol"
-          }
-        },
-        "trust_point_GbQYie": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "parking",
-            "text": "Free parking"
-          }
-        },
-        "trust_point_wzWg3W": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "clock",
-            "text": "Established 10+ years"
-          }
-        }
-      },
-      "block_order": [
-        "trust_point_mHxmd6",
-        "trust_point_gigpCV",
-        "trust_point_6rgebf",
-        "trust_point_EkWdLk",
-        "trust_point_GbQYie",
-        "trust_point_wzWg3W"
-      ],
-      "name": "Expectations & Trust",
-      "settings": {
-        "heading": "Transparent pricing. Trusted clinical standards.",
-        "subtitle": "Everything you need to feel confident in your treatment.",
-        "card_title": "What to expect with Non-Surgical body sculpting",
-        "card_description": "<p>Non-Surgical body sculpting uses advanced electromagnetic stimulation technology to activate targeted muscle groups and support improved tone and definition.</p><p>Each treatment session is structured to stimulate intense muscle contractions beyond voluntary exercise levels, encouraging progressive strength and contour improvement.</p><p>We prioritise controlled delivery, measurable progression, and realistic body sculpting outcomes.</p>",
-        "section_bg": "#f7e2d4",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "icon_color": "#777777",
-        "card_bg": "#f8e9e0",
-        "card_border": "#ddd9d3",
-        "heading_font_size": 44,
-        "card_heading_font_size": 28,
-        "body_font_size": 16,
-        "button_label": "Enquire Now",
-        "button_link": "#cf-template--25630341431676__consultation_form_ANA6YL",
-        "button_open_new_tab": false,
-        "button_bg": "#62493b",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#333333",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "consultation_form_ANA6YL": {
-      "type": "consultation-form",
-      "name": "Consultation Form",
-      "settings": {
-        "section_width": 1200,
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "section_padding_side": 20,
-        "section_background": "#f9f9f9",
-        "form_max_width": 700,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 40,
-        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_font_size": 14,
-        "form_heading": "Make an enquiry",
-        "form_subheading": "",
-        "heading_color": "#000000",
-        "heading_font_size": 26,
-        "heading_font_weight": "500",
-        "subheading_color": "#777777",
-        "subheading_font_size": 15,
-        "label_color": "#333333",
-        "label_font_size": 14,
-        "label_font_weight": "400",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 6,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 15,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "show_treatment_field": true,
-        "treatment_label": "Which treatment are you interested in?",
-        "default_treatment_value": "Consultation",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "name_label": "Name",
-        "name_placeholder": "Your Name",
-        "contact_method_label": "How can we reach you?",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "email_label": "Email Address",
-        "email_placeholder": "Email Address",
-        "whatsapp_number": "447798983387",
-        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
-        "wa_you_contact_text": "I'll message you",
-        "wa_we_contact_text": "Message me",
-        "whatsapp_button_text": "Chat on WhatsApp",
-        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
-        "whatsapp_button_background": "#25d366",
-        "whatsapp_button_hover_background": "#1fbe59",
-        "whatsapp_button_text_color": "#ffffff",
-        "clinic_phone_number": "01902256667",
-        "call_phone_label": "Your phone number",
-        "call_time_label": "Best time to call you?",
-        "call_time_placeholder": "Select a time",
-        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "phone_placeholder": "Phone Number",
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 14,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Submit Form",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 15,
-        "button_font_weight": "600",
-        "button_border_radius": 8,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
-        "privacy_text_color": "#999999",
-        "privacy_font_size": 13
-      }
-    },
-    "faq_updated_afMY7d": {
-      "type": "faq-updated",
-      "blocks": {
-        "faq_item_XryWre": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What is non-surgical body sculpting?",
-            "answer": "<p>Non-surgical body sculpting is a treatment designed to strengthen and tone targeted muscle groups using advanced electromagnetic stimulation technology.</p><p>It is delivered without needles or surgery and is structured as a progressive treatment course.</p>"
-          }
-        },
-        "faq_item_JcGn7T": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How does non-surgical body sculpting work?",
-            "answer": "<p>The treatment uses controlled electromagnetic energy to trigger repeated, high-intensity muscle contractions in targeted areas.</p><p>These contractions engage muscle fibres beyond voluntary exercise levels, supporting muscle strengthening and improved definition over time.</p>"
-          }
-        },
-        "faq_item_jkhbFw": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Does it reduce fat?",
-            "answer": "<p>Non-surgical body sculpting is primarily designed to improve muscle tone and definition.</p><p>Some patients may notice contour improvements in treated areas; however, it is not a weight loss treatment.</p><p>It works best for body shaping rather than overall fat reduction.</p>"
-          }
-        },
-        "faq_item_w7pDUm": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is this a replacement for exercise?",
-            "answer": "<p>No.</p><p>Non-surgical body sculpting supports muscle activation and tone but does not replace regular exercise, nutrition, or a healthy lifestyle.</p><p>It is most effective as part of an overall body maintenance plan.</p>"
-          }
-        },
-        "faq_item_xRiTy3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Does the treatment hurt?",
-            "answer": "<p>Most patients describe the sensation as intense but tolerable muscle contractions.</p><p>You will feel your muscles working strongly. The intensity can be adjusted to suit comfort levels.</p>"
-          }
-        },
-        "faq_item_F6EEgL": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is there any downtime?",
-            "answer": "<p>No.</p><p>You can return to normal activities immediately after treatment. Mild muscle soreness similar to a workout may occur.</p>"
-          }
-        },
-        "faq_item_8ANgXM": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How many sessions do I need?",
-            "answer": "<p>A course of 4–6 sessions is typically recommended for visible improvement.</p><p>Treatment plans are structured to allow progressive muscle adaptation over time.</p>"
-          }
-        },
-        "faq_item_WcfHzi": {
-          "type": "faq_item",
-          "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>Some patients feel increased muscle activation immediately.</p><p>Visible contour improvement typically develops gradually over several weeks as muscle tone improves.</p>"
-          }
-        },
-        "faq_item_b7JdRA": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is non-surgical body sculpting suitable for everyone?",
-            "answer": "<p>It may not be suitable if you:</p><p>• Have a pacemaker or implanted electronic device</p><p>• Are pregnant</p><p>• Have certain medical conditions</p><p>• Have metal implants in the treatment area</p><p>A medical assessment will determine suitability.</p>"
-          }
-        },
-        "faq_item_g6HcMe": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can it help after pregnancy?",
-            "answer": "<p>Non-surgical body sculpting may support abdominal muscle strengthening after pregnancy, particularly for mild muscle laxity.</p><p>However, it is not a medical treatment for diastasis recti and suitability must be assessed individually.</p>"
-          }
-        },
-        "faq_item_Xn3tqH": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How long is a session?",
-            "answer": "<p>Sessions typically last around 30 minutes depending on the treatment area.</p>"
-          }
-        },
-        "faq_item_eTA3dT": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What payment options do you offer?",
-            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you during your consultation.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_XryWre",
-        "faq_item_JcGn7T",
-        "faq_item_jkhbFw",
-        "faq_item_w7pDUm",
-        "faq_item_xRiTy3",
-        "faq_item_F6EEgL",
-        "faq_item_8ANgXM",
-        "faq_item_WcfHzi",
-        "faq_item_b7JdRA",
-        "faq_item_g6HcMe",
-        "faq_item_Xn3tqH",
-        "faq_item_eTA3dT"
-      ],
-      "name": "FAQ Dark Theme",
-      "settings": {
-        "section_bg_color": "#ededed",
-        "max_width": 900,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "side_padding": 30,
-        "heading": "Your Non-Surgical Body Sculpting Questions. Answered.",
-        "heading_color": "#1c1c1c",
-        "heading_font_size": 24,
-        "heading_font_weight": "400",
-        "heading_font_style": "italic",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 50,
-        "question_color": "#1c1c1c",
-        "question_font_size": 16,
-        "question_font_weight": "600",
-        "show_underline": true,
-        "underline_color": "#b8a164",
-        "underline_width": 60,
-        "underline_height": 2,
-        "answer_color": "#1c1c1c",
-        "answer_font_size": 14,
-        "answer_line_height": 1.7,
-        "answer_margin_top": 16,
-        "divider_color": "#333333",
-        "item_padding_vertical": 30,
-        "icon_color": "#b8a164",
-        "icon_active_color": "#b8a164",
-        "icon_active_bg": "rgba(0,0,0,0)",
-        "icon_size": 24,
-        "icon_border_width": 2,
-        "show_decoration": false,
-        "decoration_color": "#b8a164",
-        "decoration_size": 40,
-        "decoration_opacity": 0.6,
-        "all_items_open": false,
-        "first_item_open": false,
-        "allow_multiple_open": true
-      }
-    },
-    "location_contact_tG6qTL": {
-      "type": "location-contact",
-      "blocks": {
-        "contact_GqAa7X": {
-          "type": "contact",
-          "settings": {
-            "icon": "phone",
-            "label": "Phone:",
-            "value": "01902 256667",
-            "link": "tel:01902256667",
-            "open_new_tab": false
-          }
-        },
-        "contact_8Tqagf": {
-          "type": "contact",
-          "settings": {
-            "icon": "whatsapp",
-            "label": "WhatsApp:",
-            "value": "07798983387",
-            "link": "https://wa.me/447798983387",
-            "open_new_tab": false
-          }
-        },
-        "contact_nXbLxN": {
-          "type": "contact",
-          "settings": {
-            "icon": "email",
-            "label": "Phone:",
-            "value": "info@laserskinclinics.co.uk",
-            "link": "mailto:info@laserskinclinics.co.uk",
-            "open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "contact_GqAa7X",
-        "contact_8Tqagf",
-        "contact_nXbLxN"
-      ],
-      "name": "Location & Contact",
-      "settings": {
-        "label": "Location & Contact",
-        "heading": "Find Us / Visit the Clinic",
-        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
-        "show_hours": true,
-        "hours_title": "Opening Hours:",
-        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
-        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-        "info_bg": "#d6d8d9",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "accent_color": "#b08d57",
-        "heading_font_size": 40,
-        "body_font_size": 16,
-        "button_label": "BOOK CONSULTATION",
-        "button_link": "#cf-template--25630341431676__consultation_form_ANA6YL",
-        "button_open_new_tab": false,
-        "button_bg": "#b08d57",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#97763e"
+        "whatsapp_message_override": "Hi! I would like to book a body sculpting appointment please."
       }
     }
   },
   "order": [
-    "main",
-    "treatment_tabs_section_TRdHJF",
-    "ss_image_with_text_12_PPNnyT",
-    "ss_image_with_text_12_gUF6fh",
-    "ss_image_with_text_9_GLgAya",
-    "ss_clothing_image_grid_bNwwDh",
-    "rich_text_nziPUE",
-    "ss_steps_11_7cMyRT",
-    "175993612397035c9e",
-    "ss_simple_faq_jiYFWj",
-    "product_hero_PCRa3U",
-    "slideshow_Cpngyt",
-    "text_image_text_bxVKpK",
-    "slideshow_RxpVqU",
-    "image_process_timeline_DAWmeN",
-    "slideshow_FWyDaE",
-    "areas_treated_circles_t78HbT",
-    "slideshow_Kr87ad",
-    "aftercare_cards_DhWtgr",
-    "slideshow_hUr9qN",
-    "centered_pricing_stack_HUbtAd",
-    "expectations_trust_zAAGzU",
-    "consultation_form_ANA6YL",
-    "faq_updated_afMY7d",
-    "location_contact_tG6qTL"
+    "product_hero",
+    "trust_bar",
+    "quick_facts",
+    "what_is",
+    "treatment_areas",
+    "how_it_works",
+    "suitability",
+    "timeline",
+    "aftercare",
+    "why_choose",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
   ]
 }

@@ -9,954 +9,464 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-product",
+    "product_hero": {
+      "type": "lsc-product-hero",
+      "settings": {
+        "eyebrow_override": "Rosacea & Skin Clarity"
+      }
+    },
+    "trust_bar": {
+      "type": "lsc-trust-bar",
+      "settings": {
+        "override_metafield": true,
+        "item_1": "Rosacea & Vascular Specialist",
+        "item_2": "Medical-Grade IPL",
+        "item_3": "Complimentary Consultation & Patch Test",
+        "item_4": "Established 10+ Years"
+      }
+    },
+    "quick_facts": {
+      "type": "lsc-quick-facts",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "disabled": true,
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
+        "qf_1": {
+          "type": "fact",
           "settings": {
-            "heading_tag": "h3"
+            "label": "Session Time",
+            "value": "20–45 min"
           }
         },
-        "button_PUkJNb": {
-          "type": "button",
-          "disabled": true,
+        "qf_2": {
+          "type": "fact",
           "settings": {
-            "link": "",
-            "text": "View Pricing",
-            "stretch": false,
-            "background": "",
-            "text_color": ""
+            "label": "Downtime",
+            "value": "Minimal"
           }
         },
-        "price": {
-          "type": "price",
-          "disabled": true,
+        "qf_3": {
+          "type": "fact",
           "settings": {
-            "show_taxes_notice": false
+            "label": "Sessions",
+            "value": "3–6 recommended"
           }
         },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "disabled": true,
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
+        "qf_4": {
+          "type": "fact",
           "settings": {
-            "hide_sold_out_variants": false,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false,
-            "show_below_gallery": false
-          }
-        },
-        "complementary_products": {
-          "type": "complementary_products",
-          "settings": {
-            "title": "Pairs well with",
-            "products_count": 2,
-            "show_below_gallery": true,
-            "stack_products": false,
-            "show_quick_buy": true
+            "label": "From",
+            "value": "£50"
           }
         }
       },
       "block_order": [
-        "vendor",
-        "title",
-        "button_PUkJNb",
-        "price",
-        "payment_terms",
-        "separator",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "complementary_products"
+        "qf_1",
+        "qf_2",
+        "qf_3",
+        "qf_4"
       ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "scheme-1",
-        "container_size": "full",
-        "product_info_size": 35,
-        "show_sticky_add_to_cart": true,
-        "center_basic_info": false,
-        "desktop_media_layout": "grid",
-        "desktop_media_grid_gap": 30,
-        "mobile_controls": "dots",
-        "enable_media_autoplay": false,
-        "enable_video_looping": true,
-        "enable_image_zoom": true,
-        "max_image_zoom_level": 3
-      }
+      "settings": {}
     },
-    "treatment_tabs_section_JPLd7G": {
-      "type": "treatment-tabs-section",
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
+    "what_it_treats": {
+      "type": "lsc-what-it-treats",
       "blocks": {
-        "tab_LXNYGL": {
-          "type": "tab",
+        "cond_1": {
+          "type": "condition",
           "settings": {
-            "tab_identifier": "ipl",
-            "tab_name": "Intense Pulsed Light",
-            "heading": "Intense Pulsed Light",
-            "top_description": "<p>A powerful IPL treatment for skin conditions such as acne, acne scarring, rosacea, hyperpigmentation, thread veins and fine lines, wrinkles and sagging skin. </p>",
-            "image_1": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.48.16_bae5547f.jpg",
-            "image_1_aspect_ratio": "original",
-            "consultation_heading": "Speak to a specialist",
-            "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "modal_title": "How would you like to contact us?",
-            "modal_subtitle": "Choose your preferred method to get in touch with us",
-            "contact_page_url": "shopify://pages/contact",
-            "contact_option_title": "Contact Form",
-            "contact_option_description": "Fill out our online form",
-            "phone_number": "01902256667",
-            "phone_option_title": "Call Us",
-            "monday_hours": "Closed",
-            "tuesday_hours": "10:00AM-6:00PM",
-            "wednesday_hours": "10:00AM-6:00PM",
-            "thursday_hours": "Closed",
-            "friday_hours": "10:00AM-6:00PM",
-            "saturday_hours": "10:00AM-4:00PM",
-            "sunday_hours": "Closed",
-            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
-            "whatsapp_number": "447798983387",
-            "whatsapp_display_number": "+44 7798 983387",
-            "whatsapp_option_title": "WhatsApp",
-            "package_heading": "View prices and make an enquiry",
-            "package_description": "Pay per session or buy multiple and save"
+            "icon": "🔴",
+            "title": "Rosacea & Facial Redness",
+            "description": "Reduces persistent redness, visible blood vessels, and flushing episodes for a calmer, more even complexion"
           }
         },
-        "package_NDJ4H6": {
-          "type": "package",
+        "cond_2": {
+          "type": "condition",
           "settings": {
-            "parent_tab": "ipl",
-            "package_name": "Red and Thread Vein",
-            "price": "from £60.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£80",
-            "session_1_total": "total £80.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=41330962759873&quantity=1",
-            "show_session_3": true,
-            "session_3_label": "3 session",
-            "session_3_price": "£70.00",
-            "session_3_total": "total £210.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983597814140&quantity=1",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£60.00",
-            "session_6_total": "total £360.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983597846908&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "icon": "〰️",
+            "title": "Thread Veins & Broken Capillaries",
+            "description": "Targets haemoglobin to collapse visible veins and restore clear skin"
           }
         },
-        "package_ErJLTt": {
-          "type": "package",
+        "cond_3": {
+          "type": "condition",
           "settings": {
-            "parent_tab": "ipl",
-            "package_name": "Age Spots",
-            "price": "from £35.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£50",
-            "session_1_total": "total £50.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=41330962727105&quantity=1",
-            "show_session_3": true,
-            "session_3_label": "3 session",
-            "session_3_price": "£46.50",
-            "session_3_total": "total £140.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983597879676&quantity=1",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£35.00",
-            "session_6_total": "total £210.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983597912444&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "icon": "☀️",
+            "title": "Age Spots & Sun Damage",
+            "description": "Breaks down melanin deposits to fade brown spots and sun-induced discolouration"
           }
         },
-        "package_kf7PaU": {
-          "type": "package",
+        "cond_4": {
+          "type": "condition",
           "settings": {
-            "parent_tab": "ipl",
-            "package_name": "Full Face IPL Facial",
-            "price": "from £60.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£80",
-            "session_1_total": "total £80.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=40682836066497&quantity=1",
-            "show_session_3": true,
-            "session_3_label": "3 session",
-            "session_3_price": "£70.00",
-            "session_3_total": "total £210.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983597945212&quantity=1",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£60.00",
-            "session_6_total": "total £360.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983597977980&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "icon": "🎯",
+            "title": "Hyperpigmentation",
+            "description": "Evens out patchy skin tone and post-inflammatory marks"
           }
         },
-        "package_UMyAKV": {
-          "type": "package",
+        "cond_5": {
+          "type": "condition",
           "settings": {
-            "parent_tab": "ipl",
-            "package_name": "Rosacea, Nose and cheek area",
-            "price": "from £60.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£80",
-            "session_1_total": "total £80.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983598010748&quantity=1",
-            "show_session_3": true,
-            "session_3_label": "3 session",
-            "session_3_price": "£70.00",
-            "session_3_total": "total £210.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983598043516&quantity=1",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£60.00",
-            "session_6_total": "total £360.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983598076284&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "icon": "✨",
+            "title": "Uneven Skin Tone",
+            "description": "Restores overall clarity, brightness, and uniformity across the face"
           }
         },
-        "package_HLnknr": {
-          "type": "package",
+        "cond_6": {
+          "type": "condition",
           "settings": {
-            "parent_tab": "ipl",
-            "package_name": "Broken Capillaries And Vascular Lesions",
-            "price": "from £60.00",
-            "show_session_1": true,
-            "session_1_label": "1 session",
-            "session_1_price": "£80",
-            "session_1_total": "total £80.00",
-            "session_1_per_session": "per session",
-            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=41330962694337&quantity=1",
-            "show_session_3": true,
-            "session_3_label": "3 session",
-            "session_3_price": "£70.00",
-            "session_3_total": "total £210.00",
-            "session_3_per_session": "per session",
-            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983598109052&quantity=1",
-            "show_session_6": true,
-            "session_6_label": "6 session",
-            "session_6_price": "£60.00",
-            "session_6_total": "total £360.00",
-            "session_6_per_session": "per session",
-            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983598141820&quantity=1",
-            "show_session_10": false,
-            "session_10_label": "10 session",
-            "session_10_price": "£7.00",
-            "session_10_total": "total £70.00",
-            "session_10_per_session": "per session",
-            "session_10_link": ""
+            "icon": "💧",
+            "title": "Acne Redness & Scarring Marks",
+            "description": "Calms residual redness and discolouration from past breakouts"
           }
         }
       },
       "block_order": [
-        "tab_LXNYGL",
-        "package_NDJ4H6",
-        "package_ErJLTt",
-        "package_kf7PaU",
-        "package_UMyAKV",
-        "package_HLnknr"
+        "cond_1",
+        "cond_2",
+        "cond_3",
+        "cond_4",
+        "cond_5",
+        "cond_6"
       ],
-      "disabled": true,
-      "name": "Treatment Tabs",
-      "settings": {
-        "section_width": 1400,
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "section_background": "#ffffff",
-        "enquiry_modal_title": "Get in touch",
-        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
-        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "tab_alignment": "center",
-        "tab_gap": 12,
-        "tab_font_size": 15,
-        "tab_font_weight": "500",
-        "tab_border_radius": 50,
-        "tab_border_width": 2,
-        "tab_background": "#ffffff",
-        "tab_text_color": "#000000",
-        "tab_border_color": "#333333",
-        "tab_hover_background": "#f5f5f5",
-        "tab_hover_text_color": "#000000",
-        "tab_active_background": "#e6b325",
-        "tab_active_text_color": "#ffffff",
-        "tab_active_border_color": "#e6b325",
-        "heading_font_size": 42,
-        "heading_font_weight": "400",
-        "heading_color": "#000000",
-        "text_font_size": 15,
-        "text_color": "#333333",
-        "cta_card_gap": 16,
-        "cta_border_radius": 16,
-        "cta_border_width": 2,
-        "cta_background": "#ffffff",
-        "cta_border_color": "#333333",
-        "cta_hover_background": "#f9f9f9",
-        "cta_heading_color": "#000000",
-        "cta_text_color": "#666666",
-        "badge_background": "#f0f0f0",
-        "badge_text_color": "#000000",
-        "price_text_color": "#666666",
-        "package_border_radius": 12,
-        "package_border_width": 2,
-        "package_background": "#ffffff",
-        "package_border_color": "#333333",
-        "package_heading_color": "#000000",
-        "package_price_color": "#666666",
-        "package_button_radius": 8,
-        "package_button_background": "#e6b325",
-        "package_button_text_color": "#ffffff",
-        "package_button_hover_background": "#e6b325",
-        "image_border_radius": 8,
-        "show_collapsible_1": true,
-        "collapsible_1_title": "Inclusive Test Patch & Consultation",
-        "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>Whether you book 1 session or 6, you’ll receive a complimentary test patch as part of your IPL booking.</p>",
-        "show_collapsible_2": true,
-        "collapsible_2_title": "7-Day Appointment Guarantee",
-        "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_2_content": "<p>At Laser Skin Clinics, we guarantee that all customers will be seen within 7 days of their initial booking</p>",
-        "show_collapsible_3": true,
-        "collapsible_3_title": "Course Price Match Guarantee",
-        "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
-        "collapsible_3_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> - and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
-        "show_collapsible_4": true,
-        "collapsible_4_title": "Securing Your Booking",
-        "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_4_content": "<p>A small deposit of £30 will be required to secure your booking. This will be deducted from price of your treatment cost.</p>",
-        "show_collapsible_5": true,
-        "collapsible_5_title": "Payment Options & Finance",
-        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
-        "collapsible_5_content": "<p>Treatments can be paid for by cash or card on the day of your appointment. We also offer Klarna Finance and Shopify instalment options for added flexibility. If you’d like to pay using one of these methods, just let us know and we’ll guide you through it.</p>",
-        "show_collapsible_6": true,
-        "collapsible_6_title": "Contact and address",
-        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
-        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
-        "show_faq_link": true,
-        "faq_pre_text": "Have more questions?",
-        "faq_link_text": "View FAQs",
-        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
-        "faq_link_url": ""
-      }
+      "settings": {}
     },
-    "ss_image_with_text_12_gUF6fh": {
-      "type": "ss-image-with-text-12",
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "suitability": {
+      "type": "lsc-suitability",
       "blocks": {
-        "slide_4jhyPz": {
-          "type": "slide",
+        "ideal_1": {
+          "type": "ideal",
           "settings": {
-            "heading": "<h3><strong>Advanced Light-Based Treatment for Clearer, Brighter, and More Even Skin.</strong></h3>",
-            "text": "<p>Intense Pulse Light Therapy (IPL) is a non-invasive, light-based treatment that targets pigmentation, redness, and visible veins to restore a clearer, more balanced complexion.</p><p>It works by delivering precise pulses of light energy into the skin, which are absorbed by unwanted pigment or blood vessels.</p><p>This gentle yet effective process helps reduce redness, fade pigmentation, and rejuvenate the skin without downtime.</p><p>IPL is one of our most versatile and effective therapies for achieving smooth, radiant, and even-toned skin.<br/><br/><strong>Conditions Treated with IPL</strong></p><p>IPL Therapy can effectively target and treat a range of common skin concerns including:</p><p>• Thread veins and spider veins<br/>• Sun damage and age spots<br/>• Acne, Rosacea and facial redness<br/>• Hyperpigmentation and uneven skin tone<br/>• Freckles and sun-induced pigmentation<br/>• Broken capillaries and vascular lesions<br/><br/>By gently targeting these imperfections, IPL helps restore a clearer, more even complexion while stimulating natural collagen renewal.<br/></p>",
-            "button": "Book Online",
-            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3564718&location=4546",
-            "button2": "Get more information",
-            "button2_url": "shopify://pages/contact",
-            "video_autoplay": true,
-            "video_loop": true,
-            "video_muted": true,
-            "video_controls": true,
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.48.16_bd90effe.jpg"
+            "text": "Clients living with rosacea who want to reduce persistent facial redness and flushing"
+          }
+        },
+        "ideal_2": {
+          "type": "ideal",
+          "settings": {
+            "text": "Those bothered by visible thread veins or broken capillaries on the face"
+          }
+        },
+        "ideal_3": {
+          "type": "ideal",
+          "settings": {
+            "text": "Anyone wanting to fade age spots or sun damage for clearer skin"
+          }
+        },
+        "ideal_4": {
+          "type": "ideal",
+          "settings": {
+            "text": "Clients seeking a non-invasive treatment with minimal downtime"
+          }
+        },
+        "ideal_5": {
+          "type": "ideal",
+          "settings": {
+            "text": "Fair to medium skin tones (suitability confirmed during consultation)"
           }
         }
       },
       "block_order": [
-        "slide_4jhyPz"
+        "ideal_1",
+        "ideal_2",
+        "ideal_3",
+        "ideal_4",
+        "ideal_5"
       ],
-      "disabled": true,
-      "custom_css": [
-        "p {padding-top: 10px; padding-bottom: 5px;}",
-        ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
-        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_gUF6fh {display: none;}"
-      ],
-      "name": "SS - Image With Text #12",
-      "settings": {
-        "slide_gap": 70,
-        "slide_gap_mobile": 24,
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "start",
-        "content_mt": 0,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 28,
-        "heading_height": 110,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 170,
-        "text_mt": 32,
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_mt": 32,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 38,
-        "button_padding_horizontal_mobile": 38,
-        "button_radius": 12,
-        "button_border_thickness": 0,
-        "button_style": "non_outline",
-        "button2_custom": false,
-        "button2_font": "josefin_sans_n4",
-        "button2_size": 16,
-        "button2_size_mobile": 16,
-        "button2_height": 100,
-        "button2_mt": 16,
-        "button2_mt_mobile": 16,
-        "button2_padding_vertical": 16,
-        "button2_padding_vertical_mobile": 16,
-        "button2_padding_horizontal": 38,
-        "button2_padding_horizontal_mobile": 38,
-        "button2_radius": 12,
-        "button2_border_thickness": 0,
-        "button2_style": "outline",
-        "images_position": "right",
-        "images_position_mobile": "bottom",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "image_shape": "none",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 13,
-        "number_size_mobile": 13,
-        "pagination_text": "",
-        "pagination_text_custom": false,
-        "pagination_text_font": "josefin_sans_n4",
-        "pagination_text_size": 16,
-        "pagination_text_size_mobile": 16,
-        "pagination_text_height": 130,
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#e6b325",
-        "button_bg_hover_color": "#deac21",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "button2_color": "#ffffff",
-        "button2_hover_color": "#ffffff",
-        "button2_bg_color": "#000000",
-        "button2_bg_hover_color": "#000000",
-        "button2_border_color": "#000000",
-        "button2_border_hover_color": "#000000",
-        "image_border_color": "#000000",
-        "dots_bg_color": "",
-        "dots_bg_hover_color": "#000000",
-        "dots_border_color": "#000000",
-        "dots_border_hover_color": "#000000",
-        "number_color": "#000000",
-        "number_hover_color": "#ffffff",
-        "pagination_text_color": "#000000",
-        "background_color": "#645e5c",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 6,
-        "padding_horizontal_mobile": 1,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "ss_image_with_text_9_GLgAya": {
-      "type": "ss-image-with-text-9",
+    "timeline": {
+      "type": "lsc-results-timeline",
+      "settings": {}
+    },
+    "aftercare": {
+      "type": "lsc-aftercare",
+      "settings": {}
+    },
+    "why_choose": {
+      "type": "lsc-values",
       "blocks": {
-        "text_zqNDU6": {
-          "type": "text",
+        "val_1": {
+          "type": "value",
           "settings": {
-            "text": "<h3><strong>Benefits of IPL Therapy</strong></h3>",
-            "text_custom": false,
-            "text_font": "josefin_sans_n4",
-            "text_size": 34,
-            "text_size_mobile": 26,
-            "text_height": 150,
-            "text_mt": 0,
-            "text_align": "left",
-            "text_align_mobile": "left",
-            "text_color": "#e6b325"
+            "title": "Consultation-Led",
+            "description": "Every treatment begins with a thorough assessment of your skin, your concerns, and your goals before we recommend anything."
           }
         },
-        "icon_text_UxfF9a": {
-          "type": "icon_text",
+        "val_2": {
+          "type": "value",
           "settings": {
-            "icon": "tick",
-            "text": "Reduces pigmentation, sun damage, and redness for a more even complexion"
+            "title": "Medical-Grade Technology",
+            "description": "We invest in the same calibre of equipment found in leading UK clinics — not salon-grade alternatives."
           }
         },
-        "icon_text_LJCxHi": {
-          "type": "icon_text",
+        "val_3": {
+          "type": "value",
           "settings": {
-            "icon": "tick",
-            "text": " Diminishes visible veins, thread veins, and age spots"
+            "title": "Personalised Plans",
+            "description": "Your treatment plan is built around you — your skin type, your lifestyle, and your desired outcome."
           }
         },
-        "icon_text_dEUWkb": {
-          "type": "icon_text",
+        "val_4": {
+          "type": "value",
           "settings": {
-            "icon": "tick",
-            "text": "improves skin clarity and restores a healthy, youthful glow"
-          }
-        },
-        "icon_text_WwkP3M": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "tick",
-            "text": "Stimulates collagen for smoother, firmer, and more refined skin texture"
-          }
-        },
-        "button_HfVK4Q": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button": "Book Online",
-            "button_url": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=3564718&location=4546",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 200,
-            "button_width_mobile": 700,
-            "button_mt": 52,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 4,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#ffffff",
-            "button_hover_color": "#ffffff",
-            "button_bg_color": "#e6b325",
-            "button_bg_hover_color": "#000000",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
-          }
-        },
-        "button_Phrjy8": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button": "Get more information",
-            "button_url": "shopify://pages/contact",
-            "button_custom": false,
-            "button_font": "josefin_sans_n4",
-            "button_size": 16,
-            "button_size_mobile": 16,
-            "button_height": 100,
-            "button_width": 270,
-            "button_width_mobile": 700,
-            "button_mt": 12,
-            "button_mt_mobile": 16,
-            "button_padding_vertical": 16,
-            "button_padding_vertical_mobile": 16,
-            "button_padding_horizontal": 24,
-            "button_padding_horizontal_mobile": 24,
-            "button_radius": 4,
-            "button_border_thickness": 1,
-            "button_align": "left",
-            "button_align_mobile": "left",
-            "button_style": "non_outline",
-            "button_color": "#ffffff",
-            "button_hover_color": "#ffffff",
-            "button_bg_color": "#000000",
-            "button_bg_hover_color": "#000000",
-            "button_border_color": "#000000",
-            "button_border_hover_color": "#000000"
+            "title": "Established 10+ Years",
+            "description": "Trusted by thousands of clients across Wolverhampton and the West Midlands since 2013."
           }
         }
       },
       "block_order": [
-        "text_zqNDU6",
-        "icon_text_UxfF9a",
-        "icon_text_LJCxHi",
-        "icon_text_dEUWkb",
-        "icon_text_WwkP3M",
-        "button_HfVK4Q",
-        "button_Phrjy8"
+        "val_1",
+        "val_2",
+        "val_3",
+        "val_4"
       ],
-      "disabled": true,
-      "name": "SS - Image With Text #9",
-      "settings": {
-        "body_gap": 50,
-        "body_gap_mobile": 0,
-        "image": "shopify://shop_images/4.jpg",
-        "image_position": "left",
-        "image_position_mobile": "top",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "content_maxwidth": 700,
-        "content_padding_vertical": 40,
-        "content_padding_vertical_mobile": 20,
-        "content_padding_horizontal": 24,
-        "content_padding_horizontal_mobile": 16,
-        "row_gap": 16,
-        "row_mt": 20,
-        "row_align": "left",
-        "row_align_mobile": "left",
-        "icon_size": 30,
-        "icon_size_mobile": 26,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 18,
-        "text_size_mobile": 16,
-        "text_height": 180,
-        "icon_color": "#000000",
-        "text_color": "#2b1a1a",
-        "background_color": "#ffffff",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "ss_clothing_image_grid_wNiTtn": {
-      "type": "ss-clothing-image-grid",
+    "pricing": {
+      "type": "lsc-pricing-cards",
       "blocks": {
-        "link_HqxMdr": {
-          "type": "link",
+        "price_1": {
+          "type": "pricing_tier",
           "settings": {
-            "image": "shopify://shop_images/3_5452f9d8-486f-4a98-af3f-e2b1a47f8940.jpg",
-            "text": "",
-            "url": "",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "link_HqxMdr"
-      ],
-      "disabled": true,
-      "name": "SS - Threads Image Grid",
-      "settings": {
-        "font_size": 24,
-        "font_color": "#000000",
-        "background-color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_vertical": 0,
-        "section-width": 200
-      }
-    },
-    "rich_text_nziPUE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U7EUj7": {
-          "type": "heading",
-          "settings": {
-            "text": "<strong>The IPL 3-Step Process</strong>",
-            "heading_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U7EUj7"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": true
-      }
-    },
-    "ss_steps_11_7cMyRT": {
-      "type": "ss-steps-11",
-      "blocks": {
-        "step_jmRN9F": {
-          "type": "step",
-          "settings": {
-            "step": "STEP 1",
-            "title": "Patch Test and Skin Assessment",
-            "text": "<p>Your treatment begins with a full consultation and patch test carried out by one of our qualified practitioners.<br/><br/>You must have a patch test before you can have IPL as per our insurance requirements. Once you've had a patch test you can come back for your first session 48 hours later.<br/><br/>This ensures your treatment is both safe and highly effective.<br/><br/>While conducting your patch test we will assess your skin type, concerns, and sensitivity to determine the appropriate wavelength and settings for your IPL session.<br/></p>"
+            "tier_name": "Single Area",
+            "price": "£50",
+            "description": "Individual areas such as cheeks, nose, chin, or targeted age spots"
           }
         },
-        "step_jiiz8x": {
-          "type": "step",
+        "price_2": {
+          "type": "pricing_tier",
           "settings": {
-            "step": "STEP 2",
-            "title": "Treatment",
-            "text": "<p>During the session, controlled pulses of light energy are delivered to the target area.<br/><br/>The light is absorbed by pigment or blood vessels, gently breaking them down while leaving surrounding tissue unharmed.</p>"
+            "tier_name": "Single Area — Course of 3",
+            "price": "£130",
+            "description": "Three sessions for thorough pigmentation or age spot clearance",
+            "save_text": "Save £20"
           }
         },
-        "step_6jaGgE": {
-          "type": "step",
+        "price_3": {
+          "type": "pricing_tier",
           "settings": {
-            "step": "STEP 3",
-            "title": "Healing and Results Development",
-            "text": "<p>After treatment, your skin may appear slightly flushed or warm for a few hours.<br/><br/>Pigmented areas may darken temporarily before fading naturally, while redness and veins gradually diminish over time.</p>"
+            "tier_name": "Full Face Rejuvenation",
+            "price": "£80",
+            "description": "Covers rosacea reduction, red & thread vein treatment, and full face IPL facial — same price for all three"
+          }
+        },
+        "price_4": {
+          "type": "pricing_tier",
+          "settings": {
+            "tier_name": "Full Face — Course of 3",
+            "price": "£210",
+            "description": "Three sessions for significant redness reduction, vein clearance, or comprehensive facial rejuvenation",
+            "popular": true,
+            "save_text": "Save £30"
           }
         }
       },
       "block_order": [
-        "step_jmRN9F",
-        "step_jiiz8x",
-        "step_6jaGgE"
+        "price_1",
+        "price_2",
+        "price_3",
+        "price_4"
       ],
-      "disabled": true,
-      "name": "SS - Steps #11",
-      "settings": {
-        "layout": "image_content",
-        "layout_mobile": "image_content",
-        "layout_gap": 64,
-        "layout_gap_mobile": 32,
-        "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.48.16_3413fa45.jpg",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "steps_custom": false,
-        "steps_font": "josefin_sans_n4",
-        "steps_size": 12,
-        "steps_size_mobile": 12,
-        "steps_height": 100,
-        "steps_padding_horizontal": 8,
-        "steps_padding_horizontal_mobile": 8,
-        "steps_padding_vertical": 4,
-        "steps_padding_vertical_mobile": 4,
-        "steps_radius": 100,
-        "steps_border_thickness": 1,
-        "steps_content_align": "left",
-        "steps_content_align_mobile": "left",
-        "title_custom": false,
-        "title_font": "josefin_sans_n4",
-        "title_size": 24,
-        "title_size_mobile": 20,
-        "title_height": 130,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 14,
-        "text_size_mobile": 12,
-        "text_height": 150,
-        "text_mt": 8,
-        "text_mt_mobile": 8,
-        "steps_color": "#ffffff",
-        "steps_bg_color": "#e6b325",
-        "steps_border_color": "#e6b325",
-        "title_color": "#121212",
-        "text_color": "#121212",
-        "image_border_color": "#121212",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 1400,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
+      "settings": {}
     },
-    "175993612397035c9e": {
-      "type": "apps",
+    "reviews": {
+      "type": "lsc-google-reviews",
       "blocks": {
-        "appio_google_reviews_carousel1_qFMFmN": {
-          "type": "shopify://apps/appio-google-reviews/blocks/carousel1/25437a0d-2feb-4f5f-b07d-e313afa21656",
+        "rev_1": {
+          "type": "review",
           "settings": {
-            "title_type": "h2",
-            "show_callout_layout": true,
-            "card_background_color": "#f8f8f8",
-            "card_text_color": "#747171",
-            "star_color": "#fbbc05",
-            "max_line_review_content": 4,
-            "auto_scroll": true,
-            "slide_delay": 3,
-            "show_navigation_bar": true,
-            "show_reviewer_avatar": true,
-            "show_reviewer_name_detail": true,
-            "show_review_date": true,
-            "show_verified_badge": true,
-            "show_review_photos": true,
-            "show_liked_review": true,
-            "show_business_summary": true,
-            "show_business_summary_rating": true,
-            "show_business_summary_total_review": true,
-            "show_business_summary_summary_rating": true,
-            "business_summary_color": "#3a454f",
-            "show_leave_review_button": true,
-            "button_color": "#ffffff",
-            "button_background": "#4285f4"
+            "text": "I had a course of IPL treatment for rosacea and redness and the improvement has been life-changing. My skin is so much calmer and more even-toned now. The team were fantastic at explaining the treatment and managing my expectations throughout.",
+            "author": "Sarah H.",
+            "treatment": "IPL Skin Rejuvenation"
+          }
+        },
+        "rev_2": {
+          "type": "review",
+          "settings": {
+            "text": "I had my sun damage and age spots treated with IPL and the results are incredible. The spots have faded dramatically and my overall skin tone is so much more even. The team were thorough with the patch test and the aftercare guidance was brilliant.",
+            "author": "Diane O.",
+            "treatment": "IPL Skin Rejuvenation"
+          }
+        },
+        "rev_3": {
+          "type": "review",
+          "settings": {
+            "text": "Had IPL treatment for facial thread veins at Laser Skin Clinics and I'm so pleased with the outcome. The team were very knowledgeable and professional and the results have been excellent. My skin looks so much clearer and more even.",
+            "author": "Julie M.",
+            "treatment": "IPL Skin Rejuvenation"
           }
         }
       },
       "block_order": [
-        "appio_google_reviews_carousel1_qFMFmN"
+        "rev_1",
+        "rev_2",
+        "rev_3"
       ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false
-      }
+      "settings": {}
     },
-    "ss_simple_faq_jiYFWj": {
-      "type": "ss-simple-faq",
+    "faq": {
+      "type": "lsc-faq",
       "blocks": {
-        "text_Dpx4Qh": {
-          "type": "text",
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What is IPL?",
+            "answer": "<p>IPL (Intense Pulsed Light) is a non-invasive light-based treatment used to reduce pigmentation, sun damage, redness and uneven skin tone. It works by delivering controlled pulses of light energy into the skin, targeting pigment and blood vessels without damaging surrounding tissue.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "What skin concerns can IPL treat?",
+            "answer": "<p>• Sun damage</p><p>• Age spots and pigmentation</p><p>• Freckles</p><p>• Redness and flushing</p><p>• Broken capillaries</p><p>• Uneven skin tone</p><p>• Rosacea-type symptoms</p><p>• Dull skin</p><p>A consultation will confirm whether IPL is suitable for your specific concern.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "How does IPL work?",
+            "answer": "<p>IPL delivers broad-spectrum light energy into the skin. The light is absorbed by pigment (melanin) or blood vessels, which are then naturally broken down and cleared by the body over time. This results in a clearer, more even complexion.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "How does IPL differ from laser treatments?",
+            "answer": "<p>Unlike traditional lasers that use a single wavelength of light, IPL uses broad-spectrum light. This allows it to treat multiple concerns such as pigmentation and redness in the same session.</p><p>Your clinician will recommend the most appropriate treatment for your skin type and concern.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Is IPL safe?",
+            "answer": "<p>Yes. IPL is considered a safe and well-established treatment when performed using medical-grade equipment in a clinical environment. A consultation and, where appropriate, a test patch are carried out before treatment.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Is IPL safe for all skin types?",
+            "answer": "<p>IPL is generally most suitable for lighter skin tones with pigmentation or redness concerns. It may not be appropriate for darker skin tones due to the way light interacts with melanin. A full assessment will determine suitability.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "Is there any downtime?",
+            "answer": "<p>Downtime is typically minimal. You may experience:</p><p>• Mild redness</p><p>• Slight warmth</p><p>• Temporary darkening of pigmentation</p><p>These effects usually settle within a few days.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "question": "Can IPL treat Rosacea?",
+            "answer": "<p>IPL can help reduce visible redness and broken capillaries associated with certain types of rosacea. However, suitability depends on your individual skin condition and will be assessed during consultation.</p>"
+          }
+        },
+        "faq_9": {
+          "type": "faq",
+          "settings": {
+            "question": "What should I avoid after IPL?",
+            "answer": "<p>You should avoid:</p><p>• Direct sun exposure</p><p>• Tanning</p><p>• Retinoids and strong exfoliants for several days</p><p>• Heat treatments such as saunas or hot tubs for 24–48 hours</p><p>Strict sun protection is essential.</p>"
+          }
+        },
+        "faq_10": {
+          "type": "faq",
+          "settings": {
+            "question": "How long do results last?",
+            "answer": "<p>Results can be long-lasting when combined with good sun protection and skincare. Maintenance sessions may be recommended depending on your skin type and lifestyle.</p>"
+          }
+        },
+        "faq_11": {
+          "type": "faq",
+          "settings": {
+            "question": "Does IPL hurt?",
+            "answer": "<p>Most clients describe IPL as a quick, warm flicking sensation on the skin. Discomfort is usually brief and well tolerated.</p>"
+          }
+        },
+        "faq_12": {
+          "type": "faq",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Some improvement may be visible after the first session. Pigmented areas often darken slightly before flaking away within 3–7 days. Results continue to improve gradually with each session.</p>"
+          }
+        },
+        "faq_13": {
+          "type": "faq",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients require a course of 3–5 treatments spaced approximately 4 weeks apart for optimal results. The exact number depends on the severity of pigmentation or redness and your skin type.</p>"
+          }
+        },
+        "faq_14": {
+          "type": "faq",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
+        },
+        "faq_15": {
+          "type": "faq",
           "settings": {
             "question": "What can IPL treat?",
             "answer": "<p>IPL can treat a wide variety of concerns including thread veins, spider veins, sun damage, pigmentation, rosacea, and age spots.<br/><br/>It can also improve overall skin tone and texture by stimulating collagen production.</p>"
           }
         },
-        "text_7pBYAD": {
-          "type": "text",
+        "faq_16": {
+          "type": "faq",
           "settings": {
             "question": "Do I need a patch test before starting IPL?",
             "answer": "<p>You must have a patch test before you can have IPL as per our insurance requirements. Once you've had a patch test you can come back for your first session 48 hours later.<br/><br/>This ensures your treatment is both safe and highly effective.</p>"
           }
         },
-        "text_gePVTj": {
-          "type": "text",
+        "faq_17": {
+          "type": "faq",
           "settings": {
             "question": "I would like to speak to someone before I book my treatment, how is best to do this?",
             "answer": "<p>If you would like to speak to someone please do one of the below.<br/><br/>- Use the enquiry button.<br/><br/>- Contact us via email at info@laserskinclinics.co.uk<br/><br/>- Call us during opening hours on 01902 256667<br/><br/>- Send us a WhatsApp by clicking the WhatsApp button on the website.</p>"
           }
         },
-        "text_XW3hwH": {
-          "type": "text",
-          "disabled": true,
+        "faq_18": {
+          "type": "faq",
           "settings": {
             "question": "What is your cancellation policy?",
             "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
-        "text_V4eLzX": {
-          "type": "text",
+        "faq_19": {
+          "type": "faq",
           "settings": {
             "question": "What happens if I want to book a course?",
             "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
           }
         },
-        "text_JMUbWR": {
-          "type": "text",
+        "faq_20": {
+          "type": "faq",
           "settings": {
             "question": "Who is IPL suitable for?",
             "answer": "<p>IPL is suitable for most skin types and is ideal for individuals looking to treat redness, pigmentation, or vascular concerns without downtime.<br/><br/>A patch test is always carried out beforehand to confirm suitability.</p>"
           }
         },
-        "text_UiGdVT": {
-          "type": "text",
+        "faq_21": {
+          "type": "faq",
           "settings": {
             "question": "How many sessions will I need?",
             "answer": "<p>Most clients require a course of 3 to 6 sessions spaced 3 to 4 weeks apart for best results.<br/><br/>Your practitioner will recommend the ideal number of sessions based on your skin condition and goals.</p>"
           }
         },
-        "text_b7Jhnf": {
-          "type": "text",
+        "faq_22": {
+          "type": "faq",
           "settings": {
             "question": "When will I see results?",
             "answer": "<p>Many clients notice improvement after the first session, with continued enhancement as pigmentation fades and redness reduces over the course of treatments.</p>"
           }
         },
-        "text_DKF3cR": {
-          "type": "text",
+        "faq_23": {
+          "type": "faq",
           "settings": {
             "question": "Does IPL hurt?",
             "answer": "<p>The treatment is generally comfortable.<br/><br/>You may feel a mild, warm snapping sensation during each light pulse, similar to a light elastic flick on the skin.</p>"
@@ -964,1527 +474,53 @@
         }
       },
       "block_order": [
-        "text_Dpx4Qh",
-        "text_7pBYAD",
-        "text_gePVTj",
-        "text_XW3hwH",
-        "text_V4eLzX",
-        "text_JMUbWR",
-        "text_UiGdVT",
-        "text_b7Jhnf",
-        "text_DKF3cR"
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9",
+        "faq_10",
+        "faq_11",
+        "faq_12",
+        "faq_13",
+        "faq_14",
+        "faq_15",
+        "faq_16",
+        "faq_17",
+        "faq_18",
+        "faq_19",
+        "faq_20",
+        "faq_21",
+        "faq_22",
+        "faq_23"
       ],
-      "disabled": true,
-      "name": "SS - FAQ #1",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "icon_color": "#ffffff",
-        "hover_color": "#efefef",
-        "question_color": "#ffffff",
-        "background_color": "#e6b325",
-        "answer_color": "#000000",
-        "answer_bg_color": "#ffffff",
-        "questions-font-size": 1
-      }
+      "settings": {}
     },
-    "product_hero_6K8C8q": {
-      "type": "product-hero",
-      "blocks": {
-        "check_item_a63ffc": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Targets pigmentation, sun damage & redness"
-          }
-        },
-        "check_item_EwrNni": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "Improves overall skin clarity and tone"
-          }
-        },
-        "check_item_BnpDyF": {
-          "type": "check_item",
-          "settings": {
-            "icon": "shield_check",
-            "text": "No invasive procedures or downtime"
-          }
-        },
-        "trust_item_cMcNd6": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "star",
-            "title": "Google 4.9/5",
-            "subtitle": "",
-            "show_stars": true
-          }
-        },
-        "trust_item_Thz7tn": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "medical",
-            "title": "Medical-grade light technology",
-            "subtitle": "technology",
-            "show_stars": false
-          }
-        },
-        "trust_item_pFKehB": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "calendar",
-            "title": "7-Day Appointment",
-            "subtitle": "Guarantee",
-            "show_stars": false
-          }
-        },
-        "trust_item_mgwPYy": {
-          "type": "trust_item",
-          "settings": {
-            "icon": "finance",
-            "title": "0% Finance Available",
-            "subtitle": "",
-            "show_stars": false
-          }
-        }
-      },
-      "block_order": [
-        "check_item_a63ffc",
-        "check_item_EwrNni",
-        "check_item_BnpDyF",
-        "trust_item_cMcNd6",
-        "trust_item_Thz7tn",
-        "trust_item_pFKehB",
-        "trust_item_mgwPYy"
-      ],
-      "name": "Product Hero",
+    "contact": {
+      "type": "lsc-dual-contact",
       "settings": {
-        "background_image": "shopify://shop_images/Gemini_Generated_Image_5d79m5d79m5d79m5.png",
-        "image_position": "center center",
-        "desktop_height": 900,
-        "mobile_height": 200,
-        "background_color": "#fbeae7",
-        "overlay_color_start": "rgba(0,0,0,0)",
-        "overlay_color_mid": "rgba(0,0,0,0)",
-        "overlay_color_fade": "rgba(0,0,0,0)",
-        "heading": "Clinically Controlled IPL\nFor Pigmentation, Redness & Sun Damage",
-        "subheading_highlight": "Advanced IPL Technology",
-        "subheading": " ",
-        "heading_font_size": 54,
-        "subheading_font_size": 38,
-        "heading_color": "#3a3a3a",
-        "highlight_color": "#c8962e",
-        "description": "<p>A medical-grade light treatment designed to safely reduce pigmentation, broken capillaries and uneven skin tone with minimal downtime.</p>",
-        "body_font_size": 17,
-        "text_color": "#5a5a5a",
-        "checkmark_color": "#c4a080",
-        "button_label": "Book IPL Test Patch & Consultation",
-        "button_link": "#cf-template--25630357225852__consultation_form_LbAXec",
-        "button_open_new_tab": false,
-        "button_bg": "#cc8e75",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#b08d66",
-        "trust_bar_bg": "#fbeae7",
-        "trust_bar_text_color": "#3a3a3a",
-        "trust_icon_color": "#999999",
-        "trust_star_color": "#c8962e",
-        "content_max_width": 580
-      }
-    },
-    "info_hero_fHVYLH": {
-      "type": "info-hero",
-      "blocks": {
-        "point_EWjmNU": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Targets sun damage and age spots"
-          }
-        },
-        "point_JXRMEN": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Reduces redness and visible capillaries"
-          }
-        },
-        "point_EfF3BD": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Improves uneven tone and dullness"
-          }
-        },
-        "point_cTxT9Y": {
-          "type": "point",
-          "settings": {
-            "title": "",
-            "text": "Helps maintain clearer, brighter skin"
-          }
-        }
-      },
-      "block_order": [
-        "point_EWjmNU",
-        "point_JXRMEN",
-        "point_EfF3BD",
-        "point_cTxT9Y"
-      ],
-      "name": "Info Hero",
-      "settings": {
-        "heading": "What Is IPL Skin Rejuvenation?",
-        "body": "<p>IPL (Intense Pulsed Light) is a non-invasive treatment designed to improve overall skin tone and clarity. It is commonly used to treat sun damage, pigmentation, redness, and uneven skin tone helping restore a brighter, more even complexion over time.<br/><br/>Unlike lasers, IPL uses broad-spectrum light to treat multiple pigment and vascular concerns simultaneously.<br/></p>",
-        "points_heading": "Why patients choose IPL",
-        "footer_text": "",
-        "bg_image": "shopify://shop_images/Untitled_design_21.png",
-        "bg_image_mobile": "shopify://shop_images/Untitled_design_22.png",
-        "bg_position": "right center",
-        "section_height": 600,
-        "overlay_strong": "rgba(0,0,0,0)",
-        "overlay_mid": "rgba(0,0,0,0)",
-        "overlay_fade": "rgba(0,0,0,0)",
-        "shimmer_opacity": 50,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "icon_color": "#8a7050",
-        "mobile_content_bg": "#ebe1e3",
-        "mobile_overlay": false,
-        "heading_font_size": 44,
-        "body_font_size": 17,
-        "content_width": 600,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_eDnBAR": {
-      "type": "slideshow",
-      "blocks": {
-        "image_gB4yHn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/2d_dbad65b1-70a8-482c-9ec7-a1036cd68f56.png",
-            "mobile_image": "shopify://shop_images/2m_a0969f96-8e7e-4e98-86c9-89eeadf0454c.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_gB4yHn"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "slideshow_WXFRip": {
-      "type": "slideshow",
-      "blocks": {
-        "image_DnYYQ9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/3d_1187b914-5857-4f56-bb57-40ad6a9dc472.png",
-            "mobile_image": "shopify://shop_images/3m_ad6483b4-4559-4f8d-807f-338f611ea224.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_DnYYQ9"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "concern_grid_RprEnc": {
-      "type": "concern-grid",
-      "blocks": {
-        "concern_zafiNp": {
-          "type": "concern",
-          "settings": {
-            "title": "Clients with sun damage or age spots",
-            "subtitle": "If you’ve noticed pigmentation, freckles or sun spots that won’t fade, IPL can help gradually lighten and even out the skin."
-          }
-        },
-        "concern_3WEp33": {
-          "type": "concern",
-          "settings": {
-            "title": "Persistent redness or flushing",
-            "subtitle": "Suitable for those experiencing redness, visible capillaries or rosacea-type symptoms."
-          }
-        },
-        "concern_YUBmhr": {
-          "type": "concern",
-          "settings": {
-            "title": "Uneven skin tone",
-            "subtitle": "If your complexion appears dull, patchy or inconsistent, IPL helps restore clarity and brightness."
-          }
-        },
-        "concern_yHTdPi": {
-          "type": "concern",
-          "settings": {
-            "title": "Early signs of ageing",
-            "subtitle": "A great option for improving tone and texture without injectables or structural change."
-          }
-        },
-        "concern_GfRVVK": {
-          "type": "concern",
-          "settings": {
-            "title": "Clients wanting low downtime",
-            "subtitle": "IPL is non-invasive and typically involves minimal disruption to your routine."
-          }
-        },
-        "concern_YGkmWb": {
-          "type": "concern",
-          "settings": {
-            "title": "Maintenance",
-            "subtitle": "Supports long-term skin clarity by helping manage pigmentation and redness before it builds up again."
-          }
-        }
-      },
-      "block_order": [
-        "concern_zafiNp",
-        "concern_3WEp33",
-        "concern_YUBmhr",
-        "concern_yHTdPi",
-        "concern_GfRVVK",
-        "concern_YGkmWb"
-      ],
-      "custom_css": [
-        ".cgd__grid {max-width: 100% !important;}"
-      ],
-      "name": "Concern Grid",
-      "settings": {
-        "heading": "Who Is IPL Best For?",
-        "subtitle": "IPL is ideal for clients who want clearer, more even-looking skin without invasive procedures or significant downtime.",
-        "bg_position": "left center",
-        "section_height": 600,
-        "overlay_strong": "#ddd0c4e8",
-        "overlay_mid": "#ddd0c4a1",
-        "overlay_fade": "#ddd0c440",
-        "shimmer_opacity": 60,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "icon_color": "#8a7050",
-        "card_bg": "#ece5ddbf",
-        "heading_font_size": 42,
-        "card_title_font_size": 20,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "slideshow_x36jLg": {
-      "type": "slideshow",
-      "blocks": {
-        "image_XwcdzD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/4d_a4aa683a-4e5a-4f61-bde7-189a5450ed1c.png",
-            "mobile_image": "shopify://shop_images/4m_05da8b72-ba6e-4509-ad35-6b2f1d365378.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_XwcdzD"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "slideshow_FDrTDa": {
-      "type": "slideshow",
-      "blocks": {
-        "image_eJ6tWM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/5d_1ee06f59-f08e-4317-95b2-a712fb0b8a0e.png",
-            "mobile_image": "shopify://shop_images/5m_1bf9e363-045f-4093-a1d1-7002c359d566.png",
-            "subheading": "",
-            "title": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 0,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_eJ6tWM"
-      ],
-      "disabled": true,
-      "name": "t:sections.slideshow.presets.slideshow.name",
-      "settings": {
-        "allow_transparent_header": false,
-        "show_next_section_button": true,
-        "media_size": "auto",
-        "show_initial_transition": false,
-        "autoplay": true,
-        "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
-        "background": "#000000",
-        "controls_color": "#ffffff",
-        "show_consultation_form": false,
-        "form_right_position": 60,
-        "form_top_position": 50,
-        "form_max_width": 420,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 28,
-        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_background": "#f8f8f8",
-        "banner_border_color": "#e0e0e0",
-        "banner_border_radius": 6,
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_icon_color": "#666666",
-        "banner_font_size": 13,
-        "form_heading": "Request Your Consultation",
-        "form_heading_color": "#000000",
-        "form_heading_font_size": 22,
-        "form_heading_font_weight": "500",
-        "label_color": "#333333",
-        "label_font_size": 13,
-        "label_font_weight": "400",
-        "required_color": "#dc3545",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 4,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 14,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "treatment_label": "Which treatment are you interested in?",
-        "treatment_placeholder": "Select Service",
-        "treatment_required": true,
-        "show_treatment_dropdown": false,
-        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
-        "first_name_label": "First Name",
-        "last_name_label": "Last Name",
-        "email_label": "Email Address",
-        "phone_label": "Phone Number",
-        "show_time_preference": true,
-        "time_label": "Best time to contact you?",
-        "time_options": "Morning, Afternoon, Evening",
-        "time_required": true,
-        "show_contact_preference": true,
-        "contact_method_label": "How may we reach you? (Select all that apply)",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "contact_method_required": true,
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 13,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Request Callback",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_font_weight": "600",
-        "button_border_radius": 6,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "show_google_rating": true,
-        "google_rating_score": "4.9",
-        "google_rating_reviews": "based on over 200 reviews",
-        "rating_border_color": "#e0e0e0",
-        "rating_text_color": "#666666",
-        "rating_font_size": 13,
-        "rating_score_color": "#333333",
-        "rating_score_font_size": 18,
-        "rating_star_color": "#f5c518",
-        "rating_reviews_color": "#888888"
-      }
-    },
-    "icon_circles_grid_m6Ce7L": {
-      "type": "icon-circles-grid",
-      "blocks": {
-        "item_XFDhKw": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/1_5c148c64-8108-4025-b8ca-b4d6f5224a65.png",
-            "title": "Face",
-            "description": "Sun damage, age spots, redness, broken capillaries"
-          }
-        },
-        "item_FAPmVi": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/2_973cb0bb-770c-4d11-b991-44e1d9496eac.png",
-            "title": "Neck",
-            "description": "Redness, age spots, fine lines"
-          }
-        },
-        "item_PGRwqw": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/3_3b25a424-70a4-40f8-ab65-089be6b9a412.png",
-            "title": "Chest",
-            "description": "Sun damage, redness, broken capillaries"
-          }
-        },
-        "item_iFCKic": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/4_d2358e17-771c-478b-b668-0da6e9ed51f3.png",
-            "title": "Hands",
-            "description": "Sun damage, age spots, freckles"
-          }
-        },
-        "item_eTq739": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/5_056aa4e5-42a1-419f-b962-735dda475cb7.png",
-            "title": "Legs",
-            "description": "Sun damage and pigmentation on lower legs"
-          }
-        }
-      },
-      "block_order": [
-        "item_XFDhKw",
-        "item_FAPmVi",
-        "item_PGRwqw",
-        "item_iFCKic",
-        "item_eTq739"
-      ],
-      "name": "Icon Circles Grid",
-      "settings": {
-        "heading": "IPL Treatment Areas",
-        "subtitle": "Clinically effective for reducing pigmentation, vascular redness and restoring skin clarity.",
-        "section_bg": "#f3e7eb",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "circle_border": "#ece5dd",
-        "circle_bg": "#f0e8e0",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "circle_size": 140,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "before_after_results_zFhggc": {
-      "type": "before-after-results",
-      "blocks": {
-        "result_card_P4GC4q": {
-          "type": "result_card",
-          "settings": {
-            "title": "Mild pigmentation or redness",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.52.48.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.52.59.png",
-            "session_info": "After 2 sessions.<br>4–6 weeks post treatment.",
-            "benefit": "Reduces mild sun damage and freckles.<br>\nSoftens visible redness.<br>\nBrightens dull, uneven tone.<br>\nIdeal for early pigmentation concerns.<br>"
-          }
-        },
-        "result_card_zKGdd7": {
-          "type": "result_card",
-          "settings": {
-            "title": "Moderate pigmentation or persistent redness",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.13.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.19.png",
-            "session_info": "After 3 sessions.<br>8–12 weeks post treatment.",
-            "benefit": "Fades deeper sun spots and age spots.<br>\nImproves diffuse redness and flushing.<br>\nRefines overall skin clarity.<br>\nBuilds gradual, cumulative improvement."
-          }
-        },
-        "result_card_gNi7Nm": {
-          "type": "result_card",
-          "settings": {
-            "title": "Advanced pigmentation or vascular concerns",
-            "before_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.24.png",
-            "after_image": "shopify://shop_images/Screenshot_2026-02-28_at_05.53.29.png",
-            "session_info": "After 6 sessions.<br>Results develop over 3–4 months.",
-            "benefit": "Targets stubborn pigmentation.<br>\nImproves visible capillaries.<br>\nSupports long-term tone correction.<br>\nDesigned for structured treatment plans."
-          }
-        }
-      },
-      "block_order": [
-        "result_card_P4GC4q",
-        "result_card_zKGdd7",
-        "result_card_gNi7Nm"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".bar__card-benefit {margin-top: 0 !important;}"
-      ],
-      "name": "Before After Results",
-      "settings": {
-        "heading": "<p>Real results, tailored by treatment plan.</p>",
-        "subtitle": "IPL treatments adjusted to your skin type, pigmentation level, and redness severity.",
-        "before_label": "Before",
-        "after_label": "After",
-        "footer_text": "*Individual results may vary.",
-        "section_bg": "#e5dfda",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#2a2a2a",
-        "text_color": "#555555",
-        "accent_color": "#b09a60",
-        "card_bg": "#f5f0eb",
-        "heading_font_size": 40,
-        "card_title_font_size": 24,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "process_timeline_gFy3jQ": {
-      "type": "process-timeline",
-      "blocks": {
-        "stage_RGcHMK": {
-          "type": "stage",
-          "settings": {
-            "title": "Immediately after treatment",
-            "points": "Skin may feel warm or slightly flushed||Mild tightening sensation"
-          }
-        },
-        "stage_apBgqf": {
-          "type": "stage",
-          "settings": {
-            "title": "Days 3–7",
-            "points": "Pigmented areas may darken temporarily before flaking away.||Skin tone begins to appear clearer and brighter"
-          }
-        },
-        "stage_DNEaYB": {
-          "type": "stage",
-          "settings": {
-            "title": "Weeks 2–4",
-            "points": "Continued reduction in pigmentation ||Improved skin clarity and texture||Results become more noticeable with each session"
-          }
-        },
-        "stage_tCTxYa": {
-          "type": "stage",
-          "settings": {
-            "title": "Ongoing results",
-            "points": "Best results achieved through a course of treatments.||Skin appears clearer, more even, and refined over time"
-          }
-        }
-      },
-      "block_order": [
-        "stage_RGcHMK",
-        "stage_apBgqf",
-        "stage_DNEaYB",
-        "stage_tCTxYa"
-      ],
-      "name": "Process Timeline",
-      "settings": {
-        "heading": "How IPL Works & What to Expect",
-        "sub_heading": "How it works",
-        "body": "<p>IPL delivers controlled pulses of light energy into the skin, targeting excess pigment and visible redness. The light energy is absorbed by pigment or blood vessels, which are then naturally broken down by the body over time. </p>",
-        "timeline_label": "What to expect",
-        "footer_text": "A course of 3–5 treatments spaced 4 weeks apart is typically recommended for optimal pigmentation correction.",
-        "section_bg": "#f8e3e8",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#5a4a3a",
-        "accent_color": "#b8886a",
-        "line_color": "#baa898",
-        "dot_color": "#baa898",
-        "show_body_card": true,
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "aftercare_cards_pYfVUM": {
-      "type": "aftercare-cards",
-      "blocks": {
-        "card_Di89ih": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Aftercare Tips",
-            "points": "Apply gentle sunscreen daily, SPF 30+||Avoid retinoids & exfoliating products for 3–5 days||Avoid strenuous exercise, saunas, & hot tubs for 24–48 hours||Keep skin hydrated and don't pick or scratch at treated areas"
-          }
-        },
-        "card_FMe8i6": {
-          "type": "card",
-          "settings": {
-            "card_heading": "Expected Downtime",
-            "points": "Mild redness and darkening of pigment||Any swelling is typically mild and short-lived||Within 3–7 days, treated areas will flake or fade||Makeup may be worn if skin isn't irritated; apply gently"
-          }
-        }
-      },
-      "block_order": [
-        "card_Di89ih",
-        "card_FMe8i6"
-      ],
-      "name": "Aftercare Cards",
-      "settings": {
-        "heading": "IPL Aftercare & Downtime",
-        "subtitle": "To ensure safe, natural-looking results, patients should follow these key aftercare steps.",
-        "footer_text": "Temporary darkening of pigmentation and mild redness are normal and part of the treatment process.<br>\n<br>Strict sun protection is essential following IPL treatment to protect results and prevent pigmentation recurrence.",
-        "show_checkmarks": false,
-        "layout": "grid",
-        "section_bg": "#f5dde5",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a2820",
-        "text_color": "#4a3a30",
-        "accent_color": "#b8886a",
-        "card_bg": "#f5efe9",
-        "card_border": "#d8cfc5",
-        "heading_font_size": 38,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "simple_pricing_rows_Ujrjtf": {
-      "type": "simple-pricing-rows",
-      "blocks": {
-        "price_row_kUCDPj": {
-          "type": "price_row",
-          "settings": {
-            "name": "1 Session",
-            "price": "£100",
-            "per_label": "",
-            "total": ""
-          }
-        },
-        "price_row_DHUjHm": {
-          "type": "price_row",
-          "settings": {
-            "name": "3 Sessions",
-            "price": "£90",
-            "per_label": "per session",
-            "total": "Total £270"
-          }
-        },
-        "price_row_HAaiWW": {
-          "type": "price_row",
-          "settings": {
-            "name": "6 Sessions",
-            "price": "£80",
-            "per_label": "per session",
-            "total": "Total £480"
-          }
-        }
-      },
-      "block_order": [
-        "price_row_kUCDPj",
-        "price_row_DHUjHm",
-        "price_row_HAaiWW"
-      ],
-      "name": "Simple Pricing Rows",
-      "settings": {
-        "heading": "IPL Skin Rejuvenation Pricing",
-        "footer_text": "Pricing is based on treatment area. A course is typically recommended for optimal skin clarity and long-term improvement.",
-        "section_bg": "#3a3a42",
-        "show_texture": true,
-        "texture_opacity": 90,
-        "light_color": "#e0d8d0",
-        "gold_color": "#d4c4a0",
-        "heading_font_size": 42,
-        "body_font_size": 16,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "expectations_trust_DiEwP7": {
-      "type": "expectations-trust",
-      "blocks": {
-        "trust_point_rQaEkx": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "star",
-            "text": "4.9 Google rating"
-          }
-        },
-        "trust_point_wGJHzA": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "shield",
-            "text": "Medical-grade light technology"
-          }
-        },
-        "trust_point_hngUqH": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "finance",
-            "text": "0% finance available"
-          }
-        },
-        "trust_point_Mfb3Hy": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "heart",
-            "text": "Minimal downtime treatment"
-          }
-        },
-        "trust_point_dr4kBU": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "parking",
-            "text": "Free parking"
-          }
-        },
-        "trust_point_6TKwmf": {
-          "type": "trust_point",
-          "settings": {
-            "icon": "clock",
-            "text": "Established 10+ years"
-          }
-        }
-      },
-      "block_order": [
-        "trust_point_rQaEkx",
-        "trust_point_wGJHzA",
-        "trust_point_hngUqH",
-        "trust_point_Mfb3Hy",
-        "trust_point_dr4kBU",
-        "trust_point_6TKwmf"
-      ],
-      "name": "Expectations & Trust",
-      "settings": {
-        "heading": "Transparent pricing. Trusted clinical standards.",
-        "subtitle": "Everything you need to feel confident in your treatment.",
-        "card_title": "What you can expect at Laser Skin Clinics",
-        "card_description": "<p>IPL (Intense Pulsed Light) is delivered using medical-grade light technology designed to target pigmentation, redness, and sun damage safely and effectively.</p><p>Each treatment is structured to improve overall skin tone and clarity while minimising disruption to surrounding tissue.</p><p>We prioritise controlled energy delivery, consistent results, and minimal downtime.</p>",
-        "section_bg": "#f4e0d2",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "icon_color": "#777777",
-        "card_bg": "#f0ece7",
-        "card_border": "#ddd9d3",
-        "heading_font_size": 44,
-        "card_heading_font_size": 28,
-        "body_font_size": 16,
-        "button_label": "Book your test patch & consultation",
-        "button_link": "#cf-template--25630357225852__consultation_form_LbAXec",
-        "button_open_new_tab": false,
-        "button_bg": "#4a4a4a",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#333333",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "consultation_form_LbAXec": {
-      "type": "consultation-form",
-      "name": "Consultation Form",
-      "settings": {
-        "section_width": 1200,
-        "section_padding_top": 50,
-        "section_padding_bottom": 50,
-        "section_padding_side": 20,
-        "section_background": "#f9f9f9",
-        "form_max_width": 700,
-        "form_background": "#ffffff",
-        "form_border_radius": 12,
-        "form_padding": 40,
-        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
-        "show_priority_banner": true,
-        "banner_highlight_text": "Priority Response Guarantee:",
-        "banner_text": "We will contact you within 24 hours.",
-        "banner_text_color": "#333333",
-        "banner_highlight_color": "#000000",
-        "banner_font_size": 14,
-        "form_heading": "Test Patch And Consultation Booking Form",
-        "form_subheading": "",
-        "heading_color": "#000000",
-        "heading_font_size": 26,
-        "heading_font_weight": "500",
-        "subheading_color": "#777777",
-        "subheading_font_size": 15,
-        "label_color": "#333333",
-        "label_font_size": 14,
-        "label_font_weight": "400",
-        "input_background": "#ffffff",
-        "input_border_color": "#d0d0d0",
-        "input_border_width": 1,
-        "input_border_radius": 6,
-        "input_text_color": "#333333",
-        "input_placeholder_color": "#999999",
-        "input_font_size": 15,
-        "input_focus_border_color": "#b8a164",
-        "input_focus_shadow_color": "#b8a16426",
-        "show_treatment_field": true,
-        "treatment_label": "Which treatment are you interested in?",
-        "default_treatment_value": "Consultation",
-        "preselected_background": "#f5f5f5",
-        "preselected_text_color": "#333333",
-        "name_label": "Name",
-        "name_placeholder": "Your Name",
-        "contact_method_label": "How can we reach you?",
-        "contact_method_options": "Email, WhatsApp, Phone Call",
-        "email_label": "Email Address",
-        "email_placeholder": "Email Address",
-        "whatsapp_number": "447798983387",
-        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
-        "wa_you_contact_text": "I'll message you",
-        "wa_we_contact_text": "Message me",
-        "whatsapp_button_text": "Chat on WhatsApp",
-        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
-        "whatsapp_button_background": "#25d366",
-        "whatsapp_button_hover_background": "#1fbe59",
-        "whatsapp_button_text_color": "#ffffff",
-        "clinic_phone_number": "01902256667",
-        "call_phone_label": "Your phone number",
-        "call_time_label": "Best time to call you?",
-        "call_time_placeholder": "Select a time",
-        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
-        "phone_placeholder": "Phone Number",
-        "pill_background": "#ffffff",
-        "pill_text_color": "#333333",
-        "pill_border_color": "#d0d0d0",
-        "pill_border_width": 1,
-        "pill_border_radius": 20,
-        "pill_font_size": 14,
-        "pill_hover_background": "#f5f5f5",
-        "pill_hover_border_color": "#b8a164",
-        "pill_selected_background": "#b8a164",
-        "pill_selected_text_color": "#ffffff",
-        "pill_selected_border_color": "#b8a164",
-        "show_message_field": true,
-        "message_label": "How can we help you? (Optional Message)",
-        "message_placeholder": "",
-        "button_text": "Submit Form",
-        "button_background": "#b8a164",
-        "button_hover_background": "#9a8654",
-        "button_text_color": "#ffffff",
-        "button_font_size": 15,
-        "button_font_weight": "600",
-        "button_border_radius": 8,
-        "button_shadow_color": "#b8a1644d",
-        "success_message": "Thank you! We will contact you within 24 hours.",
-        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
-        "privacy_text_color": "#999999",
-        "privacy_font_size": 13
-      }
-    },
-    "faq_updated_XKLFYm": {
-      "type": "faq-updated",
-      "blocks": {
-        "faq_item_TrKUay": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What is IPL?",
-            "answer": "<p>IPL (Intense Pulsed Light) is a non-invasive light-based treatment used to reduce pigmentation, sun damage, redness and uneven skin tone. It works by delivering controlled pulses of light energy into the skin, targeting pigment and blood vessels without damaging surrounding tissue.</p>"
-          }
-        },
-        "faq_item_ekAyff": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What skin concerns can IPL treat?",
-            "answer": "<p>• Sun damage</p><p>• Age spots and pigmentation</p><p>• Freckles</p><p>• Redness and flushing</p><p>• Broken capillaries</p><p>• Uneven skin tone</p><p>• Rosacea-type symptoms</p><p>• Dull skin</p><p>A consultation will confirm whether IPL is suitable for your specific concern.</p>"
-          }
-        },
-        "faq_item_LnPdp6": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How does IPL work?",
-            "answer": "<p>IPL delivers broad-spectrum light energy into the skin. The light is absorbed by pigment (melanin) or blood vessels, which are then naturally broken down and cleared by the body over time. This results in a clearer, more even complexion.</p>"
-          }
-        },
-        "faq_item_p7xyra": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How does IPL differ from laser treatments?",
-            "answer": "<p>Unlike traditional lasers that use a single wavelength of light, IPL uses broad-spectrum light. This allows it to treat multiple concerns such as pigmentation and redness in the same session.</p><p>Your clinician will recommend the most appropriate treatment for your skin type and concern.</p>"
-          }
-        },
-        "faq_item_AwE9mm": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is IPL safe?",
-            "answer": "<p>Yes. IPL is considered a safe and well-established treatment when performed using medical-grade equipment in a clinical environment. A consultation and, where appropriate, a test patch are carried out before treatment.</p>"
-          }
-        },
-        "faq_item_8J4FVT": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is IPL safe for all skin types?",
-            "answer": "<p>IPL is generally most suitable for lighter skin tones with pigmentation or redness concerns. It may not be appropriate for darker skin tones due to the way light interacts with melanin. A full assessment will determine suitability.</p>"
-          }
-        },
-        "faq_item_feHCMU": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is there any downtime?",
-            "answer": "<p>Downtime is typically minimal. You may experience:</p><p>• Mild redness</p><p>• Slight warmth</p><p>• Temporary darkening of pigmentation</p><p>These effects usually settle within a few days.</p>"
-          }
-        },
-        "faq_item_6Qbapq": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can IPL treat Rosacea?",
-            "answer": "<p>IPL can help reduce visible redness and broken capillaries associated with certain types of rosacea. However, suitability depends on your individual skin condition and will be assessed during consultation.</p>"
-          }
-        },
-        "faq_item_RGQkYd": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What should I avoid after IPL?",
-            "answer": "<p>You should avoid:</p><p>• Direct sun exposure</p><p>• Tanning</p><p>• Retinoids and strong exfoliants for several days</p><p>• Heat treatments such as saunas or hot tubs for 24–48 hours</p><p>Strict sun protection is essential.</p>"
-          }
-        },
-        "faq_item_mGagE4": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How long do results last?",
-            "answer": "<p>Results can be long-lasting when combined with good sun protection and skincare. Maintenance sessions may be recommended depending on your skin type and lifestyle.</p>"
-          }
-        },
-        "faq_item_MJqLKK": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Does IPL hurt?",
-            "answer": "<p>Most clients describe IPL as a quick, warm flicking sensation on the skin. Discomfort is usually brief and well tolerated.</p>"
-          }
-        },
-        "faq_item_XriMjF": {
-          "type": "faq_item",
-          "settings": {
-            "question": "When will I see results?",
-            "answer": "<p>Some improvement may be visible after the first session. Pigmented areas often darken slightly before flaking away within 3–7 days. Results continue to improve gradually with each session.</p>"
-          }
-        },
-        "faq_item_n8aeTB": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How many sessions will I need?",
-            "answer": "<p>Most clients require a course of 3–5 treatments spaced approximately 4 weeks apart for optimal results. The exact number depends on the severity of pigmentation or redness and your skin type.</p>"
-          }
-        },
-        "faq_item_gaapAz": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What payment options do you offer?",
-            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_item_TrKUay",
-        "faq_item_ekAyff",
-        "faq_item_LnPdp6",
-        "faq_item_p7xyra",
-        "faq_item_AwE9mm",
-        "faq_item_8J4FVT",
-        "faq_item_feHCMU",
-        "faq_item_6Qbapq",
-        "faq_item_RGQkYd",
-        "faq_item_mGagE4",
-        "faq_item_MJqLKK",
-        "faq_item_XriMjF",
-        "faq_item_n8aeTB",
-        "faq_item_gaapAz"
-      ],
-      "name": "FAQ Dark Theme",
-      "settings": {
-        "section_bg_color": "#ededed",
-        "max_width": 900,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "side_padding": 30,
-        "heading": "Your IPL Questions. Answered",
-        "heading_color": "#1c1c1c",
-        "heading_font_size": 24,
-        "heading_font_weight": "400",
-        "heading_font_style": "italic",
-        "heading_alignment": "center",
-        "heading_margin_bottom": 50,
-        "question_color": "#1c1c1c",
-        "question_font_size": 16,
-        "question_font_weight": "600",
-        "show_underline": true,
-        "underline_color": "#b8a164",
-        "underline_width": 60,
-        "underline_height": 2,
-        "answer_color": "#1c1c1c",
-        "answer_font_size": 14,
-        "answer_line_height": 1.7,
-        "answer_margin_top": 16,
-        "divider_color": "#333333",
-        "item_padding_vertical": 30,
-        "icon_color": "#b8a164",
-        "icon_active_color": "#b8a164",
-        "icon_active_bg": "rgba(0,0,0,0)",
-        "icon_size": 24,
-        "icon_border_width": 2,
-        "show_decoration": false,
-        "decoration_color": "#b8a164",
-        "decoration_size": 40,
-        "decoration_opacity": 0.6,
-        "all_items_open": false,
-        "first_item_open": false,
-        "allow_multiple_open": true
-      }
-    },
-    "location_contact_L8f8Ge": {
-      "type": "location-contact",
-      "blocks": {
-        "contact_QdzzVw": {
-          "type": "contact",
-          "settings": {
-            "icon": "phone",
-            "label": "Phone:",
-            "value": "01902 256667",
-            "link": "tel:01902256667",
-            "open_new_tab": false
-          }
-        },
-        "contact_3pJ3pY": {
-          "type": "contact",
-          "settings": {
-            "icon": "whatsapp",
-            "label": "WhatsApp:",
-            "value": "07798983387",
-            "link": "https://wa.me/447798983387",
-            "open_new_tab": false
-          }
-        },
-        "contact_pWPdny": {
-          "type": "contact",
-          "settings": {
-            "icon": "email",
-            "label": "Phone:",
-            "value": "info@laserskinclinics.co.uk",
-            "link": "mailto:info@laserskinclinics.co.uk",
-            "open_new_tab": false
-          }
-        }
-      },
-      "block_order": [
-        "contact_QdzzVw",
-        "contact_3pJ3pY",
-        "contact_pWPdny"
-      ],
-      "name": "Location & Contact",
-      "settings": {
-        "label": "Location & Contact",
-        "heading": "Find Us / Visit the Clinic",
-        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
-        "show_hours": true,
-        "hours_title": "Opening Hours:",
-        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
-        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-        "info_bg": "#d8dadc",
-        "show_texture": true,
-        "texture_opacity": 80,
-        "heading_color": "#3a3a3a",
-        "text_color": "#555555",
-        "accent_color": "#b08d57",
-        "heading_font_size": 40,
-        "body_font_size": 16,
-        "button_label": "BOOK CONSULTATION",
-        "button_link": "#cf-template--25630357225852__consultation_form_LbAXec",
-        "button_open_new_tab": false,
-        "button_bg": "#b08d57",
-        "button_text_color": "#ffffff",
-        "button_bg_hover": "#97763e"
+        "whatsapp_message": "Hi! I'd like to book an IPL consultation and patch test please."
       }
     }
   },
   "order": [
-    "main",
-    "treatment_tabs_section_JPLd7G",
-    "ss_image_with_text_12_gUF6fh",
-    "ss_image_with_text_9_GLgAya",
-    "ss_clothing_image_grid_wNiTtn",
-    "rich_text_nziPUE",
-    "ss_steps_11_7cMyRT",
-    "175993612397035c9e",
-    "ss_simple_faq_jiYFWj",
-    "product_hero_6K8C8q",
-    "info_hero_fHVYLH",
-    "slideshow_eDnBAR",
-    "slideshow_WXFRip",
-    "concern_grid_RprEnc",
-    "slideshow_x36jLg",
-    "slideshow_FDrTDa",
-    "icon_circles_grid_m6Ce7L",
-    "before_after_results_zFhggc",
-    "process_timeline_gFy3jQ",
-    "aftercare_cards_pYfVUM",
-    "simple_pricing_rows_Ujrjtf",
-    "expectations_trust_DiEwP7",
-    "consultation_form_LbAXec",
-    "faq_updated_XKLFYm",
-    "location_contact_L8f8Ge"
+    "product_hero",
+    "trust_bar",
+    "quick_facts",
+    "what_is",
+    "what_it_treats",
+    "how_it_works",
+    "suitability",
+    "timeline",
+    "aftercare",
+    "why_choose",
+    "pricing",
+    "reviews",
+    "faq",
+    "contact"
   ]
 }

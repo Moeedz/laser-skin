@@ -9,12 +9,136 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "hero": {
+      "type": "lsc-hero",
+      "settings": {
+        "heading": "We Build Skin. Not Just Confidence.",
+        "subheading": "Laser Skin Clinics is a medically-led aesthetic clinic in Wolverhampton, founded on one principle: your results should be real, measurable, and safe. Meet the team behind them.",
+        "cta_text": "Book a Free Consultation",
+        "cta_link": "/pages/free-skin-assessment"
+      }
+    },
+    "values": {
+      "type": "lsc-values",
+      "blocks": {
+        "value-1": {
+          "type": "value",
+          "settings": {
+            "title": "Founded on Honesty",
+            "description": "We only recommend treatments we genuinely believe will help. If a treatment isn't right for you, we'll say so — and we'll tell you what is."
+          }
+        },
+        "value-2": {
+          "type": "value",
+          "settings": {
+            "title": "Clinically Qualified",
+            "description": "All treatments are performed by practitioners with medical-grade qualifications. We are registered with Wolverhampton City Council and hold Level 4 VTCT, IISHCA, and full laser training."
+          }
+        },
+        "value-3": {
+          "type": "value",
+          "settings": {
+            "title": "Small Clinic. Big Commitment.",
+            "description": "We're not a chain. We're a small, specialist clinic where every client is known by name. That's how we ensure the quality of care we're proud of."
+          }
+        },
+        "value-4": {
+          "type": "value",
+          "settings": {
+            "title": "Results Over Revenue",
+            "description": "We measure our success by your results — not by how many treatments we sell. Your skin progress matters more to us than any upsell."
+          }
+        }
+      },
+      "block_order": [
+        "value-1",
+        "value-2",
+        "value-3",
+        "value-4"
+      ],
+      "settings": {}
+    },
+    "practitioners": {
+      "type": "lsc-practitioners-home",
+      "blocks": {
+        "maxine": {
+          "type": "practitioner",
+          "settings": {
+            "asset_image": "maxine.png",
+            "name": "Maxine Harish",
+            "title": "Advanced Laser & Clinical Aesthetics Specialist",
+            "bio": "Lead Practitioner and Clinic Director. Maxine holds Level 4 VTCT Laser & IPL, Level 4 IISHCA, Advanced Skin Science, and IQ qualifications. She is Council Registered and specialises in laser hair and tattoo removal, CO2 resurfacing, RF microneedling, chemical peels, skin boosters, and blemish removal."
+          }
+        },
+        "scotton": {
+          "type": "practitioner",
+          "settings": {
+            "asset_image": "dr-scotton.png",
+            "name": "Dr Sangeeta Scotton",
+            "title": "MBBS, MRCP (UK), BSc, MSc — NHS Consultant",
+            "bio": "Consultant Physician with 12 years of medical experience. Dr Scotton is a Member of the Royal Society of Medicine and an appointed NHS Consultant. She specialises in anti-wrinkle injections, polynucleotides, exosomes, and advanced cosmetic medical procedures."
+          }
+        }
+      },
+      "block_order": [
+        "maxine",
+        "scotton"
+      ],
+      "settings": {}
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "blocks": {
+        "review-1": {
+          "type": "review",
+          "settings": {
+            "text": "100% absolutely recommend the services provided by Maxine and Angel. They are both patient, they truly care about you and are so knowledgeable in respect of the treatments offered and aftercare. They provide a truly bespoke, professional experience.",
+            "author": "Pin Sandhu",
+            "treatment": "Clinic Review"
+          }
+        },
+        "review-2": {
+          "type": "review",
+          "settings": {
+            "text": "I've had an excellent experience with the laser clinic! They've been brilliant for me and my daughter. I truly appreciate their genuine advice — they don't just try to sell treatments, but genuinely want you to see real results. Maxine and her team are extremely knowledgeable, friendly, and caring.",
+            "author": "Meena S.",
+            "treatment": "Laser Treatments"
+          }
+        },
+        "review-3": {
+          "type": "review",
+          "settings": {
+            "text": "Professional, knowledgeable and genuinely caring. The consultation was thorough and I felt completely at ease. Beautiful, natural results — I couldn't be happier with the outcome.",
+            "author": "Emma R.",
+            "treatment": "Skin Rejuvenation"
+          }
+        }
+      },
+      "block_order": [
+        "review-1",
+        "review-2",
+        "review-3"
+      ],
+      "settings": {
+        "section_heading": "Why Clients Trust Us",
+        "background_color": "cream"
+      }
+    },
+    "address": {
+      "type": "lsc-about-address",
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "hero",
+    "values",
+    "practitioners",
+    "address",
+    "reviews",
+    "contact"
   ]
 }

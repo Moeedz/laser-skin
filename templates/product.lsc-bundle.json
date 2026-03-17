@@ -9,17 +9,32 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-article",
+    "product_hero": {
+      "type": "lsc-product-hero",
       "settings": {}
     },
-    "prev-next-blog-posts": {
-      "type": "prev-next-blog-posts",
+    "pricing": {
+      "type": "lsc-pricing-cards",
+      "settings": {}
+    },
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
       "settings": {}
     }
   },
   "order": [
-    "main",
-    "prev-next-blog-posts"
+    "product_hero",
+    "pricing",
+    "how_it_works",
+    "faq",
+    "contact"
   ]
 }

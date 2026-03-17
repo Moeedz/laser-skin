@@ -11,52 +11,86 @@
   "sections": {
     "product_hero": {
       "type": "lsc-product-hero",
-      "settings": {
-        "eyebrow_override": "Professional Blemish Removal",
-        "description_override": "We treat 10 types of skin blemish at our Wolverhampton clinic using Short Wave Diathermy and CryoPen cryotherapy. All treatments £75 per session with most blemishes resolved in a single visit. Select your blemish type below to learn more.",
-        "whatsapp_message_override": "Hi! I would like to book a blemish removal appointment please."
-      }
-    },
-    "blemish_grid": {
-      "type": "lsc-blemish-grid",
       "settings": {}
     },
     "trust_bar": {
       "type": "lsc-trust-bar",
       "settings": {
         "override_metafield": true,
-        "item_1": "10 Blemish Types Treated",
+        "item_1": "Quick & Precise",
         "item_2": "£75 Per Session",
         "item_3": "Usually One Visit",
         "item_4": "Quick & Comfortable"
       }
     },
+    "quick_facts": {
+      "type": "lsc-quick-facts",
+      "settings": {}
+    },
+    "what_is": {
+      "type": "lsc-what-is",
+      "settings": {}
+    },
     "how_it_works": {
       "type": "lsc-how-it-works",
+      "settings": {}
+    },
+    "suitability": {
+      "type": "lsc-suitability",
+      "settings": {}
+    },
+    "timeline": {
+      "type": "lsc-results-timeline",
+      "settings": {}
+    },
+    "aftercare": {
+      "type": "lsc-aftercare",
+      "settings": {}
+    },
+    "practitioner": {
+      "type": "lsc-practitioner",
+      "settings": {
+        "practitioner_type": "none"
+      }
+    },
+    "why_choose": {
+      "type": "lsc-values",
       "blocks": {
-        "step_1": {
-          "type": "step",
+        "val_1": {
+          "type": "value",
           "settings": {
-            "title": "Assessment",
-            "description": "Your blemish is examined to confirm it is suitable for treatment and to determine the best removal method."
+            "title": "Practitioner-Led",
+            "description": "Every treatment begins with a thorough assessment of your skin, your concerns, and your goals before we recommend anything."
           }
         },
-        "step_2": {
-          "type": "step",
+        "val_2": {
+          "type": "value",
           "settings": {
-            "title": "Treatment",
-            "description": "Using Short Wave Diathermy (heat) or CryoPen cryotherapy (cold), the blemish is precisely targeted and removed. Treatment is quick and well-tolerated."
+            "title": "Medical-Grade Technology",
+            "description": "We invest in the same calibre of equipment found in leading UK clinics — not salon-grade alternatives."
           }
         },
-        "step_3": {
-          "type": "step",
+        "val_3": {
+          "type": "value",
           "settings": {
-            "title": "Healing",
-            "description": "A small scab forms and falls away naturally within 7–14 days, revealing clear, smooth skin. Most blemishes are fully resolved in a single session."
+            "title": "Personalised Plans",
+            "description": "Your treatment plan is built around you — your skin type, your lifestyle, and your desired outcome."
+          }
+        },
+        "val_4": {
+          "type": "value",
+          "settings": {
+            "title": "Established 10+ Years",
+            "description": "Trusted by thousands of clients across Wolverhampton and the West Midlands since 2013."
           }
         }
       },
-      "block_order": ["step_1", "step_2", "step_3"],
+      "block_order": [
+        "val_1",
+        "val_2",
+        "val_3",
+        "val_4"
+      ],
       "settings": {}
     },
     "pricing": {
@@ -67,8 +101,7 @@
           "settings": {
             "tier_name": "Blemish Removal",
             "price": "£75",
-            "description": "Single session covering your blemish type. Multiple blemishes in the same area can be treated in one visit.",
-            "popular": true
+            "description": "Single session covering your blemish type. Multiple blemishes in the same area can be treated in one visit."
           }
         }
       },
@@ -112,39 +145,32 @@
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "How do I know which type of blemish I have?",
-            "answer": "<p>If you're unsure, don't worry — book a free assessment and we'll identify your blemish type and recommend the best treatment approach. You can also browse our individual blemish guides above to help identify yours.</p>"
-          }
-        },
-        "faq_2": {
-          "type": "faq",
-          "settings": {
             "question": "Is blemish removal painful?",
             "answer": "<p>Most clients describe a brief warm sensation or mild pinch. The treatment is very quick — most blemishes are treated in seconds. No anaesthetic is usually required.</p>"
           }
         },
-        "faq_3": {
+        "faq_2": {
           "type": "faq",
           "settings": {
             "question": "How much does blemish removal cost?",
             "answer": "<p>All blemish removal treatments are £75 per session, regardless of blemish type. Multiple blemishes in the same area can be treated in a single session.</p>"
           }
         },
-        "faq_4": {
+        "faq_3": {
           "type": "faq",
           "settings": {
             "question": "Can you treat multiple blemishes in one session?",
             "answer": "<p>Yes. If you have several blemishes in the same area, we can treat them all in one appointment. This makes it very efficient and cost-effective.</p>"
           }
         },
-        "faq_5": {
+        "faq_4": {
           "type": "faq",
           "settings": {
             "question": "Do I need a GP referral?",
             "answer": "<p>For most blemish types, no referral is needed. For moles, we recommend having any mole that has changed in size, shape, or colour checked by your GP before cosmetic removal. We assess every blemish during your appointment to confirm it is suitable for treatment.</p>"
           }
         },
-        "faq_6": {
+        "faq_5": {
           "type": "faq",
           "settings": {
             "question": "What payment options do you offer?",
@@ -152,22 +178,28 @@
           }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5"],
       "settings": {}
     },
     "contact": {
       "type": "lsc-dual-contact",
       "settings": {
-        "whatsapp_message_override": "Hi! I would like to book a blemish removal appointment please.",
+        "whatsapp_message": "Hi! I would like to book a blemish removal appointment please.",
         "whatsapp_info_message": "Hi! I'd like to find out more about blemish removal please."
       }
     }
   },
   "order": [
     "product_hero",
-    "blemish_grid",
     "trust_bar",
+    "quick_facts",
+    "what_is",
     "how_it_works",
+    "suitability",
+    "timeline",
+    "aftercare",
+    "practitioner",
+    "why_choose",
     "pricing",
     "reviews",
     "faq",

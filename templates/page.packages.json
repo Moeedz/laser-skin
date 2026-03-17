@@ -9,12 +9,68 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "packages": {
+      "type": "lsc-collection-packages",
       "settings": {}
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "settings": {},
+      "blocks": {
+        "faq-1": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I split a package across multiple visits?",
+            "answer": "<p>Yes. Packages are designed to be spread across multiple sessions as each treatment requires its own appointment. We'll schedule your treatments to suit your skin's recovery timeline and your diary.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "faq",
+          "settings": {
+            "question": "Are packages suitable for all skin types?",
+            "answer": "<p>All three packages have been designed for a broad range of skin types and concerns. We'll confirm suitability at your consultation. Each treatment within the package is carried out individually, meaning we can adjust the approach for your specific skin on the day.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "faq",
+          "settings": {
+            "question": "What's the difference between the three packages?",
+            "answer": "<p><strong>Sculpt, Cleanse & Glow (£99)</strong> — body sculpting + Hydrofacial + a skin treatment. Ideal for body + skin combination goals.<br><strong>Tighten, Clean & Glow (£149)</strong> — RF tightening + Hydrofacial + a brightening treatment. Ideal for skin laxity and tone improvement.<br><strong>Lift, Heal & Glow (£99)</strong> — non-surgical lifting + a regenerative treatment + Hydrofacial. Ideal for anti-ageing and skin renewal.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "faq",
+          "settings": {
+            "question": "Do packages expire?",
+            "answer": "<p>Packages are valid for 12 months from the date of purchase. This gives you plenty of flexibility to space out your treatments as recommended by your practitioner.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I pay for a package with a gift card?",
+            "answer": "<p>Yes. Our gift cards can be applied to any treatment or package. If the gift card value doesn't cover the full package price, you can pay the difference at the time of booking.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5"
+      ]
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
+      "settings": {
+        "whatsapp_message": "Hi! I'd like to book a package please."
+      }
     }
   },
   "order": [
-    "main"
+    "packages",
+    "faq",
+    "contact"
   ]
 }

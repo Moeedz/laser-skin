@@ -9,12 +9,263 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "schema": {
+      "type": "lsc-assessment-schema",
+      "settings": {}
+    },
+    "hero": {
+      "type": "lsc-hero",
+      "settings": {
+        "heading": "A Personalised Skin Assessment, Completely Free",
+        "subheading": "Before recommending any treatment, we sit down with you for a thorough skin assessment — no pressure, no sales agenda. Just an honest conversation about your skin and what's possible.",
+        "cta_text": "Book Your Free Skin Assessment",
+        "cta_link": "#contact"
+      }
+    },
+    "stats_strip": {
+      "type": "lsc-trust-bar",
+      "settings": {
+        "override_metafield": true,
+        "item_1": "Google ★ 4.9/5",
+        "item_2": "Medical-Grade Technology",
+        "item_3": "Established 10+ Years",
+        "item_4": "Zero Pressure"
+      }
+    },
+    "how_it_works": {
+      "type": "lsc-how-it-works",
+      "blocks": {
+        "step-1": {
+          "type": "step",
+          "settings": {
+            "title": "Book Online or via WhatsApp",
+            "description": "Choose a time that suits you. We offer appointments Tuesday, Wednesday, Friday and Saturday. Evening slots available. No deposit required."
+          }
+        },
+        "step-2": {
+          "type": "step",
+          "settings": {
+            "title": "Your Consultation with Maxine",
+            "description": "We review your skin concerns, medical history, and treatment goals in a relaxed, confidential environment. Maxine will assess your skin type and recommend the most effective treatment pathway."
+          }
+        },
+        "step-3": {
+          "type": "step",
+          "settings": {
+            "title": "Personalised Treatment Plan",
+            "description": "You'll receive a clear, written treatment plan including recommended treatments, expected outcomes, number of sessions, and pricing. No obligation to book."
+          }
+        },
+        "step-4": {
+          "type": "step",
+          "settings": {
+            "title": "Start When You're Ready",
+            "description": "Book your first treatment whenever you feel comfortable. Your assessment notes are kept on file so we can track your progress from your very first session."
+          }
+        }
+      },
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3",
+        "step-4"
+      ],
+      "settings": {}
+    },
+    "what_you_get": {
+      "type": "lsc-values",
+      "blocks": {
+        "get-1": {
+          "type": "value",
+          "settings": {
+            "title": "Personalised Skin Analysis",
+            "description": "A thorough assessment of your skin type, condition, and concerns by a qualified practitioner."
+          }
+        },
+        "get-2": {
+          "type": "value",
+          "settings": {
+            "title": "Honest Treatment Recommendations",
+            "description": "Clear advice on which treatments would benefit you, which would not, and what results to realistically expect."
+          }
+        },
+        "get-3": {
+          "type": "value",
+          "settings": {
+            "title": "Written Treatment Plan",
+            "description": "A detailed plan including recommended treatments, number of sessions, expected timescales, and clear pricing — sent to you in writing."
+          }
+        }
+      },
+      "block_order": [
+        "get-1",
+        "get-2",
+        "get-3"
+      ],
+      "settings": {
+        "eyebrow": "YOUR ASSESSMENT",
+        "heading": "What You'll Walk Away With"
+      }
+    },
+    "why_book": {
+      "type": "lsc-values",
+      "blocks": {
+        "why-1": {
+          "type": "value",
+          "settings": {
+            "title": "First-Time Clients Welcome",
+            "description": "Not sure where to start? We walk you through every option and build a plan that fits your concerns and budget."
+          }
+        },
+        "why-2": {
+          "type": "value",
+          "settings": {
+            "title": "100% Free, No Obligation",
+            "description": "Our assessments are completely free. There is no obligation to book any treatment. We believe every client deserves expert advice before spending a penny."
+          }
+        },
+        "why-3": {
+          "type": "value",
+          "settings": {
+            "title": "No Upselling, Ever",
+            "description": "We only recommend treatments we genuinely believe will help. If your skin does not need treatment, we will tell you that too."
+          }
+        },
+        "why-4": {
+          "type": "value",
+          "settings": {
+            "title": "You Leave with a Written Plan",
+            "description": "We send you a written treatment plan with recommended treatments, expected outcomes, timescales, and pricing — yours to keep whether you book or not."
+          }
+        }
+      },
+      "block_order": [
+        "why-1",
+        "why-2",
+        "why-3",
+        "why-4"
+      ],
+      "settings": {
+        "eyebrow": "WHY US",
+        "heading": "Why Book a Free Assessment?"
+      }
+    },
+    "reviews": {
+      "type": "lsc-google-reviews",
+      "blocks": {
+        "review-anisha": {
+          "type": "review",
+          "settings": {
+            "text": "I was so nervous before my assessment but Maxine immediately put me at ease. She took the time to really understand my concerns, explained exactly what would work for my skin, and was completely honest about what she could and couldn't improve. I left feeling genuinely informed and confident.",
+            "author": "Anisha P.",
+            "treatment": "Skin Assessment"
+          }
+        },
+        "review-dalia": {
+          "type": "review",
+          "settings": {
+            "text": "I'd tried so many other clinics where the consultation was basically just a sales pitch. Maxine was completely different — she actually looked at my skin, asked the right questions, and gave me a realistic plan. No pressure whatsoever. Booked my first treatment the same week.",
+            "author": "Dalia M.",
+            "treatment": "Skin Assessment → CO2 Laser"
+          }
+        },
+        "review-joanna": {
+          "type": "review",
+          "settings": {
+            "text": "The free assessment was genuinely the best decision I made for my skin. Maxine spotted two things I didn't even realise were treatable and gave me a clear treatment plan with honest timelines. Completely changed how I think about skincare.",
+            "author": "Joanna K.",
+            "treatment": "Skin Assessment"
+          }
+        }
+      },
+      "block_order": [
+        "review-anisha",
+        "review-dalia",
+        "review-joanna"
+      ],
+      "settings": {
+        "section_heading": "What Clients Say About Their Assessment",
+        "background_color": "warm-white"
+      }
+    },
+    "faq": {
+      "type": "lsc-faq",
+      "blocks": {
+        "faq-1": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does the skin assessment take?",
+            "answer": "<p>Your assessment typically takes 20–30 minutes. We don't rush consultations — we'd rather take the time to get it right than send you away with a generic treatment plan.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need to do anything before my assessment?",
+            "answer": "<p>No special preparation needed. Just come with clean skin if possible, and be ready to tell us about any medications, skin conditions, or previous treatments you've had. That information helps us give you the most accurate advice.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "faq",
+          "settings": {
+            "question": "Will I be pressured to book a treatment?",
+            "answer": "<p>Absolutely not. Our assessments are genuinely no-obligation. Many clients use their assessment to gather information and then book weeks later — and we're perfectly happy with that. Your confidence in the decision matters more to us than an immediate booking.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I bring photos of my skin concerns?",
+            "answer": "<p>Yes — and we actively encourage it. Photos of your skin in different lighting, or showing the concern over time, can be really helpful for accurate assessment. WhatsApp them to us before your appointment if you'd like.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "faq",
+          "settings": {
+            "question": "What happens if my skin concern isn't something you treat?",
+            "answer": "<p>We'll tell you honestly and, where possible, point you in the right direction. We'd rather be upfront than take your money for a treatment that won't help.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I book a skin assessment?",
+            "answer": "<p>You can book via WhatsApp or our online enquiry form. We aim to confirm your appointment within 24 hours. Assessments are available Tuesday, Wednesday, Friday, and Saturday.</p>"
+          }
+        },
+        "faq-7": {
+          "type": "faq",
+          "settings": {
+            "question": "What payment options are available if I decide to have a treatment?",
+            "answer": "<p>The skin assessment is completely free. If you decide to proceed with a treatment, we accept card, cash, and bank transfer in clinic. We also offer 0% finance through Klarna on selected treatments.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6",
+        "faq-7"
+      ],
+      "settings": {}
+    },
+    "contact": {
+      "type": "lsc-dual-contact",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "schema",
+    "hero",
+    "stats_strip",
+    "how_it_works",
+    "what_you_get",
+    "why_book",
+    "reviews",
+    "faq",
+    "contact"
   ]
 }

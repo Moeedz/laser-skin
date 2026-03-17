@@ -158,7 +158,7 @@
     "contact": {
       "type": "lsc-dual-contact",
       "settings": {
-        "whatsapp_message_override": "Hi! I would like to book a blemish removal appointment please.",
+        "whatsapp_message": "Hi! I would like to book a blemish removal appointment please.",
         "whatsapp_info_message": "Hi! I'd like to find out more about blemish removal please."
       }
     }

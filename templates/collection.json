@@ -26,6 +26,14 @@
         "overlay_opacity": 30
       }
     },
+    "lsc_treatments": {
+      "type": "lsc-collection-treatments",
+      "settings": {}
+    },
+    "lsc_packages": {
+      "type": "lsc-collection-packages",
+      "settings": {}
+    },
     "main": {
       "type": "main-collection",
       "custom_css": [
@@ -54,6 +62,8 @@
     }
   },
   "order": [
+    "lsc_treatments",
+    "lsc_packages",
     "collection-banner",
     "main"
   ]
