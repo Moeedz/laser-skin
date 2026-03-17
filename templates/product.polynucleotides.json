@@ -139,9 +139,26 @@
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
             "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "View prices and make an enquiry",
+            "package_description": "Pay per session or buy multiple and save"
           }
         },
         "package_HrfHda": {
@@ -213,7 +230,7 @@
           "settings": {
             "parent_tab": "poly",
             "package_name": "Full Face",
-            "price": "from £200.00",
+            "price": "from £250.00",
             "show_session_1": true,
             "session_1_label": "1 session",
             "session_1_price": "£300",
@@ -222,14 +239,14 @@
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983269413244&quantity=1",
             "show_session_3": true,
             "session_3_label": "3 session",
-            "session_3_price": "£250.00",
-            "session_3_total": "total £750.00",
+            "session_3_price": "£275",
+            "session_3_total": "total £825",
             "session_3_per_session": "per session",
             "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983269446012&quantity=1",
             "show_session_6": true,
             "session_6_label": "6 session",
-            "session_6_price": "£200.00",
-            "session_6_total": "total £1,200.00",
+            "session_6_price": "£250",
+            "session_6_total": "total £1,450",
             "session_6_per_session": "per session",
             "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55983269478780&quantity=1",
             "show_session_10": false,
@@ -247,12 +264,16 @@
         "package_JjNGMf",
         "package_eaxCci"
       ],
+      "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
         "section_width": 1400,
         "section_padding_top": 40,
         "section_padding_bottom": 40,
         "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
         "tab_alignment": "center",
         "tab_gap": 12,
         "tab_font_size": 15,
@@ -295,152 +316,34 @@
         "package_button_hover_background": "#e6b325",
         "image_border_radius": 8,
         "show_collapsible_1": true,
-        "collapsible_1_title": "DESCRIPTION",
+        "collapsible_1_title": "7 Day Appointment Guarantee",
         "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>Add your description content here.</p>",
+        "collapsible_1_content": "<p>At Laser Skin Clinics, we guarantee that all customers can be seen within 7 days of their initial enquiry.</p>",
         "show_collapsible_2": true,
-        "collapsible_2_title": "INFORMATION & INGREDIENTS",
+        "collapsible_2_title": "Course Price Match Guarantee",
         "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_2_content": "<p>Add your information and ingredients here.</p>",
-        "show_collapsible_3": true,
-        "collapsible_3_title": "THIS HELPS WITH",
+        "collapsible_2_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> — and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
+        "show_collapsible_3": false,
+        "collapsible_3_title": "Booking Process",
         "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
-        "collapsible_3_content": "<p>Add benefits and features here.</p>",
+        "collapsible_3_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your appointment.</p>",
         "show_collapsible_4": true,
-        "collapsible_4_title": "FAQS",
+        "collapsible_4_title": "Securing Your Booking",
         "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_4_content": "<p>Add your FAQs here.</p>"
-      }
-    },
-    "ss_image_with_text_12_PPNnyT": {
-      "type": "ss-image-with-text-12",
-      "blocks": {
-        "slide_mTH4wq": {
-          "type": "slide",
-          "settings": {
-            "heading": "<p><strong>{{ product.title }}</strong></p>",
-            "text": "",
-            "button": "",
-            "button_url": "",
-            "button2": "",
-            "button2_url": "",
-            "video_autoplay": true,
-            "video_loop": true,
-            "video_muted": true,
-            "video_controls": true,
-            "image": "shopify://shop_images/IMG_0654_720x_4398b652-fe13-4f63-adc1-50fd2122042f.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "slide_mTH4wq"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".swiper-fade .swiper-slide-active {align-items: center !important;}",
-        ".image-text-pagination-wrapper-template--25564423487868__ss_image_with_text_12_PPNnyT {display: none;}"
-      ],
-      "name": "SS - Image With Text #12",
-      "settings": {
-        "slide_gap": 70,
-        "slide_gap_mobile": 24,
-        "content_horizontal_align": "start",
-        "content_horizontal_align_mobile": "center",
-        "content_mt": 0,
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 44,
-        "heading_size_mobile": 28,
-        "heading_height": 110,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 170,
-        "text_mt": 32,
-        "button_custom": false,
-        "button_font": "josefin_sans_n4",
-        "button_size": 16,
-        "button_size_mobile": 16,
-        "button_height": 100,
-        "button_mt": 32,
-        "button_mt_mobile": 32,
-        "button_padding_vertical": 16,
-        "button_padding_vertical_mobile": 16,
-        "button_padding_horizontal": 38,
-        "button_padding_horizontal_mobile": 38,
-        "button_radius": 100,
-        "button_border_thickness": 0,
-        "button_style": "non_outline",
-        "button2_custom": false,
-        "button2_font": "josefin_sans_n4",
-        "button2_size": 16,
-        "button2_size_mobile": 16,
-        "button2_height": 100,
-        "button2_mt": 16,
-        "button2_mt_mobile": 16,
-        "button2_padding_vertical": 16,
-        "button2_padding_vertical_mobile": 16,
-        "button2_padding_horizontal": 38,
-        "button2_padding_horizontal_mobile": 38,
-        "button2_radius": 100,
-        "button2_border_thickness": 0,
-        "button2_style": "outline",
-        "images_position": "left",
-        "images_position_mobile": "bottom",
-        "image_ratio": "original",
-        "image_ratio_mobile": "original",
-        "image_shape": "none",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "number_custom": false,
-        "number_font": "josefin_sans_n4",
-        "number_size": 13,
-        "number_size_mobile": 13,
-        "pagination_text": "",
-        "pagination_text_custom": false,
-        "pagination_text_font": "josefin_sans_n4",
-        "pagination_text_size": 16,
-        "pagination_text_size_mobile": 16,
-        "pagination_text_height": 130,
-        "heading_color": "#ffffff",
-        "text_color": "#ffffff",
-        "button_color": "#ffffff",
-        "button_hover_color": "#ffffff",
-        "button_bg_color": "#b59de3",
-        "button_bg_hover_color": "#b198de",
-        "button_border_color": "#000000",
-        "button_border_hover_color": "#000000",
-        "button2_color": "#000000",
-        "button2_hover_color": "#ffffff",
-        "button2_bg_color": "rgba(0,0,0,0)",
-        "button2_bg_hover_color": "#000000",
-        "button2_border_color": "#000000",
-        "button2_border_hover_color": "#000000",
-        "image_border_color": "#000000",
-        "dots_bg_color": "",
-        "dots_bg_hover_color": "#000000",
-        "dots_border_color": "#000000",
-        "dots_border_hover_color": "#000000",
-        "number_color": "#000000",
-        "number_hover_color": "#ffffff",
-        "pagination_text_color": "#000000",
-        "background_color": "#645e5c",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 6,
-        "padding_horizontal_mobile": 1,
-        "full_width": false,
-        "content_width": 120,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
+        "collapsible_4_content": "<p>A small deposit of £30 will be required to secure your booking. This will be deducted from price of your treatment cost.</p>",
+        "show_collapsible_5": true,
+        "collapsible_5_title": "Payment Options & Finance",
+        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
+        "collapsible_5_content": "<p>Treatments can be paid for by cash or card on the day of your appointment. We also offer Klarna Finance and Shopify instalment options for added flexibility. If you’d like to pay using one of these methods, just let us know and we’ll guide you through it.</p>",
+        "show_collapsible_6": true,
+        "collapsible_6_title": "Contact and address",
+        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
+        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
+        "show_faq_link": true,
+        "faq_pre_text": "Have more questions?",
+        "faq_link_text": "View FAQs",
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
       }
     },
     "ss_image_with_text_12_gUF6fh": {
@@ -459,13 +362,14 @@
             "video_loop": true,
             "video_muted": true,
             "video_controls": true,
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_21.24.42_cc951d2a.jpg"
+            "image": "shopify://shop_images/PHOTO-2025-12-04-17-16-57.jpg"
           }
         }
       },
       "block_order": [
         "slide_4jhyPz"
       ],
+      "disabled": true,
       "custom_css": [
         "p {padding-top: 10px; padding-bottom: 5px;}",
         ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
@@ -572,80 +476,6 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
-      }
-    },
-    "treatment_pricing_hjdUCE": {
-      "type": "treatment-pricing",
-      "blocks": {
-        "treatment_NbwzRR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Small Area ( under eye )",
-            "treatment_name_column1": "",
-            "single_price": "135",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
-          }
-        },
-        "treatment_TWcErn": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Half Face",
-            "single_price": "175",
-            "treatment_name_column2": "",
-            "course_price": "472.50"
-          }
-        },
-        "treatment_DGUDpX": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Full Face",
-            "treatment_name_column1": "",
-            "single_price": "300",
-            "treatment_name_column2": "",
-            "course_price": "787.50"
-          }
-        },
-        "treatment_LWReLR": {
-          "type": "treatment",
-          "disabled": true,
-          "settings": {
-            "treatment_name": "Treatment Name",
-            "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
-          }
-        }
-      },
-      "block_order": [
-        "treatment_NbwzRR",
-        "treatment_TWcErn",
-        "treatment_DGUDpX",
-        "treatment_LWReLR"
-      ],
-      "disabled": true,
-      "name": "Treatment Pricing",
-      "settings": {
-        "show_section_title": true,
-        "section_title": "Price List",
-        "show_two_columns": false,
-        "column1_title": "Polynucleotides",
-        "column1_subtitle": "Course prices available on request",
-        "show_button_column1": true,
-        "button_text_column1": "BOOK ONLINE",
-        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93157&services=2471529&location=4546",
-        "column2_title": "Course Of 6",
-        "column2_subtitle": "Save more with packages",
-        "show_button_column2": true,
-        "button_text_column2": "BOOK NOW",
-        "button_link_column2": "",
-        "header_color": "#c9a86a",
-        "accent_color": "#d4a574",
-        "header_text_color": "#ffffff",
-        "button_color": "#c9a86a",
-        "button_text_color": "#ffffff"
       }
     },
     "ss_image_with_text_9_GLgAya": {
@@ -766,6 +596,7 @@
         "button_HfVK4Q",
         "button_edH9Ee"
       ],
+      "disabled": true,
       "name": "SS - Image With Text #9",
       "settings": {
         "body_gap": 50,
@@ -823,6 +654,7 @@
       "block_order": [
         "link_LJYrWf"
       ],
+      "disabled": true,
       "name": "SS - Threads Image Grid",
       "settings": {
         "font_size": 24,
@@ -832,50 +664,6 @@
         "padding_bottom": 36,
         "padding_vertical": 0,
         "section-width": 200
-      }
-    },
-    "before_after_FYP3MP": {
-      "type": "before-after",
-      "blocks": {
-        "before_h3jXfm": {
-          "type": "before",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
-            "text": "Before",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        },
-        "after_PymKJA": {
-          "type": "after",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
-            "text": "After",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "before_h3jXfm",
-        "after_PymKJA"
-      ],
-      "disabled": true,
-      "name": "t:sections.before_after.presets.before_after.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "subheading": "",
-        "title": "Before/after",
-        "content": "",
-        "cursor_direction": "horizontal",
-        "cursor_initial_position": 50,
-        "cursor_background": "#ffffff",
-        "cursor_arrows_color": "#000000"
       }
     },
     "rich_text_nziPUE": {
@@ -892,6 +680,7 @@
       "block_order": [
         "heading_U7EUj7"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
         "color_scheme": "",
@@ -934,6 +723,7 @@
         "step_jiiz8x",
         "step_6jaGgE"
       ],
+      "disabled": true,
       "name": "SS - Steps #11",
       "settings": {
         "layout": "image_content",
@@ -1029,6 +819,7 @@
       "block_order": [
         "appio_google_reviews_carousel1_qFMFmN"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -1053,27 +844,6 @@
             "answer": "<p>No you don't your consultation is done on the day of your treatment.</p>"
           }
         },
-        "text_jwTewj": {
-          "type": "text",
-          "settings": {
-            "question": "How do I book?",
-            "answer": "<p>You can click book online which will take you to our diary where you will be able to choose a slot that works for you.</p>"
-          }
-        },
-        "text_bpBtfB": {
-          "type": "text",
-          "settings": {
-            "question": "How does payment work?",
-            "answer": "<p>Payment is made online when making your appointment.</p>"
-          }
-        },
-        "text_QJYKVM": {
-          "type": "text",
-          "settings": {
-            "question": "What happens if I want to book a course?",
-            "answer": "<p>If you want to book a course you can do this at the clinic after your first session. Any discount for booking a course will also he applied.</p>"
-          }
-        },
         "text_7QAeEF": {
           "type": "text",
           "settings": {
@@ -1083,9 +853,10 @@
         },
         "text_WtVEUr": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.<br/><br/>If you do not show to your appointment you will not receive a refund or a reschedule. Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
         "text_JMUbWR": {
@@ -1134,9 +905,6 @@
       "block_order": [
         "text_Dpx4Qh",
         "text_cjNbFY",
-        "text_jwTewj",
-        "text_bpBtfB",
-        "text_QJYKVM",
         "text_7QAeEF",
         "text_WtVEUr",
         "text_JMUbWR",
@@ -1146,6 +914,7 @@
         "text_h7aGzA",
         "text_UQYC8J"
       ],
+      "disabled": true,
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
@@ -1157,20 +926,1595 @@
         "answer_bg_color": "#ffffff",
         "questions-font-size": 1
       }
+    },
+    "product_hero_WAnJpa": {
+      "type": "product-hero",
+      "blocks": {
+        "check_item_4Yp7Pj": {
+          "type": "check_item",
+          "settings": {
+            "icon": "star",
+            "text": "Fade dark circles"
+          }
+        },
+        "check_item_cf3aPd": {
+          "type": "check_item",
+          "settings": {
+            "icon": "shield_check",
+            "text": "Smooth fine lines"
+          }
+        },
+        "check_item_p8jCfV": {
+          "type": "check_item",
+          "settings": {
+            "icon": "heart",
+            "text": "Cellular rejuvenation"
+          }
+        },
+        "trust_item_G4zeYG": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true
+          }
+        },
+        "trust_item_6qEykJ": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false
+          }
+        },
+        "trust_item_rUEQD4": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false
+          }
+        },
+        "trust_item_Lr894y": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance Available",
+            "subtitle": "",
+            "show_stars": false
+          }
+        }
+      },
+      "block_order": [
+        "check_item_4Yp7Pj",
+        "check_item_cf3aPd",
+        "check_item_p8jCfV",
+        "trust_item_G4zeYG",
+        "trust_item_6qEykJ",
+        "trust_item_rUEQD4",
+        "trust_item_Lr894y"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_djhopvdjhopvdjho.png",
+        "image_position": "center center",
+        "desktop_height": 750,
+        "mobile_height": 210,
+        "background_color": "#ede4dc",
+        "overlay_color_start": "#ece3dde6",
+        "overlay_color_mid": "#ece3ddb3",
+        "overlay_color_fade": "#ece3dd40",
+        "heading": "Regenerate your skin from within with Polynucleotides",
+        "subheading_highlight": "",
+        "subheading": "",
+        "heading_font_size": 54,
+        "subheading_font_size": 38,
+        "heading_color": "#3a3a3a",
+        "highlight_color": "#c8962e",
+        "description": "<p>Fade dark circles, smooth fine lines, and boost natural skin repair from the inside out  all with clinically proven Polynucleotide therapy.</p>",
+        "body_font_size": 17,
+        "text_color": "#5a5a5a",
+        "checkmark_color": "#c4a080",
+        "button_label": "Book Your Polynucleotide Consultation",
+        "button_link": "#cf-template--25630315315580__consultation_form_9Mt4E6",
+        "button_open_new_tab": false,
+        "button_bg": "#c4a080",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#b08d66",
+        "trust_bar_bg": "#f5f0eae6",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#999999",
+        "trust_star_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
+    "slideshow_JfC7CP": {
+      "type": "slideshow",
+      "blocks": {
+        "image_NAC6xV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PolyHD.png",
+            "mobile_image": "shopify://shop_images/PolyHM.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_NAC6xV"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "info_hero_8YnQfX": {
+      "type": "info-hero",
+      "blocks": {
+        "point_3Eibmj": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Stimulates collagen and tissue regeneration"
+          }
+        },
+        "point_MXymWr": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Improves skin texture, elasticity, and hydration"
+          }
+        },
+        "point_JykQGU": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Supports natural repair without altering facial structure"
+          }
+        },
+        "point_V3BLMP": {
+          "type": "point",
+          "settings": {
+            "title": "",
+            "text": "Suitable for delicate areas such as under-eyes and neck"
+          }
+        }
+      },
+      "block_order": [
+        "point_3Eibmj",
+        "point_MXymWr",
+        "point_JykQGU",
+        "point_V3BLMP"
+      ],
+      "name": "Info Hero",
+      "settings": {
+        "heading": "What are Polynucleotides?",
+        "body": "<p>A next-generation regenerative treatment that activates your skin’s own healing power, working <em>with your biology</em>, not against it.</p><p>Polynucleotides are purified DNA fragments that awaken your skin’s natural repair processes to restore hydration, firmness, and elasticity from deep within.</p><p>Rather than filling or freezing the skin, they work at a cellular level to improve hydration, elasticity, texture, and overall skin quality over time.</p><p>This makes polynucleotides ideal for patients looking for natural-looking rejuvenation, improved skin resilience, and long-term skin health.<br/><br/>Often integrated into advanced treatment plans, polynucleotides can complement procedures such as CO₂ laser or microneedling to optimise healing and long-term skin regeneration.<br/><br/><br/></p>",
+        "points_heading": "",
+        "footer_text": "",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_fvlgaefvlgaefvlg.png",
+        "bg_position": "right center",
+        "section_height": 800,
+        "overlay_strong": "#ddd2c8ed",
+        "overlay_mid": "#ddd2c8b0",
+        "overlay_fade": "#ddd2c84f",
+        "shimmer_opacity": 50,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "icon_color": "#8a7050",
+        "mobile_content_bg": "#e4ddd6",
+        "mobile_overlay": false,
+        "heading_font_size": 44,
+        "body_font_size": 17,
+        "content_width": 700,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "slideshow_9JdM6g": {
+      "type": "slideshow",
+      "blocks": {
+        "image_abjkFe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Poly2D.png",
+            "mobile_image": "shopify://shop_images/Poly2M.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_abjkFe"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "slideshow_tdxwRM": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Q6QqUR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Poly3D.png",
+            "mobile_image": "shopify://shop_images/Poly3M.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Q6QqUR"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "concern_grid_HJh4jY": {
+      "type": "concern-grid",
+      "blocks": {
+        "concern_gL87bc": {
+          "type": "concern",
+          "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_6.png",
+            "title": "Dull, dehydrated skin",
+            "subtitle": "Deeply rehydrates and revitalizes your complexion for a healthier, more luminous glow."
+          }
+        },
+        "concern_wWnKL4": {
+          "type": "concern",
+          "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_7.png",
+            "title": "Fine lines & wrinkles",
+            "subtitle": "Smooths fine lines and refines texture, restoring youthful softness and suppleness."
+          }
+        },
+        "concern_nJKzAF": {
+          "type": "concern",
+          "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_6.png",
+            "title": "Loss of elasticity",
+            "subtitle": "Boosts skin firmness and resilience by supporting renewed collagen production."
+          }
+        },
+        "concern_rHfV6K": {
+          "type": "concern",
+          "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_5.png",
+            "title": "Under-eye area",
+            "subtitle": "Brightens and thickens delicate under-eye skin to reduce tiredness and dark circles."
+          }
+        },
+        "concern_Jnakjc": {
+          "type": "concern",
+          "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview_3.png",
+            "title": "Crepey skin",
+            "subtitle": "Improves skin density and tone, giving thin areas a firmer, silkier feel."
+          }
+        },
+        "concern_4ffD3h": {
+          "type": "concern",
+          "settings": {
+            "icon_image": "shopify://shop_images/5-removebg-preview_1.png",
+            "title": "Post-procedure skin repair",
+            "subtitle": "Accelerates healing and enhances recovery after aesthetic treatments."
+          }
+        }
+      },
+      "block_order": [
+        "concern_gL87bc",
+        "concern_wWnKL4",
+        "concern_nJKzAF",
+        "concern_rHfV6K",
+        "concern_Jnakjc",
+        "concern_4ffD3h"
+      ],
+      "custom_css": [
+        ".cgd__card-icon,.cgd__card-icon img {width: 100px !important; height: 65px !important;}"
+      ],
+      "name": "Concern Grid",
+      "settings": {
+        "heading": "What Can Polynucleotides Improve?",
+        "subtitle": "Polynucleotide treatments can improve a range of skin concerns at a deeper level, restoring your skin's quality and health",
+        "bg_image": "shopify://shop_images/Gemini_Generated_Image_3pv3k23pv3k23pv3.png",
+        "bg_position": "right center",
+        "section_height": 900,
+        "overlay_strong": "#ddd0c4e8",
+        "overlay_mid": "#ddd0c4a1",
+        "overlay_fade": "#ddd0c440",
+        "shimmer_opacity": 60,
+        "heading_color": "#3a2820",
+        "text_color": "#5a4a3a",
+        "icon_color": "#8a7050",
+        "card_bg": "#ece5ddbf",
+        "heading_font_size": 42,
+        "card_title_font_size": 20,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "split_content_pxXzzN": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_EAf6pi": {
+          "type": "left_point",
+          "settings": {
+            "text": "Prefer regenerative treatments that support your skin’s own repair processes"
+          }
+        },
+        "left_point_GjFKYq": {
+          "type": "left_point",
+          "settings": {
+            "text": "Want natural-looking rejuvenation without altering facial structure"
+          }
+        },
+        "left_point_B4pyE3": {
+          "type": "left_point",
+          "settings": {
+            "text": "Have thinning or delicate under-eye skin"
+          }
+        },
+        "left_point_Tt8Aq9": {
+          "type": "left_point",
+          "settings": {
+            "text": "Feel your skin has lost resilience or elasticity"
+          }
+        },
+        "left_point_3VyEEn": {
+          "type": "left_point",
+          "settings": {
+            "text": "Want to improve overall skin quality, not just specific lines"
+          }
+        },
+        "left_point_bC66K6": {
+          "type": "left_point",
+          "settings": {
+            "text": "Value long-term skin health over quick fixes"
+          }
+        },
+        "right_point_JdCVK4": {
+          "type": "right_point",
+          "settings": {
+            "text": "Want instant, dramatic change"
+          }
+        },
+        "right_point_RxC8Ej": {
+          "type": "right_point",
+          "settings": {
+            "text": "Expect immediate volume correction"
+          }
+        },
+        "right_point_8TkbEQ": {
+          "type": "right_point",
+          "settings": {
+            "text": "Immediate visible change"
+          }
+        },
+        "right_point_AEHdPb": {
+          "type": "right_point",
+          "settings": {
+            "text": "Prefer quick-fix treatments over gradual regeneration"
+          }
+        },
+        "right_point_ErVhJT": {
+          "type": "right_point",
+          "settings": {
+            "text": "Are seeking a one-session solution"
+          }
+        }
+      },
+      "block_order": [
+        "left_point_EAf6pi",
+        "left_point_GjFKYq",
+        "left_point_B4pyE3",
+        "left_point_Tt8Aq9",
+        "left_point_3VyEEn",
+        "left_point_bC66K6",
+        "right_point_JdCVK4",
+        "right_point_RxC8Ej",
+        "right_point_8TkbEQ",
+        "right_point_AEHdPb",
+        "right_point_ErVhJT"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Is Polynucleotides Right For You?",
+        "subtitle": "Polynucleotides are ideal for patients who want skin improvement that looks natural, refined, and gradual.",
+        "footer_text": "During your consultation, we will assess your skin carefully and advise honestly on whether polynucleotides are appropriate for your goals.",
+        "show_card_wrap": false,
+        "card_bg": "#efefef",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": " ✔ This Treatment Is Ideal If You:",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "✖ Polynucleotides May Not Be Right If You:",
+        "right_subtitle": "",
+        "section_bg": "#efefef",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#efefef",
+        "cross_color": "#c27c7c",
+        "right_icon_style": "check",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
+    "treatment_areas_zt7ywm": {
+      "type": "treatment-areas",
+      "blocks": {
+        "callout_98Nyma": {
+          "type": "callout",
+          "disabled": true,
+          "settings": {
+            "label": "Under-eyes"
+          }
+        },
+        "callout_xbmbBp": {
+          "type": "callout",
+          "disabled": true,
+          "settings": {
+            "label": "Around the mouth"
+          }
+        },
+        "callout_JbiHPV": {
+          "type": "callout",
+          "disabled": true,
+          "settings": {
+            "label": "Neck"
+          }
+        },
+        "icon_item_4TrhpA": {
+          "type": "icon_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_5.png",
+            "label": "Eye area"
+          }
+        },
+        "icon_item_xkW9Ui": {
+          "type": "icon_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_6.png",
+            "label": "Mouth area"
+          }
+        },
+        "icon_item_9D8t3n": {
+          "type": "icon_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_5.png",
+            "label": "Neck"
+          }
+        },
+        "icon_item_jCWhTC": {
+          "type": "icon_item",
+          "settings": {
+            "icon_image": "shopify://shop_images/4-removebg-preview_2.png",
+            "label": "Crow's feet"
+          }
+        }
+      },
+      "block_order": [
+        "callout_98Nyma",
+        "callout_xbmbBp",
+        "callout_JbiHPV",
+        "icon_item_4TrhpA",
+        "icon_item_xkW9Ui",
+        "icon_item_9D8t3n",
+        "icon_item_jCWhTC"
+      ],
+      "custom_css": [
+        ".tar__icon-item-img,.tar__icon-item-img img {width: 100px !important; height: 60px !important;}"
+      ],
+      "name": "Treatment Areas",
+      "settings": {
+        "heading": "Where Are Polynucleotides Used?",
+        "description": "Polynucleotides are perfect for rejuvenating delicate, high-movement areas where precision, safety, and subtle results matter most.",
+        "main_image": "shopify://shop_images/image_b06be5cd-0819-4ee7-a26f-bd22d228e4de.png",
+        "footer_text": "Results are individual and long-lasting.",
+        "section_bg": "#d8d5da",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3028",
+        "text_color": "#555555",
+        "accent_color": "#b5a080",
+        "dot_color": "#e8b870",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "slideshow_BHyrN9": {
+      "type": "slideshow",
+      "blocks": {
+        "image_LEyWUx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_f5fe5c34-3728-47c5-867b-a7dec84912ca.png",
+            "mobile_image": "shopify://shop_images/Poly6M.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_LEyWUx"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "process_cards_LbK99L": {
+      "type": "process-cards",
+      "blocks": {
+        "card_DFi8eq": {
+          "type": "card",
+          "settings": {
+            "title": "Day 0-3",
+            "icon_image": "shopify://shop_images/1-removebg-preview_4.png",
+            "description": "Skin may feel slightly flushed or tight|| minimal downtime||early hydration.",
+            "card_bg": "#ffd6cd"
+          }
+        },
+        "card_iGhFGx": {
+          "type": "card",
+          "settings": {
+            "title": "Week 1-2",
+            "icon_image": "shopify://shop_images/2-removebg-preview_5.png",
+            "description": "Skin texture begins to smooth||Improved hydration and elasticity||Early quality changes becomes noticeable",
+            "card_bg": "#c8cedf"
+          }
+        },
+        "card_fX34fH": {
+          "type": "card",
+          "settings": {
+            "title": "Long-Term Regeneration",
+            "icon_image": "shopify://shop_images/3-removebg-preview_4.png",
+            "description": "Ongoing collagen support||Progressive improvement in skin quality||Results continue developing over several weeks",
+            "card_bg": "#ffd6cd"
+          }
+        }
+      },
+      "block_order": [
+        "card_DFi8eq",
+        "card_iGhFGx",
+        "card_fX34fH"
+      ],
+      "custom_css": [
+        ".hbr__card-icon,.hbr__card-icon img {width: 100px !important; height: 100px !important;}"
+      ],
+      "name": "Process Cards",
+      "settings": {
+        "heading": "What to Expect After Treatment",
+        "subtitle": "Polynucleotides work gradually, enhancing your skin’s natural renewal with visible improvements week by week.<br><br>\n\nMost treatment plans involve 2–3 sessions spaced 2–4 weeks apart, with maintenance recommended every 6–12 months depending on your goals.",
+        "footer_text": "Every result is unique, but most clients notice fresher, smoother, more hydrated skin within just a few weeks.",
+        "show_timeline": false,
+        "connector_color": "#b5a080",
+        "connector_border": "#ddd4c8",
+        "section_bg": "linear-gradient(180deg, rgba(251, 213, 205, 1), rgba(255, 205, 194, 1) 25%, rgba(255, 194, 181, 1) 50%, rgba(249, 208, 200, 1) 75%, rgba(250, 200, 189, 1) 100%)",
+        "shimmer_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a32",
+        "card_title_color": "#3a2820",
+        "card_text_color": "#5a4a42",
+        "heading_font_size": 42,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "before_after_results_k8jHgm": {
+      "type": "before-after-results",
+      "blocks": {
+        "result_card_BygMHh": {
+          "type": "result_card",
+          "settings": {
+            "title": "Under-Eye Renewal",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.17.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.26.png",
+            "session_info": "2 sessions · 8–10 weeks",
+            "benefit": "Improves crepey under-eye texture\nStrengthens thinning skin\nReduces hollow, tired appearance\nEnhances skin resilience"
+          }
+        },
+        "result_card_wQqY3d": {
+          "type": "result_card",
+          "settings": {
+            "title": "Skin Quality Reset",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.35.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.43.png",
+            "session_info": "3 sessions · 10–12 weeks",
+            "benefit": "Improves overall skin texture\nRestores hydration and elasticity\nSoftens fine lines naturally\nEnhances skin tone clarity"
+          }
+        },
+        "result_card_U4jtz7": {
+          "type": "result_card",
+          "settings": {
+            "title": "Delicate Area",
+            "before_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.21.00.png",
+            "after_image": "shopify://shop_images/Screenshot_2026-02-24_at_03.20.54.png",
+            "session_info": "2 sessions · 8–12 weeks",
+            "benefit": "Supports fragile or thin skin\nImproves neck and décolleté texture\nStrengthens compromised skin barrier\nPromotes long-term collagen regeneration"
+          }
+        }
+      },
+      "block_order": [
+        "result_card_BygMHh",
+        "result_card_wQqY3d",
+        "result_card_U4jtz7"
+      ],
+      "disabled": true,
+      "name": "Before After Results",
+      "settings": {
+        "heading": "<h2><strong>Regenerative Results. Stimulated From Within.</strong></h2>",
+        "subtitle": "Polynucleotides work beneath the surface to support skin repair, improve elasticity and strengthen fragile tissue over time.",
+        "before_label": "Before",
+        "after_label": "After",
+        "footer_text": "*Individual results may vary.",
+        "section_bg": "#e5dfda",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#b09a60",
+        "card_bg": "#f5f0eb",
+        "heading_font_size": 40,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "dark_pricing_table_yY9YNn": {
+      "type": "dark-pricing-table",
+      "blocks": {
+        "pricing_column_VwFVPL": {
+          "type": "pricing_column",
+          "settings": {
+            "icon_image": "shopify://shop_images/1-removebg-preview_3.png",
+            "name": "Under-Eye Area",
+            "price_1_label": "1 Session",
+            "price_1_value": "£150",
+            "price_2_label": "3 Sessions",
+            "price_2_value": "£400",
+            "price_3_label": "6 Sessions",
+            "price_3_value": "£750",
+            "benefits": "Targets the delicate under-eye area|| brighten and rejuvenate tired skin||Improves crepey texture & hydration"
+          }
+        },
+        "pricing_column_XzLFYN": {
+          "type": "pricing_column",
+          "settings": {
+            "icon_image": "shopify://shop_images/2-removebg-preview_4.png",
+            "name": "Upper or Lower Face Focus",
+            "price_1_label": "1 Session",
+            "price_1_value": "£200",
+            "price_2_label": "3 Sessions",
+            "price_2_value": "£550",
+            "price_3_label": "6 Sessions",
+            "price_3_value": "£1,000",
+            "benefits": "Improves elasticity & skin quality||Ideal for targeted regeneration"
+          }
+        },
+        "pricing_column_KXCaxh": {
+          "type": "pricing_column",
+          "settings": {
+            "icon_image": "shopify://shop_images/3-removebg-preview_3.png",
+            "name": "Full Face",
+            "price_1_label": "1 Session",
+            "price_1_value": "£300",
+            "price_2_label": "3 Sessions",
+            "price_2_value": "£825",
+            "price_3_label": "6 Sessions",
+            "price_3_value": "£1,450",
+            "benefits": "Whole-face regeneration||Improves texture, tone & hydration||Best long-term skin quality results"
+          }
+        }
+      },
+      "block_order": [
+        "pricing_column_VwFVPL",
+        "pricing_column_XzLFYN",
+        "pricing_column_KXCaxh"
+      ],
+      "custom_css": [
+        ".dpt__icon,.dpt__icon img {width: 150px !important; height: 150px !important;}"
+      ],
+      "name": "Dark Pricing Table",
+      "settings": {
+        "heading": "Treatment Options & Pricing",
+        "footer_text": "",
+        "button_label": "",
+        "button_link": "",
+        "section_bg": "#2e3038",
+        "show_texture": true,
+        "texture_opacity": 90,
+        "gold_color": "#d4c4a0",
+        "line_color": "#8a7a60",
+        "dot_color": "#c8b48a",
+        "button_bg": "#a89060",
+        "button_text": "#ffffff",
+        "button_bg_hover": "#8e7848",
+        "heading_font_size": 44,
+        "name_font_size": 24,
+        "price_font_size": 32,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "expectations_trust_7eRTmn": {
+      "type": "expectations-trust",
+      "blocks": {
+        "trust_point_AnLPUt": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "star",
+            "text": "4.9 Google rating"
+          }
+        },
+        "trust_point_B9UnUK": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Advanced regenerative skin therapy"
+          }
+        },
+        "trust_point_79FVzr": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "finance",
+            "text": "0% finance available"
+          }
+        },
+        "trust_point_tqVNHx": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Bio-stimulatory collagen support"
+          }
+        },
+        "trust_point_mki8gm": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_Px76pC": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "clock",
+            "text": "Established 10+ years"
+          }
+        }
+      },
+      "block_order": [
+        "trust_point_AnLPUt",
+        "trust_point_B9UnUK",
+        "trust_point_79FVzr",
+        "trust_point_tqVNHx",
+        "trust_point_mki8gm",
+        "trust_point_Px76pC"
+      ],
+      "name": "Expectations & Trust",
+      "settings": {
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What to expect with polynucleotide treatment",
+        "card_description": "<p>Polynucleotides are regenerative skin treatments designed to support cellular repair, improve elasticity, and enhance overall skin quality through targeted microinjections.</p><p>This advanced bio-stimulatory approach works beneath the surface to encourage natural tissue repair and collagen support over time.</p><p>We prioritise subtle, progressive improvement and medically delivered precision.</p>",
+        "section_bg": "#e4dfd9",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#777777",
+        "card_bg": "#f0ece7",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 44,
+        "card_heading_font_size": 28,
+        "body_font_size": 16,
+        "button_label": "Book Your Polynucleotide Consultation",
+        "button_link": "#cf-template--25630315315580__consultation_form_9Mt4E6",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "consultation_form_9Mt4E6": {
+      "type": "consultation-form",
+      "name": "Consultation Form",
+      "settings": {
+        "section_width": 1200,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_side": 20,
+        "section_background": "#f9f9f9",
+        "form_max_width": 700,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 40,
+        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_font_size": 14,
+        "form_heading": "Make an enquiry",
+        "form_subheading": "",
+        "heading_color": "#000000",
+        "heading_font_size": 26,
+        "heading_font_weight": "500",
+        "subheading_color": "#777777",
+        "subheading_font_size": 15,
+        "label_color": "#333333",
+        "label_font_size": 14,
+        "label_font_weight": "400",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 6,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 15,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "show_treatment_field": true,
+        "treatment_label": "Which treatment are you interested in?",
+        "default_treatment_value": "Consultation",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "name_label": "Name",
+        "name_placeholder": "Your Name",
+        "contact_method_label": "How can we reach you?",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "email_label": "Email Address",
+        "email_placeholder": "Email Address",
+        "whatsapp_number": "447798983387",
+        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
+        "wa_you_contact_text": "I'll message you",
+        "wa_we_contact_text": "Message me",
+        "whatsapp_button_text": "Chat on WhatsApp",
+        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
+        "whatsapp_button_background": "#25d366",
+        "whatsapp_button_hover_background": "#1fbe59",
+        "whatsapp_button_text_color": "#ffffff",
+        "clinic_phone_number": "01902256667",
+        "call_phone_label": "Your phone number",
+        "call_time_label": "Best time to call you?",
+        "call_time_placeholder": "Select a time",
+        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "phone_placeholder": "Phone Number",
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 14,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Submit Form",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 15,
+        "button_font_weight": "600",
+        "button_border_radius": 8,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
+        "privacy_text_color": "#999999",
+        "privacy_font_size": 13
+      }
+    },
+    "faq_updated_hxcAQY": {
+      "type": "faq-updated",
+      "blocks": {
+        "faq_item_ML3jDN": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are polynucleotides and how do they work?",
+            "answer": "<p>Polynucleotides are purified DNA fragments that stimulate cellular repair and collagen production.</p><p>Rather than adding volume like filler, they:</p><p>• Improve skin quality</p><p>• Support regeneration</p><p>• Increase hydration</p><p>• Strengthen the dermal structure</p><p>They work by activating your skin’s natural repair response.</p>"
+          }
+        },
+        "faq_item_xLnDXD": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What brand of Polynucleotides do you use?",
+            "answer": "<p>We use <strong>Plinest</strong>, a high-quality, medical-grade polynucleotide treatment known for its purity, safety, and clinically proven results. Plinest is widely used in advanced aesthetic medicine to support skin regeneration, improve texture, and enhance overall skin quality.</p>"
+          }
+        },
+        "faq_item_Tjaig7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this the same as Dermal Filler?",
+            "answer": "<p>No.</p><p>Dermal fillers add volume immediately.</p><p>Polynucleotides improve skin quality gradually by stimulating regeneration and collagen remodelling.</p><p>The result is more natural and progressive.</p>"
+          }
+        },
+        "faq_item_47CnaL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What areas can be treated?",
+            "answer": "<p>Common areas include:</p><p>• Under-eyes</p><p>• Face</p><p>• Neck</p><p>• Décolletage</p><p>They are particularly popular for delicate under-eye rejuvenation.</p>"
+          }
+        },
+        "faq_item_Qp9YEm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it safe for the under eye?",
+            "answer": "<p>Yes when performed correctly.</p><p>Polynucleotides are often chosen specifically for under-eye treatment because they improve skin quality without adding heavy volume.</p><p>A consultation ensures correct placement and suitability.</p>"
+          }
+        },
+        "faq_item_jaqGgh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions do I need?",
+            "answer": "<p>Most clients require 2–3 sessions spaced 2–4 weeks apart.</p><p>Maintenance may be recommended every 6–9 months depending on skin goals.</p>"
+          }
+        },
+        "faq_item_Rj9Dtr": {
+          "type": "faq_item",
+          "settings": {
+            "question": "When will I see results?",
+            "answer": "<p>Some improvement in hydration and glow can appear within weeks.</p><p>Collagen stimulation continues progressively over 8–12 weeks.</p><p>Results improve gradually rather than instantly.</p>"
+          }
+        },
+        "faq_item_tncYma": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the downtime?",
+            "answer": "<p>You may experience:</p><p>• Mild swelling</p><p>• Small injection bumps</p><p>• Light bruising</p><p>These typically settle within 24–72 hours.</p><p>Most clients return to normal activities quickly.</p>"
+          }
+        },
+        "faq_item_Lbdw7F": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I combine with other treatments?",
+            "answer": "<p>Yes.</p><p>Polynucleotides are often combined with:</p><p>• Anti-wrinkle treatments</p><p>• Skin boosters</p><p>• CO₂ resurfacing</p><p>• Microneedling</p><p>Your consultation determines safe sequencing.</p>"
+          }
+        },
+        "faq_item_4yfrz3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Who may not be suitable?",
+            "answer": "<p>This treatment may not be suitable if:</p><p>• Pregnant or breastfeeding</p><p>• Active infection in treatment area</p><p>• Certain autoimmune conditions</p><p>A consultation ensures safety.</p>"
+          }
+        },
+        "faq_item_8qqQjG": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you during your consultation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_ML3jDN",
+        "faq_item_xLnDXD",
+        "faq_item_Tjaig7",
+        "faq_item_47CnaL",
+        "faq_item_Qp9YEm",
+        "faq_item_jaqGgh",
+        "faq_item_Rj9Dtr",
+        "faq_item_tncYma",
+        "faq_item_Lbdw7F",
+        "faq_item_4yfrz3",
+        "faq_item_8qqQjG"
+      ],
+      "name": "FAQ Dark Theme",
+      "settings": {
+        "section_bg_color": "#ededed",
+        "max_width": 900,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "side_padding": 30,
+        "heading": "Polynucleotides. Your Questions, Answered.",
+        "heading_color": "#1c1c1c",
+        "heading_font_size": 24,
+        "heading_font_weight": "400",
+        "heading_font_style": "italic",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 50,
+        "question_color": "#1c1c1c",
+        "question_font_size": 16,
+        "question_font_weight": "600",
+        "show_underline": true,
+        "underline_color": "#b8a164",
+        "underline_width": 60,
+        "underline_height": 2,
+        "answer_color": "#1c1c1c",
+        "answer_font_size": 14,
+        "answer_line_height": 1.7,
+        "answer_margin_top": 16,
+        "divider_color": "#333333",
+        "item_padding_vertical": 30,
+        "icon_color": "#b8a164",
+        "icon_active_color": "#b8a164",
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 24,
+        "icon_border_width": 2,
+        "show_decoration": false,
+        "decoration_color": "#b8a164",
+        "decoration_size": 40,
+        "decoration_opacity": 0.6,
+        "all_items_open": false,
+        "first_item_open": false,
+        "allow_multiple_open": true
+      }
+    },
+    "location_contact_tPrgA4": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_A8mVYe": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_4Wz34g": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_zpjkmH": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_A8mVYe",
+        "contact_4Wz34g",
+        "contact_zpjkmH"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "",
+        "info_bg": "#eedfd8",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "#cf-template--25630315315580__consultation_form_9Mt4E6",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
     }
   },
   "order": [
     "main",
     "treatment_tabs_section_qrH3zM",
-    "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
-    "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
     "ss_clothing_image_grid_gPmX3T",
-    "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
-    "ss_simple_faq_jiYFWj"
+    "ss_simple_faq_jiYFWj",
+    "product_hero_WAnJpa",
+    "slideshow_JfC7CP",
+    "info_hero_8YnQfX",
+    "slideshow_9JdM6g",
+    "slideshow_tdxwRM",
+    "concern_grid_HJh4jY",
+    "split_content_pxXzzN",
+    "treatment_areas_zt7ywm",
+    "slideshow_BHyrN9",
+    "process_cards_LbK99L",
+    "before_after_results_k8jHgm",
+    "dark_pricing_table_yY9YNn",
+    "expectations_trust_7eRTmn",
+    "consultation_form_9Mt4E6",
+    "faq_updated_hxcAQY",
+    "location_contact_tPrgA4"
   ]
 }

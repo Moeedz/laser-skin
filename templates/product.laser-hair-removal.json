@@ -133,15 +133,32 @@
             "tab_identifier": "face",
             "tab_name": "FACE",
             "heading": "Face",
-            "top_description": "<p>Laser Hair Removal for the face uses precise light energy to target and reduce unwanted hair at the root for long-lasting smoothness. It leaves the skin clearer, softer, and free from daily shaving or waxing.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers can be seen within 7 days of their initial enquiry.</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "View prices and make an enquiry",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_g6agp9": {
@@ -149,14 +166,14 @@
           "settings": {
             "parent_tab": "face",
             "package_name": "Lip",
-            "price": "from £15.00",
-            "show_session_1": true,
+            "price": "from £20",
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£25.00",
             "session_1_total": "total £25.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562374524&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£20.00",
             "session_3_total": "total £60.00",
@@ -164,14 +181,14 @@
             "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981961380220&quantity=1",
             "show_session_6": true,
             "session_6_label": "6 session",
-            "session_6_price": "£17.5",
-            "session_6_total": "total £105.00",
+            "session_6_price": "£25",
+            "session_6_total": "total £150",
             "session_6_per_session": "per session",
             "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981968720252&quantity=1",
             "show_session_10": true,
             "session_10_label": "10 session",
-            "session_10_price": "£15.00",
-            "session_10_total": "total £150.00",
+            "session_10_price": "£20.00",
+            "session_10_total": "total £200.00",
             "session_10_per_session": "per session",
             "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982056964476&quantity=1"
           }
@@ -181,14 +198,14 @@
           "settings": {
             "parent_tab": "face",
             "package_name": "Chin",
-            "price": "from £15.00",
-            "show_session_1": true,
+            "price": "from £17.00",
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£25.00",
-            "session_1_total": "total £25.00",
+            "session_1_total": "total £2",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562407292&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£20.00",
             "session_3_total": "total £60.00",
@@ -196,14 +213,14 @@
             "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981961412988&quantity=1",
             "show_session_6": true,
             "session_6_label": "6 session",
-            "session_6_price": "£17.5",
-            "session_6_total": "total £105.00",
+            "session_6_price": "£20.00",
+            "session_6_total": "total £120.00",
             "session_6_per_session": "per session",
             "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981968753020&quantity=1",
             "show_session_10": true,
             "session_10_label": "10 session",
-            "session_10_price": "£15.00",
-            "session_10_total": "total £150.00",
+            "session_10_price": "£17",
+            "session_10_total": "total £170.00",
             "session_10_per_session": "per session",
             "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982056997244&quantity=1"
           }
@@ -213,14 +230,14 @@
           "settings": {
             "parent_tab": "face",
             "package_name": "Lip + Chin",
-            "price": "from £25.00",
-            "show_session_1": true,
+            "price": "from £22.00",
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£35",
             "session_1_total": "total £35.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562440060&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£30.00",
             "session_3_total": "total £90.00",
@@ -234,8 +251,8 @@
             "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981968785788&quantity=1",
             "show_session_10": true,
             "session_10_label": "10 session",
-            "session_10_price": "£25.00",
-            "session_10_total": "total £250.00",
+            "session_10_price": "£22.00",
+            "session_10_total": "total £220.00",
             "session_10_per_session": "per session",
             "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982057030012&quantity=1"
           }
@@ -246,13 +263,13 @@
             "parent_tab": "face",
             "package_name": "Ears",
             "price": "from £25.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£35",
             "session_1_total": "total £35.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562472828&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£30.00",
             "session_3_total": "total £90.00",
@@ -278,13 +295,13 @@
             "parent_tab": "face",
             "package_name": "Neck",
             "price": "from £30.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562505596&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£35.00",
             "session_3_total": "total £105.00",
@@ -310,13 +327,13 @@
             "parent_tab": "face",
             "package_name": "Sideburns",
             "price": "from £30.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562538364&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£35.00",
             "session_3_total": "total £105.00",
@@ -342,13 +359,13 @@
             "parent_tab": "face",
             "package_name": "Jawline",
             "price": "from £30.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562571132&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£35.00",
             "session_3_total": "total £105.00",
@@ -374,13 +391,13 @@
             "parent_tab": "face",
             "package_name": "Lower Face",
             "price": "from £35.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£45",
             "session_1_total": "total £45.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562603900&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£40.00",
             "session_3_total": "total £120.00",
@@ -406,13 +423,13 @@
             "parent_tab": "face",
             "package_name": "Full Face",
             "price": "from £50.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£65",
             "session_1_total": "total £65.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562636668&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£60.00",
             "session_3_total": "total £180.00",
@@ -438,13 +455,13 @@
             "parent_tab": "face",
             "package_name": "Face + Neck",
             "price": "from £55.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£70",
             "session_1_total": "total £70.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562669436&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£65.00",
             "session_3_total": "total £195.00",
@@ -470,13 +487,13 @@
             "parent_tab": "face",
             "package_name": "Between Eyebrows",
             "price": "from £15.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£25.00",
             "session_1_total": "total £25.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55977562702204&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£20.00",
             "session_3_total": "total £60.00",
@@ -502,15 +519,32 @@
             "tab_identifier": "bikni",
             "tab_name": "BIKINI AREA",
             "heading": "BIKINI AREA",
-            "top_description": "<p>Laser Hair Removal for the bikini area targets hair at the follicle for long-lasting smoothness and reduced regrowth. It delivers clean, comfortable results, eliminating the need for frequent shaving or waxing.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers can be seen within 7 days of their initial enquiry.</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Click here to view our prices and make an enquiry",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_yPVQin": {
@@ -519,13 +553,13 @@
             "parent_tab": "bikni",
             "package_name": "Bikini Line",
             "price": "from £30.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981930152316&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£37.50",
             "session_3_total": "total £112.50",
@@ -551,13 +585,13 @@
             "parent_tab": "bikni",
             "package_name": "Brazilian",
             "price": "from £37.50",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£45",
             "session_1_total": "total £45.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981930185084&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£42.50",
             "session_3_total": "total £127.50",
@@ -583,13 +617,13 @@
             "parent_tab": "bikni",
             "package_name": "Hollywood",
             "price": "from £50.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£60",
             "session_1_total": "total £60.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981930217852&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£57.50",
             "session_3_total": "total £172.50",
@@ -615,13 +649,13 @@
             "parent_tab": "bikni",
             "package_name": "Peri Anal",
             "price": "from £30.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981930250620&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£37.50",
             "session_3_total": "total £112.50",
@@ -647,13 +681,13 @@
             "parent_tab": "bikni",
             "package_name": "Buttocks",
             "price": "from £37.50",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£45",
             "session_1_total": "total £45.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981930283388&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£42.50",
             "session_3_total": "total £127.50",
@@ -679,13 +713,13 @@
             "parent_tab": "bikni",
             "package_name": "Naval Line",
             "price": "from £25.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£35",
             "session_1_total": "total £35.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981930316156&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£30.00",
             "session_3_total": "total £90.00",
@@ -711,15 +745,32 @@
             "tab_identifier": "arms",
             "tab_name": "ARMS",
             "heading": "ARMS & HANDS",
-            "top_description": "<p>Laser Hair Removal for the arms and hands effectively targets unwanted hair at the root for smoother, softer skin. It significantly reduces regrowth and eliminates the need for constant shaving or waxing.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers can be seen within 7 days of their initial enquiry.</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Click here to view our prices and make an enquiry",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_TECTjx": {
@@ -728,13 +779,13 @@
             "parent_tab": "arms",
             "package_name": "Full Arms",
             "price": "from £45.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£60",
             "session_1_total": "total £60.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981933429116&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£55.00",
             "session_3_total": "total £165.00",
@@ -760,13 +811,13 @@
             "parent_tab": "arms",
             "package_name": "Half Arms",
             "price": "from £35.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£50",
             "session_1_total": "total £50.00",
             "session_1_per_session": "per session",
             "session_1_link": "",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£45.00",
             "session_3_total": "total £135.00",
@@ -792,13 +843,13 @@
             "parent_tab": "arms",
             "package_name": "Hands + Fingers",
             "price": "from £25.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981933494652&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£35.00",
             "session_3_total": "total £105.00",
@@ -824,13 +875,13 @@
             "parent_tab": "arms",
             "package_name": "Under arms",
             "price": "from £30.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981933527420&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£37.50",
             "session_3_total": "total £112.50",
@@ -856,15 +907,32 @@
             "tab_identifier": "legs",
             "tab_name": "LEGS",
             "heading": "LEGS & FEET",
-            "top_description": "<p>Laser Hair Removal for the legs and feet targets hair at the follicle to achieve long-lasting smoothness and reduced regrowth. It leaves the skin silky, consistent, and free from the hassle of regular shaving or waxing.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers can be seen within 7 days of their initial enquiry</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Click here to view our prices and make an enquiry",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_qY6wN8": {
@@ -873,13 +941,13 @@
             "parent_tab": "legs",
             "package_name": "Legs + Feet",
             "price": "from £80.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£140",
             "session_1_total": "total £140.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981933822332&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£120.00",
             "session_3_total": "total £360.00",
@@ -905,13 +973,13 @@
             "parent_tab": "legs",
             "package_name": "Half Legs",
             "price": "from £60.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£75",
             "session_1_total": "total £75.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981933855100&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£70.00",
             "session_3_total": "total £210.00",
@@ -937,13 +1005,13 @@
             "parent_tab": "legs",
             "package_name": "Feet + Toes",
             "price": "from £40.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£50",
             "session_1_total": "total £50.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981933887868&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£47.50",
             "session_3_total": "total £142.50",
@@ -969,15 +1037,32 @@
             "tab_identifier": "body",
             "tab_name": "BODY",
             "heading": "BODY",
-            "top_description": "<p>Laser Hair Removal for the body treats larger areas with precise, targeted energy to reduce unwanted hair at the root. It delivers long-lasting smoothness, less regrowth, and a cleaner, low-maintenance finish across the entire body.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers can be seen within 7 days of their initial enquiry.</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Click here to view our prices and make an enquiry",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_gbLAkQ": {
@@ -986,13 +1071,13 @@
             "parent_tab": "body",
             "package_name": "Full Body",
             "price": "from £100.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£200",
             "session_1_total": "total £200.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934084476&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£175.00",
             "session_3_total": "total £525.00",
@@ -1006,8 +1091,8 @@
             "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981969506684&quantity=1",
             "show_session_10": true,
             "session_10_label": "10 session",
-            "session_10_price": "£100.00",
-            "session_10_total": "total £1,000.00",
+            "session_10_price": "£140.00",
+            "session_10_total": "total £1,400.00",
             "session_10_per_session": "per session",
             "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982057750908&quantity=1"
           }
@@ -1018,13 +1103,13 @@
             "parent_tab": "body",
             "package_name": "Full Back",
             "price": "from £75.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£100",
             "session_1_total": "total £100.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934117244&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£90.00",
             "session_3_total": "total £270.00",
@@ -1050,13 +1135,13 @@
             "parent_tab": "body",
             "package_name": "Half Back",
             "price": "from £50.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£75",
             "session_1_total": "total £75.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934150012&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£70.00",
             "session_3_total": "total £210.00",
@@ -1082,13 +1167,13 @@
             "parent_tab": "body",
             "package_name": "Chest",
             "price": "from £40.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£65",
             "session_1_total": "total £65.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934182780&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£60.00",
             "session_3_total": "total £180.00",
@@ -1114,13 +1199,13 @@
             "parent_tab": "body",
             "package_name": "Full Back + Full Chest",
             "price": "from £80.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£150",
             "session_1_total": "total £150.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934215548&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£130.00",
             "session_3_total": "total £390.00",
@@ -1146,15 +1231,32 @@
             "tab_identifier": "men",
             "tab_name": "MEN",
             "heading": "MEN",
-            "top_description": "<p>Laser Hair Removal for men provides powerful, targeted reduction of coarse hair on areas like the chest, back, and shoulders. It offers long-lasting smoothness, reduced irritation, and a cleaner, more defined look with minimal maintenance.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers can be seen within 7 days of their initial enquiry.</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Click here to view our prices and make an enquiry.",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_qjTnYK": {
@@ -1163,13 +1265,13 @@
             "parent_tab": "men",
             "package_name": "Beard Sculpting",
             "price": "from £25.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£40",
             "session_1_total": "total £40.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934608764&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£35.00",
             "session_3_total": "total £105.00",
@@ -1195,13 +1297,13 @@
             "parent_tab": "men",
             "package_name": "Full Body Male",
             "price": "from £150.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£250",
             "session_1_total": "total £250.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934641532&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£200.00",
             "session_3_total": "total £600.00",
@@ -1227,30 +1329,79 @@
             "tab_identifier": "packages",
             "tab_name": "COMBO PACKAGES",
             "heading": "COMBO PACKAGES",
-            "top_description": "<p>Laser Hair Removal Hollywood/Brazilian + Underarms targets the most sensitive areas for precise, long-lasting hair reduction. It leaves the skin smooth, clean, and free from frequent shaving or waxing, with minimal discomfort.</p>",
+            "top_description": "<ul><li><em>All bookings include a complimentary test patch and consultation before your first Laser Hair Removal session. </em></li><li><em>We guarantee that all customers will be seen within 7 days of their initial enquiry.</em></li><li><em>We proudly offer a Price Match Guarantee against any Wolverhampton laser hair removal provider.</em></li></ul>",
             "image_1": "shopify://shop_images/IMG_0102.jpg",
             "image_1_aspect_ratio": "original",
             "consultation_heading": "Speak to a specialist",
             "consultation_badge": "",
-            "consultation_description": "Not quite ready to book? Send us a message and we'll get back to you",
-            "consultation_link": "shopify://pages/contact",
-            "package_heading": "Buy a Package",
-            "package_description": "Pay per session or buy a bundle and save."
+            "consultation_description": "Not quite ready to book? Click here to contact us.",
+            "modal_title": "How would you like to contact us?",
+            "modal_subtitle": "Choose your preferred method to get in touch with us",
+            "contact_page_url": "shopify://pages/contact",
+            "contact_option_title": "Contact Form",
+            "contact_option_description": "Fill out our online form",
+            "phone_number": "01902256667",
+            "phone_option_title": "Call Us",
+            "monday_hours": "Closed",
+            "tuesday_hours": "10:00AM-6:00PM",
+            "wednesday_hours": "10:00AM-6:00PM",
+            "thursday_hours": "Closed",
+            "friday_hours": "10:00AM-6:00PM",
+            "saturday_hours": "10:00AM-4:00PM",
+            "sunday_hours": "Closed",
+            "closed_message": "You can send us a WhatsApp, send us an email or call back during opening hours",
+            "whatsapp_number": "447798983387",
+            "whatsapp_display_number": "+44 7798 983387",
+            "whatsapp_option_title": "WhatsApp",
+            "package_heading": "Click here to view our prices and make an enquiry.",
+            "package_description": "All Laser Hair Removal bookings are done in blocks of 6 or 10."
           }
         },
         "package_Ymgym6": {
           "type": "package",
           "settings": {
             "parent_tab": "packages",
+            "package_name": "Legs, Bikini & Underarms",
+            "price": "from £100",
+            "show_session_1": false,
+            "session_1_label": "1 session",
+            "session_1_price": "£145",
+            "session_1_total": "total £70.00",
+            "session_1_per_session": "per session",
+            "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934674300&quantity=1",
+            "show_session_3": false,
+            "session_3_label": "3 session",
+            "session_3_price": "£60.00",
+            "session_3_total": "total £180.00",
+            "session_3_per_session": "per session",
+            "session_3_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981962396028&quantity=1",
+            "show_session_6": true,
+            "session_6_label": "6 session",
+            "session_6_price": "£125",
+            "session_6_total": "total £725",
+            "session_6_per_session": "per session",
+            "session_6_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981969736060&quantity=1",
+            "show_session_10": true,
+            "session_10_label": "10 session",
+            "session_10_price": "£100",
+            "session_10_total": "total £1000",
+            "session_10_per_session": "per session",
+            "session_10_link": "https://www.laserskinclinics.co.uk/cart/add?id=55982057980284&quantity=1"
+          }
+        },
+        "package_hPWKG7": {
+          "type": "package",
+          "settings": {
+            "parent_tab": "packages",
             "package_name": "Hollywood + Underarms",
             "price": "from £45.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£70",
             "session_1_total": "total £70.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934674300&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£60.00",
             "session_3_total": "total £180.00",
@@ -1276,13 +1427,13 @@
             "parent_tab": "packages",
             "package_name": "Brazilian + Underarms",
             "price": "from £21.00",
-            "show_session_1": true,
+            "show_session_1": false,
             "session_1_label": "1 session",
             "session_1_price": "£60",
             "session_1_total": "total £60.00",
             "session_1_per_session": "per session",
             "session_1_link": "https://www.laserskinclinics.co.uk/cart/add?id=55981934707068&quantity=1",
-            "show_session_3": true,
+            "show_session_3": false,
             "session_3_label": "3 session",
             "session_3_price": "£55.00",
             "session_3_total": "total £165.00",
@@ -1343,14 +1494,19 @@
         "package_7xhczy",
         "tab_bgHKDb",
         "package_Ymgym6",
+        "package_hPWKG7",
         "package_faPAEQ"
       ],
+      "disabled": true,
       "name": "Treatment Tabs",
       "settings": {
         "section_width": 1560,
         "section_padding_top": 40,
         "section_padding_bottom": 40,
         "section_background": "#ffffff",
+        "enquiry_modal_title": "Get in touch",
+        "enquiry_modal_subtitle": "Fill out the form below and we'll get back to you shortly",
+        "time_to_call_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
         "tab_alignment": "center",
         "tab_gap": 12,
         "tab_font_size": 15,
@@ -1393,21 +1549,34 @@
         "package_button_hover_background": "#c5de3f",
         "image_border_radius": 8,
         "show_collapsible_1": true,
-        "collapsible_1_title": "Inclusive Test Patch & Consultation",
+        "collapsible_1_title": "Price Match Guarantee",
         "collapsible_1_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\"></path></svg>",
-        "collapsible_1_content": "<p>Whether you book 1 session or 10, you’ll receive a complimentary test patch and consultation before your first Laser Hair Removal session. </p>",
+        "collapsible_1_content": "<p>At Laser Skin Clinics, we’re committed to offering unbeatable value without ever compromising on quality. If you find a <strong>like-for-like course for any treatment</strong> we offer at a cheaper price anywhere in Wolverhampton, we’ll <strong>match that price</strong> — and give you a <strong>£50 voucher</strong> to spend at Laser Skin Clinics.</p><p>Premium results, guaranteed value.</p>",
         "show_collapsible_2": true,
-        "collapsible_2_title": "7-Day Appointment Guarantee",
+        "collapsible_2_title": "Inclusive Test Patch & Consultation",
         "collapsible_2_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_2_content": "<p>At Laser Skin Clinics, we guarantee that all customers will be seen within 7 days of their initial booking. If we’re unable to do so, you’ll receive either a full refund or a £50 voucher to spend at Laser Skin Clinics.</p>",
+        "collapsible_2_content": "<p>Whether you book 6 session or 10, you’ll receive a complimentary test patch as part of your hair removal booking.</p>",
         "show_collapsible_3": true,
-        "collapsible_3_title": "Course Price Match Guarantee",
+        "collapsible_3_title": "Single session bookings",
         "collapsible_3_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z\"></path></svg>",
-        "collapsible_3_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your test patch appointment.</p>",
+        "collapsible_3_content": "<p>We don’t offer single-session bookings for Laser Hair Removal, as lasting results can’t be achieved in just one visit. Hair grows in cycles, so multiple sessions are essential for effective, long-term reduction.</p>",
         "show_collapsible_4": true,
-        "collapsible_4_title": "Booking Process",
+        "collapsible_4_title": "PAYMENT OPTIONS & Finance",
         "collapsible_4_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"></path></svg>",
-        "collapsible_4_content": "<p>Once you’ve completed your online booking, a member of our team will contact you via phone, WhatsApp, or email to schedule your test patch appointment. On the day of your test patch we will then book your first session in.</p>"
+        "collapsible_4_content": "<p>Treatments can be paid for by cash or card on the day of your appointment. We also offer Klarna Finance and Shopify instalment options for added flexibility. If you’d like to pay using one of these methods, just let us know and we’ll guide you through it.</p>",
+        "show_collapsible_5": true,
+        "collapsible_5_title": "SECURING YOUR BOOKING",
+        "collapsible_5_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z\"></path></svg>",
+        "collapsible_5_content": "<p>A small deposit of £30 will be required to secure your booking. This will be deducted from price of your treatment cost.</p>",
+        "show_collapsible_6": true,
+        "collapsible_6_title": "Contact and address",
+        "collapsible_6_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\"></path></svg>",
+        "collapsible_6_content": "<p>If you have any questions or would like help with your booking, our team is here to assist. Simply click speak to a specialist or our direct details are below.</p><p><strong>Phone:</strong> 01902 256667</p><p><strong>WhatsApp:</strong> 07798 983387</p><p><strong>Email:</strong> info@laserskinclinics.co.uk</p><p><strong>Clinic Address:</strong></p><p>Laser Skin Clinics<br/><br/>4 Perton Farm Barns<br/><br/>Jenny Walkers Lane<br/><br/>Wolverhampton<br/><br/>WV6 7HB</p>",
+        "show_faq_link": true,
+        "faq_pre_text": "Have more questions?",
+        "faq_link_text": "View FAQs",
+        "faq_section_id": "shopify-section-template--25630357193084__ss_simple_faq_jiYFWj",
+        "faq_link_url": ""
       }
     },
     "ss_image_with_text_12_PPNnyT": {
@@ -1564,6 +1733,7 @@
       "block_order": [
         "slide_4jhyPz"
       ],
+      "disabled": true,
       "custom_css": [
         "p {padding-top: 10px; padding-bottom: 5px;}",
         ".image-text-text-template--25564423487868__ss_image_with_text_12_gUF6fh {margin-top: 0 !important;}",
@@ -1670,375 +1840,6 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
-      }
-    },
-    "treatment_pricing_enhanced_XUyycc": {
-      "type": "treatment-pricing-enhanced",
-      "blocks": {
-        "treatment_jfbw9f": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Lip £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "Bikini Line £40 Course of 6",
-            "price_column2": "216",
-            "treatment_name_column3": "Under Arms £35 Course of 6",
-            "price_column3": "189"
-          }
-        },
-        "treatment_JApaDh": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Upper Lip Or Chin",
-            "treatment_name_column1": "Chin £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "Bikini Brazilian £45 Course of 6",
-            "price_column2": "243",
-            "treatment_name_column3": "Hollywood and Underarms together £60 Course of 6",
-            "price_column3": "324"
-          }
-        },
-        "treatment_qBf64k": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Lower Face",
-            "treatment_name_column1": "Lip and Chin £45 Course of 6",
-            "price_column1": "243",
-            "treatment_name_column2": "Bikini Hollywood £55 Course of 6",
-            "price_column2": "295",
-            "treatment_name_column3": "Brazilian and Underarms £50 Course of 6",
-            "price_column3": "270"
-          }
-        },
-        "treatment_34jCnb": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Full Face £65 Course of 6",
-            "price_column1": "350",
-            "treatment_name_column2": "Peri Anal £35 Course of 6",
-            "price_column2": "189",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_HtNPWa": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Lower Face £55 Course of 6",
-            "price_column1": "297",
-            "treatment_name_column2": "Buttocks £40 Course of 6",
-            "price_column2": "216",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_NMrwDw": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Face and Neck £65 Course of 6",
-            "price_column1": "350",
-            "treatment_name_column2": "Naval Line £25 Course of 6",
-            "price_column2": "135",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_yp8gQe": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Neck £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_whRQAF": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Sideburns £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_kzMzUU": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Centre Brow £20 Course of 6",
-            "price_column1": "108",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_m8tJrd": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Between Eyebrows £20 Course of 6",
-            "price_column1": "108",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_hJCXBd": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Ears £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_MzEtzW": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Jawline £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        },
-        "treatment_ewWz48": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Beard Sculpting £45 Course of 6",
-            "price_column1": "243",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "",
-            "price_column3": ""
-          }
-        }
-      },
-      "block_order": [
-        "treatment_jfbw9f",
-        "treatment_JApaDh",
-        "treatment_qBf64k",
-        "treatment_34jCnb",
-        "treatment_HtNPWa",
-        "treatment_NMrwDw",
-        "treatment_yp8gQe",
-        "treatment_whRQAF",
-        "treatment_kzMzUU",
-        "treatment_m8tJrd",
-        "treatment_hJCXBd",
-        "treatment_MzEtzW",
-        "treatment_ewWz48"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}"
-      ],
-      "name": "Treatment Pricing Enhanced",
-      "settings": {
-        "show_section_title": true,
-        "section_title": "Our Treatments",
-        "column_layout": "three-columns",
-        "column1_title": "FACE",
-        "column1_subtitle": "Course of 6",
-        "show_button_column1": true,
-        "button_text_column1": "Book Online",
-        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93158&services=2472834&location=4546",
-        "column2_title": "BIKINI AREA",
-        "column2_subtitle": "Course of 6",
-        "show_button_column2": true,
-        "button_text_column2": "Book Online",
-        "button_link_column2": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93158&services=3564701&location=4546",
-        "column3_title": "UNDERARMS & COMBO PACKAGES",
-        "column3_subtitle": "Course of 6",
-        "show_button_column3": true,
-        "button_text_column3": "Book Online",
-        "button_link_column3": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93158&services=2472826&location=4546",
-        "header_color": "#c9a86a",
-        "accent_color": "#d4a574",
-        "header_text_color": "#ffffff",
-        "button_color": "#c9a86a",
-        "button_text_color": "#ffffff"
-      }
-    },
-    "treatment_pricing_enhanced_dtHQt9": {
-      "type": "treatment-pricing-enhanced",
-      "blocks": {
-        "treatment_wzNT7p": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Full Arms £60 Course of 6",
-            "price_column1": "324",
-            "treatment_name_column2": "Full Leg £120 Course of 6",
-            "price_column2": "648",
-            "treatment_name_column3": "Full Back £90 Course of 6",
-            "price_column3": "486"
-          }
-        },
-        "treatment_XDYMwd": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Upper Lip Or Chin",
-            "treatment_name_column1": "Half Arms £40 Course of 6",
-            "price_column1": "216",
-            "treatment_name_column2": "Half Legs £65 Course of 6",
-            "price_column2": "350",
-            "treatment_name_column3": "Half Back £70 Course of 6",
-            "price_column3": "378"
-          }
-        },
-        "treatment_rJ63Ef": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "Hands and Fingers £35 Course of 6",
-            "price_column1": "189",
-            "treatment_name_column2": "Feet and Toes £45 Course of 6",
-            "price_column2": "243",
-            "treatment_name_column3": "Chest £60 Course of 6",
-            "price_column3": "324"
-          }
-        },
-        "treatment_FihiAU": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "",
-            "treatment_name_column1": "",
-            "price_column1": "",
-            "treatment_name_column2": "",
-            "price_column2": "",
-            "treatment_name_column3": "Full Back and Full Chest £130 Course of 6",
-            "price_column3": "702"
-          }
-        }
-      },
-      "block_order": [
-        "treatment_wzNT7p",
-        "treatment_XDYMwd",
-        "treatment_rJ63Ef",
-        "treatment_FihiAU"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.pricing-wrapper {max-width: 1900px !important; }}",
-        ".treatment-pricing-section {padding-top: 0 !important;}"
-      ],
-      "name": "Treatment Pricing Enhanced",
-      "settings": {
-        "show_section_title": true,
-        "section_title": "",
-        "column_layout": "three-columns",
-        "column1_title": "ARMS & HANDS",
-        "column1_subtitle": "Course of 6",
-        "show_button_column1": true,
-        "button_text_column1": "Book Online",
-        "button_link_column1": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93158&services=3564695&location=4546",
-        "column2_title": "LEGS & FEET",
-        "column2_subtitle": "Course of 6",
-        "show_button_column2": true,
-        "button_text_column2": "Book Online",
-        "button_link_column2": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93158&services=3564690&location=4546",
-        "column3_title": "BODY",
-        "column3_subtitle": "Course of 6",
-        "show_button_column3": true,
-        "button_text_column3": "Book Online",
-        "button_link_column3": "https://partner.pabau.com/online-bookings/laser-skin-clinics?&category=93158&services=2735854&location=4546",
-        "header_color": "#c9a86a",
-        "accent_color": "#d4a574",
-        "header_text_color": "#ffffff",
-        "button_color": "#c9a86a",
-        "button_text_color": "#ffffff"
-      }
-    },
-    "treatment_pricing_hjdUCE": {
-      "type": "treatment-pricing",
-      "blocks": {
-        "treatment_NbwzRR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Upper Lip Or Chin",
-            "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
-          }
-        },
-        "treatment_TWcErn": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Lower Face",
-            "treatment_name_column1": "",
-            "single_price": "105.00",
-            "treatment_name_column2": "",
-            "course_price": "472.50"
-          }
-        },
-        "treatment_DGUDpX": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Full Face",
-            "treatment_name_column1": "",
-            "single_price": "175.00",
-            "treatment_name_column2": "",
-            "course_price": "787.50"
-          }
-        },
-        "treatment_LWReLR": {
-          "type": "treatment",
-          "settings": {
-            "treatment_name": "Treatment Name",
-            "treatment_name_column1": "",
-            "single_price": "75.00",
-            "treatment_name_column2": "",
-            "course_price": "337.50"
-          }
-        }
-      },
-      "block_order": [
-        "treatment_NbwzRR",
-        "treatment_TWcErn",
-        "treatment_DGUDpX",
-        "treatment_LWReLR"
-      ],
-      "disabled": true,
-      "name": "Treatment Pricing",
-      "settings": {
-        "show_section_title": true,
-        "section_title": "Our Treatments",
-        "show_two_columns": true,
-        "column1_title": "Treatment (Single Price)",
-        "column1_subtitle": "Pay as you go",
-        "show_button_column1": true,
-        "button_text_column1": "BOOK NOW",
-        "button_link_column1": "",
-        "column2_title": "Course Of 6",
-        "column2_subtitle": "Save more with packages",
-        "show_button_column2": true,
-        "button_text_column2": "BOOK NOW",
-        "button_link_column2": "",
-        "header_color": "#c9a86a",
-        "accent_color": "#d4a574",
-        "header_text_color": "#ffffff",
-        "button_color": "#c9a86a",
-        "button_text_color": "#ffffff"
       }
     },
     "ss_image_with_text_9_GLgAya": {
@@ -2160,6 +1961,7 @@
         "button_HfVK4Q",
         "button_8MiDiX"
       ],
+      "disabled": true,
       "name": "SS - Image With Text #9",
       "settings": {
         "body_gap": 50,
@@ -2201,77 +2003,6 @@
         "lazy": true
       }
     },
-    "ss_clothing_image_grid_bYwVtF": {
-      "type": "ss-clothing-image-grid",
-      "blocks": {
-        "link_nHcmHA": {
-          "type": "link",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2025-11-08_at_22.40.17_f300e505.jpg",
-            "text": "",
-            "url": "",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "link_nHcmHA"
-      ],
-      "name": "SS - Threads Image Grid",
-      "settings": {
-        "font_size": 24,
-        "font_color": "#000000",
-        "background-color": "#ffffff",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_vertical": 0,
-        "section-width": 200
-      }
-    },
-    "before_after_FYP3MP": {
-      "type": "before-after",
-      "blocks": {
-        "before_h3jXfm": {
-          "type": "before",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3.webp",
-            "text": "Before",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        },
-        "after_PymKJA": {
-          "type": "after",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/before-and-after-diolaze-laser-hair-removal-3_756cab71-a38a-4066-9c3c-9675644cdc62.webp",
-            "text": "After",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "before_h3jXfm",
-        "after_PymKJA"
-      ],
-      "disabled": true,
-      "name": "t:sections.before_after.presets.before_after.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "subheading": "",
-        "title": "Before/after",
-        "content": "",
-        "cursor_direction": "horizontal",
-        "cursor_initial_position": 50,
-        "cursor_background": "#ffffff",
-        "cursor_arrows_color": "#000000"
-      }
-    },
     "rich_text_nziPUE": {
       "type": "rich-text",
       "blocks": {
@@ -2286,6 +2017,7 @@
       "block_order": [
         "heading_U7EUj7"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
         "color_scheme": "",
@@ -2328,6 +2060,7 @@
         "step_jiiz8x",
         "step_6jaGgE"
       ],
+      "disabled": true,
       "name": "SS - Steps #11",
       "settings": {
         "layout": "image_content",
@@ -2423,6 +2156,7 @@
       "block_order": [
         "appio_google_reviews_carousel1_qFMFmN"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -2449,9 +2183,10 @@
         },
         "text_M3G6jX": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "question": "What is your cancellation policy?",
-            "answer": "<p>Cancellations up to 24 hours before your appointment will receive a full refund or can be rescheduled.<br/><br/>Any cancellations on the day can be rescheduled but will not be refunded.</p>"
+            "answer": "<p>Cancellations up to 24 hours before your appointment can be rescheduled.<br/><br/>Any cancellations on the day will lose that session out of the course booking No shows will be treated the same.<br/><br/>Please note that we offer email and text appointment reminders right up until 24 hours before your appointment.</p>"
           }
         },
         "text_QxQNbr": {
@@ -2508,6 +2243,7 @@
         "text_JMUbWR",
         "text_UiGdVT"
       ],
+      "disabled": true,
       "name": "SS - FAQ #1",
       "settings": {
         "heading": "Frequently Asked Questions",
@@ -2519,6 +2255,2375 @@
         "answer_bg_color": "#ffffff",
         "questions-font-size": 1
       }
+    },
+    "clinical_laser_hero_BrqfXp": {
+      "type": "clinical-laser-hero",
+      "blocks": {
+        "check_item_dNdmnA": {
+          "type": "check_item",
+          "settings": {
+            "text": "Consultation-led, personalised plans"
+          }
+        },
+        "check_item_Uiy7rz": {
+          "type": "check_item",
+          "settings": {
+            "text": "Transparent pricing and progress tracking"
+          }
+        },
+        "check_item_9i4kXk": {
+          "type": "check_item",
+          "settings": {
+            "text": "No downtime for most areas"
+          }
+        },
+        "trust_item_hVTgYc": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "star",
+            "title": "Google 4.9/5",
+            "subtitle": "",
+            "show_stars": true,
+            "calendar_number": "7"
+          }
+        },
+        "trust_item_46ghhj": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "medical",
+            "title": "Medical-grade",
+            "subtitle": "technology",
+            "show_stars": false,
+            "calendar_number": "7"
+          }
+        },
+        "trust_item_NbqNJ6": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "calendar",
+            "title": "7-Day Appointment",
+            "subtitle": "Guarantee",
+            "show_stars": false,
+            "calendar_number": "7"
+          }
+        },
+        "trust_item_nDQRE7": {
+          "type": "trust_item",
+          "settings": {
+            "icon": "finance",
+            "title": "0% Finance",
+            "subtitle": "Available",
+            "show_stars": false,
+            "calendar_number": "7"
+          }
+        }
+      },
+      "block_order": [
+        "check_item_dNdmnA",
+        "check_item_Uiy7rz",
+        "check_item_9i4kXk",
+        "trust_item_hVTgYc",
+        "trust_item_46ghhj",
+        "trust_item_NbqNJ6",
+        "trust_item_nDQRE7"
+      ],
+      "name": "Clinical Laser Hero",
+      "settings": {
+        "background_image": "shopify://shop_images/Gemini_Generated_Image_miuersmiuersmiue.png",
+        "image_position": "center center",
+        "desktop_height": 900,
+        "mobile_image_height": 360,
+        "background_color": "#f5ede3",
+        "overlay_opacity": 25,
+        "heading": "Permanent Hair Reduction. Clinically Planned for Long-Term Results",
+        "heading_font_size": 48,
+        "heading_color": "#3a3a3a",
+        "subheading_prefix": "",
+        "subheading_highlight": "",
+        "subheading_font_size": 34,
+        "highlight_color": "#c8962e",
+        "description": "<p>Stop guessing how many sessions you need. Our consultation-led laser plans use medical‑grade technology for safe, predictable, and lasting reduction.</p>",
+        "body_font_size": 17,
+        "text_color": "#555555",
+        "checkmark_color": "#c8962e",
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630357422460__consultation_form_8BeJtz",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "trust_bar_bg": "#faf6f1",
+        "trust_bar_text_color": "#3a3a3a",
+        "trust_icon_color": "#c8962e",
+        "content_max_width": 580
+      }
+    },
+    "slideshow_tiXh9k": {
+      "type": "slideshow",
+      "blocks": {
+        "image_zUJ9Bm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/45.png",
+            "mobile_image": "shopify://shop_images/image11.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_zUJ9Bm"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "approach_comparison_rQT9KU": {
+      "type": "approach-comparison",
+      "blocks": {
+        "card_gT4Kp4": {
+          "type": "card",
+          "settings": {
+            "card_style": "standard",
+            "label": "INDUSTRY STANDARD APPROACH",
+            "title": "Session bundles & generic pricing",
+            "item_1_icon": "grid",
+            "item_1_text": "Pre-set packages for everyone",
+            "item_2_icon": "clock",
+            "item_2_text": "Extra sessions often needed later",
+            "item_3_icon": "coins",
+            "item_3_text": "Total cost can be hard to predict",
+            "item_4_icon": "checkmark",
+            "item_4_text": "<b>No assessment of growth cycle</b>",
+            "item_5_icon": "none",
+            "item_5_text": "",
+            "item_6_icon": "none",
+            "item_6_text": ""
+          }
+        },
+        "card_aDQUK7": {
+          "type": "card",
+          "settings": {
+            "card_style": "highlight",
+            "label": "OUR APPROACH AT LASER SKIN CLINICS®",
+            "title": "Consultation-led, personalised laser plans",
+            "item_1_icon": "search_person",
+            "item_1_text": "Full skin and hair assessment before treatment",
+            "item_2_icon": "clipboard",
+            "item_2_text": "Sessions tailored to your individual growth cycle",
+            "item_3_icon": "pound",
+            "item_3_text": "Transparent pricing agreed upfront",
+            "item_4_icon": "chart",
+            "item_4_text": "Reviewed as your results progress",
+            "item_5_icon": "none",
+            "item_5_text": "",
+            "item_6_icon": "none",
+            "item_6_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_gT4Kp4",
+        "card_aDQUK7"
+      ],
+      "name": "Approach Comparison",
+      "settings": {
+        "heading": "A Smarter, More Personal Way to Plan Laser Hair Removal",
+        "subtitle": "Our consultation-led approach delivers more predictable, lasting results than standard package-based laser treatments.",
+        "section_bg": "#e6e6e6",
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "accent_color": "#c8962e",
+        "standard_bg": "#f5f3f0",
+        "standard_border": "#e0ddd8",
+        "standard_header_bg": "#eceae6",
+        "standard_label_color": "#888888",
+        "standard_icon_color": "#999999",
+        "highlight_bg": "#f5ede0",
+        "highlight_border": "#d4c4a8",
+        "highlight_header_bg": "#efe3d0",
+        "heading_font_size": 42,
+        "card_title_font_size": 24,
+        "body_font_size": 16,
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630357422460__consultation_form_8BeJtz",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "cards_gap": 28,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "slideshow_aatXMM": {
+      "type": "slideshow",
+      "blocks": {
+        "image_4kpXAN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_caa0b88b-3b20-44f4-9624-1990af634949.png",
+            "mobile_image": "shopify://shop_images/4444.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4kpXAN"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "split_content_WgcMXh": {
+      "type": "split-content",
+      "blocks": {
+        "left_point_Ag48Y7": {
+          "type": "left_point",
+          "settings": {
+            "text": "Men and women seeking long-term hair reduction rather than temporary methods"
+          }
+        },
+        "left_point_3hNhgw": {
+          "type": "left_point",
+          "settings": {
+            "text": "Most skin tones (safely assessed during consultation and patch test)"
+          }
+        },
+        "left_point_6RQfdg": {
+          "type": "left_point",
+          "settings": {
+            "text": "Darker, coarser hair types"
+          }
+        },
+        "left_point_qtBej8": {
+          "type": "left_point",
+          "settings": {
+            "text": "Areas prone to shaving irritation or ingrown hairs"
+          }
+        },
+        "left_point_NFfyk6": {
+          "type": "left_point",
+          "settings": {
+            "text": "Clients wanting predictable, structured results"
+          }
+        },
+        "right_point_aJQWc7": {
+          "type": "right_point",
+          "settings": {
+            "text": "You are pregnant"
+          }
+        },
+        "right_point_nN8zNM": {
+          "type": "right_point",
+          "settings": {
+            "text": "You have active infections in the treatment area"
+          }
+        },
+        "right_point_jtRmCz": {
+          "type": "right_point",
+          "settings": {
+            "text": "You are using certain photosensitising medications"
+          }
+        },
+        "right_point_KEEAET": {
+          "type": "right_point",
+          "settings": {
+            "text": "Very light, grey, or red hair may respond less effectively to laser treatment."
+          }
+        }
+      },
+      "block_order": [
+        "left_point_Ag48Y7",
+        "left_point_3hNhgw",
+        "left_point_6RQfdg",
+        "left_point_qtBej8",
+        "left_point_NFfyk6",
+        "right_point_aJQWc7",
+        "right_point_nN8zNM",
+        "right_point_jtRmCz",
+        "right_point_KEEAET"
+      ],
+      "name": "Split Content",
+      "settings": {
+        "heading": "Who Is Laser Hair Removal Suitable For?",
+        "subtitle": "Laser hair removal works by targeting pigment within the hair follicle. This means suitability depends on both hair colour and skin tone assessed clinically before treatment begins.",
+        "footer_text": "<i>Our clinicians will assess your hair colour, skin tone, and medical history to ensure safe and effective treatment planning.</i>",
+        "show_card_wrap": false,
+        "card_bg": "#f5efe9",
+        "card_border": "#d8cfc5",
+        "callout_title": "",
+        "callout_text": "",
+        "enable_left": true,
+        "left_heading": "Ideal For",
+        "left_subtitle": "",
+        "enable_right": true,
+        "right_heading": "May Not Be Suitable If",
+        "right_subtitle": "",
+        "section_bg": "#e3dcde",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a2820",
+        "text_color": "#4a3a30",
+        "accent_color": "#b8886a",
+        "divider_color": "#c4b8aa",
+        "heading_font_size": 32,
+        "body_font_size": 17,
+        "padding_top": 60,
+        "padding_bottom": 20,
+        "image_height": 420
+      }
+    },
+    "medical_technology_ct33BL": {
+      "type": "medical-technology",
+      "blocks": {
+        "feature_c4aXwb": {
+          "type": "feature",
+          "settings": {
+            "icon": "snowflake",
+            "title": "Advanced contact cooling",
+            "description": "The laser tip cools before, during, and after each pulse for maximum comfort and protection."
+          }
+        },
+        "feature_w7RykL": {
+          "type": "feature",
+          "settings": {
+            "icon": "arrow_right",
+            "title": "In-motion laser delivery",
+            "description": "Controlled passes ensure even coverage and optimal results with minimal skin irritation."
+          }
+        },
+        "feature_tyhfhJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "none",
+            "title": "Suitable for a wide range of skin tones",
+            "description": "Modern diode technology adapts to different skin tones safely — confirmed during your consultation."
+          }
+        }
+      },
+      "block_order": [
+        "feature_c4aXwb",
+        "feature_w7RykL",
+        "feature_tyhfhJ"
+      ],
+      "name": "Medical Technology",
+      "settings": {
+        "heading": "Medical‑Grade Laser Technology Thoughtfully Delivered.",
+        "subtitle": "At Laser Skin Clinics, treatments are delivered using advanced medical-grade diode lasers by medically trained clinicians, following clinically controlled protocols to ensure comfort, consistency, and safe results across all skin types.",
+        "product_image": "shopify://shop_images/Gemini_Generated_Image_gtcc04gtcc04gtcc.png",
+        "image_rotation": 0,
+        "image_scale": 110,
+        "section_bg": "#f0ece7",
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#9a8068",
+        "card_bg": "linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.25) 100%)",
+        "card_border": "#d6cfc6",
+        "card_blur": 12,
+        "heading_font_size": 44,
+        "feature_title_font_size": 20,
+        "body_font_size": 16,
+        "disclaimer": "*Suitability confirmed during consultation.",
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630357422460__consultation_form_8BeJtz",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "how_it_works_timeline_LbeYDa": {
+      "type": "how-it-works-timeline",
+      "blocks": {
+        "step_X8TxQy": {
+          "type": "step",
+          "settings": {
+            "icon": "clock",
+            "title": "Immediately after treatment",
+            "points": "Skin may appear slightly pink or warm for a few hours||Hair follicles absorb laser energy"
+          }
+        },
+        "step_ebp9q3": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_1",
+            "title": "Weeks 1–2",
+            "points": "Treated hairs fade and shed naturally||Skin tone returns to normal"
+          }
+        },
+        "step_XaQ6ma": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_2",
+            "title": "Weeks 3–6",
+            "points": "Hair regrowth noticeably reduced||Regrown hairs are finer and softer"
+          }
+        },
+        "step_DDGpr4": {
+          "type": "step",
+          "settings": {
+            "icon": "calendar_check",
+            "title": "After multiple sessions",
+            "points": "Significant, long‑term reduction||Smoother, clearer skin with minimal regrowth"
+          }
+        }
+      },
+      "block_order": [
+        "step_X8TxQy",
+        "step_ebp9q3",
+        "step_XaQ6ma",
+        "step_DDGpr4"
+      ],
+      "name": "How It Works Timeline",
+      "settings": {
+        "heading": "How Laser Hair Removal Works & What to Expect",
+        "description": "<p>Laser Hair Removal targets pigment in the hair follicle using safe, controlled light pulses.<br/><br/>The heat disables the follicle’s ability to regrow hair without harming surrounding skin.<br/><br/>Because hair grows in natural cycles most clients require 6–8 sessions spaced 4–6 weeks apart.</p>",
+        "footer_text": "Results develop progressively and improve with each session.",
+        "section_bg": "#ebcfc6",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#5a3e28",
+        "text_color": "#5a4a3a",
+        "accent_color": "#5a3e28",
+        "circle_bg": "#e5bcaf",
+        "circle_icon_color": "#ffffff",
+        "line_color": "#5a3e28",
+        "heading_font_size": 42,
+        "step_title_font_size": 18,
+        "body_font_size": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "slideshow_dQVHm7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_eQ7z4k": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/dee.png",
+            "mobile_image": "shopify://shop_images/3.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_eQ7z4k"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "results_testimonials_GtrNYg": {
+      "type": "results-testimonials",
+      "blocks": {
+        "result_EYWCtm": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Underarm (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I needed around 8 sessions, but it was worth every visit. The results have given me so much confidence.",
+            "session_label": "After 8 sessions"
+          }
+        },
+        "result_JNfrQ9": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Lower Legs (After 12 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "I purchased a package for my legs, and it exceeded my expectations. I couldn't believe the difference!",
+            "session_label": "After 12 sessions"
+          }
+        },
+        "result_y6aERW": {
+          "type": "result",
+          "settings": {
+            "ba_title": "Face (After 8 Sessions)",
+            "before_label": "Before",
+            "after_label": "After",
+            "star_count": 5,
+            "quote": "Very professional team, and the process was always comfortable. My skin is smooth and clear now.",
+            "session_label": "After 8 sessions"
+          }
+        }
+      },
+      "block_order": [
+        "result_EYWCtm",
+        "result_JNfrQ9",
+        "result_y6aERW"
+      ],
+      "disabled": true,
+      "name": "Results & Testimonials",
+      "settings": {
+        "heading": "Real Results from Our Medical-Grade Treatments",
+        "subtitle": "See genuine, natural results achieved safely by real clients, through personalized treatment plans.",
+        "section_bg": "#f5f4f9",
+        "heading_color": "#3a3a3a",
+        "text_color": "#666666",
+        "star_color": "#c8962e",
+        "card_bg": "#f4f1ed",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 42,
+        "card_title_font_size": 18,
+        "body_font_size": 16,
+        "cards_gap": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "pricing_by_area_36Fqyr": {
+      "type": "pricing-by-area",
+      "blocks": {
+        "category_JpbrWF": {
+          "type": "category",
+          "settings": {
+            "title": "Face",
+            "areas": "Upper Lip||Chin||Lip and Chin||Sideburns||Neck||Ears||Lower Face"
+          }
+        },
+        "pricing_ULf3WF": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Upper Lip",
+            "display_title": "Upper Lip",
+            "price_subtitle": "Per area pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£35",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£180",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£220",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£250",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_EdnPFE": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Chin",
+            "display_title": "Chin",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£30",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£160",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£210",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£260",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_37qTFp": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Lip and Chin",
+            "display_title": "Lip and Chin",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£35",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£180",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£240",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£300",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_gEEtbM": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Sideburns",
+            "display_title": "Sideburns",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£40",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£200",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£260",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£300",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_7pJm3P": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Neck",
+            "display_title": "Neck",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£45",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£225",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£300",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£360",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_YzK4Gk": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Ears",
+            "display_title": "Ears",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£20",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£00",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£130",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£170",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_WzRTqm": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Lower Face",
+            "display_title": "Lower Face",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£45",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£230",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£270",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£330",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "category_EmaeNG": {
+          "type": "category",
+          "settings": {
+            "title": "Upper Body",
+            "areas": "Shoulders||Full Back||Lower Back||Chest||Stomach||Full Arms||Half Arms||Chest and Stomach||Back and Shoulders"
+          }
+        },
+        "pricing_Fa8q3B": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Shoulders",
+            "display_title": "Shoulders",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£45",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£190",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£270",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£340",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_yCn77A": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Back",
+            "display_title": "Full Back",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£90",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£450",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£620",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£700",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_yBVaEz": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Lower Back",
+            "display_title": "Lower Back",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£290",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£350",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£420",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_dFCAmH": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Chest",
+            "display_title": "Chest",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£290",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£340",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£400",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_UfQHaV": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Stomach",
+            "display_title": "Stomach",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£340",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£390",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£420",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_TWT6dn": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Arms",
+            "display_title": "Full Arms",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£75",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£350",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£420",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£500",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_MyErMi": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Half Arms",
+            "display_title": "Half Arms",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£280",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£340",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£400",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_eP8UPU": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Chest and Stomach",
+            "display_title": "Chest and Stomach",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£90",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£450",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£520",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£600",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_3xCfdh": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Back and Shoulders",
+            "display_title": "Back and Shoulders",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£100",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£500",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£600",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£700",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "category_NCbwDx": {
+          "type": "category",
+          "settings": {
+            "title": "Lower Body",
+            "areas": "Full Legs||Half Legs||Fingers and Toes||Feet and Toes||Toes"
+          }
+        },
+        "pricing_4GJby7": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Legs",
+            "display_title": "Full Legs",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£100",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£540",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£625",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£750",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_877LjH": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Half Legs",
+            "display_title": "Half Legs",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£280",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£340",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£450",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_X87Mrk": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Fingers and Toes",
+            "display_title": "Fingers and Toes",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£30",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£150",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£200",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£250",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_mnBQVi": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Feet and Toes",
+            "display_title": "Feet and Toes",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£30",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£150",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£210",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£250",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_eMNkCQ": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Toes",
+            "display_title": "Toes",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£10",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£50",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£70",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£80",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "category_kyV6Nw": {
+          "type": "category",
+          "settings": {
+            "title": "Intimate",
+            "areas": "Bikini Line||Hollywood||Brazilian||Underarms||Areolas||Buttock||Behind (Peri Anal)"
+          }
+        },
+        "pricing_NHbXtk": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Bikini Line",
+            "display_title": "Bikini Line",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£30",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£170",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£210",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£250",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_dNYEJt": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Hollywood",
+            "display_title": "Hollywood",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£45",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£230",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£280",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£320",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_p4HXtc": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Brazilian",
+            "display_title": "Brazilian",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£35",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£150",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£230",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£375",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_9pQrke": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Underarms",
+            "display_title": "Underarms",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£20",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£100",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£130",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£165",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_jDChay": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Areolas",
+            "display_title": "Areolas",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£25",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£120",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£150",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£180",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_rXtwhj": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Buttock",
+            "display_title": "Buttock",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£50",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£250",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£300",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£350",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_chqPRE": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Behind (Peri Anal)",
+            "display_title": "Behind (Peri Anal)",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£25",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£130",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£160",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£200",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "category_gLqY9N": {
+          "type": "category",
+          "settings": {
+            "title": "Packages",
+            "areas": "Full Body||Underarms and Hollywood||Full Face (inc. Neck)||Underarms, Hollywood and Full legs||Underarms, Hollywood and Half legs||PCOS Full Body"
+          }
+        },
+        "pricing_VUDBPm": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Body",
+            "display_title": "Full Body",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£200",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£1000",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£1200",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£1300",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_HkeaNx": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Underarms and Hollywood",
+            "display_title": "Underarms and Hollywood",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£250",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£300",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£350",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_WLQTpM": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Full Face (inc. Neck)",
+            "display_title": "Full Face (inc. Neck)",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£60",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£250",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£300",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£350",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_fCUfhE": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Underarms, Hollywood and Full legs",
+            "display_title": "Underarms, Hollywood and Full legs",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£120",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£500",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£700",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£800",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_ppdNAa": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "Underarms, Hollywood and Half legs",
+            "display_title": "Underarms, Hollywood and Half legs",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£110",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£600",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£700",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£800",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "pricing_YKcc3q": {
+          "type": "pricing",
+          "settings": {
+            "area_name": "PCOS Full Body",
+            "display_title": "PCOS Full Body",
+            "price_subtitle": "Typical combined pricing",
+            "tier_1_name": "1 session",
+            "tier_1_price": "£200",
+            "tier_2_name": "Course of 6",
+            "tier_2_price": "£100",
+            "tier_3_name": "Course of 8",
+            "tier_3_price": "£1300",
+            "tier_4_name": "Course of 10",
+            "tier_4_price": "£1500",
+            "tier_5_name": "",
+            "tier_5_price": "",
+            "tier_6_name": "",
+            "tier_6_price": ""
+          }
+        },
+        "popular_tab_djBhLV": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Full Face (inc. Neck)",
+            "linked_area": "Full Face (inc. Neck)"
+          }
+        },
+        "popular_tab_zPHMjG": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Underarms and Hollywood",
+            "linked_area": "Underarms and Hollywood"
+          }
+        },
+        "popular_tab_aCYYp8": {
+          "type": "popular_tab",
+          "settings": {
+            "label": "Full Body",
+            "linked_area": "Full Body"
+          }
+        },
+        "emphasis_Reb4jP": {
+          "type": "emphasis",
+          "settings": {
+            "text": "Advanced Medical-Grade Lasers Used by Leading Practitioners"
+          }
+        },
+        "emphasis_rkGTeR": {
+          "type": "emphasis",
+          "settings": {
+            "text": "Multi‑area savings available — discussed at your consultation."
+          }
+        }
+      },
+      "block_order": [
+        "category_JpbrWF",
+        "pricing_ULf3WF",
+        "pricing_EdnPFE",
+        "pricing_37qTFp",
+        "pricing_gEEtbM",
+        "pricing_7pJm3P",
+        "pricing_YzK4Gk",
+        "pricing_WzRTqm",
+        "category_EmaeNG",
+        "pricing_Fa8q3B",
+        "pricing_yCn77A",
+        "pricing_yBVaEz",
+        "pricing_dFCAmH",
+        "pricing_UfQHaV",
+        "pricing_TWT6dn",
+        "pricing_MyErMi",
+        "pricing_eP8UPU",
+        "pricing_3xCfdh",
+        "category_NCbwDx",
+        "pricing_4GJby7",
+        "pricing_877LjH",
+        "pricing_X87Mrk",
+        "pricing_mnBQVi",
+        "pricing_eMNkCQ",
+        "category_kyV6Nw",
+        "pricing_NHbXtk",
+        "pricing_dNYEJt",
+        "pricing_p4HXtc",
+        "pricing_9pQrke",
+        "pricing_jDChay",
+        "pricing_rXtwhj",
+        "pricing_chqPRE",
+        "category_gLqY9N",
+        "pricing_VUDBPm",
+        "pricing_HkeaNx",
+        "pricing_WLQTpM",
+        "pricing_fCUfhE",
+        "pricing_ppdNAa",
+        "pricing_YKcc3q",
+        "popular_tab_djBhLV",
+        "popular_tab_zPHMjG",
+        "popular_tab_aCYYp8",
+        "emphasis_Reb4jP",
+        "emphasis_rkGTeR"
+      ],
+      "custom_css": [
+        "li.prc__next-item {padding-left: 18px !important;}"
+      ],
+      "name": "Pricing by Area",
+      "settings": {
+        "heading": "Laser hair removal pricing by area",
+        "subtitle": "Courses are recommended to match natural hair growth cycles for optimal reduction.",
+        "default_title": "Select an area",
+        "default_price_subtitle": "Choose a treatment area to view pricing",
+        "next_title": "What happens next",
+        "next_steps": "Consultation & skin assessment||Complimentary test patch||Personalised treatment plan||Sessions scheduled around you",
+        "next_note": "Final session numbers and spacing confirmed during consultation based on hair growth and skin type.",
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630357422460__consultation_form_8BeJtz",
+        "button_open_new_tab": false,
+        "section_bg": "#f0ece7",
+        "heading_color": "#2a2a2a",
+        "text_color": "#555555",
+        "accent_color": "#4a4a4a",
+        "card_bg": "#ffffff",
+        "card_border": "#d8d4ce",
+        "button_bg": "#3a3a3a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#222222",
+        "emphasis_bg": "#f5f1ec",
+        "heading_font_size": 38,
+        "body_font_size": 16,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "expectations_trust_VPKKkJ": {
+      "type": "expectations-trust",
+      "blocks": {
+        "trust_point_jXrytp": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "star",
+            "text": "4.9 Google rating"
+          }
+        },
+        "trust_point_rzU8Qn": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "shield",
+            "text": "Advanced diode laser technology"
+          }
+        },
+        "trust_point_kBWQ4N": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "finance",
+            "text": "0% finance available"
+          }
+        },
+        "trust_point_G7PEGK": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "heart",
+            "text": "Test patch included"
+          }
+        },
+        "trust_point_NACqjc": {
+          "type": "trust_point",
+          "disabled": true,
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_47ixg3": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "parking",
+            "text": "Free parking"
+          }
+        },
+        "trust_point_bJDLdj": {
+          "type": "trust_point",
+          "settings": {
+            "icon": "clock",
+            "text": "Established 10+ years"
+          }
+        }
+      },
+      "block_order": [
+        "trust_point_jXrytp",
+        "trust_point_rzU8Qn",
+        "trust_point_kBWQ4N",
+        "trust_point_G7PEGK",
+        "trust_point_NACqjc",
+        "trust_point_47ixg3",
+        "trust_point_bJDLdj"
+      ],
+      "name": "Expectations & Trust",
+      "settings": {
+        "heading": "Transparent pricing. Trusted clinical standards.",
+        "subtitle": "Everything you need to feel confident in your treatment.",
+        "card_title": "What to expect with laser hair removal",
+        "card_description": "<p>Laser hair removal is delivered using advanced diode laser technology designed to safely target hair follicles while protecting surrounding skin.</p><p>Each treatment is structured as part of a progressive course to reduce hair growth effectively and consistently over time.</p><p>We prioritise safe energy settings, skin-type assessment, and long-term reduction rather than short-term results.</p>",
+        "section_bg": "#e5dde0",
+        "show_texture": true,
+        "texture_opacity": 100,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "icon_color": "#777777",
+        "card_bg": "#f0ece7",
+        "card_border": "#ddd9d3",
+        "heading_font_size": 44,
+        "card_heading_font_size": 28,
+        "body_font_size": 16,
+        "button_label": "Book your consultation",
+        "button_link": "#cf-template--25630357422460__consultation_form_8BeJtz",
+        "button_open_new_tab": false,
+        "button_bg": "#4a4a4a",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#333333",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "slideshow_XzQigP": {
+      "type": "slideshow",
+      "blocks": {
+        "image_UFekTx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_e25710f3-6723-44d5-8609-86ebc9b3d073.png",
+            "mobile_image": "shopify://shop_images/image_bec01395-aeeb-45a5-bf8b-db2107ac530f.png",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_UFekTx"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "consultation_form_8BeJtz": {
+      "type": "consultation-form",
+      "name": "Consultation Form",
+      "settings": {
+        "section_width": 1200,
+        "section_padding_top": 50,
+        "section_padding_bottom": 50,
+        "section_padding_side": 20,
+        "section_background": "#f9f9f9",
+        "form_max_width": 700,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 40,
+        "form_shadow": "0 4px 16px rgba(0,0,0,0.1)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_font_size": 14,
+        "form_heading": "Make an enquiry",
+        "form_subheading": "",
+        "heading_color": "#000000",
+        "heading_font_size": 26,
+        "heading_font_weight": "500",
+        "subheading_color": "#777777",
+        "subheading_font_size": 15,
+        "label_color": "#333333",
+        "label_font_size": 14,
+        "label_font_weight": "400",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 6,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 15,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "show_treatment_field": true,
+        "treatment_label": "Which treatment are you interested in?",
+        "default_treatment_value": "Consultation",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "name_label": "Name",
+        "name_placeholder": "Your Name",
+        "contact_method_label": "How can we reach you?",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "email_label": "Email Address",
+        "email_placeholder": "Email Address",
+        "whatsapp_number": "447798983387",
+        "whatsapp_sub_label": "How would you like to connect on WhatsApp?",
+        "wa_you_contact_text": "I'll message you",
+        "wa_we_contact_text": "Message me",
+        "whatsapp_button_text": "Chat on WhatsApp",
+        "whatsapp_prefilled_message": "Hi! I'd like to book a consultation please.",
+        "whatsapp_button_background": "#25d366",
+        "whatsapp_button_hover_background": "#1fbe59",
+        "whatsapp_button_text_color": "#ffffff",
+        "clinic_phone_number": "01902256667",
+        "call_phone_label": "Your phone number",
+        "call_time_label": "Best time to call you?",
+        "call_time_placeholder": "Select a time",
+        "call_time_options": "Morning (9am-12pm), Afternoon (12pm-5pm), Evening (5pm-8pm)",
+        "phone_placeholder": "Phone Number",
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 14,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Submit Form",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 15,
+        "button_font_weight": "600",
+        "button_border_radius": 8,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "privacy_note": "100% private. No spam. We only contact you using the method you selected.",
+        "privacy_text_color": "#999999",
+        "privacy_font_size": 13
+      }
+    },
+    "faq_updated_jAQg98": {
+      "type": "faq-updated",
+      "blocks": {
+        "faq_item_XfRDXX": {
+          "type": "faq_item",
+          "settings": {
+            "question": "what is laser hair removal?",
+            "answer": "<p>Laser hair removal is a medical-grade treatment that uses targeted light energy to reduce unwanted hair growth at the root. The laser safely heats the hair follicle, disrupting future growth while protecting the surrounding skin.</p>"
+          }
+        },
+        "faq_item_dNmCQy": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does laser hair removal work?",
+            "answer": "<p>The laser emits controlled pulses of light that are absorbed by pigment in the hair. This energy travels down to the follicle and reduces its ability to produce new hair.</p><p>Because hair grows in cycles, only active follicles can be treated at each session which is why a structured course is required.</p>"
+          }
+        },
+        "faq_item_JfEqi9": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many sessions will I need?",
+            "answer": "<p>Most clients require a course of 6–8 sessions spaced 4–6 weeks apart, depending on:</p><p>• Area treated</p><p>• Hair thickness</p><p>• Hair growth cycle</p><p>• Hormonal influences</p><p>Your personalised treatment plan is discussed at consultation so you know exactly what to expect.</p>"
+          }
+        },
+        "faq_item_k9KQgb": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Why are multiple sessions required?",
+            "answer": "<p>Hair grows in different phases. The laser is most effective during the active growth phase.</p><p>Each session targets a new group of follicles entering that phase, which is why treatments are spaced out in a structured course.</p><p>This approach delivers safe, long-term reduction rather than short-term results.</p>"
+          }
+        },
+        "faq_item_jNKBDm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is laser hair removal permanent?",
+            "answer": "<p>Laser hair removal provides long-term hair reduction.</p><p>Most clients experience significant, lasting reduction in treated areas. Some may require occasional maintenance sessions depending on hormonal factors or hair type.</p><p>We focus on realistic, transparent expectations from the start.</p>"
+          }
+        },
+        "faq_item_UWVQCe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "does the treatment hurt?",
+            "answer": "<p>Most clients describe the sensation as a quick, warm snap against the skin.</p><p>Modern medical lasers include built-in cooling systems to improve comfort. Treatment settings are adjusted to your tolerance while maintaining effectiveness.</p>"
+          }
+        },
+        "faq_item_JJxdHi": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is it safe for my skin tone?",
+            "answer": "<p>Yes. We use advanced medical-grade laser systems suitable for a wide range of skin tones.</p><p>Your consultation includes a skin assessment and patch test to ensure safe, appropriate settings before full treatment begins.</p>"
+          }
+        },
+        "faq_item_NgkbpJ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can hormonal hair growth affect results?",
+            "answer": "<p>Yes. Conditions such as PCOS or hormonal fluctuations can influence hair growth patterns.</p><p>Laser can still be highly effective, but some clients may require maintenance sessions. This is discussed clearly during consultation so you have realistic expectations.</p>"
+          }
+        },
+        "faq_item_C4qTxP": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What areas can be treated?",
+            "answer": "<p>Common areas include:</p><p>• Underarms</p><p>• Bikini & Hollywood</p><p>• Legs</p><p>• Face (upper lip, chin, jawline)</p><p>• Back & chest</p><p>We tailor settings depending on the area and hair type.</p>"
+          }
+        },
+        "faq_item_aaTc4h": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What happens at my consultation?",
+            "answer": "<p>Your consultation includes:</p><p>• Skin and hair assessment</p><p>• Medical history review</p><p>• Patch test</p><p>• Discussion of expected sessions</p><p>• Clear pricing overview</p><p>You’ll leave knowing exactly how the process works and whether laser is right for you.</p>"
+          }
+        },
+        "faq_item_cYUUPK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I shave between sessions?",
+            "answer": "<p>Yes shaving is recommended between treatments.</p><p>Avoid waxing, plucking, or threading during your course, as these remove the follicle needed for the laser to work effectively.</p>"
+          }
+        },
+        "faq_item_4pHAKh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will I need maintenance sessions?",
+            "answer": "<p>Some clients choose occasional maintenance treatments once or twice per year, especially in hormonally sensitive areas.</p><p>Your long-term plan is discussed openly so there are no surprises.</p>"
+          }
+        },
+        "faq_item_JJ8Lk4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What payment options do you offer?",
+            "answer": "<p>We offer flexible payment options to make your treatment as convenient as possible. You can choose to pay per single session or pay in full for a course of treatments for better overall value. We accept card, cash, and bank transfer in clinic.</p><p>For added flexibility, we also offer 0% finance through Klarna, allowing you to spread the cost into manageable instalments with a range of payment options available, subject to eligibility.</p><p>If you’re unsure which option is best for you, our team will be happy to guide you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_XfRDXX",
+        "faq_item_dNmCQy",
+        "faq_item_JfEqi9",
+        "faq_item_k9KQgb",
+        "faq_item_jNKBDm",
+        "faq_item_UWVQCe",
+        "faq_item_JJxdHi",
+        "faq_item_NgkbpJ",
+        "faq_item_C4qTxP",
+        "faq_item_aaTc4h",
+        "faq_item_cYUUPK",
+        "faq_item_4pHAKh",
+        "faq_item_JJ8Lk4"
+      ],
+      "name": "FAQ Dark Theme",
+      "settings": {
+        "section_bg_color": "#ededed",
+        "max_width": 900,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "side_padding": 30,
+        "heading": "Laser Hair Removal. Your Questions, Answered.",
+        "heading_color": "#222222",
+        "heading_font_size": 24,
+        "heading_font_weight": "400",
+        "heading_font_style": "italic",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 50,
+        "question_color": "#222222",
+        "question_font_size": 16,
+        "question_font_weight": "600",
+        "show_underline": true,
+        "underline_color": "#b8a164",
+        "underline_width": 60,
+        "underline_height": 2,
+        "answer_color": "#1c1c1c",
+        "answer_font_size": 14,
+        "answer_line_height": 1.7,
+        "answer_margin_top": 16,
+        "divider_color": "#b8a164",
+        "item_padding_vertical": 30,
+        "icon_color": "#b8a164",
+        "icon_active_color": "#b8a164",
+        "icon_active_bg": "rgba(0,0,0,0)",
+        "icon_size": 36,
+        "icon_border_width": 2,
+        "show_decoration": false,
+        "decoration_color": "#b8a164",
+        "decoration_size": 40,
+        "decoration_opacity": 0.6,
+        "all_items_open": false,
+        "first_item_open": false,
+        "allow_multiple_open": true
+      }
+    },
+    "slideshow_EGz8WM": {
+      "type": "slideshow",
+      "blocks": {
+        "image_KMBjxN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Location_And_contact.jpg",
+            "mobile_image": "shopify://shop_images/Laser_Skin_Clinics_Wolverhampton_Contact.jpg",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 780,
+            "button_1_text": "",
+            "button_1_link": "#shopify-section-template--25630357422460__consultation_form_8BeJtz",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 0,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_KMBjxN"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": false,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "show_consultation_form": false,
+        "form_right_position": 60,
+        "form_top_position": 50,
+        "form_max_width": 420,
+        "form_background": "#ffffff",
+        "form_border_radius": 12,
+        "form_padding": 28,
+        "form_shadow": "0 8px 30px rgba(0,0,0,0.15)",
+        "show_priority_banner": true,
+        "banner_highlight_text": "Priority Response Guarantee:",
+        "banner_text": "We will contact you within 24 hours.",
+        "banner_background": "#f8f8f8",
+        "banner_border_color": "#e0e0e0",
+        "banner_border_radius": 6,
+        "banner_text_color": "#333333",
+        "banner_highlight_color": "#000000",
+        "banner_icon_color": "#666666",
+        "banner_font_size": 13,
+        "form_heading": "Request Your Consultation",
+        "form_heading_color": "#000000",
+        "form_heading_font_size": 22,
+        "form_heading_font_weight": "500",
+        "label_color": "#333333",
+        "label_font_size": 13,
+        "label_font_weight": "400",
+        "required_color": "#dc3545",
+        "input_background": "#ffffff",
+        "input_border_color": "#d0d0d0",
+        "input_border_width": 1,
+        "input_border_radius": 4,
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "input_font_size": 14,
+        "input_focus_border_color": "#b8a164",
+        "input_focus_shadow_color": "#b8a16426",
+        "preselected_background": "#f5f5f5",
+        "preselected_text_color": "#333333",
+        "treatment_label": "Which treatment are you interested in?",
+        "treatment_placeholder": "Select Service",
+        "treatment_required": true,
+        "show_treatment_dropdown": false,
+        "treatment_options": "Face Treatment, Body Treatment, Laser Hair Removal, Skin Rejuvenation",
+        "first_name_label": "First Name",
+        "last_name_label": "Last Name",
+        "email_label": "Email Address",
+        "phone_label": "Phone Number",
+        "show_time_preference": true,
+        "time_label": "Best time to contact you?",
+        "time_options": "Morning, Afternoon, Evening",
+        "time_required": true,
+        "show_contact_preference": true,
+        "contact_method_label": "How may we reach you? (Select all that apply)",
+        "contact_method_options": "Email, WhatsApp, Phone Call",
+        "contact_method_required": true,
+        "pill_background": "#ffffff",
+        "pill_text_color": "#333333",
+        "pill_border_color": "#d0d0d0",
+        "pill_border_width": 1,
+        "pill_border_radius": 20,
+        "pill_font_size": 13,
+        "pill_hover_background": "#f5f5f5",
+        "pill_hover_border_color": "#b8a164",
+        "pill_selected_background": "#b8a164",
+        "pill_selected_text_color": "#ffffff",
+        "pill_selected_border_color": "#b8a164",
+        "show_message_field": true,
+        "message_label": "How can we help you? (Optional Message)",
+        "message_placeholder": "",
+        "button_text": "Request Callback",
+        "button_background": "#b8a164",
+        "button_hover_background": "#9a8654",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "button_border_radius": 6,
+        "button_shadow_color": "#b8a1644d",
+        "success_message": "Thank you! We will contact you within 24 hours.",
+        "show_google_rating": true,
+        "google_rating_score": "4.9",
+        "google_rating_reviews": "based on over 200 reviews",
+        "rating_border_color": "#e0e0e0",
+        "rating_text_color": "#666666",
+        "rating_font_size": 13,
+        "rating_score_color": "#333333",
+        "rating_score_font_size": 18,
+        "rating_star_color": "#f5c518",
+        "rating_reviews_color": "#888888"
+      }
+    },
+    "location_contact_GXD9np": {
+      "type": "location-contact",
+      "blocks": {
+        "contact_taTxbJ": {
+          "type": "contact",
+          "settings": {
+            "icon": "phone",
+            "label": "Phone:",
+            "value": "01902 256667",
+            "link": "tel:01902256667",
+            "open_new_tab": false
+          }
+        },
+        "contact_yEU4zy": {
+          "type": "contact",
+          "settings": {
+            "icon": "whatsapp",
+            "label": "WhatsApp:",
+            "value": "07798983387",
+            "link": "https://wa.me/447798983387",
+            "open_new_tab": false
+          }
+        },
+        "contact_AWRKce": {
+          "type": "contact",
+          "settings": {
+            "icon": "email",
+            "label": "Phone:",
+            "value": "info@laserskinclinics.co.uk",
+            "link": "mailto:info@laserskinclinics.co.uk",
+            "open_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_taTxbJ",
+        "contact_yEU4zy",
+        "contact_AWRKce"
+      ],
+      "custom_css": [
+        "li.loc__hours-item {padding-left: 14px !important;}"
+      ],
+      "name": "Location & Contact",
+      "settings": {
+        "label": "Location & Contact",
+        "heading": "Find Us / Visit the Clinic",
+        "address": "<p><strong>Address:</strong> Laser Skin Clinics & Aesthetics Wolverhampton, 4 Perton Farm Barns, Jenny Walkers Ln, Wolverhampton, WV6 7HB.</p>",
+        "show_hours": true,
+        "hours_title": "Opening Hours:",
+        "hours_lines": "Tue, Wed, Fri: 10:00 - 18:00||Sat: 10:00 - 16:00||(Closed Mon, Thu, Sun)",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.149473724022!2d-2.2119984230492187!3d52.584990731415445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48709c826718d8df%3A0x587581859e1e6e7b!2sLaser%20Skin%20Clinics%20%26%20Aesthetics%20Wolverhampton!5e0!3m2!1sen!2s!4v1770453994785!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "info_bg": "#e8e3dc",
+        "show_texture": true,
+        "texture_opacity": 80,
+        "heading_color": "#3a3a3a",
+        "text_color": "#555555",
+        "accent_color": "#b08d57",
+        "heading_font_size": 40,
+        "body_font_size": 16,
+        "button_label": "BOOK CONSULTATION",
+        "button_link": "#cf-template--25630357422460__consultation_form_8BeJtz",
+        "button_open_new_tab": false,
+        "button_bg": "#b08d57",
+        "button_text_color": "#ffffff",
+        "button_bg_hover": "#97763e"
+      }
     }
   },
   "order": [
@@ -2526,15 +4631,26 @@
     "treatment_tabs_section_h4BDQx",
     "ss_image_with_text_12_PPNnyT",
     "ss_image_with_text_12_gUF6fh",
-    "treatment_pricing_enhanced_XUyycc",
-    "treatment_pricing_enhanced_dtHQt9",
-    "treatment_pricing_hjdUCE",
     "ss_image_with_text_9_GLgAya",
-    "ss_clothing_image_grid_bYwVtF",
-    "before_after_FYP3MP",
     "rich_text_nziPUE",
     "ss_steps_11_7cMyRT",
     "175993612397035c9e",
-    "ss_simple_faq_jiYFWj"
+    "ss_simple_faq_jiYFWj",
+    "clinical_laser_hero_BrqfXp",
+    "slideshow_tiXh9k",
+    "approach_comparison_rQT9KU",
+    "slideshow_aatXMM",
+    "split_content_WgcMXh",
+    "medical_technology_ct33BL",
+    "how_it_works_timeline_LbeYDa",
+    "slideshow_dQVHm7",
+    "results_testimonials_GtrNYg",
+    "pricing_by_area_36Fqyr",
+    "expectations_trust_VPKKkJ",
+    "slideshow_XzQigP",
+    "consultation_form_8BeJtz",
+    "faq_updated_jAQg98",
+    "slideshow_EGz8WM",
+    "location_contact_GXD9np"
   ]
 }
